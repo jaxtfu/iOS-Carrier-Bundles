@@ -2,123 +2,42 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>DisableWiFiAutoJoinUntilFirstUserJoin</key>
+	<false/>
 	<key>PayloadContent</key>
 	<array>
 		<dict>
 			<key>AutoJoin</key>
 			<true/>
-			<key>DisableAssociationMACRandomization</key>
-			<true/>
-			<key>EAPClientConfiguration</key>
-			<dict>
-				<key>AcceptEAPTypes</key>
-				<array>
-					<integer>21</integer>
-				</array>
-				<key>OuterIdentity</key>
-				<string>anonymous@spectrum.net</string>
-				<key>TLSTrustedServerNames</key>
-				<array>
-					<string>aaa.spectrum.net</string>
-					<string>aaa.twcwifi.com</string>
-					<string>aaa.brighthouse.com</string>
-				</array>
-				<key>TTLSInnerAuthentication</key>
-				<string>MSCHAPv2</string>
-				<key>UserName</key>
-				<string>sm1</string>
-				<key>UserPassword</key>
-				<string>m0~;x4|m%-~!*iD%lPMXv5}A\EY}z.4]rex#:C?;(&gt;z=\sc!|Aze5%Ok[eLfL$s!</string>
-			</dict>
-			<key>EncryptionType</key>
-			<string>WPA2</string>
-			<key>HIDDEN_NETWORK</key>
+			<key>CaptiveBypass</key>
 			<false/>
-			<key>IsHotspot</key>
-			<true/>
-			<key>PayloadDescription</key>
-			<string>Configures Wi-Fi settings</string>
-			<key>PayloadDisplayName</key>
-			<string>WiFi</string>
-			<key>PayloadIdentifier</key>
-			<string>com.apple.Verizon_Charter_LTE_US.4e9467fc-d474-11eb-aac4-f45c89abb0d9</string>
-			<key>PayloadType</key>
-			<string>com.apple.wifi.managed</string>
-			<key>PayloadUUID</key>
-			<string>29f5d746-da0a-11eb-8cf2-f45c89abb0d9</string>
-			<key>PayloadVersion</key>
-			<real>1.0</real>
-			<key>ProxyType</key>
-			<string>None</string>
-			<key>SSID_STR</key>
-			<string>SpectrumWiFi Plus</string>
-		</dict>
-		<dict>
-			<key>AutoJoin</key>
-			<true/>
 			<key>DisableAssociationMACRandomization</key>
-			<true/>
-			<key>EAPClientConfiguration</key>
-			<dict>
-				<key>AcceptEAPTypes</key>
-				<array>
-					<integer>21</integer>
-				</array>
-				<key>OuterIdentity</key>
-				<string>anonymous@spectrum.net</string>
-				<key>TLSTrustedServerNames</key>
-				<array>
-					<string>aaa.spectrum.net</string>
-					<string>aaa.twcwifi.com</string>
-					<string>aaa.brighthouse.com</string>
-				</array>
-				<key>TTLSInnerAuthentication</key>
-				<string>MSCHAPv2</string>
-				<key>UserName</key>
-				<string>sm1</string>
-				<key>UserPassword</key>
-				<string>m0~;x4|m%-~!*iD%lPMXv5}A\EY}z.4]rex#:C?;(&gt;z=\sc!|Aze5%Ok[eLfL$s!</string>
-			</dict>
-			<key>EncryptionType</key>
-			<string>WPA2</string>
-			<key>HIDDEN_NETWORK</key>
 			<false/>
-			<key>IsHotspot</key>
-			<true/>
-			<key>PayloadDescription</key>
-			<string>Configures Wi-Fi settings</string>
-			<key>PayloadDisplayName</key>
-			<string>WiFi</string>
-			<key>PayloadIdentifier</key>
-			<string>com.apple.Verizon_Charter_LTE_US.4e94698c-d474-11eb-aac4-f45c89abb0d9</string>
-			<key>PayloadType</key>
-			<string>com.apple.wifi.managed</string>
-			<key>PayloadUUID</key>
-			<string>29f5d886-da0a-11eb-8cf2-f45c89abb0d9</string>
-			<key>PayloadVersion</key>
-			<real>1.0</real>
-			<key>ProxyType</key>
-			<string>None</string>
-			<key>SSID_STR</key>
-			<string>Spectrum Mobile</string>
-		</dict>
-		<dict>
-			<key>AutoJoin</key>
-			<true/>
-			<key>DisableAssociationMACRandomization</key>
-			<true/>
 			<key>DisplayedOperatorName</key>
-			<string>Spectrum</string>
+			<string>Spectrum Mobile</string>
 			<key>DomainName</key>
-			<string>spectrum.net</string>
+			<string>spectrummobile.net</string>
 			<key>EAPClientConfiguration</key>
 			<dict>
 				<key>AcceptEAPTypes</key>
 				<array>
 					<integer>21</integer>
+					<integer>23</integer>
 				</array>
+				<key>EAPSIMAKAEncryptedIdentityEnabled</key>
+				<true/>
+				<key>EAPSIMAKARealm</key>
+				<string>spectrum.net</string>
 				<key>OuterIdentity</key>
 				<string>anonymous@spectrum.net</string>
+				<key>PayloadCertificateAnchorUUID</key>
+				<array>
+					<string>477D1910-A59A-49EB-A930-4E487882E63E</string>
+				</array>
+				<key>TLSMaximumVersion</key>
+				<string>1.2</string>
+				<key>TLSMinimumVersion</key>
+				<string>1.2</string>
 				<key>TLSTrustedServerNames</key>
 				<array>
 					<string>aaa.spectrum.net</string>
@@ -128,9 +47,9 @@
 				<key>TTLSInnerAuthentication</key>
 				<string>MSCHAPv2</string>
 				<key>UserName</key>
-				<string>sm1</string>
+				<string>anonymous@spectrum.net</string>
 				<key>UserPassword</key>
-				<string>m0~;x4|m%-~!*iD%lPMXv5}A\EY}z.4]rex#:C?;(&gt;z=\sc!|Aze5%Ok[eLfL$s!</string>
+				<string>pXGakTWN6%wVuN7SRHA6WK5^^%Pw7V+en25M=*DNdA-*q7-xa6^^_RvN9h%njCe79S</string>
 			</dict>
 			<key>EncryptionType</key>
 			<string>WPA2</string>
@@ -140,26 +59,22 @@
 			<true/>
 			<key>NAIRealmNames</key>
 			<array>
-				<string>rr.com</string>
-				<string>spectrum.net</string>
 				<string>spectrummobile.net</string>
 			</array>
 			<key>PayloadDescription</key>
 			<string>Configures Wi-Fi settings</string>
 			<key>PayloadDisplayName</key>
-			<string>WiFi</string>
+			<string>Wi-Fi</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.Verizon_Charter_LTE_US.4e946a68-d474-11eb-aac4-f45c89abb0d9</string>
+			<string>com.apple.wifi.managed.18E94328-39E2-449A-88AE-A04DDCA6C5AE</string>
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>29f5d8e0-da0a-11eb-8cf2-f45c89abb0d9</string>
+			<string>18E94328-39E2-449A-88AE-A04DDCA6C5AE</string>
 			<key>PayloadVersion</key>
-			<real>1.0</real>
+			<integer>1</integer>
 			<key>ProxyType</key>
 			<string>None</string>
-			<key>RoamingConsortiumOIs</key>
-			<array/>
 			<key>ServiceProviderRoamingEnabled</key>
 			<true/>
 		</dict>
@@ -167,13 +82,18 @@
 			<key>AutoJoin</key>
 			<true/>
 			<key>DisableAssociationMACRandomization</key>
-			<true/>
+			<false/>
 			<key>EAPClientConfiguration</key>
 			<dict>
 				<key>AcceptEAPTypes</key>
 				<array>
 					<integer>21</integer>
+					<integer>23</integer>
 				</array>
+				<key>EAPSIMAKAEncryptedIdentityEnabled</key>
+				<true/>
+				<key>EAPSIMAKARealm</key>
+				<string>spectrum.net</string>
 				<key>OuterIdentity</key>
 				<string>anonymous@spectrum.net</string>
 				<key>TLSTrustedServerNames</key>
@@ -185,9 +105,9 @@
 				<key>TTLSInnerAuthentication</key>
 				<string>MSCHAPv2</string>
 				<key>UserName</key>
-				<string>sm1</string>
+				<string>anonymous@spectrum.net</string>
 				<key>UserPassword</key>
-				<string>m0~;x4|m%-~!*iD%lPMXv5}A\EY}z.4]rex#:C?;(&gt;z=\sc!|Aze5%Ok[eLfL$s!</string>
+				<string>pXGakTWN6%wVuN7SRHA6WK5^^%Pw7V+en25M=*DNdA-*q7-xa6^^_RvN9h%njCe79S</string>
 			</dict>
 			<key>EncryptionType</key>
 			<string>WPA2</string>
@@ -200,31 +120,40 @@
 			<key>PayloadDisplayName</key>
 			<string>WiFi</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.Verizon_Charter_LTE_US.4e946ab8-d474-11eb-aac4-f45c89abb0d9</string>
+			<string>com.apple.wifi.managed.472749CE-5715-4E07-BF06-FA74572C9413</string>
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>29f5d926-da0a-11eb-8cf2-f45c89abb0d9</string>
+			<string>472749CE-5715-4E07-BF06-FA74572C9413</string>
 			<key>PayloadVersion</key>
-			<real>1.0</real>
+			<integer>1</integer>
 			<key>ProxyType</key>
 			<string>None</string>
 			<key>SSID_STR</key>
-			<string>AlticeWiFi</string>
+			<string>Spectrum Mobile</string>
 		</dict>
 		<dict>
 			<key>AutoJoin</key>
 			<true/>
 			<key>DisableAssociationMACRandomization</key>
-			<true/>
+			<false/>
 			<key>EAPClientConfiguration</key>
 			<dict>
 				<key>AcceptEAPTypes</key>
 				<array>
 					<integer>21</integer>
+					<integer>23</integer>
 				</array>
+				<key>EAPSIMAKAEncryptedIdentityEnabled</key>
+				<true/>
+				<key>EAPSIMAKARealm</key>
+				<string>spectrum.net</string>
 				<key>OuterIdentity</key>
 				<string>anonymous@spectrum.net</string>
+				<key>PayloadCertificateAnchorUUID</key>
+				<array>
+					<string>477D1910-A59A-49EB-A930-4E487882E63E</string>
+				</array>
 				<key>TLSTrustedServerNames</key>
 				<array>
 					<string>aaa.spectrum.net</string>
@@ -234,9 +163,9 @@
 				<key>TTLSInnerAuthentication</key>
 				<string>MSCHAPv2</string>
 				<key>UserName</key>
-				<string>sm1</string>
+				<string>anonymous@spectrum.net</string>
 				<key>UserPassword</key>
-				<string>m0~;x4|m%-~!*iD%lPMXv5}A\EY}z.4]rex#:C?;(&gt;z=\sc!|Aze5%Ok[eLfL$s!</string>
+				<string>pXGakTWN6%wVuN7SRHA6WK5^^%Pw7V+en25M=*DNdA-*q7-xa6^^_RvN9h%njCe79S</string>
 			</dict>
 			<key>EncryptionType</key>
 			<string>WPA2</string>
@@ -249,91 +178,98 @@
 			<key>PayloadDisplayName</key>
 			<string>WiFi</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.Verizon_Charter_LTE_US.4e946afe-d474-11eb-aac4-f45c89abb0d9</string>
+			<string>com.apple.wifi.managed.47BE32E4-3EEC-4ADB-987C-0F143B17F15C</string>
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>29f5d9b2-da0a-11eb-8cf2-f45c89abb0d9</string>
+			<string>47BE32E4-3EEC-4ADB-987C-0F143B17F15C</string>
 			<key>PayloadVersion</key>
-			<real>1.0</real>
+			<real>1</real>
 			<key>ProxyType</key>
 			<string>None</string>
 			<key>SSID_STR</key>
 			<string>XFINITY</string>
 		</dict>
 		<dict>
-			<key>AutoJoin</key>
-			<true/>
-			<key>DisableAssociationMACRandomization</key>
-			<true/>
-			<key>EncryptionType</key>
-			<string>None</string>
-			<key>FirstAutoJoinRestricted</key>
-			<true/>
-			<key>HIDDEN_NETWORK</key>
-			<false/>
-			<key>IsHotspot</key>
-			<true/>
+			<key>PayloadCertificateFileName</key>
+			<string>DigiCert Global Root CA.crt</string>
+			<key>PayloadContent</key>
+			<data>
+			c3ViamVjdD1DTj1EaWdpQ2VydCBHbG9iYWwgUm9vdCBDQSwgT1U9
+			d3d3LmRpZ2ljZXJ0LmNvbSwgTz1EaWdpQ2VydCBJbmMsIEM9VVMK
+			aXNzdWVyPUNOPURpZ2lDZXJ0IEdsb2JhbCBSb290IENBLCBPVT13
+			d3cuZGlnaWNlcnQuY29tLCBPPURpZ2lDZXJ0IEluYywgQz1VUwot
+			LS0tLUJFR0lOIENFUlRJRklDQVRFLS0tLS0KTUlJRHJ6Q0NBcGVn
+			QXdJQkFnSVFDRHZnVnBCQ1JyR2hkV3JKV1pISFNqQU5CZ2txaGtp
+			Rzl3MEJBUVVGQURCaApNUXN3Q1FZRFZRUUdFd0pWVXpFVk1CTUdB
+			MVVFQ2hNTVJHbG5hVU5sY25RZ1NXNWpNUmt3RndZRFZRUUxFeEIz
+			CmQzY3VaR2xuYVdObGNuUXVZMjl0TVNBd0hnWURWUVFERXhkRWFX
+			ZHBRMlZ5ZENCSGJHOWlZV3dnVW05dmRDQkQKUVRBZUZ3MHdOakV4
+			TVRBd01EQXdNREJhRncwek1URXhNVEF3TURBd01EQmFNR0V4Q3pB
+			SkJnTlZCQVlUQWxWVApNUlV3RXdZRFZRUUtFd3hFYVdkcFEyVnlk
+			Q0JKYm1NeEdUQVhCZ05WQkFzVEVIZDNkeTVrYVdkcFkyVnlkQzVq
+			CmIyMHhJREFlQmdOVkJBTVRGMFJwWjJsRFpYSjBJRWRzYjJKaGJD
+			QlNiMjkwSUVOQk1JSUJJakFOQmdrcWhraUcKOXcwQkFRRUZBQU9D
+			QVE4QU1JSUJDZ0tDQVFFQTRqdmhFWExlcUtUVG8xZXFVS0tQQzNl
+			UXlhS2w3aExPbGxzQgpDU0RNQVpPblRqQzNVL2REeEdrQVY1M2lq
+			U0xkaHdaQUFJRUp6czRiZzcvZnpUdHhSdUxXWnNjRnMzWW5Gbzk3
+			Cm5oNlZmZTYzU0tNSTJ0YXZlZ3c1Qm1WL1NsMGZ2QmY0cTc3dUtO
+			ZDBmM3A0bVZtRmFHNWNJekpMdjA3QTZGcHQKNDNDL2R4Qy8vQUgy
+			aGRtb1JCQllNcWwxR05YUm9yNUg0aWRxOUpveitFa0lZSXZVWDdR
+			NmhMK2hxa3BNZlQ3UApUMTlzZGw2Z1N6ZVJudHdpNW0zT0ZCcU9h
+			c3YremJNVVpCZkhXeW1lTXIveTd2clRDMExVcTdkQk10b00xTy80
+			CmdkVzdqVmcvdFJ2b1NTaWljTm94Qk4zM3NoYnlUQXBPQjZqdFNq
+			MWV0WCtqa01Pdkp3SURBUUFCbzJNd1lUQU8KQmdOVkhROEJBZjhF
+			QkFNQ0FZWXdEd1lEVlIwVEFRSC9CQVV3QXdFQi96QWRCZ05WSFE0
+			RUZnUVVBOTVRTlZiUgpUTHRtOEtQaUd4dkRsN0k5MFZVd0h3WURW
+			UjBqQkJnd0ZvQVVBOTVRTlZiUlRMdG04S1BpR3h2RGw3STkwVlV3
+			CkRRWUpLb1pJaHZjTkFRRUZCUUFEZ2dFQkFNdWNONnBJRXhJSyt0
+			MUVuRTlTc1BUZnJnVDFlWGtJb3lRWS9Fc3IKaE1BdHVkWEgvdlRC
+			SDFqTHVHMmNlblRubUNtckViWGpjS0NoelV5SW1aT01rWERpcXc4
+			Y3ZwT3AvMlBWNUFkZwowNk8vblZzSjhkV080MVAwam1QNlA2ZmJ0
+			R2JmWW1iVzBXNUJqZkl0dGVwM1NwK2RXT0lyV2NCQUkrMHRLSUpG
+			ClBubFVraWFZNElCSXFEZnY4Tlo1WUJiZXJPZ096VzZzUkJjNEww
+			bmE0VVUrS3JrMlU4ODZVQWIzTHVqRVYwbHMKWVNFWTFRU3RlRHdz
+			T29CcnArdXZGUlRwMkluQnVUaHM0cEZzaXY5a3VYY2xWekRBR3lT
+			ajRkenAzMGQ4dGJRawpDQVV3N0MyOUM3OUZ2MUM1cWZQcm1BRVNy
+			Y2lJeHBnMFg0MEtQTWJwMVpXVmJkND0KLS0tLS1FTkQgQ0VSVElG
+			SUNBVEUtLS0tLQ==
+			</data>
 			<key>PayloadDescription</key>
-			<string>Configures Wi-Fi settings</string>
+			<string>Adds a CA root certificate</string>
 			<key>PayloadDisplayName</key>
-			<string>WiFi</string>
+			<string>DigiCert Global Root CA</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.Verizon_Charter_LTE_US.4e946b3a-d474-11eb-aac4-f45c89abb0d9</string>
+			<string>com.apple.security.root.477D1910-A59A-49EB-A930-4E487882E63E</string>
 			<key>PayloadType</key>
-			<string>com.apple.wifi.managed</string>
+			<string>com.apple.security.root</string>
 			<key>PayloadUUID</key>
-			<string>29f5d9ee-da0a-11eb-8cf2-f45c89abb0d9</string>
+			<string>477D1910-A59A-49EB-A930-4E487882E63E</string>
 			<key>PayloadVersion</key>
-			<real>1.0</real>
-			<key>ProxyType</key>
-			<string>None</string>
-			<key>SSID_STR</key>
-			<string>SpectrumWiFi</string>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>AutoJoin</key>
 			<true/>
 			<key>DisableAssociationMACRandomization</key>
-			<true/>
-			<key>EncryptionType</key>
-			<string>None</string>
-			<key>FirstAutoJoinRestricted</key>
-			<true/>
-			<key>HIDDEN_NETWORK</key>
 			<false/>
-			<key>IsHotspot</key>
-			<true/>
-			<key>PayloadDescription</key>
-			<string>Configures Wi-Fi settings</string>
-			<key>PayloadDisplayName</key>
-			<string>WiFi</string>
-			<key>PayloadIdentifier</key>
-			<string>com.apple.Verizon_Charter_LTE_US.4e946b76-d474-11eb-aac4-f45c89abb0d9</string>
-			<key>PayloadType</key>
-			<string>com.apple.wifi.managed</string>
-			<key>PayloadUUID</key>
-			<string>29f5da2a-da0a-11eb-8cf2-f45c89abb0d9</string>
-			<key>PayloadVersion</key>
-			<real>1.0</real>
-			<key>ProxyType</key>
-			<string>None</string>
-			<key>SSID_STR</key>
-			<string>CableWiFi</string>
-		</dict>
-		<dict>
-			<key>AutoJoin</key>
-			<true/>
-			<key>DisableAssociationMACRandomization</key>
-			<true/>
 			<key>EAPClientConfiguration</key>
 			<dict>
 				<key>AcceptEAPTypes</key>
 				<array>
 					<integer>21</integer>
+					<integer>23</integer>
 				</array>
+				<key>EAPSIMAKAEncryptedIdentityEnabled</key>
+				<true/>
+				<key>EAPSIMAKARealm</key>
+				<string>spectrum.net</string>
 				<key>OuterIdentity</key>
 				<string>anonymous@spectrum.net</string>
+				<key>PayloadCertificateAnchorUUID</key>
+				<array>
+					<string>477D1910-A59A-49EB-A930-4E487882E63E</string>
+				</array>
 				<key>TLSTrustedServerNames</key>
 				<array>
 					<string>aaa.spectrum.net</string>
@@ -343,9 +279,67 @@
 				<key>TTLSInnerAuthentication</key>
 				<string>MSCHAPv2</string>
 				<key>UserName</key>
-				<string>sm1</string>
+				<string>anonymous@spectrum.net</string>
 				<key>UserPassword</key>
-				<string>m0~;x4|m%-~!*iD%lPMXv5}A\EY}z.4]rex#:C?;(&gt;z=\sc!|Aze5%Ok[eLfL$s!</string>
+				<string>pXGakTWN6%wVuN7SRHA6WK5^^%Pw7V+en25M=*DNdA-*q7-xa6^^_RvN9h%njCe79S</string>
+			</dict>
+			<key>EncryptionType</key>
+			<string>WPA2</string>
+			<key>HIDDEN_NETWORK</key>
+			<false/>
+			<key>IsHotspot</key>
+			<true/>
+			<key>PayloadDescription</key>
+			<string>Configures Wi-Fi settings</string>
+			<key>PayloadDisplayName</key>
+			<string>Wi-Fi</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.wifi.managed.06F791B3-7626-4E6C-A866-3C473D181CC2</string>
+			<key>PayloadType</key>
+			<string>com.apple.wifi.managed</string>
+			<key>PayloadUUID</key>
+			<string>06F791B3-7626-4E6C-A866-3C473D181CC2</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProxyType</key>
+			<string>None</string>
+			<key>SSID_STR</key>
+			<string>optimum</string>
+		</dict>
+		<dict>
+			<key>AutoJoin</key>
+			<true/>
+			<key>DisableAssociationMACRandomization</key>
+			<false/>
+			<key>EAPClientConfiguration</key>
+			<dict>
+				<key>AcceptEAPTypes</key>
+				<array>
+					<integer>21</integer>
+					<integer>23</integer>
+				</array>
+				<key>EAPSIMAKAEncryptedIdentityEnabled</key>
+				<true/>
+				<key>EAPSIMAKARealm</key>
+				<string>spectrum.net</string>
+				<key>OuterIdentity</key>
+				<string>anonymous@spectrum.net</string>
+				<key>PayloadCertificateAnchorUUID</key>
+				<array>
+					<string>477D1910-A59A-49EB-A930-4E487882E63E</string>
+				</array>
+				<key>TLSTrustedServerNames</key>
+				<array>
+					<string>aaa.spectrum.net</string>
+					<string>aaa.twcwifi.com</string>
+					<string>aaa.brighthouse.com</string>
+				</array>
+				<key>TTLSInnerAuthentication</key>
+				<string>MSCHAPv2</string>
+				<key>UserName</key>
+				<string>anonymous@spectrum.net</string>
+				<key>UserPassword</key>
+				<string>pXGakTWN6%wVuN7SRHA6WK5^^%Pw7V+en25M=*DNdA-*q7-xa6^^_RvN9h%njCe79S</string>
 			</dict>
 			<key>EncryptionType</key>
 			<string>WPA2</string>
@@ -358,23 +352,23 @@
 			<key>PayloadDisplayName</key>
 			<string>WiFi</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.Verizon_Charter_LTE_US.4e946bb2-d474-11eb-aac4-f45c89abb0d9</string>
+			<string>com.apple.wifi.managed.53D6D4B7-744E-44A7-A933-C76C575665CE</string>
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>29f5da5c-da0a-11eb-8cf2-f45c89abb0d9</string>
+			<string>53D6D4B7-744E-44A7-A933-C76C575665CE</string>
 			<key>PayloadVersion</key>
-			<real>1.0</real>
+			<integer>1</integer>
 			<key>ProxyType</key>
 			<string>None</string>
 			<key>SSID_STR</key>
-			<string>xFi</string>
+			<string>Xfinity Mobile</string>
 		</dict>
 	</array>
 	<key>PayloadDisplayName</key>
 	<string>Spectrum WiFi</string>
 	<key>PayloadIdentifier</key>
-	<string>com.apple.Verizon_Charter_LTE_US.e68c279e-da0e-11eb-884d-f45c89abb0d9</string>
+	<string>secure-wifi.spectrum.net.8DE2356F-F195-444A-B534-6E67170C4E73</string>
 	<key>PayloadOrganization</key>
 	<string>Spectrum</string>
 	<key>PayloadRemovalDisallowed</key>
@@ -382,7 +376,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>e68c28de-da0e-11eb-884d-f45c89abb0d9</string>
+	<string>2297DCC4-D70E-47FF-BC9F-85E152BEE4A7</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

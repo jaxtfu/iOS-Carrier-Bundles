@@ -5,7 +5,7 @@
 	<key>ConsentText</key>
 	<dict>
 		<key>default</key>
-		<string>Install this profile to access AlticeWiFi network</string>
+		<string>Install this profile to access Optimum WiFi network</string>
 	</dict>
 	<key>PayloadContent</key>
 	<array>
@@ -15,7 +15,7 @@
 			<key>CaptiveBypass</key>
 			<false/>
 			<key>DisplayedOperatorName</key>
-			<string>AlticeWiFi</string>
+			<string>Optimum</string>
 			<key>DomainName</key>
 			<string>alticemobile.com</string>
 			<key>EAPClientConfiguration</key>
@@ -62,13 +62,13 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>AlticeWiFi - WiFi configuration profile</string>
+	<string>OptimumWiFi - WiFi configuration profile</string>
 	<key>PayloadDisplayName</key>
-	<string>Altice USA Carrier WiFi</string>
+	<string>Optimum Carrier WiFi</string>
 	<key>PayloadIdentifier</key>
 	<string>com.apple.Altice_LTE_US.e339ef86-da0e-11eb-ac1a-f45c89abb0d9</string>
 	<key>PayloadOrganization</key>
-	<string>Altice USA</string>
+	<string>Optimum</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadType</key>

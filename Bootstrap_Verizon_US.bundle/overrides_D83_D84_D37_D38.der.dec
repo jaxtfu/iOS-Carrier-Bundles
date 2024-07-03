@@ -1,0 +1,736 @@
+Script Directory hash used for generating this DER PRI:
+commit 9ae579e3dc49a09812f129c74d44f09e9ecd0f47
+
+Item type: EXTRA_ITEM
+ITEM: Carrier ID
+CONTENT:
+
+
+Item type: EXTRA_ITEM
+ITEM: PRI Revision
+CONTENT:
+0.1.163
+
+Item type: DELETE_PROV_NV_LIST
+DELETE_PROV_NV: 178    - NV_DIR_NUMBER_I
+
+Item type: DELETE_NV_LIST
+DELETE_NV: 3533   - NV_SMS_MO_RETRY_INTERVAL_I
+DELETE_NV: 401    - NV_GPS1_PDE_ADDRESS_I
+DELETE_NV: 426    - NV_GPS1_PDE_PORT_I
+DELETE_NV: 4960   - NV_HS_BASED_PLUS_DIAL_SETTING_I
+DELETE_NV: 3446   - NV_TRM_CONFIG_I
+DELETE_NV: 553    - NV_GSM_A5_ALGORITHMS_SUPPORTED_I
+DELETE_NV: 4432   - NV_GPRS_GEA_ALGORITHMS_SUPPORTED_I
+DELETE_NV: 4118   - NV_HSDPA_CAT_I
+DELETE_NV: 4210   - NV_WCDMA_HSUPA_CATEGORY_I
+DELETE_NV: 62011  - NV_MAV_PROTO_CCM_SD_I
+DELETE_NV: 62012  - NV_MAV_PROTO_CCM_CM_I
+DELETE_NV: 62013  - NV_MAV_PROTO_CCM_WMS_I
+DELETE_NV: 62014  - NV_MAV_PROTO_CCM_DS_I
+DELETE_NV: 442    - NV_ROAM_PREF_I
+DELETE_NV: 58021  - NV_MAV_UMTS_FEATURE_CONTROL_I
+DELETE_NV: 1920   - NV_AAGPS_POSITIONING_MODES_SUPPORTED_I
+DELETE_NV: 4265   - NV_VOIP_REGISTRATION_MODE_I
+DELETE_NV: 6850   - NV_UMTS_AMR_CODEC_PREFERENCE_CONFIG_I
+DELETE_NV: 1907   - NV_AUTH_REQUIRE_PASSWORD_ENCRYPTION_I
+DELETE_NV: 62026  - NV_MAV_UIM_CARD_PROV_FILE_PATH
+DELETE_NV: 5895   - NV_MGRF_SUPPORTED_I
+DELETE_NV: 852    - NV_APN_NAME_I
+DELETE_NV: 5280   - NV_DISABLE_CM_CALL_TYPE_I
+DELETE_NV: 946    - NV_BAND_PREF_16_31_I
+DELETE_NV: 2954   - NV_BAND_PREF_32_63_I
+DELETE_NV: 3461   - NV_ENS_ENABLED_I
+DELETE_NV: 62025  - NV_MAV_DELAY_RAU_DURING_CSFB_I
+DELETE_NV: 62023  - NV_MAV_DELAY_GWTOL_RESEL_TIMER_I
+DELETE_NV: 4703   - NV_CGPS_UMTS_PDE_SERVER_ADDR_URL_I
+DELETE_NV: 6792   - NV_GNSS_SUPL_VERSION_I
+DELETE_NV: 3758   - NV_AAGPS_USE_TRANSPORT_SECURITY_I
+DELETE_NV: 909    - NV_SMS_GW_BEARER_PREF_I
+DELETE_NV: 62005  - NV_MAV_CDMA_PRI_REVISION_NUM_NV_REV_I
+DELETE_NV: 62035  - NV_MAV_PROTO_CCM_NAS_EXT_1_I
+DELETE_NV: 855    - NV_RTRE_CONFIG_I
+
+Item type: DELETE_EFS_LIST (Compressed)
+DELETE_EFS: /nv/item_files/modem/nas/lte_nas_temp_fplmn_backoff_time
+DELETE_EFS: /nv/item_files/ims/IMS_enable
+DELETE_EFS: /nv/item_files/modem/mmode/ue_usage_setting
+DELETE_EFS: /nv/item_files/modem/mmode/voice_domain_pref
+DELETE_EFS: /nv/item_files/modem/mmode/lte_disable_duration
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/lte_fgi_r8
+DELETE_EFS: /nv/item_files/modem/data/epc/qmi_qos
+DELETE_EFS: /nv/item_files/wcdma/rrc/wcdma_rrc_fast_return_to_lte_after_csfb
+DELETE_EFS: /nv/item_files/modem/data/3gpp/lteps/auto_connect_def_pdn
+DELETE_EFS: /nv/item_files/modem/mmode/lte_bandpref
+DELETE_EFS: /nv/item_files/modem/mmode/sms_mandatory
+DELETE_EFS: /nv/item_files/modem/data/3gpp/umts_nw_initiated_qos_support
+DELETE_EFS: /nv/item_files/modem/nas/nas_lai_change_force_lau_for_emergency
+DELETE_EFS: /nv/item_files/modem/data/3gpp/ps/3gpp_rel_version
+DELETE_EFS: /nv/item_files/modem/data/3gpp/ps/ser_req_throttle_behavior
+DELETE_EFS: /nv/item_files/modem/nas/hplmn_rat_order
+DELETE_EFS: /nv/item_files/modem/mmode/sms_only
+DELETE_EFS: /nv/item_files/modem/geran/grr/g2l_blind_redir_after_csfb_control
+DELETE_EFS: /nv/item_files/modem/mmode/sms_domain_pref
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/lte_fgi_r9
+DELETE_EFS: /nv/item_files/wcdma/rrc/wcdma_ppac_support
+DELETE_EFS: /nv/item_files/wcdma/rrc/wcdma_rrc_feature
+DELETE_EFS: /nv/item_files/wcdma/rrc/wcdma_rrc_wtol_ps_ho_support
+DELETE_EFS: /nv/item_files/modem/data/3gpp/ps/allow_infinite_throt
+DELETE_EFS: /nv/item_files/modem/nas/cm_efs_mav_health_monitor_control_pri
+DELETE_EFS: /nv/item_files/modem/nas/nas_srvcc_support
+DELETE_EFS: /nv/item_files/modem/sms/pri_disable_cb_dup_detection
+DELETE_EFS: /nv/item_files/modem/lte/ML1/cdrx_opt_info
+DELETE_EFS: /nv/item_files/modem/nas/ignore_uplmn
+DELETE_EFS: /nv/item_files/wcdma/rrc/wcdma_rrc_csfb_skip_sib11_opt
+DELETE_EFS: /nv/item_files/modem/nas/csg_support_configuration
+DELETE_EFS: /nv/item_files/modem/nas/iPLMN
+DELETE_EFS: /nv/item_files/modem/nas/max_validate_sim_counter
+DELETE_EFS: /nv/item_files/modem/nas/irat_search_timer
+DELETE_EFS: /nv/item_files/modem/mmode/sms_domain_pref_list
+DELETE_EFS: /nv/item_files/modem/mmode/qmi/mav_pri_allow_auto_answer
+DELETE_EFS: /ds/atcop/atcop_cops_auto_mode.txt
+DELETE_EFS: /nv/item_files/modem/uim/mmgsdi/refresh_retry
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/lte_fgi_r10
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/lte_fgi_r8_tdd
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/lte_fgi_r9_tdd
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/lte_fgi_r10_tdd
+DELETE_EFS: /nv/item_files/modem/lte_connection_control
+DELETE_EFS: /nv/item_files/modem/lte/rrc/cap/prune_ca_combos
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/lte_conn_ctrl_barring_optimz_params
+DELETE_EFS: /nv/item_files/modem/data/3gpp/call_orig_allowed_before_ps_attach
+DELETE_EFS: /nv/item_files/wcdma/rrc/wcdma_rrc_wtol_tdd_ps_ho_support
+DELETE_EFS: /nv/item_files/modem/sms/mmgsdi_refresh_vote_ok
+DELETE_EFS: /nv/item_files/modem/uim/gstk/default_apn
+DELETE_EFS: /nv/item_files/modem/mmode/buffer_ims_pref_change_timer
+DELETE_EFS: /nv/item_files/data/3gpp/rpm_params
+DELETE_EFS: /nv/item_files/data/3gpp/rpm_suppported_sim
+DELETE_EFS: /nv/item_files/modem/geran/grr/g2l_blind_redir_after_srvcc_control
+DELETE_EFS: /nv/item_files/modem/data/epc/pdn_throttling_config.txt
+DELETE_EFS: /policyman/carrier_policy.xml
+DELETE_EFS: /mav/mav_police_pri_mode_pref_mask
+DELETE_EFS: /nv/item_files/modem/uim/mmgsdi/ens_slot_enabled
+DELETE_EFS: /nv/item_files/modem/nas/pri_fplmn
+DELETE_EFS: /nv/item_files/modem/nas/lte_nas_ignore_mt_csfb_during_volte_call
+DELETE_EFS: /nv/item_files/modem/data/3gpp/ps/rel_10_throttling
+DELETE_EFS: /nv/item_files/modem/lte/L2/mac/lte_mac_enable_aas
+DELETE_EFS: /nv/item_files/modem/nas/mav_rat_upgrade_from_pri
+DELETE_EFS: /data/ds_dsd_apm_rules.txt
+DELETE_EFS: /nv/item_files/modem/data/3gpp/ps/rel_10_throttling_per_plmn
+DELETE_EFS: /nv/item_files/modem/nas/mav_hpplmn_scan_throttler/config_params
+DELETE_EFS: /nv/item_files/modem/data/3gpp/lteps/allow_def_lte_pdn_teardown
+DELETE_EFS: /nv/item_files/modem/nas/eplmn_cell_reselect
+DELETE_EFS: /nv/item_files/modem/nas/hplmn_rat_order_ctrl
+DELETE_EFS: /data/3gpp/throttling/srv_req_throt_config.txt
+DELETE_EFS: /nv/item_files/wcdma/rrc/rrc_fe_fach_support
+DELETE_EFS: /nv/item_files/modem/nas/nas_config_feature
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/ho_neigh_cell_si_acq_params
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/lte_spec_feature_r11
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/lte_spec_feature_r11_tdd
+DELETE_EFS: /nv/item_files/modem/qmi/mav_fws_gsm_key_signature_bitmask
+DELETE_EFS: /nv/item_files/modem/mmode/lte_rpm_info_2
+DELETE_EFS: /nv/item_files/modem/nas/dos_mitigation_feature_config
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/lte_feature_enable
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/lte_feature_disable
+DELETE_EFS: /nv/item_files/modem/mmode/mode_pref
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/lte_rrc_sub_feature_enable
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/lte_rrc_sub_feature_disable
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/cell_depriority_params
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/conn_rej_cell_depriority_params
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/c2k_rx_config
+DELETE_EFS: /nv/item_files/modem/mmode/follow_tot
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cep_conn_est_fail_ctrl
+DELETE_EFS: /nv/item_files/modem/mmode/nr5g_disable_mode
+DELETE_EFS: /nv/item_files/modem/uim/mmgsdi/slot_features_status_list__mav_override
+DELETE_EFS: /nv/item_files/modem/uim/mmgsdi/override_opl_pnn_lookup_for_non_rplmn
+DELETE_EFS: /nv/item_files/modem/uim/uimdrv/nv_pdown_uim_consecutive_techproblems
+DELETE_EFS: /nv/item_files/modem/qmi/cat/qmi_cat_block_sms_pp_env_per_sub
+DELETE_EFS: /nv/item_files/modem/lte/rrc/cap/max_ca_combos
+DELETE_EFS: /nv/item_files/modem/mmode/nr_band_pref
+DELETE_EFS: /nv/item_files/modem/lte/rrc/mav_rrc_reject_supported
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_add_bw
+DELETE_EFS: /nv/item_files/ims/media_service_config
+DELETE_EFS: /nv/item_files/modem/nas/mav_sa_lte_prio_sub_band_per_plmn
+DELETE_EFS: /nv/item_files/modem/nas/mav_nr_prio_sub_band_per_plmn
+DELETE_EFS: /nv/item_files/modem/nas/mav_k_deep_sleep_rounds_chg_nr_bandscan2acqdb
+DELETE_EFS: /nv/item_files/modem/nas/mav_lte_steady_camp_duration
+DELETE_EFS: /nv/item_files/modem/nas/mav_interlace_scan_init_timer
+DELETE_EFS: /nv/item_files/modem/uim/gstk/feature_bmask__mav_override
+DELETE_EFS: /nv/item_files/modem/mmode/nr_nsa_band_pref
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/csg_control_v2
+DELETE_EFS: /nv/item_files/modem/mav/disable_sdm
+DELETE_EFS: /nv/item_files/modem/mav/drop_endc_call_hysteresis_tmr_val
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/disable_4l_per_band
+DELETE_EFS: /nv/item_files/modem/mav/lte_ca_xml_generation
+DELETE_EFS: /nv/item_files/modem/lte/rrc/cap/blacklist_ca_combos
+DELETE_EFS: /nv/item_files/modem/lte/rrc/cap/blacklist_explicit_ca_combos
+DELETE_EFS: /nv/item_files/modem/lte/rrc/cap/whitelist_ca_combos_with_ulca
+DELETE_EFS: /nv/item_files/modem/lte/rrc/cap/whitelist_ca_combos_with_laa
+DELETE_EFS: /nv/item_files/modem/lte/rrc/cap/blacklist_ca_combos_with_nc_combos
+DELETE_EFS: /nv/item_files/modem/mav/endc_ca_file_generation
+DELETE_EFS: /nv/item_files/modem/nr5g/rrc/endc_whitelist_ca_combos
+DELETE_EFS: /nv/item_files/modem/nr5g/rrc/endc_whitelist_ca_combos_with_ulca
+DELETE_EFS: /nv/item_files/modem/nr5g/rrc/endc_whitelist_ca_combos_with_laa
+DELETE_EFS: /nv/item_files/modem/nr5g/rrc/endc_blacklist_ca_combos
+DELETE_EFS: /nv/item_files/modem/nr5g/rrc/endc_blacklist_explicit_ca_combos
+DELETE_EFS: /nv/item_files/modem/nr5g/rrc/endc_reduced_cc_lte_fr1_ca_combos
+DELETE_EFS: /nv/item_files/modem/nr5g/rrc/endc_reduced_cc_fr1_ca_combos
+DELETE_EFS: /nv/item_files/modem/nr5g/rrc/endc_reduced_cc_lte_fr2_ca_combos
+DELETE_EFS: /nv/item_files/modem/nr5g/rrc/endc_reduced_cc_fr2_ca_combos
+DELETE_EFS: /nv/item_files/modem/nas/tdscdma_op_plmn_list
+DELETE_EFS: /nv/item_files/modem/lte/rrc/cap/max_lte_cap_size
+DELETE_EFS: /nv/item_files/modem/lte/rrc/cap/max_nr_cap_size
+DELETE_EFS: /nv/item_files/modem/lte/rrc/cap/max_lte_nr_cap_size
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_disable_ul_256qam
+DELETE_EFS: /nv/item_files/modem/data/3gpp/ps/ran_bit_rate_support
+DELETE_EFS: /nv/item_files/modem/nas/mav_nr_predef_narfcn
+DELETE_EFS: /nv/item_files/modem/nas/isr
+DELETE_EFS: /nv/item_files/modem/uim/gstk/feature_bmask_2__mav_override
+DELETE_EFS: /nv/item_files/modem/mmode/ssac_hvolte
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/dsds_timers
+DELETE_EFS: /nv/item_files/modem/uim/uimdrv/mav_uim_wakeup_poll_timer_config
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/band_priority_list_v2
+DELETE_EFS: /nv/item_files/modem/data/3gpp/ps/apn_reject/apn_reject_name.txt
+DELETE_EFS: /nv/item_files/modem/nr5g/rrc/endc_disable_specific_ul_bands
+DELETE_EFS: /nv/item_files/modem/lte/rrc/PC2_WHITELIST.xml
+DELETE_EFS: /nv/item_files/modem/lte/rrc/bbq/bbq_mitigation
+DELETE_EFS: /nv/item_files/modem/mmode/ims_reg_status_wait_timer
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/lte_connection_ctrl_params
+DELETE_EFS: /nv/item_files/modem/mmode/scan_scope_rule
+DELETE_EFS: /nv/item_files/modem/data/dsmgr/pdu_session_id_inclusion
+DELETE_EFS: /nv/reg_files/modem/lte/rrc/csp/pref_freq_list
+DELETE_EFS: /nv/item_files/modem/mav/local_crp_hysteresis_tmr_val
+DELETE_EFS: /nv/item_files/modem/uim/gstk/mav_svc_notification_to_card_upon_restricted_mode_exit_latency_config
+DELETE_EFS: /nv/item_files/modem/nas/is_eps_rplmn_from_sim_needed
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cre_thermal_ota_cause
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/data_inactivity_control
+DELETE_EFS: /nv/item_files/modem/mav/drop_endc_call_hysteresis_tmr_volte_val
+DELETE_EFS: /nv/item_files/modem/lte/ML1/fr2_priority_optimization
+DELETE_EFS: /nv/item_files/modem/mav/volte_screen_on_hysteresis_tmr_val
+DELETE_EFS: /nv/item_files/modem/nas/skip_acb_check_drb_est_ims_registration
+DELETE_EFS: /nv/item_files/modem/mav/mav_monitor_enable_nr5g_uwb_based_on_motion_state_no_uli_case
+DELETE_EFS: /nv/item_files/modem/nas/is_x_to_nr_enabled
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/meas_pruning
+DELETE_EFS: /nv/item_files/modem/mav/disable_mmw_for_ftv
+DELETE_EFS: /nv/item_files/modem/mav/disable_fr1_for_lpm
+DELETE_EFS: /nv/item_files/modem/data/3gpp/ps/set_volte_call_type
+DELETE_EFS: /nv/item_files/modem/nas/mav_pssi_reg_unblock_hplmn_max_reg_failure
+DELETE_EFS: /nv/item_files/modem/nas/mav_pssi_reg_unblock_hplmn_voice_not_avail_based_on_motion_st
+DELETE_EFS: /nv/item_files/modem/mav/mav_monitor_enable_nr5g_uwb_based_on_motion_state
+DELETE_EFS: /nv/item_files/modem/nas/mav_pssi_reg_follow_rplmn_rat_order_power_up
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_per_plmn_limit_bw
+DELETE_EFS: /policyman/5g_roaming_feature_enabled.xml
+DELETE_EFS: /nv/item_files/modem/nas/lte_fast_cfl_search_timer
+DELETE_EFS: /nv/item_files/modem/nr5g/rrc/endc_blacklist_fr1_fdd_tdd_ca_combos
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_srs_tx_switch_control
+DELETE_EFS: /data/3gpp/data_3gpp_dynamic_config.xml
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_csi_rs_32_port_control
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/hst_scan_params
+DELETE_EFS: /nv/item_files/modem/data/3gpp/reset_non_spec_throttle_with_reattach_required
+DELETE_EFS: /nv/item_files/modem/nas/mav_lte_reject_smc_null_ciphering
+DELETE_EFS: /nv/item_files/modem/nas/mav_nr_reject_smc_null_ciphering
+DELETE_EFS: /nv/item_files/modem/mmode/sd/mav_oos_search_rbs_n_dbs
+DELETE_EFS: /nv/item_files/modem/nr5g/rrc/nrsa_blacklist_ca_combos
+DELETE_EFS: /nv/item_files/modem/nr5g/rrc/nrsa_blacklist_explicit_ca_combos
+DELETE_EFS: /nv/item_files/modem/nr5g/rrc/nrsa_reduced_cc_fr1_ca_combos
+DELETE_EFS: /nv/item_files/modem/nr5g/rrc/nrsa_blacklist_fr1_fdd_tdd_ca_combos
+DELETE_EFS: /nv/item_files/modem/maverick/uim/apps/card_prov_strategy
+DELETE_EFS: /nv/item_files/modem/mav/sa_depri_bw_val
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_control_nrca_f_plus_t_band_combos
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_control_mrdc_f_plus_t_band_combos
+DELETE_EFS: /nv/item_files/modem/mav/mav_disable_sa_if_null_suci
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_control_mrdc_t_plus_t_band_combos
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_control_nrca_t_plus_t_band_combos
+DELETE_EFS: /nv/item_files/modem/mav/override_icon_based_on_sa_coverage
+DELETE_EFS: /policyman/5g_sa_roaming_feature_enabled.xml
+DELETE_EFS: /nv/item_files/modem/mav/cap_prune_efs_version
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_prune
+DELETE_EFS: /nv/item_files/modem/nas/t3411_value_during_mmtel_call
+DELETE_EFS: /nv/item_files/modem/lte/rrc/cap/whitelist_ca_combos
+DELETE_EFS: /nv/item_files/modem/mav/mav_avoid_uwb_roaming
+DELETE_EFS: /nv/item_files/modem/nr5g/rrc/endc_blacklist_ca_combos_with_nc_combos
+DELETE_EFS: /nv/item_files/modem/nas/ehplmn_nv
+DELETE_EFS: /nv/item_files/modem/nas/is_ehplmn_nv_set
+DELETE_EFS: /nv/item_files/modem/nas/emm_nas_nv_items
+DELETE_EFS: /nv/item_files/modem/nas/mav_pssi_reg_unblock_hplmn_ims_reg_failure_timer
+DELETE_EFS: /nv/item_files/modem/mmode/mav_volte_disable_ims_reg_wait_timer_hplmn
+DELETE_EFS: /nv/item_files/modem/nas/force_esr_ndds_for_lte_only
+DELETE_EFS: /nv/item_files/modem/nas/force_esr_ndds_cust
+DELETE_EFS: /nv/item_files/modem/mmode/sd/e911_prioritize_cs
+DELETE_EFS: /policyman/l2nr_policy.xml
+DELETE_EFS: /nv/item_files/modem/uim/uimdrv/uim_check_sim_status_apm_off
+DELETE_EFS: /nv/item_files/modem/data/3gpp/ps/l2nr_fast_return_params
+DELETE_EFS: /nv/item_files/modem/data/3gpp/ps/nr5g_ran_bit_rate_support
+DELETE_EFS: /nv/item_files/data/3gpp/ds_3gpp_mtu
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_feature_band_nr
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_feature_pdcp
+DELETE_EFS: /nv/item_files/wcdma/rrc/rrc_req_lte_for_truncated_ca
+DELETE_EFS: /nv/item_files/modem/nr5g/rrc/nrsa_whitelist_ca_combos
+DELETE_EFS: /nv/item_files/modem/mav/mav_monitor_replace_nr5g_uc_with_nr_basic
+DELETE_EFS: /nv/item_files/modem/data/3gpp/ps/uw_allow_abnormal_default
+DELETE_EFS: /nv/item_files/modem/mav/mav_monitor_mm_mb_replace_nr5g_with_nr5guwb
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_control_nrca_f_plus_f_band_combos
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_control_t_plus_f_band_combos
+DELETE_EFS: /nv/item_files/modem/mmode/nr5g_emc_support
+DELETE_EFS: /nv/item_files/modem/nas/mt_detach_abnormal_handling
+DELETE_EFS: /nv/item_files/modem/mav/mav_avoid_pco_for_aging
+DELETE_EFS: /nv/item_files/modem/mav/mav_ignore_n77_mm_coverage_exit_check
+DELETE_EFS: /nv/item_files/modem/mav/mav_ignore_high_bw_check
+DELETE_EFS: /nv/item_files/modem/mav/mav_ignore_cell_change_check
+DELETE_EFS: /nv/item_files/modem/nr5g/rrc/endc_blacklist_specific_lte_bands
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/band_priority_list
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_feature_phy
+DELETE_EFS: /nv/item_files/modem/nas/ehplmn_nv_new
+DELETE_EFS: /nv/item_files/modem/mav/sdm_nsa_icon_override
+DELETE_EFS: /policyman/5g_plus_5g_always.xml
+DELETE_EFS: /policyman/5g_sa_allowed_on_ndds.xml
+DELETE_EFS: /nv/item_files/modem/mav/enable_bwp_switching_screen_lock
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_trigger_rcu_empty_active_combo
+DELETE_EFS: /nv/item_files/mav/is_bootstrap_profile
+DELETE_EFS: /nv/item_files/modem/mav/cdm_feature_enable_status
+DELETE_EFS: /nv/item_files/modem/mmode/lte_bandpref_extn_65_256
+DELETE_EFS: /policyman/private_mcc_handling
+DELETE_EFS: /nv/item_files/modem/nas/nr_disable_duration
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_feature_general_params
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_srs_carrier_switch_per_plmn_control_v2
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_feature_meas_and_mobs
+DELETE_EFS: /nv/item_files/modem/nas/mm5g_eps_mobility_ra_cap_update
+DELETE_EFS: /nv/item_files/wcdma/rrc/rrc_pseudo_meas_info
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_feature_per_features_set_params
+DELETE_EFS: /nv/item_files/modem/mmode/mav_unblock_nr_fplmn
+DELETE_EFS: /nv/item_files/modem/mav/sa_depri_td_bwp_thresh_val
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/nr5g_3gpp_release_ver
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/lte_3gpp_release_ver
+DELETE_EFS: /nv/item_files/modem/nas/iplmn_preferred
+DELETE_EFS: /nv/item_files/modem/mav/prune_fr1_fr2_due_to_volte_enable
+DELETE_EFS: /nv/item_files/modem/mav/drs_enable
+DELETE_EFS: /nv/item_files/modem/mav/drs_starting_rat
+DELETE_EFS: /nv/item_files/modem/mav/drs_dl_enabled_no_locdb
+DELETE_EFS: /nv/item_files/modem/mav/drs_ul_check_enabled
+DELETE_EFS: /nv/item_files/modem/mav/dl_bin_config
+DELETE_EFS: /nv/item_files/modem/mav/drs_sa_penetrate_cov_area_config
+DELETE_EFS: /nv/item_files/modem/mav/drs_sa_cov_band_area_config
+DELETE_EFS: /nv/item_files/modem/mav/drs_bw_threshold
+DELETE_EFS: /nv/item_files/modem/mav/drs_nsa_icon_via_motion
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_control_nrca_3x_f_plus_t_band_combos
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_control_dl_256qam
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/cap_control_4cc_ulca_fr2
+DELETE_EFS: /nv/item_files/modem/mmode/nrdc_mode
+DELETE_EFS: /nv/item_files/modem/mav/uwb_nr_band_bw
+DELETE_EFS: /nv/item_files/modem/mav/enable_fr1_scell_vrlf
+DELETE_EFS: /nv/item_files/modem/mav/mav_sa_coverage_band_list
+DELETE_EFS: /nv/item_files/modem/nas/nr_t3517_config
+DELETE_EFS: /nv/item_files/modem/nr5g/RRC/failure_mgr_efs_nrdc_list_cfg
+DELETE_EFS: /nv/item_files/modem/lte/rrc/efs/eps_fallback_control
+DELETE_EFS: /nv/item_files/modem/mmode/nr5g_plmn_blocking_timer
+DELETE_EFS: /nv/item_files/modem/mav/drs_enable_tau_rej_opt
+DELETE_EFS: /nv/item_files/modem/mav/bwp_switch_tmr_val
+DELETE_EFS: /nv/item_files/modem/mav/bwp_switch_tmr_val_sl
+DELETE_EFS: /nv/item_files/modem/nas/pri_fplmn_ext
+DELETE_EFS: /nv/item_files/modem/nas/mav_dicr
+DELETE_EFS: /nv/item_files/modem/mav/enable_fblte_based_bwp_config
+
+Item type: NV
+NVID: 4960 - NV_HS_BASED_PLUS_DIAL_SETTING_I
+NV_CONTENT:
+01
+
+Item type: NV
+NVID: 442 - NV_ROAM_PREF_I
+NV_CONTENT:
+FF 00
+
+Item type: NV
+NVID: 62005 - NV_MAV_CDMA_PRI_REVISION_NUM_NV_REV_I
+NV_CONTENT:
+00 01 A3 00
+
+Item type: NV
+NVID: 5895 - NV_MGRF_SUPPORTED_I
+NV_CONTENT:
+01
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/nas/mav_hpplmn_scan_throttler/config_params
+EFS_CONTENT:
+00 00 00 00 00 00 00 00 00 00
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/data/3gpp/ps/rel_10_throttling
+EFS_CONTENT:
+01
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/data/3gpp/ps/rel_10_throttling_per_plmn
+EFS_CONTENT:
+01
+
+Item type: EFS_ITEM
+EFS_PATH: /data/3gpp/data_3gpp_dynamic_config.xml
+EFS_CONTENT:
+3C 64 61 74 61 5F 33 67 70 70 5F 64 79 6E 61 6D  69 63 5F 63 6F 6E 66 69 67 75 72 61 74 69 6F 6E
+3E 0A 20 20 3C 76 65 72 73 69 6F 6E 3E 31 2E 30  3C 2F 76 65 72 73 69 6F 6E 3E 0A 20 20 20 3C 67
+65 6E 65 72 69 63 5F 63 6F 6E 66 69 67 3E 0A 20  20 20 20 3C 63 61 72 72 69 65 72 3E 56 5A 57 3C
+2F 63 61 72 72 69 65 72 3E 0A 20 20 20 20 3C 75  69 5F 63 6F 6E 66 69 67 3E 20 0A 20 20 20 20 20
+20 3C 72 61 74 20 76 61 6C 75 65 3D 22 35 47 22  3E 0A 20 20 20 20 20 20 20 20 3C 48 6F 6D 65 3E
+0A 20 20 20 20 20 20 20 20 3C 75 77 62 3E 0A 20  20 20 20 20 20 20 20 20 20 3C 74 75 77 62 31 3E
+33 3C 2F 74 75 77 62 31 3E 0A 20 20 20 20 20 20  20 20 20 20 3C 74 75 77 62 32 3E 36 30 3C 2F 74
+75 77 62 32 3E 0A 20 20 20 20 20 20 20 20 20 20  3C 74 75 77 62 33 3E 32 3C 2F 74 75 77 62 33 3E
+0A 20 20 20 20 20 20 20 20 20 20 3C 43 6F 6E 6E  65 63 74 43 6F 6E 66 69 67 3E 0A 20 20 20 20 20
+20 20 20 20 20 20 20 3C 75 77 62 5F 6E 73 61 5F  62 61 6E 64 73 3E 37 37 2C 32 36 30 2C 32 36 31
+3C 2F 75 77 62 5F 6E 73 61 5F 62 61 6E 64 73 3E  0A 20 20 20 20 20 20 20 20 20 20 20 20 3C 75 77
+62 5F 73 61 5F 62 61 6E 64 73 3E 37 37 3C 2F 75  77 62 5F 73 61 5F 62 61 6E 64 73 3E 0A 20 20 20
+20 20 20 20 20 20 20 3C 2F 43 6F 6E 6E 65 63 74  43 6F 6E 66 69 67 3E 0A 20 20 20 20 20 20 20 20
+3C 2F 75 77 62 3E 0A 20 20 20 20 20 20 20 20 20  3C 42 61 73 69 63 3E 0A 20 20 20 20 20 20 20 20
+20 20 3C 49 6E 64 43 6F 6E 66 69 67 3E 31 3C 2F  49 6E 64 43 6F 6E 66 69 67 3E 0A 20 20 20 20 20
+20 20 20 3C 2F 42 61 73 69 63 3E 20 0A 20 20 20  20 20 20 20 20 20 3C 2F 48 6F 6D 65 3E 0A 20 20
+20 20 20 20 20 20 20 3C 52 6F 61 6D 69 6E 67 3E  0A 20 20 20 20 20 20 20 20 3C 42 61 73 69 63 3E
+0A 20 20 20 20 20 20 20 20 20 20 3C 49 6E 64 43  6F 6E 66 69 67 3E 31 3C 2F 49 6E 64 43 6F 6E 66
+69 67 3E 0A 20 20 20 20 20 20 20 20 3C 2F 42 61  73 69 63 3E 0A 20 20 20 20 20 20 20 3C 2F 52 6F
+61 6D 69 6E 67 3E 09 0A 20 20 20 20 20 20 3C 2F  72 61 74 3E 0A 20 20 20 20 3C 2F 75 69 5F 63 6F
+6E 66 69 67 3E 0A 20 20 20 20 3C 2F 67 65 6E 65  72 69 63 5F 63 6F 6E 66 69 67 3E 0A 3C 2F 64 61
+74 61 5F 33 67 70 70 5F 64 79 6E 61 6D 69 63 5F  63 6F 6E 66 69 67 75 72 61 74 69 6F 6E 3E
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/mmode/sd/e911_prioritize_cs
+EFS_CONTENT:
+00
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/lte/L2/mac/lte_mac_enable_aas
+EFS_CONTENT:
+01 01 01 FF
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/nas/mav_pssi_reg_unblock_hplmn_max_reg_failure
+EFS_CONTENT:
+01
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/nas/mav_pssi_reg_unblock_hplmn_ims_reg_failure_timer
+EFS_CONTENT:
+78 00 00 00
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/nas/mav_pssi_reg_unblock_hplmn_voice_not_avail_based_on_motion_st
+EFS_CONTENT:
+01
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/maverick/uim/apps/card_prov_strategy
+EFS_CONTENT:
+02
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/uim/gstk/feature_bmask__mav_override
+EFS_CONTENT:
+00 01
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/mmode/mode_pref
+EFS_CONTENT:
+5C 00 00 00
+
+Item type: EFS_ITEM
+EFS_PATH: /mav/mav_police_pri_mode_pref_mask
+EFS_CONTENT:
+5C 00 00 00
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/nas/hplmn_rat_order
+EFS_CONTENT:
+04 00 0C 09 05 03 00 00 00 00 00 00
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/data/3gpp/ps/set_volte_call_type
+EFS_CONTENT:
+01
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/mmode/ue_usage_setting
+EFS_CONTENT:
+01
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/wcdma/rrc/wcdma_rrc_fast_return_to_lte_after_csfb
+EFS_CONTENT:
+01
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/lte/rrc/efs/lte_feature_enable
+EFS_CONTENT:
+00 00 02 00 00 19 70 C0 00 14 E0 00 04 00 08 00  30 01 08 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/data/3gpp/ps/allow_infinite_throt
+EFS_CONTENT:
+01
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/nas/lte_nas_temp_fplmn_backoff_time
+EFS_CONTENT:
+FF FF FF FF
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/lte/rrc/efs/disable_4l_per_band
+EFS_CONTENT:
+FD FF FF FF FF 7F FF FF FD FF FF FF FF FF FF FF  FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/lte/rrc/efs/band_priority_list_v2
+EFS_CONTENT:
+42 00 0D 00 05 00 02 00 04 00
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/lte/rrc/efs/csg_control_v2
+EFS_CONTENT:
+00 00 05 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/lte/rrc/efs/lte_rrc_sub_feature_enable
+EFS_CONTENT:
+00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/lte/rrc/efs/conn_rej_cell_depriority_params
+EFS_CONTENT:
+03 02 05 00 60 EA 00 00 E0 93 04 00 32 00 00 00
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/mmode/lte_disable_duration
+EFS_CONTENT:
+84 03 00 00
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/lte/rrc/bbq/bbq_mitigation
+EFS_CONTENT:
+01
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/lte/rrc/cap/whitelist_ca_combos
+EFS_CONTENT:
+12 10 00 00 00 A0 00 00 02 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/mav/lte_ca_xml_generation
+EFS_CONTENT:
+01
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/lte/rrc/cap/blacklist_ca_combos
+EFS_CONTENT:
+03 04 00 01 00 05 00 03 00 42 00 04 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/lte/rrc/cap/whitelist_ca_combos_with_laa
+EFS_CONTENT:
+12 10 00 00 00 A0 00 00 02 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/lte/rrc/cap/whitelist_ca_combos_with_ulca
+EFS_CONTENT:
+12 10 00 00 00 00 00 00 02 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/data/3gpp/ps/ser_req_throttle_behavior
+EFS_CONTENT:
+00 00 00 00
+
+Item type: EFS_ITEM
+EFS_PATH: /data/3gpp/throttling/srv_req_throt_config.txt
+EFS_CONTENT:
+46 41 49 4C 55 52 45 5F 54 49 4D 45 52 5F 31 3A  30 3B 0A 46 41 49 4C 55 52 45 5F 54 49 4D 45 52
+5F 32 3A 30 3B 0A 46 41 49 4C 55 52 45 5F 54 49  4D 45 52 5F 33 3A 36 30 3B 0A 46 41 49 4C 55 52
+45 5F 54 49 4D 45 52 5F 34 3A 31 32 30 3B 0A 46  41 49 4C 55 52 45 5F 54 49 4D 45 52 5F 35 3A 34
+38 30 3B 0A 46 41 49 4C 55 52 45 5F 54 49 4D 45  52 5F 36 3A 39 30 30 3B 0A
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/mav/drop_endc_call_hysteresis_tmr_val
+EFS_CONTENT:
+19
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/mav/drop_endc_call_hysteresis_tmr_volte_val
+EFS_CONTENT:
+19
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/nr5g/rrc/endc_whitelist_ca_combos
+EFS_CONTENT:
+05 01 04 01 4D 00 42 00 05 00 02 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/mav/endc_ca_file_generation
+EFS_CONTENT:
+01
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/nr5g/rrc/endc_blacklist_explicit_ca_combos
+EFS_CONTENT:
+02 04 01 42 00 01 01 01 30 00 05 00 01 02 00 01  00 02 4D 00 01 01 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 01
+42 00 01 00 01 30 00 05 00 01 02 00 01 01 02 4D  00 01 01 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/nr5g/rrc/nrsa_whitelist_ca_combos
+EFS_CONTENT:
+42 00 05 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/mav/volte_screen_on_hysteresis_tmr_val
+EFS_CONTENT:
+02
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/mav/mav_avoid_uwb_roaming
+EFS_CONTENT:
+01
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/mav/mav_monitor_mm_mb_replace_nr5g_with_nr5guwb
+EFS_CONTENT:
+01
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/nr5g/RRC/cap_csi_rs_32_port_control
+EFS_CONTENT:
+01 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/mmode/lte_rpm_info_2
+EFS_CONTENT:
+00 01 05 00 00 78 00 00 00 00 00
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/nas/ignore_uplmn
+EFS_CONTENT:
+01
+
+Item type: EFS_ITEM
+EFS_PATH: /nv/item_files/modem/nas/iPLMN
+EFS_CONTENT:
+20 00 27 F4 20 78 78 27 F4 30 78 78 27 F4 40 78  78 03 02 22 78 78 03 02 16 78 78 02 F8 02 78 78
+62 F2 20 78 78 04 F4 20 78 78 04 F4 30 78 78 04  F4 01 78 78 04 F4 13 78 78 04 F4 04 78 78 04 F4
+54 78 78 04 F4 94 78 78 04 F4 07 78 78 04 F4 09  78 78 04 F4 29 78 78 04 F4 39 78 78 04 F4 49 78
+78 04 F4 59 78 78 04 F4 69 78 78 04 F4 79 78 78  04 F4 89 78 78 04 F5 15 78 78 04 F5 25 78 78 04
+F5 35 78 78 04 F5 45 78 78 33 04 20 78 78 33 04  30 78 78 42 F0 20 78 78 24 F4 30 78 78 32 F4 51
+78 78 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00
+
+
