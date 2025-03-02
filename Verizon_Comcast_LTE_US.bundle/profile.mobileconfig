@@ -52,7 +52,7 @@
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>AA245DDE-4BF5-4493-B3BA-66AB9E10CDBC</string>
+			<string>CEB9FFBA-207A-45CD-AC53-A6FB9E234899</string>
 			<key>PayloadVersion</key>
 			<real>1</real>
 			<key>ProxyType</key>
@@ -110,7 +110,7 @@
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>4088E899-6CA9-498F-A459-601459B141F2</string>
+			<string>77E45CE5-BAD9-40E3-BE77-61747998D968</string>
 			<key>PayloadVersion</key>
 			<real>1</real>
 			<key>ProxyType</key>
@@ -166,13 +166,13 @@
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>5018D899-6CA9-498F-A459-601459B15203</string>
+			<string>7A35ED39-796F-4852-8784-8D821528D75C</string>
 			<key>PayloadVersion</key>
 			<real>1</real>
 			<key>ProxyType</key>
 			<string>None</string>
 			<key>SSID_STR</key>
-			<string>COX</string>
+			<string>Cox Mobile</string>
 		</dict>
 		<dict>
 			<key>AutoJoin</key>
@@ -222,7 +222,7 @@
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>BB245DDE-4BF5-4493-B3BA-66AB9E10CDBC</string>
+			<string>4454002C-FD99-4A4C-8099-7F3580A67F1B</string>
 			<key>PayloadVersion</key>
 			<real>1</real>
 			<key>ProxyType</key>
@@ -256,7 +256,7 @@
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>32060AC2-3AE7-4E1B-8541-2CAE32CF4AD5</string>
+			<string>78953FF9-F29F-4560-90F4-B291C872D6EA</string>
 			<key>PayloadVersion</key>
 			<real>1</real>
 			<key>ProxyType</key>
@@ -266,8 +266,6 @@
 		</dict>
 		<dict>
 			<key>AutoJoin</key>
-			<true/>
-			<key>CaptiveBypass</key>
 			<true/>
 			<key>DisplayedOperatorName</key>
 			<string>Xfinity Mobile</string>
@@ -324,7 +322,7 @@
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>E395AF22-DC47-480B-A79C-51039C351000</string>
+			<string>FB3D159A-13BE-44E4-AAEF-75E1700B02B1</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProxyType</key>
@@ -377,7 +375,7 @@
 			<key>PayloadType</key>
 			<string>com.apple.security.root</string>
 			<key>PayloadUUID</key>
-			<string>6965949E-1076-4842-9ADD-965C5E6D0358</string>
+			<string>435F0905-3FB9-41AF-80E1-769742185B4B</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 		</dict>
@@ -393,7 +391,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>FECCA4EC-6935-4031-936C-8210D1001290</string>
+	<string>DE89A542-8A59-4CA9-9C45-C37AF315951F</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
