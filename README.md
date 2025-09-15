@@ -1,17 +1,17 @@
 
-# iOS 18.6.2 Carrier Bundles
+# iOS 26.0 Carrier Bundles
 
-This repo contains the Carrier Bundles currently bundled with iOS version 18.6.2 for the iPhone 16 Pro.
+This repo contains the Carrier Bundles currently bundled with iOS version 26.0 for the iPhone 16 Pro.
 ## Last Extraction Metadata
 
 #### Last Extraction Time
-`2025-09-14 22:37:02 UTC`
+`2025-09-15 20:46:31 UTC`
 
 #### iOS Build Info
 
 | iOS Version | iOS Build | iOS Build Timestamp |
 | :-------- | :------- | :------------------ |
-| 18.6.2 | 22G100 | 12 Jul 2025 03:19:48 UTC |
+| 26.0 | 23A341 | 26 Aug 2025 03:47:22 UTC |
 
 #### iOS Device Info
 

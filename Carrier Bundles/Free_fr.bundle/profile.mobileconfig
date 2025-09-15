@@ -6,7 +6,7 @@
 	<array>
 		<dict>
 			<key>AutoJoin</key>
-			<true/>
+			<false/>
 			<key>EAPClientConfiguration</key>
 			<dict>
 				<key>AcceptEAPTypes</key>
