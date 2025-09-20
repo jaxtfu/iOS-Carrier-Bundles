@@ -1,5 +1,7 @@
 name: Update Carrier Bundles
 on: [workflow_dispatch]
+env:
+  DEVICE: ${{ vars.DEVICE }}
 
 jobs:
   ipsw-extraction:
@@ -47,7 +49,7 @@ jobs:
         run: |
           mkdir -p /tmp/ipsw
           cd /tmp/ipsw
-          ipsw download ipsw --device iPhone17,1 --latest --no-color --output /tmp/ipsw
+          ipsw download ipsw --device $DEVICE --latest --no-color --output /tmp/ipsw
       
       - name: Extract Carrier Bundles From IPSW
         run: |
@@ -90,14 +92,15 @@ jobs:
           sed -i "s/(DEVICE_NAME)/$DEVICE_NAME/g" README.md
           sed -i "s/(DEVICE_PRODNAME)/$DEVICE_PRODNAME/g" README.md
           
-      - name: Commit changes to repo
+      - name: Commit Changes
         run: |
           cd ${GITHUB_WORKSPACE}
 
           IOS_VERSION=$(jq -r '.version' ipsw_metadata.json)
+          IOS_BUILD=$(jq -r '.build' ipsw_metadata.json)
 
           git config --global user.name "${GITHUB_ACTOR}"
           git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git add .
-          git commit -m "iOS $IOS_VERSION - Update Carrier Bundles"
+          git commit -m "iOS $IOS_VERSION ($IOS_BUILD) - Update Carrier Bundles"
           git push
