@@ -1,17 +1,17 @@
 
-# iOS 26.0 Carrier Bundles
+# iOS 26.0.1 Carrier Bundles
 
-This repo contains the Carrier Bundles currently bundled with iOS version 26.0 for the iPhone Air.
+This repo contains the Carrier Bundles currently bundled with iOS version 26.0.1 for the iPhone Air.
 ## Last Extraction Metadata
 
 #### Last Extraction Time
-`2025-09-20 13:30:47 UTC`
+`2025-10-15 20:34:59 UTC`
 
 #### iOS Build Info
 
 | iOS Version | iOS Build | iOS Build Timestamp |
 | :-------- | :------- | :------------------ |
-| 26.0 | 23A341 | 26 Aug 2025 03:45:20 UTC |
+| 26.0.1 | 23A355 | 19 Sep 2025 03:42:48 UTC |
 
 #### iOS Device Info
 
