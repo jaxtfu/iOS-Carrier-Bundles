@@ -13,6 +13,8 @@
 				<array>
 					<integer>18</integer>
 				</array>
+				<key>EAPSIMAKAEncryptedIdentityEnabled</key>
+				<true/>
 			</dict>
 			<key>EncryptionType</key>
 			<string>WPA2</string>
@@ -29,17 +31,17 @@
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>3014ace2-da0a-11eb-a61e-f45c89abb0d9</string>
+			<string>D4CB65AC-0A33-4F26-A04F-A53FF845E60A</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProxyType</key>
 			<string>None</string>
 			<key>SSID_STR</key>
-			<string>GTT+ Do More</string>
+			<string>ONE</string>
 		</dict>
 	</array>
 	<key>PayloadDisplayName</key>
-	<string>Eap_GTT</string>
+	<string>ONE</string>
 	<key>PayloadIdentifier</key>
 	<string>com.apple.ATN_gy.ecb1adc4-da0e-11eb-83d9-f45c89abb0d9</string>
 	<key>PayloadRemovalDisallowed</key>
@@ -47,7 +49,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>ecb1af2c-da0e-11eb-83d9-f45c89abb0d9</string>
+	<string>1DB5C02E-8381-4E02-9F3F-093690A44247</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
