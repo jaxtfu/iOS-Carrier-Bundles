@@ -31,23 +31,66 @@
 			<key>PayloadDescription</key>
 			<string></string>
 			<key>PayloadDisplayName</key>
-			<string>WiFi (COX)</string>
+			<string>WiFi (XFINITY)</string>
 			<key>PayloadEnabled</key>
 			<true/>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.wifi.managed.220D37DB-24E5-41AB-98E3-41CC696D1DEE</string>
+			<string>com.apple.wifi.managed.5B944C91-2467-4FF5-8F69-7DEEBD13161A</string>
 			<key>PayloadOrganization</key>
 			<string>Cox Mobile</string>
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>40794DA3-227B-4E46-AB01-B8D1FADD9B4D</string>
+			<string>E8B3D18A-8CBC-450C-86BF-A5C51A14545D</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProxyType</key>
 			<string>None</string>
 			<key>SSID_STR</key>
-			<string>Cox Mobile</string>
+			<string>Xfinity Mobile</string>
+		</dict>
+		<dict>
+			<key>AutoJoin</key>
+			<true/>
+			<key>CaptiveBypass</key>
+			<false/>
+			<key>DisableAssociationMACRandomization</key>
+			<false/>
+			<key>EAPClientConfiguration</key>
+			<dict>
+				<key>AcceptEAPTypes</key>
+				<array>
+					<integer>23</integer>
+				</array>
+				<key>EAPSIMAKAEncryptedIdentityEnabled</key>
+				<true/>
+				<key>UserName</key>
+				<string>anonymous@coxmobile.com</string>
+				<key>UserPassword</key>
+				<string></string>
+			</dict>
+			<key>EncryptionType</key>
+			<string>WPA</string>
+			<key>HIDDEN_NETWORK</key>
+			<false/>
+			<key>IsHotspot</key>
+			<true/>
+			<key>PayloadDescription</key>
+			<string>Configures Wi-Fi settings</string>
+			<key>PayloadDisplayName</key>
+			<string>Wi-Fi</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.wifi.managed.5593B91B-E014-409E-9AFD-32FE8B31AA5C</string>
+			<key>PayloadType</key>
+			<string>com.apple.wifi.managed</string>
+			<key>PayloadUUID</key>
+			<string>312AD188-F9DB-4B5B-9511-1283F45338CA</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProxyType</key>
+			<string>None</string>
+			<key>SSID_STR</key>
+			<string>Spectrum Mobile</string>
 		</dict>
 		<dict>
 			<key>AutoJoin</key>
@@ -90,13 +133,13 @@
 			<key>PayloadEnabled</key>
 			<true/>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.wifi.managed.7C04AD5A-3FC1-4FC1-A5BA-8709CA74CDAE</string>
+			<string>com.apple.wifi.managed.CC6705B2-294C-4D51-A919-7D7B03ED8DD8</string>
 			<key>PayloadOrganization</key>
 			<string>Cox Mobile</string>
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>F2A23859-5143-4123-AD9C-A52B3B2AD482</string>
+			<string>866BFD50-C320-40F5-8D91-FA6B54F160E7</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>Priority</key>
@@ -137,23 +180,23 @@
 			<key>PayloadDescription</key>
 			<string></string>
 			<key>PayloadDisplayName</key>
-			<string>WiFi (XFINITY)</string>
+			<string>WiFi (COX)</string>
 			<key>PayloadEnabled</key>
 			<true/>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.wifi.managed.7656622A-3D51-44D7-BD65-B5DB3434B3F9</string>
+			<string>com.apple.wifi.managed.59490E9A-3DA0-4808-8E1B-C4271D854100</string>
 			<key>PayloadOrganization</key>
 			<string>Cox Mobile</string>
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>A810B249-13EC-49DC-AA54-578D1025556B</string>
+			<string>AD4C27DA-8E70-4BC4-8EC0-A300548A0283</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProxyType</key>
 			<string>None</string>
 			<key>SSID_STR</key>
-			<string>Xfinity Mobile</string>
+			<string>Cox Mobile</string>
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
@@ -173,7 +216,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>D5378D5E-5839-4028-ADEE-4E85695877CB</string>
+	<string>3B3B8328-9339-4AAE-86AE-1938263A5764</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
