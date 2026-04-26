@@ -1,1 +1,1 @@
-{"type":"IPSW","version":"26.4","build":"23E246","os":"Production","devices":[{"name":"iPhone Air","product":"iPhone18,4","board":"D23AP","timestamp":"25 Feb 2026 05:58:44 UTC","cpu":"CPU: A19 Pro (ARMv9.2-A), ID: t8150"}]}
+{"type":"IPSW","version":"26.4.2","build":"23E261","os":"Production","devices":[{"name":"iPhone Air","product":"iPhone18,4","board":"D23AP","timestamp":"25 Feb 2026 05:58:44 UTC","cpu":"CPU: A19 Pro (ARMv9.2-A), ID: t8150"}]}
