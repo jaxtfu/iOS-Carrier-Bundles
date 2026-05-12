@@ -24,7 +24,7 @@
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>3225B9DB-2D1D-44BF-8389-501CA3D82981</string>
+			<string>C26A68DC-E713-483C-A0D6-99F49C652E27</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>SSID_STR</key>
@@ -36,7 +36,7 @@
 			<key>DisableAssociationMACRandomization</key>
 			<false/>
 			<key>DisplayedOperatorName</key>
-			<string>AT&amp;T Wi-Fi Passpoint</string>
+			<string>AT&amp;T Secure Wi-Fi</string>
 			<key>DomainName</key>
 			<string>attwifi.com</string>
 			<key>EAPClientConfiguration</key>
@@ -69,7 +69,7 @@
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>39C3FB32-E954-4301-87DA-F58CBB437F23</string>
+			<string>3A14C654-B0E2-4CD5-9DE0-E33646EC8606</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProxyType</key>
@@ -91,7 +91,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>2A929596-CC26-42A1-A5B7-D5949E9BF2BA</string>
+	<string>ACC33A9A-CA6D-48C6-BC3D-22D942328BA1</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

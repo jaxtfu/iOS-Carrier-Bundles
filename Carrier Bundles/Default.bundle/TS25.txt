@@ -1,4 +1,4 @@
-12-01-25 68.0
+03-09-26 69.0
 PPCI&N;Abrev. Net. Name;MCC;MNC;Country Initials;Organisation;Network;SIM;Last Update
 AeroMobile;AeroMob;901;14;AAA;AeroMobile AS;AeroMobile;8988299;2016-03-02 12:07:50
 Telenor Maritime;TelenorM;901;12;AAM;Telenor Maritime AS;Telenor Maritime;8988232;2016-03-16 13:08:22
@@ -30,8 +30,8 @@ ETISALAT;ETISALAT;424;02;ARE;Etisalat United Arab Emirates;ETISALAT;;2025-02-24 
 CLARO ARGENTINA;CLARO AR;722;310;ARG;Claro Argentina;Claro Argentina;895431;2025-09-08 21:21:44
 Movistar;Tuenti;722;010;ARG;Movistar Argentina;Movistar;8954010;2025-04-04 16:10:42
 Movistar;Movistar;722;07;ARG;Movistar Argentina;Movistar;895407;2025-04-04 16:10:42
-AR PERSONAL;AR TP;722;34;ARG;Telecom Argentina S.A.;Personal;8954341;2015-12-11 00:00:00
-AR PERSONAL;AR TP;722;36;ARG;Telecom Argentina S.A.;Personal;8954341;2015-12-11 00:00:00
+AR PERSONAL;AR TP;722;34;ARG;Personal Argentina;Personal;8954341;2015-12-11 00:00:00
+AR PERSONAL;AR TP;722;36;ARG;Personal Argentina;Personal;8954341;2015-12-11 00:00:00
 Ucom AM;Ucom;283;10;ARM;Ucom;Ucom;8937410;2016-12-08 14:19:09
 Viva;Viva;283;05;ARM;Viva Armenia;Viva Armenia;893749;2024-10-28 19:35:12
 Telecom Armenia;Team;283;01;ARM;Team Telecom Armenia;Team;8937401;2024-01-25 13:24:27
@@ -69,7 +69,7 @@ A1 BG;A1 BG;284;01;BGR;A1 Bulgaria;A1 BG;8935901;2018-06-20 12:46:12
 stc;stc;426;04;BHR;stc Bahrain;STC Bahrain B.S.C Closed;8997304;2020-01-14 12:59:35
 ZainGroup;ZG;901;49;BHR;Zain Bahrain;Zain Group;;2025-02-12 12:07:43
 Zain BH;Zain BH;426;02;BHR;Zain Bahrain;Zain BH;;2025-02-18 16:14:34
-BATELCO;BATELCO;426;01;BHR;Bahrain Telecommunications Company (B.S.C.);BATELCO;8997301;2016-03-02 00:00:00
+BATELCO;BATELCO;426;01;BHR;BEYON;BATELCO;8997301;2016-03-02 00:00:00
 BTC;BTC;364;39;BHS;The Bahamas Telecommunications Company Ltd.;BTC BAHAMAS;8901391;2025-07-01 16:48:39
 aliv;aliv;364;49;BHS;Aliv;aliv;8913640;2019-03-26 15:38:06
 ERONET;ERONET;218;03;BIH;HT Eronet;ERONET;8938703;2021-06-15 11:21:33
@@ -129,6 +129,8 @@ net+;net+;228;74;CHE;netplus.ch SA;netplus.ch SA;;2025-04-04 11:49:01
 SolNet;SolNet;228;72;CHE;SolNet;SolNet;894172;2025-04-10 16:18:34
 ENTEL PCS;ENTEL;730;01;CHL;Entel PCS Telecomunicaciones S.A.;ENTEL PCS;895601;2016-02-04 00:00:00
 ENTEL PCS;ENTEL;730;10;CHL;Entel PCS Telecomunicaciones S.A.;ENTEL PCS;895610;2016-02-04 00:00:00
+Claro Chile;CHLSM;730;03;CHL;Claro Chile;Claro Chile;SIM;2025-12-14 20:48:28
+Claro Chile;CHLVT;730;08;CHL;Claro Chile;Claro Chile;SIM;2025-12-14 20:48:28
 Movistar;Movistar;730;07;CHL;Movistar Chile;Telefonica Movil de Chile;895607;2016-03-16 13:15:57
 Movistar;Movistar;730;02;CHL;Movistar Chile;Telefonica Movil de Chile;895602;2016-03-16 13:15:57
 CHN-CT;CT;460;03;CHN;China Telecom;China Telecom;898603;2015-11-24 14:08:23
@@ -143,6 +145,7 @@ CHN-UNICOM;UNICOM;460;01;CHN;China Unicom;CHINA UNICOM GSM;898601;2015-09-07 12:
 CHINA BROADNET;CBN;460;15;CHN;China Broadcasting Network Group Corporation Ltd.;CHINA BROADNET;898615;2025-04-02 05:01:52
 MOOV CI;MOOV;612;02;CIV;MOOV AFRICA COTE D’IVOIRE;MOOV CI;8922502;2015-03-18 14:44:31
 Orange;Orange;612;03;CIV;Orange Côte d'Ivoire;Orange;8922503;2018-06-13 11:33:15
+N/A;MTN CI;612;05;CIV;MTN Côte d'Ivoire;MTN COTE D'IVOIRE;;2026-01-23 18:48:11
 Orange CM;Orange;624;02;CMR;Orange Cameroon;Orange;8923702;2018-06-20 12:11:05
 CAMTEL or blue;CAMTEL;624;03;CMR;Cameroon Telecommunications (CAMTEL);Cameroon;62403;2025-04-17 10:55:31
 CAMTEL or blue;CAMTEL;624;05;CMR;Cameroon Telecommunications (CAMTEL);Cameroon Telecommunications;62405;2025-04-17 10:55:31
@@ -172,10 +175,12 @@ O2 - CZ;O2 - CZ;230;02;CZE;O2 Czech Republic;O2 Czech Republic;894202;2016-03-02
 o2 - de;o2 - de;262;03;DEU;Telefónica Germany GmbH & Co. OHG;O2 Germany;894921;2017-11-29 14:04:59
 o2 - de;o2 - de;262;07;DEU;Telefónica Germany GmbH & Co. OHG;O2 Germany;894922;2017-11-29 16:46:08
 vodafone.de;Vodafone;262;02;DEU;Vodafone Germany;Vodafone;894920;2025-02-14 17:32:54
-Telekom Deutschland GER;Telekom;901;40;DEU;Telekom Deutschland GmbH;Telekom Deutschland;8988228;2023-09-20 12:19:55
-Telekom Deutschland;Telekom;262;01;DEU;Telekom Deutschland GmbH;Telekom Deutschland;894902;2025-04-14 12:42:55
+Telekom.de;Telekom;901;40;DEU;Telekom Deutschland GmbH;Telekom Deutschland;8988228;2026-01-29 10:31:41
+Telekom.de;Telekom;262;01;DEU;Telekom Deutschland GmbH;Telekom Deutschland;894902;2026-01-29 10:31:41
+sipgate;sipgate;262;22;DEU;Sipgate Wireless GmbH;Sipgate Wireless GmbH;;2026-01-26 13:09:03
 1&1;1&1;262;23;DEU;1&1 Mobilfunk GmbH;1und1 Mobilfunk;894936;2025-03-21 10:22:57
 Simsalasim.de;SALA;262;26;DEU;Simsalasim Germany GmbH;Simsalasim DE;;2025-07-16 15:05:11
+EVATIS;EVATIS;638;01;DJI;Djibouti Telecom S.A.;DJIBOUTI TELECOM;8925301;2026-02-15 05:58:13
 Flow;Flow;366;110;DMA;FLOW Dominica;FLOW (LLA);8901016;2025-07-01 16:48:17
 3 DK;3 DK;238;06;DNK;3 Denmark;3 DK;894506;2015-12-14 14:10:21
 Telia-Telenor DK;TT DK;238;66;DNK;Norlys Mobil A/S;Telia DK;894504;2017-11-13 15:07:41
@@ -187,7 +192,7 @@ CLARO DOM;ClaroDOM;370;02;DOM;Claro Dominican Republic;CLARO GSM;890102;2018-02-
 ALTICE;ALTICE;370;01;DOM;Altice Dominican Republic;ALTICE;890101;2018-04-09 17:02:25
 DJEZZY;DJEZZY;603;02;DZA;Djezzy;DJEZZY;8921302;2025-04-15 13:43:23
 ALG Mobilis;Mobilis;603;01;DZA;ATM Mobilis;Mobilis;8921301;2015-08-05 14:57:06
-Movistar;Movistar;740;00;ECU;Movistar Ecuador;MOVISTAR;8959300;2016-03-16 00:00:00
+TIGO;Tigo;740;00;ECU;Movistar Ecuador;Tigo;8959300;2026-03-04 14:32:12
 CLARO;CLARO;740;01;ECU;Claro Ecuador;Claro Ecuador;8959301;2015-12-14 14:15:05
 CNT;CNT;740;02;ECU;Corporación Nacional de Telecomunicaciones CNT E.P.;CNT;8959302;2018-02-27 14:28:31
 Etisalat;Etisalat;602;03;EGY;Etisalat Egypt;Etisalat;8920033;2015-10-28 11:55:43
@@ -203,6 +208,7 @@ Elisa EE;ELISA;248;02;EST;Elisa Eesti AS;Elisa Eesti;8937202;2016-03-02 00:00:00
 Tele2 EE;Tele2 EE;248;03;EST;Tele2 Eesti Aktsiaselts;Tele2;8937203;2016-03-02 00:00:00
 Telia;Telia;248;01;EST;Telia Eesti AS;Telia;8937201;2016-02-16 00:00:00
 ethio telecom;ethiotel;636;01;ETH;Ethio Telecom;ethio telecom;89 251;2023-10-02 18:00:53
+Safaricom;Safari;636;02;ETH;Safaricom Telecommunications Ethiopia PLC;Safaricom;8925102;2026-02-26 13:47:01
 FI DNA;DNA;244;12;FIN;DNA Plc;DNA Ltd;8935804;2015-11-18 15:16:44
 FI DNA;DNA;244;03;FIN;DNA Plc;DNA Ltd;8935806;2015-11-18 15:16:44
 DNA - Telia FI;SuomenYV;244;36;FIN;Telia Finland Oyj;Telia FI - SuomenYV;8935801;2020-02-11 15:30:37
@@ -237,7 +243,6 @@ vodafone UK;voda UK;234;15;GBR;Vodafone United Kingdom;vodafone;894410;2016-02-0
 Sure;Sure;234;55;GBR;Sure Guernsey;Sure;894455;2017-02-27 12:58:24
 JT;JT;234;50;GBR;JT;JT;894450;2018-11-20 12:39:43
 O2 - UK;O2 - UK;234;10;GBR;Virgin Media O2;O2 (UK);894411;2016-03-02 13:10:09
-12;12;999;353;GBR;***Test RAEX Operator A;12;;2025-07-01 11:25:06
 EE;EE;234;30;GBR;EE Limited;T-Mobile;894430;2016-03-16 13:18:50
 EE;EE;234;33;GBR;EE Limited;Orange;894412;2016-03-16 13:18:50
 3 UK;3 UK;234;20;GBR;3 United Kingdom;3;894420;2021-09-15 17:47:59
@@ -249,7 +254,7 @@ AirtelTigo;ATL-TIGO;620;06;GHA;PPL NET GHANA LTD;AirtelTigo;8923306;2018-01-22 1
 GIBTEL;GIBTEL;266;01;GIB;Gibtelecom Limited;GIBTEL;8935001;2016-08-25 16:52:57
 Orange GN;ORANGEGN;611;01;GIN;Orange Guinée S.A.;Orange Guinee;8922401;2007-06-26 03:00:00
 SFR;SFR;340;02;GLP;Outremer Télécom;Outremer;8959402;2016-06-30 13:36:15
-Digicel;DigicelF;340;20;GLP;[suspended] Digicel Antilles Française Guyane;Digicel;8959620;2022-06-23 18:22:03
+Digicel;DigicelF;340;20;GLP;Digicel Antilles Française Guyane;Digicel;8959620;2022-06-23 18:22:03
 F-Orange;Orange;340;01;GLP;Orange French West indies;Orange;8959001;2016-03-02 13:17:28
 Free;Free;340;09;GLP;Free Caraïbe;Free;8959009;2025-11-26 10:51:56
 Free;Free;340;04;GLP;Free Caraïbe;Free;8959004;2025-11-26 10:51:56
@@ -296,7 +301,6 @@ Natcom;Natcom;372;03;HTI;Natcom;Natcom;8950903;2014-10-07 16:58:31
 vodafone HU;voda HU;216;70;HUN;One Hungary;vodafone;893670;2016-03-02 13:55:58
 Telekom HU;THU;216;30;HUN;Magyar Telekom Nyrt.;T-Mobile Hungary;893630;2015-02-25 13:35:43
 Yettel HU;Yettel;216;01;HUN;Yettel Magyarország Zártköruen Muködo Részvénytárs;Yettel;893620;2023-02-01 13:18:45
-Digi.Mobil HU;Digi HU;216;03;HUN;One Hungary;Digi.Mobil HU;893650;2019-05-29 13:40:54
 IND TELKOMSEL;T-SEL;510;10;IDN;PT Telekomunikasi Selular;TELKOMSEL;896210;2015-12-14 16:25:46
 3;3;510;89;IDN;Indosat Ooredoo Hutchison;Indosat Ooredoo Hutchison;896289;2022-04-06 19:57:06
 IND INDOSAT;INDOSAT;510;21;IDN;Indosat Ooredoo Hutchison;INDOSATOOREDOO;896221;2022-03-02 18:39:19
@@ -416,15 +420,17 @@ Partner IL;Partner;425;01;ISR;Partner Communications Company Ltd.;Partner IL;899
 WINDTRE;WINDTRE;222;88;ITA;WINDTRE;Wind Tre S.p.A.;8939;2024-10-28 15:38:05
 TIM@sea;TIM@sea;901;26;ITA;TIM S.p.A;TIM;;2017-05-15 18:14:17
 I TIM;TIM;222;01;ITA;TIM S.p.A;TIM;893901;2015-11-18 00:00:00
-vodafone IT;voda IT;222;10;ITA;Vodafone Italy;vodafone;893910;2016-03-03 12:57:21
+vodafone IT;voda IT;222;10;ITA;Vodafone Italy-Fastweb S.p.A;vodafone;893910;2016-03-03 12:57:21
 ILIAD;ILIAD;222;50;ITA;ILIAD Italia S.p.A.;ILIAD ITALIA;893950;2017-09-26 15:38:26
 Flow;Flow;338;180;JAM;FLOW Jamaica;FLOW (LLA);8901018;2025-07-01 16:04:21
 Digicel;Digicel;338;050;JAM;Digicel (Jamaica) Limited;Digicel Jamaica;891050;2016-03-16 00:00:00
 Umniah;Umniah;416;03;JOR;Umniah by Beyon;Umniah Mobile Company;8996203;2025-07-02 13:28:50
 Orange JO;OrangeJO;416;77;JOR;Orange Jordan;Orange;8996277;2018-05-30 14:58:45
 Zain JO;Zain JO;416;01;JOR;Zain Jordan;Zain JO;8996201;2013-02-20 01:00:00
+44055;44055;440;55;JPN;KDDI Corporation;KDDI Corporation;8981300;2025-12-04 08:21:58
 44050;44050;440;50;JPN;KDDI Corporation;KDDI Corporation;8981300;2024-09-18 09:10:50
 KDDI(au);KDDI(au);440;51;JPN;KDDI Corporation;KDDI Corporation;8981300;2024-09-18 09:10:50
+44052;44052;440;52;JPN;KDDI Corporation;KDDI Corporation;8981300;2025-12-04 08:21:58
 44054;44054;440;54;JPN;KDDI Corporation;KDDI Corporation;8981300;2024-09-18 09:10:50
 JPN-ROAM K;JpnRoamK;440;92;JPN;KDDI Corporation;KDDI Corporation;8981300;2024-10-07 10:05:19
 SoftBank;SoftBank;440;20;JPN;SoftBank Corp.;SoftBank;898120;2018-12-13 10:26:05
@@ -469,6 +475,7 @@ DIGICEL;DIGICEL;358;050;LCA;Digicel St Lucia;Digicel (St Lucia);891;2015-08-10 1
 SwisscomFL;Swiss FL;295;01;LIE;Swisscom (Switzerland) Ltd (Liechtenstein);Swisscom;894101;2013-02-20 01:00:00
 Salt.li;Salt.li;295;02;LIE;Salt Liechtenstein;Salt.li;8942302;2024-10-08 14:28:27
 FL1;FL1;295;05;LIE;Telecom Liechtenstein AG;FL1;8942305;2015-11-24 00:00:00
+FL1;FL1;228;75;LIE;FL1;FL1;;2025-12-12 11:32:59
 Mobitel LK;Mobitel;413;01;LKA;Mobitel (Pvt) Limited;Mobitel;899401;2015-12-14 16:26:06
 Hutch;Hutch;413;08;LKA;Hutch Sri Lanka;Hutchison Telecommunications Lanka (Pte);899408;2020-11-10 12:29:46
 Hutch;Hutch;413;03;LKA;Hutch Sri Lanka;Hutchison Telecommunications Lanka (Pte);899403;2020-11-10 12:32:17
@@ -503,7 +510,7 @@ Moldtelecom;Mtelecom;259;05;MDA;Moldtelecom S.A.;Moldtelecom;8937303;2021-04-21 
 Moldcell;Moldcell;259;02;MDA;Moldcell S.A;Moldcell;8937302;2015-04-28 18:43:45
 Orange MD;Orange;259;01;MDA;Orange Moldova;VoXtel;8937301;2017-09-05 15:58:16
 TELMA;TELMA;646;04;MDG;Yas Madagascar;Telma Mobile;8926104;2016-02-23 16:00:14
-Airtel;Airtel;646;01;MDG;[suspended] Airtel Madagascar;Airtel;8926101;2024-04-08 15:02:45
+Airtel;Airtel;646;01;MDG;Airtel Madagascar;Airtel;8926101;2024-04-08 15:02:45
 Ooredoo Maldives PVT LTD;Ooredoo;472;02;MDV;Ooredoo Maldives Public Limited Company;Ooredoo Maldives PVT LTD;8996002;2019-03-26 14:25:57
 DHIRAAGU;DHIRAAGU;472;01;MDV;Dhivehi Raajjeyge Gulhun Public Limited Company;DHIRAAGU;8996001;2015-12-18 16:04:59
 AT&T;AT&T;901;44;MEX;AT&T Comercializacion Movil, S. de R.L. de C.V.;AT&T Mexico;8952070;2017-11-17 09:23:09
@@ -512,6 +519,7 @@ AT&T;AT&T;334;050;MEX;AT&T Comercializacion Movil, S. de R.L. de C.V.;AT&T Mexic
 Movistar;TEMM;334;240;MEX;Movistar Mexico;Movistar México;;2025-06-17 18:52:03
 Movistar;TEMM;334;030;MEX;Movistar Mexico;Movistar México;;2025-07-11 15:40:12
 TELCEL;TELCEL;334;020;MEX;Telcel;TELCEL;8952020;2017-01-19 16:32:42
+VINOC;VINOC;334;230;MEX;VINOC;VINOC;;2026-03-02 23:54:56
 A1 MK;A1 MK;294;03;MKD;A1 Makedonija DOOEL Skopje;A1 MK;8938903;2019-09-23 13:23:12
 Telekom MK;MKT MK;294;01;MKD;Makedonski Telekom AD - Skopje;Makedonski Telekom;8938901;2018-09-11 12:35:29
 ORANGE ML;OML;610;02;MLI;Orange Mali SA;Orange MALI;8922302;2015-10-06 14:07:52
@@ -520,7 +528,7 @@ go mobile;gomobile;278;21;MLT;GO p.l.c.;go mobile;8935621;2017-02-07 15:57:38
 epic maritime;epic mar;901;19;MLT;Epic Malta;epic maritime;;2024-12-20 13:26:58
 epic;epic;278;01;MLT;Epic Malta;epic;8935601;2020-11-25 16:20:42
 MM 900;MPTGSM;414;01;MMR;Myanma Posts and Telecommunications;MPT GSM Network;8995011;2016-03-16 00:00:00
-Ooredoo;Ooredoo;414;05;MMR;Ooredoo Myanmar Limited;Ooredoo;899505;2016-03-16 00:00:00
+U9;U9;414;05;MMR;U9;U9;899505;2025-12-10 02:58:58
 MYTEL;MYTEL;414;09;MMR;MyTel;MYTEL;899509;2019-04-30 13:22:29
 MTEL;MTEL;297;03;MNE;MTEL d.o.o. Podgorica;MTEL;8938203;2016-03-24 00:00:00
 Telekom.me;T.me;297;02;MNE;Crnogorski Telekom a.d. Podgorica;Telekom.me;8938200;2019-01-22 18:17:07
@@ -577,7 +585,7 @@ Jazz;Jazz;410;07;PAK;Jazz;Jazz;8941007;2020-03-26 16:32:12
 Tigo;Tigo;714;020;PAN;Tigo Panamá;Tigo;8950702;2025-09-10 05:34:55
 Viettel Peru;VTP;716;15;PER;BITEL;Viettel Peru S.A.C.;895115;2019-01-08 10:06:46
 CLARO PER;ClaroPER;716;10;PER;Claro Peru;CLARO PER;895110;2016-03-16 17:28:07
-Movistar;Movistar;716;06;PER;Movistar Peru;Movistar Peru;895106;2021-05-11 18:22:56
+Movistar;Movistar;716;06;PER;Integra Technologies Group;Movistar Peru;895106;2021-05-11 18:22:56
 SMART;SMART;515;03;PHL;Smart Philippines;SMART Gold;896303;2016-03-16 17:29:22
 Globe Telecom-PH;GLOBE;515;02;PHL;Globe Telecom;Globe Telecom;896302;2018-06-15 17:24:38
 PLW PNCC;PNCC;552;01;PLW;Palau National Communications Corporation (PNCC);Palau National Communications Corporation;8968001;2025-08-27 11:00:46
@@ -677,7 +685,7 @@ TH 3G+;TH 3G+;520;00;THA;National Telecom Public Company Limited;CAT Telecom PLC
 NT Mobile;NT;520;15;THA;National Telecom Public Company Limited;NT Mobile;896615;2022-10-12 17:53:57
 NT Mobile;NT;520;47;THA;National Telecom Public Company Limited;NT Mobile;896615;2022-10-12 17:53:57
 AISatSea;AISatSea;901;45;THA;Advanced Wireless Network Company Limited;AIS;;2016-08-08 15:28:22
-AIS;AIS;520;01;THA;Advanced Wireless Network Company Limited;AIS;;2016-08-08 15:28:22
+AIS;AIS;520;01;THA;Advanced Wireless Network Company Limited;AIS;;2026-02-13 03:38:31
 AIS;AIS;520;03;THA;Advanced Wireless Network Company Limited;AIS;896603;2016-08-08 15:28:22
 TRUE-H;TRUE-H;520;19;THA;True Move H Universal Communication Co., Ltd;True Move H;896604;2025-03-21 10:23:42
 TRUE-H;TRUE-H;520;04;THA;True Move H Universal Communication Co., Ltd;True Move H;896604;2025-03-21 10:23:42

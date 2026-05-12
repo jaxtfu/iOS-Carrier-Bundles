@@ -22,7 +22,7 @@
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>73170746-27F6-44FE-8341-3F8EF5F5EDBE</string>
+			<string>7F3B13F3-D571-4EA3-BF88-0A4F9777C926</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>SSID_STR</key>
@@ -34,7 +34,7 @@
 			<key>DisableAssociationMACRandomization</key>
 			<false/>
 			<key>DisplayedOperatorName</key>
-			<string>AT&amp;T Wi-Fi Passpoint</string>
+			<string>AT&amp;T Secure Wi-Fi</string>
 			<key>DomainName</key>
 			<string>wlan.mnc100.mcc313.3gppnetwork.org</string>
 			<key>EAPClientConfiguration</key>
@@ -73,7 +73,7 @@
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>4172AC1C-88BD-4274-9510-09918197ED49</string>
+			<string>10ABB02D-858A-4AEA-99AA-D108E40FE1DC</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProxyType</key>
@@ -95,7 +95,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>D533359E-681D-4053-8E74-91F9C1A8278E</string>
+	<string>7AD4711A-CBC4-4B4C-A952-AC29BDC04344</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
