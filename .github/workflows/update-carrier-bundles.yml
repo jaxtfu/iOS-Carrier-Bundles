@@ -48,7 +48,7 @@ jobs:
       
       - name: Download Latest IPSW File
         run: |
-          DEVICE=$(echo device.txt)
+          DEVICE=$(cat device.txt)
           IPSW=$(ipsw download appledb --device $DEVICE --beta --os iOS --latest --show-latest | jq ".build" -r)
           
           mkdir -p /${RUNNER_TEMP}/ipsw
