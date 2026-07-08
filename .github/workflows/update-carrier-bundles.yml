@@ -1,7 +1,8 @@
 name: Update Carrier Bundles
-on: [workflow_dispatch]
-env:
-  DEVICE: ${{ vars.DEVICE }}
+on: 
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   ipsw-extraction:
@@ -47,9 +48,10 @@ jobs:
       
       - name: Download Latest IPSW File
         run: |
+          DEVICE=$(echo device.txt)
           mkdir -p /${RUNNER_TEMP}/ipsw
           cd /${RUNNER_TEMP}/ipsw
-          ipsw download ipsw --device $DEVICE --latest --no-color --output /${RUNNER_TEMP}/ipsw
+          ipsw download ipsw --device $DEVICE --beta --no-color --output /${RUNNER_TEMP}/ipsw
       
       - name: Extract Carrier Bundles From IPSW
         run: |
