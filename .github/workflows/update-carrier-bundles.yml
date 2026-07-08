@@ -6,7 +6,7 @@ on:
 
 jobs:
   ipsw-extraction:
-    name: Get Latest iOS IPSW and Extract Carrier Bundles
+    name: Get Latest iOS beta IPSW and Extract Carrier Bundles
     runs-on: ubuntu-24.04-arm
     steps:
       - uses: actions/checkout@v4
@@ -49,10 +49,11 @@ jobs:
       - name: Download Latest IPSW File
         run: |
           DEVICE=$(echo device.txt)
+          IPSW=$(ipsw download appledb --device iPhone18,2 --beta --os iOS --latest --show-latest | jq ".build" -r)
+          
           mkdir -p /${RUNNER_TEMP}/ipsw
           cd /${RUNNER_TEMP}/ipsw
-          ipsw download ipsw --device $DEVICE --beta --no-color --output /${RUNNER_TEMP}/ipsw
-      
+          ipsw download appledb --device $DEVICE --os iOS --build $IPSW      
       - name: Extract Carrier Bundles From IPSW
         run: |
           mkdir -p /tmp/ipsw
