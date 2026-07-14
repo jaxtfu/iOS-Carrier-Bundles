@@ -5,7 +5,7 @@ This repo contains the Carrier Bundles currently bundled with iOS version 26.6 f
 ## Last Extraction Metadata
 
 #### Last Extraction Time
-`2026-07-14 03:34:58 UTC`
+`2026-07-14 20:35:49 UTC`
 
 #### iOS Build Info
 
@@ -29,7 +29,7 @@ On the iOS filesystem, this folder can be found at:
 /System/Library/Carrier Bundles/iPhone
 ```
 
-These files are in Apple's binary plist format, so you will need an editor that can handle these kinds of files to view them.
+These files are extracted from Apple's binary plist format and stored here as XML so changes are readable in GitHub diffs.
 
 [The Apple Wiki](https://theapplewiki.com/) has further information on [Carrier Bundles](https://theapplewiki.com/wiki/Carrier_Bundle).
 
@@ -41,7 +41,7 @@ On the iOS filesystem, this folder can be found at:
 /System/Library/CountryBundles/iPhone/
 ```
 
-These files are in Apple's binary plist format, so you will need an editor that can handle these kinds of files to view them.
+These files are extracted from Apple's binary plist format and stored here as XML so changes are readable in GitHub diffs.
 
 ## Acknowledgements
  - [blacktop/ipsw](https://github.com/blacktop/ipsw)
