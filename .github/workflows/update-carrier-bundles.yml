@@ -98,7 +98,14 @@ jobs:
 
       - name: Convert binary plists to XML
         run: |
-             find ${GITHUB_WORKSPACE} -name "*.plist" -type f -exec plistutil -convert xml1 {} +
+         for file in ${GITHUB_WORKSPACE}/**.plist; do
+          if plistutil -i "$file" | grep -q "bplist"; then
+            echo "Converting $file to XML..."
+            plistutil -i "$file" -o "$file"
+          else
+            echo "$file is not a binary plist, skipping."
+          fi
+         done      
       - name: Commit Changes
         run: |
           cd ${GITHUB_WORKSPACE}
