@@ -98,7 +98,28 @@ jobs:
 
       - name: Convert binary plists to XML
         run: |
-         for file in ${GITHUB_WORKSPACE}/**.plist; do
+         for file in ${GITHUB_WORKSPACE}/Carrier\ Bundles/*/*.plist; do
+          if plistutil -i "$file" | grep -q "bplist"; then
+            echo "Converting $file to XML..."
+            plistutil -i "$file" -o "$file"
+          else
+            echo "$file is not a binary plist, skipping."
+          fi
+          for file in ${GITHUB_WORKSPACE}/Country\ Bundles/*/*.plist; do
+          if plistutil -i "$file" | grep -q "bplist"; then
+            echo "Converting $file to XML..."
+            plistutil -i "$file" -o "$file"
+          else
+            echo "$file is not a binary plist, skipping."
+          fi
+         for file in ${GITHUB_WORKSPACE}/Carrier\ Bundles/*/signatures/*.plist; do
+          if plistutil -i "$file" | grep -q "bplist"; then
+            echo "Converting $file to XML..."
+            plistutil -i "$file" -o "$file"
+          else
+            echo "$file is not a binary plist, skipping."
+          fi
+          for file in ${GITHUB_WORKSPACE}/Country\ Bundles/*/signatures/*.plist; do
           if plistutil -i "$file" | grep -q "bplist"; then
             echo "Converting $file to XML..."
             plistutil -i "$file" -o "$file"
