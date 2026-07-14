@@ -13,7 +13,7 @@ jobs:
 
       - name: Install Build Dependencies
         run: |
-          BUILD_DEPS='fuse3 unzip lzma libfuse3-dev bzip2 libbz2-dev libz-dev cmake build-essential git libattr1-dev'
+          BUILD_DEPS='fuse3 unzip lzma libfuse3-dev bzip2 libbz2-dev libz-dev cmake build-essential git libattr1-dev libplist-utils'
 
           sudo apt update
           sudo apt install $BUILD_DEPS -y
@@ -98,7 +98,7 @@ jobs:
 
       - name: Convert binary plists to XML
         run: |
-             find ${GITHUB_WORKSPACE} -name "*.plist" -type f -exec plutil -convert xml1 {} +
+             find ${GITHUB_WORKSPACE} -name "*.plist" -type f -exec plistutil -convert xml1 {} +
       - name: Commit Changes
         run: |
           cd ${GITHUB_WORKSPACE}
