@@ -95,7 +95,10 @@ jobs:
           sed -i "s/(IOS_BUILD_TIMESTAMP)/$IOS_BUILD_TIMESTAMP/g" README.md
           sed -i "s/(DEVICE_NAME)/$DEVICE_NAME/g" README.md
           sed -i "s/(DEVICE_PRODNAME)/$DEVICE_PRODNAME/g" README.md
-          
+
+      - name: Convert binary plists to XML
+        run: |
+             find ${GITHUB_WORKSPACE} -name "*.plist" -type f -exec plutil -convert xml1 {} +
       - name: Commit Changes
         run: |
           cd ${GITHUB_WORKSPACE}
