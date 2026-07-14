@@ -98,35 +98,22 @@ jobs:
 
       - name: Convert binary plists to XML
         run: |
-         for file in ${GITHUB_WORKSPACE}/Carrier\ Bundles/*/*.plist; do
-          if plistutil -i "$file" | grep -q "bplist"; then
-            echo "Converting $file to XML..."
-            plistutil -i "$file" -o "$file"
-          else
-            echo "$file is not a binary plist, skipping."
-          fi
-          for file in ${GITHUB_WORKSPACE}/Country\ Bundles/*/*.plist; do
-          if plistutil -i "$file" | grep -q "bplist"; then
-            echo "Converting $file to XML..."
-            plistutil -i "$file" -o "$file"
-          else
-            echo "$file is not a binary plist, skipping."
-          fi
-         for file in ${GITHUB_WORKSPACE}/Carrier\ Bundles/*/signatures/*.plist; do
-          if plistutil -i "$file" | grep -q "bplist"; then
-            echo "Converting $file to XML..."
-            plistutil -i "$file" -o "$file"
-          else
-            echo "$file is not a binary plist, skipping."
-          fi
-          for file in ${GITHUB_WORKSPACE}/Country\ Bundles/*/signatures/*.plist; do
-          if plistutil -i "$file" | grep -q "bplist"; then
-            echo "Converting $file to XML..."
-            plistutil -i "$file" -o "$file"
-          else
-            echo "$file is not a binary plist, skipping."
-          fi
-         done      
+          # Convert all Apple binary plists to XML so GitHub can show readable text diffs.
+          # libplist's plistutil (from libplist-utils) is already installed above.
+          # Always force -f xml: omitting -f would flip XML back to binary on re-runs.
+          converted=0
+          skipped=0
+          while IFS= read -r -d '' file; do
+            if head -c 6 "$file" | grep -q '^bplist'; then
+              plistutil -i "$file" -o "$file" -f xml
+              converted=$((converted + 1))
+            else
+              skipped=$((skipped + 1))
+            fi
+          done < <(find "${GITHUB_WORKSPACE}/Carrier Bundles" "${GITHUB_WORKSPACE}/Country Bundles" \
+            -type f -name '*.plist' -print0)
+
+          echo "Converted $converted binary plist(s) to XML; skipped $skipped already-text plist(s)."
       - name: Commit Changes
         run: |
           cd ${GITHUB_WORKSPACE}
