@@ -255,6 +255,64 @@
 		<dict>
 			<key>AutoJoin</key>
 			<true/>
+			<key>DisableAssociationMACRandomization</key>
+			<false/>
+			<key>EAPClientConfiguration</key>
+			<dict>
+				<key>AcceptEAPTypes</key>
+				<array>
+					<integer>21</integer>
+					<integer>23</integer>
+				</array>
+				<key>EAPSIMAKAEncryptedIdentityEnabled</key>
+				<true/>
+				<key>EAPSIMAKARealm</key>
+				<string>spectrum.net</string>
+				<key>OuterIdentity</key>
+				<string>anonymous@spectrum.net</string>
+				<key>PayloadCertificateAnchorUUID</key>
+				<array>
+					<string>C6D8E2D4-F1B4-437B-81AF-401D53E30707</string>
+				</array>
+				<key>TLSTrustedServerNames</key>
+				<array>
+					<string>aaa.spectrum.net</string>
+					<string>aaa.twcwifi.com</string>
+					<string>aaa.brighthouse.com</string>
+				</array>
+				<key>TTLSInnerAuthentication</key>
+				<string>MSCHAPv2</string>
+				<key>UserName</key>
+				<string>anonymous@spectrum.net</string>
+				<key>UserPassword</key>
+				<string>pXGakTWN6%wVuN7SRHA6WK5^^%Pw7V+en25M=*DNdA-*q7-xa6^^_RvN9h%njCe79S</string>
+			</dict>
+			<key>EncryptionType</key>
+			<string>WPA2</string>
+			<key>HIDDEN_NETWORK</key>
+			<false/>
+			<key>IsHotspot</key>
+			<true/>
+			<key>PayloadDescription</key>
+			<string>Configures Wi-Fi settings</string>
+			<key>PayloadDisplayName</key>
+			<string>Wi-Fi</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.wifi.managed.390E9A07-92DF-4946-A33C-2A05CDA88BF2</string>
+			<key>PayloadType</key>
+			<string>com.apple.wifi.managed</string>
+			<key>PayloadUUID</key>
+			<string>6C35F66C-E349-4730-B9E1-B76225EEDB66</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProxyType</key>
+			<string>None</string>
+			<key>SSID_STR</key>
+			<string>optimum</string>
+		</dict>
+		<dict>
+			<key>AutoJoin</key>
+			<true/>
 			<key>CaptiveBypass</key>
 			<false/>
 			<key>DisableAssociationMACRandomization</key>
