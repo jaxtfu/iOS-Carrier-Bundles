@@ -28,6 +28,10 @@
 	</dict>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>Show4GSwitch</key>
+	<true/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -47,12 +51,107 @@
 			<string>IAM</string>
 		</dict>
 	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Media</key>
+		<dict>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>15</integer>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>SuppressOctetAlignAttributeForBECodecs</key>
+			<false/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>UseOutgoingSipUri</key>
+			<true/>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>AdditionalHeaders</key>
+			<dict>
+				<key>INVITE,INVITE:*</key>
+				<string>Feature-Caps: *;+g.3gpp.srvcc-alerting</string>
+			</dict>
+			<key>AlwaysUnsubscribeFromRegEvents</key>
+			<false/>
+			<key>SubscriptionTerminatedMeansRegistrationTerminated</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,5XX,6XX</string>
+			<key>TriggerCSFBOnWaitForRingingTimeout</key>
+			<true/>
+			<key>DropRegistrationOnSRVCC</key>
+			<true/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>130</integer>
+			<key>AlwaysAddPrivacyHeader</key>
+			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>Preconditions</key>
+			<string>None</string>
+			<key>UseIPSec</key>
+			<true/>
+			<key>RingingTimerSeconds</key>
+			<integer>130</integer>
+			<key>RegistrationExpirationSeconds</key>
+			<integer>7200</integer>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>TreatAllNotificationsAsPartial</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc001.mcc604.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<false/>
+			</dict>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>ShowDialAssist</key>
+	<true/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>60401</string>
 	</array>
-	<key>ShowDialAssist</key>
-	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<array>
 		<string>+447537410207</string>
@@ -86,8 +185,10 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>ShowVolteSwitch</key>
+	<true/>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>AllowsVoIP</key>
 	<true/>
 	<key>EmergencyCalling</key>
@@ -156,6 +257,20 @@
 			<string>mmsiam</string>
 			<key>type-mask</key>
 			<integer>4</integer>
+		</dict>
+		<dict>
+			<key>AllowNoDNS</key>
+			<integer>1</integer>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ims</string>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>OTASoftwareUpdate</key>

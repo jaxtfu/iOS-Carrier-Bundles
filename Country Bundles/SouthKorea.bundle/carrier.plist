@@ -131,6 +131,8 @@
 	<dict>
 		<key>SupportsE2EE</key>
 		<false/>
+		<key>VendorID</key>
+		<integer>3</integer>
 		<key>ProvisioningData</key>
 		<dict>
 			<key>SupportsPush</key>

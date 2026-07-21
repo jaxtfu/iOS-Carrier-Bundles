@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
+	<string>6.0.161</string>
 	<key>ShowVoNRSwitch</key>
 	<true/>
 	<key>SupportsNRNSAInboundRoaming</key>
@@ -12,50 +12,25 @@
 	<true/>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Media</key>
-		<dict>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>109</key>
-				<dict>
-					<key>cmr</key>
-					<string>1</string>
-					<key>br</key>
-					<string>5.9-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>hf-only</key>
-					<string>0</string>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-				</dict>
-			</dict>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-		</dict>
-		<key>Signaling</key>
-		<dict>
-			<key>ResetSocketWhenNetworkChange</key>
-			<false/>
-		</dict>
-		<key>Voice</key>
-		<dict>
-			<key>EnableVoNRByDefault</key>
-			<true/>
-		</dict>
 		<key>SMS</key>
 		<dict>
 			<key>enableInNonVoLTEMode</key>
 			<false/>
 			<key>SupportedDomains</key>
 			<dict>
-				<key>LTE</key>
-				<true/>
 				<key>NR</key>
 				<true/>
 			</dict>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVoNRByDefault</key>
+			<true/>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>ResetSocketWhenNetworkChange</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SupportsVoNR</key>

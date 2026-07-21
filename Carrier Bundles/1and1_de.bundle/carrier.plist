@@ -4,12 +4,12 @@
 <dict>
 	<key>CarrierEntitlements</key>
 	<dict>
-		<key>SupportsOnDevicePhysicalSIMConvert</key>
-		<true/>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
 		<key>SupportSecureIntent</key>
 		<true/>
-		<key>ProtocolVersion</key>
-		<string>2</string>
+		<key>ServerAddress</key>
+		<string>https://es.1und1-mobilfunk.de</string>
 		<key>AllowedIMSIPrefixes</key>
 		<array>
 			<string>26223</string>
@@ -25,15 +25,17 @@
 		<integer>4203537</integer>
 		<key>SupportedAuthorizationTokens</key>
 		<integer>2</integer>
-		<key>ServerAddress</key>
-		<string>https://es.1und1-mobilfunk.de</string>
+		<key>SupportCrossPlatformSIMTransfer</key>
+		<true/>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<true/>
+		<key>ProtocolVersion</key>
+		<string>2</string>
 		<key>SupportedActions</key>
 		<array>
 			<string>TransferSIMService</string>
 		</array>
-		<key>UpdatePeriod</key>
-		<integer>24</integer>
-		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
 		<true/>
 	</dict>
 	<key>EmergencyCalling</key>
@@ -73,8 +75,6 @@
 			<integer>3</integer>
 			<key>apn</key>
 			<string>internet</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -83,7 +83,11 @@
 	<dict>
 		<key>LocalInstallSMDPURL</key>
 		<string>dri.prod.ondemandconnectivity.com</string>
+		<key>RequiresPasscodeForCrossPlatformTransfer</key>
+		<true/>
 	</dict>
+	<key>ShowLTEWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>333</string>
 	<key>RegistrationOptInRequired</key>
@@ -113,14 +117,14 @@
 		<key>ServerURL</key>
 		<string>dri.prod.ondemandconnectivity.com</string>
 	</dict>
-	<key>ShowDialAssist</key>
-	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<array>
 		<string>+447537410270</string>
 	</array>
-	<key>ShowTTY</key>
-	<false/>
+	<key>ShowDialAssist</key>
+	<true/>
 	<key>IPv6SupportedDataModeMask</key>
 	<integer>110623</integer>
 	<key>com.apple.voicemail.imap</key>
@@ -156,6 +160,8 @@
 		<key>BeaconAddress</key>
 		<string>5500</string>
 	</dict>
+	<key>OverrideOperatorWiFiName</key>
+	<string>1&amp;1 VoWiFi</string>
 	<key>MMS</key>
 	<dict>
 		<key>MaxImageDimension</key>
@@ -299,21 +305,21 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>ShowVolteSwitch</key>
+	<false/>
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>32819</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>internet</string>
+			<key>type-mask</key>
+			<integer>32819</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -324,8 +330,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>3</integer>
 			<key>SupportSwitchOver</key>
@@ -338,40 +342,34 @@
 			<integer>2</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>1048576</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>hos</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>4</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>mms</string>
+			<key>type-mask</key>
+			<integer>4</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
 		</dict>
 	</array>
-	<key>SuppressSimToolkitSendShortMessageNotifications</key>
-	<true/>
 	<key>IMSConfig</key>
 	<dict>
 		<key>Signaling</key>
@@ -520,6 +518,8 @@
 			<true/>
 		</dict>
 	</dict>
+	<key>SuppressSimToolkitSendShortMessageNotifications</key>
+	<true/>
 	<key>SMSSettings</key>
 	<dict>
 		<key>TransportFallback</key>
@@ -560,11 +560,15 @@
 	<true/>
 	<key>CarrierName</key>
 	<string>1&amp;1</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>
 		<array/>
 	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>26223</string>

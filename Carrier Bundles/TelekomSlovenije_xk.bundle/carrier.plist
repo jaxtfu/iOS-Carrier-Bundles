@@ -76,8 +76,8 @@
 	<string>none</string>
 	<key>OverrideOperatorName</key>
 	<string>IPKO</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>049900900</string>
 	<key>HomeBundleIdentifier</key>

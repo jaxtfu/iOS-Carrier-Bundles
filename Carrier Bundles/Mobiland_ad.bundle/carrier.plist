@@ -26,6 +26,10 @@
 	</dict>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -93,6 +97,29 @@
 	<string>WiFi AndorraTelecom</string>
 	<key>Show3GSwitchWith4G</key>
 	<true/>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>SupportedEntitlements</key>
+		<integer>5121</integer>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>ServerAddress</key>
+		<string>https://aes.mnc003.mcc213.pub.3gppnetwork.org/des/ios</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>SupportedActions</key>
+		<array>
+			<string>TransferSIMService</string>
+			<string>AuthenticateTrustFlag</string>
+		</array>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+	</dict>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
@@ -128,12 +155,49 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>171</string>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Andorra</string>
+	<key>RemoteCardProvisioningSettings</key>
+	<dict>
+		<key>MatchingICCIDPrefixes</key>
+		<array>
+			<string>893763</string>
+		</array>
+		<key>CellularTrialPlan</key>
+		<dict>
+			<key>TrialEndPeriod</key>
+			<string>2026-12-05T00:00:00Z</string>
+			<key>TrialPlanType</key>
+			<string>FreeTrial</string>
+			<key>SupportsTrialPlan</key>
+			<true/>
+			<key>TrialStartPeriod</key>
+			<string>2024-02-06T00:00:00Z</string>
+		</dict>
+		<key>ServerURL</key>
+		<string>andorratelecom.validspereachdpplus.com</string>
+		<key>ActivatingStateSubscriptionCheckTimerIntervals</key>
+		<array>
+			<integer>1800</integer>
+			<string>3600</string>
+			<string>5400</string>
+		</array>
+		<key>MinCompatibleWatchOS</key>
+		<string>26.5</string>
+		<key>SupportedSKUs</key>
+		<array>
+			<string>SKU_EU</string>
+		</array>
+		<key>ProvisioningMethod</key>
+		<string>CarrierFlow</string>
+	</dict>
+	<key>PushSettings</key>
+	<dict>
+		<key>MultiSIMTopic</key>
+		<string>ad.andorratelecom.entitlement</string>
+	</dict>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -144,7 +208,7 @@
 			<key>apn</key>
 			<string>internet</string>
 			<key>type-mask</key>
-			<integer>49</integer>
+			<integer>32817</integer>
 		</dict>
 	</array>
 	<key>OTASoftwareUpdate</key>

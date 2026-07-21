@@ -42,18 +42,13 @@
 	<key>SupportsNITZ</key>
 	<false/>
 	<key>MyAccountURL</key>
-	<string>http://www.claro.com.py/</string>
+	<string>https://www.claro.com.py/</string>
 	<key>EnableLTEAfterUpgrade</key>
 	<true/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
-	<key>MyAccountURLTitle</key>
-	<string>Claro Paraguay</string>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>MyAccountURLTitle</key>
+	<string>Claro Paraguay</string>
 	<key>ShowVolteWarningUnsupportedCarrier</key>
 	<false/>
 	<key>StockSymboli</key>
@@ -155,8 +150,6 @@
 		</dict>
 		<key>SMS</key>
 		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 			<key>SMSBundleToVoice</key>
 			<true/>
 			<key>SupportedDomains</key>
@@ -251,8 +244,8 @@
 	<false/>
 	<key>SupportsUserBusyCauseCode</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -396,8 +389,6 @@
 			<string>clarogprs999</string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<string>3</string>
 			<key>username</key>
@@ -414,8 +405,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>3</integer>
 			<key>SupportSwitchOver</key>

@@ -2,140 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>DefaultWhenImsSwitchOff</key>
-	<integer>0</integer>
 	<key>DerPriFileVersion</key>
 	<string>5.0.161</string>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Show5GStandaloneSwitch</key>
+	<key>ShowVoNRSwitch</key>
 	<true/>
-	<key>Enable5GStandaloneByDefault</key>
+	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
-	<key>Show5GSwitch</key>
+	<key>SupportsPDNLocalRelease</key>
 	<true/>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
-	<key>SupportsIMSSignalingIndication</key>
-	<true/>
-	<key>SupportsSupplementaryServicesOverIMS</key>
-	<true/>
-	<key>Location</key>
-	<dict>
-		<key>AllowOTDOADuringEmergencyMode</key>
-		<true/>
-	</dict>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Signaling</key>
-		<dict>
-			<key>SessionExpiresSeconds</key>
-			<integer>1800</integer>
-			<key>TcpIdleTimeoutSeconds</key>
-			<integer>0</integer>
-			<key>SendPreconditionsInConfirmedSessions</key>
-			<true/>
-			<key>AddAccessNetworkInfoToInsecureMessages</key>
-			<true/>
-			<key>MaxUdpMessageSize</key>
-			<integer>4096</integer>
-			<key>ResponseCodesBlockedForSilentRedialNRSANonEm</key>
-			<string>503,504</string>
-			<key>SetSessionTimerRefresherInInitialRequest</key>
-			<false/>
-			<key>AlwaysSendSessionProgress</key>
-			<true/>
-			<key>AdditionalFeatureTags</key>
-			<dict>
-				<key>voice</key>
-				<dict>
-					<key>audio</key>
-					<string></string>
-				</dict>
-			</dict>
-			<key>RequireQoSBeforeRinging</key>
-			<true/>
-			<key>AlwaysSendTryingResponse</key>
-			<true/>
-			<key>PerCallQoSIndications</key>
-			<false/>
-			<key>UseIPSec</key>
-			<true/>
-			<key>IncompleteRegistrationThrottlingIntervalSeconds</key>
-			<integer>0</integer>
-			<key>ConvertSessionProgressToRinging</key>
-			<false/>
-			<key>AlwaysPrack18x</key>
-			<true/>
-			<key>EmergencyCallBackModeExpirationSeconds</key>
-			<integer>450</integer>
-			<key>EnableRegistrationSessionId</key>
-			<true/>
-			<key>AlwaysEmergencyRegister</key>
-			<false/>
-			<key>DisableAccessNetworkInfoForAckAndCancel</key>
-			<true/>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string></string>
-			<key>MaxAuthRetries</key>
-			<integer>3</integer>
-			<key>RefreshRegistrationDuringECBM</key>
-			<false/>
-			<key>AdditionalHeaders</key>
-			<dict>
-				<key>INVITE</key>
-				<array>
-					<string>Accept: application/sdp,application/3gpp-ims+xml</string>
-				</array>
-			</dict>
-			<key>INVITE</key>
-			<array>
-				<string>Accept: application/sdp,application/3gpp-ims+xml</string>
-			</array>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>RegisterOnServiceUpdate</key>
-			<false/>
-			<key>AllowResponsesOverDifferentTransport</key>
-			<false/>
-			<key>RequireExplicitPortsForEmergencyRoutes</key>
-			<true/>
-			<key>SendPreferredServiceInInvite</key>
-			<true/>
-			<key>AdditionalContactParams</key>
-			<dict>
-				<key>REGISTER</key>
-				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.accesstype="cellular2"</string>
-				<key>INVITE,INVITE:180,INVITE:183</key>
-				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting;audio</string>
-				<key>INVITE:200,PRACK:200,UPDATE:200</key>
-				<string>audio</string>
-			</dict>
-			<key>EnableSessionId</key>
-			<true/>
-			<key>AlwaysUnsubscribeFromRegEvents</key>
-			<false/>
-			<key>DropRegistrationOnSRVCC</key>
-			<true/>
-			<key>DisableRegistrationOnNotifyEvents</key>
-			<array>
-				<string>rejected</string>
-			</array>
-			<key>IgnoresIntlDataRoaming</key>
-			<true/>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<true/>
-			<key>Preconditions</key>
-			<string>Supported</string>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>SendInitialInviteAsInactive</key>
-			<true/>
-			<key>UseEphemeralSipSourcePortForTcp</key>
-			<true/>
-		</dict>
 		<key>Cert</key>
 		<dict>
 			<key>AddPreconditionToSupportedHeaderIfEnabled</key>
@@ -153,52 +31,29 @@
 			<key>SendPreconditionsInPrack</key>
 			<true/>
 		</dict>
-		<key>SMS</key>
+		<key>Emergency</key>
 		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>SupportedDomains</key>
-			<dict>
-				<key>LTE</key>
-				<true/>
-				<key>NR</key>
-				<true/>
-			</dict>
-			<key>allowCSFBInVolteMode</key>
+			<key>PreferSameDomainAsNormalCall</key>
 			<false/>
 		</dict>
 		<key>Media</key>
 		<dict>
-			<key>PacketAlignmentAMRWB</key>
-			<string>bandwidthEfficientOnly</string>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>120</integer>
-			<key>HideSessionLevelDirection</key>
-			<true/>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
 			<key>IncludeEVSIOModes</key>
 			<true/>
 			<key>EVSHardBrLimit</key>
 			<string>5.9-24.4</string>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-			<key>BandwidthSpecifierRSValue</key>
-			<integer>300</integer>
 			<key>AudioCodecs</key>
 			<dict>
 				<key>116</key>
 				<dict>
 					<key>br</key>
 					<string>5.9-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>mode-set</key>
-					<string>0,1,2</string>
-					<key>EncodingName</key>
-					<string>EVS</string>
 					<key>bw</key>
 					<string>nb-swb</string>
-					<key>max-red</key>
-					<string>220</string>
+					<key>mode-set</key>
+					<string>0,1,2</string>
 				</dict>
 				<key>96</key>
 				<dict>
@@ -216,99 +71,60 @@
 					<string>220</string>
 				</dict>
 			</dict>
-			<key>BandwidthSpecifierRRValue</key>
-			<integer>100</integer>
-			<key>PacketAlignmentAMRNB</key>
-			<string>bandwidthEfficientOnly</string>
-			<key>PayloadTypeBWEfficientAMRNB</key>
-			<integer>97</integer>
-			<key>RTCPIntervalSeconds</key>
-			<integer>5</integer>
-			<key>IncludeSDPMaxRed</key>
-			<true/>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
 			<key>RestrictSessionEVSBandwidth</key>
 			<false/>
-			<key>AddBWSpecsAtSessionLevel</key>
-			<true/>
-			<key>PayloadTypeBWEfficientAMRWB</key>
-			<integer>99</integer>
+			<key>BandwidthSpecifierRRValue</key>
+			<integer>100</integer>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>BandwidthSpecifierRSValue</key>
+			<integer>300</integer>
 		</dict>
-		<key>XCAP</key>
+		<key>Signaling</key>
 		<dict>
-			<key>BsfHost</key>
-			<string>bsf.test.3gpp.com</string>
-			<key>DisableOnNetworkError</key>
-			<false/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string></string>
-			<key>UnsolicitedRequestDelay</key>
-			<integer>0</integer>
-			<key>imsRegistrationDependency</key>
+			<key>AlwaysSendSessionProgress</key>
 			<true/>
-			<key>Auid</key>
-			<string>XCAP.3gpp.org/simservs.ngn.etsi.org</string>
-			<key>ContentType</key>
-			<string>application/xcap-el+xml</string>
-			<key>BsfPort</key>
-			<string>80</string>
-			<key>supported</key>
+			<key>AlwaysPrack18x</key>
 			<true/>
-		</dict>
-		<key>Emergency</key>
-		<dict>
-			<key>PreferSameDomainAsNormalCall</key>
+			<key>IgnoresIntlDataRoaming</key>
+			<true/>
+			<key>SetSessionTimerRefresherInInitialRequest</key>
 			<false/>
-			<key>MaxSearchRounds</key>
-			<integer>1</integer>
+			<key>SessionExpiresSeconds</key>
+			<integer>1800</integer>
+			<key>ResponseCodesBlockedForSilentRedialNRSANonEm</key>
+			<string>503,504</string>
+			<key>AlwaysSendTryingResponse</key>
+			<true/>
+			<key>RequireQoSBeforeRinging</key>
+			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<true/>
+			<key>MaxUdpMessageSize</key>
+			<integer>4096</integer>
 		</dict>
 		<key>Voice</key>
 		<dict>
-			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
-			<true/>
-			<key>tLte911Timer</key>
-			<integer>9</integer>
-			<key>CheckIMSPrefForEmergency</key>
-			<false/>
 			<key>BlockSilentRedialOverCS</key>
 			<true/>
-			<key>CellularE911SearchTimeout</key>
-			<integer>40</integer>
 			<key>EnableVoNRByDefault</key>
 			<true/>
 		</dict>
-	</dict>
-	<key>DerPriFileName</key>
-	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>AttachAPN</key>
-	<dict>
-		<key>3GPP</key>
+		<key>SMS</key>
 		<dict>
-			<key>password</key>
-			<string></string>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<true/>
+				<key>NR</key>
+				<true/>
+			</dict>
 		</dict>
 	</dict>
-	<key>SupportsImsCapability</key>
+	<key>SupportsVoNR</key>
 	<true/>
-	<key>SupportsPDNLocalRelease</key>
-	<true/>
-	<key>ShowVolteSwitch</key>
-	<true/>
-	<key>Enable5GAutoByDefault</key>
-	<true/>
-	<key>ShowVoNRSwitch</key>
-	<true/>
-	<key>SupportsNRNSAInboundRoaming</key>
-	<true/>
+	<key>DerPriFileName</key>
+	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -324,18 +140,16 @@
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>IMS</string>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -346,31 +160,35 @@
 			<string></string>
 			<key>apn</key>
 			<string>xcap</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>262144</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>sos</string>
+			<key>type-mask</key>
+			<integer>262144</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</array>
-	<key>SupportsVoNR</key>
+	<key>Show5GStandaloneSwitch</key>
+	<true/>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
+	<key>Show5GSwitch</key>
+	<true/>
+	<key>Enable5GStandaloneByDefault</key>
 	<true/>
 </dict>
 </plist>

@@ -21,8 +21,12 @@
 	<integer>53</integer>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+38164711</string>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -48,6 +52,16 @@
 	</array>
 	<key>IMSConfig</key>
 	<dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
 		<key>Signaling</key>
 		<dict>
 			<key>EarlyMediaNeedsHeader</key>
@@ -58,9 +72,32 @@
 			<true/>
 		</dict>
 	</dict>
-	<key>ShowDialAssist</key>
-	<true/>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>SupportedEntitlements</key>
+		<integer>5121</integer>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>ServerAddress</key>
+		<string>https://ses.telekom.rs</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>SupportedActions</key>
+		<array>
+			<string>TransferSIMService</string>
+			<string>AuthenticateTrustFlag</string>
+		</array>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+	</dict>
 	<key>Show3GSwitchWith4G</key>
+	<true/>
+	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<array>
@@ -95,8 +132,6 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -150,6 +185,39 @@
 	</dict>
 	<key>AllowAttachAPNEditing</key>
 	<true/>
+	<key>RemoteCardProvisioningSettings</key>
+	<dict>
+		<key>MatchingICCIDPrefixes</key>
+		<array>
+			<string>893810</string>
+		</array>
+		<key>CellularTrialPlan</key>
+		<dict>
+			<key>SupportsTrialPlan</key>
+			<false/>
+		</dict>
+		<key>ServerURL</key>
+		<string>rsp-3060.idemia.io</string>
+		<key>ActivatingStateSubscriptionCheckTimerIntervals</key>
+		<array>
+			<integer>1800</integer>
+			<string>3600</string>
+			<string>5400</string>
+		</array>
+		<key>MinCompatibleWatchOS</key>
+		<string>26.5</string>
+		<key>SupportedSKUs</key>
+		<array>
+			<string>SKU_EU</string>
+		</array>
+		<key>ProvisioningMethod</key>
+		<string>CarrierFlow</string>
+	</dict>
+	<key>PushSettings</key>
+	<dict>
+		<key>MultiSIMTopic</key>
+		<string>rs.telekom.ses</string>
+	</dict>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -160,7 +228,7 @@
 			<key>apn</key>
 			<string>gprswap</string>
 			<key>type-mask</key>
-			<integer>49</integer>
+			<integer>32817</integer>
 		</dict>
 		<dict>
 			<key>password</key>

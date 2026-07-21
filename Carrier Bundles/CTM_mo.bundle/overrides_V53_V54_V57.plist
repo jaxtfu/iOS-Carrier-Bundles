@@ -6,139 +6,23 @@
 	<string>5.0.162</string>
 	<key>ShowVoNRSwitch</key>
 	<true/>
-	<key>SupportsImsCapability</key>
-	<true/>
-	<key>Enable5GStandaloneByDefault</key>
+	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 	<key>_Exclude</key>
 	<array>
 		<string>EnableLTEAfterUpgrade</string>
 	</array>
-	<key>AttachAPN</key>
-	<dict>
-		<key>3GPP</key>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>PcscfAddressRequired</key>
-			<false/>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
-		</dict>
-	</dict>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
 	<key>IMSConfig</key>
 	<dict>
 		<key>Media</key>
 		<dict>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>109</key>
-				<dict>
-					<key>ch-aw-recv</key>
-					<string>0</string>
-					<key>br</key>
-					<string>5.9-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-					<key>hf-only</key>
-					<string>0</string>
-				</dict>
-			</dict>
 			<key>EVSHardBwLimit</key>
 			<string>nb-swb</string>
 		</dict>
-		<key>Signaling</key>
-		<dict>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string></string>
-			<key>AllowEarlyMediaToOverrideLocalRingback</key>
-			<true/>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>RingbackTimerSeconds</key>
-			<integer>120</integer>
-			<key>RingingTimerSeconds</key>
-			<integer>120</integer>
-			<key>ussdEnabled</key>
-			<true/>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
-			<key>IncomingCallEndReasons</key>
-			<dict>
-				<key>TemporarilyUnavailable</key>
-				<dict>
-					<key>StatusCode</key>
-					<integer>480</integer>
-					<key>TerminationEvent</key>
-					<string>RemoteHangup</string>
-				</dict>
-			</dict>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>Preconditions</key>
-			<string>None</string>
-			<key>AdditionalContactParams</key>
-			<dict>
-				<key>REGISTER,INVITE,INVITE:*</key>
-				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting</string>
-			</dict>
-			<key>UseIPSec</key>
-			<true/>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>NafHost</key>
-			<string>xcap.ims.mnc001.mcc455.pub.3gppnetwork.org</string>
-			<key>BsfPort</key>
-			<integer>80</integer>
-			<key>imsFeatureDependency</key>
-			<true/>
-			<key>NafPort</key>
-			<integer>80</integer>
-			<key>SupportsCLIR</key>
-			<true/>
-			<key>SupportCFMediaTag</key>
-			<string>true</string>
-			<key>supported</key>
-			<true/>
-			<key>ContentType</key>
-			<string>application/vnd.etsi.simservs+xml</string>
-			<key>DisableOnNetworkError</key>
-			<true/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string>404,501,502,503,504</string>
-			<key>SupportsCFErasure</key>
-			<false/>
-			<key>ServeMultipleCDIVRulesPerRequest</key>
-			<false/>
-			<key>imsRegistrationDependency</key>
-			<true/>
-			<key>BsfHost</key>
-			<string>bsf.mnc001.mcc455.pub.3gppnetwork.org</string>
-			<key>SupportsCW</key>
-			<true/>
-		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>SendConferenceSubscribeInNewDialog</key>
-			<true/>
-			<key>conferenceServer</key>
-			<string>sip:mmtel@conf-factory.ims.mnc001.mcc455.3gppnetwork.org</string>
-		</dict>
 		<key>SMS</key>
 		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
 			<key>SupportedDomains</key>
 			<dict>
 				<key>LTE</key>
@@ -146,14 +30,10 @@
 				<key>NR</key>
 				<true/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>Voice</key>
 		<dict>
 			<key>EnableVoNRByDefault</key>
-			<true/>
-			<key>EnableVolteByDefault</key>
 			<true/>
 		</dict>
 	</dict>
@@ -161,14 +41,10 @@
 	<true/>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>DefaultWhenImsSwitchOff</key>
-	<integer>0</integer>
 	<key>ShowVolteSwitch</key>
 	<false/>
 	<key>Show5GStandaloneSwitch</key>
 	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -176,10 +52,10 @@
 			<string></string>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>ctm-mobile</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>32817</integer>
 			<key>AllowedProtocolMask</key>
@@ -192,8 +68,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>IMS</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>type-mask</key>
 			<integer>131072</integer>
 			<key>AllowedProtocolMask</key>
@@ -216,8 +90,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>xcap</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
@@ -228,7 +100,7 @@
 	<true/>
 	<key>Show5GSwitch</key>
 	<true/>
-	<key>SupportsNRNSAInboundRoaming</key>
+	<key>Enable5GStandaloneByDefault</key>
 	<true/>
 </dict>
 </plist>

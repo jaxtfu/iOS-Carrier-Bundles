@@ -73,8 +73,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>du</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -389,14 +387,14 @@
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>Show4GSwitch</key>
 	<true/>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>MMS</key>
 	<dict>
 		<key>MaxImageDimension</key>
@@ -434,18 +432,16 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>1081397</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>du</string>
+			<key>type-mask</key>
+			<integer>1081397</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -466,17 +462,6 @@
 	</array>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Media</key>
-		<dict>
-			<key>RTCPIntervalSeconds</key>
-			<integer>5</integer>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-			<key>EnableRemoteRTCPDeactivation</key>
-			<true/>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>20</integer>
-		</dict>
 		<key>Signaling</key>
 		<dict>
 			<key>IgnoreRegNotificationContactExpires</key>
@@ -490,16 +475,18 @@
 			<string>10000</string>
 			<key>DefaultAuthAlgorithm</key>
 			<string>AKAv1-MD5</string>
-			<key>AlwaysAddSipInstance</key>
-			<true/>
 			<key>RegistrationRetryIntervals</key>
 			<string>70</string>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
 			<key>SupportPEarlyMediaHeader</key>
 			<true/>
 			<key>TriggerCSFBOnSDPError</key>
 			<true/>
 			<key>ussdEnabled</key>
 			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<false/>
 			<key>SipTimers</key>
 			<dict>
 				<key>InviteResponseTimeout</key>
@@ -562,16 +549,52 @@
 			<key>conferenceServer</key>
 			<string>sip:1234@ims.du.ae</string>
 		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>EnableRemoteRTCPDeactivation</key>
+			<true/>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>BsfHost</key>
+			<string>bsf.mnc003.mcc424.pub.3gppnetwork.org</string>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>400,403,500</string>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>BsfPort</key>
+			<integer>80</integer>
+			<key>supported</key>
+			<true/>
+			<key>DisableCLIRModification</key>
+			<true/>
+			<key>SupportsCFErasure</key>
+			<true/>
+			<key>imsFeatureDependency</key>
+			<true/>
+		</dict>
 		<key>Voice</key>
 		<dict>
 			<key>EnableVolteByDefault</key>
 			<true/>
 		</dict>
-	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
@@ -609,7 +632,7 @@
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://myworld.du.ae</string>
+	<string>https://myworld.du.ae</string>
 	<key>MyAccountURLTitle</key>
 	<string>du</string>
 	<key>VMSMFilterNumber</key>

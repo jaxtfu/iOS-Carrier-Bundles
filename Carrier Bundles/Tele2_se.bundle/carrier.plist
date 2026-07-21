@@ -8,10 +8,10 @@
 		<true/>
 		<key>SupportSecureIntent</key>
 		<true/>
-		<key>SupportedEntitlements</key>
-		<integer>13313</integer>
 		<key>ProtocolVersion</key>
 		<string>2</string>
+		<key>SupportedEntitlements</key>
+		<integer>4207617</integer>
 		<key>Authentication</key>
 		<dict>
 			<key>Type</key>
@@ -19,6 +19,8 @@
 			<key>Username</key>
 			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
 		</dict>
+		<key>SupportedAuthorizationTokens</key>
+		<integer>2</integer>
 		<key>ServerAddress</key>
 		<string>https://entitlement.tele2.com/entitlement/</string>
 		<key>SupportPhysicalSIMtoESIMTransfer</key>
@@ -115,12 +117,10 @@
 	</dict>
 	<key>ShowVolteWarningUnsupportedCarrier</key>
 	<false/>
-	<key>ShowDialAssist</key>
-	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>ShowDialAssist</key>
+	<true/>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
 		<key>MaxGreetingDuration</key>
@@ -386,7 +386,7 @@
 			<key>AlwaysAddGeolocationForEmergencyCalls</key>
 			<true/>
 			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string>3XX,5XX,6XX</string>
+			<string>380,503</string>
 			<key>AlwaysSendSessionProgress</key>
 			<true/>
 			<key>RingbackTimerSeconds</key>
@@ -421,8 +421,6 @@
 		<dict>
 			<key>enableInNonVoLTEMode</key>
 			<false/>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>Media</key>
 		<dict>
@@ -438,12 +436,10 @@
 			<dict>
 				<key>109</key>
 				<dict>
-					<key>hf-only</key>
-					<string>0</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
 					<key>max-red</key>
 					<string>220</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
 					<key>ch-aw-recv</key>
 					<string>-1</string>
 					<key>cmr</key>
@@ -496,24 +492,20 @@
 		<true/>
 		<key>Voice</key>
 		<dict>
-			<key>E911OverITechSupported</key>
-			<false/>
 			<key>EnableVoLTEWithVoWiFi</key>
 			<true/>
+			<key>E911OverITechSupported</key>
+			<false/>
 			<key>EnableVolteByDefault</key>
-			<true/>
-			<key>EmergencyRTTSupported</key>
 			<true/>
 		</dict>
 	</dict>
 	<key>SMSSettings</key>
 	<dict>
-		<key>AllowVVMSMSWhileIntlRoaming</key>
-		<false/>
 		<key>SMSCarrierReportJunkAddress</key>
 		<string>7726</string>
-		<key>TransportFallback</key>
-		<true/>
+		<key>AllowVVMSMSWhileIntlRoaming</key>
+		<false/>
 	</dict>
 	<key>TetheringPhoneNumber</key>
 	<string>+46772252525</string>
@@ -523,8 +515,20 @@
 	<integer>53</integer>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32768</integer>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
+	<key>RCS</key>
+	<dict>
+		<key>EnableBusinessMessagingByDefault</key>
+		<true/>
+		<key>ProvisioningData</key>
+		<dict>
+			<key>ServerURL</key>
+			<string>config.rcs.mnc$mnc.mcc$mcc.jibecloud.net</string>
+		</dict>
+		<key>ShowBusinessMessagingSwitch</key>
+		<true/>
+		<key>EnableRCSByDefault</key>
+		<true/>
+	</dict>
 	<key>PushSettings</key>
 	<dict>
 		<key>MultiSIMTopic</key>
@@ -557,6 +561,8 @@
 			<string>Kundservice Företag</string>
 		</dict>
 	</array>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>IMAP</string>
 	<key>StatusBarImages</key>
@@ -631,13 +637,18 @@
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://m.tele2.se/iphone</string>
+	<string>https://www.tele2.se/mobiler/apple</string>
 	<key>SupportedPLMNs</key>
 	<array>
 		<string>24007</string>
 		<string>24005</string>
 		<string>24024</string>
 	</array>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsEmergencyRTT</key>
+		<true/>
+	</dict>
 	<key>MyAccountURLTitle</key>
 	<string>Tele2</string>
 	<key>MandatoryVerify</key>

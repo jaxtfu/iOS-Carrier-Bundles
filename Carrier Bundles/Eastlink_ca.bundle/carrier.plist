@@ -4,10 +4,15 @@
 <dict>
 	<key>MaxBluetoothModemConnections</key>
 	<integer>5</integer>
+	<key>OTASoftwareUpdate</key>
+	<dict>
+		<key>SoftwareUpdateOptInRequired</key>
+		<true/>
+	</dict>
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.eastlink.ca/wirelesswelcome</string>
+	<string>https://www.eastlink.ca/wirelesswelcome</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>SendCurrentLanguageToSTK</key>
@@ -16,11 +21,10 @@
 	<integer>131072</integer>
 	<key>MyAccountURLTitle</key>
 	<string>Eastlink Wireless</string>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<false/>
-	</dict>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
 		<key>MaxGreetingDuration</key>
@@ -50,11 +54,6 @@
 		<key>BeaconAddress</key>
 		<string>40013</string>
 	</dict>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>302270</string>
-		<string>20601_ID-891035</string>
-	</array>
 	<key>Location</key>
 	<dict>
 		<key>EnableCPIDuringEmergencyMode</key>
@@ -62,10 +61,116 @@
 		<key>EnableEarlyReturnDuringEmergencyMode</key>
 		<true/>
 	</dict>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>380,414,499,606</string>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<false/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>VerstatFeatureCapability</key>
+			<string>Enabled</string>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>IgnoreRegNotificationContactExpires</key>
+			<true/>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>EmergencyPreferredIdentity</key>
+			<string>IMEI</string>
+			<key>RegistrationExpirationSeconds</key>
+			<integer>7200</integer>
+			<key>CountryOfOriginationFormat</key>
+			<string>BOTH</string>
+			<key>ValidateSipMessageRecipient</key>
+			<false/>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>tLte911Timer</key>
+			<integer>120</integer>
+			<key>E911OverIMSSupported</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+			<key>CellularE911SearchTimeout</key>
+			<integer>30</integer>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc270.mcc302.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>UseRpOriginatingAddressAsSender</key>
+			<true/>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>ContentType</key>
+			<string>application/vnd.etsi.simservs+xml</string>
+			<key>provisioningDependency</key>
+			<true/>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>supported</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>AllowHoldMusic</key>
+			<true/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>MaxRedundancy</key>
+			<integer>220</integer>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>30</integer>
+			<key>EnableIncomingDTMF</key>
+			<true/>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>SIM</key>
+		<dict>
+			<key>impiFormat</key>
+			<string>imsi@carrierDomain</string>
+			<key>impuFormat</key>
+			<array>
+				<string>msisdn@carrierDomain</string>
+			</array>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<false/>
+	</dict>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Eastlink (WiFi)</string>
 	<key>CarrierEntitlements</key>
 	<dict>
-		<key>UpdatePeriod</key>
-		<integer>24</integer>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>ServerAddress</key>
+		<string>https://wireless-entitlements.eastlink.ca</string>
 		<key>Authentication</key>
 		<dict>
 			<key>Type</key>
@@ -73,21 +178,44 @@
 			<key>Username</key>
 			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
 		</dict>
-		<key>ServerAddress</key>
-		<string>https://wireless-entitlements.eastlink.ca</string>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
 	</dict>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>49988</string>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>302270</string>
+		<string>20601_ID-891035</string>
+	</array>
 	<key>CarrierName</key>
 	<string>Eastlink</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>wisp.mobi.eastlink.ca</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>SupportsUserBusyCauseCode</key>
+	<true/>
+	<key>ShowVolteSwitch</key>
+	<false/>
+	<key>SupportsImsCapability</key>
 	<true/>
 	<key>VisualVoicemailServiceName</key>
 	<string>IMAP</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>CellBroadcast</key>
 	<dict>
 		<key>AlertTypes</key>
@@ -166,8 +294,149 @@
 		<key>MaxMessageSize</key>
 		<integer>1048576</integer>
 	</dict>
-	<key>Show3GSwitch</key>
-	<false/>
+	<key>TechSettings</key>
+	<dict>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA2-256</string>
+						</array>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>AES-256</string>
+						</array>
+						<key>DHGroup</key>
+						<integer>15</integer>
+						<key>Lifetime</key>
+						<integer>86400</integer>
+					</dict>
+				</array>
+				<key>InstallPolicies</key>
+				<true/>
+				<key>ReplayWindowSize</key>
+				<integer>12</integer>
+			</dict>
+		</dict>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>ims</string>
+			<key>PreferredTechnologyRoaming</key>
+			<string>wifi</string>
+		</dict>
+		<key>ExtraConfigurationAttributeRequestv6</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>21</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv6</string>
+				<key>Type</key>
+				<string>IPv6Address</string>
+			</dict>
+		</array>
+		<key>WifiCallingAllowedInRoaming</key>
+		<true/>
+		<key>WiFiCallingControlsAlliWLanServices</key>
+		<true/>
+		<key>SupportContextSwitchOver</key>
+		<true/>
+		<key>5wiServiceMask</key>
+		<integer>3</integer>
+		<key>IKE</key>
+		<dict>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-256</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-256</string>
+					<key>DHGroup</key>
+					<integer>15</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>86400</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-256</string>
+				</dict>
+			</array>
+			<key>DeadPeerDetectionEnabled</key>
+			<false/>
+			<key>DeadPeerDetectionMaxRetries</key>
+			<integer>4</integer>
+			<key>DeadPeerDetectionInterval</key>
+			<integer>600</integer>
+			<key>LocalIdentifier</key>
+			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
+			<key>NATTKeepAliveOffload</key>
+			<true/>
+			<key>ValidateRemoteCertificate</key>
+			<false/>
+			<key>RemoteAddress</key>
+			<string>epdg.epc.mnc270.mcc302.pub.3gppnetwork.org</string>
+			<key>DeadPeerDetectionRetryInterval</key>
+			<integer>10</integer>
+		</dict>
+		<key>ExtraConfigurationAttributeRequestv4</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>20</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv4</string>
+				<key>Type</key>
+				<string>IPv4Address</string>
+			</dict>
+		</array>
+		<key>SetHandOverIPv6Prefix</key>
+		<true/>
+		<key>TechPolicies</key>
+		<array>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>131072</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>1048578</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>4</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>262144</integer>
+			</dict>
+		</array>
+		<key>SupportCallHandover</key>
+		<true/>
+	</dict>
+	<key>PushSettings</key>
+	<dict>
+		<key>Topic</key>
+		<string>ca.eastlink.udm</string>
+		<key>VoWiFiTopic</key>
+		<string>ca.eastlink.wireless-entitlements.vowifi</string>
+	</dict>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -201,10 +470,7 @@
 			<integer>50</integer>
 		</dict>
 	</array>
-	<key>OTASoftwareUpdate</key>
-	<dict>
-		<key>SoftwareUpdateOptInRequired</key>
-		<true/>
-	</dict>
+	<key>Show3GSwitch</key>
+	<false/>
 </dict>
 </plist>

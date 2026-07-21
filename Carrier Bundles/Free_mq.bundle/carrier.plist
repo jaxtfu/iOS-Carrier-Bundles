@@ -121,8 +121,6 @@
 	<true/>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>590 69123 0111</string>
 	<key>HomeBundleIdentifier</key>

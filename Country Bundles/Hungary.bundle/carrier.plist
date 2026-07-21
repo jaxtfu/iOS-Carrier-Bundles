@@ -2,18 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Voice</key>
-		<dict>
-			<key>RTTSupported</key>
-			<true/>
-		</dict>
-	</dict>
-	<key>ISOAlpha2CountryCode</key>
-	<array>
-		<string>hu</string>
-	</array>
+	<key>ShowTARandomizationSwitch</key>
+	<true/>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -28,8 +18,11 @@
 			</dict>
 		</array>
 	</dict>
-	<key>ShowTARandomizationSwitch</key>
-	<true/>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsRTT</key>
+		<true/>
+	</dict>
 	<key>SupportedCountryIds</key>
 	<array>
 		<string>216</string>
@@ -37,5 +30,9 @@
 	</array>
 	<key>CountryName</key>
 	<string>Hungary</string>
+	<key>ISOAlpha2CountryCode</key>
+	<array>
+		<string>hu</string>
+	</array>
 </dict>
 </plist>

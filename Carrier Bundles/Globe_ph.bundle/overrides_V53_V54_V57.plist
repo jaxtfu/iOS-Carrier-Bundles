@@ -2,53 +2,40 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>SupportedEntitlements</key>
+		<integer>9233</integer>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<true/>
+		<key>ServerAddress</key>
+		<string>https://esim-es-open-prod-globe.esimcloud.net/globe/prod/executeAppleActions</string>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
+		<true/>
+		<key>SupportSecureIntent</key>
+		<true/>
+	</dict>
+	<key>ShowHighDataModeSwitch</key>
+	<true/>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
+	<key>DerPriFileName</key>
+	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>DerPriFileVersion</key>
 	<string>0.1.161</string>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
+	<key>Show3GSwitchWith5G</key>
+	<true/>
+	<key>SupportsNRNSAInboundRoaming</key>
+	<true/>
+	<key>Show4GSwitchWith5G</key>
+	<true/>
+	<key>Show5GSwitch</key>
+	<true/>
 	<key>_Exclude</key>
 	<array>
 		<string>EnableLTEAfterUpgrade</string>
 	</array>
-	<key>ShowHighDataModeSwitch</key>
-	<true/>
-	<key>Show3GSwitchWith5G</key>
-	<true/>
-	<key>DerPriFileName</key>
-	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>Show4GSwitchWith5G</key>
-	<true/>
-	<key>CarrierEntitlements</key>
-	<dict>
-		<key>SupportSecureIntent</key>
-		<true/>
-		<key>ProtocolVersion</key>
-		<string>2</string>
-		<key>SupportedEntitlements</key>
-		<integer>9233</integer>
-		<key>Authentication</key>
-		<dict>
-			<key>Type</key>
-			<integer>1</integer>
-			<key>Username</key>
-			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
-		</dict>
-		<key>ServerAddress</key>
-		<string>https://esim-es-open-prod-globe.esimcloud.net/globe/prod/executeAppleActions</string>
-		<key>SupportPhysicalSIMtoESIMTransfer</key>
-		<true/>
-		<key>AllowCurrentLocation</key>
-		<true/>
-		<key>SupportsOnDevicePhysicalSIMConvert</key>
-		<true/>
-	</dict>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Enable5GAutoByDefault</key>
-	<true/>
-	<key>Show5GSwitch</key>
-	<true/>
-	<key>SupportsNRNSAInboundRoaming</key>
-	<true/>
 </dict>
 </plist>

@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>26006_GID1-626e6573696d31</string>
@@ -11,20 +13,26 @@
 		<string>52505_GID1-626e6573696d31</string>
 		<string>29505_GID1-626e6573696d31</string>
 	</array>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
 	<key>CarrierName</key>
 	<string>bne</string>
 	<key>DataIndicatorOverrideForLTE</key>
 	<string>LTE</string>
-	<key>AllowEDGEEditing</key>
-	<true/>
 	<key>OverrideOperatorName</key>
 	<string>bne</string>
+	<key>AllowEDGEEditing</key>
+	<true/>
 	<key>OTASoftwareUpdate</key>
 	<dict>
 		<key>SoftwareUpdateOptInRequired</key>
 		<true/>
+	</dict>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>IntlDataRoamingAllowed</key>
 	<array>
@@ -854,6 +862,8 @@
 	<key>AllowAttachAPNEditing</key>
 	<true/>
 	<key>SupportsNITZ</key>
+	<false/>
+	<key>ShowVolteSwitch</key>
 	<false/>
 	<key>apns</key>
 	<array>

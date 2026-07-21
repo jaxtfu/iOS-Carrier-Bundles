@@ -20,11 +20,13 @@
 	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>IPv6SupportedDataModeMask</key>
-	<integer>12319</integer>
+	<integer>45087</integer>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+380635000111</string>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32768</integer>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -44,16 +46,34 @@
 	<dict>
 		<key>Media</key>
 		<dict>
-			<key>RingbackTone</key>
-			<string>CEPT</string>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
 			<key>IncludeSDPMaxRed</key>
 			<true/>
 			<key>PreferredAMRWBMode</key>
 			<integer>8</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>112</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>RingbackTone</key>
+			<string>CEPT</string>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
 		</dict>
 		<key>Signaling</key>
 		<dict>
@@ -159,26 +179,35 @@
 	</array>
 	<key>CarrierName</key>
 	<string>lifecell</string>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>AttachAPN</key>
 	<dict>
 		<key>3GPP</key>
 		<dict>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
 			<key>password</key>
 			<string></string>
 			<key>PcscfAddressRequired</key>
 			<false/>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoamingUMTS</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<true/>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsTTY</key>
+		<true/>
+	</dict>
 	<key>VoicemailPilotNumber</key>
 	<string>5000</string>
 	<key>RemoteCardProvisioningSettings</key>
@@ -214,19 +243,6 @@
 		</array>
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
-	</dict>
-	<key>MMS</key>
-	<dict>
-		<key>MMSC</key>
-		<string>http://mms.life.com.ua/cmmsc/post</string>
-		<key>GroupModeEnabled</key>
-		<false/>
-		<key>Proxy</key>
-		<string>212.58.162.230:8080</string>
-		<key>MaxRecipients</key>
-		<integer>10</integer>
-		<key>MaxMessageSize</key>
-		<integer>512000</integer>
 	</dict>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Ukraine</string>
@@ -331,39 +347,31 @@
 			<string></string>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>internet</string>
 			<key>type-mask</key>
 			<integer>32817</integer>
-		</dict>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>mms</string>
-			<key>type-mask</key>
-			<integer>4</integer>
-		</dict>
-		<dict>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>type-mask</key>
-			<integer>131072</integer>
-			<key>apn</key>
-			<string>ims</string>
+			<key>UseNetworkMTU</key>
+			<true/>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
-			<key>DefaultProtocolMask</key>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</array>

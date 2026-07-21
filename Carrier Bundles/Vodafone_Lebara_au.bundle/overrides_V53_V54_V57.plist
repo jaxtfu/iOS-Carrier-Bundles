@@ -3,31 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
+	<string>6.0.162</string>
 	<key>ShowVoNRSwitch</key>
 	<true/>
-	<key>SupportsImsCapability</key>
-	<true/>
-	<key>Show5GSwitch</key>
+	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
 	<key>IMSConfig</key>
 	<dict>
+		<key>Emergency</key>
+		<dict>
+			<key>AlwaysEnableVoNRForEmergency</key>
+			<true/>
+		</dict>
 		<key>Media</key>
 		<dict>
 			<key>AudioCodecs</key>
 			<dict>
 				<key>126</key>
 				<dict>
-					<key>ch-aw-recv</key>
-					<string>0</string>
-					<key>br</key>
-					<string>9.6-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
 					<key>bw</key>
 					<string>nb-swb</string>
 				</dict>
@@ -40,15 +35,70 @@
 	<true/>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>ShowVolteSwitch</key>
-	<false/>
+	<key>apns</key>
+	<array>
+		<dict>
+			<key>type-mask</key>
+			<integer>32817</integer>
+			<key>password</key>
+			<string></string>
+			<key>enableXLAT464</key>
+			<true/>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>live.vodafone.com</string>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>131072</integer>
+			<key>Support5GSaHandOver</key>
+			<true/>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
+			<key>SupportSwitchOver</key>
+			<true/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>type-mask</key>
+			<integer>1048582</integer>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>1048582</integer>
+			<key>Support5GSaHandOver</key>
+			<true/>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>HOS</string>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+	</array>
 	<key>Show5GStandaloneSwitch</key>
 	<true/>
 	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
 	<key>Enable5GAutoByDefault</key>
 	<true/>
-	<key>SupportsNRNSAInboundRoaming</key>
+	<key>Show5GSwitch</key>
 	<true/>
 	<key>Enable5GStandaloneByDefault</key>
 	<true/>

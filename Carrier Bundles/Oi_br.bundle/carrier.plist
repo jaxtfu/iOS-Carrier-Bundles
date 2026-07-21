@@ -24,7 +24,7 @@
 	<key>SupportsNITZ</key>
 	<false/>
 	<key>MyAccountURL</key>
-	<string>http://www.oi.com.br</string>
+	<string>https://www.oi.com.br</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>RegistrationOptInRequired</key>
@@ -66,16 +66,14 @@
 			<string></string>
 			<key>apn</key>
 			<string>gprs.oi.com.br</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>*100</string>
 	<key>HomeBundleIdentifier</key>
@@ -100,8 +98,6 @@
 			<string>oi</string>
 			<key>apn</key>
 			<string>gprs.oi.com.br</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
@@ -114,8 +110,6 @@
 			<string>oimms</string>
 			<key>apn</key>
 			<string>mmsgprs.oi.com.br</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>4</integer>
 			<key>AllowedProtocolMask</key>

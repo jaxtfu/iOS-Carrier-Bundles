@@ -37,6 +37,8 @@
 	<false/>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
+	<key>EnableLTEAfterUpgrade</key>
+	<true/>
 	<key>APNEditabilityTypemask</key>
 	<integer>1</integer>
 	<key>RegistrationOptInRequired</key>
@@ -60,6 +62,11 @@
 	</array>
 	<key>IMSConfig</key>
 	<dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
 		<key>Signaling</key>
 		<dict>
 			<key>ussdEnabled</key>
@@ -74,8 +81,6 @@
 	<string>XL Axiata</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>888</string>
 	<key>HomeBundleIdentifier</key>

@@ -112,8 +112,12 @@
 			<false/>
 			<key>SupportedDomains</key>
 			<dict>
+				<key>GSM</key>
+				<false/>
 				<key>LTE</key>
 				<true/>
+				<key>UMTS</key>
+				<false/>
 			</dict>
 			<key>allowCSFBInVolteMode</key>
 			<false/>
@@ -152,8 +156,6 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -207,8 +209,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>bmobile</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
@@ -219,8 +219,6 @@
 			<integer>3</integer>
 			<key>apn</key>
 			<string>ims</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>131072</integer>
 			<key>UseNetworkMTU</key>
@@ -229,12 +227,10 @@
 		<dict>
 			<key>apn</key>
 			<string>sos</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 			<key>type-mask</key>
 			<integer>262144</integer>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
 		</dict>
 	</array>
 	<key>OTASoftwareUpdate</key>

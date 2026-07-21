@@ -6,10 +6,16 @@
 	<dict>
 		<key>Topic</key>
 		<string>com.vzw.pushnotification</string>
+		<key>VoWiFiTopic</key>
+		<string>com.vzw.vowifi</string>
 	</dict>
-	<key>SupportsNITZ</key>
-	<true/>
+	<key>OverrideOperatorName</key>
+	<string>Verizon</string>
 	<key>ShowDialAssist</key>
+	<true/>
+	<key>OverrideOperatorWiFiName</key>
+	<string>VZW Wi-Fi</string>
+	<key>SupportsNITZ</key>
 	<true/>
 	<key>StatusBarImages</key>
 	<array>
@@ -40,10 +46,131 @@
 			<string>Extended</string>
 		</dict>
 	</array>
-	<key>pdpTimeout</key>
-	<array>
-		<integer>0</integer>
-	</array>
+	<key>TechSettings</key>
+	<dict>
+		<key>FatalActivationErrors</key>
+		<array>
+			<integer>11000</integer>
+			<integer>11001</integer>
+			<integer>9000</integer>
+		</array>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>Lifetime</key>
+						<integer>86400</integer>
+						<key>ChildProtocol</key>
+						<string>ESP</string>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>AES-256</string>
+						</array>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA2-256</string>
+						</array>
+						<key>SecureRekey</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>InstallPolicies</key>
+				<true/>
+			</dict>
+		</dict>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>cellular</string>
+			<key>PreferredTechnologyRoaming</key>
+			<string>cellular</string>
+		</dict>
+		<key>ExtraConfigurationAttributeRequestv6</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16390</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv6</string>
+				<key>Type</key>
+				<string>IPv6Address</string>
+			</dict>
+		</array>
+		<key>WifiCallingAllowedInRoaming</key>
+		<true/>
+		<key>EPDGTimeout</key>
+		<integer>30</integer>
+		<key>ActivationBackoffErrors</key>
+		<integer>10500</integer>
+		<key>5wiServiceMask</key>
+		<integer>3</integer>
+		<key>IKE</key>
+		<dict>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-256</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-256</string>
+					<key>DHGroup</key>
+					<integer>14</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>80000</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-256</string>
+				</dict>
+			</array>
+			<key>DeadPeerDetectionEnabled</key>
+			<false/>
+			<key>DeadPeerDetectionMaxRetries</key>
+			<integer>4</integer>
+			<key>DeadPeerDetectionInterval</key>
+			<integer>600</integer>
+			<key>DisableSwitchToNATTPort</key>
+			<true/>
+			<key>NATTKeepAliveOffload</key>
+			<true/>
+			<key>RemoteAddress</key>
+			<string>wo.vzwwo.com</string>
+			<key>DeadPeerDetectionRetryInterval</key>
+			<integer>10</integer>
+		</dict>
+		<key>AllowRoamingHandover</key>
+		<false/>
+		<key>SetHandOverIPv6Prefix</key>
+		<true/>
+		<key>TechPolicies</key>
+		<array>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>16390</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>131072</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>262144</integer>
+			</dict>
+		</array>
+		<key>SupportCallHandover</key>
+		<true/>
+	</dict>
 	<key>MMS</key>
 	<dict>
 		<key>MaxRecipients</key>
@@ -89,16 +216,42 @@
 	</dict>
 	<key>QosSupported</key>
 	<false/>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>UserCanReinitiateActivation</key>
 	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>IMAP</string>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>ProvisioningRecheckPeriod</key>
+		<integer>6</integer>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>SupportedAuthorizationTokens</key>
+		<integer>2</integer>
+		<key>ServerAddress</key>
+		<string>https://spc.myvzw.com/ium-RoadrunnerInterface/servlet/IUMServlet</string>
+		<key>UserAgent</key>
+		<string>Entitlement/$version ($device) iOS/$iOSVersion</string>
+		<key>UpdatePeriod</key>
+		<integer>72</integer>
+	</dict>
 	<key>DisallowedDialingPrefixes</key>
 	<array>
 		<string>*228</string>
 	</array>
-	<key>SupportsUserBusyCauseCode</key>
-	<true/>
+	<key>pdpTimeout</key>
+	<array>
+		<integer>0</integer>
+	</array>
 	<key>RCS</key>
 	<dict>
 		<key>EnableBusinessMessagingByDefault</key>
@@ -113,6 +266,8 @@
 		<key>EnableRCSByDefault</key>
 		<true/>
 	</dict>
+	<key>SupportsUserBusyCauseCode</key>
+	<true/>
 	<key>SMSSettings</key>
 	<dict>
 		<key>ForwardJunkReports</key>
@@ -126,8 +281,6 @@
 			<key>International</key>
 			<string>+011</string>
 		</dict>
-		<key>TransportFallback</key>
-		<true/>
 		<key>MessageFormat</key>
 		<dict>
 			<key>SignalingFormat</key>
@@ -152,6 +305,8 @@
 	</dict>
 	<key>SMSUseLocalTZ</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>TravelSettings</key>
 	<dict>
 		<key>EnableEnhancedTravelEducation</key>
@@ -181,6 +336,8 @@
 	</array>
 	<key>TosSupported</key>
 	<false/>
+	<key>VoLTECustomerCareWebsite</key>
+	<string>https://hdv.tracfone.com/</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>com.apple.voicemail.imap</key>
@@ -217,9 +374,9 @@
 	<array>
 		<string>20404</string>
 	</array>
-	<key>SupportsEHRPD</key>
-	<true/>
 	<key>ExitEmergencyModeWhenPlacingFirstRegularCall</key>
+	<true/>
+	<key>SupportsEHRPD</key>
 	<true/>
 	<key>TetheringPhoneNumber</key>
 	<string>611</string>
@@ -229,6 +386,17 @@
 	<string>900080006010</string>
 	<key>IPCUApnTypemask</key>
 	<integer>3</integer>
+	<key>SUPL</key>
+	<dict>
+		<key>SuplFlags</key>
+		<integer>8</integer>
+		<key>SuplCARootCert</key>
+		<string>3082038e30820276a0030201020210033af1e6a711a9a0bb2864b11d09fae5300d06092a864886f70d01010b05003061310b300906035504061302555331153013060355040a130c446967694365727420496e6331193017060355040b13107777772e64696769636572742e636f6d3120301e06035504031317446967694365727420476c6f62616c20526f6f74204732301e170d3133303830313132303030305a170d3338303131353132303030305a3061310b300906035504061302555331153013060355040a130c446967694365727420496e6331193017060355040b13107777772e64696769636572742e636f6d3120301e06035504031317446967694365727420476c6f62616c20526f6f7420473230820122300d06092a864886f70d01010105000382010f003082010a0282010100bb37cd34dc7b6bc9b26890ad4a75ff46ba210a088df51954c9fb88dbf3aef23a89913c7ae6ab061a6bcfac2de85e092444ba629a7ed6a3a87ee054752005ac50b79c631a6c30dcda1f19b1d71edefdd7e0cb948337aeec1f434edd7b2cd2bd2ea52fe4a9b8ad3ad499a4b625e99b6b00609260ff4f214918f76790ab61069c8ff2bae9b4e992326bb5f357e85d1bcd8c1dab95049549f3352d96e3496ddd77e3fb494bb4ac5507a98f95b3b423bb4c6d45f0f6a9b29530b4fd4c558c274a57147c829dcd7392d3164a060c8c50d18f1e09be17a1e621cafd83e510bc83a50ac46728f67314143d4676c387148921344daf0f450ca649a1babb9cc5b1338329850203010001a3423040300f0603551d130101ff040530030101ff300e0603551d0f0101ff040403020186301d0603551d0e041604144e2254201895e6e36ee60ffafab912ed06178f39300d06092a864886f70d01010b05000382010100606728946f0e4863eb31ddea6718d5897d3cc58b4a7fe9bedb2b17dfb05f73772a3213398167428423f2456735ec88bff88fb0610c34a4ae204c84c6dbf835e176d9dfa642bbc74408867f3674245ada6c0d145935bdf249ddb61fc9b30d472a3d992fbb5cbbb5d420e1995f534615db689bf0f330d53e31e28d849ee38adada963e3513a55ff0f970507047411157194ec08fae06c49513172f1b259f75f2b18e99a16f13b14171fe882ac84f102055d7f31445e5e044f4ea879532930efe5346fa2c9dff8b22b94bd90945a4dea4b89a58dd1b7d529f8e59438881a49e26d56faddd0dc6377ded03921be5775f76ee3c8dc45d565ba2d9666eb33537e532b6</string>
+		<key>SuplHSLPServerAddress</key>
+		<string>e-slp.lte.911.*.myvzw.com:7275</string>
+		<key>SuplUdpPortConfig</key>
+		<integer>1</integer>
+	</dict>
 	<key>MyAccountURLTitle</key>
 	<string>Tracfone</string>
 	<key>SMSSizeInBytesSentAsMMSInstead</key>
@@ -237,9 +405,372 @@
 	<string>com.apple.UnitedStates</string>
 	<key>DeliveryReceiptsDefault</key>
 	<false/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>ProvisionWiFiCallingWithSetEntitlement</key>
+		<true/>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>SupportAMRWB</key>
+			<false/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>UseEphemeralRTPPorts</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>3</string>
+					<key>br</key>
+					<string>13.2</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>swb</string>
+				</dict>
+				<key>102</key>
+				<dict>
+					<key>mode-set</key>
+					<string>7</string>
+					<key>EncodingName</key>
+					<string>AMR</string>
+					<key>SampleRate</key>
+					<integer>8000</integer>
+				</dict>
+				<key>115</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>3</string>
+					<key>br</key>
+					<string>5.9-13.2</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+				<key>108</key>
+				<dict>
+					<key>mode-set</key>
+					<string>7</string>
+					<key>SampleRate</key>
+					<integer>8000</integer>
+					<key>EncodingName</key>
+					<string>AMR</string>
+					<key>octet-align</key>
+					<string>1</string>
+				</dict>
+				<key>104</key>
+				<dict>
+					<key>mode-set</key>
+					<string>2</string>
+					<key>EncodingName</key>
+					<string>AMR-WB</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+				</dict>
+				<key>110</key>
+				<dict>
+					<key>mode-set</key>
+					<string>2</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>AMR-WB</string>
+					<key>octet-align</key>
+					<string>1</string>
+				</dict>
+				<key>106</key>
+				<dict>
+					<key>SampleRate</key>
+					<integer>8000</integer>
+					<key>EncodingName</key>
+					<string>AMR</string>
+					<key>octet-align</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>SupportAMRNB</key>
+			<false/>
+			<key>OrderEVSCodecsByCodecID</key>
+			<false/>
+			<key>ModeSetAMRWB</key>
+			<string>2</string>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>UseRestrictiveDirectionWhenCreatingAnswer</key>
+			<false/>
+			<key>ModeSetAMRNB</key>
+			<string>7</string>
+			<key>EnableIncomingDTMF</key>
+			<true/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>DisableVolteSwitchOnIncompatibleState</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<false/>
+			<key>tLte911Timer</key>
+			<integer>55</integer>
+			<key>EnableVolteByDefault</key>
+			<true/>
+			<key>TestEmergencyPSAPSupported</key>
+			<true/>
+		</dict>
+		<key>SIM</key>
+		<dict>
+			<key>USIMFallbackSupport</key>
+			<false/>
+		</dict>
+		<key>LocalShortCodeNumbers</key>
+		<array>
+			<string>211</string>
+			<string>311</string>
+			<string>411</string>
+			<string>511</string>
+			<string>611</string>
+			<string>711</string>
+			<string>811</string>
+		</array>
+		<key>Signaling</key>
+		<dict>
+			<key>UseEphemeralSipSourcePortForTcp</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>60</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>55</integer>
+			<key>AllowPhoneContextInEmergencyUri</key>
+			<false/>
+			<key>ImpuRank</key>
+			<string>MDN@domain</string>
+			<key>SessionExpiresSeconds</key>
+			<integer>300</integer>
+			<key>UseCIDUrlInPIDF</key>
+			<true/>
+			<key>ActivationBackoffTimerOverIWLANMilliseconds</key>
+			<integer>3600000</integer>
+			<key>IgnoreReregistrationErrorCodes</key>
+			<string></string>
+			<key>RetryAfterStatusCodes</key>
+			<string>480,486,500,503,600</string>
+			<key>SipTimers</key>
+			<dict>
+				<key>F</key>
+				<integer>30000</integer>
+				<key>D</key>
+				<integer>128000</integer>
+				<key>InviteResponseTimeout</key>
+				<integer>10000</integer>
+				<key>T2</key>
+				<integer>16000</integer>
+				<key>T1</key>
+				<integer>3000</integer>
+				<key>T4</key>
+				<integer>17000</integer>
+			</dict>
+			<key>UserAgentHeaderValue</key>
+			<string>APPLE---${DEVICE}---${OS_VERSION}</string>
+			<key>CallSetupPingTimerMilliseconds</key>
+			<integer>2000</integer>
+			<key>AccessBarringType</key>
+			<string>Both</string>
+			<key>AdditionalFeatureTags</key>
+			<dict>
+				<key>voice</key>
+				<dict>
+					<key>audio</key>
+					<string></string>
+				</dict>
+			</dict>
+			<key>EmergencyRegistrationTimeoutSeconds</key>
+			<integer>2</integer>
+			<key>LocationForShortCodeCalls</key>
+			<string>BOTH</string>
+			<key>AllowLimitedAccessModeRegistration</key>
+			<true/>
+			<key>EnableRingbackAudioForTextCalls</key>
+			<true/>
+			<key>OutgoingCallPrefix</key>
+			<dict>
+				<key>Local</key>
+				<string>+1</string>
+				<key>International</key>
+				<string>011</string>
+			</dict>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>PdpBackOffTimerforRA</key>
+			<integer>900000</integer>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>AlwaysPrack18x</key>
+			<true/>
+			<key>CSFBOnAccessBarred</key>
+			<true/>
+			<key>EmergencyCallBackModeExpirationSeconds</key>
+			<integer>300</integer>
+			<key>ReportSipErrorsDuringReRegistration</key>
+			<true/>
+			<key>VerstatFeatureCapability</key>
+			<string>Dynamic</string>
+			<key>AlwaysSetPhoneContext</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>503</string>
+			<key>EmergencyURNs</key>
+			<dict>
+				<key>922</key>
+				<string>922@vzims.com</string>
+			</dict>
+			<key>AllowSimultaneousCallsWhileUnregistered</key>
+			<false/>
+			<key>AdditionalHeaders</key>
+			<dict>
+				<key>INVITE[911,wifi]</key>
+				<array>
+					<string>P-com.ServiceType: Static-Emergency</string>
+				</array>
+			</dict>
+			<key>EmergencyRingbackTimerSeconds</key>
+			<integer>600</integer>
+			<key>TriggerCSFBOnWaitForRingingTimeout</key>
+			<false/>
+			<key>CallEndReasons</key>
+			<dict>
+				<key>CodecNotSupported</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>Codec Not Supported</string>
+				</dict>
+				<key>MediaHeartbeatTimeout</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>RTP-RTCP Timeout</string>
+				</dict>
+				<key>RejectedByUser</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>call rejected by user</string>
+					<key>StatusCode</key>
+					<integer>600</integer>
+				</dict>
+				<key>MediaTimeout</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>RTP-RTCP Timeout</string>
+				</dict>
+				<key>NoLTE</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>Moved to eHRPD</string>
+					<key>StatusCode</key>
+					<integer>488</integer>
+				</dict>
+				<key>NotVoiceRegisteredNoLTE</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>On eHRPD</string>
+				</dict>
+				<key>DeferToSecondary</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>Not Acceptable</string>
+					<key>StatusCode</key>
+					<integer>486</integer>
+				</dict>
+				<key>JoinedConference</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>Far Device Joined N-way Call</string>
+				</dict>
+			</dict>
+			<key>AllowRemoteHoldForUnconfirmedCalls</key>
+			<true/>
+			<key>ResetCallIdOnInitialRegistration</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<false/>
+			<key>ContactUser</key>
+			<string>+MDN</string>
+			<key>RegisterSmsWhenAccessBarringZero</key>
+			<true/>
+			<key>RegistrationPolicy</key>
+			<string>VZW</string>
+			<key>UseDialogEventPackage</key>
+			<true/>
+			<key>ReRegistrationHysteresisTimerMilliseconds</key>
+			<integer>60000</integer>
+			<key>ClearThrottlingOnSocketErrors</key>
+			<string></string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>RestartRingbackTimerOn180</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>None</string>
+			<key>EarlyMediaNeedsHeader</key>
+			<false/>
+			<key>EmergencyImpuRank</key>
+			<string>MDN@domain</string>
+			<key>MinSessionExpiresSeconds</key>
+			<integer>300</integer>
+		</dict>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<true/>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>conferenceServer</key>
+			<string>sip:confserver@vzims.com</string>
+		</dict>
+		<key>ShowWiFiCallingRoamingSwitch</key>
+		<true/>
+		<key>UseShortThrottlingOnHOIPConflict</key>
+		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>SMSBundleToVoice</key>
+			<false/>
+			<key>enableInNonVoLTEMode</key>
+			<true/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>GSM</key>
+				<false/>
+				<key>LTE</key>
+				<true/>
+				<key>UMTS</key>
+				<false/>
+			</dict>
+			<key>DCN</key>
+			<dict>
+				<key>destinationNumber</key>
+				<string>+14437501000</string>
+				<key>hysteresisTimeout</key>
+				<integer>10</integer>
+			</dict>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<false/>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>Show4GSwitch</key>
+	<false/>
 	<key>Show3GSwitch</key>
 	<false/>
-	<key>Show4GSwitch</key>
+	<key>ShowCallForwardingSwitch</key>
 	<false/>
 	<key>CarrierName</key>
 	<string>Verizon</string>
@@ -266,10 +797,14 @@
 	<true/>
 	<key>MyAccountURL</key>
 	<string>https://m.tracfone.com</string>
+	<key>ShowCallWaitingSwitch</key>
+	<false/>
 	<key>StaticNATType</key>
 	<integer>448</integer>
 	<key>RemoteDiagnosticsWWANAllowed</key>
 	<true/>
+	<key>ShowVolteSwitch</key>
+	<false/>
 	<key>MTU</key>
 	<array>
 		<dict>
@@ -285,6 +820,43 @@
 			<integer>1472</integer>
 		</dict>
 	</array>
+	<key>Location</key>
+	<dict>
+		<key>EnableCPIDuringEmergencyMode</key>
+		<true/>
+		<key>EmergencyLocation</key>
+		<dict>
+			<key>ControlPlane</key>
+			<dict>
+				<key>EnableAdditionalAssistedConstellations</key>
+				<dict>
+					<key>Glonass</key>
+					<string>disabled</string>
+				</dict>
+			</dict>
+			<key>UserPlane</key>
+			<dict>
+				<key>EnableAdditionalAssistedConstellations</key>
+				<dict>
+					<key>Glonass</key>
+					<string>disabled</string>
+				</dict>
+			</dict>
+			<key>AugmentedEmergencyAction</key>
+			<dict>
+				<key>Supplemented911</key>
+				<dict>
+					<key>HTTPS</key>
+					<dict>
+						<key>URL</key>
+						<string>gateway.icloud.com/meridian/meridian/location</string>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+		<key>EnableEarlyReturnDuringEmergencyMode</key>
+		<false/>
+	</dict>
 	<key>SupportedPLMNs</key>
 	<array>
 		<string>311480</string>
@@ -296,11 +868,9 @@
 		<key>ProfileID</key>
 		<integer>280</integer>
 	</dict>
-	<key>OTASoftwareUpdate</key>
-	<dict/>
 	<key>PhoneNumberIsVoiceMailNumber</key>
 	<true/>
-	<key>ShowTTY</key>
+	<key>SupportsImsCapability</key>
 	<true/>
 	<key>TetheringURL</key>
 	<string>https://m.tracfone.com</string>
@@ -371,6 +941,8 @@
 			<integer>10080</integer>
 		</dict>
 	</dict>
+	<key>ForceWPSCallsOverCS</key>
+	<false/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -410,8 +982,6 @@
 					<string></string>
 					<key>apn</key>
 					<string>tracfone.vzwentp</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>type-mask</key>
 					<integer>3</integer>
 					<key>AllowedProtocolMask</key>
@@ -424,8 +994,6 @@
 					<string></string>
 					<key>apn</key>
 					<string>vzwapp</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>type-mask</key>
 					<integer>16388</integer>
 					<key>AllowedProtocolMask</key>
@@ -438,8 +1006,6 @@
 					<string></string>
 					<key>apn</key>
 					<string>vzwadmin</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>type-mask</key>
 					<integer>512</integer>
 					<key>AllowedProtocolMask</key>
@@ -454,6 +1020,8 @@
 	<false/>
 	<key>RequiresServiceProvisioning</key>
 	<true/>
+	<key>ShowCallerIDSwitch</key>
+	<false/>
 	<key>TestEmergencyNumber</key>
 	<string>922</string>
 	<key>NotRegisteredResetWaitPeriod</key>

@@ -2,294 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
-	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32768</integer>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Show5GSwitch</key>
-	<true/>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Signaling</key>
-		<dict>
-			<key>strictCallFlows</key>
-			<true/>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string>380,414,499,606</string>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
-			<key>VerstatFeatureCapability</key>
-			<string>Enabled</string>
-			<key>IgnoreRegNotificationContactExpires</key>
-			<true/>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>TriggerCSFBOnSDPError</key>
-			<true/>
-			<key>Preconditions</key>
-			<string>Supported</string>
-			<key>RegistrationExpirationSeconds</key>
-			<string>7200</string>
-			<key>CountryOfOriginationFormat</key>
-			<string>PANI</string>
-			<key>UseIPSec</key>
-			<true/>
-		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>SendConferenceSubscribeAfterRefers</key>
-			<false/>
-			<key>conferenceServer</key>
-			<string>conference@factory.ims.mnc500.mcc302.3gppnetwork.org</string>
-		</dict>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>allowCSFBInVolteMode</key>
-			<false/>
-		</dict>
-		<key>Media</key>
-		<dict>
-			<key>InactivityTimerRTPSeconds</key>
-			<string>30</string>
-			<key>IncludeSDPMaxRed</key>
-			<true/>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-			<key>MaxRedundancy</key>
-			<integer>220</integer>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>SupportsCW</key>
-			<false/>
-			<key>NafPort</key>
-			<integer>8090</integer>
-			<key>BsfHost</key>
-			<string>bsf.ims.mnc500.mcc302.pub.3gppnetwork.org</string>
-			<key>DisableOnNetworkError</key>
-			<true/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string></string>
-			<key>SupportsCLIR</key>
-			<false/>
-			<key>ContentType</key>
-			<string>application/xcap-el+xml</string>
-			<key>BsfPort</key>
-			<integer>8080</integer>
-			<key>supported</key>
-			<true/>
-			<key>NafHost</key>
-			<string>xcap.ims.mnc500.mcc302.pub.3gppnetwork.org</string>
-		</dict>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<false/>
-		<key>Voice</key>
-		<dict>
-			<key>E911OverITechSupported</key>
-			<false/>
-			<key>E911OverCSIfNoIMSReg</key>
-			<false/>
-			<key>CellularE911SearchTimeout</key>
-			<integer>30</integer>
-			<key>EnableVolteByDefault</key>
-			<true/>
-			<key>tLte911Timer</key>
-			<integer>120</integer>
-		</dict>
-	</dict>
-	<key>OverrideOperatorWiFiName</key>
-	<string>WiFi Vidéotron</string>
-	<key>DerPriFileName</key>
-	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>CarrierEntitlements</key>
-	<dict>
-		<key>ProtocolVersion</key>
-		<string>2</string>
-		<key>SupportedEntitlements</key>
-		<integer>4195505</integer>
-	</dict>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
-	<key>AttachAPN</key>
-	<dict>
-		<key>3GPP</key>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>PcscfAddressRequired</key>
-			<false/>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
-		</dict>
-	</dict>
-	<key>SupportsImsCapability</key>
-	<true/>
-	<key>DataIndicatorOverrideForNRMmwave</key>
-	<string>NRPlus</string>
-	<key>ShowVolteSwitch</key>
-	<false/>
 	<key>Enable5GAutoByDefault</key>
 	<true/>
+	<key>DerPriFileName</key>
+	<string>overrides_V53_V54_V57.der.pri</string>
+	<key>DerPriFileVersion</key>
+	<string>6.0.161</string>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
 	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
-	<key>TechSettings</key>
-	<dict>
-		<key>WifiCallingAllowedInRoaming</key>
-		<true/>
-		<key>ChildSAs</key>
-		<dict>
-			<key>FirstChild</key>
-			<dict>
-				<key>ChildProposals</key>
-				<array>
-					<dict>
-						<key>IntegrityAlgorithm</key>
-						<array>
-							<string>SHA2-256</string>
-						</array>
-						<key>EncryptionAlgorithm</key>
-						<array>
-							<string>AES-256</string>
-						</array>
-						<key>DHGroup</key>
-						<integer>2</integer>
-						<key>Lifetime</key>
-						<integer>86400</integer>
-					</dict>
-				</array>
-				<key>InstallPolicies</key>
-				<true/>
-				<key>ReplayWindowSize</key>
-				<integer>12</integer>
-			</dict>
-		</dict>
-		<key>iRatPolicies</key>
-		<dict>
-			<key>PreferredTechnology</key>
-			<string>cellular</string>
-			<key>PreferredTechnologyRoaming</key>
-			<string>wifi</string>
-		</dict>
-		<key>5wiServiceMask</key>
-		<integer>3</integer>
-		<key>ExtraConfigurationAttributeRequestv4</key>
-		<array>
-			<dict>
-				<key>Identifier</key>
-				<integer>20</integer>
-				<key>Name</key>
-				<string>AssignedPCSCFIPv4</string>
-				<key>Type</key>
-				<string>IPv4Address</string>
-			</dict>
-		</array>
-		<key>ExtraConfigurationAttributeRequestv6</key>
-		<array>
-			<dict>
-				<key>Identifier</key>
-				<integer>21</integer>
-				<key>Name</key>
-				<string>AssignedPCSCFIPv6</string>
-				<key>Type</key>
-				<string>IPv6Address</string>
-			</dict>
-		</array>
-		<key>SupportCallHandover</key>
-		<true/>
-		<key>TechPolicies</key>
-		<array>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>131072</integer>
-			</dict>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>262144</integer>
-			</dict>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>1048582</integer>
-			</dict>
-		</array>
-		<key>IKE</key>
-		<dict>
-			<key>Proposals</key>
-			<array>
-				<dict>
-					<key>EncryptionAlgorithm</key>
-					<string>AES-256</string>
-					<key>IntegrityAlgorithm</key>
-					<string>SHA2-256</string>
-					<key>DHGroup</key>
-					<integer>2</integer>
-					<key>AuthenticationMethod</key>
-					<string>None</string>
-					<key>Lifetime</key>
-					<integer>86400</integer>
-					<key>EAPMethod</key>
-					<string>EAP-AKA</string>
-					<key>PRFAlgorithm</key>
-					<string>SHA2-256</string>
-				</dict>
-			</array>
-			<key>DeadPeerDetectionEnabled</key>
-			<false/>
-			<key>DeadPeerDetectionMaxRetries</key>
-			<integer>4</integer>
-			<key>DeadPeerDetectionInterval</key>
-			<integer>600</integer>
-			<key>LocalIdentifier</key>
-			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
-			<key>NATTKeepAliveOffload</key>
-			<true/>
-			<key>ValidateRemoteCertificate</key>
-			<false/>
-			<key>RemoteAddress</key>
-			<string>epdg.epc.mnc500.mcc302.pub.3gppnetwork.org</string>
-			<key>DeadPeerDetectionRetryInterval</key>
-			<integer>10</integer>
-		</dict>
-		<key>WiFiCallingControlsAlliWLanServices</key>
-		<true/>
-		<key>SetHandOverIPv6Prefix</key>
-		<true/>
-	</dict>
-	<key>PushSettings</key>
-	<dict>
-		<key>Topic</key>
-		<string>com.videotron.rcs</string>
-		<key>MultiSIMTopic</key>
-		<string>com.videotron.msim</string>
-		<key>VoWiFiTopic</key>
-		<string>com.videotron.vowifi</string>
-	</dict>
+	<key>Show5GSwitch</key>
+	<true/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -302,8 +28,6 @@
 					<integer>32823</integer>
 				</dict>
 				<dict>
-					<key>AllowedProtocolMask</key>
-					<integer>2</integer>
 					<key>tech-type-mask</key>
 					<integer>131072</integer>
 					<key>apn</key>
@@ -312,7 +36,7 @@
 					<true/>
 					<key>type-mask</key>
 					<integer>131072</integer>
-					<key>DefaultProtocolMask</key>
+					<key>AllowedProtocolMask</key>
 					<integer>2</integer>
 				</dict>
 				<dict>
@@ -320,8 +44,6 @@
 					<integer>262144</integer>
 					<key>apn</key>
 					<string>sos</string>
-					<key>DefaultProtocolMask</key>
-					<integer>2</integer>
 					<key>type-mask</key>
 					<integer>262144</integer>
 					<key>AllowedProtocolMask</key>
@@ -332,8 +54,6 @@
 					<integer>1048582</integer>
 					<key>apn</key>
 					<string>xcap</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>type-mask</key>
 					<integer>1048576</integer>
 					<key>AllowedProtocolMask</key>

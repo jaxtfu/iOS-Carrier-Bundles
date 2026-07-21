@@ -43,6 +43,8 @@
 	<true/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+37379495111</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -173,8 +175,8 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>IgnoresIntlDataRoamingServiceList</key>
 	<array>
 		<string>UT</string>
@@ -217,18 +219,16 @@
 			<integer>4</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>1048576</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>hos</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>

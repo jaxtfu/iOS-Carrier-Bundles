@@ -40,6 +40,8 @@
 	<true/>
 	<key>MyAccountURLTitle</key>
 	<string>MyMagti</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -64,18 +66,20 @@
 					<key>ch-aw-recv</key>
 					<string>0</string>
 					<key>br</key>
-					<string>5.9-24.4</string>
+					<string>9.6-24.4</string>
 					<key>SampleRate</key>
 					<integer>16000</integer>
 					<key>EncodingName</key>
 					<string>EVS</string>
 					<key>bw</key>
-					<string>nb-wb</string>
+					<string>nb-swb</string>
 				</dict>
 			</dict>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>EnableBandwidthSpecifiers</key>
 			<true/>
 		</dict>
 		<key>Signaling</key>

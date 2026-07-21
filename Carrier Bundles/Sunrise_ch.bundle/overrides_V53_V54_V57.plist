@@ -2,49 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SupportsVoNR</key>
-	<true/>
 	<key>DerPriFileVersion</key>
-	<string>5.5.161</string>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Show5GStandaloneSwitch</key>
-	<true/>
-	<key>Enable5GStandaloneByDefault</key>
+	<string>6.0.161</string>
+	<key>AllowSAOnWiFiAssociation</key>
 	<true/>
 	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
 	<integer>131072</integer>
+	<key>ShowVoNRSwitch</key>
+	<true/>
 	<key>Show5GSwitch</key>
 	<true/>
-	<key>ShowHighDataModeSwitch</key>
+	<key>Enable5GStandaloneByDefault</key>
 	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Media</key>
-		<dict>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>109</key>
-				<dict>
-					<key>bw</key>
-					<string>nb-swb</string>
-				</dict>
-			</dict>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-		</dict>
-		<key>Signaling</key>
-		<dict>
-			<key>ResetSocketWhenNetworkChange</key>
-			<false/>
-		</dict>
-		<key>Voice</key>
-		<dict>
-			<key>EnableVoNRByDefault</key>
-			<true/>
-		</dict>
 		<key>SMS</key>
 		<dict>
 			<key>SupportedDomains</key>
@@ -53,11 +24,21 @@
 				<true/>
 			</dict>
 		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVoNRByDefault</key>
+			<true/>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>ResetSocketWhenNetworkChange</key>
+			<false/>
+		</dict>
 	</dict>
-	<key>OverrideOperatorWiFiName</key>
-	<string>WiFi-Calling</string>
-	<key>Show3GSwitchWith4G</key>
-	<false/>
+	<key>ShowHighDataModeSwitch</key>
+	<true/>
+	<key>SupportsVoNR</key>
+	<true/>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>CarrierEntitlements</key>
@@ -65,21 +46,9 @@
 		<key>SupportedEntitlements</key>
 		<integer>64529</integer>
 	</dict>
-	<key>AllowSAOnWiFiAssociation</key>
-	<true/>
-	<key>Show5GStandaloneSwitchOnlyWhenEntitled</key>
-	<true/>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
 	<key>ShowVolteSwitch</key>
 	<false/>
-	<key>Enable5GAutoByDefault</key>
-	<true/>
-	<key>SupportsImsCapability</key>
-	<true/>
-	<key>ShowVoNRSwitch</key>
-	<true/>
-	<key>SupportsNRNSAInboundRoaming</key>
+	<key>Show5GStandaloneSwitch</key>
 	<true/>
 	<key>apns</key>
 	<array>
@@ -90,8 +59,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>internet</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>type-mask</key>
 			<integer>32819</integer>
 			<key>AllowedProtocolMask</key>
@@ -100,41 +67,45 @@
 		<dict>
 			<key>type-mask</key>
 			<integer>131072</integer>
+			<key>Support5GSaHandOver</key>
+			<true/>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>Support5GSaHandOver</key>
-			<true/>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>ims</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>1048576</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>xcap</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
 	</array>
 	<key>Enable5GAutoAfterUpgrade</key>
+	<true/>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
+	<key>SupportsNRNSAInboundRoaming</key>
+	<true/>
+	<key>Show5GStandaloneSwitchOnlyWhenEntitled</key>
 	<true/>
 </dict>
 </plist>

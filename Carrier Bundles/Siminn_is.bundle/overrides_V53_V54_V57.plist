@@ -16,11 +16,9 @@
 	<false/>
 	<key>ShowVolteSwitch</key>
 	<false/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Show5GSwitch</key>
-	<true/>
 	<key>SupportsNRNSAInboundRoaming</key>
+	<true/>
+	<key>Show5GSwitch</key>
 	<true/>
 </dict>
 </plist>

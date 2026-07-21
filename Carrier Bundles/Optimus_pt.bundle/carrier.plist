@@ -152,14 +152,14 @@
 		<key>UsesAutoAssignment</key>
 		<false/>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>+351931331330</string>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>MVNOOverrides</key>
 	<dict>
 		<key>Configuration_1</key>
@@ -493,8 +493,6 @@
 				<key>LTE</key>
 				<true/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>Media</key>
 		<dict>
@@ -583,14 +581,7 @@
 			<true/>
 			<key>endNonEmergencyCalls</key>
 			<true/>
-			<key>EnableHoldForRTT</key>
-			<true/>
 		</dict>
-	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
@@ -649,8 +640,15 @@
 	</array>
 	<key>CarrierName</key>
 	<string>NOS</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
 	<string>https://www.nos.pt</string>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>EnableHoldForRTT</key>
+		<true/>
+	</dict>
 	<key>MyAccountURLTitle</key>
 	<string>NOS</string>
 	<key>MandatoryVerify</key>
@@ -665,6 +663,8 @@
 		<key>A5/3</key>
 		<true/>
 	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VMSMFilterNumber</key>
 	<string>12136</string>
 	<key>SupportedSIMs</key>

@@ -85,6 +85,11 @@
 		<string>302</string>
 		<string>com.apple.Canada</string>
 	</array>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsTTY</key>
+		<true/>
+	</dict>
 	<key>IMSConfig</key>
 	<dict>
 		<key>Media</key>

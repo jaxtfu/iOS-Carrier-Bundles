@@ -14,37 +14,11 @@
 	<false/>
 	<key>ShowVolteSwitch</key>
 	<false/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
-	<key>Show5GSwitch</key>
-	<true/>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Media</key>
-		<dict>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>112</key>
-				<dict>
-					<key>ch-aw-recv</key>
-					<string>-1</string>
-					<key>br</key>
-					<string>9.6-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-				</dict>
-			</dict>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-		</dict>
-	</dict>
 	<key>SupportsSimWithNoMsisdn</key>
+	<true/>
+	<key>Show5GSwitch</key>
 	<true/>
 </dict>
 </plist>

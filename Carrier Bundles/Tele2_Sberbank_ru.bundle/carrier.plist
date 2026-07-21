@@ -82,8 +82,8 @@
 			<integer>1</integer>
 		</dict>
 	</dict>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Russia</string>
 	<key>AllowAttachAPNEditing</key>

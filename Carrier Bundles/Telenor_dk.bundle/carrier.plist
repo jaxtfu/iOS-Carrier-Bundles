@@ -2,6 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>ServerAddress</key>
+		<string>https://ensp.telenor.dk/entitlement/</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+	</dict>
 	<key>OTASoftwareUpdate</key>
 	<dict>
 		<key>SoftwareUpdateOptInRequired</key>
@@ -40,6 +56,42 @@
 	<false/>
 	<key>SupportsNITZ</key>
 	<false/>
+	<key>RemoteCardProvisioningSettings</key>
+	<dict>
+		<key>MatchingICCIDPrefixes</key>
+		<array>
+			<string>894502</string>
+		</array>
+		<key>CellularTrialPlan</key>
+		<dict>
+			<key>TrialEndPeriod</key>
+			<string>2019-06-22T00:00:00Z</string>
+			<key>TrialPlanType</key>
+			<string>Promotion</string>
+			<key>SupportsTrialPlan</key>
+			<true/>
+			<key>TrialStartPeriod</key>
+			<string>2019-03-22T00:00:00Z</string>
+		</dict>
+		<key>ServerURL</key>
+		<string>https://rsp-3009-es2plus.idemia.io</string>
+		<key>ActivatingStateSubscriptionCheckTimerIntervals</key>
+		<array>
+			<integer>1800</integer>
+			<integer>3600</integer>
+			<integer>5400</integer>
+		</array>
+		<key>MinCompatibleWatchOS</key>
+		<string>5.2</string>
+		<key>SupportedSKUs</key>
+		<array>
+			<string>SKU_EU</string>
+		</array>
+		<key>ProvisioningMethod</key>
+		<string>CarrierFlow</string>
+	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>+4560500000</string>
 	<key>ShowDialAssist</key>
@@ -48,8 +100,6 @@
 	<array>
 		<string>50044</string>
 	</array>
-	<key>ShowTTY</key>
-	<false/>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
 		<key>MaxGreetingDuration</key>
@@ -80,6 +130,8 @@
 		<key>BeaconAddress</key>
 		<string>40052</string>
 	</dict>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Telenor DK WiFi</string>
 	<key>MMS</key>
 	<dict>
 		<key>MaxImageDimension</key>
@@ -301,12 +353,134 @@
 	</array>
 	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
 	<integer>131072</integer>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,5XX,6XX</string>
+			<key>PreconditionUpdateDelayTimerMilliseconds</key>
+			<integer>128000</integer>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>120</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>120</integer>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>EarlyMediaNeedsHeader</key>
+			<false/>
+			<key>ValidateSipMessageRecipient</key>
+			<false/>
+			<key>CountryOfOriginationFormat</key>
+			<string>BOTH</string>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.srvcc-alerting</string>
+			</dict>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>AlwaysUnsubscribeFromRegEvents</key>
+			<false/>
+			<key>UseFakeSAsForDeregistration</key>
+			<true/>
+			<key>SendLocalTimeZoneInformation</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:conf-factory@ims.mnc002.mcc238.3gppnetwork.org</string>
+		</dict>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>max-red</key>
+					<string>0</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>ch-aw-recv</key>
+					<string>2</string>
+					<key>cmr</key>
+					<string>1</string>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>bw</key>
+					<string>nb-wb</string>
+				</dict>
+			</dict>
+			<key>MaxRedundancy</key>
+			<integer>220</integer>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCW</key>
+			<false/>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>404,501,502,503,504</string>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>supported</key>
+			<true/>
+			<key>imsFeatureDependency</key>
+			<true/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>IgnoreCallerIDBlockingForEmergency</key>
+			<true/>
+			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>SMSSettings</key>
 	<dict>
 		<key>EnableReplyToAlphanumericOriginator</key>
 		<false/>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
@@ -314,8 +488,17 @@
 	<true/>
 	<key>APNEditabilityTypemask</key>
 	<integer>53</integer>
-	<key>VisualVoicemailServiceName</key>
-	<string>IMAP</string>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>PushSettings</key>
+	<dict>
+		<key>MultiSIMTopic</key>
+		<string>dk.telenor.entitlement</string>
+	</dict>
+	<key>SMTPServers</key>
+	<array>
+		<string>mail.sonofon.dk</string>
+	</array>
 	<key>EnableLTEAfterUpgrade</key>
 	<true/>
 	<key>StatusBarImages</key>
@@ -361,14 +544,14 @@
 			<string>Telenor DK</string>
 		</dict>
 	</array>
-	<key>SMTPServers</key>
-	<array>
-		<string>mail.sonofon.dk</string>
-	</array>
+	<key>VisualVoicemailServiceName</key>
+	<string>IMAP</string>
 	<key>CarrierName</key>
 	<string>Telenor DK</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
-	<string>http://m.telenor.dk/</string>
+	<string>https://www.telenor.dk</string>
 	<key>SupportedPLMNs</key>
 	<array>
 		<string>23866</string>
@@ -381,6 +564,8 @@
 		<key>SIMs</key>
 		<array/>
 	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>23802</string>

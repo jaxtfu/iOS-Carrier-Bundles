@@ -2,75 +2,23 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>DerPriFileVersion</key>
-	<string>0.1.161</string>
-	<key>AttachAPN</key>
-	<dict>
-		<key>3GPP</key>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>PcscfAddressRequired</key>
-			<false/>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>3ireland.ie</string>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
-		</dict>
-	</dict>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Media</key>
-		<dict>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>112</key>
-				<dict>
-					<key>max-red</key>
-					<string>220</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>hf-only</key>
-					<string>0</string>
-					<key>octet-align</key>
-					<string>1</string>
-					<key>ch-aw-recv</key>
-					<string>-1</string>
-					<key>maxptime</key>
-					<string>240</string>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>br</key>
-					<string>5.9-24.4</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-				</dict>
-			</dict>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-		</dict>
-	</dict>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>ShowVolteSwitch</key>
-	<false/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
+	<key>DerPriFileVersion</key>
+	<string>0.1.161</string>
 	<key>Show3GSwitchWithVolte</key>
 	<false/>
 	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
-	<key>Enable5GAutoByDefault</key>
+	<key>ShowVolteSwitch</key>
+	<false/>
+	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 	<key>Show5GSwitch</key>
-	<true/>
-	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 </dict>
 </plist>

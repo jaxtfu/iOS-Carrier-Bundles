@@ -90,15 +90,15 @@
 	<false/>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
-	<key>ShowTTY</key>
-	<false/>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>
 		<array/>
 	</dict>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>

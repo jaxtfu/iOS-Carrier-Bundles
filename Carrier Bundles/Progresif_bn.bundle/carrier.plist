@@ -75,8 +75,6 @@
 			<true/>
 		</dict>
 	</dict>
-	<key>OTASoftwareUpdate</key>
-	<dict/>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Brunei</string>
 	<key>ShowDialAssist</key>
@@ -120,8 +118,6 @@
 			<integer>1</integer>
 		</dict>
 	</array>
-	<key>ShowTTY</key>
-	<false/>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>

@@ -55,8 +55,6 @@
 	<string>Djezzy</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>AllowsVoIP</key>
 	<true/>
 	<key>VoicemailPilotNumber</key>

@@ -24,10 +24,12 @@
 		<key>TransportFallback</key>
 		<false/>
 	</dict>
-	<key>RegistrationOptInRequired</key>
-	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+8808121</string>
+	<key>RegistrationOptInRequired</key>
+	<true/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -51,10 +53,73 @@
 	<array>
 		<string>47007</string>
 	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>30</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>30</integer>
+			<key>SendPreferredServiceInInvite</key>
+			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>TemporarilyUnavailable</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>480</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+			</dict>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>None</string>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>AlwaysUnsubscribeFromRegEvents</key>
+			<false/>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>10</integer>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<true/>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc002.mcc470.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>UseRpOriginatingAddressAsSender</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>Show3GSwitchWith4G</key>
-	<true/>
+	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
 	<key>CarrierName</key>
@@ -79,8 +144,10 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>ShowVolteSwitch</key>
+	<true/>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>8121</string>
 	<key>HomeBundleIdentifier</key>

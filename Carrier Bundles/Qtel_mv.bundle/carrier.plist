@@ -21,6 +21,8 @@
 	<string>+9609613600</string>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32768</integer>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -52,8 +54,77 @@
 	<array>
 		<string>47202</string>
 	</array>
-	<key>ShowDialAssist</key>
-	<true/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,6XX</string>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>90</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>90</integer>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>SipTimers</key>
+			<dict>
+				<key>T1</key>
+				<integer>2000</integer>
+				<key>T4</key>
+				<integer>17000</integer>
+				<key>T2</key>
+				<integer>16000</integer>
+			</dict>
+			<key>Preconditions</key>
+			<string>None</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc002.mcc472.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RingbackTone</key>
+			<string>UK</string>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverITechSupported</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Ooredoo WiFi Call</string>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportedEntitlements</key>
@@ -74,14 +145,36 @@
 		<key>UpdatePeriod</key>
 		<integer>24</integer>
 	</dict>
+	<key>ShowDialAssist</key>
+	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
 	<key>CarrierName</key>
 	<string>Ooredoo</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ooredoodata</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
+	<key>ShowVolteSwitch</key>
+	<true/>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -128,6 +221,19 @@
 	</dict>
 	<key>VoicemailPilotNumber</key>
 	<string>600</string>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.Maldives</string>
+	<key>MMS</key>
+	<dict>
+		<key>MMSC</key>
+		<string>http://mms.ooredoo.mv</string>
+		<key>Proxy</key>
+		<string>172.24.10.20:8080</string>
+		<key>MaxRecipients</key>
+		<integer>10</integer>
+		<key>MaxMessageSize</key>
+		<integer>307200</integer>
+	</dict>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>MatchingICCIDPrefixes</key>
@@ -156,19 +262,122 @@
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
 	</dict>
-	<key>MMS</key>
+	<key>TechSettings</key>
 	<dict>
-		<key>MMSC</key>
-		<string>http://mms.ooredoo.mv</string>
-		<key>Proxy</key>
-		<string>172.24.10.20:8080</string>
-		<key>MaxRecipients</key>
-		<integer>10</integer>
-		<key>MaxMessageSize</key>
-		<integer>307200</integer>
+		<key>WifiCallingAllowedInRoaming</key>
+		<true/>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA2-256</string>
+						</array>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>AES-256</string>
+						</array>
+						<key>DHGroup</key>
+						<integer>14</integer>
+						<key>Lifetime</key>
+						<integer>86400</integer>
+					</dict>
+				</array>
+				<key>InstallPolicies</key>
+				<true/>
+				<key>ReplayWindowSize</key>
+				<integer>12</integer>
+			</dict>
+		</dict>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>ims</string>
+			<key>PreferredTechnologyRoaming</key>
+			<string>wifi</string>
+		</dict>
+		<key>5wiServiceMask</key>
+		<integer>3</integer>
+		<key>ExtraConfigurationAttributeRequestv4</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16384</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv4</string>
+				<key>Type</key>
+				<string>IPv4Address</string>
+			</dict>
+		</array>
+		<key>ExtraConfigurationAttributeRequestv6</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16386</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv6</string>
+				<key>Type</key>
+				<string>IPv6Address</string>
+			</dict>
+		</array>
+		<key>SupportCallHandover</key>
+		<true/>
+		<key>TechPolicies</key>
+		<array>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>131072</integer>
+			</dict>
+		</array>
+		<key>IKE</key>
+		<dict>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-256</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-256</string>
+					<key>DHGroup</key>
+					<integer>14</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>86400</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-256</string>
+				</dict>
+			</array>
+			<key>DeadPeerDetectionEnabled</key>
+			<false/>
+			<key>DeadPeerDetectionMaxRetries</key>
+			<integer>4</integer>
+			<key>DeadPeerDetectionInterval</key>
+			<integer>600</integer>
+			<key>LocalIdentifier</key>
+			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
+			<key>NATTKeepAliveOffload</key>
+			<true/>
+			<key>ValidateRemoteCertificate</key>
+			<false/>
+			<key>RemoteAddress</key>
+			<string>epdg.epc.mnc002.mcc472.pub.3gppnetwork.org</string>
+			<key>DeadPeerDetectionRetryInterval</key>
+			<integer>10</integer>
+		</dict>
+		<key>WiFiCallingControlsAlliWLanServices</key>
+		<true/>
+		<key>SetHandOverIPv6Prefix</key>
+		<false/>
 	</dict>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.Maldives</string>
 	<key>PushSettings</key>
 	<dict>
 		<key>MultiSIMTopic</key>
@@ -195,6 +404,20 @@
 			<string>MMS</string>
 			<key>type-mask</key>
 			<integer>4</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>131072</integer>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ims</string>
+			<key>SupportSwitchOver</key>
+			<true/>
+			<key>type-mask</key>
+			<integer>131072</integer>
 		</dict>
 	</array>
 	<key>OTASoftwareUpdate</key>

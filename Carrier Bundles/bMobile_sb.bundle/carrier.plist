@@ -13,12 +13,12 @@
 			<string>bMobile</string>
 		</dict>
 	</array>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>54002</string>
 	</array>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
 	<key>CarrierName</key>
 	<string>bMobile</string>
 	<key>AllowEDGEEditing</key>
@@ -38,13 +38,6 @@
 	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>126</string>
-	<key>ShowTTY</key>
-	<false/>
-	<key>MandatoryVerify</key>
-	<dict>
-		<key>SIMs</key>
-		<array/>
-	</dict>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -68,6 +61,11 @@
 			<integer>48</integer>
 		</dict>
 	</array>
+	<key>MandatoryVerify</key>
+	<dict>
+		<key>SIMs</key>
+		<array/>
+	</dict>
 	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>

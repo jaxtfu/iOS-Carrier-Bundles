@@ -55,8 +55,8 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>92300124</string>
 	<key>HomeBundleIdentifier</key>

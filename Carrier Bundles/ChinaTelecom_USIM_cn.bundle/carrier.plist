@@ -2,72 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CarrierEntitlements</key>
-	<dict>
-		<key>SupportedEntitlements</key>
-		<integer>33</integer>
-		<key>ServerAddress</key>
-		<string>https://applecsb.crm.189.cn:8101/CRM-CSB/HttpAppleService</string>
-		<key>Authentication</key>
-		<dict>
-			<key>Type</key>
-			<integer>1</integer>
-			<key>Username</key>
-			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
-		</dict>
-		<key>UserAgent</key>
-		<string>CarrierEntitlements/$version $device/$hardwareModel iOS/$iOSVersion  CarrierSettings/$carrierBundleVersion IMSI/$imsi ICCID/$iccid IMEI/$imei MEID/$meid</string>
-		<key>AllowedIMSIPrefixes</key>
-		<array>
-			<string>46011</string>
-		</array>
-		<key>SendSelfRegistrationUpdate</key>
-		<true/>
-	</dict>
-	<key>CellularPlanProvisioningSettings</key>
-	<dict>
-		<key>AdditionalRejectCauseCodesForAttachMonitorMode</key>
-		<array>
-			<integer>15</integer>
-		</array>
-	</dict>
-	<key>OTASoftwareUpdate</key>
-	<dict/>
-	<key>ShouldHideAllVoicemailUI</key>
-	<true/>
-	<key>AttachAPN</key>
-	<dict>
-		<key>3GPP2</key>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>PcscfAddressRequired</key>
-			<false/>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>CTNET</string>
-			<key>UseNetworkMTU</key>
-			<true/>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
-		</dict>
-		<key>3GPP</key>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>PcscfAddressRequired</key>
-			<false/>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>CTNET</string>
-			<key>UseNetworkMTU</key>
-			<true/>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
-		</dict>
-	</dict>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -106,31 +40,45 @@
 			</dict>
 		</array>
 	</dict>
-	<key>ShowVoiceRoamingSwitch</key>
-	<false/>
-	<key>StockSymboli</key>
-	<array>
-		<dict>
-			<key>name</key>
-			<string>中国电信</string>
-			<key>symbol</key>
-			<string>0728.HK</string>
-		</dict>
-	</array>
-	<key>SupportsUserBusyCauseCode</key>
+	<key>SupportsSupplementaryServicesOver3GPP</key>
 	<true/>
+	<key>PushSettings</key>
+	<dict>
+		<key>SAWatchTopic</key>
+		<string>com.chinatelecom.jituan.esimpush</string>
+	</dict>
 	<key>SupportsNITZ</key>
 	<true/>
-	<key>Show4GSwitch</key>
-	<string>Invalid</string>
 	<key>ShowDialAssist</key>
 	<false/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>00447786205094</string>
-	<key>ShowMessagesConversationListFilteringPrompt</key>
+	<key>StatusBarImages</key>
+	<array>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>460-11</string>
+			<key>StatusBarCarrierName</key>
+			<string>中国电信</string>
+		</dict>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>CHN-CT</string>
+			<key>StatusBarCarrierName</key>
+			<string>中国电信</string>
+		</dict>
+	</array>
+	<key>MultiSimVoLteOnly</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
+	<key>CellularPlanProvisioningSettings</key>
+	<dict>
+		<key>AdditionalRejectCauseCodesForAttachMonitorMode</key>
+		<array>
+			<integer>15</integer>
+		</array>
+	</dict>
 	<key>MMS</key>
 	<dict>
 		<key>UAProf</key>
@@ -150,48 +98,57 @@
 		<key>MaxMessageSize</key>
 		<integer>307200</integer>
 	</dict>
-	<key>RemoteDiagnosticsWWANAllowed</key>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
+	<key>EnableLTEAfterUpgrade</key>
 	<true/>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.China</string>
-	<key>CarrierBookmarks</key>
-	<array>
-		<dict>
-			<key>Title</key>
-			<string>189邮箱</string>
-			<key>URL</key>
-			<string>http://wapmail.189.cn/</string>
-		</dict>
-	</array>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
-	<key>DataIndicatorOverrideForLTE</key>
-	<string>4G</string>
-	<key>DefaultPhoneNumberPrefixes</key>
-	<array>
-		<string>0000000000</string>
-	</array>
-	<key>Location</key>
+	<key>CarrierEntitlements</key>
 	<dict>
-		<key>EmergencyLocation</key>
+		<key>DoNotLinkVoLteSwitchVisibilityToVoPS</key>
+		<true/>
+		<key>SupportedEntitlements</key>
+		<integer>3121</integer>
+		<key>AllowedIMSIPrefixes</key>
+		<array>
+			<string>46011</string>
+		</array>
+		<key>Authentication</key>
 		<dict>
-			<key>AugmentedEmergencyAction</key>
-			<dict>
-				<key>AML</key>
-				<dict>
-					<key>SMS</key>
-					<dict>
-						<key>Destination</key>
-						<string>1069030089934</string>
-					</dict>
-				</dict>
-			</dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
 		</dict>
+		<key>ProvisioningRecheckPeriod</key>
+		<integer>3</integer>
+		<key>SendSelfRegistrationUpdate</key>
+		<true/>
+		<key>ServerAddress</key>
+		<string>https://applecsb.crm.189.cn:8101/CRM-CSB/HttpAppleService</string>
+		<key>UpdatePeriod</key>
+		<integer>72</integer>
+		<key>UserAgent</key>
+		<string>CarrierEntitlements/$version $device/$hardwareModel iOS/$iOSVersion  CarrierSettings/$carrierBundleVersion IMSI/$imsi ICCID/$iccid IMEI/$imei MEID/$meid</string>
 	</dict>
-	<key>SupportsSupplementaryServicesOver3GPP</key>
+	<key>SupportsSupplementaryServicesOverIMS</key>
 	<true/>
-	<key>SuppressSimToolkitSendShortMessageNotifications</key>
+	<key>SupportsUserBusyCauseCode</key>
 	<true/>
+	<key>RCS</key>
+	<dict>
+		<key>EnableBusinessMessagingByDefault</key>
+		<true/>
+		<key>EnableRCSByDefault</key>
+		<false/>
+		<key>ShowBusinessMessagingSwitch</key>
+		<true/>
+		<key>UseBase64Encoding</key>
+		<true/>
+		<key>BsfPort</key>
+		<integer>8080</integer>
+		<key>ShowRCSSwitch</key>
+		<true/>
+	</dict>
 	<key>SMSSettings</key>
 	<dict>
 		<key>CustomTeleserviceIDs</key>
@@ -221,38 +178,8 @@
 		<key>TransportFallback</key>
 		<false/>
 	</dict>
-	<key>SuspendFastDormancyAllowed</key>
-	<true/>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
-	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32769</integer>
-	<key>RCS</key>
-	<dict>
-		<key>EnableBusinessMessagingByDefault</key>
-		<true/>
-		<key>ShowRCSSwitch</key>
-		<true/>
-		<key>CarrierBasedService</key>
-		<true/>
-		<key>EnableRCSByDefault</key>
-		<false/>
-		<key>BsfPort</key>
-		<integer>8080</integer>
-		<key>UseBase64Encoding</key>
-		<true/>
-		<key>ShowBusinessMessagingSwitch</key>
-		<true/>
-	</dict>
-	<key>CallWaitingDialingCodes</key>
-	<dict>
-		<key>EnableCallWaiting</key>
-		<string>*74</string>
-		<key>CallWaitingEnabledByDefault</key>
-		<true/>
-		<key>DisableCallWaiting</key>
-		<string>*740</string>
-	</dict>
+	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
+	<integer>131072</integer>
 	<key>Services</key>
 	<array>
 		<dict>
@@ -274,18 +201,37 @@
 			<string>国际漫游客服</string>
 		</dict>
 	</array>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>PhoneSettings</key>
 	<dict>
 		<key>AutoCallPickupTimer</key>
 		<integer>35</integer>
 	</dict>
-	<key>EnableLTEAfterUpgrade</key>
-	<true/>
-	<key>PushSettings</key>
+	<key>CDMAInternationalRoaming</key>
 	<dict>
-		<key>SAWatchTopic</key>
-		<string>com.chinatelecom.jituan.esimpush</string>
+		<key>EnabledByDefault</key>
+		<true/>
 	</dict>
+	<key>ShowMessagesConversationListFilteringPrompt</key>
+	<true/>
+	<key>SupportsFlashInfoCallTimer</key>
+	<true/>
+	<key>DataIndicatorOverrideForLTE</key>
+	<string>4G</string>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>46011</string>
+		<string>20404_ID-898611</string>
+	</array>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32769</integer>
+	<key>SupportsEHRPD</key>
+	<true/>
 	<key>CarrierSpace</key>
 	<dict>
 		<key>AutoRefreshMinimumIntervalMins</key>
@@ -313,35 +259,288 @@
 		<key>TokenURL</key>
 		<string>https://ct.crm.189.cn:86/pubPortal/appleAuth/initback</string>
 	</dict>
-	<key>StatusBarImages</key>
+	<key>SuspendFastDormancyAllowed</key>
+	<true/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>00447786205094</string>
+	<key>MyAccountURLTitle</key>
+	<string>中国电信掌上营业厅</string>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>HideNonTransferablePlans</key>
+		<true/>
+	</dict>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.China</string>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>LocalQoSTimeoutMOSeconds</key>
+			<integer>6</integer>
+			<key>RegistrationRetryIntervals</key>
+			<string>30+30,60+60,120+120,240+240,480,900</string>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>UseFakeSAsForDeregistration</key>
+			<true/>
+			<key>ussdEnabled</key>
+			<true/>
+			<key>FatalSmsErrors</key>
+			<string>400,404,500,502</string>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>DefaultRemoteSipPort</key>
+			<integer>5060</integer>
+			<key>EnableEmergencyRegistration</key>
+			<true/>
+			<key>AlwaysUnsubscribeFromRegEvents</key>
+			<false/>
+			<key>EmergencyCallBackModeExpirationSeconds</key>
+			<integer>1</integer>
+			<key>StartLocalQosTimerOnSessionProgress</key>
+			<true/>
+			<key>TriggerCSFBOnLocalQoSTimeoutMO</key>
+			<false/>
+			<key>TriggerCSFBOnLocalQoSTimeoutMT</key>
+			<false/>
+			<key>TriggerCSFBOnWaitForRingingTimeout</key>
+			<false/>
+			<key>EmergencyURNs</key>
+			<dict>
+				<key>999</key>
+				<string>urn:service:sos.mountain</string>
+				<key>110</key>
+				<string>urn:service:sos.police</string>
+				<key>120</key>
+				<string>urn:service:sos.ambulance</string>
+				<key>119</key>
+				<string>urn:service:sos.fire</string>
+				<key>122</key>
+				<string>urn:service:sos.marine</string>
+			</dict>
+			<key>RingbackTimerSeconds</key>
+			<integer>60</integer>
+			<key>SendPreferredServiceInInvite</key>
+			<true/>
+			<key>LocalQoSTimeoutMTSeconds</key>
+			<integer>6</integer>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>Request Timeout</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>408</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+				<key>TemporarilyUnavailable</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>480</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteCallRejected</string>
+				</dict>
+			</dict>
+			<key>Preconditions</key>
+			<string>supported</string>
+			<key>IncompleteRegistrationThrottlingIntervalSeconds</key>
+			<integer>0</integer>
+			<key>RequireQoSBeforeRinging</key>
+			<true/>
+			<key>CallEndReasons</key>
+			<dict>
+				<key>NoAnswer</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>408</integer>
+				</dict>
+			</dict>
+			<key>DontSendPreconditionsIfCallWaitingDisabled</key>
+			<true/>
+			<key>MinSessionExpiresSeconds</key>
+			<integer>600</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>55</integer>
+			<key>UseIPSec</key>
+			<true/>
+			<key>ValidateSipMessageRecipient</key>
+			<false/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc011.mcc460.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>TR1MTimer</key>
+			<dict>
+				<key>TimerValue</key>
+				<integer>133</integer>
+			</dict>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc011.mcc460.pub.3gppnetwork.org</string>
+			<key>BsfPort</key>
+			<integer>8080</integer>
+			<key>imsFeatureDependency</key>
+			<false/>
+			<key>DisableCLIRModification</key>
+			<true/>
+			<key>NafPort</key>
+			<integer>80</integer>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>supported</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>403,500,404</string>
+			<key>UnsolicitedRequestDelay</key>
+			<integer>0</integer>
+			<key>BsfHost</key>
+			<string>bsf.mnc011.mcc460.pub.3gppnetwork.org</string>
+			<key>SupportsCW</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>InactivityTimerRTCPSeconds</key>
+			<integer>20</integer>
+			<key>UseRestrictiveDirectionWhenCreatingAnswer</key>
+			<false/>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>HideSessionLevelDirection</key>
+			<true/>
+			<key>PreferredAMRWBMode</key>
+			<string>8</string>
+		</dict>
+		<key>SIM</key>
+		<dict>
+			<key>CarrierDomain</key>
+			<string>ims.mnc011.mcc460.3gppnetwork.org</string>
+			<key>impiFormat</key>
+			<string>imsi@carrierDomain</string>
+			<key>impuFormat</key>
+			<array>
+				<string>imsi@carrierDomain</string>
+			</array>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>tLte911Timer</key>
+			<integer>34</integer>
+			<key>endNonEmergencyCalls</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>Show4GSwitch</key>
+	<string>Invalid</string>
+	<key>CarrierName</key>
+	<string>中国电信</string>
+	<key>SaveICCIDToCache</key>
+	<true/>
+	<key>CarrierBookmarks</key>
 	<array>
 		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>460-11</string>
-			<key>StatusBarCarrierName</key>
-			<string>中国电信</string>
-		</dict>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>CHN-CT</string>
-			<key>StatusBarCarrierName</key>
-			<string>中国电信</string>
+			<key>Title</key>
+			<string>189邮箱</string>
+			<key>URL</key>
+			<string>https://wapmail.189.cn/</string>
 		</dict>
 	</array>
-	<key>SupportsFlashInfoCallTimer</key>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP2</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>CTNET</string>
+			<key>UseNetworkMTU</key>
+			<true/>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+		<key>3GPP</key>
+		<dict>
+			<key>apn</key>
+			<string>CTNET</string>
+			<key>password</key>
+			<string></string>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>AllowedProtocolMaskInRoamingUMTS</key>
+			<integer>3</integer>
+			<key>UseNetworkMTU</key>
+			<true/>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>StockSymboli</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>中国电信</string>
+			<key>symbol</key>
+			<string>0728.HK</string>
+		</dict>
+	</array>
+	<key>MyAccountURL</key>
+	<string>https://www.189.cn</string>
+	<key>RemoteDiagnosticsWWANAllowed</key>
+	<true/>
+	<key>ShowVolteSwitch</key>
+	<false/>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>Location</key>
+	<dict>
+		<key>EmergencyLocation</key>
+		<dict>
+			<key>AugmentedEmergencyAction</key>
+			<dict>
+				<key>AML</key>
+				<dict>
+					<key>SMS</key>
+					<dict>
+						<key>Destination</key>
+						<string>1069030089934</string>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>SuppressSimToolkitSendShortMessageNotifications</key>
 	<true/>
 	<key>SupportsSupplementaryServicesOverUtOnVoPSNetwork</key>
 	<true/>
-	<key>CarrierName</key>
-	<string>中国电信</string>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
-	<key>MyAccountURL</key>
-	<string>http://www.189.cn</string>
 	<key>nais</key>
 	<array>
 		<dict>
@@ -353,6 +552,8 @@
 			<string>vnet.mobi</string>
 		</dict>
 	</array>
+	<key>ShowVoiceRoamingSwitch</key>
+	<false/>
 	<key>CallForwardingDialingCodes</key>
 	<dict>
 		<key>EnableDefaultCallForwarding</key>
@@ -374,21 +575,58 @@
 		<key>EnableNoAnswerCallForwarding</key>
 		<string>*92</string>
 	</dict>
-	<key>MyAccountURLTitle</key>
-	<string>中国电信掌上营业厅</string>
-	<key>CDMAInternationalRoaming</key>
+	<key>CallWaitingDialingCodes</key>
 	<dict>
-		<key>EnabledByDefault</key>
+		<key>EnableCallWaiting</key>
+		<string>*74</string>
+		<key>CallWaitingEnabledByDefault</key>
 		<true/>
+		<key>DisableCallWaiting</key>
+		<string>*740</string>
 	</dict>
-	<key>SaveICCIDToCache</key>
+	<key>ShouldHideAllVoicemailUI</key>
 	<true/>
 	<key>AllowNAISelection</key>
 	<true/>
-	<key>SupportedSIMs</key>
+	<key>DefaultPhoneNumberPrefixes</key>
 	<array>
-		<string>46011</string>
-		<string>20404_ID-898611</string>
+		<string>0000000000</string>
 	</array>
+	<key>RemoteCardProvisioningSettings</key>
+	<dict>
+		<key>RequireLiveIDCheck</key>
+		<true/>
+		<key>InconsistentICCIDLength</key>
+		<true/>
+		<key>OneNumberRequireLiveIDCheck</key>
+		<true/>
+		<key>SupportsFauxCard</key>
+		<false/>
+		<key>MatchingICCIDPrefixes</key>
+		<array>
+			<string>898603</string>
+			<string>898611</string>
+		</array>
+		<key>RequiresPairingSupportIndicator</key>
+		<true/>
+		<key>ServerURL</key>
+		<string>https://esimapple.crm.189.cn</string>
+		<key>UsesAutoAssignment</key>
+		<false/>
+		<key>ProvisioningMethod</key>
+		<string>CarrierFlow</string>
+		<key>MinCompatibleWatchOS</key>
+		<string>5.1</string>
+		<key>ActivatingStateSubscriptionCheckTimerIntervals</key>
+		<array>
+			<integer>300</integer>
+			<integer>480</integer>
+			<integer>600</integer>
+		</array>
+		<key>SupportedSKUs</key>
+		<array>
+			<string>SKU_CU</string>
+		</array>
+	</dict>
 </dict>
 </plist>

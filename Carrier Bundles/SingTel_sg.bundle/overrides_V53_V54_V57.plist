@@ -2,79 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>apns</key>
-	<array>
-		<dict>
-			<key>password</key>
-			<string>65ideas</string>
-			<key>username</key>
-			<string>65ideas</string>
-			<key>apn</key>
-			<string>e-ideas</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>type-mask</key>
-			<integer>32821</integer>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>type-mask</key>
-			<integer>131072</integer>
-			<key>password</key>
-			<string></string>
-			<key>tech-type-mask</key>
-			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
-			<key>SupportSwitchOver</key>
-			<true/>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>ims</string>
-			<key>AllowedProtocolMask</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>type-mask</key>
-			<integer>1048576</integer>
-			<key>password</key>
-			<string></string>
-			<key>tech-type-mask</key>
-			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>stm-ut</string>
-			<key>AllowedProtocolMask</key>
-			<integer>2</integer>
-		</dict>
-	</array>
-	<key>Enable5GStandaloneAfterUpgrade</key>
-	<true/>
 	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
-	<key>ShowEsimWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Show5GStandaloneSwitch</key>
+	<string>6.0.161</string>
+	<key>ShowVoNRSwitch</key>
 	<true/>
 	<key>Enable5GStandaloneByDefault</key>
 	<true/>
-	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
-	<integer>131072</integer>
-	<key>Show5GSwitch</key>
-	<true/>
-	<key>ShowHighDataModeSwitch</key>
-	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>NRSlicing</key>
 	<dict>
 		<key>SupportsLLPHS</key>
@@ -103,244 +36,90 @@
 		<key>ManagedSliceApps</key>
 		<true/>
 	</dict>
+	<key>ShowHighDataModeSwitch</key>
+	<true/>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Signaling</key>
-		<dict>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string></string>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>SecurityAgreementEalgs</key>
-			<string>aes-cbc,null</string>
-			<key>EmergencyURNs</key>
-			<dict>
-				<key>995</key>
-				<string>urn:service:sos.ambulance</string>
-				<key>999</key>
-				<string>urn:service:sos.police</string>
-			</dict>
-			<key>AdditionalHeaders</key>
-			<dict>
-				<key>INVITE</key>
-				<array>
-					<string>Supported:histinfo</string>
-				</array>
-			</dict>
-			<key>DefaultAuthAlgorithm</key>
-			<string>AKAv1-MD5</string>
-			<key>IncomingCallEndReasons</key>
-			<dict>
-				<key>NotFound</key>
-				<dict>
-					<key>StatusCode</key>
-					<integer>404</integer>
-					<key>TerminationEvent</key>
-					<string>RemoteHangup</string>
-				</dict>
-				<key>TemporarilyUnavailable</key>
-				<dict>
-					<key>StatusCode</key>
-					<integer>480</integer>
-					<key>TerminationEvent</key>
-					<string>RemoteHangup</string>
-				</dict>
-			</dict>
-			<key>Preconditions</key>
-			<string>None</string>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>AdditionalContactParams</key>
-			<dict>
-				<key>INVITE,INVITE:*</key>
-				<string>+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting;+g.3gpp.mid-call</string>
-			</dict>
-			<key>AlwaysUnsubscribeFromRegEvents</key>
-			<false/>
-			<key>CountryOfOriginationFormat</key>
-			<string>PANI</string>
-			<key>UseIPSec</key>
-			<true/>
-		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>conferenceServer</key>
-			<string>conference@conference.ims.singtel.com</string>
-		</dict>
-		<key>EnableWiFiCallingByDefault</key>
-		<true/>
 		<key>SMS</key>
 		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
 			<key>SupportedDomains</key>
 			<dict>
 				<key>NR</key>
 				<true/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
-		<key>Media</key>
-		<dict>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>112</key>
-				<dict>
-					<key>br</key>
-					<string>5.9-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-					<key>max-red</key>
-					<string>240</string>
-				</dict>
-			</dict>
-			<key>RingbackTone</key>
-			<string>AU</string>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>NafHost</key>
-			<string>xcap.ims.mnc001.mcc525.pub.3gppnetwork.org</string>
-			<key>BsfPort</key>
-			<integer>8081</integer>
-			<key>imsFeatureDependency</key>
-			<true/>
-			<key>NafPort</key>
-			<integer>8080</integer>
-			<key>SupportsCLIR</key>
-			<true/>
-			<key>supported</key>
-			<true/>
-			<key>ContentType</key>
-			<string>application/xcap-el+xml</string>
-			<key>DisableOnNetworkError</key>
-			<true/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string>400,403,500</string>
-			<key>SupportsCFErasure</key>
-			<false/>
-			<key>imsRegistrationDependency</key>
-			<true/>
-			<key>BsfHost</key>
-			<string>bsf.ims.mnc001.mcc525.pub.3gppnetwork.org</string>
-		</dict>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<true/>
 		<key>Voice</key>
 		<dict>
-			<key>E911OverITechSupported</key>
-			<true/>
-			<key>E911OverCSIfRoaming</key>
-			<false/>
-			<key>BlockCallsOverCS</key>
-			<true/>
-			<key>BlockSilentRedialOverCS</key>
-			<true/>
 			<key>EnableVoNRByDefault</key>
 			<true/>
-			<key>EnableVolteByDefault</key>
-			<true/>
 		</dict>
+		<key>EnableWiFiCallingByDefault</key>
+		<true/>
 	</dict>
-	<key>OverrideOperatorWiFiName</key>
-	<string>Singtel WiFi Calling</string>
+	<key>SupportsVoNR</key>
+	<true/>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>CarrierEntitlements</key>
-	<dict>
-		<key>SupportedEntitlements</key>
-		<integer>4197377</integer>
-		<key>ProtocolVersion</key>
-		<string>2</string>
-		<key>ServerAddress</key>
-		<string>https://ses.singtel.com</string>
-		<key>Authentication</key>
-		<dict>
-			<key>Type</key>
-			<integer>1</integer>
-			<key>Username</key>
-			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
-		</dict>
-		<key>SupportedAuthorizationTokens</key>
-		<integer>2</integer>
-		<key>UpdatePeriod</key>
-		<integer>48</integer>
-	</dict>
-	<key>AttachAPN</key>
-	<dict>
-		<key>3GPP</key>
+	<key>Enable5GStandaloneAfterUpgrade</key>
+	<true/>
+	<key>Show5GStandaloneSwitch</key>
+	<true/>
+	<key>apns</key>
+	<array>
 		<dict>
 			<key>password</key>
 			<string>65ideas</string>
-			<key>PcscfAddressRequired</key>
-			<false/>
 			<key>username</key>
 			<string>65ideas</string>
 			<key>apn</key>
 			<string>e-ideas</string>
+			<key>type-mask</key>
+			<integer>32821</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
-	</dict>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Enable5GAutoByDefault</key>
-	<true/>
-	<key>ShowVolteSwitch</key>
-	<false/>
-	<key>SupportsImsCapability</key>
-	<true/>
-	<key>ShowVoNRSwitch</key>
-	<true/>
-	<key>RemoteCardProvisioningSettings</key>
-	<dict>
-		<key>MatchingICCIDPrefixes</key>
-		<array>
-			<string>896501</string>
-		</array>
-		<key>CellularTrialPlan</key>
 		<dict>
-			<key>SupportsTrialPlan</key>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>131072</integer>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
+			<key>SupportSwitchOver</key>
 			<true/>
-			<key>TrialStartPeriod</key>
-			<string>2017-12-06T00:00:00Z</string>
-			<key>TrialEndPeriod</key>
-			<string>2018-05-02T23:59:59Z</string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
+			<integer>2</integer>
 		</dict>
-		<key>ServerURL</key>
-		<string>https://sin.prod.ondemandconnectivity.com</string>
-		<key>SupportedSKUs</key>
-		<array>
-			<string>SKU_EU</string>
-		</array>
-		<key>MinCompatibleWatchOS</key>
-		<string>4.2.2</string>
-		<key>MinCompatibleWatchOSForStandaloneMode</key>
-		<string>8.3</string>
-		<key>ProvisioningMethod</key>
-		<string>CarrierFlow</string>
-		<key>SupportsFauxCard</key>
-		<false/>
-	</dict>
-	<key>SupportsNRNSAInboundRoaming</key>
-	<true/>
-	<key>PushSettings</key>
-	<dict>
-		<key>MultiSIMTopic</key>
-		<string>com.singtel.watch.release</string>
-		<key>SAWatchTopic</key>
-		<string>com.singtel.watch.standalone</string>
-	</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>1048576</integer>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>stm-ut</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
 	<key>Enable5GAutoAfterUpgrade</key>
 	<true/>
-	<key>SupportsVoNR</key>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
+	<key>Show5GSwitch</key>
+	<true/>
+	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 </dict>
 </plist>

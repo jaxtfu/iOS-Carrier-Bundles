@@ -73,15 +73,13 @@
 						<string></string>
 						<key>tech-type-mask</key>
 						<integer>262144</integer>
-						<key>AllowedProtocolMask</key>
-						<integer>3</integer>
 						<key>AllowNoDNS</key>
 						<integer>1</integer>
 						<key>username</key>
 						<string></string>
 						<key>apn</key>
 						<string>sos</string>
-						<key>DefaultProtocolMask</key>
+						<key>AllowedProtocolMask</key>
 						<integer>3</integer>
 					</dict>
 				</array>
@@ -112,17 +110,10 @@
 	<integer>0</integer>
 	<key>RegistrationOptInRequired</key>
 	<true/>
-	<key>StatusBarImages</key>
-	<array>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>Lowi</string>
-			<key>StatusBarCarrierName</key>
-			<string>Lowi</string>
-		</dict>
-	</array>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>Show4GSwitch</key>
+	<true/>
 	<key>NetworkEncryptionCiphers</key>
 	<dict>
 		<key>GEA3</key>
@@ -199,13 +190,22 @@
 	</dict>
 	<key>ShowDialAssist</key>
 	<true/>
+	<key>StatusBarImages</key>
+	<array>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>Lowi</string>
+			<key>StatusBarCarrierName</key>
+			<string>Lowi</string>
+		</dict>
+	</array>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>21406_ID-89345710</string>
 		<string>21406_ID-89345712</string>
 	</array>
-	<key>WiFiOperatorNameSuffix</key>
-	<string>WiFi Call</string>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<array>
 		<string>+447537410200</string>
@@ -219,6 +219,8 @@
 		<string>+447537410280</string>
 		<string>+447537410290</string>
 	</array>
+	<key>WiFiOperatorNameSuffix</key>
+	<string>WiFi Call</string>
 	<key>CarrierName</key>
 	<string>Lowi</string>
 	<key>AttachAPN</key>
@@ -239,7 +241,7 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
+	<key>ShowVolteSwitch</key>
 	<false/>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Spain</string>
@@ -386,15 +388,13 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>262144</integer>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowNoDNS</key>
 			<integer>1</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>sos</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</array>

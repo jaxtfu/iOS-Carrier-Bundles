@@ -40,11 +40,15 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.claro.com.sv</string>
+	<string>https://www.claro.com.sv</string>
 	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>MyAccountURLTitle</key>
 	<string>Claro El Salvador</string>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StockSymboli</key>
 	<array>
 		<dict>
@@ -152,6 +156,22 @@
 	</dict>
 	<key>OverrideOperatorWiFiName</key>
 	<string>Claro VoWiFi</string>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>SupportedEntitlements</key>
+		<integer>1041</integer>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>ServerAddress</key>
+		<string>https://aes.mnc001.mcc706.pub.3gppnetwork.org:44308/entitlement/</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+	</dict>
 	<key>ShowDialAssist</key>
 	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
@@ -160,8 +180,6 @@
 	<string>CLARO SV</string>
 	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
 	<false/>
-	<key>SupportsUserBusyCauseCode</key>
-	<true/>
 	<key>AttachAPN</key>
 	<dict>
 		<key>3GPP</key>
@@ -178,10 +196,33 @@
 			<integer>1</integer>
 		</dict>
 	</dict>
-	<key>ShowTTY</key>
-	<false/>
+	<key>SupportsUserBusyCauseCode</key>
+	<true/>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.ElSalvador</string>
+	<key>RemoteCardProvisioningSettings</key>
+	<dict>
+		<key>MatchingICCIDPrefixes</key>
+		<array>
+			<string>895030</string>
+		</array>
+		<key>ActivatingStateSubscriptionCheckTimerIntervals</key>
+		<array>
+			<integer>1800</integer>
+			<integer>3600</integer>
+			<integer>5400</integer>
+		</array>
+		<key>ProvisioningMethod</key>
+		<string>CarrierFlow</string>
+		<key>MinCompatibleWatchOS</key>
+		<string>26.5</string>
+		<key>SupportedSKUs</key>
+		<array>
+			<string>SKU_NA</string>
+		</array>
+		<key>ServerURL</key>
+		<string>scg.prod.ondemandconnectivity.com</string>
+	</dict>
 	<key>TechSettings</key>
 	<dict>
 		<key>WifiCallingAllowedInRoaming</key>
@@ -296,6 +337,11 @@
 			<integer>10</integer>
 		</dict>
 	</dict>
+	<key>PushSettings</key>
+	<dict>
+		<key>MultiSIMTopic</key>
+		<string>com.clarosv.ent.multi-sim</string>
+	</dict>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -305,10 +351,8 @@
 			<string></string>
 			<key>apn</key>
 			<string>Internet.ideasclaro</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>type-mask</key>
-			<integer>49</integer>
+			<integer>32817</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
@@ -319,8 +363,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>

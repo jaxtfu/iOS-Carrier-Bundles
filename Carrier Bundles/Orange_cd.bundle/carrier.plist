@@ -29,14 +29,14 @@
 			<string>Orange</string>
 		</dict>
 	</array>
-	<key>RoamingVoicemailPilotNumber</key>
-	<string>+243842343434</string>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>63086</string>
 	</array>
+	<key>RoamingVoicemailPilotNumber</key>
+	<string>+243842343434</string>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
 	<key>MMS</key>
 	<dict>
 		<key>MMSC</key>
@@ -67,8 +67,6 @@
 	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>1222</string>
 	<key>apns</key>

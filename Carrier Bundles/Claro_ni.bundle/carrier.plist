@@ -49,7 +49,7 @@
 		</dict>
 	</array>
 	<key>MyAccountURL</key>
-	<string>http://www.claro.com.ni/</string>
+	<string>https://www.claro.com.ni/</string>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>71021</string>
@@ -159,39 +159,37 @@
 			<string>Recarga de Saldo Prepago</string>
 		</dict>
 	</array>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>49</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>internet.ideasclaro</string>
+			<key>type-mask</key>
+			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>48</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>internet.ideasclaro</string>
+			<key>type-mask</key>
+			<integer>48</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -202,16 +200,12 @@
 			<string></string>
 			<key>apn</key>
 			<string>ims</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>type-mask</key>
 			<integer>131072</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
 	</array>
-	<key>ShowTTY</key>
-	<false/>
 	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>

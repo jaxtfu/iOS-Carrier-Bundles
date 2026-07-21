@@ -35,7 +35,7 @@
 	<key>SupportsNITZ</key>
 	<false/>
 	<key>MyAccountURL</key>
-	<string>http://iphone.orange.ne</string>
+	<string>https://iphone.orange.ne</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>APNEditabilityTypemask</key>
@@ -77,8 +77,6 @@
 	<string>Orange Niger</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>

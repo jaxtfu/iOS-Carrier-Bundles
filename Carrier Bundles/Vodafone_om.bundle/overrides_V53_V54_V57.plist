@@ -18,15 +18,5 @@
 	<true/>
 	<key>Show5GSwitch</key>
 	<true/>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Signaling</key>
-		<dict>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-		</dict>
-	</dict>
 </dict>
 </plist>

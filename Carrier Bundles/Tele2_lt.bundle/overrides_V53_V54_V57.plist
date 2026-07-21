@@ -14,38 +14,10 @@
 	<false/>
 	<key>ShowVolteSwitch</key>
 	<false/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 	<key>Show5GSwitch</key>
 	<true/>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Media</key>
-		<dict>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>109</key>
-				<dict>
-					<key>ch-aw-recv</key>
-					<string>2</string>
-					<key>br</key>
-					<string>5.9-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-					<key>octet-align</key>
-					<string>1</string>
-				</dict>
-			</dict>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-		</dict>
-	</dict>
 	<key>EnableLTEAfterUpgrade</key>
 	<true/>
 </dict>

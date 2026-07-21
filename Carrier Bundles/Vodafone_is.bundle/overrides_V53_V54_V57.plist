@@ -16,12 +16,10 @@
 	<false/>
 	<key>ShowVolteSwitch</key>
 	<false/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
 	<false/>
 	<key>Show5GSwitch</key>
 	<true/>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
 	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 </dict>

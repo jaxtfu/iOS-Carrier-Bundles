@@ -48,6 +48,8 @@
 		</dict>
 		<key>Signaling</key>
 		<dict>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
 			<key>AdditionalContactParams</key>
 			<dict>
 				<key>REGISTER,INVITE,INVITE:*</key>
@@ -81,6 +83,8 @@
 					<string>RemoteHangup</string>
 				</dict>
 			</dict>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>ShowDialAssist</key>
@@ -95,15 +99,19 @@
 	<dict>
 		<key>3GPP</key>
 		<dict>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
 			<key>password</key>
 			<string></string>
 			<key>PcscfAddressRequired</key>
 			<false/>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoamingUMTS</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>internet.vodafone.om</string>
-			<key>AllowedProtocolMask</key>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
 			<integer>1</integer>
 		</dict>
 	</dict>
@@ -124,10 +132,14 @@
 			<string></string>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>internet.vodafone.om</string>
 			<key>type-mask</key>
 			<integer>49</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>OTASoftwareUpdate</key>

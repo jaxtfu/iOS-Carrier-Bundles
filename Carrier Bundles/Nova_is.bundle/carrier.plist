@@ -34,13 +34,10 @@
 	</dict>
 	<key>SupportsNITZ</key>
 	<false/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32768</integer>
 	<key>StatusBarImages</key>
@@ -162,8 +159,6 @@
 		<dict>
 			<key>enableInNonVoLTEMode</key>
 			<false/>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>Media</key>
 		<dict>
@@ -171,26 +166,26 @@
 			<dict>
 				<key>106</key>
 				<dict>
-					<key>max-red</key>
-					<string>240</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>hf-only</key>
-					<string>1</string>
 					<key>ch-aw-recv</key>
 					<string>0</string>
-					<key>EncodingName</key>
-					<string>EVS</string>
 					<key>br</key>
 					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
 					<key>bw</key>
-					<string>nb-wb</string>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>240</string>
 				</dict>
 			</dict>
-			<key>RTCPIntervalSeconds</key>
-			<integer>5</integer>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 			<key>IncludeSDPMaxRed</key>
 			<false/>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
 			<key>EnableBandwidthSpecifiers</key>
 			<true/>
 		</dict>
@@ -242,7 +237,7 @@
 	<key>OverrideOperatorWiFiName</key>
 	<string>Nova WifiCalling</string>
 	<key>Show3GSwitchWith4G</key>
-	<true/>
+	<false/>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportsOnDevicePhysicalSIMConvert</key>
@@ -272,6 +267,8 @@
 			<string>AuthenticateTrustFlag</string>
 		</array>
 	</dict>
+	<key>ShowDialAssist</key>
+	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<array>
 		<string>+447537410205</string>
@@ -285,20 +282,16 @@
 		<string>+447537410285</string>
 		<string>+447537410295</string>
 	</array>
-	<key>ShowDialAssist</key>
-	<true/>
 	<key>CarrierName</key>
 	<string>NOVA</string>
 	<key>AttachAPN</key>
 	<dict>
 		<key>3GPP</key>
 		<dict>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 			<key>password</key>
 			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 			<key>PcscfAddressRequired</key>
 			<false/>
 			<key>username</key>
@@ -307,15 +300,12 @@
 			<integer>3</integer>
 			<key>apn</key>
 			<string>net.nova.is</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
 			<integer>3</integer>
 		</dict>
 	</dict>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>27411</string>
-		<string>22201_ID-8935411</string>
-	</array>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>PhoneAccountTransfer</key>
 	<dict>
 		<key>LocalInstallSMDPURL</key>
@@ -352,8 +342,13 @@
 		<key>SupportsFallbackToLegacyFlow</key>
 		<false/>
 	</dict>
-	<key>ShowTTY</key>
-	<false/>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>27411</string>
+		<string>22201_ID-8935411</string>
+	</array>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>+3547701717</string>
 	<key>HomeBundleIdentifier</key>
@@ -540,8 +535,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>3</integer>
 			<key>SupportSwitchOver</key>
@@ -560,8 +553,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
@@ -578,8 +569,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>4</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>SupportSwitchOver</key>
 			<false/>
 			<key>username</key>

@@ -26,6 +26,10 @@
 	<true/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+68988411520</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>Show4GSwitch</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -37,8 +41,107 @@
 			<string>ORA MOBILE</string>
 		</dict>
 	</array>
-	<key>Show4GSwitch</key>
-	<false/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string></string>
+			<key>SupportPEarlyMediaHeader</key>
+			<false/>
+			<key>IncompleteRegistrationThrottlingIntervalSeconds</key>
+			<integer>129</integer>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>EarlyMediaNeedsHeader</key>
+			<false/>
+			<key>DefaultAuthAlgorithm</key>
+			<string></string>
+			<key>CountryOfOriginationFormat</key>
+			<string>BOTH</string>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<false/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc005.mcc547.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>112</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>2</string>
+					<key>br</key>
+					<string>9.6-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-wb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCW</key>
+			<false/>
+			<key>NafPort</key>
+			<integer>9002</integer>
+			<key>BsfHost</key>
+			<string>bsf.mnc005.mcc547.pub.3gppnetwork.org</string>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+			<key>ContentType</key>
+			<string>application/vnd.etsi.simservs+xml</string>
+			<key>BsfPort</key>
+			<integer>9001</integer>
+			<key>supported</key>
+			<true/>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc005.mcc547.pub.3gppnetwork.org</string>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>BlockCallsOverCS</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<false/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Ora Wi-Fi Calling</string>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>SupportedSIMs</key>
@@ -66,10 +169,14 @@
 			<integer>1</integer>
 		</dict>
 	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
+	<key>ShowVolteSwitch</key>
+	<false/>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>SupportsUserBusyCauseCode</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -120,6 +227,113 @@
 	<string>+6892222</string>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.FrenchPolynesia</string>
+	<key>TechSettings</key>
+	<dict>
+		<key>WifiCallingAllowedInRoaming</key>
+		<true/>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA2-256</string>
+						</array>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>AES-256</string>
+						</array>
+						<key>DHGroup</key>
+						<integer>14</integer>
+						<key>Lifetime</key>
+						<integer>86400</integer>
+					</dict>
+				</array>
+				<key>InstallPolicies</key>
+				<true/>
+				<key>ReplayWindowSize</key>
+				<integer>12</integer>
+			</dict>
+		</dict>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>ims</string>
+		</dict>
+		<key>IKE</key>
+		<dict>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-256</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-256</string>
+					<key>DHGroup</key>
+					<integer>14</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>86400</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-256</string>
+				</dict>
+			</array>
+			<key>DeadPeerDetectionEnabled</key>
+			<true/>
+			<key>DeadPeerDetectionMaxRetries</key>
+			<integer>4</integer>
+			<key>DeadPeerDetectionInterval</key>
+			<integer>600</integer>
+			<key>LocalIdentifier</key>
+			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
+			<key>NATTKeepAliveOffload</key>
+			<true/>
+			<key>RemoteAddress</key>
+			<string>epdg.epc.mnc005.mcc547.pub.3gppnetwork.org</string>
+			<key>DeadPeerDetectionRetryInterval</key>
+			<integer>10</integer>
+		</dict>
+		<key>SupportContextSwitchOver</key>
+		<true/>
+		<key>SupportCallHandover</key>
+		<true/>
+		<key>TechPolicies</key>
+		<array>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>131072</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>1048576</integer>
+			</dict>
+		</array>
+		<key>ExtraConfigurationAttributeRequestv4</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16384</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv4</string>
+				<key>Type</key>
+				<string>IPv4Address</string>
+			</dict>
+		</array>
+		<key>SetHandOverIPv6Prefix</key>
+		<false/>
+		<key>5wiServiceMask</key>
+		<integer>3</integer>
+	</dict>
 	<key>Show3GSwitch</key>
 	<false/>
 	<key>apns</key>
@@ -128,14 +342,48 @@
 			<key>configuration</key>
 			<array>
 				<dict>
+					<key>AllowNoDNS</key>
+					<integer>1</integer>
 					<key>password</key>
 					<string></string>
 					<key>username</key>
 					<string></string>
 					<key>apn</key>
+					<string>SOS</string>
+					<key>type-mask</key>
+					<integer>262144</integer>
+					<key>AllowedProtocolMask</key>
+					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>type-mask</key>
+					<integer>131072</integer>
+					<key>password</key>
+					<string></string>
+					<key>tech-type-mask</key>
+					<integer>131072</integer>
+					<key>SupportSwitchOver</key>
+					<true/>
+					<key>username</key>
+					<string></string>
+					<key>apn</key>
+					<string>ims</string>
+					<key>AllowedProtocolMask</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>password</key>
+					<string></string>
+					<key>tech-type-mask</key>
+					<integer>1048576</integer>
+					<key>username</key>
+					<string></string>
+					<key>apn</key>
 					<string>internet</string>
 					<key>type-mask</key>
-					<integer>49</integer>
+					<integer>1048625</integer>
+					<key>AllowedProtocolMask</key>
+					<integer>1</integer>
 				</dict>
 			</array>
 			<key>technology-mask</key>

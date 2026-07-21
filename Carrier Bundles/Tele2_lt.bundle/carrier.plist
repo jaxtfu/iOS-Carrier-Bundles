@@ -17,6 +17,8 @@
 	<integer>0</integer>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32768</integer>
 	<key>RoamingVoicemailPilotNumber</key>
@@ -29,10 +31,30 @@
 	<dict>
 		<key>Media</key>
 		<dict>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>20</integer>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>2</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>octet-align</key>
+					<string>1</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 			<key>IncludeSDPModeChangeCapability</key>
 			<true/>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
 		</dict>
 		<key>Signaling</key>
 		<dict>
@@ -156,8 +178,6 @@
 			<integer>3</integer>
 		</dict>
 	</dict>
-	<key>ShowTTY</key>
-	<false/>
 	<key>CellBroadcast</key>
 	<dict>
 		<key>AlertTypes</key>
@@ -351,32 +371,32 @@
 			<integer>4</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>1048576</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>hos</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
 		</dict>
 		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
+			<key>SupportSwitchOver</key>
+			<true/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>ims</string>
-			<key>type-mask</key>
-			<integer>131072</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
 		</dict>

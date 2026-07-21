@@ -9,7 +9,7 @@
 	<key>SupportsNITZ</key>
 	<false/>
 	<key>MyAccountURL</key>
-	<string>http://www.orange.ci</string>
+	<string>https://www.orange.ci</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>RegistrationOptInRequired</key>
@@ -59,8 +59,8 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>

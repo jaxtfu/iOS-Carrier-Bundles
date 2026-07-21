@@ -973,6 +973,8 @@
 	<true/>
 	<key>SupportsNITZ</key>
 	<false/>
+	<key>ShowVolteSwitch</key>
+	<false/>
 	<key>apns</key>
 	<array>
 		<dict>

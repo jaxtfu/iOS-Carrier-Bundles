@@ -23,8 +23,6 @@
 	<dict>
 		<key>AllowVVMSMSWhileIntlRoaming</key>
 		<false/>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
 	<key>RegistrationOptInRequired</key>
 	<false/>
@@ -142,8 +140,6 @@
 				<key>UMTS</key>
 				<false/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>Voice</key>
 		<dict>
@@ -181,8 +177,6 @@
 	</dict>
 	<key>ShowVolteSwitch</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>VoicemailPilotNumber</key>
@@ -209,23 +203,21 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>0</integer>
-			<key>type-mask</key>
-			<integer>131072</integer>
-			<key>apn</key>
-			<string>ims</string>
+			<key>UseNetworkMTU</key>
+			<true/>
 			<key>SupportSwitchOver</key>
 			<false/>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
-			<key>DefaultProtocolMask</key>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
 		<dict>

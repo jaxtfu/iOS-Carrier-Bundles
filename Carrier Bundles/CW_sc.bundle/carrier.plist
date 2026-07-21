@@ -2,54 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>StatusBarImages</key>
-	<array>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>CWSeychelles</string>
-			<key>StatusBarCarrierName</key>
-			<string>CWSeychelles</string>
-		</dict>
-	</array>
-	<key>RoamingVoicemailPilotNumber</key>
-	<string>+2482511511</string>
 	<key>MaxBluetoothModemConnections</key>
 	<integer>5</integer>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>63301</string>
-	</array>
-	<key>apns</key>
-	<array>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>internet</string>
-			<key>type-mask</key>
-			<integer>49</integer>
-		</dict>
-	</array>
-	<key>CarrierName</key>
-	<string>CW Seychelles</string>
 	<key>AllowEDGEEditing</key>
 	<true/>
-	<key>OTASoftwareUpdate</key>
-	<dict/>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.Seychelles</string>
-	<key>signature</key>
-	<data>
-	2ZTfrR0qv9oTTI6kAQX/7734EeevcruHnplohc5pFndIwAN/OvG9QetZb3BtviRXMWpR
-	7YwqbPbAjUhfQRsMC0C25BVNMHt47h+2T0TLZD/7HY/0RNGrScgXX7D/SZywl3YXpQYf
-	H9635J0MPsJ5NOUEs4XXS3MPTnV/3IJ+ZJ8=
-	</data>
-	<key>ShowDialAssist</key>
-	<false/>
 	<key>Services</key>
 	<array>
 		<dict>
@@ -65,19 +21,160 @@
 			<string>Packages</string>
 		</dict>
 	</array>
-	<key>APNEditabilityTypemask</key>
-	<integer>1</integer>
 	<key>SupportsNITZ</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
-	<key>VoicemailPilotNumber</key>
-	<string>101</string>
+	<key>APNEditabilityTypemask</key>
+	<integer>1</integer>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>RoamingVoicemailPilotNumber</key>
+	<string>+2482511511</string>
+	<key>signature</key>
+	<data>
+	2ZTfrR0qv9oTTI6kAQX/7734EeevcruHnplohc5pFndIwAN/OvG9QetZb3BtviRXMWpR
+	7YwqbPbAjUhfQRsMC0C25BVNMHt47h+2T0TLZD/7HY/0RNGrScgXX7D/SZywl3YXpQYf
+	H9635J0MPsJ5NOUEs4XXS3MPTnV/3IJ+ZJ8=
+	</data>
+	<key>StatusBarImages</key>
+	<array>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>CWSeychelles</string>
+			<key>StatusBarCarrierName</key>
+			<string>CWSeychelles</string>
+		</dict>
+	</array>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>63301</string>
+	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>380,403,404,500,501,503,504</string>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>RingingTimerSeconds</key>
+			<integer>90</integer>
+			<key>UseIPSec</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>RingbackTimerSeconds</key>
+			<integer>90</integer>
+			<key>AlwaysSendSessionProgress</key>
+			<false/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SendReferToPeer</key>
+			<false/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc001.mcc633.3gppnetwork.org</string>
+		</dict>
+		<key>IncomingCallEndReasons</key>
+		<dict>
+			<key>TemporarilyUnavailable</key>
+			<dict>
+				<key>StatusCode</key>
+				<integer>480</integer>
+				<key>TerminationEvent</key>
+				<string>RemoteHangup</string>
+			</dict>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>SMSBundleToVoice</key>
+			<true/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>GSM</key>
+				<false/>
+				<key>LTE</key>
+				<true/>
+				<key>UMTS</key>
+				<false/>
+			</dict>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>InactivityTimerRTCPSeconds</key>
+			<integer>3600</integer>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ShowDialAssist</key>
+	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
+	<key>CarrierName</key>
+	<string>CW Seychelles</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>apn</key>
+			<string>internet</string>
+		</dict>
+	</dict>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>ShowVolteSwitch</key>
+	<true/>
+	<key>VoicemailPilotNumber</key>
+	<string>101</string>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.Seychelles</string>
+	<key>apns</key>
+	<array>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>internet</string>
+			<key>type-mask</key>
+			<integer>49</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ims</string>
+			<key>type-mask</key>
+			<integer>131072</integer>
+		</dict>
+	</array>
 </dict>
 </plist>

@@ -18,7 +18,7 @@
 		<string>72416</string>
 	</array>
 	<key>MyAccountURL</key>
-	<string>http://www.oi.com.br</string>
+	<string>https://www.oi.com.br</string>
 	<key>MMS</key>
 	<dict>
 		<key>MMSC</key>
@@ -38,6 +38,8 @@
 	<string>com.apple.Brazil</string>
 	<key>ShowDialAssist</key>
 	<true/>
+	<key>SupportsNITZ</key>
+	<true/>
 	<key>Services</key>
 	<array>
 		<dict>
@@ -53,20 +55,12 @@
 			<string>Oi Atende</string>
 		</dict>
 	</array>
-	<key>SupportsNITZ</key>
-	<true/>
 	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
-	<key>ShowTTY</key>
 	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
 	<key>VoicemailPilotNumber</key>
 	<string>*100</string>
-	<key>RegistrationOptInRequired</key>
-	<true/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>+447786205094</string>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -90,5 +84,9 @@
 			<integer>4</integer>
 		</dict>
 	</array>
+	<key>RegistrationOptInRequired</key>
+	<true/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>+447786205094</string>
 </dict>
 </plist>

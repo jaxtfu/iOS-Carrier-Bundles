@@ -21,6 +21,8 @@
 	<integer>53</integer>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+3546200200</string>
 	<key>AllowedServicesTypeMaskOnInternet</key>
@@ -181,8 +183,6 @@
 	<string>none</string>
 	<key>WiFiOperatorNameSuffix</key>
 	<string>VoWiFi</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>+3546200200</string>
 	<key>HomeBundleIdentifier</key>

@@ -3,44 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
-	<key>Show3GSwitchWith4G</key>
-	<false/>
-	<key>AllowSAOnWiFiAssociation</key>
-	<true/>
+	<string>6.0.161</string>
 	<key>ShowVoNRSwitch</key>
+	<true/>
+	<key>AllowSAOnWiFiAssociation</key>
 	<true/>
 	<key>Show5GSwitch</key>
 	<true/>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
-	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32768</integer>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Media</key>
-		<dict>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>98</key>
-				<dict>
-					<key>bw</key>
-					<string>nb-swb</string>
-				</dict>
-			</dict>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-		</dict>
-		<key>Signaling</key>
-		<dict>
-			<key>EarlyMediaNeedsHeader</key>
-			<false/>
-		</dict>
-		<key>Voice</key>
-		<dict>
-			<key>EnableVoNRByDefault</key>
-			<true/>
-		</dict>
 		<key>SMS</key>
 		<dict>
 			<key>SupportedDomains</key>
@@ -49,58 +22,55 @@
 				<true/>
 			</dict>
 		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVoNRByDefault</key>
+			<true/>
+		</dict>
 	</dict>
-	<key>DerPriFileName</key>
-	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>SupportsVoNR</key>
 	<true/>
+	<key>DerPriFileName</key>
+	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>ShowVolteSwitch</key>
 	<false/>
 	<key>Show5GStandaloneSwitch</key>
 	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>32817</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>internet</string>
+			<key>type-mask</key>
+			<integer>32817</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>type-mask</key>
 			<integer>131072</integer>
-			<key>password</key>
-			<string></string>
 			<key>Support5GSaHandOver</key>
 			<true/>
+			<key>password</key>
+			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
 			<key>UseNetworkMTU</key>
 			<true/>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>ims</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>password</key>
@@ -119,8 +89,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>3</integer>
 			<key>username</key>
@@ -128,25 +96,25 @@
 			<key>apn</key>
 			<string>xcap</string>
 			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>262144</integer>
-			<key>password</key>
-			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowNoDNS</key>
 			<integer>1</integer>
+			<key>password</key>
+			<string></string>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>sos</string>
-			<key>DefaultProtocolMask</key>
+			<key>type-mask</key>
+			<integer>262144</integer>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</array>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
 	<key>Enable5GAutoByDefault</key>
 	<true/>
 	<key>SupportsNRNSAInboundRoaming</key>

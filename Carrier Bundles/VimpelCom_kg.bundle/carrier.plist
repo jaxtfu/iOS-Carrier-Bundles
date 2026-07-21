@@ -64,8 +64,6 @@
 			<integer>1</integer>
 		</dict>
 	</dict>
-	<key>ShowTTY</key>
-	<false/>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Kyrgyzstan</string>
 	<key>AllowAttachAPNEditing</key>

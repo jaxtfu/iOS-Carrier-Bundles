@@ -63,10 +63,6 @@
 	<string>Life</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
-	<key>VoicemailPilotNumber</key>
-	<string>985</string>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -103,6 +99,8 @@
 			</dict>
 		</array>
 	</dict>
+	<key>VoicemailPilotNumber</key>
+	<string>985</string>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Belarus</string>
 	<key>MMS</key>

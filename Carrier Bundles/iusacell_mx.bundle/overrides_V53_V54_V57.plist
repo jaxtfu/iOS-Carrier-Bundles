@@ -2,6 +2,36 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>PushSettings</key>
+	<dict>
+		<key>CellularPlanTransferTopic</key>
+		<string>com.attmx.ent.iphone-transfer</string>
+	</dict>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
+		<true/>
+		<key>SupportSecureIntent</key>
+		<true/>
+		<key>SupportedEntitlements</key>
+		<integer>9233</integer>
+		<key>SupportCrossPlatformSIMTransfer</key>
+		<true/>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<true/>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+		<key>SupportedActions</key>
+		<array>
+			<string>TransferSIMService</string>
+		</array>
+	</dict>
+	<key>DerPriFileVersion</key>
+	<string>6.0.161</string>
+	<key>DerPriFileName</key>
+	<string>overrides_V53_V54_V57.der.pri</string>
+	<key>Show4GSwitchWith5G</key>
+	<false/>
 	<key>MVNOOverrides</key>
 	<dict>
 		<key>Configuration_1</key>
@@ -41,8 +71,6 @@
 						<integer>131072</integer>
 						<key>password</key>
 						<string></string>
-						<key>DefaultProtocolMask</key>
-						<integer>3</integer>
 						<key>NoCellularReconnectCauseCodes</key>
 						<array>
 							<dict>
@@ -90,20 +118,18 @@
 						<integer>4</integer>
 					</dict>
 					<dict>
-						<key>type-mask</key>
-						<integer>32769</integer>
 						<key>password</key>
 						<string></string>
-						<key>apn</key>
-						<string>web.5g.attmex.mx</string>
-						<key>DefaultProtocolMask</key>
-						<integer>3</integer>
 						<key>username</key>
 						<string></string>
-						<key>UseNetworkMTU</key>
-						<true/>
 						<key>AllowedProtocolMask</key>
 						<integer>3</integer>
+						<key>apn</key>
+						<string>web.5g.attmex.mx</string>
+						<key>type-mask</key>
+						<integer>32769</integer>
+						<key>UseNetworkMTU</key>
+						<true/>
 					</dict>
 				</array>
 			</dict>
@@ -113,191 +139,6 @@
 			</array>
 		</dict>
 	</dict>
-	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
-	<key>Enable4GByDefault</key>
-	<true/>
-	<key>_Exclude</key>
-	<array>
-		<string>EnableLTEAfterUpgrade</string>
-	</array>
-	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
-	<integer>131072</integer>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
-	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32768</integer>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<string>False</string>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Media</key>
-		<dict>
-			<key>UseSDPTemplateWhenAnswering</key>
-			<true/>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>20</integer>
-			<key>PreferredAMRWBMode</key>
-			<integer>8</integer>
-			<key>SuppressOctetAlignAttributeForBECodecs</key>
-			<true/>
-			<key>EnableRTCPExtendedReports</key>
-			<false/>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-			<key>InactivityTimerRTCPSeconds</key>
-			<integer>36000</integer>
-			<key>ModeSetAMRWB</key>
-			<string>0,1,2</string>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-			<key>UseSDPTemplateForAllInvites</key>
-			<false/>
-			<key>OriginUsername</key>
-			<string></string>
-			<key>AllowHoldMusic</key>
-			<true/>
-			<key>ModeSetAMRNB</key>
-			<string>7</string>
-			<key>IncludeSDPMaxRed</key>
-			<true/>
-		</dict>
-		<key>Signaling</key>
-		<dict>
-			<key>EnableLastAccessNetworkInfo</key>
-			<false/>
-			<key>AdditionalContactParams</key>
-			<dict>
-				<key>REGISTER,INVITE,INVITE:*</key>
-				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
-			</dict>
-			<key>TriggerCSFBOnSDPError</key>
-			<true/>
-			<key>AlwaysAddSipInstance</key>
-			<true/>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>CSFBOnAccessBarred</key>
-			<false/>
-			<key>UseFakeSAsForDeregistration</key>
-			<true/>
-			<key>ForbiddenRegistrationErrorCodes</key>
-			<string></string>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>UseOutgoingSipUri</key>
-			<true/>
-			<key>strictCallFlows</key>
-			<true/>
-			<key>AlwaysUnsubscribeFromRegEvents</key>
-			<true/>
-			<key>AllowResponsesOverDifferentTransport</key>
-			<true/>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string>3XX,4XX,5XX,6XX</string>
-			<key>AlwaysSendSessionProgress</key>
-			<true/>
-			<key>RingbackTimerSeconds</key>
-			<integer>40</integer>
-			<key>SendPreferredServiceInInvite</key>
-			<true/>
-			<key>CountryOfOriginationFormat</key>
-			<string>PANI</string>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
-			<key>Preconditions</key>
-			<string>None</string>
-			<key>UseIPSec</key>
-			<true/>
-			<key>RingingTimerSeconds</key>
-			<integer>45</integer>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>supported</key>
-			<false/>
-		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>SendConferenceSubscribeInNewDialog</key>
-			<true/>
-			<key>SendConferenceSubscribeAfterRefers</key>
-			<true/>
-			<key>AlwaysSubscribeToConferenceEvents</key>
-			<false/>
-			<key>conferenceServer</key>
-			<string>sip:ALU_CONF@ims.attmex.mx</string>
-		</dict>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
-		</dict>
-		<key>Voice</key>
-		<dict>
-			<key>EnableVolteByDefault</key>
-			<true/>
-		</dict>
-	</dict>
-	<key>OverrideOperatorWiFiName</key>
-	<string>AT&amp;T Wi-Fi</string>
-	<key>DerPriFileName</key>
-	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>CarrierEntitlements</key>
-	<dict>
-		<key>SupportsOnDevicePhysicalSIMConvert</key>
-		<true/>
-		<key>SupportSecureIntent</key>
-		<true/>
-		<key>ProtocolVersion</key>
-		<string>2</string>
-		<key>SupportedEntitlements</key>
-		<integer>9233</integer>
-		<key>Authentication</key>
-		<dict>
-			<key>Type</key>
-			<integer>1</integer>
-			<key>Username</key>
-			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
-		</dict>
-		<key>SupportCrossPlatformSIMTransfer</key>
-		<true/>
-		<key>ServerAddress</key>
-		<string>https://aes.ims.attmex.mx/entitlement/</string>
-		<key>SupportedActions</key>
-		<array>
-			<string>TransferSIMService</string>
-		</array>
-		<key>UpdatePeriod</key>
-		<integer>24</integer>
-		<key>SupportPhysicalSIMtoESIMTransfer</key>
-		<true/>
-	</dict>
-	<key>Show4GSwitchWith5G</key>
-	<false/>
-	<key>AttachAPN</key>
-	<dict>
-		<key>3GPP</key>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>PcscfAddressRequired</key>
-			<false/>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>web.attmex.mx</string>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
-		</dict>
-	</dict>
-	<key>SupportsImsCapability</key>
-	<true/>
 	<key>PhoneAccountTransfer</key>
 	<dict>
 		<key>LocalInstallSMDPURL</key>
@@ -310,122 +151,9 @@
 			</array>
 		</dict>
 	</dict>
-	<key>ShowVolteSwitch</key>
-	<true/>
-	<key>RemoteCardProvisioningSettings</key>
-	<dict>
-		<key>MatchingICCIDPrefixes</key>
-		<array>
-			<string>895205</string>
-		</array>
-		<key>CellularTrialPlan</key>
-		<dict>
-			<key>TrialEndPeriod</key>
-			<string>2018-09-15T13:59:00Z</string>
-			<key>TrialPlanType</key>
-			<string>Promotion</string>
-			<key>SupportsTrialPlan</key>
-			<true/>
-			<key>TrialStartPeriod</key>
-			<string>2018-04-01T00:00:00Z</string>
-		</dict>
-		<key>ServerURL</key>
-		<string>ius.prod.ondemandconnectivity.com</string>
-		<key>ActivatingStateSubscriptionCheckTimerIntervals</key>
-		<array>
-			<integer>1800</integer>
-			<integer>3600</integer>
-			<integer>5400</integer>
-		</array>
-		<key>MinCompatibleWatchOS</key>
-		<string>4.3</string>
-		<key>SupportedSKUs</key>
-		<array>
-			<string>SKU_NA</string>
-		</array>
-		<key>ProvisioningMethod</key>
-		<string>CarrierFlow</string>
-		<key>SupportsFauxCard</key>
-		<false/>
-	</dict>
-	<key>PushSettings</key>
-	<dict>
-		<key>MultiSIMTopic</key>
-		<string>com.attmx.ent.multi-sim</string>
-		<key>CellularPlanTransferTopic</key>
-		<string>com.attmx.ent.iphone-transfer</string>
-	</dict>
-	<key>apns</key>
+	<key>_Exclude</key>
 	<array>
-		<dict>
-			<key>type-mask</key>
-			<integer>32769</integer>
-			<key>password</key>
-			<string></string>
-			<key>apn</key>
-			<string>web.attmex.mx</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
-			<key>username</key>
-			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>mms.attmex.mx</string>
-			<key>type-mask</key>
-			<integer>4</integer>
-		</dict>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>modem.attmex.mx</string>
-			<key>UseNetworkMTU</key>
-			<true/>
-			<key>type-mask</key>
-			<integer>48</integer>
-		</dict>
-		<dict>
-			<key>type-mask</key>
-			<integer>131072</integer>
-			<key>password</key>
-			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>NoCellularReconnectCauseCodes</key>
-			<array>
-				<dict>
-					<key>CauseCodes</key>
-					<array>
-						<integer>27</integer>
-					</array>
-					<key>RecoversOnAirplaneMode</key>
-					<true/>
-					<key>NumTriesAllowed</key>
-					<integer>1</integer>
-					<key>Type</key>
-					<string>3GPP</string>
-				</dict>
-			</array>
-			<key>SupportSwitchOver</key>
-			<true/>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>ims</string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
-		</dict>
+		<string>EnableLTEAfterUpgrade</string>
 	</array>
 </dict>
 </plist>

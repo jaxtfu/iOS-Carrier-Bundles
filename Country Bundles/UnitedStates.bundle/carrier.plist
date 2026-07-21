@@ -261,6 +261,32 @@
 		</dict>
 		<key>MinimumDeviceCategorySupported</key>
 		<integer>10</integer>
+		<key>SupportsWEAMaps</key>
+		<true/>
+		<key>WeaEnrichment</key>
+		<dict>
+			<key>MessageIDParameters3GPP</key>
+			<array>
+				<dict>
+					<key>FromServiceID</key>
+					<integer>4370</integer>
+					<key>ToServiceID</key>
+					<integer>4378</integer>
+				</dict>
+				<dict>
+					<key>FromServiceID</key>
+					<integer>4383</integer>
+					<key>ToServiceID</key>
+					<integer>4391</integer>
+				</dict>
+				<dict>
+					<key>FromServiceID</key>
+					<integer>4396</integer>
+					<key>ToServiceID</key>
+					<integer>4397</integer>
+				</dict>
+			</array>
+		</dict>
 	</dict>
 	<key>ShowVolteSwitch</key>
 	<true/>
@@ -283,6 +309,15 @@
 		<string>316</string>
 		<string>com.apple.UnitedStates</string>
 	</array>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsRTT</key>
+		<true/>
+		<key>SupportsEmergencyRTT</key>
+		<true/>
+		<key>SupportsTTY</key>
+		<true/>
+	</dict>
 	<key>IMSConfig</key>
 	<dict>
 		<key>Emergency</key>

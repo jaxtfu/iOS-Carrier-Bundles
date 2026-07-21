@@ -19,13 +19,10 @@
 	<true/>
 	<key>APNEditabilityTypemask</key>
 	<integer>0</integer>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -45,10 +42,26 @@
 	<dict>
 		<key>Media</key>
 		<dict>
-			<key>RingbackTone</key>
-			<string>CEPT</string>
 			<key>InactivityTimerRTPSeconds</key>
 			<integer>20</integer>
+			<key>RingbackTone</key>
+			<string>CEPT</string>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+			</dict>
 			<key>IncludeSDPMaxRed</key>
 			<true/>
 			<key>IncludeSDPModeChangeCapability</key>
@@ -94,6 +107,11 @@
 			<key>UseIPSec</key>
 			<true/>
 		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
 		<key>ConferenceCalling</key>
 		<dict>
 			<key>AlwaysSubscribeToConferenceEvents</key>
@@ -108,8 +126,6 @@
 				<key>LTE</key>
 				<true/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>Voice</key>
 		<dict>
@@ -127,8 +143,6 @@
 	<string>A1 BY</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Belarus</string>
 	<key>MMS</key>
@@ -147,34 +161,30 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>49</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>internet</string>
+			<key>type-mask</key>
+			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>4</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>mms</string>
+			<key>type-mask</key>
+			<integer>4</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>

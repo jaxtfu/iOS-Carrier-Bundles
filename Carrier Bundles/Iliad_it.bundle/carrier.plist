@@ -26,14 +26,18 @@
 	<true/>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
+	<key>EnableLTEAfterUpgrade</key>
+	<true/>
 	<key>APNEditabilityTypemask</key>
 	<integer>0</integer>
 	<key>RegistrationOptInRequired</key>
 	<false/>
-	<key>VMSMFilterNumber</key>
-	<string>2050</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+393518995011</string>
+	<key>VMSMFilterNumber</key>
+	<string>2050</string>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
 		<key>MaxGreetingDuration</key>
@@ -119,8 +123,6 @@
 	<key>VisualVoicemailServiceName</key>
 	<string>IMAP</string>
 	<key>ShowVolteSwitch</key>
-	<false/>
-	<key>ShowTTY</key>
 	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>401</string>

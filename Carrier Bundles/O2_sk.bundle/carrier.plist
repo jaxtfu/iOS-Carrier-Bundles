@@ -10,13 +10,10 @@
 	<false/>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+421949999999</string>
 	<key>AllowedServicesTypeMaskOnInternet</key>
@@ -38,17 +35,130 @@
 	</array>
 	<key>IMSConfig</key>
 	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>ussdEnabled</key>
+			<true/>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>UseCIDUrlInPIDF</key>
+			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>AlwaysUnsubscribeFromRegEvents</key>
+			<false/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,6XX</string>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>180</integer>
+			<key>SendPreferredServiceInInvite</key>
+			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>BOTH</string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>UseIPSec</key>
+			<true/>
+			<key>RingingTimerSeconds</key>
+			<integer>180</integer>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SerializeParticipants</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc006.mcc231.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-wb</string>
+				</dict>
+			</dict>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCW</key>
+			<false/>
+			<key>BsfHost</key>
+			<string>bsf.ims.mnc006.mcc231.pub.3gppnetwork.org</string>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>SupportsCB</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>404,501,502,503,504</string>
+			<key>SupportsCLIR</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>supported</key>
+			<true/>
+			<key>SupportsCFErasure</key>
+			<false/>
+			<key>imsFeatureDependency</key>
+			<true/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
 		<key>Voice</key>
 		<dict>
 			<key>E911OverITechSupported</key>
 			<false/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+			<key>endNonEmergencyCalls</key>
+			<true/>
 			<key>RTTSupported</key>
 			<true/>
-		</dict>
-		<key>Signaling</key>
-		<dict>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
 		</dict>
 	</dict>
 	<key>OverrideOperatorWiFiName</key>
@@ -93,6 +203,8 @@
 	</array>
 	<key>CarrierName</key>
 	<string>O2 - SK</string>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>AttachAPN</key>
 	<dict>
 		<key>3GPP</key>
@@ -109,12 +221,8 @@
 			<integer>1</integer>
 		</dict>
 	</dict>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
 	<key>ShowVolteSwitch</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>VisualVoicemailServiceName</key>

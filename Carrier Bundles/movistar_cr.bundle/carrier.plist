@@ -41,11 +41,137 @@
 	<string>LIBERTY</string>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+50660020600</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>71204</string>
 	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>strictCallFlows</key>
+			<false/>
+			<key>UseCIDUrlInPIDF</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,-504,6XX</string>
+			<key>UseFakeSAsForDeregistration</key>
+			<false/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>30</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>30</integer>
+			<key>SendPreferredServiceInInvite</key>
+			<false/>
+			<key>ussdEnabled</key>
+			<true/>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>25</integer>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv2-MD5</string>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+			<key>TriggerCSFBOnSDPError</key>
+			<false/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<false/>
+			<key>SendReferToPeer</key>
+			<false/>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<false/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc${MNC}.mcc${MCC}.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>SMSBundleToVoice</key>
+			<true/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>GSM</key>
+				<false/>
+				<key>LTE</key>
+				<true/>
+				<key>UMTS</key>
+				<false/>
+			</dict>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>10</integer>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>br</key>
+					<string>24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPMaxRed</key>
+			<false/>
+			<key>EnableBandwidthSpecifiers</key>
+			<false/>
+		</dict>
+		<key>SIM</key>
+		<dict>
+			<key>IgnoreISIM</key>
+			<true/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
+			<false/>
+			<key>E911OverIMSSupported</key>
+			<true/>
+			<key>E911OverCSIfNoIMSReg</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+			<key>endNonEmergencyCalls</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>ShowDialAssist</key>
+	<true/>
+	<key>Show3GSwitchWith4G</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>30019</string>
@@ -69,9 +195,11 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>ShowVolteSwitch</key>
+	<true/>
 	<key>SMSUseLocalTZ</key>
+	<true/>
+	<key>Show3GSwitchWithVolte</key>
 	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>600</string>
@@ -88,6 +216,18 @@
 			<string>internet.movistar.cr</string>
 			<key>type-mask</key>
 			<integer>49</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ims</string>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>OTASoftwareUpdate</key>

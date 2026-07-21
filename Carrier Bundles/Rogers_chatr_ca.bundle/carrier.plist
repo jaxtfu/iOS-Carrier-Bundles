@@ -4,16 +4,23 @@
 <dict>
 	<key>MaxBluetoothModemConnections</key>
 	<integer>5</integer>
-	<key>OTASoftwareUpdate</key>
-	<dict/>
+	<key>SuppressSimToolkitSendShortMessageNotifications</key>
+	<true/>
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.chatrwireless.com</string>
+	<string>https://www.chatrwireless.com</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
+	<key>SMSSettings</key>
+	<dict>
+		<key>SMSCarrierReportJunkAddress</key>
+		<string>7727</string>
+	</dict>
 	<key>MyAccountURLTitle</key>
 	<string>chatr Page</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StockSymboli</key>
 	<array>
 		<dict>
@@ -34,19 +41,200 @@
 		<key>A5/3</key>
 		<true/>
 	</dict>
-	<key>StatusBarImages</key>
-	<array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
 		<dict>
-			<key>AllowPrefixMatching</key>
+			<key>IgnoreRegNotificationContactExpires</key>
+			<true/>
+			<key>AddEmergencyContactParamInInvite</key>
+			<true/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>INVITE[911]</key>
+				<array>
+					<string>sos</string>
+				</array>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>LocalQoSTimeoutMOSeconds</key>
+			<integer>5000</integer>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>UseCIDUrlInPIDF</key>
+			<true/>
+			<key>AccessNetworkRefreshMethod</key>
+			<string>INVITE</string>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>EmergencyLocationLookupRequired</key>
 			<false/>
-			<key>CarrierName</key>
-			<string>chatr</string>
-			<key>StatusBarCarrierName</key>
-			<string>chatr</string>
+			<key>UseFakeSAsForDeregistration</key>
+			<true/>
+			<key>AccessNetworkRefreshDelayMilliseconds</key>
+			<integer>30000</integer>
+			<key>SipTimers</key>
+			<dict>
+				<key>InviteResponseTimeout</key>
+				<integer>5000</integer>
+			</dict>
+			<key>AdditionalHeaders</key>
+			<dict>
+				<key>INVITE[wifi,911]</key>
+				<array>
+					<string>Priority: emergency</string>
+				</array>
+			</dict>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<integer>25</integer>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>AlwaysEmergencyRegister</key>
+			<false/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>380,414,499,606</string>
+			<key>MaxUdpMessageSize</key>
+			<integer>1200</integer>
+			<key>StartLocalQosTimerOnSessionProgress</key>
+			<true/>
+			<key>IgnoresIntlDataRoaming</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>0</integer>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>15</integer>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>VerstatFeatureCapability</key>
+			<string>Enabled</string>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>RequireQoSBeforeRinging</key>
+			<true/>
+			<key>ClearRegistrationCallIdOnDeinitialization</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
 		</dict>
-	</array>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc720.mcc302.3gppnetwork.org</string>
+		</dict>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>SupportsCW</key>
+			<false/>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>supported</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>MaxRedundancy</key>
+			<integer>220</integer>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>30</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>2</string>
+					<key>br</key>
+					<string>13.2-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>UseRTPDetectionAutoStart</key>
+			<true/>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>ModeSetAMRWB</key>
+			<string>0,1,2</string>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>EnableIncomingDTMF</key>
+			<true/>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverCSIfNoIMSReg</key>
+			<false/>
+			<key>E911SearchTimer</key>
+			<integer>1</integer>
+			<key>CheckIMSPrefForEmergency</key>
+			<false/>
+			<key>CellularE911SearchTimeout</key>
+			<integer>10</integer>
+			<key>EnableVolteByDefault</key>
+			<true/>
+			<key>tLte911Timer</key>
+			<integer>180</integer>
+		</dict>
+	</dict>
 	<key>ShowDialAssist</key>
 	<true/>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>SupportedEntitlements</key>
+		<integer>4194305</integer>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>ServerAddress</key>
+		<string>https://dmsa.egslb.net.rogers.com:8181/ium-OEMInterface/servlet/IUMServlet</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>SupportedAuthorizationTokens</key>
+		<integer>2</integer>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+	</dict>
 	<key>RCS</key>
 	<dict>
 		<key>EnableBusinessMessagingByDefault</key>
@@ -63,6 +251,39 @@
 		<key>EnableRCSByDefault</key>
 		<true/>
 	</dict>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>49988</string>
+	<key>StatusBarImages</key>
+	<array>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>chatr</string>
+			<key>StatusBarCarrierName</key>
+			<string>chatr</string>
+		</dict>
+	</array>
+	<key>CarrierName</key>
+	<string>chatr</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>chatrweb.apn</string>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>302720_ID-8930272040194</string>
@@ -74,35 +295,13 @@
 		<string>302320_ID-89302320100</string>
 		<string>302320_ID-89302320900</string>
 	</array>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>49988</string>
-	<key>CarrierName</key>
-	<string>chatr</string>
-	<key>AttachAPN</key>
-	<dict>
-		<key>3GPP</key>
-		<dict>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>1</integer>
-			<key>password</key>
-			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
-			<key>PcscfAddressRequired</key>
-			<false/>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>chatrweb.apn</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-		</dict>
-	</dict>
-	<key>SupportsUserBusyCauseCode</key>
-	<true/>
-	<key>ShowTTY</key>
+	<key>ShowVolteSwitch</key>
 	<false/>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>SMSUseLocalTZ</key>
+	<true/>
+	<key>SupportsUserBusyCauseCode</key>
 	<true/>
 	<key>CellBroadcast</key>
 	<dict>
@@ -186,15 +385,17 @@
 	<true/>
 	<key>Show3GSwitch</key>
 	<false/>
+	<key>SupportedPLMNs</key>
+	<array>
+		<string>302720</string>
+	</array>
 	<key>apns</key>
 	<array>
 		<dict>
 			<key>type-mask</key>
-			<integer>5</integer>
+			<integer>32773</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>enableXLAT464</key>
 			<true/>
 			<key>AllowedProtocolMaskInRoaming</key>
@@ -207,41 +408,78 @@
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>48</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
-			<string>chatrisp.apn</string>
+			<string>netsvcs</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>type-mask</key>
-			<integer>4</integer>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
+			<key>NoCellularReconnectCauseCodes</key>
+			<array>
+				<dict>
+					<key>CauseCodes</key>
+					<array>
+						<integer>29</integer>
+					</array>
+					<key>RecoversOnAirplaneMode</key>
+					<true/>
+					<key>NumTriesAllowed</key>
+					<integer>1</integer>
+					<key>Type</key>
+					<string>3GPP</string>
+				</dict>
+			</array>
 			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
+			<integer>2</integer>
+			<key>SupportSwitchOver</key>
+			<true/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
-			<string>chatrweb.apn</string>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>2</integer>
+			<key>apn</key>
+			<string>sos</string>
+			<key>type-mask</key>
+			<integer>262144</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
+			<key>apn</key>
+			<string>chatrisp.apn</string>
+			<key>type-mask</key>
+			<integer>48</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
-	</array>
-	<key>SupportedPLMNs</key>
-	<array>
-		<string>302720</string>
 	</array>
 </dict>
 </plist>

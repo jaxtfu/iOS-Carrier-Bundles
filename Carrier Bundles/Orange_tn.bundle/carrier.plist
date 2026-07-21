@@ -50,12 +50,10 @@
 	<dict>
 		<key>3GPP</key>
 		<dict>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 			<key>password</key>
 			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 			<key>enableXLAT464</key>
 			<true/>
 			<key>PcscfAddressRequired</key>
@@ -66,14 +64,14 @@
 			<integer>3</integer>
 			<key>apn</key>
 			<string>weborange</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
 			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -146,8 +144,6 @@
 			<integer>49</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>enableXLAT464</key>
 			<true/>
 			<key>AllowedProtocolMaskInRoaming</key>
@@ -174,8 +170,6 @@
 			<integer>48</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>enableXLAT464</key>
 			<true/>
 			<key>AllowedProtocolMaskInRoaming</key>

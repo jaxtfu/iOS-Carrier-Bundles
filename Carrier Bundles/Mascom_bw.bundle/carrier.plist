@@ -4,10 +4,6 @@
 <dict>
 	<key>Show3GSwitchWith4G</key>
 	<true/>
-	<key>RoamingVoicemailPilotNumber</key>
-	<string>+26771123123</string>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -27,6 +23,10 @@
 			<string>Mascom</string>
 		</dict>
 	</array>
+	<key>RoamingVoicemailPilotNumber</key>
+	<string>+26771123123</string>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>65201</string>
@@ -50,8 +50,6 @@
 	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>123</string>
 	<key>apns</key>

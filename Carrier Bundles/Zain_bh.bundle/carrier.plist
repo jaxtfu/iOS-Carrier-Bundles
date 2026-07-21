@@ -2,75 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
-	<key>Services</key>
-	<array>
-		<dict>
-			<key>ServiceCode</key>
-			<string>*555#</string>
-			<key>ServiceName</key>
-			<string>Services</string>
-		</dict>
-	</array>
-	<key>SupportsNITZ</key>
-	<false/>
-	<key>MyAccountURL</key>
-	<string>http://www.bh.zain.com</string>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
-	<key>EnableLTEAfterUpgrade</key>
-	<true/>
-	<key>RegistrationOptInRequired</key>
-	<true/>
-	<key>MyAccountURLTitle</key>
-	<string>Zain Bahrain</string>
-	<key>RoamingVoicemailPilotNumber</key>
-	<string>+97336117117</string>
-	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32768</integer>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<false/>
-	</dict>
-	<key>StatusBarImages</key>
-	<array>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>zain BH</string>
-			<key>StatusBarCarrierName</key>
-			<string>Zain BH</string>
-		</dict>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>Zain BH</string>
-			<key>StatusBarCarrierName</key>
-			<string>Zain BH</string>
-		</dict>
-	</array>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>42602</string>
-	</array>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Signaling</key>
-		<dict>
-			<key>ussdEnabled</key>
-			<true/>
-		</dict>
-	</dict>
 	<key>CarrierEntitlements</key>
 	<dict>
-		<key>SupportsOnDevicePhysicalSIMConvert</key>
-		<true/>
 		<key>SupportedEntitlements</key>
-		<integer>31745</integer>
+		<integer>23553</integer>
 		<key>ProtocolVersion</key>
 		<string>2</string>
 		<key>Authentication</key>
@@ -80,26 +15,58 @@
 			<key>Username</key>
 			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
 		</dict>
+		<key>ExtraEndPoints</key>
+		<array>
+			<dict>
+				<key>SupportsOnDevicePhysicalSIMConvert</key>
+				<true/>
+				<key>SupportSecureIntent</key>
+				<true/>
+				<key>SupportedEntitlements</key>
+				<integer>8192</integer>
+				<key>ProtocolVersion</key>
+				<string>2</string>
+				<key>ServerAddress</key>
+				<string>https://ios.es2.bh.zain.com</string>
+				<key>SupportPhysicalSIMtoESIMTransfer</key>
+				<true/>
+				<key>UpdatePeriod</key>
+				<integer>24</integer>
+				<key>SupportedActions</key>
+				<array>
+					<string>TransferSIMService</string>
+				</array>
+			</dict>
+		</array>
 		<key>ServerAddress</key>
 		<string>https://es.bh.zain.com</string>
-		<key>SupportPhysicalSIMtoESIMTransfer</key>
-		<true/>
-		<key>UpdatePeriod</key>
-		<integer>24</integer>
 		<key>SupportedActions</key>
 		<array>
 			<string>AuthenticateTrustFlag</string>
-			<string>TransferSIMService</string>
+			<string>CompanionSIMTransfer</string>
+		</array>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+	</dict>
+	<key>EmergencyCalling</key>
+	<dict>
+		<key>EmergencyNumbers</key>
+		<array>
+			<dict>
+				<key>Category</key>
+				<integer>0</integer>
+				<key>PreferredEmergencyNumber</key>
+				<true/>
+				<key>Number</key>
+				<string>999</string>
+			</dict>
 		</array>
 	</dict>
-	<key>Show3GSwitchWith4G</key>
-	<true/>
-	<key>ShowDialAssist</key>
-	<true/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>+447786205094</string>
-	<key>CarrierName</key>
-	<string>Zain BH</string>
+	<key>OTASoftwareUpdate</key>
+	<dict>
+		<key>SoftwareUpdateOptInRequired</key>
+		<true/>
+	</dict>
 	<key>AttachAPN</key>
 	<dict>
 		<key>3GPP</key>
@@ -116,46 +83,49 @@
 			<integer>1</integer>
 		</dict>
 	</dict>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
 	<key>PhoneAccountTransfer</key>
 	<dict>
 		<key>LocalInstallSMDPURL</key>
-		<string></string>
-		<key>TransferPageURL</key>
-		<string>https://ws.bh.zain.com:3161/websheet/esim/transferIosPrimaryEsimAuthenticationFailError</string>
-	</dict>
-	<key>ShowTTY</key>
-	<false/>
-	<key>AllowsVoIP</key>
-	<true/>
-	<key>EmergencyCalling</key>
-	<dict>
-		<key>EmergencyNumbers</key>
-		<array>
+		<string>https://zain.prod.ondemandconnectivity.com</string>
+		<key>TransferErrorCodes</key>
+		<dict>
+			<key>CarrierDefaultErrors</key>
+			<array>
+				<string>5003</string>
+			</array>
+			<key>BillingErrors</key>
+			<array>
+				<string>5009</string>
+			</array>
+			<key>IneligibleAccountErrors</key>
+			<array>
+				<string>5023</string>
+			</array>
+			<key>SuccessfulTransferWithDelayedActivationErrors</key>
 			<dict>
-				<key>Category</key>
-				<integer>0</integer>
-				<key>PreferredEmergencyNumber</key>
-				<true/>
-				<key>Number</key>
-				<string>999</string>
+				<key>Item 1</key>
+				<string>5023</string>
 			</dict>
-		</array>
-	</dict>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.Bahrain</string>
-	<key>MMS</key>
-	<dict>
-		<key>MMSC</key>
-		<string>http://172.18.83.129:80/</string>
-		<key>GroupModeEnabled</key>
+			<key>MaintenanceErrors</key>
+			<array>
+				<string>5021</string>
+			</array>
+			<key>BlockedAccountErrors</key>
+			<array>
+				<string>5039</string>
+			</array>
+		</dict>
+		<key>MinCompatibleOS</key>
+		<string>27.0</string>
+		<key>SupportsFallbackToLegacyFlow</key>
 		<false/>
-		<key>Proxy</key>
-		<string>172.18.85.34:80</string>
-		<key>MaxMessageSize</key>
-		<integer>512000</integer>
 	</dict>
+	<key>VoicemailPilotNumber</key>
+	<string>81117</string>
+	<key>RegistrationOptInRequired</key>
+	<true/>
+	<key>SupportsNITZ</key>
+	<false/>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>MatchingICCIDPrefixes</key>
@@ -192,15 +162,29 @@
 			<string>SKU_EU</string>
 		</array>
 	</dict>
-	<key>VoicemailPilotNumber</key>
-	<string>81117</string>
-	<key>PushSettings</key>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>ShowDialAssist</key>
+	<true/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>+447786205094</string>
+	<key>Show3GSwitchWith4G</key>
+	<false/>
+	<key>MMS</key>
 	<dict>
-		<key>MultiSIMTopic</key>
-		<string>bh.com.zain.es.multisim</string>
-		<key>SAWatchTopic</key>
-		<string>bh.com.zain.es.multisim</string>
+		<key>MMSC</key>
+		<string>http://172.18.83.129:80/</string>
+		<key>GroupModeEnabled</key>
+		<false/>
+		<key>Proxy</key>
+		<string>172.18.85.34:80</string>
+		<key>MaxMessageSize</key>
+		<integer>512000</integer>
 	</dict>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.Bahrain</string>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -211,7 +195,7 @@
 			<key>apn</key>
 			<string>internet</string>
 			<key>type-mask</key>
-			<integer>49</integer>
+			<integer>32817</integer>
 		</dict>
 		<dict>
 			<key>password</key>
@@ -223,11 +207,280 @@
 			<key>type-mask</key>
 			<integer>4</integer>
 		</dict>
+		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>password</key>
+			<string></string>
+			<key>AllowNoDNS</key>
+			<integer>1</integer>
+			<key>NoCellularReconnectCauseCodes</key>
+			<array>
+				<dict>
+					<key>CauseCodes</key>
+					<array>
+						<integer>55</integer>
+					</array>
+					<key>RecoversOnAirplaneMode</key>
+					<true/>
+					<key>NumTriesAllowed</key>
+					<integer>100</integer>
+					<key>Type</key>
+					<string>3GPP</string>
+					<key>Timeout</key>
+					<integer>86400</integer>
+				</dict>
+			</array>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>hos</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
+		</dict>
 	</array>
-	<key>OTASoftwareUpdate</key>
+	<key>IMSConfig</key>
 	<dict>
-		<key>SoftwareUpdateOptInRequired</key>
-		<true/>
+		<key>Media</key>
+		<dict>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>112</key>
+				<dict>
+					<key>max-red</key>
+					<string>220</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>octet-align</key>
+					<string>1</string>
+					<key>ch-aw-recv</key>
+					<string>0</string>
+					<key>maxptime</key>
+					<string>240</string>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>ModeSetAMRWB</key>
+			<string>0,1,2</string>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>RTCPIntervalSeconds</key>
+			<string>5</string>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>IgnoreRegNotificationContactExpires</key>
+			<true/>
+			<key>AllowedPdpTypeMask</key>
+			<integer>1</integer>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>ussdEnabled</key>
+			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>OutgoingDomain</key>
+			<string>1</string>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<string>21</string>
+			<key>AdditionalHeaders</key>
+			<dict>
+				<key>INVITE,INVITE:*</key>
+				<string>Feature-Caps: *;+g.3gpp.srvcc-alerting</string>
+			</dict>
+			<key>AlwaysUnsubscribeFromRegEvents</key>
+			<false/>
+			<key>SendLocalTimeZoneInformation</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,5XX,6XX</string>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>DropRegistrationOnSRVCC</key>
+			<true/>
+			<key>SubscriptionTerminatedMeansRegistrationTerminated</key>
+			<true/>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>DeregistrationWaitTimeoutMilliseconds</key>
+			<integer>12000</integer>
+			<key>RingbackTimerSeconds</key>
+			<integer>120</integer>
+			<key>AlwaysAddPrivacyHeader</key>
+			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>NoAnswerFromUser</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>408</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+				<key>TemporaryUnavailable</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>480</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteRequestCanceled</string>
+				</dict>
+			</dict>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<string>21</string>
+			<key>RingingTimerSeconds</key>
+			<string>120</string>
+			<key>UseIPSec</key>
+			<true/>
+			<key>RegistrationExpirationSeconds</key>
+			<string>7200</string>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>BsfHost</key>
+			<string>bsf.ims.mnc002.mcc426.pub.3gppnetwork.org</string>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>4xx,5xx</string>
+			<key>AllowedOnlyWhenIMSRegistered</key>
+			<true/>
+			<key>NafPort</key>
+			<integer>8090</integer>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>BsfPort</key>
+			<integer>8091</integer>
+			<key>supported</key>
+			<true/>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc002.mcc426.pub.3gppnetwork.org</string>
+			<key>SupportsCFErasure</key>
+			<false/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>TreatAllNotificationsAsPartial</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc002.mcc426.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<true/>
+			</dict>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
 	</dict>
+	<key>SMSSettings</key>
+	<dict>
+		<key>TransportFallback</key>
+		<false/>
+	</dict>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
+	<key>RoamingVoicemailPilotNumber</key>
+	<string>+97336117117</string>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>PushSettings</key>
+	<dict>
+		<key>MultiSIMTopic</key>
+		<string>bh.com.zain.es.multisim</string>
+		<key>SAWatchTopic</key>
+		<string>bh.com.zain.es.multisim</string>
+	</dict>
+	<key>Services</key>
+	<array>
+		<dict>
+			<key>ServiceCode</key>
+			<string>*555#</string>
+			<key>ServiceName</key>
+			<string>Services</string>
+		</dict>
+	</array>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
+	<key>EnableLTEAfterUpgrade</key>
+	<true/>
+	<key>StatusBarImages</key>
+	<array>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>zain BH</string>
+			<key>StatusBarCarrierName</key>
+			<string>Zain BH</string>
+		</dict>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>Zain BH</string>
+			<key>StatusBarCarrierName</key>
+			<string>Zain BH</string>
+		</dict>
+	</array>
+	<key>AllowsVoIP</key>
+	<true/>
+	<key>CarrierName</key>
+	<string>Zain BH</string>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>MyAccountURL</key>
+	<string>https://www.bh.zain.com</string>
+	<key>MyAccountURLTitle</key>
+	<string>Zain Bahrain</string>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>42602</string>
+	</array>
 </dict>
 </plist>

@@ -20,7 +20,7 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://ouimovil.com/</string>
+	<string>https://ouimovil.com/</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>APNEditabilityTypemask</key>
@@ -47,15 +47,25 @@
 		<key>A5/3</key>
 		<true/>
 	</dict>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>ShowDialAssist</key>
+	<true/>
+	<key>Show3GSwitchWith4G</key>
 	<true/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>334020_GID1-ffffffffffffff4f5549</string>
 		<string>334020_GID2-ffffffffffffff4f5549</string>
 	</array>
-	<key>Show3GSwitchWith4G</key>
-	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<array>
 		<string>50052</string>
@@ -80,8 +90,8 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>*96</string>
 	<key>HomeBundleIdentifier</key>

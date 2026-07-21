@@ -2,12 +2,47 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>DerPriFileVersion</key>
+	<string>6.0.161</string>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
+	<key>Show5GStandaloneSwitch</key>
+	<true/>
+	<key>Enable5GStandaloneByDefault</key>
+	<true/>
+	<key>EnableWiFiN1ModeOnlyWhenSAEnabled</key>
+	<true/>
+	<key>Show5GSwitch</key>
+	<true/>
+	<key>EnableVoNRByDefault</key>
+	<true/>
+	<key>ShowHighDataModeSwitch</key>
+	<true/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>SMS</key>
+		<dict>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>NR</key>
+				<true/>
+			</dict>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVoNRByDefault</key>
+			<true/>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>ResetSocketWhenInSameCellularRat</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportedEntitlements</key>
 		<integer>4205777</integer>
-		<key>ProtocolVersion</key>
-		<string>2</string>
 		<key>SupportPhysicalSIMtoESIMTransfer</key>
 		<true/>
 		<key>SupportsOnDevicePhysicalSIMConvert</key>
@@ -17,11 +52,9 @@
 		<key>SupportCrossPlatformSIMTransfer</key>
 		<true/>
 	</dict>
+	<key>DerPriFileName</key>
+	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>AllowSAOnWiFiAssociation</key>
-	<true/>
-	<key>Enable5GStandaloneByDefault</key>
-	<true/>
-	<key>Show5GSwitch</key>
 	<true/>
 	<key>AttachAPN</key>
 	<dict>
@@ -29,25 +62,15 @@
 		<dict>
 			<key>AllowedProtocolMaskInRoamingLTE</key>
 			<integer>1</integer>
-			<key>password</key>
-			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>2</integer>
 			<key>enableXLAT464</key>
 			<true/>
-			<key>PcscfAddressRequired</key>
-			<false/>
-			<key>username</key>
-			<string></string>
 			<key>AllowedProtocolMaskInRoamingUMTS</key>
 			<integer>1</integer>
-			<key>apn</key>
-			<string>pda2.bell.ca</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
 		</dict>
 	</dict>
-	<key>SupportsVolteCapability</key>
+	<key>ShowVoNRWarningUnsupportedCarrier</key>
 	<true/>
 	<key>PhoneAccountTransfer</key>
 	<dict>
@@ -56,175 +79,19 @@
 		<key>RequiresPasscodeForCrossPlatformTransfer</key>
 		<true/>
 	</dict>
+	<key>DataIndicatorOverrideForNRMmwave</key>
+	<string>NRPlus</string>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
+	<key>ShowVoNRSwitch</key>
+	<true/>
 	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
-	<key>RemoteCardProvisioningSettings</key>
+	<key>PushSettings</key>
 	<dict>
-		<key>MatchingICCIDPrefixes</key>
-		<array>
-			<string>89302610</string>
-		</array>
-		<key>UsesAutoAssignment</key>
-		<true/>
-		<key>ServerURL</key>
-		<string>https://bmc.prod.ondemandconnectivity.com</string>
-		<key>SupportedSKUs</key>
-		<array>
-			<string>SKU_NA</string>
-		</array>
-		<key>SupportsFauxCard</key>
-		<false/>
-		<key>MinCompatibleWatchOSForStandaloneMode</key>
-		<string>7.2</string>
-		<key>ProvisioningMethod</key>
-		<string>CarrierFlow</string>
+		<key>CellularPlanTransferTopic</key>
+		<string>ca.bell.iphone-plan-transfer</string>
 	</dict>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Show5GStandaloneSwitch</key>
-	<true/>
-	<key>Show4GSwitch</key>
-	<true/>
-	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
-	<key>OverrideOperatorWiFiName</key>
-	<string>Bell Wi-Fi</string>
-	<key>TechSettings</key>
-	<dict>
-		<key>ChildSAs</key>
-		<dict>
-			<key>FirstChild</key>
-			<dict>
-				<key>ChildProposals</key>
-				<array>
-					<dict>
-						<key>IntegrityAlgorithm</key>
-						<array>
-							<string>SHA1-96</string>
-						</array>
-						<key>EncryptionAlgorithm</key>
-						<array>
-							<string>AES-256</string>
-						</array>
-						<key>DHGroup</key>
-						<integer>14</integer>
-						<key>Lifetime</key>
-						<integer>86400</integer>
-					</dict>
-				</array>
-				<key>InstallPolicies</key>
-				<true/>
-				<key>ReplayWindowSize</key>
-				<integer>12</integer>
-			</dict>
-		</dict>
-		<key>iRatPolicies</key>
-		<dict>
-			<key>PreferredTechnology</key>
-			<string>cellular</string>
-			<key>PreferredTechnologyRoaming</key>
-			<string>wifi</string>
-		</dict>
-		<key>ExtraConfigurationAttributeRequestv6</key>
-		<array>
-			<dict>
-				<key>Identifier</key>
-				<integer>21</integer>
-				<key>Name</key>
-				<string>AssignedPCSCFIPv6</string>
-				<key>Type</key>
-				<string>IPv6Address</string>
-			</dict>
-		</array>
-		<key>WifiCallingAllowedInRoaming</key>
-		<false/>
-		<key>WiFiCallingControlsAlliWLanServices</key>
-		<true/>
-		<key>SupportContextSwitchOver</key>
-		<true/>
-		<key>5wiServiceMask</key>
-		<integer>3</integer>
-		<key>IKE</key>
-		<dict>
-			<key>Proposals</key>
-			<array>
-				<dict>
-					<key>EncryptionAlgorithm</key>
-					<string>AES-256</string>
-					<key>IntegrityAlgorithm</key>
-					<string>SHA2-256</string>
-					<key>DHGroup</key>
-					<integer>14</integer>
-					<key>AuthenticationMethod</key>
-					<string>None</string>
-					<key>Lifetime</key>
-					<integer>80000</integer>
-					<key>EAPMethod</key>
-					<string>EAP-AKA</string>
-					<key>PRFAlgorithm</key>
-					<string>SHA2-256</string>
-				</dict>
-			</array>
-			<key>DeadPeerDetectionEnabled</key>
-			<false/>
-			<key>DeadPeerDetectionMaxRetries</key>
-			<integer>4</integer>
-			<key>DeadPeerDetectionInterval</key>
-			<integer>600</integer>
-			<key>LocalIdentifier</key>
-			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
-			<key>NATTKeepAliveOffload</key>
-			<true/>
-			<key>ValidateRemoteCertificate</key>
-			<false/>
-			<key>RemoteAddress</key>
-			<string>epdg.epc.mnc610.mcc302.pub.3gppnetwork.org</string>
-			<key>DeadPeerDetectionRetryInterval</key>
-			<integer>10</integer>
-		</dict>
-		<key>AllowRoamingHandover</key>
-		<false/>
-		<key>ExtraConfigurationAttributeRequestv4</key>
-		<array>
-			<dict>
-				<key>Identifier</key>
-				<integer>20</integer>
-				<key>Name</key>
-				<string>AssignedPCSCFIPv4</string>
-				<key>Type</key>
-				<string>IPv4Address</string>
-			</dict>
-		</array>
-		<key>SetHandOverIPv6Prefix</key>
-		<true/>
-		<key>TechPolicies</key>
-		<array>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>1048582</integer>
-			</dict>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>131072</integer>
-			</dict>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>262144</integer>
-			</dict>
-		</array>
-		<key>SupportCallHandover</key>
-		<true/>
-	</dict>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
-	<key>ShowVolteSwitch</key>
-	<false/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -232,48 +99,42 @@
 			<integer>1081399</integer>
 			<key>password</key>
 			<string></string>
-			<key>apn</key>
-			<string>pda2.bell.ca</string>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
+			<key>UseNetworkMTU</key>
+			<true/>
 			<key>enableXLAT464</key>
 			<true/>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>1</integer>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
+			<key>apn</key>
+			<string>pda2.bell.ca</string>
 			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
 		</dict>
 		<dict>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048582</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>1</integer>
-			<key>username</key>
-			<string></string>
 			<key>apn</key>
 			<string>apps.bell.ca</string>
+			<key>username</key>
+			<string></string>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>type-mask</key>
 			<integer>131072</integer>
-			<key>Support5GSaHandOver</key>
-			<true/>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
+			<key>Support5GSaHandOver</key>
+			<true/>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>2</integer>
 			<key>SupportSwitchOver</key>
@@ -292,8 +153,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>262144</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>3</integer>
 			<key>username</key>
@@ -304,281 +163,7 @@
 			<integer>3</integer>
 		</dict>
 	</array>
-	<key>DataIndicatorOverrideForNRMmwave</key>
-	<string>NRPlus</string>
-	<key>SuppressSimToolkitSendShortMessageNotifications</key>
-	<true/>
-	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
-	<integer>131072</integer>
-	<key>SMSSettings</key>
-	<dict>
-		<key>SMSCarrierReportJunkAddress</key>
-		<string>4477261</string>
-	</dict>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Signaling</key>
-		<dict>
-			<key>RingbackTimerSeconds</key>
-			<integer>0</integer>
-			<key>EnableCellularNetworkInfo</key>
-			<true/>
-			<key>ImpuRank</key>
-			<string>IMSI@domain</string>
-			<key>ValidateSipMessageRecipient</key>
-			<false/>
-			<key>SipTimers</key>
-			<dict>
-				<key>InviteResponseTimeout</key>
-				<integer>5000</integer>
-			</dict>
-			<key>MaxUdpMessageSize</key>
-			<integer>1200</integer>
-			<key>IncomingCallEndReasons</key>
-			<dict>
-				<key>DeclineInUse</key>
-				<dict>
-					<key>ReasonHeaderText</key>
-					<string>Secondary device already in use</string>
-					<key>StatusCode</key>
-					<integer>603</integer>
-					<key>TerminationEvent</key>
-					<string>SecondaryDeviceInUse</string>
-				</dict>
-			</dict>
-			<key>ClearRegistrationCallIdOnDeinitialization</key>
-			<true/>
-			<key>CountryOfOriginationFormat</key>
-			<string>PANI</string>
-			<key>UseIPSec</key>
-			<true/>
-			<key>strictCallFlows</key>
-			<true/>
-			<key>BrandedCallingAssetServersAllowList</key>
-			<array>
-				<dict>
-					<key>Server</key>
-					<string>https://cdn-ca.ccid.neustar.biz</string>
-					<key>Certificate</key>
-					<string>lPraBjD+VHks5/sVEDOczhg00z9TGoGMAjndDyYGUNU=</string>
-				</dict>
-				<dict>
-					<key>Server</key>
-					<string>https://cdn-ca.ccid.transunion.ca</string>
-					<key>Certificate</key>
-					<string>lPraBjD+VHks5/sVEDOczhg00z9TGoGMAjndDyYGUNU=</string>
-				</dict>
-				<dict>
-					<key>Server</key>
-					<string>https://sb.i.hiya.com</string>
-					<key>Certificate</key>
-					<string>8kGWrpQHhmc0jwLo43RYo6bmqtHgsNxhARjM5yFCe/w=</string>
-				</dict>
-			</array>
-			<key>LocalQoSTimeoutMOSeconds</key>
-			<integer>5000</integer>
-			<key>EmergencyCallBackModeExpirationSeconds</key>
-			<integer>1</integer>
-			<key>VerstatFeatureCapability</key>
-			<string>Enabled</string>
-			<key>UseFakeSAsForDeregistration</key>
-			<true/>
-			<key>StartLocalQosTimerOnSessionProgress</key>
-			<true/>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string>403,408,480,488,500,504,600,606,503</string>
-			<key>SubscriptionTerminatedMeansRegistrationTerminated</key>
-			<true/>
-			<key>AlwaysAddSipInstance</key>
-			<true/>
-			<key>EnableBrandedCalling</key>
-			<true/>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>ResetSocketWhenNetworkChange</key>
-			<false/>
-			<key>TriggerCSFBOnSDPError</key>
-			<true/>
-			<key>AdditionalContactParams</key>
-			<dict>
-				<key>REGISTER,INVITE,INVITE:*</key>
-				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;</string>
-			</dict>
-			<key>BrandedCallingImageFetchingTimeoutMilliseconds</key>
-			<integer>2000</integer>
-			<key>ResetSocketWhenInSameCellularRat</key>
-			<false/>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
-			<key>Preconditions</key>
-			<string>Supported</string>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>ReRegisterOnErrorCodes</key>
-			<string>SUBSCRIBE:480</string>
-			<key>WaitForRingingTimerMOSeconds</key>
-			<integer>25</integer>
-			<key>WaitForRingingTimerMTSeconds</key>
-			<integer>15</integer>
-		</dict>
-		<key>SIM</key>
-		<dict>
-			<key>CarrierDomain</key>
-			<string>ims.bell.ca</string>
-			<key>impiFormat</key>
-			<string>imsi@carrierDomain</string>
-		</dict>
-		<key>EnableBrandedCallingByDefault</key>
-		<true/>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<false/>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>AlwaysSubscribeToConferenceEvents</key>
-			<true/>
-			<key>SendConferenceSubscribeInNewDialog</key>
-			<true/>
-			<key>conferenceServer</key>
-			<string>sip:conf@ims.bell.ca</string>
-		</dict>
-		<key>AllowHandoverWithoutIMSVoiceService</key>
-		<true/>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>SupportedDomains</key>
-			<dict>
-				<key>NR</key>
-				<true/>
-			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
-		</dict>
-		<key>ShowBrandedCallingSwitch</key>
-		<true/>
-		<key>XCAP</key>
-		<dict>
-			<key>NafHost</key>
-			<string>naf.ims.bell.ca</string>
-			<key>provisioningDependency</key>
-			<true/>
-			<key>BsfPort</key>
-			<integer>1080</integer>
-			<key>Auid</key>
-			<string>MyService/simservs.ngn.etsi.org</string>
-			<key>NafPort</key>
-			<integer>8090</integer>
-			<key>SupportsCLIR</key>
-			<false/>
-			<key>supported</key>
-			<true/>
-			<key>DisableOnNetworkError</key>
-			<true/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string>500</string>
-			<key>AllowedOnlyWhenIMSRegistered</key>
-			<true/>
-			<key>BsfHost</key>
-			<string>bsf.ims.bell.ca</string>
-			<key>SupportsCW</key>
-			<false/>
-		</dict>
-		<key>Media</key>
-		<dict>
-			<key>RTCPIntervalSeconds</key>
-			<integer>5</integer>
-			<key>IncludeSDPMaxRed</key>
-			<true/>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>109</key>
-				<dict>
-					<key>ch-aw-recv</key>
-					<string>2</string>
-					<key>br</key>
-					<string>13.2-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-				</dict>
-			</dict>
-			<key>MaxRedundancy</key>
-			<integer>220</integer>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>30</integer>
-			<key>EnableIncomingDTMF</key>
-			<true/>
-			<key>ModeSetAMRWB</key>
-			<string>0,1,2</string>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-		</dict>
-		<key>Voice</key>
-		<dict>
-			<key>EnableVolteByDefault</key>
-			<true/>
-			<key>E911OverITechSupported</key>
-			<false/>
-			<key>E911OverCSIfNoIMSReg</key>
-			<true/>
-			<key>CheckIMSPrefForEmergency</key>
-			<false/>
-			<key>CellularE911SearchTimeout</key>
-			<integer>11</integer>
-			<key>E911SearchTimer</key>
-			<integer>1</integer>
-			<key>DisableVolteSwitchOnIncompatibleState</key>
-			<true/>
-			<key>EnableVoNRByDefault</key>
-			<true/>
-			<key>tLte911Timer</key>
-			<integer>600</integer>
-		</dict>
-	</dict>
-	<key>ShowVoNRSwitch</key>
-	<true/>
-	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32768</integer>
-	<key>PushSettings</key>
-	<dict>
-		<key>Topic</key>
-		<string>ca.bell.volte</string>
-		<key>CellularPlanTransferTopic</key>
-		<string>ca.bell.iphone-plan-transfer</string>
-		<key>MultiSIMTopic</key>
-		<string>ca.bell.msservice</string>
-		<key>SAWatchTopic</key>
-		<string>ca.bell.saservice</string>
-		<key>VoWiFiTopic</key>
-		<string>ca.bell.vowifi</string>
-	</dict>
-	<key>EnableVoNRByDefault</key>
-	<true/>
-	<key>ShowVoNRWarningUnsupportedCarrier</key>
-	<true/>
-	<key>DerPriFileName</key>
-	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>SupportsImsCapability</key>
-	<true/>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
-	<key>ShowHighDataModeSwitch</key>
-	<true/>
-	<key>VoWiFiCustomerCareWebsite</key>
-	<string>http://mobilebrowser.bwanet.ca/GlobalRedirector/Redirector?application=VoWiFi&amp;ou=bell</string>
 	<key>SupportsVoNR</key>
-	<true/>
-	<key>VoLTECustomerCareWebsite</key>
-	<string>http://mobilebrowser.bwanet.ca/GlobalRedirector/Redirector?application=VoLTE&amp;ou=bell</string>
-	<key>Enable5GAutoByDefault</key>
 	<true/>
 </dict>
 </plist>

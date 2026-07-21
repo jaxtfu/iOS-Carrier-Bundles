@@ -129,14 +129,12 @@ Hjud2pQ=</string>
 			<key>configuration</key>
 			<array>
 				<dict>
-					<key>type-mask</key>
-					<integer>98353</integer>
-					<key>password</key>
-					<string></string>
 					<key>SuppressPdnTearDown</key>
 					<true/>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
+					<key>password</key>
+					<string></string>
+					<key>type-mask</key>
+					<integer>98353</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>username</key>
@@ -163,6 +161,14 @@ Hjud2pQ=</string>
 	</array>
 	<key>DataIndicatorOverrideForNRMmwave</key>
 	<string>NRUWB</string>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>TetheringPhoneNumber</key>
 	<string>1-833-224-6603</string>
 	<key>AllowedServicesTypeMaskOnInternet</key>

@@ -67,6 +67,14 @@
 	<string>Connect</string>
 	<key>AllowEDGEEditing</key>
 	<true/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>OTASoftwareUpdate</key>
 	<dict>
 		<key>SoftwareUpdateOptInRequired</key>

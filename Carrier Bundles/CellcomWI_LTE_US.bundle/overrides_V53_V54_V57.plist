@@ -2,430 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>DefaultWhenImsSwitchOff</key>
-	<integer>1</integer>
 	<key>DerPriFileVersion</key>
 	<string>0.1.162</string>
-	<key>CDMAInternationalRoaming</key>
-	<dict>
-		<key>EnabledByDefault</key>
-		<false/>
-	</dict>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
-	<key>MTU</key>
-	<array>
-		<dict>
-			<key>technology-mask</key>
-			<integer>28</integer>
-			<key>size</key>
-			<integer>1428</integer>
-		</dict>
-		<dict>
-			<key>technology-mask</key>
-			<integer>2</integer>
-			<key>size</key>
-			<integer>1472</integer>
-		</dict>
-	</array>
-	<key>EnableLTEAfterUpgrade</key>
-	<true/>
-	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
-	<integer>131072</integer>
 	<key>Show5GSwitch</key>
-	<true/>
-	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32768</integer>
-	<key>SMSSettings</key>
-	<dict>
-		<key>MessageFormat</key>
-		<dict>
-			<key>SignalingFormat</key>
-			<integer>1</integer>
-			<key>PacketFormat</key>
-			<integer>1</integer>
-		</dict>
-		<key>OutgoingSMSPrefix</key>
-		<dict>
-			<key>Local</key>
-			<string>+1</string>
-			<key>International</key>
-			<string>+011</string>
-		</dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
-	<key>ShowHighDataModeSwitch</key>
-	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Location</key>
-	<dict>
-		<key>EnableCPIDuringEmergencyMode</key>
-		<true/>
-		<key>EnableEarlyReturnDuringEmergencyMode</key>
-		<true/>
-		<key>AllowOTDOADuringEmergencyMode</key>
-		<true/>
-		<key>EmergencyLocation</key>
-		<dict>
-			<key>AugmentedEmergencyAction</key>
-			<dict>
-				<key>Supplemented911</key>
-				<dict>
-					<key>HTTPS</key>
-					<dict>
-						<key>URL</key>
-						<string>gateway.icloud.com/meridian/meridian/location</string>
-					</dict>
-				</dict>
-			</dict>
-		</dict>
-	</dict>
-	<key>CarrierEntitlements</key>
-	<dict>
-		<key>UpdatePeriod</key>
-		<integer>72</integer>
-		<key>SupportedEntitlements</key>
-		<integer>11481</integer>
-		<key>ProtocolVersion</key>
-		<string>2</string>
-		<key>Authentication</key>
-		<dict>
-			<key>Type</key>
-			<integer>1</integer>
-			<key>Username</key>
-			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
-		</dict>
-		<key>ProvisioningRecheckPeriod</key>
-		<integer>24</integer>
-		<key>EnableVolteWhileEntitlementStatusIsUnknown</key>
-		<true/>
-		<key>ServerAddress</key>
-		<string>https://deg.ims.cellcom.com/ium-OEMInterface/servlet/IUMServlet</string>
-		<key>UserAgent</key>
-		<string>Entitlement/$version ($device) iOS/$iOSVersion</string>
-		<key>SupportsOnDevicePhysicalSIMConvert</key>
-		<true/>
-	</dict>
-	<key>OverrideOperatorWiFiName</key>
-	<string>Cellcom-Wi-Fi</string>
-	<key>DerPriFileName</key>
-	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Signaling</key>
-		<dict>
-			<key>WaitForRingingTimerMTSeconds</key>
-			<integer>15</integer>
-			<key>RingbackTimerSeconds</key>
-			<integer>90</integer>
-			<key>EnableCellularNetworkInfo</key>
-			<true/>
-			<key>AllowPhoneContextInEmergencyUri</key>
-			<false/>
-			<key>SessionExpiresSeconds</key>
-			<integer>1800</integer>
-			<key>UseCIDUrlInPIDF</key>
-			<true/>
-			<key>TcpIdleTimeoutSeconds</key>
-			<integer>0</integer>
-			<key>CallSetupPingTimerMilliseconds</key>
-			<integer>2000</integer>
-			<key>OutgoingCallPrefix</key>
-			<dict>
-				<key>Local</key>
-				<string>+1</string>
-				<key>International</key>
-				<string>011</string>
-			</dict>
-			<key>MaxUdpMessageSize</key>
-			<integer>1200</integer>
-			<key>SipTimers</key>
-			<dict>
-				<key>F</key>
-				<integer>30000</integer>
-				<key>D</key>
-				<integer>128000</integer>
-				<key>InviteResponseTimeout</key>
-				<integer>10000</integer>
-				<key>T2</key>
-				<integer>16000</integer>
-				<key>T1</key>
-				<integer>2000</integer>
-				<key>T4</key>
-				<integer>17000</integer>
-			</dict>
-			<key>AlwaysSendSessionProgress</key>
-			<true/>
-			<key>PIDFGeoPrivShape</key>
-			<string>ellipsoid</string>
-			<key>AdditionalFeatureTags</key>
-			<dict>
-				<key>sms</key>
-				<dict>
-					<key>+cdmaless</key>
-					<string></string>
-				</dict>
-				<key>voice</key>
-				<dict>
-					<key>+cdmaless</key>
-					<string></string>
-					<key>+g.gsma.rcs.telephony</key>
-					<string>"cs,volte"</string>
-					<key>audio</key>
-					<string></string>
-				</dict>
-			</dict>
-			<key>EmergencyRegistrationTimeoutSeconds</key>
-			<integer>2</integer>
-			<key>LocationForShortCodeCalls</key>
-			<string>BOTH</string>
-			<key>PIDFConfidence</key>
-			<integer>90</integer>
-			<key>CountryOfOriginationFormat</key>
-			<string>PANI</string>
-			<key>strictCallFlows</key>
-			<true/>
-			<key>AlwaysPrack18x</key>
-			<true/>
-			<key>EmergencyCallBackModeExpirationSeconds</key>
-			<integer>300</integer>
-			<key>NoFallbackVoiceService</key>
-			<true/>
-			<key>EmergencyURNs</key>
-			<dict>
-				<key>default</key>
-				<string>urn:service:sos</string>
-			</dict>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string>3XX,4XX,5XX,6XX</string>
-			<key>OutgoingDomain</key>
-			<string>1</string>
-			<key>DefaultAuthAlgorithm</key>
-			<string>AKAv1-MD5</string>
-			<key>AdditionalHeaders</key>
-			<dict>
-				<key>INVITE[911,wifi]</key>
-				<array>
-					<string>Supported: geolocation</string>
-				</array>
-			</dict>
-			<key>EmergencyRingbackTimerSeconds</key>
-			<integer>600</integer>
-			<key>AlwaysAddSipInstance</key>
-			<true/>
-			<key>AllowRemoteHoldForUnconfirmedCalls</key>
-			<true/>
-			<key>ContactUser</key>
-			<string>MDN</string>
-			<key>AlwaysAddGeolocationForEmergencyCalls</key>
-			<true/>
-			<key>UseDialogEventPackage</key>
-			<true/>
-			<key>NetworkTerminationRetryIntervalSeconds</key>
-			<integer>1</integer>
-			<key>SendLocalTimeZoneInformation</key>
-			<true/>
-			<key>IgnoresIntlDataRoaming</key>
-			<true/>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
-			<key>Preconditions</key>
-			<string>None</string>
-			<key>EmergencyImpuRank</key>
-			<string>MDN@domain</string>
-			<key>WaitForRingingTimerMOSeconds</key>
-			<integer>15</integer>
-			<key>UseTupleInPIDF</key>
-			<true/>
-			<key>MinSessionExpiresSeconds</key>
-			<integer>900</integer>
-		</dict>
-		<key>AllowIMSUnprovisioned</key>
-		<true/>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>conferenceServer</key>
-			<string>sip:confserver@ims.cellcom.com</string>
-			<key>SendConferenceSubscribeInNewDialog</key>
-			<true/>
-			<key>TreatAllNotificationsAsPartial</key>
-			<true/>
-		</dict>
-		<key>AllowHandoverWithoutIMSVoiceService</key>
-		<true/>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<true/>
-			<key>SupportedDomains</key>
-			<dict>
-				<key>EHRPD</key>
-				<false/>
-				<key>GSM</key>
-				<false/>
-				<key>UMTS</key>
-				<false/>
-				<key>LTE</key>
-				<true/>
-			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
-		</dict>
-		<key>Media</key>
-		<dict>
-			<key>RTCPIntervalSeconds</key>
-			<integer>5</integer>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>20</integer>
-			<key>SupportAMRWB</key>
-			<false/>
-			<key>EnableRTCPExtendedReports</key>
-			<true/>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>102</key>
-				<dict>
-					<key>mode-set</key>
-					<string>7</string>
-					<key>EncodingName</key>
-					<string>AMR</string>
-					<key>SampleRate</key>
-					<integer>8000</integer>
-				</dict>
-				<key>106</key>
-				<dict>
-					<key>SampleRate</key>
-					<integer>8000</integer>
-					<key>EncodingName</key>
-					<string>AMR</string>
-					<key>octet-align</key>
-					<string>0</string>
-				</dict>
-				<key>109</key>
-				<dict>
-					<key>ch-aw-recv</key>
-					<string>3</string>
-					<key>br</key>
-					<string>13.2</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-				</dict>
-				<key>104</key>
-				<dict>
-					<key>mode-set</key>
-					<string>2</string>
-					<key>EncodingName</key>
-					<string>AMR-WB</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-				</dict>
-				<key>108</key>
-				<dict>
-					<key>mode-set</key>
-					<string>7</string>
-					<key>SampleRate</key>
-					<integer>8000</integer>
-					<key>EncodingName</key>
-					<string>AMR</string>
-					<key>octet-align</key>
-					<string>1</string>
-				</dict>
-				<key>110</key>
-				<dict>
-					<key>mode-set</key>
-					<string>2</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>AMR-WB</string>
-					<key>octet-align</key>
-					<string>1</string>
-				</dict>
-			</dict>
-			<key>SupportAMRNB</key>
-			<false/>
-			<key>InactivityTimerRTCPSeconds</key>
-			<integer>20</integer>
-			<key>ModeSetAMRWB</key>
-			<string>2</string>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-			<key>UseRestrictiveDirectionWhenCreatingAnswer</key>
-			<false/>
-			<key>ModeSetAMRNB</key>
-			<string>7</string>
-			<key>EnableIncomingDTMF</key>
-			<true/>
-			<key>IncludeSDPMaxRed</key>
-			<true/>
-		</dict>
-		<key>SIM</key>
-		<dict>
-			<key>CarrierDomain</key>
-			<string>ims.cellcom.com</string>
-			<key>impiFormat</key>
-			<string>imsi@carrierDomain</string>
-			<key>impuFormat</key>
-			<array>
-				<string>mdn@carrierDomain</string>
-			</array>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>NafHost</key>
-			<string>xcap.ims.cellcom.com</string>
-			<key>imsFeatureDependency</key>
-			<true/>
-			<key>SupportsCLIR</key>
-			<true/>
-			<key>ImpuRank</key>
-			<string>first</string>
-			<key>ContentType</key>
-			<string>application/xcap-el+xml</string>
-			<key>DisableOnNetworkError</key>
-			<false/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string>400,403,500</string>
-			<key>supported</key>
-			<true/>
-			<key>imsRegistrationDependency</key>
-			<true/>
-			<key>SupportsCFErasure</key>
-			<true/>
-			<key>BsfHost</key>
-			<string>bsf.ims.cellcom.com</string>
-			<key>SupportsCW</key>
-			<true/>
-		</dict>
-		<key>Voice</key>
-		<dict>
-			<key>BlockSilentRedialOverCS</key>
-			<true/>
-			<key>EnableVolteByDefault</key>
-			<true/>
-			<key>ttyIMSSupported</key>
-			<true/>
-			<key>E911OverITechSupported</key>
-			<false/>
-			<key>BlockCallsOverCS</key>
-			<true/>
-			<key>DisableVolteSwitchOnIncompatibleState</key>
-			<true/>
-			<key>TestEmergencyPSAPSupported</key>
-			<true/>
-			<key>tLte911Timer</key>
-			<integer>22</integer>
-		</dict>
-	</dict>
-	<key>SupportsSupplementaryServicesOverIMS</key>
 	<true/>
 	<key>AttachAPN</key>
 	<dict>
@@ -480,16 +59,59 @@
 			<integer>3</integer>
 		</dict>
 	</dict>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
-	<key>DataIndicatorOverrideForNRMmwave</key>
-	<string>NRPlus</string>
-	<key>Enable5GAutoByDefault</key>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Media</key>
+		<dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>AdditionalFeatureTags</key>
+			<dict>
+				<key>sms</key>
+				<dict>
+					<key>+cdmaless</key>
+					<string></string>
+				</dict>
+				<key>voice</key>
+				<dict>
+					<key>+cdmaless</key>
+					<string></string>
+					<key>+g.gsma.rcs.telephony</key>
+					<string>"cs,volte"</string>
+					<key>audio</key>
+					<string></string>
+				</dict>
+			</dict>
+			<key>NoFallbackVoiceService</key>
+			<true/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>BlockCallsOverCS</key>
+			<true/>
+			<key>BlockSilentRedialOverCS</key>
+			<true/>
+			<key>DisableVolteSwitchOnIncompatibleState</key>
+			<true/>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>EHRPD</key>
+				<false/>
+			</dict>
+		</dict>
+		<key>AllowIMSUnprovisioned</key>
+		<true/>
+	</dict>
+	<key>ShowHighDataModeSwitch</key>
 	<true/>
-	<key>ShowVolteSwitch</key>
+	<key>ForceWPSCallsOverCS</key>
 	<false/>
-	<key>SupportsImsCapability</key>
-	<true/>
 	<key>CellBroadcast</key>
 	<dict>
 		<key>_Exclude</key>
@@ -497,151 +119,33 @@
 			<string>MessageIDParameters3GPP2</string>
 		</array>
 	</dict>
-	<key>SupportsNRNSAInboundRoaming</key>
-	<true/>
-	<key>TechSettings</key>
+	<key>DerPriFileName</key>
+	<string>overrides_V53_V54_V57.der.pri</string>
+	<key>CarrierEntitlements</key>
 	<dict>
-		<key>ChildSAs</key>
-		<dict>
-			<key>FirstChild</key>
-			<dict>
-				<key>InstallPolicies</key>
-				<true/>
-				<key>ReplayWindowSize</key>
-				<integer>12</integer>
-			</dict>
-		</dict>
-		<key>iRatPolicies</key>
-		<dict>
-			<key>PreferredTechnology</key>
-			<string>ims</string>
-			<key>PreferredTechnologyRoaming</key>
-			<string>ims</string>
-		</dict>
-		<key>ExtraConfigurationAttributeRequestv6</key>
-		<array>
-			<dict>
-				<key>Identifier</key>
-				<integer>16386</integer>
-				<key>Name</key>
-				<string>AssignedPCSCFIPv6</string>
-				<key>Type</key>
-				<string>IPv6Address</string>
-			</dict>
-		</array>
-		<key>WifiCallingAllowedInRoaming</key>
+		<key>SupportedEntitlements</key>
+		<integer>4205785</integer>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
 		<true/>
-		<key>WiFiCallingControlsAlliWLanServices</key>
-		<true/>
-		<key>SupportContextSwitchOver</key>
-		<true/>
-		<key>5wiServiceMask</key>
-		<integer>3</integer>
-		<key>IKE</key>
+	</dict>
+	<key>SMSSettings</key>
+	<dict>
+		<key>MessageFormat</key>
 		<dict>
-			<key>LocalIdentifier</key>
-			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
-			<key>NATTKeepAliveOffload</key>
-			<true/>
-			<key>DeadPeerDetectionRetryInterval</key>
-			<integer>10</integer>
-			<key>DeadPeerDetectionEnabled</key>
-			<false/>
-			<key>RemoteAddress</key>
-			<string>epdg.epc.mnc840.mcc311.pub.3gppnetwork.org</string>
-			<key>LocalIdentifierType</key>
-			<string>IDUserFQDN</string>
-			<key>Proposals</key>
-			<array>
-				<dict>
-					<key>EncryptionAlgorithm</key>
-					<string>AES-256</string>
-					<key>IntegrityAlgorithm</key>
-					<string>SHA2-512</string>
-					<key>DHGroup</key>
-					<integer>15</integer>
-					<key>AuthenticationMethod</key>
-					<string>None</string>
-					<key>Lifetime</key>
-					<integer>86400</integer>
-					<key>EAPMethod</key>
-					<string>EAP-AKA</string>
-					<key>PRFAlgorithm</key>
-					<string>SHA2-512</string>
-				</dict>
-			</array>
-			<key>RemoteIdentifierType</key>
-			<string>IDFQDN</string>
-			<key>DeadPeerDetectionMaxRetries</key>
-			<integer>4</integer>
-			<key>NonceSize</key>
-			<integer>16</integer>
-			<key>DeadPeerDetectionInterval</key>
-			<integer>600</integer>
-			<key>ValidateRemoteCertificate</key>
-			<false/>
+			<key>SignalingFormat</key>
+			<integer>1</integer>
+			<key>PacketFormat</key>
+			<integer>1</integer>
 		</dict>
-		<key>AllowRoamingHandover</key>
+	</dict>
+	<key>DataIndicatorOverrideForNRMmwave</key>
+	<string>NRPlus</string>
+	<key>CDMAInternationalRoaming</key>
+	<dict>
+		<key>EnabledByDefault</key>
 		<false/>
-		<key>ExtraConfigurationAttributeRequestv4</key>
-		<array>
-			<dict>
-				<key>Identifier</key>
-				<integer>16384</integer>
-				<key>Name</key>
-				<string>AssignedPCSCFIPv4</string>
-				<key>Type</key>
-				<string>IPv4Address</string>
-			</dict>
-		</array>
-		<key>SetHandOverIPv6Prefix</key>
-		<true/>
-		<key>TechPolicies</key>
-		<array>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>6</integer>
-			</dict>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>33280</integer>
-			</dict>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>131072</integer>
-			</dict>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>262144</integer>
-			</dict>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>1048576</integer>
-			</dict>
-		</array>
-		<key>SupportCallHandover</key>
-		<true/>
 	</dict>
-	<key>PushSettings</key>
-	<dict>
-		<key>Topic</key>
-		<string>com.hk.entitlements</string>
-		<key>MultiSIMTopic</key>
-		<string>com.cellcom.multisimapns</string>
-		<key>VoWiFiTopic</key>
-		<string>com.hk.VoWiFi</string>
-	</dict>
-	<key>ForceWPSCallsOverCS</key>
+	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
 	<key>apns</key>
 	<array>
@@ -649,18 +153,16 @@
 			<key>configuration</key>
 			<array>
 				<dict>
-					<key>type-mask</key>
-					<integer>1</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
 					<key>apn</key>
 					<string>ccinternet</string>
+					<key>type-mask</key>
+					<integer>1</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
@@ -671,8 +173,6 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>33280</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>username</key>
@@ -683,18 +183,16 @@
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>16</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
 					<key>apn</key>
 					<string>cchotspot</string>
+					<key>type-mask</key>
+					<integer>16</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
@@ -705,8 +203,6 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>131072</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>SupportSwitchOver</key>
@@ -725,8 +221,6 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>262144</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>username</key>
@@ -743,8 +237,6 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>6</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>username</key>
@@ -762,34 +254,30 @@
 			<key>configuration</key>
 			<array>
 				<dict>
-					<key>type-mask</key>
-					<integer>1</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
 					<key>apn</key>
 					<string>ccinternet</string>
+					<key>type-mask</key>
+					<integer>1</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>16</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
 					<key>apn</key>
 					<string>cchotspot</string>
+					<key>type-mask</key>
+					<integer>16</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
@@ -800,8 +288,6 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>131072</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>SupportSwitchOver</key>
@@ -820,8 +306,6 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>33280</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>username</key>
@@ -838,8 +322,6 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>1048576</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>username</key>
@@ -856,8 +338,6 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>262144</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>username</key>
@@ -874,8 +354,6 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>6</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>username</key>
@@ -888,6 +366,25 @@
 			</array>
 			<key>technology-mask</key>
 			<integer>9</integer>
+		</dict>
+	</array>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
+	<key>SupportsNRNSAInboundRoaming</key>
+	<true/>
+	<key>MTU</key>
+	<array>
+		<dict>
+			<key>technology-mask</key>
+			<integer>28</integer>
+			<key>size</key>
+			<integer>1428</integer>
+		</dict>
+		<dict>
+			<key>technology-mask</key>
+			<integer>2</integer>
+			<key>size</key>
+			<integer>1472</integer>
 		</dict>
 	</array>
 </dict>

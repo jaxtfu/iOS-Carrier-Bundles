@@ -2,109 +2,264 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
-	<key>AllowEDGEEditing</key>
-	<true/>
-	<key>DataIndicatorOverrideForLTE</key>
-	<string>4G</string>
-	<key>MandatoryVerify</key>
+	<key>CarrierEntitlements</key>
 	<dict>
-		<key>SIMs</key>
-		<array/>
-	</dict>
-	<key>Services</key>
-	<array>
-		<dict>
-			<key>ServiceCode</key>
-			<string>555</string>
-			<key>ServiceName</key>
-			<string>Mesagerie Vocala</string>
-		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string>311</string>
-			<key>ServiceName</key>
-			<string>Orange Info</string>
-		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string>300</string>
-			<key>ServiceName</key>
-			<string>Serviciul Clienti</string>
-		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string>*100#</string>
-			<key>ServiceName</key>
-			<string>Self Service</string>
-		</dict>
-	</array>
-	<key>SupportsNITZ</key>
-	<true/>
-	<key>MyAccountURL</key>
-	<string>https://www.orange.ro/#welcometoorange</string>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
-	<key>CarrierSpace</key>
-	<dict>
-		<key>AllowedWhenRoaming</key>
+		<key>AllowCurrentLocation</key>
 		<true/>
-		<key>TokenURL</key>
-		<string>https://www.orange.ro/accounts/token</string>
-		<key>TeamIDList</key>
+		<key>SupportedActions</key>
 		<array>
-			<string>R64EJG9NZY</string>
+			<string>TransferSIMService</string>
 		</array>
-		<key>SupportsApps</key>
+		<key>SupportSecureIntent</key>
 		<true/>
-		<key>PlanProvisioningMaxPollRequests</key>
-		<integer>5</integer>
-		<key>AuthClientID</key>
-		<string>7eaa3d28-0cf6-4651-aff0-d8a20c8eac0c</string>
-		<key>PlanProvisioningPollInterval</key>
-		<integer>120</integer>
-		<key>AuthorizationURL</key>
-		<string>https://www.orange.ro/accounts/auth</string>
-		<key>DataOptimizationAllowed</key>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>SupportPreflightOnSource</key>
 		<true/>
-		<key>SupportsPlans</key>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>SupportedEntitlements</key>
+		<integer>9345</integer>
+		<key>ServerAddress</key>
+		<string>https://aes.orange.ro/ium-OEMInterface/servlet/IUMServlet</string>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
 		<true/>
-		<key>ManualRefreshMinIntervalMins</key>
-		<integer>30</integer>
-		<key>AutoRefreshMinIntervalMins</key>
-		<integer>1440</integer>
-		<key>SupportsUsage</key>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
 		<true/>
+		<key>UpdatePeriod</key>
+		<integer>23</integer>
 	</dict>
-	<key>APNEditabilityTypemask</key>
-	<integer>49</integer>
-	<key>SMSSettings</key>
+	<key>OTASoftwareUpdate</key>
 	<dict>
-		<key>TransportFallback</key>
+		<key>SoftwareUpdateOptInRequired</key>
 		<false/>
 	</dict>
-	<key>MyAccountURLTitle</key>
-	<string>Orange</string>
-	<key>StatusBarImages</key>
-	<array>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
 		<dict>
-			<key>AllowPrefixMatching</key>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
 			<false/>
-			<key>CarrierName</key>
-			<string>RO ORANGE</string>
-			<key>StatusBarCarrierName</key>
-			<string>orange</string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>net</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
 		</dict>
+	</dict>
+	<key>SupportsUserBusyCauseCode</key>
+	<true/>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>LocalInstallSMDPURL</key>
+		<string>https://sm-v4-009-roa-gtm.pr.go-esim.com:4443</string>
+		<key>TransferErrorCodes</key>
 		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>Orange Ro</string>
-			<key>StatusBarCarrierName</key>
-			<string>orange</string>
+			<key>BlockedAccountErrors</key>
+			<array>
+				<string>Blocked Account</string>
+			</array>
+			<key>IneligibleAccountErrors</key>
+			<array>
+				<string>Ineligible Account</string>
+			</array>
+			<key>CarrierDefaultErrors</key>
+			<array>
+				<string>Default Error</string>
+			</array>
 		</dict>
-	</array>
+	</dict>
+	<key>AllowEDGEEditing</key>
+	<true/>
+	<key>VoicemailPilotNumber</key>
+	<string>555</string>
+	<key>SupportsNITZ</key>
+	<true/>
+	<key>RemoteCardProvisioningSettings</key>
+	<dict>
+		<key>MatchingICCIDPrefixes</key>
+		<array>
+			<string>894010</string>
+		</array>
+		<key>CellularTrialPlan</key>
+		<dict>
+			<key>TrialEndPeriod</key>
+			<string>2020-06-30T00:00:00Z</string>
+			<key>TrialPlanType</key>
+			<string>FreeOrSpecial</string>
+			<key>SupportsTrialPlan</key>
+			<true/>
+			<key>TrialStartPeriod</key>
+			<string>2019-08-08T00:00:00Z</string>
+		</dict>
+		<key>ServerURL</key>
+		<string>sm-v4-009-roa-gtm.pr.go-esim.com</string>
+		<key>ActivatingStateSubscriptionCheckTimerIntervals</key>
+		<array>
+			<integer>1800</integer>
+			<integer>3600</integer>
+			<integer>5400</integer>
+		</array>
+		<key>MinCompatibleWatchOS</key>
+		<string>6.1.1</string>
+		<key>SupportedSKUs</key>
+		<array>
+			<string>SKU_EU</string>
+		</array>
+		<key>ProvisioningMethod</key>
+		<string>CarrierFlow</string>
+	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>ShowDialAssist</key>
+	<true/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>+447786205094</string>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Orange Wi-Fi</string>
+	<key>MMS</key>
+	<dict>
+		<key>MMSC</key>
+		<string>http://wap.mms.orange.ro:8002</string>
+		<key>GroupModeEnabled</key>
+		<false/>
+		<key>Proxy</key>
+		<string>62.217.247.252:8799</string>
+		<key>MaxMessageSize</key>
+		<integer>614400</integer>
+	</dict>
+	<key>TechSettings</key>
+	<dict>
+		<key>WifiCallingAllowedInRoaming</key>
+		<false/>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>AES-128</string>
+						</array>
+						<key>Lifetime</key>
+						<integer>80000</integer>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA2-256</string>
+						</array>
+					</dict>
+				</array>
+				<key>InstallPolicies</key>
+				<true/>
+				<key>ReplayWindowSize</key>
+				<integer>12</integer>
+			</dict>
+		</dict>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>wifi</string>
+			<key>PreferredTechnologyRoaming</key>
+			<string>wifi</string>
+		</dict>
+		<key>IKE</key>
+		<dict>
+			<key>NATTKeepAliveEnabled</key>
+			<true/>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-128</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-256</string>
+					<key>DHGroup</key>
+					<integer>14</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>80000</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-256</string>
+				</dict>
+			</array>
+			<key>DeadPeerDetectionEnabled</key>
+			<false/>
+			<key>DeadPeerDetectionInterval</key>
+			<integer>600</integer>
+			<key>LocalIdentifier</key>
+			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
+			<key>DeadPeerDetectionMaxRetries</key>
+			<integer>4</integer>
+			<key>ValidateRemoteCertificate</key>
+			<false/>
+			<key>RemoteAddress</key>
+			<string>epdg.epc.mnc010.mcc226.pub.3gppnetwork.org</string>
+			<key>DeadPeerDetectionRetryInterval</key>
+			<integer>10</integer>
+		</dict>
+		<key>ExtraConfigurationAttributeRequestv6</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16390</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv6</string>
+				<key>Type</key>
+				<string>IPv6Address</string>
+			</dict>
+		</array>
+		<key>SupportCallHandover</key>
+		<true/>
+		<key>TechPolicies</key>
+		<array>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>131072</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>262144</integer>
+			</dict>
+		</array>
+		<key>ExtraConfigurationAttributeRequestv4</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16384</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv4</string>
+				<key>Type</key>
+				<string>IPv4Address</string>
+			</dict>
+		</array>
+		<key>WiFiCallingControlsAlliWLanServices</key>
+		<false/>
+		<key>5wiServiceMask</key>
+		<integer>3</integer>
+	</dict>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.Romania</string>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
+	<key>DataIndicatorOverrideForLTE</key>
+	<string>4G</string>
 	<key>Location</key>
 	<dict>
 		<key>EmergencyLocation</key>
@@ -122,6 +277,73 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>apns</key>
+	<array>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>net</string>
+			<key>type-mask</key>
+			<integer>32817</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string>mms</string>
+			<key>username</key>
+			<string>mms</string>
+			<key>apn</key>
+			<string>mms</string>
+			<key>type-mask</key>
+			<integer>4</integer>
+		</dict>
+		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>131072</integer>
+			<key>AllowNoDNS</key>
+			<integer>1</integer>
+			<key>SupportSwitchOver</key>
+			<true/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>net</string>
+			<key>type-mask</key>
+			<integer>48</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>262144</integer>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>sos</string>
+			<key>type-mask</key>
+			<integer>262144</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>SuppressSimToolkitSendShortMessageNotifications</key>
+	<true/>
 	<key>IMSConfig</key>
 	<dict>
 		<key>Media</key>
@@ -265,8 +487,6 @@
 				<key>LTE</key>
 				<true/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>Voice</key>
 		<dict>
@@ -276,160 +496,123 @@
 			<true/>
 		</dict>
 	</dict>
-	<key>CarrierEntitlements</key>
+	<key>SMSSettings</key>
 	<dict>
-		<key>AllowCurrentLocation</key>
-		<true/>
-		<key>SupportedActions</key>
-		<array>
-			<string>TransferSIMService</string>
-		</array>
-		<key>SupportSecureIntent</key>
-		<true/>
-		<key>ProtocolVersion</key>
-		<string>2</string>
-		<key>SupportPreflightOnSource</key>
-		<true/>
-		<key>Authentication</key>
-		<dict>
-			<key>Type</key>
-			<integer>1</integer>
-			<key>Username</key>
-			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
-		</dict>
-		<key>SupportedEntitlements</key>
-		<integer>9345</integer>
-		<key>ServerAddress</key>
-		<string>https://aes.orange.ro/ium-OEMInterface/servlet/IUMServlet</string>
-		<key>SupportPhysicalSIMtoESIMTransfer</key>
-		<true/>
-		<key>SupportsOnDevicePhysicalSIMConvert</key>
-		<true/>
-		<key>UpdatePeriod</key>
-		<integer>23</integer>
+		<key>TransportFallback</key>
+		<false/>
 	</dict>
-	<key>ShowDialAssist</key>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
+	<key>APNEditabilityTypemask</key>
+	<integer>49</integer>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>PushSettings</key>
+	<dict>
+		<key>MultiSIMTopic</key>
+		<string>com.orange.ro.aes.multi-sim</string>
+		<key>CarrierSpaceTopic</key>
+		<string>com.orange.ro.aes.test</string>
+		<key>VoWiFiTopic</key>
+		<string>com.orange.ro.aes.vowifi</string>
+	</dict>
+	<key>Services</key>
+	<array>
+		<dict>
+			<key>ServiceCode</key>
+			<string>555</string>
+			<key>ServiceName</key>
+			<string>Mesagerie Vocala</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>311</string>
+			<key>ServiceName</key>
+			<string>Orange Info</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>300</string>
+			<key>ServiceName</key>
+			<string>Serviciul Clienti</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>*100#</string>
+			<key>ServiceName</key>
+			<string>Self Service</string>
+		</dict>
+	</array>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
+	<key>StatusBarImages</key>
+	<array>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>RO ORANGE</string>
+			<key>StatusBarCarrierName</key>
+			<string>orange</string>
+		</dict>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>Orange Ro</string>
+			<key>StatusBarCarrierName</key>
+			<string>orange</string>
+		</dict>
+	</array>
+	<key>CarrierSpace</key>
+	<dict>
+		<key>AllowedWhenRoaming</key>
+		<true/>
+		<key>TokenURL</key>
+		<string>https://www.orange.ro/accounts/token</string>
+		<key>TeamIDList</key>
+		<array>
+			<string>R64EJG9NZY</string>
+		</array>
+		<key>SupportsApps</key>
+		<true/>
+		<key>PlanProvisioningMaxPollRequests</key>
+		<integer>5</integer>
+		<key>AuthClientID</key>
+		<string>7eaa3d28-0cf6-4651-aff0-d8a20c8eac0c</string>
+		<key>PlanProvisioningPollInterval</key>
+		<integer>120</integer>
+		<key>AuthorizationURL</key>
+		<string>https://www.orange.ro/accounts/auth</string>
+		<key>DataOptimizationAllowed</key>
+		<true/>
+		<key>SupportsPlans</key>
+		<true/>
+		<key>ManualRefreshMinIntervalMins</key>
+		<integer>30</integer>
+		<key>AutoRefreshMinIntervalMins</key>
+		<integer>1440</integer>
+		<key>SupportsUsage</key>
+		<true/>
+	</dict>
+	<key>CarrierName</key>
+	<string>Orange Romania</string>
+	<key>SupportsImsCapability</key>
 	<true/>
+	<key>MyAccountURL</key>
+	<string>https://www.orange.ro/#welcometoorange</string>
+	<key>MyAccountURLTitle</key>
+	<string>Orange</string>
+	<key>MandatoryVerify</key>
+	<dict>
+		<key>SIMs</key>
+		<array/>
+	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>22610</string>
 	</array>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>+447786205094</string>
-	<key>CarrierName</key>
-	<string>Orange Romania</string>
-	<key>SupportsUserBusyCauseCode</key>
-	<true/>
-	<key>PhoneAccountTransfer</key>
-	<dict>
-		<key>LocalInstallSMDPURL</key>
-		<string>https://sm-v4-009-roa-gtm.pr.go-esim.com:4443</string>
-		<key>TransferErrorCodes</key>
-		<dict>
-			<key>BlockedAccountErrors</key>
-			<array>
-				<string>Blocked Account</string>
-			</array>
-			<key>IneligibleAccountErrors</key>
-			<array>
-				<string>Ineligible Account</string>
-			</array>
-			<key>CarrierDefaultErrors</key>
-			<array>
-				<string>Default Error</string>
-			</array>
-		</dict>
-	</dict>
-	<key>ShowTTY</key>
-	<false/>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
-	<key>VoicemailPilotNumber</key>
-	<string>555</string>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.Romania</string>
-	<key>MMS</key>
-	<dict>
-		<key>MMSC</key>
-		<string>http://wap.mms.orange.ro:8002</string>
-		<key>GroupModeEnabled</key>
-		<false/>
-		<key>Proxy</key>
-		<string>62.217.247.252:8799</string>
-		<key>MaxMessageSize</key>
-		<integer>614400</integer>
-	</dict>
-	<key>RemoteCardProvisioningSettings</key>
-	<dict>
-		<key>MatchingICCIDPrefixes</key>
-		<array>
-			<string>894010</string>
-		</array>
-		<key>CellularTrialPlan</key>
-		<dict>
-			<key>TrialEndPeriod</key>
-			<string>2020-06-30T00:00:00Z</string>
-			<key>TrialPlanType</key>
-			<string>FreeOrSpecial</string>
-			<key>SupportsTrialPlan</key>
-			<true/>
-			<key>TrialStartPeriod</key>
-			<string>2019-08-08T00:00:00Z</string>
-		</dict>
-		<key>ServerURL</key>
-		<string>sm-v4-009-roa-gtm.pr.go-esim.com</string>
-		<key>ActivatingStateSubscriptionCheckTimerIntervals</key>
-		<array>
-			<integer>1800</integer>
-			<integer>3600</integer>
-			<integer>5400</integer>
-		</array>
-		<key>MinCompatibleWatchOS</key>
-		<string>6.1.1</string>
-		<key>SupportedSKUs</key>
-		<array>
-			<string>SKU_EU</string>
-		</array>
-		<key>ProvisioningMethod</key>
-		<string>CarrierFlow</string>
-	</dict>
-	<key>apns</key>
-	<array>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>net</string>
-			<key>type-mask</key>
-			<integer>49</integer>
-		</dict>
-		<dict>
-			<key>password</key>
-			<string>mms</string>
-			<key>username</key>
-			<string>mms</string>
-			<key>apn</key>
-			<string>mms</string>
-			<key>type-mask</key>
-			<integer>4</integer>
-		</dict>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>net</string>
-			<key>type-mask</key>
-			<integer>48</integer>
-		</dict>
-	</array>
-	<key>OTASoftwareUpdate</key>
-	<dict>
-		<key>SoftwareUpdateOptInRequired</key>
-		<false/>
-	</dict>
 </dict>
 </plist>

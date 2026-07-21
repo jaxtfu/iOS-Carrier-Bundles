@@ -13,14 +13,14 @@
 			<string>orange</string>
 		</dict>
 	</array>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>61101</string>
 	</array>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
 	<key>MyAccountURL</key>
-	<string>http://www.orange-guinee.com</string>
+	<string>https://www.orange-guinee.com</string>
 	<key>CarrierName</key>
 	<string>Orange Guinea</string>
 	<key>MyAccountURLTitle</key>
@@ -59,16 +59,10 @@
 	<false/>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
 	<key>VoicemailPilotNumber</key>
 	<string>6270</string>
-	<key>RegistrationOptInRequired</key>
-	<true/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>+447786205094</string>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -92,5 +86,9 @@
 			<integer>48</integer>
 		</dict>
 	</array>
+	<key>RegistrationOptInRequired</key>
+	<true/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>+447786205094</string>
 </dict>
 </plist>

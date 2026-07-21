@@ -9,20 +9,17 @@
 	<key>SupportsNITZ</key>
 	<false/>
 	<key>MyAccountURL</key>
-	<string>http://www.orange.sn</string>
+	<string>https://www.orange.sn</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
+	<key>RegistrationOptInRequired</key>
+	<true/>
 	<key>MyAccountURLTitle</key>
 	<string>Orange.sn</string>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+221776380000</string>
-	<key>RegistrationOptInRequired</key>
-	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -40,9 +37,135 @@
 	</array>
 	<key>OverrideCarrierMenuTo</key>
 	<true/>
-	<key>ShowDialAssist</key>
-	<true/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Media</key>
+		<dict>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>97</key>
+				<dict>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+				<key>96</key>
+				<dict>
+					<key>br</key>
+					<string>9.6-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>swb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>403,408,5XX</string>
+			<key>RingingTimerSeconds</key>
+			<integer>180</integer>
+			<key>UseIPSec</key>
+			<true/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>Busy Here</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>486</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+				<key>TemporarilyUnavailable</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>480</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+			</dict>
+			<key>ussdEnabled</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<false/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>RingbackTimerSeconds</key>
+			<integer>180</integer>
+			<key>ValidateSipMessageRecipient</key>
+			<false/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc001.mcc608.pub.3gppnetwork.org</string>
+			<key>BsfPort</key>
+			<integer>8080</integer>
+			<key>imsFeatureDependency</key>
+			<true/>
+			<key>NafPort</key>
+			<integer>80</integer>
+			<key>SupportsCLIR</key>
+			<true/>
+			<key>supported</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/vnd.etsi.simservs+xml</string>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>403,408,5XX</string>
+			<key>SupportsCFErasure</key>
+			<false/>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>BsfHost</key>
+			<string>bsf.ims.mnc001.mcc608.pub.3gppnetwork.org</string>
+			<key>SupportsCW</key>
+			<false/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
 	<key>Show3GSwitchWith4G</key>
+	<true/>
+	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
@@ -64,8 +187,10 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>ShowVolteSwitch</key>
+	<true/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>602</string>
 	<key>HomeBundleIdentifier</key>
@@ -81,6 +206,20 @@
 			<string>internet</string>
 			<key>type-mask</key>
 			<integer>49</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string>internet</string>
+			<key>username</key>
+			<string>internet</string>
+			<key>apn</key>
+			<string>xcap</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>OTASoftwareUpdate</key>

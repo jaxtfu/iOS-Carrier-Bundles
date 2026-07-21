@@ -10,6 +10,22 @@
 	<array>
 		<string>65204</string>
 	</array>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string></string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>CarrierName</key>
 	<string>BTC</string>
 	<key>DataIndicatorOverrideForLTE</key>
@@ -82,6 +98,8 @@
 			<integer>49</integer>
 		</dict>
 	</array>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>
@@ -93,21 +111,5 @@
 	<string>+447786205094</string>
 	<key>RegistrationOptInRequired</key>
 	<true/>
-	<key>AttachAPN</key>
-	<dict>
-		<key>3GPP</key>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>PcscfAddressRequired</key>
-			<false/>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
-		</dict>
-	</dict>
 </dict>
 </plist>

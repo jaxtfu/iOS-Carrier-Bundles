@@ -74,8 +74,6 @@
 	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -109,6 +107,8 @@
 			<integer>48</integer>
 		</dict>
 	</array>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>

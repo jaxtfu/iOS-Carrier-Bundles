@@ -93,6 +93,8 @@
 	<false/>
 	<key>AllowAttachAPNEditing</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>MatchingICCIDPrefixes</key>
@@ -129,16 +131,27 @@
 	</dict>
 	<key>VoicemailPilotNumber</key>
 	<string>41919</string>
-	<key>ShowDialAssist</key>
-	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447860015007</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>ShowDialAssist</key>
+	<true/>
 	<key>Show3GSwitchWith4G</key>
 	<true/>
 	<key>OverrideOperatorWiFiName</key>
 	<string>TIM WiFiCall</string>
+	<key>MMS</key>
+	<dict>
+		<key>MMSC</key>
+		<string>http://mms.tim.it/servlets/mms</string>
+		<key>GroupModeEnabled</key>
+		<true/>
+		<key>Proxy</key>
+		<string>213.230.130.89:80</string>
+		<key>MaxRecipients</key>
+		<integer>10</integer>
+		<key>MaxMessageSize</key>
+		<integer>614400</integer>
+	</dict>
 	<key>TechSettings</key>
 	<dict>
 		<key>WiFiCallingIdentityProtectionMethod</key>
@@ -251,19 +264,6 @@
 		<key>5wiServiceMask</key>
 		<integer>1</integer>
 	</dict>
-	<key>MMS</key>
-	<dict>
-		<key>MMSC</key>
-		<string>http://mms.tim.it/servlets/mms</string>
-		<key>GroupModeEnabled</key>
-		<true/>
-		<key>Proxy</key>
-		<string>213.230.130.89:80</string>
-		<key>MaxRecipients</key>
-		<integer>10</integer>
-		<key>MaxMessageSize</key>
-		<integer>614400</integer>
-	</dict>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Italy</string>
 	<key>MaxBluetoothModemConnections</key>
@@ -323,8 +323,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>sos</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>262144</integer>
 			<key>AllowedProtocolMask</key>
@@ -335,6 +333,133 @@
 	<string>http://www.119.it</string>
 	<key>APNEditabilityTypemaskNew</key>
 	<integer>53</integer>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>380</string>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>AllowPCNIInAirplaneMode</key>
+			<false/>
+			<key>RingbackTimerSeconds</key>
+			<integer>60</integer>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingingTimerSeconds</key>
+			<integer>60</integer>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>SendResumeInviteAsSendRecv</key>
+			<false/>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>DontSendPreconditionsIfCallWaitingDisabled</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+			<key>DropRegistrationOnAirplaneModeToggle</key>
+			<true/>
+		</dict>
+		<key>AllowWiFiCallingInAirplaneMode</key>
+		<false/>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc001.mcc222.3gppnetwork.org</string>
+		</dict>
+		<key>EnableWiFiCallingByDefault</key>
+		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<false/>
+			</dict>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>0</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>220</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>UseSDPTemplateWhenAnswering</key>
+			<false/>
+			<key>UseSDPTemplateForAllInvites</key>
+			<integer>0</integer>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>15</integer>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCW</key>
+			<false/>
+			<key>NafPort</key>
+			<integer>8080</integer>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>SupportsCB</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>401</string>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>Auid</key>
+			<string>mtasxdms/simservs.ngn.etsi.org</string>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>supported</key>
+			<true/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+			<key>endNonEmergencyCalls</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>SMSSettings</key>
 	<dict>
 		<key>TransportFallback</key>
@@ -407,8 +532,10 @@
 	</array>
 	<key>CarrierName</key>
 	<string>TIM</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
-	<string>http://wap.tim.it</string>
+	<string>https://wap.tim.it</string>
 	<key>MyAccountURLTitle</key>
 	<string>Portale TIM</string>
 	<key>MandatoryVerify</key>

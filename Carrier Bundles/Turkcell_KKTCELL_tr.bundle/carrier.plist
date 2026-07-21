@@ -24,7 +24,7 @@
 	<key>SupportsNITZ</key>
 	<false/>
 	<key>MyAccountURL</key>
-	<string>http://www.kktcell.com</string>
+	<string>https://www.kktcell.com</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>APNEditabilityTypemask</key>
@@ -74,8 +74,6 @@
 	<string>KKTCELL</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>8787</string>
 	<key>HomeBundleIdentifier</key>

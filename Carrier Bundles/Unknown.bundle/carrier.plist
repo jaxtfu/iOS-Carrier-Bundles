@@ -503,6 +503,14 @@
 	<true/>
 	<key>ASCIIFileNameRequired</key>
 	<true/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>AllowEmergencyRetryForIPSec</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>ShowDialAssist</key>
 	<false/>
 	<key>Show3GSwitchWith4G</key>
@@ -529,8 +537,13 @@
 	<string>Carrier</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
+	<key>Show3GSwitchWithVolte</key>
 	<true/>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsTTY</key>
+		<true/>
+	</dict>
 	<key>MMS</key>
 	<dict>
 		<key>GroupModeEnabled</key>

@@ -36,7 +36,7 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://tigo.com.pa</string>
+	<string>https://tigo.com.pa</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>MyAccountURLTitle</key>
@@ -77,8 +77,6 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>SMSUseLocalTZ</key>
 	<true/>
 	<key>VoicemailPilotNumber</key>

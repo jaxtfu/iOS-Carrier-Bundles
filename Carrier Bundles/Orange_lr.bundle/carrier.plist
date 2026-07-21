@@ -20,9 +20,7 @@
 		<string>61807</string>
 	</array>
 	<key>MyAccountURL</key>
-	<string>http://www.orange.com.lr</string>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
+	<string>https://www.orange.com.lr</string>
 	<key>CarrierName</key>
 	<string>Orange LBR</string>
 	<key>MyAccountURLTitle</key>
@@ -35,19 +33,6 @@
 	<true/>
 	<key>APNEditabilityTypemask</key>
 	<integer>0</integer>
-	<key>apns</key>
-	<array>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>orangelbr</string>
-			<key>type-mask</key>
-			<integer>49</integer>
-		</dict>
-	</array>
 	<key>Services</key>
 	<array>
 		<dict>
@@ -83,7 +68,7 @@
 	</array>
 	<key>SupportsNITZ</key>
 	<true/>
-	<key>ShowTTY</key>
+	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>MandatoryVerify</key>
 	<dict>
@@ -94,7 +79,20 @@
 	<integer>49</integer>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
+	<key>apns</key>
+	<array>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>orangelbr</string>
+			<key>type-mask</key>
+			<integer>49</integer>
+		</dict>
+	</array>
 </dict>
 </plist>

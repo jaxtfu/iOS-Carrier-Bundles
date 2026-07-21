@@ -201,12 +201,10 @@
 			<string>UQお客様サポートセンター</string>
 		</dict>
 	</array>
-	<key>DefaultWhenImsSwitchOff</key>
-	<integer>1</integer>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>SMSUseLocalTZ</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>PhoneSettings</key>
 	<dict>
 		<key>AutoCallPickupTimer</key>
@@ -216,6 +214,11 @@
 	<dict>
 		<key>EnabledByDefault</key>
 		<false/>
+	</dict>
+	<key>ToolsConfiguration</key>
+	<dict>
+		<key>EnableFeedbackCollection</key>
+		<true/>
 	</dict>
 	<key>DataIndicatorOverrideForLTE</key>
 	<string>4G</string>
@@ -315,6 +318,41 @@
 	<true/>
 	<key>IMSConfig</key>
 	<dict>
+		<key>Media</key>
+		<dict>
+			<key>SuppressOctetAlignAttributeForBECodecs</key>
+			<false/>
+			<key>EnableRemoteRTCPDeactivation</key>
+			<true/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>2</string>
+					<key>br</key>
+					<string>13.2</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>SuppressBSUntilPreconditionsMet</key>
+			<true/>
+			<key>SelectLatestForkWithActiveEarlyMedia</key>
+			<true/>
+			<key>ModeSetAMRWB</key>
+			<string>0,1,2</string>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+		</dict>
 		<key>Signaling</key>
 		<dict>
 			<key>DefaultAuthAlgorithm</key>
@@ -489,6 +527,31 @@
 			<key>StartLocalQosTimerOnSessionProgress</key>
 			<true/>
 		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>BsfHost</key>
+			<string>bsf.ims.mnc051.mcc440.pub.3gppnetwork.org</string>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+			<key>NafPort</key>
+			<integer>8090</integer>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>Auid</key>
+			<string>mtasxdms/simservs.ngn.etsi.org</string>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>UnsolicitedRequestDelay</key>
+			<integer>0</integer>
+			<key>supported</key>
+			<true/>
+			<key>SupportsCFErasure</key>
+			<false/>
+			<key>imsFeatureDependency</key>
+			<true/>
+		</dict>
 		<key>ConferenceCalling</key>
 		<dict>
 			<key>SendReferToPeer</key>
@@ -519,68 +582,6 @@
 			<key>allowCSFBInVolteMode</key>
 			<false/>
 		</dict>
-		<key>Media</key>
-		<dict>
-			<key>SuppressOctetAlignAttributeForBECodecs</key>
-			<false/>
-			<key>EnableRemoteRTCPDeactivation</key>
-			<true/>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>109</key>
-				<dict>
-					<key>ch-aw-recv</key>
-					<string>2</string>
-					<key>br</key>
-					<string>13.2</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-				</dict>
-			</dict>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>20</integer>
-			<key>SuppressBSUntilPreconditionsMet</key>
-			<true/>
-			<key>SelectLatestForkWithActiveEarlyMedia</key>
-			<true/>
-			<key>ModeSetAMRWB</key>
-			<string>0,1,2</string>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>BsfHost</key>
-			<string>bsf.ims.mnc051.mcc440.pub.3gppnetwork.org</string>
-			<key>DisableOnNetworkError</key>
-			<false/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string></string>
-			<key>NafPort</key>
-			<integer>8090</integer>
-			<key>SupportsCLIR</key>
-			<false/>
-			<key>Auid</key>
-			<string>mtasxdms/simservs.ngn.etsi.org</string>
-			<key>ContentType</key>
-			<string>application/xcap-el+xml</string>
-			<key>UnsolicitedRequestDelay</key>
-			<integer>0</integer>
-			<key>supported</key>
-			<true/>
-			<key>SupportsCFErasure</key>
-			<false/>
-			<key>imsFeatureDependency</key>
-			<true/>
-		</dict>
-		<key>Emergency</key>
-		<dict/>
 		<key>Voice</key>
 		<dict>
 			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
@@ -695,8 +696,6 @@
 	</array>
 	<key>SupportsImsCapability</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>Enable5GAutoByDefault</key>
 	<true/>
 	<key>ShowVoiceRoamingSwitch</key>
@@ -959,84 +958,74 @@
 			<key>configuration</key>
 			<array>
 				<dict>
-					<key>type-mask</key>
-					<integer>519</integer>
 					<key>password</key>
 					<string>uq</string>
-					<key>apn</key>
-					<string>uqmobile.jp</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string>uq@uqmobile.jp</string>
-					<key>auth_type</key>
-					<string>CHAP</string>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
+					<key>apn</key>
+					<string>uqmobile.jp</string>
+					<key>type-mask</key>
+					<integer>519</integer>
+					<key>auth_type</key>
+					<string>CHAP</string>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>131072</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>2</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>2</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>2</integer>
 					<key>apn</key>
 					<string>IMS</string>
+					<key>type-mask</key>
+					<integer>131072</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>2</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>1048576</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
 					<key>apn</key>
 					<string>xcap</string>
+					<key>type-mask</key>
+					<integer>1048576</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>262144</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
+					<key>username</key>
+					<string></string>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
-					<key>username</key>
-					<string></string>
 					<key>apn</key>
 					<string></string>
+					<key>type-mask</key>
+					<integer>262144</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>16</integer>
 					<key>password</key>
 					<string>uq</string>
-					<key>apn</key>
-					<string>trg.uqmobile.jp</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string>uq@trg.uqmobile.jp</string>
-					<key>auth_type</key>
-					<string>CHAP</string>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
+					<key>apn</key>
+					<string>trg.uqmobile.jp</string>
+					<key>type-mask</key>
+					<integer>16</integer>
+					<key>auth_type</key>
+					<string>CHAP</string>
 				</dict>
 			</array>
 			<key>technology-mask</key>

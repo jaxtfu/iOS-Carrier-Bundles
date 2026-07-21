@@ -48,6 +48,8 @@
 	</array>
 	<key>ShowDialAssist</key>
 	<true/>
+	<key>Show3GSwitchWith4G</key>
+	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<array>
 		<string>+447537410207</string>
@@ -63,10 +65,26 @@
 	</array>
 	<key>CarrierName</key>
 	<string>Sure</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string></string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>IntlDataRoamingExceptions</key>
 	<array>
 		<string>23407</string>
@@ -91,6 +109,8 @@
 		<key>MaxMessageSize</key>
 		<integer>1048576</integer>
 	</dict>
+	<key>AllowAttachAPNEditing</key>
+	<true/>
 	<key>apns</key>
 	<array>
 		<dict>

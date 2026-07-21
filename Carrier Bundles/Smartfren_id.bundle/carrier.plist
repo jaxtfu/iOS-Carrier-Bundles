@@ -63,8 +63,6 @@
 	<array>
 		<string>4131</string>
 	</array>
-	<key>ShowTTY</key>
-	<false/>
 	<key>OverrideOperatorWiFiName</key>
 	<string>Smartfren Vowifi</string>
 	<key>SupportsSupplementaryServicesOverIMS</key>
@@ -192,38 +190,32 @@
 			<key>configuration</key>
 			<array>
 				<dict>
-					<key>type-mask</key>
-					<integer>1048625</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
 					<key>apn</key>
 					<string>smartfren4g</string>
+					<key>type-mask</key>
+					<integer>1048625</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>131072</integer>
 					<key>password</key>
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>131072</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>1</integer>
-					<key>SupportSwitchOver</key>
-					<true/>
 					<key>username</key>
 					<string></string>
 					<key>apn</key>
 					<string>ims</string>
-					<key>AllowedProtocolMask</key>
-					<integer>1</integer>
+					<key>SupportSwitchOver</key>
+					<true/>
+					<key>type-mask</key>
+					<integer>131072</integer>
 				</dict>
 			</array>
 			<key>technology-mask</key>
@@ -283,6 +275,8 @@
 			</dict>
 			<key>TriggerCSFBOnWaitForRingingTimeout</key>
 			<false/>
+			<key>UseIPSec</key>
+			<true/>
 		</dict>
 		<key>ConferenceCalling</key>
 		<dict>
@@ -358,8 +352,6 @@
 	<false/>
 	<key>APNEditabilityTypemask</key>
 	<integer>0</integer>
-	<key>DefaultWhenImsSwitchOff</key>
-	<integer>0</integer>
 	<key>Services</key>
 	<array>
 		<dict>
@@ -411,12 +403,12 @@
 			<string>Disable voicemail not reachable</string>
 		</dict>
 	</array>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
 	<key>EmergencyNumberExceptions</key>
 	<array>
 		<string>110</string>
 	</array>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>

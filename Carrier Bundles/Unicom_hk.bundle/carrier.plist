@@ -14,7 +14,7 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.cuniq.com</string>
+	<string>https://www.cuniq.com</string>
 	<key>SupportsSupplementaryServices</key>
 	<true/>
 	<key>VVMIgnoresIntlDataRoaming</key>
@@ -183,8 +183,6 @@
 		</dict>
 		<key>SMS</key>
 		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 			<key>SMSBundleToVoice</key>
 			<true/>
 			<key>SupportedDomains</key>
@@ -286,8 +284,6 @@
 	<string>none</string>
 	<key>ShowVolteSwitch</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>CellBroadcast</key>
@@ -561,25 +557,23 @@
 			<integer>1048625</integer>
 		</dict>
 		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>type-mask</key>
-			<integer>131072</integer>
-			<key>apn</key>
-			<string>ims</string>
+			<key>UseNetworkMTU</key>
+			<true/>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
 			<key>WaitForBringUpComplete</key>
 			<true/>
-			<key>UseNetworkMTU</key>
-			<true/>
-			<key>DefaultProtocolMask</key>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
 	</array>

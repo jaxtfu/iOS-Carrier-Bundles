@@ -20,6 +20,8 @@
 	<integer>1</integer>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+37125850113</string>
 	<key>AllowedServicesTypeMaskOnInternet</key>
@@ -51,14 +53,36 @@
 	<dict>
 		<key>Media</key>
 		<dict>
-			<key>EnableBandwidthSpecifiers</key>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>max-red</key>
+					<string>220</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>ch-aw-recv</key>
+					<string>0</string>
+					<key>maxptime</key>
+					<string>240</string>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
 			<true/>
 			<key>RTCPIntervalSeconds</key>
 			<integer>5</integer>
-			<key>IncludeSDPModeChangeCapability</key>
+			<key>EnableBandwidthSpecifiers</key>
 			<true/>
-			<key>PreferredAMRWBMode</key>
-			<integer>8</integer>
 		</dict>
 		<key>Signaling</key>
 		<dict>
@@ -167,8 +191,6 @@
 	<string>none</string>
 	<key>ShowClass0SMSFromField</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>+37125850111</string>
 	<key>HomeBundleIdentifier</key>
@@ -230,18 +252,16 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>32819</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>internet</string>
+			<key>type-mask</key>
+			<integer>32819</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -256,18 +276,16 @@
 			<integer>4</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>1048576</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>hos</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>

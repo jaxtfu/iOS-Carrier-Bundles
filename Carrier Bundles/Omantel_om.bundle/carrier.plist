@@ -21,10 +21,122 @@
 	<string>+9685001222</string>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32768</integer>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>Show4GSwitch</key>
+	<true/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>42202</string>
 	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Media</key>
+		<dict>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>15</integer>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>UseSDPTemplateWhenAnswering</key>
+			<true/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>IgnoreRegNotificationContactExpires</key>
+			<true/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>ussdEnabled</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<false/>
+			<key>SipTimers</key>
+			<dict>
+				<key>InviteResponseTimeout</key>
+				<integer>10000</integer>
+			</dict>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<integer>22</integer>
+			<key>AdditionalHeaders</key>
+			<dict>
+				<key>INVITE,INVITE:*</key>
+				<string>Feature-Caps: *;+g.3gpp.srvcc-alerting</string>
+			</dict>
+			<key>AlwaysUnsubscribeFromRegEvents</key>
+			<false/>
+			<key>SubscriptionTerminatedMeansRegistrationTerminated</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,5XX,6XX</string>
+			<key>DropRegistrationOnSRVCC</key>
+			<true/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>TriggerCSFBOnWaitForRingingTimeout</key>
+			<true/>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>45</integer>
+			<key>AlwaysAddPrivacyHeader</key>
+			<true/>
+			<key>DropRegistrationOnAirplaneModeToggle</key>
+			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>22</integer>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>RingingTimerSeconds</key>
+			<integer>45</integer>
+			<key>UseIPSec</key>
+			<true/>
+			<key>RegistrationExpirationSeconds</key>
+			<integer>7200</integer>
+			<key>AllowPCNIInAirplaneMode</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>TreatAllNotificationsAsPartial</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>conf_uri@ims.mnc002.mcc422.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportsOnDevicePhysicalSIMConvert</key>
@@ -70,6 +182,26 @@
 	</array>
 	<key>CarrierName</key>
 	<string>OMANTEL</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>AllowedProtocolMaskInRoamingUMTS</key>
+			<integer>1</integer>
+			<key>apn</key>
+			<string>taif</string>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
 	<key>PhoneAccountTransfer</key>
@@ -89,8 +221,8 @@
 		<key>SupportsFallbackToLegacyFlow</key>
 		<false/>
 	</dict>
-	<key>ShowTTY</key>
-	<false/>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>AllowsVoIP</key>
 	<true/>
 	<key>VoicemailPilotNumber</key>
@@ -158,10 +290,14 @@
 			<string>taif</string>
 			<key>username</key>
 			<string>taif</string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>taif</string>
 			<key>type-mask</key>
 			<integer>32817</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>password</key>
@@ -172,6 +308,20 @@
 			<string>mms</string>
 			<key>type-mask</key>
 			<integer>4</integer>
+		</dict>
+		<dict>
+			<key>AllowNoDNS</key>
+			<integer>1</integer>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>IMS</string>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>OTASoftwareUpdate</key>

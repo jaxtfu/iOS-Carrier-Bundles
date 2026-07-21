@@ -2,49 +2,119 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>ServerAddress</key>
+		<string>https://aes.ims.attmex.mx/entitlement/</string>
+	</dict>
+	<key>Enable4GByDefault</key>
+	<true/>
+	<key>OTASoftwareUpdate</key>
+	<dict>
+		<key>SoftwareUpdateOptInRequired</key>
+		<true/>
+	</dict>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>web.attmex.mx</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>ToolsConfiguration</key>
+	<dict>
+		<key>EnableFeedbackCollection</key>
+		<true/>
+	</dict>
 	<key>AllowEDGEEditing</key>
 	<true/>
-	<key>Services</key>
-	<array>
+	<key>RegistrationOptInRequired</key>
+	<true/>
+	<key>SupportsNITZ</key>
+	<true/>
+	<key>AllowAttachAPNEditing</key>
+	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<string>False</string>
+	<key>RemoteCardProvisioningSettings</key>
+	<dict>
+		<key>MatchingICCIDPrefixes</key>
+		<array>
+			<string>895205</string>
+		</array>
+		<key>CellularTrialPlan</key>
 		<dict>
-			<key>ServiceCode</key>
-			<string>*611</string>
-			<key>ServiceName</key>
-			<string>Atención a clientes</string>
+			<key>TrialEndPeriod</key>
+			<string>2018-09-15T13:59:00Z</string>
+			<key>TrialPlanType</key>
+			<string>Promotion</string>
+			<key>SupportsTrialPlan</key>
+			<true/>
+			<key>TrialStartPeriod</key>
+			<string>2018-04-01T00:00:00Z</string>
 		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string>911</string>
-			<key>ServiceName</key>
-			<string>Emergencias</string>
-		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string>*2473</string>
-			<key>ServiceName</key>
-			<string>Compra tiempo aire</string>
-		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string>*6262</string>
-			<key>ServiceName</key>
-			<string>Momentonos</string>
-		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string>*73273</string>
-			<key>ServiceName</key>
-			<string>Asist Ejecutiva</string>
-		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string>*767</string>
-			<key>ServiceName</key>
-			<string>Asistencia SOS</string>
-		</dict>
-	</array>
+		<key>ServerURL</key>
+		<string>ius.prod.ondemandconnectivity.com</string>
+		<key>ActivatingStateSubscriptionCheckTimerIntervals</key>
+		<array>
+			<integer>1800</integer>
+			<integer>3600</integer>
+			<integer>5400</integer>
+		</array>
+		<key>MinCompatibleWatchOS</key>
+		<string>4.3</string>
+		<key>SupportedSKUs</key>
+		<array>
+			<string>SKU_NA</string>
+		</array>
+		<key>ProvisioningMethod</key>
+		<string>CarrierFlow</string>
+		<key>SupportsFauxCard</key>
+		<false/>
+	</dict>
+	<key>VoicemailPilotNumber</key>
+	<string>*86</string>
+	<key>ShowDialAssist</key>
+	<false/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>00447786205094</string>
+	<key>WatchCustomerServicePhoneNumber</key>
+	<string>*611</string>
+	<key>OverrideOperatorWiFiName</key>
+	<string>AT&amp;T Wi-Fi</string>
+	<key>MMS</key>
+	<dict>
+		<key>MMSC</key>
+		<string>http://mms.att.com.mx</string>
+		<key>GroupModeEnabled</key>
+		<false/>
+		<key>MaxSMILDuration</key>
+		<integer>100</integer>
+		<key>Proxy</key>
+		<string>129.192.129.104:8080</string>
+		<key>Version</key>
+		<string>1.2</string>
+		<key>MaxMessageSize</key>
+		<integer>614400</integer>
+	</dict>
 	<key>EncryptedIdentity</key>
 	<dict>
 		<key>AnonymousUsername</key>
@@ -92,81 +162,12 @@ lbktFGXVcpRc6pW+QjEq4nerOd3InGMAJYBJyg==</string>
 		<key>KeyIdentifier</key>
 		<string>CertificateSerialNumber=02240B0CC9198A907A2210D61AA3063E</string>
 	</dict>
-	<key>MandatoryVerify</key>
-	<dict>
-		<key>SIMs</key>
-		<array/>
-	</dict>
-	<key>SupportsNITZ</key>
-	<true/>
-	<key>MyAccountURL</key>
-	<string>http://fun.att.mx</string>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
-	<key>EnableLTEAfterUpgrade</key>
-	<true/>
-	<key>WatchCustomerServicePhoneNumber</key>
-	<string>*611</string>
-	<key>APNEditabilityTypemask</key>
-	<integer>0</integer>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<false/>
-	</dict>
-	<key>MyAccountURLTitle</key>
-	<string>AT&amp;T</string>
-	<key>RegistrationOptInRequired</key>
-	<true/>
-	<key>NetworkEncryptionCiphers</key>
-	<dict>
-		<key>A5/3</key>
-		<true/>
-	</dict>
-	<key>ShowDialAssist</key>
-	<false/>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>33405</string>
-		<string>334050</string>
-		<string>22201_ID-8952050</string>
-	</array>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>00447786205094</string>
-	<key>CarrierName</key>
-	<string>AT&amp;T</string>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
-	<key>VoicemailPilotNumber</key>
-	<string>*86</string>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Mexico</string>
-	<key>MMS</key>
-	<dict>
-		<key>MMSC</key>
-		<string>http://mms.att.com.mx</string>
-		<key>GroupModeEnabled</key>
-		<false/>
-		<key>MaxSMILDuration</key>
-		<integer>100</integer>
-		<key>Proxy</key>
-		<string>129.192.129.104:8080</string>
-		<key>Version</key>
-		<string>1.2</string>
-		<key>MaxMessageSize</key>
-		<integer>614400</integer>
-	</dict>
-	<key>AllowAttachAPNEditing</key>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
+	<key>ShowVolteSwitch</key>
 	<true/>
-	<key>APNEditabilityTypemaskNew</key>
-	<integer>49</integer>
-	<key>SupportedPLMNs</key>
-	<array>
-		<string>33403</string>
-		<string>334090</string>
-	</array>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -174,10 +175,14 @@ lbktFGXVcpRc6pW+QjEq4nerOd3InGMAJYBJyg==</string>
 			<string></string>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>web.attmex.mx</string>
 			<key>type-mask</key>
-			<integer>1</integer>
+			<integer>32769</integer>
+			<key>UseNetworkMTU</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>password</key>
@@ -196,14 +201,237 @@ lbktFGXVcpRc6pW+QjEq4nerOd3InGMAJYBJyg==</string>
 			<string></string>
 			<key>apn</key>
 			<string>modem.attmex.mx</string>
+			<key>UseNetworkMTU</key>
+			<true/>
 			<key>type-mask</key>
 			<integer>48</integer>
 		</dict>
+		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>password</key>
+			<string></string>
+			<key>NoCellularReconnectCauseCodes</key>
+			<array>
+				<dict>
+					<key>CauseCodes</key>
+					<array>
+						<integer>27</integer>
+					</array>
+					<key>RecoversOnAirplaneMode</key>
+					<true/>
+					<key>NumTriesAllowed</key>
+					<integer>1</integer>
+					<key>Type</key>
+					<string>3GPP</string>
+				</dict>
+			</array>
+			<key>SupportSwitchOver</key>
+			<true/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
 	</array>
-	<key>OTASoftwareUpdate</key>
+	<key>APNEditabilityTypemaskNew</key>
+	<integer>49</integer>
+	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
+	<integer>131072</integer>
+	<key>IMSConfig</key>
 	<dict>
-		<key>SoftwareUpdateOptInRequired</key>
+		<key>Media</key>
+		<dict>
+			<key>UseSDPTemplateWhenAnswering</key>
+			<true/>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>SuppressOctetAlignAttributeForBECodecs</key>
+			<true/>
+			<key>EnableRTCPExtendedReports</key>
+			<false/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>InactivityTimerRTCPSeconds</key>
+			<integer>36000</integer>
+			<key>ModeSetAMRWB</key>
+			<string>0,1,2</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>UseSDPTemplateForAllInvites</key>
+			<false/>
+			<key>OriginUsername</key>
+			<string></string>
+			<key>AllowHoldMusic</key>
+			<true/>
+			<key>ModeSetAMRNB</key>
+			<string>7</string>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>EnableLastAccessNetworkInfo</key>
+			<false/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>CSFBOnAccessBarred</key>
+			<false/>
+			<key>UseFakeSAsForDeregistration</key>
+			<true/>
+			<key>ForbiddenRegistrationErrorCodes</key>
+			<string></string>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>UseOutgoingSipUri</key>
+			<true/>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>AlwaysUnsubscribeFromRegEvents</key>
+			<true/>
+			<key>AllowResponsesOverDifferentTransport</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,6XX</string>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>40</integer>
+			<key>SendPreferredServiceInInvite</key>
+			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>Preconditions</key>
+			<string>None</string>
+			<key>UseIPSec</key>
+			<true/>
+			<key>RingingTimerSeconds</key>
+			<integer>45</integer>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>SendConferenceSubscribeAfterRefers</key>
+			<true/>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<false/>
+			<key>conferenceServer</key>
+			<string>sip:ALU_CONF@ims.attmex.mx</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
+	<key>APNEditabilityTypemask</key>
+	<integer>0</integer>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>PushSettings</key>
+	<dict>
+		<key>MultiSIMTopic</key>
+		<string>com.attmx.ent.multi-sim</string>
+	</dict>
+	<key>Services</key>
+	<array>
+		<dict>
+			<key>ServiceCode</key>
+			<string>*611</string>
+			<key>ServiceName</key>
+			<string>Atención a clientes</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>911</string>
+			<key>ServiceName</key>
+			<string>Emergencias</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>*2473</string>
+			<key>ServiceName</key>
+			<string>Compra tiempo aire</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>*6262</string>
+			<key>ServiceName</key>
+			<string>Momentonos</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>*73273</string>
+			<key>ServiceName</key>
+			<string>Asist Ejecutiva</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>*767</string>
+			<key>ServiceName</key>
+			<string>Asistencia SOS</string>
+		</dict>
+	</array>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
+	<key>EnableLTEAfterUpgrade</key>
+	<true/>
+	<key>CarrierName</key>
+	<string>AT&amp;T</string>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>MyAccountURL</key>
+	<string>https://fun.att.mx</string>
+	<key>SupportedPLMNs</key>
+	<array>
+		<string>33403</string>
+		<string>334090</string>
+	</array>
+	<key>MyAccountURLTitle</key>
+	<string>AT&amp;T</string>
+	<key>MandatoryVerify</key>
+	<dict>
+		<key>SIMs</key>
+		<array/>
+	</dict>
+	<key>NetworkEncryptionCiphers</key>
+	<dict>
+		<key>A5/3</key>
 		<true/>
 	</dict>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>33405</string>
+		<string>334050</string>
+		<string>22201_ID-8952050</string>
+	</array>
 </dict>
 </plist>

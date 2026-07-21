@@ -14,7 +14,7 @@
 			<key>Title</key>
 			<string>CTM iPhone Portal</string>
 			<key>URL</key>
-			<string>http://apple.cyberctm.com/</string>
+			<string>https://apple.cyberctm.com/</string>
 		</dict>
 	</array>
 	<key>MandatoryVerify</key>
@@ -30,17 +30,14 @@
 	<true/>
 	<key>APNEditabilityTypemask</key>
 	<integer>53</integer>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
 	<key>AllowsHighQualityVideoOver3G</key>
 	<true/>
-	<key>RoamingVoicemailPilotNumber</key>
-	<string>+85366001234</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32769</integer>
+	<key>RoamingVoicemailPilotNumber</key>
+	<string>+85366001234</string>
 	<key>StockSymboli</key>
 	<array>
 		<dict>
@@ -72,14 +69,126 @@
 		<string>45501</string>
 		<string>45504</string>
 	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Media</key>
+		<dict>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>0</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string></string>
+			<key>AllowEarlyMediaToOverrideLocalRingback</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>120</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>120</integer>
+			<key>ussdEnabled</key>
+			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>TemporarilyUnavailable</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>480</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+			</dict>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>None</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting</string>
+			</dict>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc001.mcc455.pub.3gppnetwork.org</string>
+			<key>BsfPort</key>
+			<integer>80</integer>
+			<key>imsFeatureDependency</key>
+			<true/>
+			<key>NafPort</key>
+			<integer>80</integer>
+			<key>SupportsCLIR</key>
+			<true/>
+			<key>SupportCFMediaTag</key>
+			<string>true</string>
+			<key>supported</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/vnd.etsi.simservs+xml</string>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>404,501,502,503,504</string>
+			<key>SupportsCFErasure</key>
+			<false/>
+			<key>ServeMultipleCDIVRulesPerRequest</key>
+			<false/>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>BsfHost</key>
+			<string>bsf.mnc001.mcc455.pub.3gppnetwork.org</string>
+			<key>SupportsCW</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc001.mcc455.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>CarrierEntitlements</key>
 	<dict>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
+		<true/>
+		<key>SupportSecureIntent</key>
+		<true/>
 		<key>SupportedEntitlements</key>
-		<integer>23553</integer>
+		<integer>31745</integer>
 		<key>ProtocolVersion</key>
 		<string>2</string>
-		<key>ServerAddress</key>
-		<string>https://entitlement.ctm.net</string>
 		<key>Authentication</key>
 		<dict>
 			<key>Type</key>
@@ -87,13 +196,18 @@
 			<key>Username</key>
 			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
 		</dict>
-		<key>SupportedActions</key>
-		<array>
-			<string>AuthenticateTrustFlag</string>
-			<string>TransferSIMService</string>
-		</array>
+		<key>SupportsFallbackToLegacyFlow</key>
+		<false/>
+		<key>ServerAddress</key>
+		<string>https://entitlement.ctm.net</string>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<true/>
 		<key>UpdatePeriod</key>
 		<integer>24</integer>
+		<key>SupportedActions</key>
+		<array>
+			<string>TransferSIMService</string>
+		</array>
 	</dict>
 	<key>ShowDialAssist</key>
 	<true/>
@@ -101,10 +215,50 @@
 	<string>+447860015019</string>
 	<key>CarrierName</key>
 	<string>CTM</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string></string>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>LocalInstallSMDPURL</key>
+		<string>ctm.eastcompeace.com</string>
+		<key>TransferErrorCodes</key>
+		<dict>
+			<key>BillingErrors</key>
+			<array>
+				<string>5009</string>
+			</array>
+			<key>IneligibleAccountErrors</key>
+			<array>
+				<string>5011</string>
+			</array>
+			<key>CarrierDefaultErrors</key>
+			<array>
+				<string>5003</string>
+			</array>
+			<key>MaintenanceErrors</key>
+			<array>
+				<string>5021</string>
+			</array>
+		</dict>
+	</dict>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>6000</string>
 	<key>HomeBundleIdentifier</key>
@@ -176,8 +330,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>ctm-mobile</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>32817</integer>
 			<key>AllowedProtocolMask</key>

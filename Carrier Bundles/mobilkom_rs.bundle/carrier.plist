@@ -104,8 +104,6 @@
 				<key>LTE</key>
 				<false/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>Voice</key>
 		<dict>
@@ -117,12 +115,14 @@
 	</dict>
 	<key>CarrierEntitlements</key>
 	<dict>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
+		<true/>
+		<key>SupportSecureIntent</key>
+		<true/>
 		<key>SupportedEntitlements</key>
-		<integer>5121</integer>
+		<integer>13313</integer>
 		<key>ProtocolVersion</key>
 		<string>2</string>
-		<key>ServerAddress</key>
-		<string>https://esim-es-open-prod-aoners.esimcloud.net/aoners/prod/executeAppleActions</string>
 		<key>Authentication</key>
 		<dict>
 			<key>Type</key>
@@ -130,13 +130,17 @@
 			<key>Username</key>
 			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
 		</dict>
+		<key>ServerAddress</key>
+		<string>https://esim-es-open-prod-aoners.esimcloud.net/aoners/prod/executeAppleActions</string>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<true/>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
 		<key>SupportedActions</key>
 		<array>
 			<string>TransferSIMService</string>
 			<string>AuthenticateTrustFlag</string>
 		</array>
-		<key>UpdatePeriod</key>
-		<integer>24</integer>
 	</dict>
 	<key>Show3GSwitchWith4G</key>
 	<true/>
@@ -164,8 +168,22 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>LocalInstallSMDPURL</key>
+		<string>https://mka.prod.ondemandconnectivity.com</string>
+		<key>TransferErrorCodes</key>
+		<dict>
+			<key>MaintenanceErrors</key>
+			<array>
+				<string>300</string>
+			</array>
+		</dict>
+		<key>MinCompatibleOS</key>
+		<string>26.5</string>
+		<key>SupportsFallbackToLegacyFlow</key>
+		<false/>
+	</dict>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -253,6 +271,8 @@
 	<dict>
 		<key>MultiSIMTopic</key>
 		<string>rs.a1.ios.esrv</string>
+		<key>CellularPlanTransferTopic</key>
+		<string>a1.rs.ios.st.esrv.2025</string>
 	</dict>
 	<key>apns</key>
 	<array>

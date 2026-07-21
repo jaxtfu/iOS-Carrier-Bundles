@@ -19,6 +19,8 @@
 	<true/>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+393505999678</string>
 	<key>StatusBarImages</key>
@@ -173,8 +175,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>xcap.kena.it</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>

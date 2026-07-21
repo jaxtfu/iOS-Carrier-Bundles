@@ -53,12 +53,12 @@
 			<string>ONE</string>
 		</dict>
 	</array>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>738002</string>
 	</array>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
 	<key>CarrierName</key>
 	<string>ONE</string>
 	<key>EncryptedIdentity</key>
@@ -108,28 +108,24 @@ aUdA2Lt8voem0Y48</string>
 	</array>
 	<key>SupportsNITZ</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>RegistrationOptInRequired</key>
-	<true/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>27753</string>
 	<key>apns</key>
 	<array>
 		<dict>
 			<key>apn</key>
 			<string>Onecomm</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>49</integer>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 		</dict>
 	</array>
+	<key>RegistrationOptInRequired</key>
+	<true/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>27753</string>
 </dict>
 </plist>

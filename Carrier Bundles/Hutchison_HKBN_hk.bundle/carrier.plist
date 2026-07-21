@@ -43,19 +43,6 @@
 			<integer>1</integer>
 		</dict>
 	</dict>
-	<key>SupportsUserBusyCauseCode</key>
-	<true/>
-	<key>OverrideDisplayTextLowPriority</key>
-	<true/>
-	<key>StockSymboli</key>
-	<array>
-		<dict>
-			<key>name</key>
-			<string>HKBN Ltd.</string>
-			<key>symbol</key>
-			<string>1310.HK</string>
-		</dict>
-	</array>
 	<key>CellBroadcast</key>
 	<dict>
 		<key>SoundIsMutableInRelayMode</key>
@@ -193,6 +180,19 @@
 			</dict>
 		</array>
 	</dict>
+	<key>OverrideDisplayTextLowPriority</key>
+	<true/>
+	<key>StockSymboli</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>HKBN Ltd.</string>
+			<key>symbol</key>
+			<string>1310.HK</string>
+		</dict>
+	</array>
+	<key>SupportsUserBusyCauseCode</key>
+	<true/>
 	<key>EmergencyNumbers</key>
 	<dict>
 		<key>454</key>
@@ -207,18 +207,18 @@
 	</dict>
 	<key>AllowEDGEEditing</key>
 	<true/>
-	<key>SupportsNITZ</key>
-	<true/>
 	<key>OverrideNoAlphaTagSendUSSD</key>
 	<true/>
+	<key>SupportsNITZ</key>
+	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+85263455477</string>
 	<key>OverrideCarrierMenuTo</key>
 	<true/>
 	<key>ShowDialAssist</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>UseSTKCCReject</key>
 	<true/>
 	<key>OverrideOperatorWiFiName</key>
@@ -378,8 +378,6 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>131072</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>2</integer>
 					<key>SupportSwitchOver</key>
 					<true/>
 					<key>username</key>
@@ -418,15 +416,6 @@
 	<integer>49</integer>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Media</key>
-		<dict>
-			<key>RTCPIntervalSeconds</key>
-			<integer>5</integer>
-			<key>RingbackTone</key>
-			<string>HK</string>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-		</dict>
 		<key>Signaling</key>
 		<dict>
 			<key>InviteErrorResponsesToTriggerCSFB</key>
@@ -476,6 +465,52 @@
 			<key>conferenceServer</key>
 			<string>sip:19099@ims.mnc003.mcc454.3gppnetwork.org</string>
 		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>GSM</key>
+				<false/>
+				<key>LTE</key>
+				<true/>
+				<key>UMTS</key>
+				<false/>
+			</dict>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RingbackTone</key>
+			<string>HK</string>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-wb</string>
+					<key>max-red</key>
+					<string>240</string>
+				</dict>
+			</dict>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
 		<key>EnableWiFiCallingWithoutEntitlement</key>
 		<true/>
 		<key>Voice</key>
@@ -493,6 +528,8 @@
 	</dict>
 	<key>APNEditabilityTypemask</key>
 	<integer>0</integer>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
 	<key>CoreOSNetworkingStack</key>
 	<dict>
 		<key>ECN</key>
@@ -518,6 +555,8 @@
 	</array>
 	<key>CarrierName</key>
 	<string>HKBN</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
 	<string>https://www.hkbn.net/</string>
 	<key>SupportedPLMNs</key>

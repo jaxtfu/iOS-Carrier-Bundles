@@ -17,17 +17,19 @@
 			<key>Username</key>
 			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
 		</dict>
+		<key>SupportCrossPlatformSIMTransfer</key>
+		<true/>
 		<key>SupportedAuthorizationTokens</key>
 		<integer>2</integer>
 		<key>ServerAddress</key>
 		<string>https://entitlement-apl.free-mobile.fr</string>
-		<key>SupportPhysicalSIMtoESIMTransfer</key>
-		<true/>
 		<key>SupportedActions</key>
 		<array>
 			<string>TransferSIMService</string>
 			<string>AuthenticateTrustFlag</string>
 		</array>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<true/>
 		<key>SupportsOnDevicePhysicalSIMConvert</key>
 		<true/>
 	</dict>
@@ -40,12 +42,10 @@
 	<dict>
 		<key>3GPP</key>
 		<dict>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>1</integer>
-			<key>password</key>
-			<string></string>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
+			<key>password</key>
+			<string></string>
 			<key>PcscfAddressRequired</key>
 			<false/>
 			<key>username</key>
@@ -54,8 +54,8 @@
 			<integer>1</integer>
 			<key>apn</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>PhoneAccountTransfer</key>
@@ -105,12 +105,12 @@
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>2046</string>
 	<key>ShowDialAssist</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>Show3GSwitchWith4G</key>
 	<true/>
 	<key>com.apple.voicemail.imap</key>
@@ -261,34 +261,30 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>32819</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>free</string>
+			<key>type-mask</key>
+			<integer>32819</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>4</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>free</string>
+			<key>type-mask</key>
+			<integer>4</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -299,8 +295,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
@@ -311,18 +305,16 @@
 			<integer>2</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>262144</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>262144</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>sos</string>
+			<key>type-mask</key>
+			<integer>262144</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
 		</dict>
@@ -333,8 +325,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>hos</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
@@ -347,15 +337,6 @@
 	<integer>131072</integer>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Media</key>
-		<dict>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-			<key>PreferredAMRWBMode</key>
-			<integer>8</integer>
-		</dict>
 		<key>Signaling</key>
 		<dict>
 			<key>UseIPSec</key>
@@ -394,6 +375,48 @@
 			<key>UseCIDUrlInPIDF</key>
 			<true/>
 		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc015.mcc208.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<true/>
+			</dict>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+		</dict>
 		<key>XCAP</key>
 		<dict>
 			<key>SupportsCW</key>
@@ -415,27 +438,19 @@
 			<key>imsFeatureDependency</key>
 			<true/>
 		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>SendConferenceSubscribeInNewDialog</key>
-			<true/>
-			<key>conferenceServer</key>
-			<string>sip:mmtel@conf-factory.ims.mnc015.mcc208.3gppnetwork.org</string>
-		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
 		<key>Voice</key>
 		<dict>
 			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
 			<true/>
 			<key>E911OverITechSupported</key>
 			<false/>
+			<key>EnableVolteByDefault</key>
+			<true/>
 			<key>endNonEmergencyCalls</key>
 			<true/>
 		</dict>
-	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
@@ -454,8 +469,6 @@
 		</dict>
 		<key>ShowBusinessMessagingSwitch</key>
 		<true/>
-		<key>SupportsE2EE</key>
-		<false/>
 		<key>EnableRCSByDefault</key>
 		<true/>
 	</dict>
@@ -475,7 +488,7 @@
 	<key>CarrierName</key>
 	<string>Free</string>
 	<key>MyAccountURL</key>
-	<string>http://mobile.free.fr</string>
+	<string>https://mobile.free.fr</string>
 	<key>SupportedPLMNs</key>
 	<array>
 		<string>20800</string>

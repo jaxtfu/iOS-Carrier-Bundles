@@ -125,8 +125,6 @@
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>OverrideOperatorWiFiName</key>
 	<string>Celcom Wifi Call</string>
 	<key>MMS</key>
@@ -284,8 +282,6 @@
 					<string></string>
 					<key>apn</key>
 					<string>celcom3g</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>type-mask</key>
 					<integer>32821</integer>
 					<key>AllowedProtocolMask</key>
@@ -298,8 +294,6 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>131072</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>SupportSwitchOver</key>
 					<true/>
 					<key>username</key>
@@ -310,18 +304,16 @@
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>1048576</integer>
 					<key>password</key>
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>1048576</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
 					<key>apn</key>
 					<string>xcap</string>
+					<key>type-mask</key>
+					<integer>1048576</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
@@ -332,8 +324,6 @@
 					<string></string>
 					<key>apn</key>
 					<string>sos</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>type-mask</key>
 					<integer>262144</integer>
 					<key>AllowedProtocolMask</key>
@@ -348,8 +338,6 @@
 	<integer>49</integer>
 	<key>IMSConfig</key>
 	<dict>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<true/>
 		<key>Signaling</key>
 		<dict>
 			<key>InviteErrorResponsesToTriggerCSFB</key>
@@ -407,6 +395,48 @@
 			<key>UseIPSec</key>
 			<true/>
 		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>TreatAllNotificationsAsPartial</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc019.mcc502.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>GSM</key>
+				<false/>
+				<key>LTE</key>
+				<true/>
+				<key>UMTS</key>
+				<false/>
+			</dict>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>112</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-wb</string>
+				</dict>
+			</dict>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+		</dict>
 		<key>XCAP</key>
 		<dict>
 			<key>NafHost</key>
@@ -436,6 +466,8 @@
 			<key>SupportsCW</key>
 			<true/>
 		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
 		<key>Voice</key>
 		<dict>
 			<key>E911OverITechSupported</key>
@@ -443,35 +475,10 @@
 			<key>EnableVolteByDefault</key>
 			<true/>
 		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>TreatAllNotificationsAsPartial</key>
-			<true/>
-			<key>conferenceServer</key>
-			<string>sip:mmtel@conf-factory.ims.mnc019.mcc502.3gppnetwork.org</string>
-		</dict>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>SupportedDomains</key>
-			<dict>
-				<key>GSM</key>
-				<false/>
-				<key>LTE</key>
-				<true/>
-				<key>UMTS</key>
-				<false/>
-			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
-		</dict>
 	</dict>
 	<key>SMSSettings</key>
 	<dict>
 		<key>ShowClass0SMSInLockScreen</key>
-		<true/>
-		<key>TransportFallback</key>
 		<true/>
 	</dict>
 	<key>TetheringPhoneNumber</key>

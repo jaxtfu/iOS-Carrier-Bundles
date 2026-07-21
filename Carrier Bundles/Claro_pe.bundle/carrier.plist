@@ -2,8 +2,497 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>SupportedEntitlements</key>
+		<integer>1041</integer>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>ServerAddress</key>
+		<string>https://aes.mnc010.mcc716.pub.3gppnetwork.org:44314/entitlement/</string>
+	</dict>
+	<key>EmergencyCalling</key>
+	<dict>
+		<key>EmergencyNumbers</key>
+		<array>
+			<dict>
+				<key>Number</key>
+				<string>911</string>
+				<key>Category</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>Number</key>
+				<string>112</string>
+				<key>Category</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>Category</key>
+				<integer>1</integer>
+				<key>PreferredEmergencyNumber</key>
+				<true/>
+				<key>Number</key>
+				<string>105</string>
+			</dict>
+		</array>
+	</dict>
+	<key>OTASoftwareUpdate</key>
+	<dict>
+		<key>SoftwareUpdateOptInRequired</key>
+		<true/>
+	</dict>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>AllowedProtocolMaskInRoamingUMTS</key>
+			<integer>1</integer>
+			<key>apn</key>
+			<string>claro.pe</string>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SupportsUserBusyCauseCode</key>
+	<true/>
+	<key>StockSymboli</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>symbol</key>
+			<string>AMX</string>
+		</dict>
+	</array>
+	<key>ShowLTEWarningUnsupportedCarrier</key>
+	<false/>
+	<key>VoicemailPilotNumber</key>
+	<string>131</string>
+	<key>RegistrationOptInRequired</key>
+	<true/>
+	<key>SupportsNITZ</key>
+	<true/>
+	<key>RemoteCardProvisioningSettings</key>
+	<dict>
+		<key>MatchingICCIDPrefixes</key>
+		<array>
+			<string>895110</string>
+		</array>
+		<key>CellularTrialPlan</key>
+		<dict>
+			<key>TrialEndPeriod</key>
+			<string>2021-03-13T23:59:59Z</string>
+			<key>TrialPlanType</key>
+			<string>Promotion</string>
+			<key>SupportsTrialPlan</key>
+			<true/>
+			<key>TrialStartPeriod</key>
+			<string>2020-03-13T00:00:00Z</string>
+		</dict>
+		<key>ServerURL</key>
+		<string>tip.prod.ondemandconnectivity.com</string>
+		<key>ActivatingStateSubscriptionCheckTimerIntervals</key>
+		<array>
+			<integer>1800</integer>
+		</array>
+		<key>MinCompatibleWatchOS</key>
+		<string>6.2</string>
+		<key>SupportedSKUs</key>
+		<array>
+			<string>SKU_NA</string>
+			<string>SKU_POST2018_ALL</string>
+		</array>
+		<key>ProvisioningMethod</key>
+		<string>CarrierFlow</string>
+	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>ShowDialAssist</key>
+	<false/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>97660</string>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Claro Wi-Fi</string>
+	<key>TechSettings</key>
+	<dict>
+		<key>WiFiCallingIdentityProtectionMethod</key>
+		<string>EncryptedIdentity</string>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA2-256</string>
+						</array>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>AES-256</string>
+						</array>
+						<key>DHGroup</key>
+						<integer>14</integer>
+						<key>Lifetime</key>
+						<integer>80000</integer>
+					</dict>
+				</array>
+				<key>InstallPolicies</key>
+				<true/>
+				<key>ReplayWindowSize</key>
+				<integer>12</integer>
+			</dict>
+		</dict>
+		<key>WifiCallingAllowedInRoaming</key>
+		<false/>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>cellular</string>
+		</dict>
+		<key>5wiServiceMask</key>
+		<integer>3</integer>
+		<key>EPDGResolutionFallbackEnabled</key>
+		<true/>
+		<key>SupportCallHandover</key>
+		<true/>
+		<key>TechPolicies</key>
+		<array>
+			<dict>
+				<key>policy</key>
+				<string>TRUE</string>
+				<key>serviceMask</key>
+				<integer>131072</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>TRUE</string>
+				<key>serviceMask</key>
+				<integer>1048576</integer>
+			</dict>
+		</array>
+		<key>ExtraConfigurationAttributeRequestv4</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16389</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv4</string>
+				<key>Type</key>
+				<string>IPv4Address</string>
+			</dict>
+		</array>
+		<key>WiFiCallingControlsAlliWLanServices</key>
+		<true/>
+		<key>IKE</key>
+		<dict>
+			<key>NATTKeepAliveEnabled</key>
+			<true/>
+			<key>DeadPeerDetectionEnabled</key>
+			<false/>
+			<key>DeadPeerDetectionMaxRetries</key>
+			<integer>4</integer>
+			<key>DeadPeerDetectionInterval</key>
+			<integer>600</integer>
+			<key>LocalIdentifier</key>
+			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
+			<key>NATTKeepAliveOffload</key>
+			<true/>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-256</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-256</string>
+					<key>DHGroup</key>
+					<integer>14</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>87000</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-256</string>
+				</dict>
+			</array>
+			<key>RemoteAddress</key>
+			<string>epdg.ims.mnc010.mcc716.pub.3gppnetwork.org</string>
+			<key>DeadPeerDetectionRetryInterval</key>
+			<integer>10</integer>
+		</dict>
+	</dict>
+	<key>EncryptedIdentity</key>
+	<dict>
+		<key>AnonymousUsername</key>
+		<string>anonymous</string>
+		<key>Certificate</key>
+		<string>MIIG0zCCBbugAwIBAgIQBvT9AEiMWh41zFUtWG+XJDANBgkqhkiG9w0BAQsFADBZ
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMTMwMQYDVQQDEypE
+aWdpQ2VydCBHbG9iYWwgRzIgVExTIFJTQSBTSEEyNTYgMjAyMCBDQTEwHhcNMjUw
+OTAxMDAwMDAwWhcNMjYwODMxMjM1OTU5WjBfMQswCQYDVQQGEwJQRTENMAsGA1UE
+BxMETGltYTEiMCAGA1UEChMZQU1FUklDQSBNT1ZJTCBQRVJVIFMuQS5DLjEdMBsG
+A1UEAxMUY29yZWFhYS5jbGFyby5jb20ucGUwggEiMA0GCSqGSIb3DQEBAQUAA4IB
+DwAwggEKAoIBAQDgmYUeE0tYuss6qVQoRdo8jYFhE7zOOWa6ofHCFdqSEem43YvZ
+R0rZ1JnoXAoHPR9bTXDO+5W14SWuSsIT/D0qhnWVjXLgoSjWTMCg15rwh0S2AO6Z
+8CNPUumccy7NhFJS/ZMYzek0WcgLiIrcBfGz3YbzjDE/K0VoM2uGrJ0cpCfuxjHk
+Nd/b5M5P1WNIAem6TWTt31veK0HeDmL1Nw+UgyYEQsbI8nxmZxZEYzVQgFt4kLSI
+qbeSZlir5ZH8ID4eMyx8MTAGw0W9jegSiYjTKgtT3buLN19XV/eIROLkMqRLv22l
+FZmi2Re9TUEIEUztW6yXz4AV8CgIzV7bCAL/AgMBAAGjggOPMIIDizAfBgNVHSME
+GDAWgBR0hYDAZsffN97PvSk3qgMdvu3NFzAdBgNVHQ4EFgQUEAK0bggPfh66UkGR
+DYGOk8LHCQswHwYDVR0RBBgwFoIUY29yZWFhYS5jbGFyby5jb20ucGUwPgYDVR0g
+BDcwNTAzBgZngQwBAgIwKTAnBggrBgEFBQcCARYbaHR0cDovL3d3dy5kaWdpY2Vy
+dC5jb20vQ1BTMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYI
+KwYBBQUHAwIwgZ8GA1UdHwSBlzCBlDBIoEagRIZCaHR0cDovL2NybDMuZGlnaWNl
+cnQuY29tL0RpZ2lDZXJ0R2xvYmFsRzJUTFNSU0FTSEEyNTYyMDIwQ0ExLTEuY3Js
+MEigRqBEhkJodHRwOi8vY3JsNC5kaWdpY2VydC5jb20vRGlnaUNlcnRHbG9iYWxH
+MlRMU1JTQVNIQTI1NjIwMjBDQTEtMS5jcmwwgYcGCCsGAQUFBwEBBHsweTAkBggr
+BgEFBQcwAYYYaHR0cDovL29jc3AuZGlnaWNlcnQuY29tMFEGCCsGAQUFBzAChkVo
+dHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5jb20vRGlnaUNlcnRHbG9iYWxHMlRMU1JT
+QVNIQTI1NjIwMjBDQTEtMS5jcnQwDAYDVR0TAQH/BAIwADCCAX0GCisGAQQB1nkC
+BAIEggFtBIIBaQFnAHUA1219ENGn9XfCx+lf1wC/+YLJM1pl4dCzAXMXwMjFaXcA
+AAGZBbCntAAABAMARjBEAiB4u2NMmbKfAip8mgRmBVsCtaxJwSV8gXv5BcPjcGsd
+FQIgHd9EJ7Rg1QKh0s6LUAUv54WTmQRPr0//RqjB+buB4FMAdgDCMX5XRRmjRe5/
+ON6ykEHrx8IhWiK/f9W1rXaa2Q5SzQAAAZkFsKffAAAEAwBHMEUCIHtoKWuejBQm
+p0YyitKT9O70dWl58iTVMEhIGaamIveKAiEAlOjec30xgYaFsGu826Gtz/cmvpK1
+glv0mLjks+fYLsAAdgCUTkOH+uzB74HzGSQmqBhlAcfTXzgCAT9yZ31VNy4Z2AAA
+AZkFsKfwAAAEAwBHMEUCIGofoaxYpa5IE5QcL0R1rsf5+tU8WfOD0XkD4Fxv27Cu
+AiEAtrqGBoAfnU4zLot0pQP+HrXDtUD4xlwPh1dvoVEQGAkwDQYJKoZIhvcNAQEL
+BQADggEBACNShYXu/qDbvGO09P9Geo/N8JOg6LGP1tGiBLi0FvAYu3IttRpKll1O
+LymvcaTBc+NnTgWmQQaEh+x4CrnYSjqySUuvi/axFvWdbk5q/hySpu8uuvFTaLO8
+7/ePvhwziXhN0ocfGD5+4Rbsl6tKwLQEiQAFh6/i7v9Y7jGPjx9cS4scNQ24FmlS
+waqn/0dmOnN/iSwKADJLN6IwnpPSVvlNhlj53ClN8Wja7GQhdVIuLaoMSbTADQI9
+YUJL+tgw6dza3GxYAQiVhT1ourBoTRl4uwjaMB2ABtBILhNkSF3Iu9hVzSZOdl1f
+PdgNrmJo5Hkahl7lhnTEltg3ePRzJNA=</string>
+		<key>UpdateURL</key>
+		<string>https://coreaaa.claro.com.pe/vowifi/validarCertif</string>
+		<key>KeyIdentifier</key>
+		<string>CertificateSerialNumber=06f4fd00488c5a1e35cc552d586f9724</string>
+	</dict>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.Peru</string>
 	<key>MaxBluetoothModemConnections</key>
 	<integer>5</integer>
+	<key>DataIndicatorOverrideForLTE</key>
+	<string>4G</string>
+	<key>ShowVolteSwitch</key>
+	<true/>
+	<key>apns</key>
+	<array>
+		<dict>
+			<key>type-mask</key>
+			<integer>1081393</integer>
+			<key>password</key>
+			<string>claro</string>
+			<key>tech-type-mask</key>
+			<integer>1048576</integer>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
+			<key>username</key>
+			<string>claro</string>
+			<key>apn</key>
+			<string>claro.pe</string>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>131072</integer>
+			<key>SupportSwitchOver</key>
+			<true/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>sos</string>
+			<key>type-mask</key>
+			<integer>262144</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>UseIPSec</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,6XX</string>
+			<key>RegSubscriptionExpirationSeconds</key>
+			<string>259200</string>
+			<key>AllowResponsesOverDifferentTransport</key>
+			<false/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>90</integer>
+			<key>MaxUdpMessageSize</key>
+			<integer>1300</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>90</integer>
+			<key>EmergencyURNs</key>
+			<dict>
+				<key>105</key>
+				<string>urn:service:sos.police</string>
+				<key>112</key>
+				<string>urn:service:sos.police</string>
+				<key>911</key>
+				<string>urn:service:sos.police</string>
+			</dict>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>UseOutgoingSipUri</key>
+			<true/>
+			<key>RegistrationExpirationSeconds</key>
+			<integer>3600</integer>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>SessionExpiresSeconds</key>
+			<integer>1800</integer>
+			<key>UseFakeSAsForDeregistration</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc010.mcc716.3gppnetwork.org</string>
+		</dict>
+		<key>EnableWiFiCallingByDefault</key>
+		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>InactivityTimerRTCPSeconds</key>
+			<integer>25</integer>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>30</integer>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>106</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>3</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc010.mcc716.pub.3gppnetwork.org</string>
+			<key>SupportsCB</key>
+			<true/>
+			<key>BsfPort</key>
+			<integer>8080</integer>
+			<key>imsFeatureDependency</key>
+			<true/>
+			<key>NafPort</key>
+			<integer>8080</integer>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>supported</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>400,403,404,500,501,502,503,504</string>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>BsfHost</key>
+			<string>bsf.ims.mnc010.mcc716.pub.3gppnetwork.org</string>
+			<key>SupportsCW</key>
+			<false/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverITechSupported</key>
+			<false/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>SuppressSimToolkitSendShortMessageNotifications</key>
+	<true/>
+	<key>SMSSettings</key>
+	<dict>
+		<key>TransportFallback</key>
+		<false/>
+	</dict>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>PushSettings</key>
+	<dict>
+		<key>MultiSIMTopic</key>
+		<string>com.clarope.ent.multi-sim</string>
+	</dict>
 	<key>Services</key>
 	<array>
 		<dict>
@@ -79,36 +568,12 @@
 			<string>Hospital</string>
 		</dict>
 	</array>
-	<key>DataIndicatorOverrideForLTE</key>
-	<string>4G</string>
-	<key>SuppressSimToolkitSendShortMessageNotifications</key>
-	<true/>
-	<key>ShowCallerIDSwitch</key>
-	<false/>
-	<key>SupportsNITZ</key>
-	<true/>
-	<key>MyAccountURL</key>
-	<string>http://www.claro.com.pe</string>
+	<key>EmergencyNumberExceptions</key>
+	<array>
+		<string>*911</string>
+	</array>
 	<key>EnableLTEAfterUpgrade</key>
 	<true/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<false/>
-	</dict>
-	<key>MyAccountURLTitle</key>
-	<string>Claro</string>
-	<key>RegistrationOptInRequired</key>
-	<true/>
-	<key>StockSymboli</key>
-	<array>
-		<dict>
-			<key>name</key>
-			<string></string>
-			<key>symbol</key>
-			<string>AMX</string>
-		</dict>
-	</array>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -128,97 +593,21 @@
 			<string>Claro</string>
 		</dict>
 	</array>
+	<key>CarrierName</key>
+	<string>CLARO PERU</string>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>MyAccountURL</key>
+	<string>https://www.claro.com.pe</string>
+	<key>MyAccountURLTitle</key>
+	<string>Claro</string>
+	<key>ShowCallerIDSwitch</key>
+	<false/>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>71610</string>
 	</array>
-	<key>ShowDialAssist</key>
-	<false/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>97660</string>
-	<key>CarrierName</key>
-	<string>CLARO PERU</string>
-	<key>SupportsUserBusyCauseCode</key>
-	<true/>
-	<key>ShowTTY</key>
-	<false/>
-	<key>EmergencyCalling</key>
-	<dict>
-		<key>EmergencyNumbers</key>
-		<array>
-			<dict>
-				<key>Number</key>
-				<string>911</string>
-				<key>Category</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>Number</key>
-				<string>112</string>
-				<key>Category</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>Category</key>
-				<integer>1</integer>
-				<key>PreferredEmergencyNumber</key>
-				<true/>
-				<key>Number</key>
-				<string>105</string>
-			</dict>
-		</array>
-	</dict>
-	<key>VoicemailPilotNumber</key>
-	<string>131</string>
-	<key>EmergencyNumberExceptions</key>
-	<array>
-		<string>*911</string>
-	</array>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.Peru</string>
-	<key>ShowLTEWarningUnsupportedCarrier</key>
-	<false/>
-	<key>apns</key>
-	<array>
-		<dict>
-			<key>password</key>
-			<string>claro</string>
-			<key>username</key>
-			<string>claro</string>
-			<key>apn</key>
-			<string>claro.pe</string>
-			<key>type-mask</key>
-			<integer>49</integer>
-		</dict>
-		<dict>
-			<key>password</key>
-			<string>claro</string>
-			<key>username</key>
-			<string>claro</string>
-			<key>apn</key>
-			<string>claro.pe</string>
-			<key>type-mask</key>
-			<integer>48</integer>
-		</dict>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>sos</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>type-mask</key>
-			<integer>262144</integer>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
-		</dict>
-	</array>
-	<key>OTASoftwareUpdate</key>
-	<dict>
-		<key>SoftwareUpdateOptInRequired</key>
-		<true/>
-	</dict>
 </dict>
 </plist>

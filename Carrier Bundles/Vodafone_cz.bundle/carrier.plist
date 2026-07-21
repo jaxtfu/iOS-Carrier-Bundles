@@ -48,8 +48,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>iphone.vodafone.cz</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -89,6 +87,8 @@
 	<true/>
 	<key>AllowAttachAPNEditing</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>MatchingICCIDPrefixes</key>
@@ -125,14 +125,14 @@
 	</dict>
 	<key>VoicemailPilotNumber</key>
 	<string>+420608989898</string>
-	<key>ShowDialAssist</key>
-	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
-	<key>Show3GSwitchWith4G</key>
+	<key>ShowDialAssist</key>
 	<true/>
+	<key>Show3GSwitchWith4G</key>
+	<false/>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Vodafone CZ Wi-Fi</string>
 	<key>MMS</key>
 	<dict>
 		<key>MMSC</key>
@@ -145,6 +145,119 @@
 		<integer>10</integer>
 		<key>MaxMessageSize</key>
 		<integer>307200</integer>
+	</dict>
+	<key>TechSettings</key>
+	<dict>
+		<key>WifiCallingAllowedInRoaming</key>
+		<true/>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA2-256</string>
+						</array>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>AES-256</string>
+						</array>
+						<key>DHGroup</key>
+						<integer>5</integer>
+						<key>Lifetime</key>
+						<integer>80000</integer>
+					</dict>
+				</array>
+				<key>InstallPolicies</key>
+				<true/>
+				<key>ReplayWindowSize</key>
+				<integer>12</integer>
+			</dict>
+		</dict>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>wifi</string>
+		</dict>
+		<key>EmergencyRemoteIdRequired</key>
+		<true/>
+		<key>SupportContextSwitchOver</key>
+		<true/>
+		<key>SupportCallHandover</key>
+		<true/>
+		<key>TechPolicies</key>
+		<array>
+			<dict>
+				<key>policy</key>
+				<string>TRUE</string>
+				<key>serviceMask</key>
+				<integer>131072</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>TRUE</string>
+				<key>serviceMask</key>
+				<integer>262144</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>TRUE</string>
+				<key>serviceMask</key>
+				<integer>1048580</integer>
+			</dict>
+		</array>
+		<key>ExtraConfigurationAttributeRequestv4</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>20</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv4</string>
+				<key>Type</key>
+				<string>IPv4Address</string>
+			</dict>
+		</array>
+		<key>5wiServiceMask</key>
+		<integer>3</integer>
+		<key>IKE</key>
+		<dict>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-256</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-256</string>
+					<key>DHGroup</key>
+					<integer>5</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>80000</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-256</string>
+				</dict>
+			</array>
+			<key>DeadPeerDetectionEnabled</key>
+			<false/>
+			<key>DeadPeerDetectionMaxRetries</key>
+			<integer>4</integer>
+			<key>DeadPeerDetectionInterval</key>
+			<integer>600</integer>
+			<key>LocalIdentifier</key>
+			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
+			<key>NATTKeepAliveOffload</key>
+			<true/>
+			<key>RemoteAddress</key>
+			<string>epdg.epc.mnc003.mcc230.pub.3gppnetwork.org</string>
+			<key>DeadPeerDetectionRetryInterval</key>
+			<integer>10</integer>
+		</dict>
 	</dict>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.CzechRepublic</string>
@@ -176,22 +289,53 @@
 			<string></string>
 			<key>apn</key>
 			<string>iphone.vodafone.cz</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
-			<integer>32817</integer>
+			<integer>1081393</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>password</key>
 			<string>mms</string>
+			<key>tech-type-mask</key>
+			<integer>4</integer>
 			<key>username</key>
 			<string>mms</string>
 			<key>apn</key>
 			<string>mms</string>
 			<key>type-mask</key>
 			<integer>4</integer>
+		</dict>
+		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>131072</integer>
+			<key>NoCellularReconnectCauseCodes</key>
+			<array>
+				<dict>
+					<key>CauseCodes</key>
+					<array>
+						<integer>33</integer>
+					</array>
+					<key>RecoversOnAirplaneMode</key>
+					<true/>
+					<key>NumTriesAllowed</key>
+					<integer>100</integer>
+					<key>Type</key>
+					<string>3GPP</string>
+					<key>Timeout</key>
+					<integer>86400</integer>
+				</dict>
+			</array>
+			<key>SupportSwitchOver</key>
+			<true/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ims</string>
 		</dict>
 		<dict>
 			<key>password</key>
@@ -201,7 +345,7 @@
 			<key>apn</key>
 			<string>iphone.vodafone.cz</string>
 			<key>type-mask</key>
-			<integer>48</integer>
+			<integer>1048624</integer>
 		</dict>
 		<dict>
 			<key>password</key>
@@ -218,6 +362,118 @@
 	</array>
 	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
 	<integer>131072</integer>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>UseCIDUrlInPIDF</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>503,504</string>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>SendResumeInviteAsSendRecv</key>
+			<false/>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE[-wifi]</key>
+				<string>+g.3gpp.accesstype="cellular2";+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+				<key>REGISTER[wifi]</key>
+				<string>+g.3gpp.accesstype="wlan1"</string>
+			</dict>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>BOTH</string>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+			<key>SendLocalTimeZoneInformation</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc003.mcc230.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>max-red</key>
+					<string>0</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>ch-aw-recv</key>
+					<string>2</string>
+					<key>cmr</key>
+					<string>-1</string>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCW</key>
+			<false/>
+			<key>NafPort</key>
+			<integer>80</integer>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>403</string>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>supported</key>
+			<true/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverITechSupported</key>
+			<false/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>SMSSettings</key>
 	<dict>
 		<key>TransportFallback</key>
@@ -292,8 +548,10 @@
 	</array>
 	<key>CarrierName</key>
 	<string>VF CZ</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.vodafone.cz</string>
+	<string>https://www.vodafone.cz</string>
 	<key>MyAccountURLTitle</key>
 	<string>Vodafone</string>
 	<key>MandatoryVerify</key>
@@ -301,6 +559,8 @@
 		<key>SIMs</key>
 		<array/>
 	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>23003</string>

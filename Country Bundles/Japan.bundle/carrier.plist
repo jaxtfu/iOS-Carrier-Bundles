@@ -4,6 +4,8 @@
 <dict>
 	<key>SuppressUIIndicatorWhenInternetDown</key>
 	<true/>
+	<key>ShowVolteSwitch</key>
+	<false/>
 	<key>SuppressSOSOnlyWithLimitedService</key>
 	<true/>
 	<key>ISOAlpha2CountryCode</key>
@@ -38,7 +40,11 @@
 		<false/>
 		<key>Voice</key>
 		<dict>
+			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
+			<true/>
 			<key>endNonEmergencyCalls</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
 			<true/>
 		</dict>
 		<key>EnableWiFiCallingWithoutEntitlement</key>

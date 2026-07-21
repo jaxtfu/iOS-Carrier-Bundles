@@ -4,10 +4,12 @@
 <dict>
 	<key>PushSettings</key>
 	<dict>
-		<key>SAWatchTopic</key>
-		<string>com.sprint.apns.sawatch</string>
+		<key>CellularPlanTransferTopic</key>
+		<string>com.t-mobile.iphone-transfer</string>
 		<key>MultiSIMTopic</key>
 		<string>com.sprint.apns.multisim</string>
+		<key>SAWatchTopic</key>
+		<string>com.sprint.apns.sawatch</string>
 		<key>VoWiFiTopic</key>
 		<string>com.sprint.apns.vowifi</string>
 	</dict>
@@ -15,6 +17,8 @@
 	<true/>
 	<key>ShowDialAssist</key>
 	<true/>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Sprint Wi-Fi</string>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -26,6 +30,134 @@
 			<string>Sprint</string>
 		</dict>
 	</array>
+	<key>TechSettings</key>
+	<dict>
+		<key>WiFiCallingIdentityProtectionMethod</key>
+		<string>EncryptedIdentity</string>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>AES-128</string>
+						</array>
+						<key>Lifetime</key>
+						<integer>86400</integer>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA1-96</string>
+						</array>
+					</dict>
+				</array>
+				<key>ReplayWindowSize</key>
+				<integer>12</integer>
+			</dict>
+		</dict>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>ims</string>
+			<key>PreferredTechnologyRoaming</key>
+			<string>Wifi</string>
+		</dict>
+		<key>ExtraConfigurationAttributeRequestv6</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>21</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv6</string>
+				<key>Type</key>
+				<string>IPv6Address</string>
+			</dict>
+			<dict>
+				<key>Identifier</key>
+				<integer>21</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv6</string>
+				<key>Type</key>
+				<string>IPv6Address</string>
+			</dict>
+		</array>
+		<key>SupportContextSwitchOver</key>
+		<true/>
+		<key>5wiServiceMask</key>
+		<integer>3</integer>
+		<key>DisconnectPreviousPathWhenHandover</key>
+		<true/>
+		<key>IKE</key>
+		<dict>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-128</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA1-96</string>
+					<key>DHGroup</key>
+					<integer>2</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>80000</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA1-160</string>
+				</dict>
+			</array>
+			<key>DeadPeerDetectionEnabled</key>
+			<false/>
+			<key>DeadPeerDetectionMaxRetries</key>
+			<integer>4</integer>
+			<key>DeadPeerDetectionInterval</key>
+			<integer>600</integer>
+			<key>LocalIdentifier</key>
+			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
+			<key>NATTKeepAliveOffload</key>
+			<true/>
+			<key>RemoteAddress</key>
+			<string>epdg.epc.mnc530.mcc312.pub.3gppnetwork.org</string>
+			<key>LocalIdentifierType</key>
+			<string>IDUserFQDN</string>
+			<key>DeadPeerDetectionRetryInterval</key>
+			<integer>10</integer>
+		</dict>
+		<key>ExtraConfigurationAttributeRequestv4</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16384</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv4</string>
+				<key>Type</key>
+				<string>IPv4Address</string>
+			</dict>
+		</array>
+		<key>SetHandOverIPv6Prefix</key>
+		<true/>
+		<key>TechPolicies</key>
+		<array>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>131072</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>262144</integer>
+			</dict>
+		</array>
+		<key>SupportCallHandover</key>
+		<true/>
+	</dict>
 	<key>MMS</key>
 	<dict>
 		<key>MaxMessageSize</key>
@@ -61,18 +193,26 @@
 		<key>CarrierRequiredPhoneNumberHeaderName</key>
 		<string>x-pcs-mdn</string>
 	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>IMAP</string>
 	<key>EnableLTEAfterUpgrade</key>
 	<true/>
 	<key>CarrierEntitlements</key>
 	<dict>
-		<key>UpdatePeriod</key>
-		<integer>23</integer>
-		<key>SupportedEntitlements</key>
-		<integer>3521</integer>
+		<key>UserAgent</key>
+		<string>Entitlement/$version ($device) iOS/$iOSVersion  CarrierBundle/$carrierBundleVersion</string>
+		<key>SupportedActions</key>
+		<array>
+			<string>authenticateTrustFlag</string>
+		</array>
+		<key>InvalidateSimForUnknownSubscriber</key>
+		<true/>
 		<key>ProtocolVersion</key>
 		<string>2</string>
+		<key>SupportedEntitlements</key>
+		<integer>3521</integer>
 		<key>Authentication</key>
 		<dict>
 			<key>Type</key>
@@ -80,19 +220,69 @@
 			<key>Username</key>
 			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
 		</dict>
-		<key>DisableSecondaryCredentials</key>
-		<true/>
-		<key>InvalidateSimForUnknownSubscriber</key>
-		<true/>
-		<key>UserAgent</key>
-		<string>Entitlement/$version ($device) iOS/$iOSVersion  CarrierBundle/$carrierBundleVersion</string>
 		<key>ServerAddress</key>
 		<string>https://deg.spcsdns.net/ium-OEMInterface/servlet/IUMServlet</string>
+		<key>DisableSecondaryCredentials</key>
+		<true/>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<true/>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
+		<true/>
+		<key>UpdatePeriod</key>
+		<integer>23</integer>
 	</dict>
 	<key>SupportsSupplementaryServicesOverIMS</key>
 	<true/>
 	<key>SupportsUserBusyCauseCode</key>
 	<true/>
+	<key>SMSSettings</key>
+	<dict>
+		<key>MessageFormat</key>
+		<dict>
+			<key>SignalingFormat</key>
+			<integer>2</integer>
+			<key>CSFBFormat</key>
+			<integer>2</integer>
+		</dict>
+		<key>OutgoingSMSPrefix</key>
+		<dict>
+			<key>International</key>
+			<string>+011</string>
+		</dict>
+	</dict>
+	<key>Services</key>
+	<array>
+		<dict>
+			<key>ServiceCode</key>
+			<string>*720</string>
+			<key>ServiceName</key>
+			<string>Call Forwarding Disable</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>411</string>
+			<key>ServiceName</key>
+			<string>Directory Assistance</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>800-784-2608</string>
+			<key>ServiceName</key>
+			<string>Pay My Bill</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>877-855-4733</string>
+			<key>ServiceName</key>
+			<string>Usage Info (English)</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>877-506-9198</string>
+			<key>ServiceName</key>
+			<string>Usage Info (Spanish)</string>
+		</dict>
+	</array>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>
@@ -100,25 +290,12 @@
 	</dict>
 	<key>SMSUseLocalTZ</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>ResetSIMProvisoning</key>
+	<string>##25327#</string>
 	<key>OTAActivationProxyHost</key>
 	<string>oma.acme.com</string>
-	<key>OTAActivation</key>
-	<dict>
-		<key>BlacklistedSIMs</key>
-		<array>
-			<string>44053</string>
-			<string>44054</string>
-			<string>44070</string>
-			<string>44071</string>
-			<string>44072</string>
-			<string>44073</string>
-			<string>44074</string>
-			<string>44075</string>
-			<string>44076</string>
-			<string>44078</string>
-			<string>46003</string>
-		</array>
-	</dict>
 	<key>OTAActivationProxyPort</key>
 	<integer>443</integer>
 	<key>MaxBluetoothModemConnections</key>
@@ -179,13 +356,219 @@
 	<string>9759</string>
 	<key>MyAccountURLTitle</key>
 	<string>My Sprint Mobile</string>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>LocalInstallSMDPURL</key>
+		<string>https://cust-005-v4-prod-atl2.gdsb.net</string>
+		<key>TransferPageURL</key>
+		<string>https://acms.msg.t-mobile.com/orchid-ui/default</string>
+	</dict>
 	<key>AllowAKEYEditing</key>
 	<false/>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.UnitedStates</string>
-	<key>Show3GSwitch</key>
-	<false/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>RingbackTimerSeconds</key>
+			<integer>305</integer>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>UseCIDUrlInPIDF</key>
+			<true/>
+			<key>TcpIdleTimeoutSeconds</key>
+			<integer>0</integer>
+			<key>UseCampedAccessNetworkInPANI</key>
+			<true/>
+			<key>MaxUdpMessageSize</key>
+			<integer>1200</integer>
+			<key>SipTimers</key>
+			<dict>
+				<key>F</key>
+				<integer>30000</integer>
+				<key>InviteResponseTimeout</key>
+				<integer>8000</integer>
+			</dict>
+			<key>PIDFGeoPrivShape</key>
+			<string>ellipsoid</string>
+			<key>AccessBarringType</key>
+			<string>Both</string>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>ReSubscribeOnReRegistration</key>
+			<false/>
+			<key>LocationForShortCodeCalls</key>
+			<string>BOTH</string>
+			<key>EnableRingbackAudioForTextCalls</key>
+			<true/>
+			<key>PIDFConfidence</key>
+			<integer>90</integer>
+			<key>EmergencyLocationUpdateTimeSeconds</key>
+			<integer>25</integer>
+			<key>TriggerCSFBOnLocalQoSTimeoutMO</key>
+			<false/>
+			<key>UseBase64ForMultipartSMS</key>
+			<false/>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>Allow3DPIDFInMessages</key>
+			<false/>
+			<key>UseIPSec</key>
+			<false/>
+			<key>RegistrationRetryMaxTimeSeconds</key>
+			<string>1800</string>
+			<key>LocalQoSTimeoutMOSeconds</key>
+			<string>5</string>
+			<key>EmergencyCallBackModeExpirationSeconds</key>
+			<integer>30</integer>
+			<key>VerstatFeatureCapability</key>
+			<string>Enabled</string>
+			<key>MethodInPIDF</key>
+			<string>A-GPS</string>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string></string>
+			<key>SendEmergencyLocationUpdates</key>
+			<true/>
+			<key>OutgoingDomain</key>
+			<string>imcns.spcsdns.net</string>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv2-MD5</string>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>TriggerCSFBOnWaitForRingingTimeout</key>
+			<false/>
+			<key>AllowRemoteHoldForUnconfirmedCalls</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>TriggerCSFBOnLocalQoSTimeoutMT</key>
+			<false/>
+			<key>RegistrationPolicy</key>
+			<string>TMO</string>
+			<key>ForceTcp</key>
+			<false/>
+			<key>RegistrationRetryBaseTimeSeconds</key>
+			<string>30</string>
+			<key>ContactUser</key>
+			<string>${MDN}</string>
+			<key>AlwaysAddGeolocationForEmergencyCalls</key>
+			<true/>
+			<key>EnableSenderName</key>
+			<true/>
+			<key>SendLocalTimeZoneInformation</key>
+			<true/>
+			<key>AddLocationToEmergencySMS</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<integer>25</integer>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>15</integer>
+		</dict>
+		<key>CallTransfer</key>
+		<dict>
+			<key>CallTransferDialNumber</key>
+			<string>+19404656399</string>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SendConferenceSubscribeAfterRefers</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:conf@imcns.spcsdns.net</string>
+		</dict>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<true/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>127</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>2</string>
+					<key>br</key>
+					<string>5.9-13.2</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-wb</string>
+				</dict>
+			</dict>
+			<key>InactivityTimerRTCPSeconds</key>
+			<integer>30</integer>
+			<key>TTYRelayNumber</key>
+			<string>711</string>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>30</integer>
+			<key>UseSDPTemplateWhenAnswering</key>
+			<true/>
+			<key>PayloadTypeDTMF8K</key>
+			<integer>101</integer>
+		</dict>
+		<key>LocalShortCodeNumbers</key>
+		<array>
+			<string>211</string>
+			<string>311</string>
+			<string>411</string>
+			<string>511</string>
+			<string>611</string>
+			<string>711</string>
+			<string>811</string>
+		</array>
+		<key>XCAP</key>
+		<dict>
+			<key>NetworkSupportsCLIRModification</key>
+			<true/>
+			<key>BsfHost</key>
+			<string>bsf.imcns.spcsdns.net</string>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>supported</key>
+			<true/>
+			<key>NafHost</key>
+			<string>xcap.imcns.spcsdns.net</string>
+			<key>useSecureTransport</key>
+			<true/>
+			<key>SupportsCFErasure</key>
+			<false/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>IgnoreCallerIDBlockingForEmergency</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>tLte911Timer</key>
+			<integer>330</integer>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>Show4GSwitch</key>
+	<false/>
+	<key>Show3GSwitch</key>
 	<false/>
 	<key>CarrierName</key>
 	<string>Sprint</string>
@@ -216,14 +599,193 @@
 	<string>##873283#</string>
 	<key>FallbackMethod</key>
 	<integer>2</integer>
+	<key>IMSConfigSecondaryOverlay</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>OtherSecondaryDeviceOnCall</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>480</integer>
+					<key>ReasonHeaderCause</key>
+					<integer>200</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+			</dict>
+			<key>AllowedPdpTypeMask</key>
+			<integer>1</integer>
+			<key>EmergencyLocationLookupTimeoutSeconds</key>
+			<integer>15</integer>
+			<key>IncompleteRegistrationThrottlingIntervalSeconds</key>
+			<integer>3</integer>
+			<key>SipTimers</key>
+			<dict>
+				<key>InviteResponseTimeout</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+		<key>UseCampedAccessNetworkInPANI</key>
+		<true/>
+		<key>ReRegisterOnMobikeHandover</key>
+		<true/>
+		<key>IPTelephony</key>
+		<dict>
+			<key>pcscf</key>
+			<string>comp-sbc.imcns.spcsdns.net</string>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>conferenceServer</key>
+			<string>sip:conf@imcns.spcsdns.net</string>
+		</dict>
+		<key>SetCountryWithCampedPANI</key>
+		<true/>
+		<key>CarrierName</key>
+		<string>Sprint</string>
+		<key>Voice</key>
+		<dict>
+			<key>BlockSilentRedialOverCS</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>DisallowCarrierMenuAtHome</key>
 	<true/>
-	<key>TTYRelayNumber</key>
-	<string>711</string>
 	<key>MyAccountURL</key>
 	<string>https://www.sprint.com/en/landings/my-sprint-app.html?id16=app</string>
+	<key>TTYRelayNumber</key>
+	<string>711</string>
+	<key>TechSettingsSecondaryOverlay</key>
+	<dict>
+		<key>5wiServiceMask</key>
+		<integer>1</integer>
+		<key>SupportOverCell</key>
+		<true/>
+		<key>IKE</key>
+		<dict>
+			<key>RemoteCertificateHostname</key>
+			<string>compgw.vowifi2.spcsdns.net</string>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>3DES</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA1-96</string>
+					<key>DHGroup</key>
+					<integer>2</integer>
+					<key>AuthenticationMethod</key>
+					<string>Certificate</string>
+					<key>Lifetime</key>
+					<integer>80000</integer>
+					<key>EAPMethod</key>
+					<string>EAP-MSCHAPv2</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA1-160</string>
+				</dict>
+			</array>
+			<key>LocalIdentifier</key>
+			<string>0$subscriber-id</string>
+			<key>NonceSize</key>
+			<integer>16</integer>
+			<key>RemoteIdentifierType</key>
+			<string>IDFQDN</string>
+			<key>ValidateRemoteCertificate</key>
+			<true/>
+			<key>RemoteAddress</key>
+			<string>compgw.vowifi2.spcsdns.net</string>
+			<key>RemoteIdentifier</key>
+			<string>compgw.vowifi2.spcsdns.net</string>
+			<key>ConfigurationRequest</key>
+			<dict>
+				<key>AssignedIPv4DHCP</key>
+				<string></string>
+				<key>AssignedIPv4DNS</key>
+				<string></string>
+				<key>AssignedIPv4Address</key>
+				<string></string>
+				<key>AssignedIPv4NetMask</key>
+				<string></string>
+			</dict>
+			<key>IKEVersion</key>
+			<integer>2</integer>
+		</dict>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>InstallRoutes</key>
+				<false/>
+				<key>Mode</key>
+				<string>Tunnel</string>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>SecureRekey</key>
+						<integer>0</integer>
+						<key>ChildProtocol</key>
+						<string>ESP</string>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>3DES</string>
+							<string>DES</string>
+						</array>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA1-96</string>
+							<string>MD5-96</string>
+						</array>
+						<key>DHGroup</key>
+						<integer>2</integer>
+						<key>Lifetime</key>
+						<integer>86400</integer>
+					</dict>
+				</array>
+				<key>TrafficSelectorsRemote</key>
+				<array>
+					<dict>
+						<key>TSStartPort</key>
+						<integer>0</integer>
+						<key>TSProtocol</key>
+						<integer>0</integer>
+						<key>TSEndAddress</key>
+						<string>255.255.255.255</string>
+						<key>TSEndPort</key>
+						<integer>65535</integer>
+						<key>TSStartAddress</key>
+						<string>0.0.0.0</string>
+						<key>TSType</key>
+						<string>IPv4</string>
+					</dict>
+				</array>
+				<key>TrafficSelectorsLocal</key>
+				<array>
+					<dict>
+						<key>TSStartPort</key>
+						<integer>0</integer>
+						<key>TSProtocol</key>
+						<integer>0</integer>
+						<key>TSEndAddress</key>
+						<string>255.255.255.255</string>
+						<key>TSEndPort</key>
+						<integer>65535</integer>
+						<key>TSStartAddress</key>
+						<string>0.0.0.0</string>
+						<key>TSType</key>
+						<string>IPv4</string>
+					</dict>
+				</array>
+			</dict>
+		</dict>
+	</dict>
 	<key>RemoteDiagnosticsWWANAllowed</key>
 	<true/>
+	<key>SupportsVolteCapability</key>
+	<true/>
+	<key>ShowVolteSwitch</key>
+	<false/>
 	<key>MTU</key>
 	<array>
 		<dict>
@@ -269,13 +831,13 @@
 		<string>311490</string>
 		<string>312530</string>
 	</array>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>OTASoftwareUpdate</key>
 	<dict>
 		<key>SoftwareUpdateOptInRequired</key>
 		<true/>
 	</dict>
-	<key>ShowTTY</key>
-	<true/>
 	<key>TetheringURL</key>
 	<string>http://m.sprint.com</string>
 	<key>CellBroadcast</key>
@@ -360,6 +922,11 @@
 		<key>KeyIdentifier</key>
 		<string>CertificateSerialNumber=8c7b27a6f39c53af0000000050de36e2</string>
 	</dict>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>EnableHoldForRTT</key>
+		<true/>
+	</dict>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>IncludeUnusableIccidForPlanSignupRequest</key>
@@ -392,6 +959,8 @@
 	<key>SupportsSupplementaryServices</key>
 	<false/>
 	<key>RequiresServiceProvisioning</key>
+	<true/>
+	<key>SupportsSIMAPN</key>
 	<true/>
 	<key>NotRegisteredResetWaitPeriod</key>
 	<integer>60</integer>

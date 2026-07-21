@@ -19,6 +19,8 @@
 	<integer>0</integer>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+375297770881</string>
 	<key>StatusBarImages</key>
@@ -94,8 +96,8 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>0881</string>
 	<key>HomeBundleIdentifier</key>
@@ -124,8 +126,6 @@
 			<string>mts</string>
 			<key>apn</key>
 			<string>mts</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>53</integer>
 			<key>AllowedProtocolMask</key>

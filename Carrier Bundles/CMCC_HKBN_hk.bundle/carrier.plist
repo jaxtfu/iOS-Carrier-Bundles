@@ -19,6 +19,8 @@
 	<true/>
 	<key>APNEditabilityTypemask</key>
 	<integer>0</integer>
+	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
+	<integer>131072</integer>
 	<key>SMSSettings</key>
 	<dict>
 		<key>TransportFallback</key>
@@ -26,15 +28,10 @@
 	</dict>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+85292089218</string>
-	<key>StockSymboli</key>
-	<array>
-		<dict>
-			<key>name</key>
-			<string>HKBN Ltd.</string>
-			<key>symbol</key>
-			<string>1310.HK</string>
-		</dict>
-	</array>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -46,22 +43,17 @@
 			<string>HKBN</string>
 		</dict>
 	</array>
-	<key>SupportedSIMs</key>
+	<key>StockSymboli</key>
 	<array>
-		<string>45412_GID1-0009</string>
+		<dict>
+			<key>name</key>
+			<string>HKBN Ltd.</string>
+			<key>symbol</key>
+			<string>1310.HK</string>
+		</dict>
 	</array>
 	<key>IMSConfig</key>
 	<dict>
-		<key>SMS</key>
-		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<false/>
-		</dict>
-		<key>Media</key>
-		<dict>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-		</dict>
 		<key>Signaling</key>
 		<dict>
 			<key>IgnoreRegNotificationContactExpires</key>
@@ -125,6 +117,35 @@
 			<key>UseIPSec</key>
 			<true/>
 		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>conferenceServer</key>
+			<string>sip:conference@conference.ims.cmhk.net</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<false/>
+			</dict>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<false/>
 		<key>Voice</key>
 		<dict>
 			<key>E911OverITechSupported</key>
@@ -132,16 +153,7 @@
 			<key>EnableVolteByDefault</key>
 			<true/>
 		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>conferenceServer</key>
-			<string>sip:conference@conference.ims.cmhk.net</string>
-		</dict>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<false/>
 	</dict>
-	<key>OverrideOperatorWiFiName</key>
-	<string>HKBN VoWiFi</string>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportedEntitlements</key>
@@ -160,10 +172,16 @@
 		<key>UpdatePeriod</key>
 		<integer>24</integer>
 	</dict>
+	<key>OverrideOperatorWiFiName</key>
+	<string>HKBN VoWiFi</string>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>45412_GID1-0009</string>
+	</array>
 	<key>CarrierName</key>
 	<string>HKBN</string>
 	<key>AttachAPN</key>
@@ -186,8 +204,6 @@
 	<false/>
 	<key>ShowVolteSwitch</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>CellBroadcast</key>
@@ -492,8 +508,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>1</integer>
 			<key>SupportSwitchOver</key>

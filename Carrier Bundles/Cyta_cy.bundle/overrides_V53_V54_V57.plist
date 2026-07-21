@@ -14,24 +14,9 @@
 	<false/>
 	<key>ShowVolteSwitch</key>
 	<false/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 	<key>Show5GSwitch</key>
 	<true/>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Voice</key>
-		<dict>
-			<key>EnableVolteByDefault</key>
-			<true/>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>supported</key>
-			<false/>
-		</dict>
-	</dict>
 </dict>
 </plist>

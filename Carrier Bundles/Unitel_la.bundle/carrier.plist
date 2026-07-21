@@ -14,7 +14,7 @@
 	<key>SupportsNITZ</key>
 	<false/>
 	<key>MyAccountURL</key>
-	<string>http://unitel.com.la/</string>
+	<string>https://unitel.com.la/</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>APNEditabilityTypemask</key>
@@ -57,8 +57,6 @@
 	<string>Unitel</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>666</string>
 	<key>HomeBundleIdentifier</key>

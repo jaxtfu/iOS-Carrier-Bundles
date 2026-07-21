@@ -20,18 +20,22 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.bealiv.com</string>
+	<string>https://www.bealiv.com</string>
+	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
+	<integer>131072</integer>
 	<key>SMSSettings</key>
 	<dict>
 		<key>TransportFallback</key>
 		<false/>
 	</dict>
-	<key>RegistrationOptInRequired</key>
-	<true/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+12428050000</string>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32769</integer>
+	<key>RegistrationOptInRequired</key>
+	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -43,11 +47,93 @@
 			<string>aliv</string>
 		</dict>
 	</array>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>36449</string>
-		<string>20809_ID-891364049</string>
-	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Media</key>
+		<dict>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>UseDialogEventPackage</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,6XX</string>
+			<key>SupportPEarlyMediaHeader</key>
+			<false/>
+			<key>RingbackTimerSeconds</key>
+			<integer>120</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>90</integer>
+			<key>EmergencyURNs</key>
+			<dict>
+				<key>&lt;EmergencyURNsItem&gt;</key>
+				<string>urn:service:sos</string>
+			</dict>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>ussdEnabled</key>
+			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<false/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>KillCallOnHoldResumeError</key>
+			<false/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCW</key>
+			<true/>
+			<key>NafPort</key>
+			<integer>8090</integer>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>SupportsCB</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>400,403,409,500,502,503,504</string>
+			<key>SupportsCLIR</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>supported</key>
+			<true/>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc049.mcc364.pub.3gppnetwork.org</string>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>conf_uri@ims.mnc049.mcc364.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportedEntitlements</key>
@@ -62,12 +148,17 @@
 		<key>ServerAddress</key>
 		<string>https://aliv.entitlements.io3.com</string>
 	</dict>
-	<key>ShowDialAssist</key>
-	<true/>
 	<key>Show3GSwitchWith4G</key>
+	<false/>
+	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>27753</string>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>36449</string>
+		<string>20809_ID-891364049</string>
+	</array>
 	<key>CarrierName</key>
 	<string>aliv</string>
 	<key>AttachAPN</key>
@@ -84,6 +175,10 @@
 			<integer>3</integer>
 		</dict>
 	</dict>
+	<key>ShowVolteSwitch</key>
+	<true/>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -104,6 +199,19 @@
 	</dict>
 	<key>VoicemailPilotNumber</key>
 	<string>*123</string>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.TheBahamas</string>
+	<key>MMS</key>
+	<dict>
+		<key>MaxMessageSize</key>
+		<integer>2097152</integer>
+		<key>MMSC</key>
+		<string>http://mms.bealiv.com</string>
+		<key>MaxRecipients</key>
+		<integer>33</integer>
+	</dict>
+	<key>AllowAttachAPNEditing</key>
+	<false/>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>MatchingICCIDPrefixes</key>
@@ -138,19 +246,6 @@
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
 	</dict>
-	<key>MMS</key>
-	<dict>
-		<key>MaxMessageSize</key>
-		<integer>2097152</integer>
-		<key>MMSC</key>
-		<string>http://mms.bealiv.com</string>
-		<key>MaxRecipients</key>
-		<integer>33</integer>
-	</dict>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.TheBahamas</string>
-	<key>AllowAttachAPNEditing</key>
-	<false/>
 	<key>PushSettings</key>
 	<dict>
 		<key>MultiSIMTopic</key>
@@ -163,12 +258,28 @@
 			<integer>3</integer>
 			<key>apn</key>
 			<string>pda.newcomobile.com</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>1081397</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>AllowNoDNS</key>
+			<integer>1</integer>
+			<key>apn</key>
+			<string>ims</string>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>apn</key>
+			<string>sos</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+			<key>type-mask</key>
+			<integer>262144</integer>
 		</dict>
 	</array>
 	<key>OTASoftwareUpdate</key>

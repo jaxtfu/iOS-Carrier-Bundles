@@ -52,19 +52,6 @@
 	<true/>
 	<key>APNEditabilityTypemask</key>
 	<integer>49</integer>
-	<key>apns</key>
-	<array>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>internet</string>
-			<key>type-mask</key>
-			<integer>51</integer>
-		</dict>
-	</array>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -137,8 +124,21 @@
 	</dict>
 	<key>SupportsNITZ</key>
 	<false/>
-	<key>ShowTTY</key>
-	<false/>
+	<key>apns</key>
+	<array>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>internet</string>
+			<key>type-mask</key>
+			<integer>51</integer>
+		</dict>
+	</array>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>

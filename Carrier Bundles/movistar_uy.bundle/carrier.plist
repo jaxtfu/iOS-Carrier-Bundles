@@ -2,61 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>StatusBarImages</key>
-	<array>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<true/>
-			<key>CarrierName</key>
-			<string>MOVISTAR</string>
-			<key>StatusBarCarrierName</key>
-			<string>Tigo</string>
-		</dict>
-	</array>
-	<key>RoamingVoicemailPilotNumber</key>
-	<string>+59894006684</string>
 	<key>MaxBluetoothModemConnections</key>
 	<integer>5</integer>
-	<key>MyAccountURL</key>
-	<string>https://www.movistar.com.uy</string>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>74807</string>
-		<string>21407_ID-8959807</string>
-	</array>
-	<key>MMS</key>
-	<dict>
-		<key>MMSC</key>
-		<string>http://mmsc.movistar.com.uy</string>
-		<key>GroupModeEnabled</key>
-		<false/>
-		<key>MaxVideoBitrate</key>
-		<integer>131072</integer>
-		<key>Proxy</key>
-		<string>10.0.2.29:8080</string>
-		<key>Version</key>
-		<string>1.2</string>
-		<key>MaxMessageSize</key>
-		<integer>307200</integer>
-	</dict>
-	<key>MyAccountURLTitle</key>
-	<string>Mi movistar</string>
-	<key>CarrierName</key>
-	<string>Tigo</string>
-	<key>OTASoftwareUpdate</key>
-	<dict>
-		<key>SoftwareUpdateOptInRequired</key>
-		<true/>
-	</dict>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.Uruguay</string>
-	<key>ShowDialAssist</key>
-	<false/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<false/>
-	</dict>
 	<key>Services</key>
 	<array>
 		<dict>
@@ -86,34 +33,182 @@
 	</array>
 	<key>SupportsNITZ</key>
 	<true/>
-	<key>ShowTTY</key>
+	<key>MyAccountURL</key>
+	<string>https://www.tigo.com.uy/home/</string>
+	<key>SMSSettings</key>
+	<dict>
+		<key>TransportFallback</key>
+		<false/>
+	</dict>
+	<key>MyAccountURLTitle</key>
+	<string>Tigo</string>
+	<key>RoamingVoicemailPilotNumber</key>
+	<string>+59894006684</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
 	<false/>
+	<key>StatusBarImages</key>
+	<array>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<true/>
+			<key>CarrierName</key>
+			<string>MOVISTAR</string>
+			<key>StatusBarCarrierName</key>
+			<string>Tigo</string>
+		</dict>
+	</array>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>74807</string>
+	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Media</key>
+		<dict>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>RTCPIntervalSeconds</key>
+			<string>5</string>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,403,408,5XX,6XX</string>
+			<key>PreconditionUpdateDelayTimerMilliseconds</key>
+			<string>10000</string>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>MaxUdpMessageSize</key>
+			<integer>1500</integer>
+			<key>RingbackTimerSeconds</key>
+			<integer>65</integer>
+			<key>RingingTimerSeconds</key>
+			<string>65</string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>SubscriptionTerminatedMeansRegistrationTerminated</key>
+			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting</string>
+			</dict>
+			<key>ContactUser</key>
+			<string>IMSI</string>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>BsfHost</key>
+			<string>bsf.mnc$mnc.mcc$mcc.pub.3gppnetwork.org</string>
+			<key>NafHost</key>
+			<string>naf.mnc$mnc.mcc$mcc.pub.3gppnetwork.org</string>
+			<key>supported</key>
+			<false/>
+			<key>BsfPort</key>
+			<integer>80</integer>
+			<key>NafPort</key>
+			<integer>80</integer>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc007.mcc748.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<false/>
+			</dict>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ShowDialAssist</key>
+	<false/>
+	<key>Show3GSwitchWith4G</key>
+	<false/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>+447860015000</string>
+	<key>CarrierName</key>
+	<string>Tigo</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
+			<key>apn</key>
+			<string>webapn.movistar.com.uy</string>
+			<key>AllowedProtocolMaskInRoamingUMTS</key>
+			<integer>1</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>ShowVolteSwitch</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>6684</string>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.Uruguay</string>
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>password</key>
-			<string>movistar</string>
-			<key>username</key>
-			<string>movistar</string>
-			<key>apn</key>
-			<string>apnumt.movistar.com.uy</string>
 			<key>type-mask</key>
 			<integer>49</integer>
+			<key>password</key>
+			<string>movistar</string>
+			<key>AllowedProtocolMaskInDomesticRoaming</key>
+			<integer>1</integer>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<string>1</string>
+			<key>username</key>
+			<string>movistar</string>
+			<key>apn</key>
+			<string>webapn.movistar.com.uy</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>password</key>
-			<string>mmsuy</string>
-			<key>username</key>
-			<string>mmsuy</string>
 			<key>apn</key>
-			<string>apnmms.movistar.com.uy</string>
+			<string>ims</string>
+			<key>SupportSwitchOver</key>
+			<true/>
 			<key>type-mask</key>
-			<integer>4</integer>
+			<integer>131072</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>2</integer>
 		</dict>
 	</array>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>+447860015000</string>
+	<key>OTASoftwareUpdate</key>
+	<dict>
+		<key>SoftwareUpdateOptInRequired</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

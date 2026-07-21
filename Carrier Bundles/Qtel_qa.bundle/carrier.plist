@@ -36,9 +36,11 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.ooredoo.qa</string>
+	<string>https://www.ooredoo.qa</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
+	<key>EnableLTEAfterUpgrade</key>
+	<true/>
 	<key>APNEditabilityTypemask</key>
 	<integer>1</integer>
 	<key>SMSSettings</key>
@@ -52,21 +54,129 @@
 	<string>+97412300000</string>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32768</integer>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>ASCIIFileNameRequired</key>
 	<false/>
-	<key>StatusBarImages</key>
-	<array>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>Qtel</string>
-			<key>StatusBarCarrierName</key>
-			<string>Ooredoo</string>
-		</dict>
-	</array>
-	<key>ShowDialAssist</key>
+	<key>Show4GSwitch</key>
 	<true/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Media</key>
+		<dict>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>15</integer>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>106</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>octet-align</key>
+					<string>1</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>EnforceEarlyMediaDirection</key>
+			<true/>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>IgnoreRegNotificationContactExpires</key>
+			<true/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>ussdEnabled</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<integer>21</integer>
+			<key>AdditionalHeaders</key>
+			<dict>
+				<key>INVITE,INVITE:*</key>
+				<string>Feature-Caps: *;+g.3gpp.srvcc-alerting</string>
+			</dict>
+			<key>AlwaysUnsubscribeFromRegEvents</key>
+			<false/>
+			<key>SubscriptionTerminatedMeansRegistrationTerminated</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,5XX,6XX</string>
+			<key>DropRegistrationOnSRVCC</key>
+			<true/>
+			<key>MaxUdpMessageSize</key>
+			<integer>5000</integer>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>130</integer>
+			<key>AlwaysAddPrivacyHeader</key>
+			<true/>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>21</integer>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>UseIPSec</key>
+			<true/>
+			<key>RingingTimerSeconds</key>
+			<integer>130</integer>
+			<key>RegistrationExpirationSeconds</key>
+			<integer>7200</integer>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>TreatAllNotificationsAsPartial</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>mmtel@conf-factory.ims.mnc001.mcc427.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportsOnDevicePhysicalSIMConvert</key>
@@ -97,14 +207,23 @@
 		</array>
 	</dict>
 	<key>Show3GSwitchWith4G</key>
+	<false/>
+	<key>ShowDialAssist</key>
 	<true/>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>42701</string>
-	</array>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<array>
 		<string>92090</string>
+	</array>
+	<key>StatusBarImages</key>
+	<array>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>Qtel</string>
+			<key>StatusBarCarrierName</key>
+			<string>Ooredoo</string>
+		</dict>
 	</array>
 	<key>CarrierName</key>
 	<string>Ooredoo</string>
@@ -112,12 +231,10 @@
 	<dict>
 		<key>3GPP</key>
 		<dict>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>1</integer>
-			<key>password</key>
-			<string></string>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
+			<key>password</key>
+			<string></string>
 			<key>PcscfAddressRequired</key>
 			<false/>
 			<key>username</key>
@@ -126,12 +243,14 @@
 			<integer>1</integer>
 			<key>apn</key>
 			<string>data</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>42701</string>
+	</array>
 	<key>PhoneAccountTransfer</key>
 	<dict>
 		<key>LocalInstallSMDPURL</key>
@@ -139,12 +258,16 @@
 		<key>SupportsFallbackToLegacyFlow</key>
 		<false/>
 	</dict>
-	<key>ShowTTY</key>
-	<false/>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
 	<key>AllowsVoIP</key>
 	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>123</string>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.Qatar</string>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>MatchingICCIDPrefixes</key>
@@ -181,41 +304,35 @@
 			<string>SKU_EU</string>
 		</array>
 	</dict>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.Qatar</string>
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>49</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>data</string>
+			<key>type-mask</key>
+			<integer>32817</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>48</integer>
+			<key>AllowNoDNS</key>
+			<integer>1</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
-			<string>data</string>
+			<string>ims</string>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 	</array>
 </dict>

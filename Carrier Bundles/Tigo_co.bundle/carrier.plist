@@ -9,7 +9,7 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.tigo.com.co</string>
+	<string>https://www.tigo.com.co</string>
 	<key>EnableLTEAfterUpgrade</key>
 	<true/>
 	<key>SMSSettings</key>
@@ -19,6 +19,8 @@
 	</dict>
 	<key>MyAccountURLTitle</key>
 	<string>TIGO Web</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>StatusBarImages</key>
@@ -186,10 +188,10 @@
 		</dict>
 		<key>SMS</key>
 		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
 			<key>SMSBundleToVoice</key>
 			<false/>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>Voice</key>
 		<dict>
@@ -227,8 +229,6 @@
 	</dict>
 	<key>ShowVolteSwitch</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>EmergencyCalling</key>
@@ -266,18 +266,16 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>SupportSwitchOver</key>
-			<true/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>ims</string>
+			<key>SupportSwitchOver</key>
+			<true/>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -288,8 +286,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>web.colombiamovil.com.co</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>1048625</integer>
 			<key>AllowedProtocolMask</key>

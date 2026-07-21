@@ -260,16 +260,13 @@
 		<string>238</string>
 		<string>com.apple.Denmark</string>
 	</array>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsRTT</key>
+		<true/>
+	</dict>
 	<key>ShowTARandomizationSwitch</key>
 	<true/>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Voice</key>
-		<dict>
-			<key>RTTSupported</key>
-			<true/>
-		</dict>
-	</dict>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>

@@ -36,7 +36,7 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://m.wom.cl</string>
+	<string>https://m.wom.cl</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>EnableLTEAfterUpgrade</key>
@@ -45,6 +45,8 @@
 	<true/>
 	<key>MyAccountURLTitle</key>
 	<string>WOM</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -202,8 +204,6 @@
 		<dict>
 			<key>SMSBundleToVoice</key>
 			<false/>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>XCAP</key>
 		<dict>
@@ -264,8 +264,6 @@
 	<dict>
 		<key>3GPP</key>
 		<dict>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>password</key>
 			<string></string>
 			<key>AllowedProtocolMaskInDomesticRoaming</key>
@@ -284,10 +282,10 @@
 	</dict>
 	<key>ShowVolteSwitch</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
+	<key>Show3GSwitchWithVolte</key>
+	<false/>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Chile</string>
 	<key>TechSettings</key>
@@ -414,8 +412,6 @@
 			<string></string>
 			<key>AllowedProtocolMaskInDomesticRoaming</key>
 			<integer>3</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>1</integer>
 			<key>username</key>
@@ -432,8 +428,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>

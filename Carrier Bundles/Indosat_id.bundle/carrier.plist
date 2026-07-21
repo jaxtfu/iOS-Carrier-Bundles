@@ -52,6 +52,8 @@
 		<key>SIMs</key>
 		<array/>
 	</dict>
+	<key>SupportsNITZ</key>
+	<true/>
 	<key>MVNOOverrides</key>
 	<dict>
 		<key>Configuration_1</key>
@@ -160,8 +162,6 @@
 			</array>
 		</dict>
 	</dict>
-	<key>SupportsNITZ</key>
-	<true/>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>EnableLTEAfterUpgrade</key>
@@ -223,8 +223,6 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>0816122</string>
 	<key>HomeBundleIdentifier</key>
@@ -265,7 +263,5 @@
 			<integer>4</integer>
 		</dict>
 	</array>
-	<key>OTASoftwareUpdate</key>
-	<dict/>
 </dict>
 </plist>

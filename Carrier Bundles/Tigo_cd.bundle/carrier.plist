@@ -2,23 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
-	<key>AllowEDGEEditing</key>
-	<true/>
-	<key>MandatoryVerify</key>
-	<dict>
-		<key>SIMs</key>
-		<array/>
-	</dict>
-	<key>SupportsNITZ</key>
-	<false/>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
-	<key>APNEditabilityTypemask</key>
-	<integer>53</integer>
-	<key>RegistrationOptInRequired</key>
-	<true/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -38,53 +21,14 @@
 			<string>Tigo</string>
 		</dict>
 	</array>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>63089</string>
 	</array>
-	<key>ShowDialAssist</key>
-	<true/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<array>
-		<string>+447537410207</string>
-		<string>+447537410217</string>
-		<string>+447537410227</string>
-		<string>+447537410237</string>
-		<string>+447537410247</string>
-		<string>+447537410257</string>
-		<string>+447537410267</string>
-		<string>+447537410277</string>
-		<string>+447537410287</string>
-		<string>+447537410297</string>
-	</array>
-	<key>CarrierName</key>
-	<string>Tigo</string>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>2434300</string>
-	<key>EmergencyCalling</key>
-	<dict>
-		<key>EmergencyNumbers</key>
-		<array>
-			<dict>
-				<key>Number</key>
-				<string>112</string>
-				<key>PreferredEmergencyNumber</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Number</key>
-				<string>2020</string>
-				<key>SupportsEmergencySetup</key>
-				<false/>
-			</dict>
-		</array>
-	</dict>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.DemocraticRepublicOfTheCongo</string>
 	<key>MMS</key>
 	<dict>
 		<key>MMSC</key>
@@ -96,6 +40,21 @@
 		<key>MaxMessageSize</key>
 		<integer>204800</integer>
 	</dict>
+	<key>CarrierName</key>
+	<string>Tigo</string>
+	<key>AllowEDGEEditing</key>
+	<true/>
+	<key>OTASoftwareUpdate</key>
+	<dict>
+		<key>SoftwareUpdateOptInRequired</key>
+		<true/>
+	</dict>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.DemocraticRepublicOfTheCongo</string>
+	<key>ShowDialAssist</key>
+	<true/>
+	<key>APNEditabilityTypemask</key>
+	<integer>53</integer>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -129,10 +88,49 @@
 			<integer>48</integer>
 		</dict>
 	</array>
-	<key>OTASoftwareUpdate</key>
+	<key>EmergencyCalling</key>
 	<dict>
-		<key>SoftwareUpdateOptInRequired</key>
-		<true/>
+		<key>EmergencyNumbers</key>
+		<array>
+			<dict>
+				<key>Number</key>
+				<string>112</string>
+				<key>PreferredEmergencyNumber</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>Number</key>
+				<string>2020</string>
+				<key>SupportsEmergencySetup</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
+	<key>SupportsNITZ</key>
+	<false/>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
+	<key>MandatoryVerify</key>
+	<dict>
+		<key>SIMs</key>
+		<array/>
+	</dict>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
+	<key>RegistrationOptInRequired</key>
+	<true/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<array>
+		<string>+447537410207</string>
+		<string>+447537410217</string>
+		<string>+447537410227</string>
+		<string>+447537410237</string>
+		<string>+447537410247</string>
+		<string>+447537410257</string>
+		<string>+447537410267</string>
+		<string>+447537410277</string>
+		<string>+447537410287</string>
+		<string>+447537410297</string>
+	</array>
 </dict>
 </plist>

@@ -16,7 +16,7 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.telecom.net.bt</string>
+	<string>https://www.telecom.net.bt</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>MyAccountURLTitle</key>
@@ -136,7 +136,7 @@
 		<key>Voice</key>
 		<dict>
 			<key>EnableVolteByDefault</key>
-			<false/>
+			<true/>
 		</dict>
 	</dict>
 	<key>ShowDialAssist</key>
@@ -147,16 +147,20 @@
 	<string>B-Mobile</string>
 	<key>ShouldHideAllVoicemailUI</key>
 	<true/>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>ShowVolteSwitch</key>
+	<false/>
 	<key>AttachAPN</key>
 	<dict>
 		<key>3GPP</key>
 		<dict>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>1</integer>
-			<key>password</key>
-			<string></string>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
+			<key>password</key>
+			<string></string>
 			<key>PcscfAddressRequired</key>
 			<false/>
 			<key>username</key>
@@ -165,67 +169,53 @@
 			<integer>1</integer>
 			<key>apn</key>
 			<string>internet</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
-	<key>SupportsImsCapability</key>
-	<true/>
-	<key>ShowVolteSwitch</key>
-	<true/>
-	<key>ShowTTY</key>
-	<false/>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Bhutan</string>
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>49</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>internet</string>
+			<key>type-mask</key>
+			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>ims</string>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>1048576</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>hos</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>

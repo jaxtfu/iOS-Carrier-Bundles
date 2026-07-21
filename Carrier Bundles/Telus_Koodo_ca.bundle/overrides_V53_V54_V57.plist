@@ -3,218 +3,48 @@
 <plist version="1.0">
 <dict>
 	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
-	<key>Enable4GByDefault</key>
+	<string>6.0.162</string>
+	<key>AllowSAOnWiFiAssociation</key>
 	<true/>
-	<key>SuppressSimToolkitSendShortMessageNotifications</key>
+	<key>ShowVoNRSwitch</key>
 	<true/>
-	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
-	<integer>131072</integer>
-	<key>SMSSettings</key>
-	<dict>
-		<key>SMSCarrierReportJunkAddress</key>
-		<string>9926</string>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
-	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32768</integer>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
+	<key>EnableWiFiN1ModeOnlyWhenSAEnabled</key>
+	<true/>
+	<key>EnableVoNRByDefault</key>
+	<true/>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Signaling</key>
-		<dict>
-			<key>PreconditionUpdateDelayTimerMilliseconds</key>
-			<integer>10000</integer>
-			<key>LocalQoSTimeoutMOSeconds</key>
-			<integer>5000</integer>
-			<key>BrandedCallingImageFetchingTimeoutMilliseconds</key>
-			<integer>2000</integer>
-			<key>SupportPEarlyMediaHeader</key>
-			<false/>
-			<key>AlwaysAddSipInstance</key>
-			<true/>
-			<key>ussdEnabled</key>
-			<true/>
-			<key>EarlyMediaNeedsHeader</key>
-			<false/>
-			<key>ContactUser</key>
-			<string>IMSI</string>
-			<key>SipTimers</key>
-			<dict>
-				<key>B</key>
-				<integer>8000</integer>
-				<key>F</key>
-				<integer>16000</integer>
-				<key>InviteResponseTimeout</key>
-				<integer>5000</integer>
-			</dict>
-			<key>WaitForRingingTimerMOSeconds</key>
-			<integer>25</integer>
-			<key>strictCallFlows</key>
-			<true/>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string>380,406,414,499,500,501,502,503,504,505,513,580,606</string>
-			<key>MaxUdpMessageSize</key>
-			<integer>1200</integer>
-			<key>EmergencyPreferredIdentity</key>
-			<string>IMEI</string>
-			<key>CountryOfOriginationFormat</key>
-			<string>PANI</string>
-			<key>ValidateSipMessageRecipient</key>
-			<false/>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
-			<key>EnableCellularNetworkInfo</key>
-			<true/>
-			<key>EnableBrandedCalling</key>
-			<true/>
-			<key>Preconditions</key>
-			<string>Supported</string>
-			<key>VerstatFeatureCapability</key>
-			<string>Enabled</string>
-			<key>WaitForRingingTimerMTSeconds</key>
-			<integer>15</integer>
-			<key>RingingTimerSeconds</key>
-			<integer>90</integer>
-			<key>UseIPSec</key>
-			<true/>
-			<key>BrandedCallingAssetServersAllowList</key>
-			<array>
-				<dict>
-					<key>Server</key>
-					<string>cdn-ca.ccid.neustar.biz</string>
-					<key>Certificate</key>
-					<string>lPraBjD+VHks5/sVEDOczhg00z9TGoGMAjndDyYGUNU=</string>
-				</dict>
-				<dict>
-					<key>Server</key>
-					<string>cdn-ca.ccid.transunion.ca</string>
-					<key>Certificate</key>
-					<string>lPraBjD+VHks5/sVEDOczhg00z9TGoGMAjndDyYGUNU=</string>
-				</dict>
-			</array>
-		</dict>
-		<key>ShowBrandedCallingSwitch</key>
-		<true/>
-		<key>EnableBrandedCallingByDefault</key>
-		<true/>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<false/>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>AlwaysSubscribeToConferenceEvents</key>
-			<true/>
-			<key>SendConferenceSubscribeAfterRefers</key>
-			<false/>
-			<key>conferenceServer</key>
-			<string>sip:factory@conference.ims.mnc220.mcc302.3gppnetwork.org</string>
-		</dict>
-		<key>AllowHandoverWithoutIMSVoiceService</key>
-		<true/>
 		<key>SMS</key>
 		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>allowCSFBInVolteMode</key>
-			<false/>
-		</dict>
-		<key>SipTimers</key>
-		<dict>
-			<key>B</key>
-			<integer>8000</integer>
-			<key>F</key>
-			<integer>16000</integer>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>NafHost</key>
-			<string>xcap.ims.mnc220.mcc302.pub.3gppnetwork.org</string>
-			<key>provisioningDependency</key>
-			<true/>
-			<key>BsfPort</key>
-			<integer>8080</integer>
-			<key>NafPort</key>
-			<integer>8090</integer>
-			<key>SupportsCLIR</key>
-			<false/>
-			<key>supported</key>
-			<true/>
-			<key>ContentType</key>
-			<string>application/xcap-el+xml</string>
-			<key>DisableOnNetworkError</key>
-			<true/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string>404,500,502,503,504</string>
-			<key>SupportsCFErasure</key>
-			<false/>
-			<key>NetworkSupportsCLIRModification</key>
-			<false/>
-			<key>BsfHost</key>
-			<string>bsf.mnc220.mcc302.pub.3gppnetwork.org</string>
-			<key>SupportsCW</key>
-			<false/>
-		</dict>
-		<key>Media</key>
-		<dict>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-			<key>AudioCodecs</key>
+			<key>SupportedDomains</key>
 			<dict>
-				<key>109</key>
-				<dict>
-					<key>ch-aw-recv</key>
-					<string>2</string>
-					<key>br</key>
-					<string>5.9-13.2</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-wb</string>
-					<key>max-red</key>
-					<string>220</string>
-				</dict>
+				<key>LTE</key>
+				<true/>
+				<key>NR</key>
+				<true/>
+				<key>UMTS</key>
+				<true/>
 			</dict>
-			<key>InactivityTimerRTCPSeconds</key>
-			<integer>30</integer>
-			<key>MaxRedundancy</key>
-			<integer>220</integer>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>30</integer>
-			<key>EnableIncomingDTMF</key>
-			<true/>
-			<key>IncludeSDPMaxRed</key>
-			<true/>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
 		</dict>
 		<key>Voice</key>
 		<dict>
-			<key>E911OverCSIfRoaming</key>
-			<false/>
-			<key>EnableVolteByDefault</key>
+			<key>EnableVoNRByDefault</key>
 			<true/>
-			<key>E911OverITechSupported</key>
-			<false/>
-			<key>E911OverCSIfNoIMSReg</key>
-			<true/>
-			<key>CheckIMSPrefForEmergency</key>
-			<false/>
-			<key>CellularE911SearchTimeout</key>
-			<integer>11</integer>
-			<key>E911SearchTimer</key>
-			<integer>11</integer>
-			<key>tLte911Timer</key>
-			<integer>30</integer>
 		</dict>
 	</dict>
-	<key>OverrideOperatorWiFiName</key>
-	<string>Koodo Wi-Fi</string>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>LocalInstallSMDPURL</key>
+		<string>https://mconnect-es2-006.oberthur.net</string>
+		<key>RequiresPasscodeForCrossPlatformTransfer</key>
+		<true/>
+	</dict>
+	<key>ShowHighDataModeSwitch</key>
+	<true/>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
+	<key>DataIndicatorOverrideForNRMmwave</key>
+	<string>NRPlus</string>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportedEntitlements</key>
@@ -228,182 +58,10 @@
 		<key>SupportCrossPlatformSIMTransfer</key>
 		<true/>
 	</dict>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
-	<key>AttachAPN</key>
-	<dict>
-		<key>3GPP</key>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>PcscfAddressRequired</key>
-			<false/>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>sp.koodo.com</string>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>1</integer>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
-		</dict>
-	</dict>
-	<key>SupportsImsCapability</key>
+	<key>SupportsVoNR</key>
 	<true/>
-	<key>PhoneAccountTransfer</key>
-	<dict>
-		<key>LocalInstallSMDPURL</key>
-		<string>https://mconnect-es2-006.oberthur.net</string>
-		<key>RequiresPasscodeForCrossPlatformTransfer</key>
-		<true/>
-	</dict>
-	<key>DataIndicatorOverrideForNRMmwave</key>
-	<string>NRPlus</string>
-	<key>IgnoresIntlDataRoamingServiceList</key>
-	<array>
-		<string>EntitlementTraffic</string>
-	</array>
-	<key>ShowVolteSwitch</key>
-	<false/>
-	<key>MMS</key>
-	<dict>
-		<key>Proxy</key>
-		<string>mmscproxy.mobility.ca:8799</string>
-		<key>MMSCarrierReportJunkAddress</key>
-		<string>9926</string>
-	</dict>
-	<key>TechSettings</key>
-	<dict>
-		<key>ChildSAs</key>
-		<dict>
-			<key>FirstChild</key>
-			<dict>
-				<key>ChildProposals</key>
-				<array>
-					<dict>
-						<key>IntegrityAlgorithm</key>
-						<array>
-							<string>SHA1-96</string>
-						</array>
-						<key>EncryptionAlgorithm</key>
-						<array>
-							<string>AES-128</string>
-						</array>
-						<key>DHGroup</key>
-						<integer>14</integer>
-						<key>Lifetime</key>
-						<integer>86400</integer>
-					</dict>
-				</array>
-				<key>InstallPolicies</key>
-				<true/>
-				<key>ReplayWindowSize</key>
-				<integer>12</integer>
-			</dict>
-		</dict>
-		<key>iRatPolicies</key>
-		<dict>
-			<key>PreferredTechnology</key>
-			<string>ims</string>
-			<key>PreferredTechnologyRoaming</key>
-			<string>ims</string>
-		</dict>
-		<key>ExtraConfigurationAttributeRequestv6</key>
-		<array>
-			<dict>
-				<key>Identifier</key>
-				<integer>16390</integer>
-				<key>Name</key>
-				<string>AssignedPCSCFIPv6</string>
-				<key>Type</key>
-				<string>IPv6Address</string>
-			</dict>
-		</array>
-		<key>WifiCallingAllowedInRoaming</key>
-		<false/>
-		<key>WiFiCallingControlsAlliWLanServices</key>
-		<true/>
-		<key>SupportContextSwitchOver</key>
-		<true/>
-		<key>5wiServiceMask</key>
-		<integer>3</integer>
-		<key>IKE</key>
-		<dict>
-			<key>Proposals</key>
-			<array>
-				<dict>
-					<key>EncryptionAlgorithm</key>
-					<string>AES-128</string>
-					<key>IntegrityAlgorithm</key>
-					<string>SHA1-96</string>
-					<key>DHGroup</key>
-					<integer>14</integer>
-					<key>AuthenticationMethod</key>
-					<string>None</string>
-					<key>Lifetime</key>
-					<integer>80000</integer>
-					<key>EAPMethod</key>
-					<string>EAP-AKA</string>
-					<key>PRFAlgorithm</key>
-					<string>SHA2-256</string>
-				</dict>
-			</array>
-			<key>DeadPeerDetectionEnabled</key>
-			<false/>
-			<key>DeadPeerDetectionMaxRetries</key>
-			<integer>4</integer>
-			<key>DeadPeerDetectionInterval</key>
-			<integer>600</integer>
-			<key>LocalIdentifier</key>
-			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
-			<key>NATTKeepAliveOffload</key>
-			<true/>
-			<key>ValidateRemoteCertificate</key>
-			<false/>
-			<key>RemoteAddress</key>
-			<string>epdg.epc.mnc220.mcc302.pub.3gppnetwork.org</string>
-			<key>DeadPeerDetectionRetryInterval</key>
-			<integer>10</integer>
-		</dict>
-		<key>AllowRoamingHandover</key>
-		<false/>
-		<key>SetHandOverIPv6Prefix</key>
-		<true/>
-		<key>TechPolicies</key>
-		<array>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>131072</integer>
-			</dict>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>262144</integer>
-			</dict>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>1048582</integer>
-			</dict>
-		</array>
-		<key>EPDGResolutionFallbackEnabled</key>
-		<true/>
-		<key>SupportCallHandover</key>
-		<true/>
-	</dict>
-	<key>PushSettings</key>
-	<dict>
-		<key>Topic</key>
-		<string>com.telus.ent.apns</string>
-		<key>VoWiFiTopic</key>
-		<string>com.telus.ent.apns</string>
-	</dict>
-	<key>ShowLTEWarningUnsupportedCarrier</key>
-	<false/>
+	<key>Show5GStandaloneSwitch</key>
+	<true/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -413,8 +71,8 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
+			<key>Support5GSaHandOver</key>
+			<true/>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>2</integer>
 			<key>SupportSwitchOver</key>
@@ -431,18 +89,16 @@
 			<integer>32823</integer>
 			<key>password</key>
 			<string></string>
-			<key>apn</key>
-			<string>sp.koodo.com</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
+			<key>UseNetworkMTU</key>
+			<true/>
 			<key>enableXLAT464</key>
 			<true/>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>1</integer>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
+			<key>apn</key>
+			<string>sp.koodo.com</string>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -453,8 +109,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>262144</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>2</integer>
 			<key>username</key>
@@ -471,8 +125,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048582</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>2</integer>
 			<key>username</key>
@@ -483,5 +135,13 @@
 			<integer>2</integer>
 		</dict>
 	</array>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
+	<key>Show5GSwitch</key>
+	<true/>
+	<key>Enable5GStandaloneByDefault</key>
+	<true/>
 </dict>
 </plist>

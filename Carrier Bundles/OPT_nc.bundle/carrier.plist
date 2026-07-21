@@ -94,8 +94,8 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>IMAP</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>577</string>
 	<key>HomeBundleIdentifier</key>

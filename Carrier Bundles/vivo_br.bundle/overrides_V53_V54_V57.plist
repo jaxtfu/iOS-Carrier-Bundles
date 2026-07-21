@@ -3,240 +3,39 @@
 <plist version="1.0">
 <dict>
 	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Show5GStandaloneSwitch</key>
-	<true/>
-	<key>EnableLTEAfterUpgrade</key>
+	<string>6.0.162</string>
+	<key>ShowVoNRSwitch</key>
 	<true/>
 	<key>Enable5GStandaloneByDefault</key>
 	<true/>
 	<key>Show5GSwitch</key>
 	<true/>
-	<key>ShowHighDataModeSwitch</key>
-	<true/>
-	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32768</integer>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
+	<key>PushSettings</key>
+	<dict>
+		<key>CellularPlanTransferTopic</key>
+		<string>br.com.vivo.ent.iphone-transfer</string>
+	</dict>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Signaling</key>
-		<dict>
-			<key>AdditionalContactParams</key>
-			<dict>
-				<key>REGISTER,INVITE,INVITE:*</key>
-				<string>+g.3gpp.srvcc-alerting</string>
-			</dict>
-			<key>TriggerCSFBOnSDPError</key>
-			<true/>
-			<key>BrandedCallingImageFetchingTimeoutMilliseconds</key>
-			<integer>2000</integer>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>ShowBrandedCallingSwitch</key>
-			<true/>
-			<key>UseDialogEventPackage</key>
-			<true/>
-			<key>AccessNetworkRefreshMethod</key>
-			<string>UPDATE</string>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>SipTimers</key>
-			<dict>
-				<key>InviteResponseTimeout</key>
-				<integer>9000</integer>
-			</dict>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string>3XX,4XX,-404,-480,5XX,6XX</string>
-			<key>AlwaysSendSessionProgress</key>
-			<true/>
-			<key>maxUDPpacketsize</key>
-			<integer>1280</integer>
-			<key>RingbackTimerSeconds</key>
-			<integer>90</integer>
-			<key>ResetSocketWhenNetworkChange</key>
-			<false/>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
-			<key>IncomingCallEndReasons</key>
-			<dict>
-				<key>NoAnswerFromUser</key>
-				<dict>
-					<key>StatusCode</key>
-					<integer>480</integer>
-					<key>TerminationEvent</key>
-					<string>RemoteHangup</string>
-				</dict>
-			</dict>
-			<key>EnableBrandedCalling</key>
-			<true/>
-			<key>Preconditions</key>
-			<string>Supported</string>
-			<key>VerstatFeatureCapability</key>
-			<string>Enabled</string>
-			<key>RingingTimerSeconds</key>
-			<integer>90</integer>
-			<key>MinSessionExpiresSeconds</key>
-			<integer>600</integer>
-			<key>BrandedCallingAssetServersAllowList</key>
-			<array>
-				<dict>
-					<key>Server</key>
-					<string>cdn-br.ccid.neustar.biz</string>
-					<key>Certificate</key>
-					<string>lPraBjD+VHks5/sVEDOczhg00z9TGoGMAjndDyYGUNU=</string>
-				</dict>
-			</array>
-			<key>UseIPSec</key>
-			<true/>
-			<key>NetworkBasedCallWaiting</key>
-			<true/>
-		</dict>
-		<key>EnableBrandedCallingByDefault</key>
-		<true/>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<true/>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>conferenceServer</key>
-			<string>sip:mmtel@conf-factory.ims.mnc${MNC}.mcc${MCC}.3gppnetwork.org</string>
-		</dict>
-		<key>AllowHandoverWithoutIMSVoiceService</key>
-		<true/>
 		<key>SMS</key>
 		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
 			<key>SupportedDomains</key>
 			<dict>
-				<key>LTE</key>
-				<false/>
 				<key>NR</key>
 				<true/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>NafPort</key>
-			<integer>8090</integer>
-			<key>imsRegistrationDependency</key>
-			<true/>
-			<key>DisableOnNetworkError</key>
-			<false/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string></string>
-			<key>ContentType</key>
-			<string>application/xcap-el+xml</string>
-			<key>BsfPort</key>
-			<integer>8080</integer>
-			<key>supported</key>
-			<true/>
-		</dict>
-		<key>Media</key>
-		<dict>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>30</integer>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>106</key>
-				<dict>
-					<key>max-red</key>
-					<string>0</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>ch-aw-recv</key>
-					<string>3</string>
-					<key>cmr</key>
-					<string>-1</string>
-					<key>maxptime</key>
-					<string>80</string>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>br</key>
-					<string>9.6-24.4</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-				</dict>
-			</dict>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-			<key>RTCPIntervalSeconds</key>
-			<integer>5</integer>
-			<key>UseSDPTemplateForAllInvites</key>
-			<true/>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-		</dict>
-		<key>ShowBrandedCallingSwitch</key>
-		<true/>
 		<key>Voice</key>
 		<dict>
-			<key>EnableVoLTEWithVoWiFi</key>
+			<key>EnableVoNRByDefault</key>
 			<true/>
-			<key>E911OverITechSupported</key>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>ResetSocketWhenNetworkChange</key>
 			<false/>
-			<key>EnableVolteByDefault</key>
-			<true/>
 		</dict>
 	</dict>
-	<key>CarrierEntitlements</key>
-	<dict>
-		<key>SupportsOnDevicePhysicalSIMConvert</key>
-		<true/>
-		<key>SupportSecureIntent</key>
-		<true/>
-		<key>ProtocolVersion</key>
-		<string>2</string>
-		<key>SupportedEntitlements</key>
-		<integer>4203537</integer>
-		<key>Authentication</key>
-		<dict>
-			<key>Type</key>
-			<integer>1</integer>
-			<key>Username</key>
-			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
-		</dict>
-		<key>SupportedAuthorizationTokens</key>
-		<integer>2</integer>
-		<key>ServerAddress</key>
-		<string>https://aes.mnc010.mcc724.pub.3gppnetwork.org/entitlement/</string>
-		<key>SupportPhysicalSIMtoESIMTransfer</key>
-		<true/>
-		<key>UpdatePeriod</key>
-		<integer>24</integer>
-		<key>SupportedActions</key>
-		<array>
-			<string>TransferSIMService</string>
-		</array>
-	</dict>
-	<key>DerPriFileName</key>
-	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
-	<key>AttachAPN</key>
-	<dict>
-		<key>3GPP</key>
-		<dict>
-			<key>password</key>
-			<string>vivo</string>
-			<key>username</key>
-			<string>vivo</string>
-			<key>AllowedProtocolMaskInDomesticRoaming</key>
-			<integer>3</integer>
-			<key>apn</key>
-			<string>zap.vivo.com.br</string>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMask</key>
-			<integer>2</integer>
-		</dict>
-	</dict>
-	<key>SupportsImsCapability</key>
-	<true/>
 	<key>PhoneAccountTransfer</key>
 	<dict>
 		<key>LocalInstallSMDPURL</key>
@@ -268,126 +67,26 @@
 			</array>
 		</dict>
 	</dict>
-	<key>ShowVolteSwitch</key>
-	<false/>
-	<key>Enable5GAutoByDefault</key>
+	<key>EnableLTEAfterUpgrade</key>
 	<true/>
-	<key>SupportsNRNSAInboundRoaming</key>
-	<true/>
-	<key>TechSettings</key>
+	<key>DerPriFileName</key>
+	<string>overrides_V53_V54_V57.der.pri</string>
+	<key>IPv6SupportedDataModeMask</key>
+	<integer>110623</integer>
+	<key>CarrierEntitlements</key>
 	<dict>
-		<key>WifiCallingAllowedInRoaming</key>
+		<key>SupportedEntitlements</key>
+		<integer>4203537</integer>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
 		<true/>
-		<key>ChildSAs</key>
-		<dict>
-			<key>FirstChild</key>
-			<dict>
-				<key>ChildProposals</key>
-				<array>
-					<dict>
-						<key>EncryptionAlgorithm</key>
-						<array>
-							<string>AES-256</string>
-						</array>
-						<key>Lifetime</key>
-						<integer>86400</integer>
-						<key>IntegrityAlgorithm</key>
-						<array>
-							<string>SHA2-256</string>
-						</array>
-					</dict>
-				</array>
-				<key>InstallPolicies</key>
-				<true/>
-				<key>ReplayWindowSize</key>
-				<integer>12</integer>
-			</dict>
-		</dict>
-		<key>iRatPolicies</key>
-		<dict>
-			<key>PreferredTechnology</key>
-			<string>cellular</string>
-			<key>PreferredTechnologyRoaming</key>
-			<string>wifi</string>
-		</dict>
-		<key>ExtraConfigurationAttributeRequestv6</key>
+		<key>SupportedActions</key>
 		<array>
-			<dict>
-				<key>Identifier</key>
-				<integer>16386</integer>
-				<key>Name</key>
-				<string>AssignedPCSCFIPv6</string>
-				<key>Type</key>
-				<string>IPv6Address</string>
-			</dict>
+			<string>TransferSIMService</string>
 		</array>
-		<key>AllowRoamingHandover</key>
-		<false/>
-		<key>SupportCallHandover</key>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
 		<true/>
-		<key>TechPolicies</key>
-		<array>
-			<dict>
-				<key>policy</key>
-				<string>TRUE</string>
-				<key>serviceMask</key>
-				<integer>131072</integer>
-			</dict>
-		</array>
-		<key>IKE</key>
-		<dict>
-			<key>Proposals</key>
-			<array>
-				<dict>
-					<key>DHGroup</key>
-					<integer>14</integer>
-					<key>EncryptionAlgorithm</key>
-					<string>AES-256</string>
-					<key>EAPMethod</key>
-					<string>EAP-AKA</string>
-					<key>PRFAlgorithm</key>
-					<string>SHA2-256</string>
-					<key>IntegrityAlgorithm</key>
-					<string>SHA2-256</string>
-					<key>Lifetime</key>
-					<integer>86400</integer>
-				</dict>
-			</array>
-			<key>DeadPeerDetectionEnabled</key>
-			<false/>
-			<key>DeadPeerDetectionMaxRetries</key>
-			<integer>4</integer>
-			<key>DeadPeerDetectionInterval</key>
-			<integer>600</integer>
-			<key>LocalIdentifier</key>
-			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
-			<key>NATTKeepAliveOffload</key>
-			<true/>
-			<key>RemoteAddress</key>
-			<string>epdg.epc.mnc$mnc.mcc$mcc.pub.3gppnetwork.org</string>
-			<key>DeadPeerDetectionRetryInterval</key>
-			<integer>10</integer>
-		</dict>
-		<key>5wiServiceMask</key>
-		<integer>1</integer>
-		<key>ExtraConfigurationAttributeRequestv4</key>
-		<array>
-			<dict>
-				<key>Identifier</key>
-				<integer>16384</integer>
-				<key>Name</key>
-				<string>AssignedPCSCFIPv4</string>
-				<key>Type</key>
-				<string>IPv4Address</string>
-			</dict>
-		</array>
-	</dict>
-	<key>PushSettings</key>
-	<dict>
-		<key>MultiSIMTopic</key>
-		<string>br.com.vivo.ent.multi-sim</string>
-		<key>CellularPlanTransferTopic</key>
-		<string>br.com.vivo.ent.iphone-transfer</string>
+		<key>SupportSecureIntent</key>
+		<true/>
 	</dict>
 	<key>apns</key>
 	<array>
@@ -397,8 +96,6 @@
 			<key>password</key>
 			<string>vivo</string>
 			<key>AllowedProtocolMaskInDomesticRoaming</key>
-			<integer>3</integer>
-			<key>DefaultProtocolMask</key>
 			<integer>3</integer>
 			<key>enableXLAT464</key>
 			<true/>
@@ -424,43 +121,53 @@
 		<dict>
 			<key>type-mask</key>
 			<integer>131072</integer>
+			<key>Support5GSaHandOver</key>
+			<true/>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>Support5GSaHandOver</key>
-			<true/>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>ims</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>type-mask</key>
 			<integer>1048576</integer>
+			<key>Support5GSaHandOver</key>
+			<true/>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>Support5GSaHandOver</key>
-			<true/>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>xcap.ims</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
 	</array>
+	<key>DataIndicatorOverrideForNRMmwave</key>
+	<string>NRPlus</string>
+	<key>Show5GStandaloneSwitch</key>
+	<true/>
+	<key>ShowHighDataModeSwitch</key>
+	<true/>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
+	<key>SupportsVoNR</key>
+	<true/>
+	<key>SupportsNRNSAInboundRoaming</key>
+	<true/>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
 </dict>
 </plist>

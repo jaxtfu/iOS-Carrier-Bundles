@@ -73,8 +73,8 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>AllowsVoIP</key>
 	<true/>
 	<key>EmergencyCalling</key>

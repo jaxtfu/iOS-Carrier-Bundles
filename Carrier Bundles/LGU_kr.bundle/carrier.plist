@@ -114,8 +114,6 @@
 			<string></string>
 			<key>apn</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -131,6 +129,11 @@
 	<dict>
 		<key>LocalInstallSMDPURL</key>
 		<string>https://lgu.prod.ondemandconnectivity.com</string>
+	</dict>
+	<key>ToolsConfiguration</key>
+	<dict>
+		<key>EnableFeedbackCollection</key>
+		<true/>
 	</dict>
 	<key>VoicemailPilotNumber</key>
 	<string>*88</string>
@@ -172,8 +175,6 @@
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>002447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>WatchCustomerServicePhoneNumber</key>
 	<string>114</string>
 	<key>MMS</key>
@@ -206,10 +207,10 @@
 	<string>com.apple.SouthKorea</string>
 	<key>MaxBluetoothModemConnections</key>
 	<integer>5</integer>
-	<key>RequiresIPv4v6PDPTypes</key>
-	<true/>
 	<key>ShowVolteSwitch</key>
 	<false/>
+	<key>RequiresIPv4v6PDPTypes</key>
+	<true/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -220,8 +221,6 @@
 					<integer>1081349</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>enableXLAT464</key>
 					<true/>
 					<key>AllowedProtocolMaskInRoaming</key>
@@ -234,34 +233,30 @@
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>131072</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
 					<key>apn</key>
 					<string>IMS</string>
+					<key>type-mask</key>
+					<integer>131072</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>262144</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>1</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
 					<key>apn</key>
 					<string>emergency.lguplus.co.kr</string>
+					<key>type-mask</key>
+					<integer>262144</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>1</integer>
 				</dict>
@@ -270,8 +265,6 @@
 					<integer>48</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>enableXLAT464</key>
 					<true/>
 					<key>AllowedProtocolMaskInRoaming</key>
@@ -637,8 +630,6 @@
 		<key>EnableRCSByDefault</key>
 		<true/>
 	</dict>
-	<key>DefaultWhenImsSwitchOff</key>
-	<integer>0</integer>
 	<key>MTU</key>
 	<array>
 		<dict>
@@ -648,18 +639,20 @@
 			<integer>1428</integer>
 		</dict>
 	</array>
-	<key>PhoneSettings</key>
-	<dict>
-		<key>AutoCallPickupTimer</key>
-		<integer>40</integer>
-	</dict>
 	<key>PushSettings</key>
 	<dict>
 		<key>MultiSIMTopic</key>
 		<string>kr.co.uplus.multisim</string>
 	</dict>
+	<key>PhoneSettings</key>
+	<dict>
+		<key>AutoCallPickupTimer</key>
+		<integer>40</integer>
+	</dict>
 	<key>SupportsRoamingOnCDMA</key>
 	<true/>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -690,8 +683,6 @@
 			<string>MJEMMU945Y</string>
 		</array>
 	</dict>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
 	<key>CarrierName</key>
@@ -699,7 +690,7 @@
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://page.uplus.co.kr</string>
+	<string>https://page.uplus.co.kr</string>
 	<key>MyAccountURLTitle</key>
 	<string>U+ Page</string>
 	<key>SupportedSIMs</key>

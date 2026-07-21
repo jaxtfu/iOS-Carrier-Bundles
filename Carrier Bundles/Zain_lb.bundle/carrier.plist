@@ -31,10 +31,10 @@
 	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>161</string>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>apns</key>
 	<array>
 		<dict>

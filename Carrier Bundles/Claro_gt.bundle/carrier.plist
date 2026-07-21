@@ -40,13 +40,15 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.claro.com.gt</string>
+	<string>https://www.claro.com.gt</string>
 	<key>EnableLTEAfterUpgrade</key>
 	<true/>
 	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>MyAccountURLTitle</key>
 	<string>Claro</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StockSymboli</key>
 	<array>
 		<dict>
@@ -220,7 +222,7 @@
 	</dict>
 	<key>SupportsUserBusyCauseCode</key>
 	<true/>
-	<key>ShowTTY</key>
+	<key>Show3GSwitchWithVolte</key>
 	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>*80</string>
@@ -327,39 +329,35 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>49</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>internet.ideasclaro</string>
+			<key>type-mask</key>
+			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>type-mask</key>
-			<integer>131072</integer>
-			<key>apn</key>
-			<string>ims</string>
+			<key>UseNetworkMTU</key>
+			<true/>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
-			<key>DefaultProtocolMask</key>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</array>

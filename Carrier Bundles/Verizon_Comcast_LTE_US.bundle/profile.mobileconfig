@@ -20,7 +20,7 @@
 				<string>anonymous@aka.xfinitymobile.com</string>
 				<key>PayloadCertificateAnchorUUID</key>
 				<array>
-					<string>6965949E-1076-4842-9ADD-965C5E6D0358</string>
+					<string>6965949E-1076-4842-9ADD-965C5E6D0359</string>
 				</array>
 				<key>TLSTrustedServerNames</key>
 				<array>
@@ -46,13 +46,13 @@
 			<key>PayloadDisplayName</key>
 			<string>WiFi</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.wifi.managed.BB345DDE-4BF5-4493-B3BA-66AB9E10CDBC</string>
+			<string>com.apple.wifi.managed.BB345DDE-4BF5-4493-B3BA-66AB9E10CDCD</string>
 			<key>PayloadOrganization</key>
 			<string>Comcast Cable Corporation</string>
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>C8A16CF0-D605-4612-B932-ACAED222218C</string>
+			<string>CDC0F277-6B50-4877-A42B-CBCCC456FF80</string>
 			<key>PayloadVersion</key>
 			<real>1</real>
 			<key>ProxyType</key>
@@ -78,7 +78,7 @@
 				<string>anonymous@aka.xfinitymobile.com</string>
 				<key>PayloadCertificateAnchorUUID</key>
 				<array>
-					<string>6965949E-1076-4842-9ADD-965C5E6D0358</string>
+					<string>6965949E-1076-4842-9ADD-965C5E6D0359</string>
 				</array>
 				<key>TLSTrustedServerNames</key>
 				<array>
@@ -104,13 +104,13 @@
 			<key>PayloadDisplayName</key>
 			<string>WiFi</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.wifi.managed.5198E899-6CA9-498F-A459-601459B141F2</string>
+			<string>com.apple.wifi.managed.5198E899-6CA9-498F-A459-601459B14103</string>
 			<key>PayloadOrganization</key>
 			<string>Comcast Cable Corporation</string>
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>E0165661-B1A3-41C4-9B6A-839D4042D7DC</string>
+			<string>E927C6C1-488E-443F-B69B-D7DB4B16062B</string>
 			<key>PayloadVersion</key>
 			<real>1</real>
 			<key>ProxyType</key>
@@ -134,7 +134,7 @@
 				<string>anonymous@aka.xfinitymobile.com</string>
 				<key>PayloadCertificateAnchorUUID</key>
 				<array>
-					<string>6965949E-1076-4842-9ADD-965C5E6D0358</string>
+					<string>6965949E-1076-4842-9ADD-965C5E6D0359</string>
 				</array>
 				<key>TLSTrustedServerNames</key>
 				<array>
@@ -160,53 +160,19 @@
 			<key>PayloadDisplayName</key>
 			<string>WiFi</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.wifi.managed.7128D899-6CA9-498F-A459-601459B15203</string>
+			<string>com.apple.wifi.managed.7128D899-6CA9-498F-A459-601459B15214</string>
 			<key>PayloadOrganization</key>
 			<string>Comcast Cable Corporation</string>
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>5155E295-91E5-4F08-8C2E-6EF48C53A380</string>
+			<string>50862670-2080-4624-B175-87CE66359156</string>
 			<key>PayloadVersion</key>
 			<real>1</real>
 			<key>ProxyType</key>
 			<string>None</string>
 			<key>SSID_STR</key>
 			<string>Cox Mobile</string>
-		</dict>
-		<dict>
-			<key>AutoJoin</key>
-			<false/>
-			<key>DisableAssociationMACRandomization</key>
-			<true/>
-			<key>EncryptionType</key>
-			<string>None</string>
-			<key>FirstAutoJoinRestricted</key>
-			<true/>
-			<key>HIDDEN_NETWORK</key>
-			<false/>
-			<key>IsHotspot</key>
-			<true/>
-			<key>Password</key>
-			<string>password</string>
-			<key>PayloadDescription</key>
-			<string>Configures Wi-Fi settings</string>
-			<key>PayloadDisplayName</key>
-			<string>WiFi</string>
-			<key>PayloadIdentifier</key>
-			<string>com.apple.wifi.managed.71CB0883-2F04-478E-BD3E-37EF4D38E03A</string>
-			<key>PayloadOrganization</key>
-			<string>Comcast Cable Corporation</string>
-			<key>PayloadType</key>
-			<string>com.apple.wifi.managed</string>
-			<key>PayloadUUID</key>
-			<string>4A549F8C-FF69-40B3-8CBD-B9F8845FD78D</string>
-			<key>PayloadVersion</key>
-			<real>1</real>
-			<key>ProxyType</key>
-			<string>None</string>
-			<key>SSID_STR</key>
-			<string>xfinitywifi</string>
 		</dict>
 		<dict>
 			<key>AutoJoin</key>
@@ -228,7 +194,7 @@
 				<string>anonymous@aka.xfinitymobile.com</string>
 				<key>PayloadCertificateAnchorUUID</key>
 				<array>
-					<string>6965949E-1076-4842-9ADD-965C5E6D0358</string>
+					<string>6965949E-1076-4842-9ADD-965C5E6D0359</string>
 				</array>
 				<key>TLSMaximumVersion</key>
 				<string>1.2</string>
@@ -241,7 +207,7 @@
 					<string>*.aaa.xfinitymobile.com</string>
 				</array>
 				<key>TTLSInnerAuthentication</key>
-				<string>MSCHAPv2</string>
+				<string>PAP</string>
 				<key>UserName</key>
 				<string>anonymous@aka.xfinitymobile.com</string>
 				<key>UserPassword</key>
@@ -262,11 +228,11 @@
 			<key>PayloadDisplayName</key>
 			<string>Wi-Fi</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.wifi.managed.F405AF22-DC47-480B-A79C-51039C351000</string>
+			<string>com.apple.wifi.managed.F405AF22-DC47-480B-A79C-51039C351011</string>
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>AEA5DFE2-8143-45B8-921D-F9BF64DC4A57</string>
+			<string>4F06C241-1BF7-43DD-A8C1-B93C30349A8B</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProxyType</key>
@@ -315,11 +281,11 @@
 			<key>PayloadDisplayName</key>
 			<string>AAA Certificate Services</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.security.root.6965949E-1076-4842-9ADD-965C5E6D0358</string>
+			<string>com.apple.security.root.6965949E-1076-4842-9ADD-965C5E6D0359</string>
 			<key>PayloadType</key>
 			<string>com.apple.security.root</string>
 			<key>PayloadUUID</key>
-			<string>FD962FB7-EC6E-4D81-816E-CE9410C1FA5A</string>
+			<string>34BA5697-6347-4DC0-96EB-0E60A389E05D</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 		</dict>
@@ -329,13 +295,13 @@
 	<key>PayloadDisplayName</key>
 	<string>Xfinity Mobile</string>
 	<key>PayloadIdentifier</key>
-	<string>2B8E0793-8F17-4B01-990E-F47762D11CA7</string>
+	<string>2B8E0793-8F17-4B01-990E-F47762D11CB8</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>32769D7C-E7A6-4700-9FEB-487BC91BDF9D</string>
+	<string>2E2FB38C-77DA-430E-81B8-D1441098B958</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

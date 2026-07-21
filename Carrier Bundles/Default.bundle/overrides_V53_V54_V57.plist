@@ -2,86 +2,36 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>DerGriFileVersion</key>
+	<string>14.0.5</string>
 	<key>DerPriFileVersion</key>
 	<string>0.1.161</string>
-	<key>Show4GSwitch</key>
-	<true/>
-	<key>DerGriFileName</key>
-	<string>global_setting_J.der.gri</string>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Media</key>
-		<dict>
-			<key>VoiceOnAP</key>
-			<dict>
-				<key>EnableAPOnlyMode</key>
-				<false/>
-			</dict>
-		</dict>
-		<key>Signaling</key>
-		<dict>
-			<key>Preconditions</key>
-			<string>SupportedOptional</string>
-		</dict>
-		<key>Voice</key>
-		<dict>
-			<key>EnableVolteByDefault</key>
-			<false/>
-		</dict>
-		<key>SMS</key>
-		<dict>
-			<key>DCN</key>
-			<dict>
-				<key>destinationNumber</key>
-				<string></string>
-				<key>hysteresisTimeout</key>
-				<integer>0</integer>
-			</dict>
-			<key>enableInNonVoLTEMode</key>
-			<true/>
-			<key>SupportedDomains</key>
-			<dict>
-				<key>LTE</key>
-				<true/>
-			</dict>
-		</dict>
-	</dict>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>IPv6SupportedDataModeMask</key>
 	<integer>110620</integer>
-	<key>DefaultWhenImsSwitchOff</key>
-	<integer>0</integer>
-	<key>Enable4GByDefault</key>
-	<true/>
-	<key>ShowVolteSwitch</key>
-	<true/>
-	<key>ShowLTEWarningUnsupportedCarrier</key>
-	<false/>
-	<key>DerGriFileVersion</key>
-	<string>13.6.3</string>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<true/>
+	<key>DerGriFileName</key>
+	<string>global_setting_J.der.gri</string>
+	<key>OnBodyThresholdParametersFile</key>
+	<string>com.apple.bodythreshold_AI.plist</string>
 	<key>apns</key>
 	<array>
 		<dict>
 			<key>configuration</key>
 			<array>
 				<dict>
-					<key>type-mask</key>
-					<integer>131072</integer>
 					<key>password</key>
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>131072</integer>
-					<key>SupportSwitchOver</key>
-					<true/>
 					<key>username</key>
 					<string></string>
 					<key>apn</key>
 					<string>ims</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
+					<key>SupportSwitchOver</key>
+					<true/>
+					<key>type-mask</key>
+					<integer>131072</integer>
 				</dict>
 				<dict>
 					<key>NoCellularReconnectCauseCodes</key>
@@ -106,8 +56,6 @@
 					<integer>1048576</integer>
 					<key>apn</key>
 					<string>hos</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>type-mask</key>
 					<integer>1048576</integer>
 					<key>AllowedProtocolMask</key>
@@ -118,7 +66,16 @@
 			<integer>8</integer>
 		</dict>
 	</array>
-	<key>OnBodyThresholdParametersFile</key>
-	<string>com.apple.bodythreshold_AI.plist</string>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Media</key>
+		<dict>
+			<key>VoiceOnAP</key>
+			<dict>
+				<key>EnableAPOnlyMode</key>
+				<false/>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

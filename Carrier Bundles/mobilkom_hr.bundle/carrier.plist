@@ -6,11 +6,6 @@
 	<integer>5</integer>
 	<key>AllowEDGEEditing</key>
 	<true/>
-	<key>MandatoryVerify</key>
-	<dict>
-		<key>SIMs</key>
-		<array/>
-	</dict>
 	<key>Services</key>
 	<array>
 		<dict>
@@ -20,6 +15,11 @@
 			<string>Customer service/Služba za korisnike</string>
 		</dict>
 	</array>
+	<key>MandatoryVerify</key>
+	<dict>
+		<key>SIMs</key>
+		<array/>
+	</dict>
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>VVMIgnoresIntlDataRoaming</key>
@@ -28,11 +28,8 @@
 	<integer>53</integer>
 	<key>RegistrationOptInRequired</key>
 	<true/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+385917000</string>
 	<key>AllowedServicesTypeMaskOnInternet</key>
@@ -69,11 +66,33 @@
 	<dict>
 		<key>Media</key>
 		<dict>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+			</dict>
 			<key>IncludeSDPModeChangeCapability</key>
 			<true/>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 		</dict>
 		<key>Signaling</key>
 		<dict>
+			<key>SupportPEarlyMediaHeader</key>
+			<false/>
 			<key>AdditionalContactParams</key>
 			<dict>
 				<key>REGISTER,INVITE,INVITE:*[primary]</key>
@@ -81,9 +100,16 @@
 			</dict>
 			<key>InviteErrorResponsesToTriggerCSFB</key>
 			<string></string>
+			<key>EarlyMediaNeedsHeader</key>
+			<false/>
 			<key>UseIPSec</key>
 			<true/>
 			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
 			<false/>
 		</dict>
 		<key>Voice</key>
@@ -98,10 +124,10 @@
 			<key>SupportedDomains</key>
 			<dict>
 				<key>LTE</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>allowCSFBInVolteMode</key>
-			<true/>
+			<false/>
 		</dict>
 	</dict>
 	<key>CarrierEntitlements</key>
@@ -181,8 +207,6 @@
 		<key>SupportsFallbackToLegacyFlow</key>
 		<false/>
 	</dict>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
 	<key>VoicemailPilotNumber</key>

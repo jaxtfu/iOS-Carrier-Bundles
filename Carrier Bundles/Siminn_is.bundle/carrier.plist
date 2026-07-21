@@ -12,13 +12,10 @@
 	<false/>
 	<key>EnableLTEAfterUpgrade</key>
 	<true/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+3548800200</string>
 	<key>AllowedServicesTypeMaskOnInternet</key>
@@ -163,12 +160,14 @@
 	</dict>
 	<key>CarrierEntitlements</key>
 	<dict>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
+		<true/>
+		<key>SupportSecureIntent</key>
+		<true/>
 		<key>SupportedEntitlements</key>
-		<integer>5121</integer>
+		<integer>13313</integer>
 		<key>ProtocolVersion</key>
 		<string>2</string>
-		<key>ServerAddress</key>
-		<string>https://aes.siminn.is</string>
 		<key>Authentication</key>
 		<dict>
 			<key>Type</key>
@@ -176,13 +175,17 @@
 			<key>Username</key>
 			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
 		</dict>
+		<key>ServerAddress</key>
+		<string>https://aes.siminn.is</string>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<true/>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
 		<key>SupportedActions</key>
 		<array>
 			<string>AuthenticateTrustFlag</string>
 			<string>TransferSIMService</string>
 		</array>
-		<key>UpdatePeriod</key>
-		<integer>24</integer>
 	</dict>
 	<key>Show3GSwitchWith4G</key>
 	<true/>
@@ -214,8 +217,34 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>LocalInstallSMDPURL</key>
+		<string>rsp.truphone.com</string>
+		<key>TransferErrorCodes</key>
+		<dict>
+			<key>CarrierDefaultErrors</key>
+			<array>
+				<string>5003</string>
+			</array>
+			<key>IneligibleAccountErrors</key>
+			<array>
+				<string>5011</string>
+			</array>
+			<key>MaintenanceErrors</key>
+			<array>
+				<string>5021</string>
+			</array>
+			<key>BlockedAccountErrors</key>
+			<array>
+				<string>5010</string>
+			</array>
+		</dict>
+		<key>MinCompatibleOS</key>
+		<string>27.0</string>
+		<key>SupportsFallbackToLegacyFlow</key>
+		<false/>
+	</dict>
 	<key>VoicemailPilotNumber</key>
 	<string>1411</string>
 	<key>HomeBundleIdentifier</key>
@@ -253,7 +282,7 @@
 			<string>2023-02-21T00:00:00Z</string>
 		</dict>
 		<key>ServerURL</key>
-		<string>ice.prod.ondemandconnectivity.com</string>
+		<string>rsp.truphone.com</string>
 		<key>ActivatingStateSubscriptionCheckTimerIntervals</key>
 		<array>
 			<integer>1800</integer>

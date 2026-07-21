@@ -46,8 +46,6 @@
 	<string>Free</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>1674</string>
 	<key>EmergencyCalling</key>
@@ -88,6 +86,11 @@
 	</dict>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Senegal</string>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsTTY</key>
+		<true/>
+	</dict>
 	<key>apns</key>
 	<array>
 		<dict>

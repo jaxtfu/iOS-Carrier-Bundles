@@ -7,39 +7,37 @@
 		<dict>
 			<key>AutoJoin</key>
 			<true/>
+			<key>CaptiveBypass</key>
+			<true/>
+			<key>DisableAssociationMACRandomization</key>
+			<false/>
 			<key>EAPClientConfiguration</key>
 			<dict>
 				<key>AcceptEAPTypes</key>
 				<array>
 					<integer>23</integer>
 				</array>
-				<key>EAPFASTProvisionPAC</key>
-				<false/>
-				<key>EAPFASTProvisionPACAnonymously</key>
-				<false/>
-				<key>EAPFASTUsePAC</key>
-				<false/>
 				<key>EAPSIMAKAEncryptedIdentityEnabled</key>
 				<true/>
 			</dict>
 			<key>EncryptionType</key>
-			<string>WPA</string>
+			<string>WPA2</string>
 			<key>HIDDEN_NETWORK</key>
 			<true/>
 			<key>IsHotspot</key>
-			<true/>
+			<false/>
 			<key>PayloadDescription</key>
-			<string>Configures wireless connectivity settings.</string>
+			<string>Configures Wi-Fi settings</string>
 			<key>PayloadDisplayName</key>
 			<string>WiFi (Swisscom_Auto_Login)</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.Swisscom_ch.51f8604c-d474-11eb-8107-f45c89abb0d9</string>
+			<string>com.apple.wifi.managed.E28B0FD4-A253-4463-9512-8BD7593F3BA4</string>
 			<key>PayloadOrganization</key>
 			<string>Swisscom (Switzerland) Ltd</string>
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>2d6813f8-da0a-11eb-b33d-f45c89abb0d9</string>
+			<string>795623A9-18AF-40FA-9287-264ED6925C39</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProxyType</key>
@@ -49,13 +47,11 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>MOBILE-EAPSIM with WEP
-Swisscom_Auto_Login with WPA2
-Free_Swisscom_Auto_Login with WPA2</string>
+	<string>Free_Swisscom_Auto_Login</string>
 	<key>PayloadDisplayName</key>
-	<string>wep_wpa2_EAPSIM_auto_login_threeSSIDs</string>
+	<string>WiFi (Swisscom_Auto_Login)</string>
 	<key>PayloadIdentifier</key>
-	<string>com.apple.Swisscom_ch.e9ff1530-da0e-11eb-b336-f45c89abb0d9</string>
+	<string>com.apple.Swisscom_ch.EDA5618F-6CB1-421D-9AC8-1E5D388BB55B</string>
 	<key>PayloadOrganization</key>
 	<string>Swisscom (Switzerland) Ltd</string>
 	<key>PayloadRemovalDisallowed</key>
@@ -63,7 +59,7 @@ Free_Swisscom_Auto_Login with WPA2</string>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>e9ff1698-da0e-11eb-b336-f45c89abb0d9</string>
+	<string>202A58B4-B159-4A87-A501-0D90291BF27C</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

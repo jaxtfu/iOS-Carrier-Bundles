@@ -37,12 +37,12 @@
 			<string>Tigo</string>
 		</dict>
 	</array>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>63513</string>
 	</array>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
 	<key>VoicemailPilotNumber</key>
 	<string>123</string>
 	<key>CarrierName</key>
@@ -87,15 +87,18 @@
 	<false/>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
-	<key>ShowTTY</key>
-	<true/>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>
 		<array/>
 	</dict>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsTTY</key>
+		<true/>
+	</dict>
 	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>

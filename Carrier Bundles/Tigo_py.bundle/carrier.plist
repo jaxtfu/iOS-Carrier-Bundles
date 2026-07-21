@@ -9,7 +9,7 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.tigo.com.py</string>
+	<string>https://www.tigo.com.py</string>
 	<key>EnableLTEAfterUpgrade</key>
 	<true/>
 	<key>RegistrationOptInRequired</key>
@@ -72,8 +72,8 @@
 			<integer>3</integer>
 		</dict>
 	</dict>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>*98</string>
 	<key>HomeBundleIdentifier</key>
@@ -102,8 +102,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>internet.tigo.py</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>49</integer>
 			<key>AllowedProtocolMask</key>

@@ -38,11 +38,8 @@
 	<string>MASMOVIL</string>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+34656242242</string>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -179,8 +176,6 @@
 				<key>NR</key>
 				<false/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 	</dict>
 	<key>OverrideOperatorWiFiName</key>
@@ -236,8 +231,6 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>242</string>
 	<key>HomeBundleIdentifier</key>

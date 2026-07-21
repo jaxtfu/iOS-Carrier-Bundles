@@ -2,22 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
-	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
-	<integer>131072</integer>
-	<key>Show4GSwitch</key>
+	<key>ShowHighDataModeSwitch</key>
 	<true/>
-	<key>SupportsImsCapability</key>
+	<key>Enable5GAutoByDefault</key>
 	<true/>
-	<key>SupportsNRNSAInboundRoaming</key>
-	<true/>
-	<key>_Exclude</key>
-	<array>
-		<string>CDMAInternationalRoaming</string>
-	</array>
-	<key>Show5GSwitch</key>
-	<true/>
+	<key>DerPriFileName</key>
+	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>AttachAPN</key>
 	<dict>
 		<key>_Exclude</key>
@@ -25,7 +15,15 @@
 			<string>3GPP2</string>
 		</array>
 	</dict>
-	<key>ShowHighDataModeSwitch</key>
+	<key>DerPriFileVersion</key>
+	<string>6.0.161</string>
+	<key>Enable5GStandaloneByDefault</key>
+	<true/>
+	<key>ShowVolteSwitch</key>
+	<false/>
+	<key>SupportsNRNSAInboundRoaming</key>
+	<true/>
+	<key>Show5GStandaloneSwitch</key>
 	<true/>
 	<key>IMSConfig</key>
 	<dict>
@@ -38,35 +36,14 @@
 				<key>NR</key>
 				<true/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<false/>
 		</dict>
 		<key>Voice</key>
 		<dict>
 			<key>BlockCallsOverCS</key>
 			<true/>
 		</dict>
-		<key>Signaling</key>
-		<dict>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
-		</dict>
 	</dict>
-	<key>DerPriFileName</key>
-	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>ShowVolteSwitch</key>
-	<false/>
-	<key>Show5GStandaloneSwitch</key>
-	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
-	<key>SupportsSupplementaryServicesOverIMS</key>
-	<true/>
-	<key>Enable5GAutoByDefault</key>
-	<true/>
-	<key>Enable5GStandaloneByDefault</key>
-	<true/>
-	<key>SupportsEHRPD</key>
+	<key>Show5GSwitch</key>
 	<true/>
 </dict>
 </plist>

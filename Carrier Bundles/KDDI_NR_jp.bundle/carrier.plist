@@ -90,7 +90,7 @@
 			<key>Title</key>
 			<string>auスマートパス</string>
 			<key>URL</key>
-			<string>http://auone.jp/?rf=bkmk</string>
+			<string>https://auone.jp/?rf=bkmk</string>
 		</dict>
 		<dict>
 			<key>Title</key>
@@ -137,8 +137,6 @@
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
 	</dict>
-	<key>DefaultWhenImsSwitchOff</key>
-	<integer>1</integer>
 	<key>VVMGreetingChangesSupported</key>
 	<false/>
 	<key>ShowVolteWarningUnsupportedCarrier</key>
@@ -190,7 +188,7 @@
 		<key>SupportSecureIntent</key>
 		<true/>
 		<key>SupportedEntitlements</key>
-		<integer>44041</integer>
+		<integer>568345</integer>
 		<key>Authentication</key>
 		<dict>
 			<key>Type</key>
@@ -262,6 +260,11 @@
 	</dict>
 	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
 	<integer>131072</integer>
+	<key>ToolsConfiguration</key>
+	<dict>
+		<key>EnableFeedbackCollection</key>
+		<true/>
+	</dict>
 	<key>CDMAInternationalRoaming</key>
 	<dict>
 		<key>EnabledByDefault</key>
@@ -335,6 +338,7 @@
 			<string>8001</string>
 			<string>8004</string>
 			<string>8006</string>
+			<string>8015</string>
 		</array>
 		<key>Tier</key>
 		<integer>4</integer>
@@ -370,84 +374,74 @@
 			<key>configuration</key>
 			<array>
 				<dict>
-					<key>type-mask</key>
-					<integer>33287</integer>
 					<key>password</key>
 					<string>KpyrR6BP</string>
-					<key>apn</key>
-					<string>uio5gn.au-net.ne.jp</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string>685840734641020@uio5gn.au-net.ne.jp</string>
-					<key>auth_type</key>
-					<string>CHAP</string>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
+					<key>apn</key>
+					<string>uio5gn.au-net.ne.jp</string>
+					<key>type-mask</key>
+					<integer>33287</integer>
+					<key>auth_type</key>
+					<string>CHAP</string>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>131072</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>2</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>2</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>2</integer>
 					<key>apn</key>
 					<string>IMS</string>
+					<key>type-mask</key>
+					<integer>131072</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>2</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>1048576</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
 					<key>apn</key>
 					<string>xcap</string>
+					<key>type-mask</key>
+					<integer>1048576</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>262144</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
+					<key>username</key>
+					<string></string>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
-					<key>username</key>
-					<string></string>
 					<key>apn</key>
 					<string></string>
+					<key>type-mask</key>
+					<integer>262144</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>16</integer>
 					<key>password</key>
 					<string>KpyrR6BP</string>
-					<key>apn</key>
-					<string>uio5gntrg.au-net.ne.jp</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string>X36yN3Dhe9UjPhzm@uio5gntrg.au-net.ne.jp</string>
-					<key>auth_type</key>
-					<string>CHAP</string>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
+					<key>apn</key>
+					<string>uio5gntrg.au-net.ne.jp</string>
+					<key>type-mask</key>
+					<integer>16</integer>
+					<key>auth_type</key>
+					<string>CHAP</string>
 				</dict>
 			</array>
 			<key>technology-mask</key>
@@ -674,6 +668,31 @@
 			<key>allowCSFBInVolteMode</key>
 			<false/>
 		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>BsfHost</key>
+			<string>bsf.ims.mnc051.mcc440.pub.3gppnetwork.org</string>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+			<key>NafPort</key>
+			<integer>8090</integer>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>Auid</key>
+			<string>mtasxdms/simservs.ngn.etsi.org</string>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>UnsolicitedRequestDelay</key>
+			<integer>0</integer>
+			<key>supported</key>
+			<true/>
+			<key>SupportsCFErasure</key>
+			<false/>
+			<key>imsFeatureDependency</key>
+			<true/>
+		</dict>
 		<key>Media</key>
 		<dict>
 			<key>SuppressOctetAlignAttributeForBECodecs</key>
@@ -709,33 +728,6 @@
 			<key>EVSHardBwLimit</key>
 			<string>nb-swb</string>
 		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>BsfHost</key>
-			<string>bsf.ims.mnc051.mcc440.pub.3gppnetwork.org</string>
-			<key>DisableOnNetworkError</key>
-			<false/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string></string>
-			<key>NafPort</key>
-			<integer>8090</integer>
-			<key>SupportsCLIR</key>
-			<false/>
-			<key>Auid</key>
-			<string>mtasxdms/simservs.ngn.etsi.org</string>
-			<key>ContentType</key>
-			<string>application/xcap-el+xml</string>
-			<key>UnsolicitedRequestDelay</key>
-			<integer>0</integer>
-			<key>supported</key>
-			<true/>
-			<key>SupportsCFErasure</key>
-			<false/>
-			<key>imsFeatureDependency</key>
-			<true/>
-		</dict>
-		<key>Emergency</key>
-		<dict/>
 		<key>Voice</key>
 		<dict>
 			<key>E911OverCSIfRoaming</key>
@@ -1061,8 +1053,6 @@ aq9HLi3hH+ocrZMIHk3MTM2K3Oz8wr7XNSk8jmYO/kkgn84/vQ11T3c4A8k=</string>
 	<true/>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>SUPL</key>
 	<dict>
 		<key>SuplFlags</key>
@@ -1101,6 +1091,11 @@ aq9HLi3hH+ocrZMIHk3MTM2K3Oz8wr7XNSk8jmYO/kkgn84/vQ11T3c4A8k=</string>
 	<false/>
 	<key>Show5GStandaloneSwitch</key>
 	<true/>
+	<key>PushSettings</key>
+	<dict>
+		<key>Topic</key>
+		<string>com.kddi.Kddientapp</string>
+	</dict>
 	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
 	<key>StatusBarImages</key>

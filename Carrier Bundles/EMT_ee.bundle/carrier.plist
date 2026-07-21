@@ -74,8 +74,6 @@
 	<true/>
 	<key>SupportsNITZ</key>
 	<true/>
-	<key>VoicemailPilotNumber</key>
-	<string>+3725096006</string>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>MatchingICCIDPrefixes</key>
@@ -103,14 +101,20 @@
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
 	</dict>
-	<key>ShowDialAssist</key>
-	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>VoicemailPilotNumber</key>
+	<string>+3725096006</string>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>ShowDialAssist</key>
+	<true/>
 	<key>IPv6SupportedDataModeMask</key>
 	<integer>110623</integer>
+	<key>Show3GSwitchWith4G</key>
+	<false/>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Telia VoWiFi</string>
 	<key>MMS</key>
 	<dict>
 		<key>MaxImageDimension</key>
@@ -259,18 +263,16 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>32817</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>internet.emt.ee</string>
+			<key>type-mask</key>
+			<integer>32817</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -281,8 +283,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
@@ -299,8 +299,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>3</integer>
 			<key>SupportSwitchOver</key>
@@ -319,8 +317,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>4</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>3</integer>
 			<key>username</key>
@@ -331,10 +327,128 @@
 			<integer>3</integer>
 		</dict>
 	</array>
-	<key>SMSSettings</key>
+	<key>IMSConfig</key>
 	<dict>
-		<key>TransportFallback</key>
+		<key>Signaling</key>
+		<dict>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>UseOutgoingSipUri</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,5XX</string>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>180</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>180</integer>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>ValidateSipMessageRecipient</key>
+			<false/>
+			<key>SendResumeInviteAsSendRecv</key>
+			<false/>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>UseCIDUrlInPIDF</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc001.mcc248.3gppnetwork.org</string>
+		</dict>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
 		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<true/>
+			</dict>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>3</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>cmr</key>
+					<string>1</string>
+				</dict>
+			</dict>
+			<key>EnableIncomingDTMF</key>
+			<true/>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCW</key>
+			<true/>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>403,404</string>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>supported</key>
+			<true/>
+			<key>SupportsCFErasure</key>
+			<false/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
@@ -342,6 +456,8 @@
 	<true/>
 	<key>APNEditabilityTypemask</key>
 	<integer>53</integer>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
 	<key>PushSettings</key>
 	<dict>
 		<key>MultiSIMTopic</key>
@@ -362,8 +478,10 @@
 	</array>
 	<key>CarrierName</key>
 	<string>Telia</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.telia.ee/</string>
+	<string>https://www.telia.ee/</string>
 	<key>MyAccountURLTitle</key>
 	<string>Telia</string>
 	<key>MandatoryVerify</key>
@@ -371,6 +489,8 @@
 		<key>SIMs</key>
 		<array/>
 	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>24801</string>

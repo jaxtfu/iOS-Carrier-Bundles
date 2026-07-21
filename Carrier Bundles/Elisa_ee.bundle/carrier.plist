@@ -2,182 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
-	<key>AllowEDGEEditing</key>
-	<true/>
-	<key>DataIndicatorOverrideForLTE</key>
-	<string>4G</string>
-	<key>MandatoryVerify</key>
-	<dict>
-		<key>SIMs</key>
-		<array/>
-	</dict>
-	<key>SuppressSimToolkitSendShortMessageNotifications</key>
-	<true/>
-	<key>SupportsNITZ</key>
-	<false/>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
-	<key>APNEditabilityTypemask</key>
-	<integer>49</integer>
-	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
-	<integer>131072</integer>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
-	<key>RoamingVoicemailPilotNumber</key>
-	<string>+37256109109</string>
-	<key>RegistrationOptInRequired</key>
-	<true/>
-	<key>StatusBarImages</key>
-	<array>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>EE Elisa</string>
-			<key>StatusBarCarrierName</key>
-			<string>Elisa</string>
-		</dict>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>Elisa</string>
-			<key>StatusBarCarrierName</key>
-			<string>Elisa</string>
-		</dict>
-	</array>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>24802</string>
-	</array>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Signaling</key>
-		<dict>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string>3XX,4XX,5XX,6XX</string>
-			<key>EnableCellularNetworkInfo</key>
-			<true/>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>RingbackTimerSeconds</key>
-			<integer>40</integer>
-			<key>RingingTimerSeconds</key>
-			<integer>45</integer>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
-			<key>EarlyMediaNeedsHeader</key>
-			<false/>
-			<key>DefaultAuthAlgorithm</key>
-			<string>AKAv1-MD5</string>
-			<key>CountryOfOriginationFormat</key>
-			<string>PANI</string>
-			<key>Preconditions</key>
-			<string>Supported</string>
-			<key>AdditionalContactParams</key>
-			<dict>
-				<key>REGISTER,INVITE,INVITE:*</key>
-				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
-			</dict>
-			<key>AlwaysAddSipInstance</key>
-			<true/>
-			<key>AlwaysSendSessionProgress</key>
-			<true/>
-			<key>WaitForRingingTimerMTSeconds</key>
-			<integer>10</integer>
-			<key>UseIPSec</key>
-			<true/>
-		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>AlwaysSubscribeToConferenceEvents</key>
-			<true/>
-			<key>SendConferenceSubscribeInNewDialog</key>
-			<true/>
-			<key>conferenceServer</key>
-			<string>sip:mmtel@conf-factory.ims.mnc002.mcc248.3gppnetwork.org</string>
-		</dict>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>SupportedDomains</key>
-			<dict>
-				<key>LTE</key>
-				<true/>
-			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
-		</dict>
-		<key>Media</key>
-		<dict>
-			<key>PreferredAMRWBMode</key>
-			<integer>8</integer>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>98</key>
-				<dict>
-					<key>ch-aw-recv</key>
-					<string>0</string>
-					<key>br</key>
-					<string>5.9-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-wb</string>
-					<key>max-red</key>
-					<string>220</string>
-				</dict>
-			</dict>
-			<key>RTCPIntervalSeconds</key>
-			<integer>5</integer>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>SupportsCW</key>
-			<false/>
-			<key>BsfHost</key>
-			<string>bsf.ims.mnc002.mcc248.pub.3gppnetwork.org</string>
-			<key>DisableOnNetworkError</key>
-			<false/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string>404,501,502,503,504</string>
-			<key>NafPort</key>
-			<integer>9002</integer>
-			<key>imsRegistrationDependency</key>
-			<true/>
-			<key>ContentType</key>
-			<string>application/vnd.etsi.simservs+xml</string>
-			<key>BsfPort</key>
-			<integer>9001</integer>
-			<key>supported</key>
-			<true/>
-			<key>imsFeatureDependency</key>
-			<true/>
-		</dict>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<false/>
-		<key>Voice</key>
-		<dict>
-			<key>E911OverITechSupported</key>
-			<true/>
-			<key>EnableVolteByDefault</key>
-			<true/>
-		</dict>
-	</dict>
-	<key>OverrideOperatorWiFiName</key>
-	<string>Elisa WiFi</string>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportedEntitlements</key>
@@ -200,62 +24,39 @@
 		<key>UpdatePeriod</key>
 		<integer>24</integer>
 	</dict>
-	<key>ShowDialAssist</key>
-	<true/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<array>
-		<string>+447537410207</string>
-		<string>+447537410217</string>
-		<string>+447537410227</string>
-		<string>+447537410237</string>
-		<string>+447537410247</string>
-		<string>+447537410257</string>
-		<string>+447537410267</string>
-		<string>+447537410277</string>
-		<string>+447537410287</string>
-		<string>+447537410297</string>
-	</array>
-	<key>CarrierName</key>
-	<string>Elisa</string>
+	<key>OTASoftwareUpdate</key>
+	<dict>
+		<key>SoftwareUpdateOptInRequired</key>
+		<true/>
+	</dict>
 	<key>AttachAPN</key>
 	<dict>
 		<key>3GPP</key>
 		<dict>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>3</integer>
 			<key>password</key>
 			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 			<key>PcscfAddressRequired</key>
 			<false/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>3</integer>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</dict>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
-	<key>ShowTTY</key>
+	<key>AllowEDGEEditing</key>
+	<true/>
+	<key>RegistrationOptInRequired</key>
+	<true/>
+	<key>SupportsNITZ</key>
 	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>56109109</string>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.Estonia</string>
-	<key>MMS</key>
-	<dict>
-		<key>GroupModeEnabled</key>
-		<false/>
-		<key>MaxMessageSize</key>
-		<integer>2097152</integer>
-		<key>MMSC</key>
-		<string>http://194.150.66.35</string>
-	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>MatchingICCIDPrefixes</key>
@@ -289,6 +90,34 @@
 		</array>
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
+	</dict>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<array>
+		<string>+447537410207</string>
+		<string>+447537410217</string>
+		<string>+447537410227</string>
+		<string>+447537410237</string>
+		<string>+447537410247</string>
+		<string>+447537410257</string>
+		<string>+447537410267</string>
+		<string>+447537410277</string>
+		<string>+447537410287</string>
+		<string>+447537410297</string>
+	</array>
+	<key>ShowDialAssist</key>
+	<true/>
+	<key>Show3GSwitchWith4G</key>
+	<false/>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Elisa WiFi</string>
+	<key>MMS</key>
+	<dict>
+		<key>GroupModeEnabled</key>
+		<false/>
+		<key>MaxMessageSize</key>
+		<integer>2097152</integer>
+		<key>MMSC</key>
+		<string>http://194.150.66.35</string>
 	</dict>
 	<key>TechSettings</key>
 	<dict>
@@ -375,26 +204,25 @@
 		<key>5wiServiceMask</key>
 		<integer>3</integer>
 	</dict>
-	<key>PushSettings</key>
-	<dict>
-		<key>MultiSIMTopic</key>
-		<string>ee.elisa.multisim</string>
-	</dict>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.Estonia</string>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
+	<key>DataIndicatorOverrideForLTE</key>
+	<string>4G</string>
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>32817</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>internet</string>
+			<key>type-mask</key>
+			<integer>32817</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -409,24 +237,22 @@
 			<integer>4</integer>
 		</dict>
 		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>type-mask</key>
-			<integer>131072</integer>
-			<key>apn</key>
-			<string>ims</string>
+			<key>UseNetworkMTU</key>
+			<true/>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>type-mask</key>
@@ -435,8 +261,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>3</integer>
 			<key>username</key>
@@ -444,29 +268,196 @@
 			<key>apn</key>
 			<string>xcap</string>
 			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>262144</integer>
-			<key>password</key>
-			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowNoDNS</key>
 			<integer>1</integer>
+			<key>password</key>
+			<string></string>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>sos</string>
-			<key>DefaultProtocolMask</key>
+			<key>type-mask</key>
+			<integer>262144</integer>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</array>
-	<key>OTASoftwareUpdate</key>
+	<key>SuppressSimToolkitSendShortMessageNotifications</key>
+	<true/>
+	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
+	<integer>131072</integer>
+	<key>IMSConfig</key>
 	<dict>
-		<key>SoftwareUpdateOptInRequired</key>
-		<true/>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,6XX</string>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>40</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>45</integer>
+			<key>ussdEnabled</key>
+			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>EarlyMediaNeedsHeader</key>
+			<false/>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>10</integer>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc002.mcc248.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<true/>
+			</dict>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>98</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>0</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>220</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCW</key>
+			<false/>
+			<key>BsfHost</key>
+			<string>bsf.ims.mnc002.mcc248.pub.3gppnetwork.org</string>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>404,501,502,503,504</string>
+			<key>NafPort</key>
+			<integer>9002</integer>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/vnd.etsi.simservs+xml</string>
+			<key>BsfPort</key>
+			<integer>9001</integer>
+			<key>supported</key>
+			<true/>
+			<key>imsFeatureDependency</key>
+			<true/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<false/>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
 	</dict>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
+	<key>RoamingVoicemailPilotNumber</key>
+	<string>+37256109109</string>
+	<key>APNEditabilityTypemask</key>
+	<integer>49</integer>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>PushSettings</key>
+	<dict>
+		<key>MultiSIMTopic</key>
+		<string>ee.elisa.multisim</string>
+	</dict>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
+	<key>StatusBarImages</key>
+	<array>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>EE Elisa</string>
+			<key>StatusBarCarrierName</key>
+			<string>Elisa</string>
+		</dict>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>Elisa</string>
+			<key>StatusBarCarrierName</key>
+			<string>Elisa</string>
+		</dict>
+	</array>
+	<key>CarrierName</key>
+	<string>Elisa</string>
+	<key>MandatoryVerify</key>
+	<dict>
+		<key>SIMs</key>
+		<array/>
+	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>24802</string>
+	</array>
 </dict>
 </plist>

@@ -2,6 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>SupportedEntitlements</key>
+		<integer>1025</integer>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>ServerAddress</key>
+		<string>https://es.mnc020.mcc238.pub.3gppnetwork.org:8443</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@ims.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+	</dict>
 	<key>OTASoftwareUpdate</key>
 	<dict>
 		<key>SoftwareUpdateOptInRequired</key>
@@ -44,16 +62,50 @@
 	<true/>
 	<key>SupportsNITZ</key>
 	<true/>
+	<key>RemoteCardProvisioningSettings</key>
+	<dict>
+		<key>MatchingICCIDPrefixes</key>
+		<array>
+			<string>894504</string>
+		</array>
+		<key>CellularTrialPlan</key>
+		<dict>
+			<key>TrialEndPeriod</key>
+			<string>2019-03-01T00:00:00Z</string>
+			<key>TrialPlanType</key>
+			<string>FreeTrial</string>
+			<key>SupportsTrialPlan</key>
+			<true/>
+			<key>TrialStartPeriod</key>
+			<string>2019-01-03T00:00:00Z</string>
+		</dict>
+		<key>ServerURL</key>
+		<string>rsp-0001.oberthur.net</string>
+		<key>ActivatingStateSubscriptionCheckTimerIntervals</key>
+		<array>
+			<string>1800</string>
+			<integer>3600</integer>
+			<integer>5400</integer>
+		</array>
+		<key>MinCompatibleWatchOS</key>
+		<string>5.1</string>
+		<key>SupportedSKUs</key>
+		<array>
+			<string>SKU_EU</string>
+		</array>
+		<key>ProvisioningMethod</key>
+		<string>CarrierFlow</string>
+	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>+4528184000</string>
-	<key>ShowDialAssist</key>
-	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
-	<key>Show3GSwitchWith4G</key>
+	<key>ShowDialAssist</key>
 	<true/>
+	<key>Show3GSwitchWith4G</key>
+	<false/>
 	<key>OverrideOperatorWiFiName</key>
 	<string>Norlys WiFi</string>
 	<key>MMS</key>
@@ -219,18 +271,16 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>32817</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>www.internet.mtelia.dk</string>
+			<key>type-mask</key>
+			<integer>32817</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -241,8 +291,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>4</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>3</integer>
 			<key>username</key>
@@ -259,8 +307,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
@@ -277,8 +323,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>3</integer>
 			<key>username</key>
@@ -289,10 +333,160 @@
 			<integer>3</integer>
 		</dict>
 	</array>
-	<key>SMSSettings</key>
+	<key>IMSConfig</key>
 	<dict>
-		<key>TransportFallback</key>
-		<false/>
+		<key>Signaling</key>
+		<dict>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>UseCIDUrlInPIDF</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,6XX,-408,-484,-603</string>
+			<key>CallEndReasons</key>
+			<dict>
+				<key>RemoteCancel</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>Remote Cancel</string>
+					<key>ReasonHeaderCause</key>
+					<integer>487</integer>
+				</dict>
+				<key>RejectedByUser</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>Call Rejected By User</string>
+					<key>ReasonHeaderCause</key>
+					<integer>487</integer>
+				</dict>
+			</dict>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>180</integer>
+			<key>RingingTimerSeconds</key>
+			<string>180</string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>ValidateSipMessageRecipient</key>
+			<false/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>CallToVoicemail</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>CC_TERM_NOREPLY_TMR_EXPIRED</string>
+					<key>StatusCode</key>
+					<integer>408</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteRequestCanceled</string>
+				</dict>
+				<key>CallDecline</key>
+				<dict>
+					<key>Protocol</key>
+					<string>Q.850</string>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderCause</key>
+					<integer>21</integer>
+					<key>DisableCSFB</key>
+					<true/>
+					<key>StatusCode</key>
+					<integer>603</integer>
+				</dict>
+			</dict>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>CountryOfOriginationFormat</key>
+			<string>BOTH</string>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+			<key>SendResumeInviteAsSendRecv</key>
+			<false/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<false/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc${MNC}.mcc${MCC}.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<true/>
+			</dict>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>2</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>MaxRedundancy</key>
+			<integer>220</integer>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCW</key>
+			<false/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>supported</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>403,404</string>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
@@ -300,6 +494,13 @@
 	<true/>
 	<key>APNEditabilityTypemask</key>
 	<integer>53</integer>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>PushSettings</key>
+	<dict>
+		<key>MultiSIMTopic</key>
+		<string>com.teliacompany.entitlementDK</string>
+	</dict>
 	<key>Services</key>
 	<array>
 		<dict>
@@ -326,8 +527,10 @@
 	</array>
 	<key>CarrierName</key>
 	<string>Norlys</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
-	<string>http://norlys.dk</string>
+	<string>https://norlys.dk</string>
 	<key>SupportedPLMNs</key>
 	<array>
 		<string>23866</string>

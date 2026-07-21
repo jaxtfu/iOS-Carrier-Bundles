@@ -2,21 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AllowEDGEEditing</key>
-	<true/>
-	<key>CheckSMSonSIM</key>
-	<true/>
-	<key>SuppressSimToolkitBIPNotifications</key>
-	<false/>
-	<key>SupportsNITZ</key>
-	<true/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>SendNackOnSMSStorageFull</key>
-		<true/>
-		<key>TransportFallback</key>
-		<false/>
-	</dict>
 	<key>CellularPlanProvisioningSettings</key>
 	<dict>
 		<key>EnableAttachMonitorMode</key>
@@ -24,60 +9,20 @@
 	</dict>
 	<key>ASCIIFileNameRequired</key>
 	<true/>
-	<key>NetworkEncryptionCiphers</key>
+	<key>AttachAPN</key>
 	<dict>
-		<key>GEA3</key>
-		<true/>
-		<key>A5/3</key>
-		<true/>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string></string>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>00101</string>
-		<string>00281</string>
-		<string>001011</string>
-		<string>00102</string>
-		<string>00111</string>
-		<string>00211</string>
-		<string>00321</string>
-		<string>00431</string>
-		<string>00541</string>
-		<string>00651</string>
-		<string>00761</string>
-		<string>00871</string>
-		<string>00902</string>
-		<string>01012</string>
-		<string>01122</string>
-		<string>01232</string>
-		<string>10101</string>
-		<string>24608</string>
-		<string>246081</string>
-		<string>24681</string>
-		<string>246813</string>
-		<string>311011</string>
-		<string>29981</string>
-		<string>26280</string>
-		<string>26284</string>
-		<string>262820</string>
-		<string>240681</string>
-		<string>240680</string>
-	</array>
-	<key>ShowDialAssist</key>
-	<true/>
-	<key>DTMFToneLength</key>
-	<integer>2</integer>
-	<key>CarrierName</key>
-	<string>Carrier Lab</string>
-	<key>HangUpCallsWhenPlacingEmergencyCall</key>
-	<true/>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
-	<key>AllowEditingTestModeUI</key>
-	<true/>
-	<key>ShowTTY</key>
-	<true/>
-	<key>SyncSIMPhonebook</key>
-	<true/>
 	<key>CellBroadcast</key>
 	<dict>
 		<key>AlertConfigurations</key>
@@ -416,22 +361,36 @@
 			<false/>
 		</dict>
 	</dict>
-	<key>RedialOnRadioResourceRelease2G</key>
+	<key>SuppressSimToolkitBIPNotifications</key>
 	<false/>
+	<key>AllowEDGEEditing</key>
+	<true/>
+	<key>VoicemailPilotNumber</key>
+	<string></string>
+	<key>SupportsNITZ</key>
+	<true/>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>SupportsFauxCard</key>
 		<true/>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>ShowDialAssist</key>
+	<true/>
+	<key>SupportsIMSSignalingIndication</key>
+	<true/>
+	<key>HangUpCallsWhenPlacingEmergencyCall</key>
+	<true/>
+	<key>SupportsSupplementaryServicesOverIMS</key>
+	<true/>
 	<key>MMS</key>
 	<dict>
 		<key>GroupModeEnabled</key>
 		<false/>
 	</dict>
-	<key>ShowCallBarring</key>
-	<true/>
-	<key>VoicemailPilotNumber</key>
-	<string></string>
+	<key>RedialOnRRCConnectionFailure</key>
+	<false/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -465,7 +424,249 @@
 			<integer>0</integer>
 		</dict>
 	</array>
-	<key>RedialOnRRCConnectionFailure</key>
+	<key>Location</key>
+	<dict>
+		<key>AllowOTDOADuringEmergencyMode</key>
+		<true/>
+	</dict>
+	<key>ShowVolteSwitch</key>
+	<true/>
+	<key>AllowEditingTestModeUI</key>
+	<true/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Emergency</key>
+		<dict>
+			<key>MaxSearchRounds</key>
+			<integer>1</integer>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>PayloadTypeBWEfficientAMRNB</key>
+			<integer>97</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>116</key>
+				<dict>
+					<key>max-red</key>
+					<string>220</string>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+				</dict>
+			</dict>
+			<key>AddBWSpecsAtSessionLevel</key>
+			<true/>
+			<key>PacketAlignmentAMRNB</key>
+			<string>bandwidthEfficientOnly</string>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>120</integer>
+			<key>PacketAlignmentAMRWB</key>
+			<string>bandwidthEfficientOnly</string>
+			<key>PayloadTypeBWEfficientAMRWB</key>
+			<integer>99</integer>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>HideSessionLevelDirection</key>
+			<true/>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>DisableRegistrationOnNotifyEvents</key>
+			<array>
+				<string>rejected</string>
+			</array>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.accesstype="cellular2"</string>
+				<key>INVITE,INVITE:180,INVITE:183</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting;audio</string>
+				<key>INVITE:200,PRACK:200,UPDATE:200</key>
+				<string>audio</string>
+			</dict>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RequireExplicitPortsForEmergencyRoutes</key>
+			<true/>
+			<key>PerCallQoSIndications</key>
+			<false/>
+			<key>TcpIdleTimeoutSeconds</key>
+			<integer>0</integer>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>EnableSessionId</key>
+			<true/>
+			<key>DisableAccessNetworkInfoForAckAndCancel</key>
+			<true/>
+			<key>UseEphemeralSipSourcePortForTcp</key>
+			<true/>
+			<key>AdditionalHeaders</key>
+			<dict>
+				<key>INVITE</key>
+				<array>
+					<string>Accept: application/sdp,application/3gpp-ims+xml</string>
+				</array>
+			</dict>
+			<key>AlwaysUnsubscribeFromRegEvents</key>
+			<false/>
+			<key>AllowResponsesOverDifferentTransport</key>
+			<false/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string></string>
+			<key>AlwaysEmergencyRegister</key>
+			<false/>
+			<key>EmergencyCallBackModeExpirationSeconds</key>
+			<integer>450</integer>
+			<key>DropRegistrationOnSRVCC</key>
+			<true/>
+			<key>EnableRegistrationSessionId</key>
+			<true/>
+			<key>AddAccessNetworkInfoToInsecureMessages</key>
+			<true/>
+			<key>SendPreferredServiceInInvite</key>
+			<true/>
+			<key>MaxAuthRetries</key>
+			<integer>3</integer>
+			<key>RegisterOnServiceUpdate</key>
+			<false/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>IncompleteRegistrationThrottlingIntervalSeconds</key>
+			<integer>0</integer>
+			<key>AdditionalFeatureTags</key>
+			<dict>
+				<key>voice</key>
+				<dict>
+					<key>audio</key>
+					<string></string>
+				</dict>
+			</dict>
+			<key>RefreshRegistrationDuringECBM</key>
+			<false/>
+			<key>SendPreconditionsInConfirmedSessions</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+			<key>ConvertSessionProgressToRinging</key>
+			<false/>
+			<key>SendInitialInviteAsInactive</key>
+			<true/>
+			<key>INVITE</key>
+			<array>
+				<string>Accept: application/sdp,application/3gpp-ims+xml</string>
+			</array>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>BsfHost</key>
+			<string>bsf.test.3gpp.com</string>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+			<key>UnsolicitedRequestDelay</key>
+			<integer>0</integer>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>Auid</key>
+			<string>XCAP.3gpp.org/simservs.ngn.etsi.org</string>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>BsfPort</key>
+			<string>80</string>
+			<key>supported</key>
+			<true/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
+			<true/>
+			<key>tLte911Timer</key>
+			<integer>9</integer>
+			<key>CheckIMSPrefForEmergency</key>
+			<false/>
+			<key>CellularE911SearchTimeout</key>
+			<integer>40</integer>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SMSSettings</key>
+	<dict>
+		<key>SendNackOnSMSStorageFull</key>
+		<true/>
+		<key>TransportFallback</key>
+		<false/>
+	</dict>
+	<key>DTMFToneLength</key>
+	<integer>2</integer>
+	<key>RedialOnRadioResourceRelease2G</key>
 	<false/>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
+	<key>CheckSMSonSIM</key>
+	<true/>
+	<key>CarrierName</key>
+	<string>Carrier Lab</string>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>SyncSIMPhonebook</key>
+	<true/>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsTTY</key>
+		<true/>
+	</dict>
+	<key>NetworkEncryptionCiphers</key>
+	<dict>
+		<key>GEA3</key>
+		<true/>
+		<key>A5/3</key>
+		<true/>
+	</dict>
+	<key>ShowCallBarring</key>
+	<true/>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>00101</string>
+		<string>00281</string>
+		<string>001011</string>
+		<string>00102</string>
+		<string>00111</string>
+		<string>00211</string>
+		<string>00321</string>
+		<string>00431</string>
+		<string>00541</string>
+		<string>00651</string>
+		<string>00761</string>
+		<string>00871</string>
+		<string>00902</string>
+		<string>01012</string>
+		<string>01122</string>
+		<string>01232</string>
+		<string>10101</string>
+		<string>24608</string>
+		<string>246081</string>
+		<string>24681</string>
+		<string>246813</string>
+		<string>311011</string>
+		<string>29981</string>
+		<string>26280</string>
+		<string>26284</string>
+		<string>262820</string>
+		<string>240681</string>
+		<string>240680</string>
+	</array>
 </dict>
 </plist>

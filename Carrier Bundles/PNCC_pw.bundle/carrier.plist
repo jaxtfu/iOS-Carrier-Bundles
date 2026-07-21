@@ -54,8 +54,6 @@
 					<string></string>
 					<key>apn</key>
 					<string>palaucel</string>
-					<key>DefaultProtocolMask</key>
-					<integer>1</integer>
 					<key>type-mask</key>
 					<integer>49</integer>
 					<key>AllowedProtocolMask</key>
@@ -66,8 +64,6 @@
 			<integer>9</integer>
 		</dict>
 	</array>
-	<key>ShowTTY</key>
-	<false/>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>

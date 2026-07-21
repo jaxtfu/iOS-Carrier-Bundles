@@ -5,7 +5,13 @@
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportedEntitlements</key>
-		<integer>1</integer>
+		<integer>5137</integer>
+		<key>ServerAddress</key>
+		<string>https://esim-pldt-es-prd.ipaas.amdocs.com/pldt/prd/executeAppleActions</string>
+		<key>SupportedActions</key>
+		<array>
+			<string>TransferSIMService</string>
+		</array>
 		<key>Authentication</key>
 		<dict>
 			<key>Type</key>
@@ -13,8 +19,6 @@
 			<key>Username</key>
 			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
 		</dict>
-		<key>ServerAddress</key>
-		<string>https://esim-pldt-es-prd.ipaas.amdocs.com/pldt/prd/executeAppleActions</string>
 	</dict>
 	<key>Enable4GByDefault</key>
 	<true/>
@@ -35,8 +39,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>internet</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
@@ -161,14 +163,52 @@
 	<true/>
 	<key>SupportsNITZ</key>
 	<false/>
+	<key>RemoteCardProvisioningSettings</key>
+	<dict>
+		<key>MatchingICCIDPrefixes</key>
+		<array>
+			<string>896303</string>
+		</array>
+		<key>CellularTrialPlan</key>
+		<dict>
+			<key>TrialEndPeriod</key>
+			<string>2026-09-30T15:59:59Z</string>
+			<key>TrialPlanType</key>
+			<string>FreeTrial</string>
+			<key>SupportsTrialPlan</key>
+			<true/>
+			<key>TrialStartPeriod</key>
+			<string>2026-04-01T16:00:00Z</string>
+		</dict>
+		<key>ServerURL</key>
+		<string>https://sci.prod.ondemandconnectivity.com</string>
+		<key>ActivatingStateSubscriptionCheckTimerIntervals</key>
+		<array>
+			<integer>120</integer>
+			<integer>300</integer>
+			<integer>900</integer>
+		</array>
+		<key>MinCompatibleWatchOS</key>
+		<string>26.5</string>
+		<key>SupportedSKUs</key>
+		<array>
+			<string>SKU_POST2018_ALL</string>
+		</array>
+		<key>ProvisioningMethod</key>
+		<string>CarrierFlow</string>
+		<key>SupportsFauxCard</key>
+		<false/>
+	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>100</string>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>WatchCustomerServicePhoneNumber</key>
+	<string>*888</string>
 	<key>OverrideOperatorWiFiName</key>
 	<string>SMART VoWiFi</string>
 	<key>TechSettings</key>
@@ -191,14 +231,14 @@
 					<dict>
 						<key>IntegrityAlgorithm</key>
 						<array>
-							<string>SHA1-96</string>
+							<string>SHA2-256</string>
 						</array>
 						<key>EncryptionAlgorithm</key>
 						<array>
-							<string>AES-128</string>
+							<string>AES-256</string>
 						</array>
 						<key>DHGroup</key>
-						<integer>2</integer>
+						<integer>14</integer>
 						<key>Lifetime</key>
 						<integer>86400</integer>
 					</dict>
@@ -251,11 +291,11 @@
 			<array>
 				<dict>
 					<key>EncryptionAlgorithm</key>
-					<string>AES-128</string>
+					<string>AES-256</string>
 					<key>IntegrityAlgorithm</key>
-					<string>SHA1-96</string>
+					<string>SHA2-256</string>
 					<key>DHGroup</key>
-					<integer>2</integer>
+					<integer>14</integer>
 					<key>AuthenticationMethod</key>
 					<string>None</string>
 					<key>Lifetime</key>
@@ -263,7 +303,7 @@
 					<key>EAPMethod</key>
 					<string>EAP-AKA</string>
 					<key>PRFAlgorithm</key>
-					<string>SHA1-160</string>
+					<string>SHA2-256</string>
 				</dict>
 			</array>
 			<key>RemoteAddress</key>
@@ -317,31 +357,27 @@
 			<string></string>
 			<key>apn</key>
 			<string>internet</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>type-mask</key>
 			<integer>32817</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>type-mask</key>
-			<integer>131072</integer>
-			<key>apn</key>
-			<string>IMS</string>
+			<key>UseNetworkMTU</key>
+			<false/>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<false/>
-			<key>DefaultProtocolMask</key>
+			<key>apn</key>
+			<string>IMS</string>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</array>
@@ -358,8 +394,12 @@
 			</dict>
 			<key>DefaultAuthAlgorithm</key>
 			<string>AKAv1-MD5</string>
+			<key>ussdEnabled</key>
+			<true/>
 			<key>AlwaysAddSipInstance</key>
 			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<false/>
 			<key>UseFakeSAsForDeregistration</key>
 			<true/>
 			<key>EarlyMediaNeedsHeader</key>
@@ -381,12 +421,17 @@
 			<true/>
 			<key>InviteErrorResponsesToTriggerCSFB</key>
 			<string>3XX,4XX,5XX,6XX</string>
-			<key>DropRegistrationOnSRVCC</key>
+			<key>AlwaysSendSessionProgress</key>
 			<true/>
 			<key>MaxUdpMessageSize</key>
 			<integer>1200</integer>
-			<key>AlwaysSendSessionProgress</key>
+			<key>DropRegistrationOnSRVCC</key>
 			<true/>
+			<key>EmergencyURNs</key>
+			<dict>
+				<key>911</key>
+				<string>urn:service:sos</string>
+			</dict>
 			<key>RingbackTimerSeconds</key>
 			<integer>40</integer>
 			<key>SendPreferredServiceInInvite</key>
@@ -409,12 +454,21 @@
 			<true/>
 			<key>Preconditions</key>
 			<string>Supported</string>
-			<key>UseIPSec</key>
-			<false/>
 			<key>RingingTimerSeconds</key>
 			<integer>45</integer>
+			<key>UseIPSec</key>
+			<false/>
 			<key>RegistrationExpirationSeconds</key>
 			<integer>7200</integer>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
 		</dict>
 		<key>ConferenceCalling</key>
 		<dict>
@@ -429,12 +483,33 @@
 		<false/>
 		<key>AllowHandoverWithoutIMSVoiceService</key>
 		<true/>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
 		<key>Media</key>
 		<dict>
-			<key>RTCPIntervalSeconds</key>
-			<integer>5</integer>
 			<key>RingbackTone</key>
 			<string>ANSI</string>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>br</key>
+					<string>9.6-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
 			<key>EnableBandwidthSpecifiers</key>
 			<true/>
 		</dict>
@@ -449,15 +524,13 @@
 				<string>msisdn@carrierDomain</string>
 			</array>
 		</dict>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<true/>
 		<key>Voice</key>
 		<dict>
 			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
-			<false/>
+			<true/>
 			<key>E911OverITechSupported</key>
 			<true/>
-			<key>E911OverCSIfNoIMSReg</key>
+			<key>E911OverIMSSupported</key>
 			<true/>
 			<key>EnableVolteByDefault</key>
 			<true/>
@@ -476,6 +549,11 @@
 	<integer>1</integer>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32769</integer>
+	<key>PushSettings</key>
+	<dict>
+		<key>MultiSIMTopic</key>
+		<string>ph.com.smart.Smart</string>
+	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
 	<key>StatusBarImages</key>
@@ -494,7 +572,7 @@
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://m.smart.com.ph</string>
+	<string>https://m.smart.com.ph</string>
 	<key>MyAccountURLTitle</key>
 	<string>SMART</string>
 	<key>MandatoryVerify</key>

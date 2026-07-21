@@ -14,6 +14,23 @@
 			</dict>
 		</array>
 	</dict>
+	<key>Location</key>
+	<dict>
+		<key>EmergencyLocation</key>
+		<dict>
+			<key>AugmentedEmergencyAction</key>
+			<dict>
+				<key>AML</key>
+				<dict>
+					<key>SMS</key>
+					<dict>
+						<key>Destination</key>
+						<string>919912</string>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
 	<key>CountryName</key>
 	<string>Faroe Islands</string>
 	<key>ISOAlpha2CountryCode</key>

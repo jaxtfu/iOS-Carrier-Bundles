@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>DerPriFileVersion</key>
-	<string>5.4.162</string>
+	<string>6.0.163</string>
 	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
 	<key>Show5GStandaloneSwitch</key>
@@ -18,8 +18,6 @@
 	<integer>30</integer>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>ShowSatelliteSwitch</key>
 	<true/>
 	<key>Location</key>
@@ -43,29 +41,6 @@
 	</dict>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Media</key>
-		<dict>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>127</key>
-				<dict>
-					<key>ch-aw-recv</key>
-					<string>3</string>
-					<key>br</key>
-					<string>5.9-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-					<key>cmr</key>
-					<string>1</string>
-				</dict>
-			</dict>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-		</dict>
 		<key>Satellite</key>
 		<dict>
 			<key>IMSServiceMask</key>
@@ -83,8 +58,6 @@
 		</dict>
 		<key>SMS</key>
 		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
 			<key>SupportedDomains</key>
 			<dict>
 				<key>LTE</key>
@@ -112,6 +85,8 @@
 	<false/>
 	<key>ShowVoNRWarningUnsupportedCarrier</key>
 	<false/>
+	<key>DataIndicatorOverrideForNRMmwave</key>
+	<string>NRPlus</string>
 	<key>Enable5GAutoByDefault</key>
 	<true/>
 	<key>ShowVolteSwitch</key>
@@ -131,12 +106,12 @@
 		<dict>
 			<key>password</key>
 			<string>password</string>
+			<key>enableXLAT464</key>
+			<true/>
 			<key>username</key>
 			<string>vertigo</string>
 			<key>apn</key>
 			<string>idata.o2.co.uk</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>1081399</integer>
 			<key>AllowedProtocolMask</key>
@@ -145,21 +120,19 @@
 		<dict>
 			<key>type-mask</key>
 			<integer>131072</integer>
+			<key>Support5GSaHandOver</key>
+			<true/>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>Support5GSaHandOver</key>
-			<true/>
-			<key>AllowedProtocolMask</key>
-			<integer>2</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>ims</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
 		</dict>
 	</array>

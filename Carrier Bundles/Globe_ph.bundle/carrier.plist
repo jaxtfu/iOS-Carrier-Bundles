@@ -2,6 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>AllowCurrentLocation</key>
+		<true/>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+	</dict>
 	<key>CellularPlanProvisioningSettings</key>
 	<dict>
 		<key>WaitForPhoneNumberDuringActivation</key>
@@ -24,12 +38,12 @@
 			<string></string>
 			<key>apn</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</dict>
+	<key>SupportsUserBusyCauseCode</key>
+	<true/>
 	<key>CellBroadcast</key>
 	<dict>
 		<key>AlertTypes</key>
@@ -143,8 +157,6 @@
 			</dict>
 		</array>
 	</dict>
-	<key>SupportsUserBusyCauseCode</key>
-	<true/>
 	<key>PhoneAccountTransfer</key>
 	<dict>
 		<key>LocalInstallSMDPURL</key>
@@ -216,12 +228,12 @@
 		<key>SupportsFauxCard</key>
 		<false/>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>WatchCustomerServicePhoneNumber</key>
 	<string>211</string>
 	<key>OverrideOperatorWiFiName</key>
@@ -356,54 +368,48 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>32817</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>enableXLAT464</key>
 			<true/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>internet.globe.com.ph</string>
+			<key>type-mask</key>
+			<integer>32817</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>type-mask</key>
-			<integer>131072</integer>
-			<key>apn</key>
-			<string>ims</string>
+			<key>UseNetworkMTU</key>
+			<true/>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
-			<key>DefaultProtocolMask</key>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>1048576</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>xcap</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -429,6 +435,8 @@
 			</dict>
 			<key>RequirePreconditionsWhenMandatory</key>
 			<false/>
+			<key>ussdEnabled</key>
+			<true/>
 			<key>IncomingCallEndReasons</key>
 			<dict>
 				<key>TemporarilyUnavailable</key>
@@ -510,22 +518,55 @@
 		<dict>
 			<key>InactivityTimerRTPSeconds</key>
 			<integer>20</integer>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>106</key>
+				<dict>
+					<key>br</key>
+					<string>9.6-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>maxptime</key>
+					<integer>80</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>swb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+				<key>112</key>
+				<dict>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>maxptime</key>
+					<integer>80</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>wb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 			<key>EnableBandwidthSpecifiers</key>
 			<true/>
 		</dict>
 		<key>SMS</key>
 		<dict>
-			<key>SMSBundleToVoice</key>
-			<true/>
 			<key>enableInNonVoLTEMode</key>
 			<false/>
+			<key>SMSBundleToVoice</key>
+			<true/>
 			<key>SupportedDomains</key>
 			<dict>
 				<key>LTE</key>
 				<true/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>EnableWiFiCallingWithoutEntitlement</key>
 		<true/>
@@ -574,7 +615,7 @@
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://iPhone.globe.com.ph</string>
+	<string>https://iPhone.globe.com.ph</string>
 	<key>MyAccountURLTitle</key>
 	<string>Globe Services</string>
 	<key>MandatoryVerify</key>

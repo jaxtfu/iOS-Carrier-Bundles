@@ -29,7 +29,7 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.telesur.sr/</string>
+	<string>https://www.telesur.sr/</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>APNEditabilityTypemask</key>
@@ -69,8 +69,6 @@
 	<string>Telesur</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>

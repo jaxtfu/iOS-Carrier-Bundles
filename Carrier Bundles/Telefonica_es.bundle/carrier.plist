@@ -82,12 +82,14 @@
 		<key>LocalInstallSMDPURL</key>
 		<string>https://tsm.prod.ondemandconnectivity.com</string>
 	</dict>
+	<key>Show3GSwitchWithVolte</key>
+	<false/>
 	<key>AllowEDGEEditing</key>
 	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>22123</string>
 	<key>SupportsNITZ</key>
-	<false/>
+	<true/>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>MatchingICCIDPrefixes</key>
@@ -125,6 +127,10 @@
 			<string>SKU_EU</string>
 		</array>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>Show4GSwitch</key>
+	<true/>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
@@ -140,8 +146,6 @@
 		<string>+447860015008</string>
 		<string>+447860015009</string>
 	</array>
-	<key>ShowTTY</key>
-	<false/>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
 		<key>MaxGreetingDuration</key>
@@ -270,15 +274,193 @@
 	<string>4G</string>
 	<key>APNEditabilityTypemaskNew</key>
 	<integer>49</integer>
-	<key>SuppressSimToolkitSendShortMessageNotifications</key>
-	<true/>
 	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
 	<integer>131072</integer>
-	<key>SMSSettings</key>
+	<key>IMSConfig</key>
 	<dict>
-		<key>TransportFallback</key>
+		<key>Signaling</key>
+		<dict>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>PreconditionUpdateDelayTimerMilliseconds</key>
+			<integer>10000</integer>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>PreferPCellularNetworkInfo</key>
+			<false/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>TriggerCSFBOnSDPError</key>
+			<false/>
+			<key>UseCIDUrlInPIDF</key>
+			<false/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>UseFakeSAsForDeregistration</key>
+			<false/>
+			<key>ussdEnabled</key>
+			<false/>
+			<key>strictCallFlows</key>
+			<false/>
+			<key>PreferredSenderIdentity</key>
+			<string>from</string>
+			<key>NetworkTerminationRetryIntervalSeconds</key>
+			<integer>1</integer>
+			<key>AllowResponsesOverDifferentTransport</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX</string>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>MaxUdpMessageSize</key>
+			<integer>1400</integer>
+			<key>RingbackTimerSeconds</key>
+			<integer>90</integer>
+			<key>SendPreferredServiceInInvite</key>
+			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>NoAnswerFromUser</key>
+				<dict>
+					<key>Protocol</key>
+					<string>Q.850</string>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderCause</key>
+					<integer>19</integer>
+					<key>StatusCode</key>
+					<integer>480</integer>
+				</dict>
+			</dict>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>10</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>90</integer>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
+			<false/>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>E911OverCSIfNoIMSReg</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+			<key>endNonEmergencyCalls</key>
+			<false/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<false/>
+			<key>SendConferenceSubscribeAfterRefers</key>
+			<true/>
+			<key>SendReferToPeer</key>
+			<false/>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc007.mcc214.3gppnetwork.org</string>
+		</dict>
+		<key>EnableWiFiCallingByDefault</key>
+		<false/>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<false/>
+		<key>XCAP</key>
+		<dict>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc007.mcc214.pub.3gppnetwork.org</string>
+			<key>BsfPort</key>
+			<integer>8088</integer>
+			<key>imsFeatureDependency</key>
+			<false/>
+			<key>NafPort</key>
+			<integer>8089</integer>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>supported</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>403</string>
+			<key>SupportsCFErasure</key>
+			<true/>
+			<key>imsRegistrationDependency</key>
+			<false/>
+			<key>BsfHost</key>
+			<string>bsf.ims.mnc007.mcc214.pub.3gppnetwork.org</string>
+			<key>SupportsCW</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>max-red</key>
+					<string>220</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>ch-aw-recv</key>
+					<string>2</string>
+					<key>maxptime</key>
+					<string>240</string>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>15</integer>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<true/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<true/>
+			</dict>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
 		<true/>
 	</dict>
+	<key>SuppressSimToolkitSendShortMessageNotifications</key>
+	<true/>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>PreferCarrierNameFromMetadata</key>
@@ -400,8 +582,10 @@
 	<integer>513</integer>
 	<key>CarrierName</key>
 	<string>Movistar</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.movistar.es/miiphone</string>
+	<string>https://www.movistar.es/miiphone</string>
 	<key>MyAccountURLTitle</key>
 	<string>Movistar</string>
 	<key>MandatoryVerify</key>
@@ -409,6 +593,8 @@
 		<key>SIMs</key>
 		<array/>
 	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VMSMFilterNumber</key>
 	<string>22123</string>
 	<key>SupportedSIMs</key>

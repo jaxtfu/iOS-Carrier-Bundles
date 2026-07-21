@@ -95,26 +95,22 @@
 						<string>mms</string>
 						<key>apn</key>
 						<string>event.proximus.be</string>
-						<key>DefaultProtocolMask</key>
-						<integer>1</integer>
 						<key>type-mask</key>
 						<integer>4</integer>
 						<key>AllowedProtocolMask</key>
 						<integer>1</integer>
 					</dict>
 					<dict>
-						<key>type-mask</key>
-						<integer>49</integer>
 						<key>password</key>
 						<string></string>
-						<key>DefaultProtocolMask</key>
-						<integer>1</integer>
-						<key>AllowedProtocolMaskInRoaming</key>
-						<integer>1</integer>
 						<key>username</key>
 						<string></string>
+						<key>AllowedProtocolMaskInRoaming</key>
+						<integer>1</integer>
 						<key>apn</key>
 						<string>internet.proximus.be</string>
+						<key>type-mask</key>
+						<integer>49</integer>
 						<key>AllowedProtocolMask</key>
 						<integer>1</integer>
 					</dict>

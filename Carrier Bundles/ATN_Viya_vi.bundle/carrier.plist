@@ -121,8 +121,6 @@
 	<string>VIYA</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>IMAP</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>CellBroadcast</key>
 	<dict>
 		<key>AlertConfigurations</key>
@@ -256,22 +254,18 @@
 		<dict>
 			<key>apn</key>
 			<string>web.viya.vi</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 			<key>type-mask</key>
 			<integer>49</integer>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>apn</key>
 			<string>mms.viya.vi</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 			<key>type-mask</key>
 			<integer>4</integer>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>apn</key>

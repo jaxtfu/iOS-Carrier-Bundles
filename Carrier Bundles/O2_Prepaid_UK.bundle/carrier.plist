@@ -68,8 +68,6 @@
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447860015001</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>IPv6SupportedDataModeMask</key>
 	<integer>110623</integer>
 	<key>OverrideOperatorWiFiName</key>
@@ -228,8 +226,6 @@
 			<string>vertigo</string>
 			<key>apn</key>
 			<string>payandgo.o2.co.uk</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>1048629</integer>
 			<key>AllowedProtocolMask</key>
@@ -242,8 +238,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
@@ -353,11 +347,6 @@
 		</dict>
 		<key>AllowHandoverWithoutIMSVoiceService</key>
 		<true/>
-		<key>SMS</key>
-		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
-		</dict>
 		<key>Media</key>
 		<dict>
 			<key>RTCPIntervalSeconds</key>
@@ -423,8 +412,6 @@
 	<dict>
 		<key>SMSCarrierReportJunkAddress</key>
 		<string>7726</string>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
@@ -494,7 +481,7 @@
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.o2.co.uk/iphonestart</string>
+	<string>https://www.o2.co.uk/iphonestart</string>
 	<key>IntlDataRoamingSwitch</key>
 	<true/>
 	<key>MyAccountURLTitle</key>

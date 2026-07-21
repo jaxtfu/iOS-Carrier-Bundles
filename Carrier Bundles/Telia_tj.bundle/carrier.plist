@@ -56,8 +56,6 @@
 	<string>TCELL</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>595</string>
 	<key>EmergencyCalling</key>
@@ -88,6 +86,11 @@
 		<integer>10</integer>
 		<key>MaxMessageSize</key>
 		<integer>307200</integer>
+	</dict>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsTTY</key>
+		<true/>
 	</dict>
 	<key>apns</key>
 	<array>

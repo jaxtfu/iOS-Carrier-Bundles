@@ -20,27 +20,6 @@
 	<true/>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Media</key>
-		<dict>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>112</key>
-				<dict>
-					<key>ch-aw-recv</key>
-					<string>-1</string>
-					<key>br</key>
-					<string>5.9-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-wb</string>
-				</dict>
-			</dict>
-			<key>IncludeSDPMaxRed</key>
-			<true/>
-		</dict>
 		<key>XCAP</key>
 		<dict>
 			<key>supported</key>

@@ -2,28 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AllowEDGEEditing</key>
-	<false/>
 	<key>DerPriFileVersion</key>
-	<string>5.4.163</string>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Show5GStandaloneSwitch</key>
+	<string>6.0.165</string>
+	<key>Show4GSwitch</key>
+	<true/>
+	<key>ShowVoNRSwitch</key>
 	<false/>
 	<key>Enable5GStandaloneByDefault</key>
 	<true/>
-	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
-	<integer>131072</integer>
-	<key>ShowHighDataModeSwitch</key>
-	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<key>EnableBackupOnCellular</key>
 	<false/>
-	<key>Show5GSwitch</key>
-	<true/>
-	<key>AllowFaceTimeOverCellular</key>
-	<true/>
-	<key>Show4GSwitch</key>
-	<true/>
+	<key>PDNBackoffTimeout</key>
+	<integer>100</integer>
 	<key>IMSConfig</key>
 	<dict>
 		<key>SMS</key>
@@ -47,42 +37,34 @@
 	</dict>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>ShowVoNRWarningUnsupportedCarrier</key>
-	<false/>
-	<key>PDNBackoffTimeout</key>
-	<integer>100</integer>
 	<key>DataIndicatorOverrideForNRMmwave</key>
 	<string>NRCA</string>
-	<key>ShowVolteSwitch</key>
+	<key>ShowHighDataModeSwitch</key>
+	<true/>
+	<key>ShowVoNRWarningUnsupportedCarrier</key>
 	<false/>
-	<key>Enable5GAutoByDefault</key>
-	<true/>
-	<key>ShowVoNRSwitch</key>
-	<true/>
-	<key>EnableBackupOnCellular</key>
+	<key>Show5GStandaloneSwitch</key>
 	<false/>
-	<key>SupportsImsCapability</key>
+	<key>SupportsVoNR</key>
 	<true/>
-	<key>SupportsNRNSAInboundRoaming</key>
-	<true/>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
 	<key>apns</key>
 	<array>
 		<dict>
 			<key>configuration</key>
 			<array>
 				<dict>
-					<key>type-mask</key>
-					<integer>1048625</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
 					<key>apn</key>
 					<string>cbnet</string>
+					<key>type-mask</key>
+					<integer>1048625</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
@@ -91,8 +73,6 @@
 					<integer>131072</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>username</key>
@@ -105,18 +85,16 @@
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>1048624</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
 					<key>apn</key>
 					<string>cbnet</string>
+					<key>type-mask</key>
+					<integer>1048624</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
@@ -125,7 +103,11 @@
 			<integer>24</integer>
 		</dict>
 	</array>
-	<key>SupportsVoNR</key>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
+	<key>SupportsNRNSAInboundRoaming</key>
+	<true/>
+	<key>Show5GSwitch</key>
 	<true/>
 </dict>
 </plist>

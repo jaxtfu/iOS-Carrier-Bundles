@@ -27,6 +27,31 @@
 	<true/>
 	<key>IMSConfig</key>
 	<dict>
+		<key>Media</key>
+		<dict>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>106</key>
+				<dict>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>octet-align</key>
+					<string>1</string>
+					<key>ch-aw-recv</key>
+					<string>3</string>
+					<key>cmr</key>
+					<string>1</string>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>bw</key>
+					<string>nb-wb</string>
+				</dict>
+			</dict>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+		</dict>
 		<key>Voice</key>
 		<dict>
 			<key>EnableVolteByDefault</key>
@@ -61,18 +86,16 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>49</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>internet</string>
+			<key>type-mask</key>
+			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -92,12 +115,10 @@
 	<dict>
 		<key>3GPP</key>
 		<dict>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>1</integer>
-			<key>password</key>
-			<string></string>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
+			<key>password</key>
+			<string></string>
 			<key>PcscfAddressRequired</key>
 			<false/>
 			<key>username</key>
@@ -106,8 +127,8 @@
 			<integer>1</integer>
 			<key>apn</key>
 			<string>internet</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 </dict>

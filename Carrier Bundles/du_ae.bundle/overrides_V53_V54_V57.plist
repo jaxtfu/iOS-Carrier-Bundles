@@ -12,103 +12,50 @@
 	<true/>
 	<key>Show5GStandaloneSwitchOnlyWhenEntitled</key>
 	<true/>
-	<key>ShowHighDataModeSwitch</key>
-	<true/>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Signaling</key>
+		<key>SMS</key>
 		<dict>
-			<key>EarlyMediaNeedsHeader</key>
-			<false/>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>BsfHost</key>
-			<string>bsf.mnc003.mcc424.pub.3gppnetwork.org</string>
-			<key>DisableOnNetworkError</key>
-			<true/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string>400,403,500</string>
-			<key>SupportsCLIR</key>
-			<false/>
-			<key>imsRegistrationDependency</key>
-			<true/>
-			<key>ContentType</key>
-			<string>application/xcap-el+xml</string>
-			<key>BsfPort</key>
-			<integer>80</integer>
-			<key>supported</key>
-			<true/>
-			<key>DisableCLIRModification</key>
-			<true/>
-			<key>SupportsCFErasure</key>
-			<true/>
-			<key>imsFeatureDependency</key>
-			<true/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>NR</key>
+				<true/>
+			</dict>
 		</dict>
 		<key>Voice</key>
 		<dict>
 			<key>EnableVoNRByDefault</key>
 			<true/>
 		</dict>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>SupportedDomains</key>
-			<dict>
-				<key>NR</key>
-				<true/>
-			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
-		</dict>
 	</dict>
+	<key>ShowHighDataModeSwitch</key>
+	<true/>
 	<key>SupportsVoNR</key>
 	<true/>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>CarrierEntitlements</key>
 	<dict>
-		<key>SupportsOnDevicePhysicalSIMConvert</key>
-		<true/>
 		<key>SupportedEntitlements</key>
 		<integer>41985</integer>
-		<key>ProtocolVersion</key>
-		<string>2</string>
-		<key>Authentication</key>
-		<dict>
-			<key>Type</key>
-			<integer>1</integer>
-			<key>Username</key>
-			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
-		</dict>
-		<key>ServerAddress</key>
-		<string>https://es.du.ae/entitlement/</string>
-		<key>SupportPhysicalSIMtoESIMTransfer</key>
-		<true/>
-		<key>UpdatePeriod</key>
-		<integer>24</integer>
-		<key>SupportedActions</key>
-		<array>
-			<string>transferSIMService</string>
-		</array>
 	</dict>
+	<key>ShowVolteSwitch</key>
+	<false/>
+	<key>Show5GStandaloneSwitch</key>
+	<true/>
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>1081397</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>du</string>
+			<key>type-mask</key>
+			<integer>1081397</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -129,12 +76,6 @@
 			<integer>1</integer>
 		</dict>
 	</array>
-	<key>ShowVolteSwitch</key>
-	<false/>
-	<key>Show5GStandaloneSwitch</key>
-	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
 	<key>NRSlicing</key>
@@ -142,6 +83,8 @@
 		<key>Consumer</key>
 		<false/>
 	</dict>
+	<key>Enable5GAutoAfterUpgrade</key>
+	<true/>
 	<key>Show5GSwitch</key>
 	<true/>
 	<key>SupportsNRNSAInboundRoaming</key>

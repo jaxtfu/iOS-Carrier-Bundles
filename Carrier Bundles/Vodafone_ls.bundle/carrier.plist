@@ -95,8 +95,6 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>133</string>
 	<key>HomeBundleIdentifier</key>
@@ -125,8 +123,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>internet</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
@@ -139,8 +135,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>MMS</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>4</integer>
 			<key>AllowedProtocolMask</key>

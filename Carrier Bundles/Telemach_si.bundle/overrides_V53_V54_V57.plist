@@ -10,19 +10,13 @@
 	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>DerPriFileVersion</key>
 	<string>0.1.161</string>
-	<key>Show3GSwitchWithVolte</key>
+	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
 	<key>Show3GSwitchWith5G</key>
 	<true/>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Show5GSwitch</key>
-	<true/>
 	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
-	<key>EnableLTEAfterUpgrade</key>
+	<key>Show5GSwitch</key>
 	<true/>
 </dict>
 </plist>

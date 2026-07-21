@@ -2,6 +2,29 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>SupportedEntitlements</key>
+		<integer>5329</integer>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>ServerAddress</key>
+		<string>https://aes.orange.sk/ium-OEMInterface/servlet/IUMServlet</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>SupportedActions</key>
+		<array>
+			<string>AuthenticateTrustFlag</string>
+			<string>TransferSIMService</string>
+		</array>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+	</dict>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -52,11 +75,23 @@
 		<key>3GPP</key>
 		<dict>
 			<key>apn</key>
-			<string>internet</string>
-			<key>username</key>
 			<string></string>
 			<key>password</key>
 			<string></string>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+			<key>enableXLAT464</key>
+			<true/>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>AllowedProtocolMaskInRoamingUMTS</key>
+			<integer>1</integer>
+			<key>UseNetworkMTU</key>
+			<true/>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SupportsUserBusyCauseCode</key>
@@ -89,8 +124,6 @@
 	<true/>
 	<key>SupportsNITZ</key>
 	<false/>
-	<key>VoicemailPilotNumber</key>
-	<string>555</string>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>MatchingICCIDPrefixes</key>
@@ -125,12 +158,14 @@
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>VoicemailPilotNumber</key>
+	<string>555</string>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>OverrideOperatorWiFiName</key>
 	<string>Orange WiFiCall</string>
 	<key>MMS</key>
@@ -246,14 +281,22 @@
 	<key>apns</key>
 	<array>
 		<dict>
+			<key>type-mask</key>
+			<integer>32817</integer>
 			<key>password</key>
 			<string></string>
+			<key>UseNetworkMTU</key>
+			<true/>
+			<key>enableXLAT464</key>
+			<true/>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>internet</string>
-			<key>type-mask</key>
-			<integer>49</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>password</key>
@@ -265,18 +308,243 @@
 			<key>type-mask</key>
 			<integer>4</integer>
 		</dict>
+		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>131072</integer>
+			<key>UseNetworkMTU</key>
+			<true/>
+			<key>SupportSwitchOver</key>
+			<true/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>type-mask</key>
+			<integer>262144</integer>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>262144</integer>
+			<key>AllowNoDNS</key>
+			<integer>1</integer>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>sos</string>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>xcap</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>APNEditabilityTypemaskNew</key>
 	<integer>53</integer>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting</string>
+			</dict>
+			<key>RegistrationPolicy</key>
+			<string>RFC5626</string>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>UseFakeSAsForDeregistration</key>
+			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>IPSecSegmentOffset</key>
+			<integer>210</integer>
+			<key>SipTimers</key>
+			<dict>
+				<key>InviteResponseTimeout</key>
+				<integer>2000</integer>
+			</dict>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>AlwaysUnsubscribeFromRegEvents</key>
+			<false/>
+			<key>NetworkTerminationRetryIntervalSeconds</key>
+			<integer>10</integer>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>403,408,5XX</string>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>SendPreferredServiceInInvite</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>90</integer>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>7</integer>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>IncompleteRegistrationThrottlingIntervalSeconds</key>
+			<integer>1</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>90</integer>
+			<key>SendPreconditionsInConfirmedSessions</key>
+			<true/>
+			<key>SendInitialInviteAsInactive</key>
+			<false/>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc001.mcc231.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>EnforceEarlyMediaDirection</key>
+			<true/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>HoldHeartbeatIntervalSeconds</key>
+			<integer>5</integer>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>97</key>
+				<dict>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+				<key>96</key>
+				<dict>
+					<key>br</key>
+					<string>9.6-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>swb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>HideSessionLevelDirection</key>
+			<true/>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>UseSDPTemplateForAllInvites</key>
+			<true/>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCW</key>
+			<false/>
+			<key>NafPort</key>
+			<integer>80</integer>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>400,403,404,500,501,502,503,504</string>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>supported</key>
+			<true/>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc001.mcc231.pub.3gppnetwork.org</string>
+			<key>SupportsCFErasure</key>
+			<false/>
+			<key>imsFeatureDependency</key>
+			<true/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<false/>
+		<key>Voice</key>
+		<dict>
+			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<false/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+			<key>endNonEmergencyCalls</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>SuppressSimToolkitSendShortMessageNotifications</key>
+	<true/>
 	<key>SMSSettings</key>
 	<dict>
-		<key>TransportFallback</key>
-		<true/>
+		<key>SMSCarrierReportJunkAddress</key>
+		<string>+421905323905</string>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>APNEditabilityTypemask</key>
 	<integer>48</integer>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>PushSettings</key>
+	<dict>
+		<key>Topic</key>
+		<string>com.orange.sk.aes.volte</string>
+		<key>MultiSIMTopic</key>
+		<string>com.orange.sk.aes.multisim</string>
+		<key>VoWiFiTopic</key>
+		<string>com.orange.sk.aes.vowifi</string>
+	</dict>
 	<key>Services</key>
 	<array>
 		<dict>
@@ -329,8 +597,10 @@
 	</array>
 	<key>CarrierName</key>
 	<string>Orange Slovensko</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.orange.sk</string>
+	<string>https://www.orange.sk</string>
 	<key>MyAccountURLTitle</key>
 	<string>Orange.sk</string>
 	<key>MandatoryVerify</key>
@@ -338,6 +608,8 @@
 		<key>SIMs</key>
 		<array/>
 	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>23101</string>

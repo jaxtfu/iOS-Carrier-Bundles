@@ -28,7 +28,7 @@
 		<string>64602</string>
 	</array>
 	<key>MyAccountURL</key>
-	<string>http://www.orange.mg</string>
+	<string>https://www.orange.mg</string>
 	<key>MMS</key>
 	<dict>
 		<key>MMSC</key>
@@ -61,8 +61,6 @@
 	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>apns</key>
 	<array>
 		<dict>

@@ -19,21 +19,8 @@
 	<array>
 		<string>54900</string>
 	</array>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<array>
-		<string>+447537410207</string>
-		<string>+447537410217</string>
-		<string>+447537410227</string>
-		<string>+447537410237</string>
-		<string>+447537410247</string>
-		<string>+447537410257</string>
-		<string>+447537410267</string>
-		<string>+447537410277</string>
-		<string>+447537410287</string>
-		<string>+447537410297</string>
-	</array>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
+	<key>VoicemailPilotNumber</key>
+	<string>555</string>
 	<key>CarrierName</key>
 	<string>Digicel</string>
 	<key>AllowEDGEEditing</key>
@@ -47,8 +34,8 @@
 	<string>com.apple.Samoa</string>
 	<key>ShowDialAssist</key>
 	<true/>
-	<key>VoicemailPilotNumber</key>
-	<string>555</string>
+	<key>APNEditabilityTypemask</key>
+	<integer>49</integer>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -62,8 +49,6 @@
 			<integer>49</integer>
 		</dict>
 	</array>
-	<key>APNEditabilityTypemask</key>
-	<integer>49</integer>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -96,16 +81,29 @@
 	</dict>
 	<key>SupportsNITZ</key>
 	<false/>
-	<key>ShowTTY</key>
+	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>
 		<array/>
 	</dict>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<array>
+		<string>+447537410207</string>
+		<string>+447537410217</string>
+		<string>+447537410227</string>
+		<string>+447537410237</string>
+		<string>+447537410247</string>
+		<string>+447537410257</string>
+		<string>+447537410267</string>
+		<string>+447537410277</string>
+		<string>+447537410287</string>
+		<string>+447537410297</string>
+	</array>
 </dict>
 </plist>

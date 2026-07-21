@@ -78,8 +78,6 @@
 	</array>
 	<key>ShowDialAssist</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>Show3GSwitchWith4G</key>
 	<false/>
 	<key>MVNOOverrides</key>
@@ -379,8 +377,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
@@ -528,8 +524,11 @@
 		<true/>
 		<key>SMS</key>
 		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<true/>
+			</dict>
 		</dict>
 		<key>XCAP</key>
 		<dict>
@@ -570,24 +569,24 @@
 			<dict>
 				<key>109</key>
 				<dict>
-					<key>cmr</key>
-					<string>1</string>
 					<key>br</key>
 					<string>5.9-24.4</string>
 					<key>SampleRate</key>
 					<integer>16000</integer>
-					<key>hf-only</key>
-					<string>0</string>
 					<key>EncodingName</key>
 					<string>EVS</string>
 					<key>bw</key>
-					<string>nb-wb</string>
+					<string>nb-swb</string>
+					<key>cmr</key>
+					<string>1</string>
 				</dict>
 			</dict>
 			<key>InactivityTimerRTCPSeconds</key>
 			<integer>36000</integer>
 			<key>InactivityTimerRTPSeconds</key>
 			<integer>20</integer>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 			<key>IncludeSDPModeChangeCapability</key>
 			<true/>
 		</dict>
@@ -606,11 +605,6 @@
 			<string>116117</string>
 		</array>
 		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<true/>
-	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
 		<true/>
 	</dict>
 	<key>SuspendFastDormancyAllowed</key>
@@ -632,8 +626,6 @@
 		</dict>
 		<key>ShowBusinessMessagingSwitch</key>
 		<true/>
-		<key>SupportsE2EE</key>
-		<false/>
 		<key>EnableRCSByDefault</key>
 		<true/>
 	</dict>
@@ -715,7 +707,7 @@
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://bouyguestelecom.fr</string>
+	<string>https://bouyguestelecom.fr</string>
 	<key>MyAccountURLTitle</key>
 	<string>Bouygues Telecom</string>
 	<key>MandatoryVerify</key>

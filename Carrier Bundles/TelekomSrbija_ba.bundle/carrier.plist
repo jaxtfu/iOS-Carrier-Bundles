@@ -56,8 +56,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>3g1</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>type-mask</key>
 			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
@@ -70,8 +68,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>3g1</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>type-mask</key>
 			<integer>48</integer>
 			<key>AllowedProtocolMask</key>
@@ -84,16 +80,12 @@
 			<string></string>
 			<key>apn</key>
 			<string>mtelmms</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>type-mask</key>
 			<integer>4</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
 	</array>
-	<key>ShowTTY</key>
-	<false/>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>

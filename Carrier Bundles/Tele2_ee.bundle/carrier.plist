@@ -17,6 +17,8 @@
 	<integer>0</integer>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32768</integer>
 	<key>RoamingVoicemailPilotNumber</key>
@@ -61,8 +63,6 @@
 					<string>220</string>
 					<key>SampleRate</key>
 					<integer>16000</integer>
-					<key>hf-only</key>
-					<string>0</string>
 					<key>octet-align</key>
 					<string>1</string>
 					<key>ch-aw-recv</key>
@@ -206,8 +206,6 @@
 	<array>
 		<string>24803</string>
 	</array>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>+37255500000</string>
 	<key>RemoteCardProvisioningSettings</key>
@@ -294,16 +292,18 @@
 			<integer>2</integer>
 		</dict>
 		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
+			<key>SupportSwitchOver</key>
+			<true/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>ims</string>
-			<key>type-mask</key>
-			<integer>131072</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
 		</dict>

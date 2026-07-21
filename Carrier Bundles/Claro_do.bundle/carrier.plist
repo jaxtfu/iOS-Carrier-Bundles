@@ -260,10 +260,12 @@
 			<string>AMX</string>
 		</dict>
 	</array>
-	<key>SupportsUserBusyCauseCode</key>
-	<true/>
+	<key>Show3GSwitchWithVolte</key>
+	<false/>
 	<key>ShowLTEWarningUnsupportedCarrier</key>
 	<false/>
+	<key>SupportsUserBusyCauseCode</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>*99</string>
 	<key>RegistrationOptInRequired</key>
@@ -304,12 +306,12 @@
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>011447860015000</string>
 	<key>ShowDialAssist</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>Show3GSwitchWith4G</key>
 	<false/>
 	<key>com.apple.voicemail.imap</key>
@@ -503,8 +505,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>internet.ideasclaro.com.do</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>1081393</integer>
 			<key>AllowedProtocolMask</key>
@@ -544,8 +544,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
@@ -556,19 +554,17 @@
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>262144</integer>
-			<key>password</key>
-			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowNoDNS</key>
 			<integer>1</integer>
+			<key>password</key>
+			<string></string>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>sos</string>
-			<key>DefaultProtocolMask</key>
+			<key>type-mask</key>
+			<integer>262144</integer>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</array>
@@ -651,8 +647,8 @@
 		<true/>
 		<key>SMS</key>
 		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
 			<key>SMSBundleToVoice</key>
 			<true/>
 			<key>SupportedDomains</key>
@@ -828,7 +824,7 @@
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.claro.com.do/iphone</string>
+	<string>https://www.claro.com.do/iphone</string>
 	<key>MyAccountURLTitle</key>
 	<string>Servicios iPhone</string>
 	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>

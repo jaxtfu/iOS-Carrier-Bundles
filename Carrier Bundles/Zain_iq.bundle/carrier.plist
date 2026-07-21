@@ -95,8 +95,6 @@
 	<string>none</string>
 	<key>ShowVolteSwitch</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>AllowsVoIP</key>
 	<true/>
 	<key>EmergencyCalling</key>

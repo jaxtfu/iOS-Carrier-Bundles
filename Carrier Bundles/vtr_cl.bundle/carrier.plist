@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Show3GSwitchWith4G</key>
+	<true/>
+	<key>RoamingVoicemailPilotNumber</key>
+	<string>+56963500111</string>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -45,10 +51,6 @@
 			<string>vtr</string>
 		</dict>
 	</array>
-	<key>RoamingVoicemailPilotNumber</key>
-	<string>+56963500111</string>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>73008</string>
@@ -63,8 +65,6 @@
 	<array>
 		<string>*911</string>
 	</array>
-	<key>OTASoftwareUpdate</key>
-	<dict/>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Chile</string>
 	<key>ShowDialAssist</key>
@@ -111,8 +111,8 @@
 			<integer>49</integer>
 		</dict>
 	</array>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>SupportedPLMNs</key>
 	<array>
 		<string>73002</string>
@@ -120,5 +120,21 @@
 	</array>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>13133</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string>vtrmovil</string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string>vtrmovil</string>
+			<key>apn</key>
+			<string>movil.vtr.com</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 </dict>
 </plist>

@@ -104,8 +104,6 @@
 	<string>none</string>
 	<key>ShowVolteSwitch</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>VoicemailPilotNumber</key>
@@ -127,6 +125,13 @@
 	</dict>
 	<key>APNEditabilityTypemaskNew</key>
 	<integer>53</integer>
+	<key>SupportedPLMNs</key>
+	<array>
+		<string>41006</string>
+		<string>41013</string>
+		<string>41012</string>
+		<string>41011</string>
+	</array>
 	<key>apns</key>
 	<array>
 		<dict>

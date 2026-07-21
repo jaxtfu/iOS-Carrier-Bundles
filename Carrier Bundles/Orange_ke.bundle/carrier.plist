@@ -47,7 +47,7 @@
 		<array/>
 	</dict>
 	<key>MyAccountURL</key>
-	<string>http://www.telkom.co.ke</string>
+	<string>https://www.telkom.co.ke</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>APNEditabilityTypemask</key>
@@ -76,6 +76,8 @@
 	<string>Telkom</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>

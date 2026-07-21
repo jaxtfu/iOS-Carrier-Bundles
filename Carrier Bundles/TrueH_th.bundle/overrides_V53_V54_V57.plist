@@ -3,40 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
-	<key>Show4GSwitch</key>
+	<string>6.0.161</string>
+	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
-	<key>Enable5GStandaloneByDefault</key>
-	<false/>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Media</key>
-		<dict>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>127</key>
-				<dict>
-					<key>ch-aw-recv</key>
-					<string>-1</string>
-					<key>br</key>
-					<string>5.9-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-wb</string>
-					<key>max-red</key>
-					<string>0</string>
-				</dict>
-			</dict>
-		</dict>
 		<key>SMS</key>
 		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
 			<key>SupportedDomains</key>
 			<dict>
 				<key>NR</key>
@@ -55,17 +30,15 @@
 	<false/>
 	<key>Show5GStandaloneSwitch</key>
 	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>ShowEsimWarningUnsupportedCarrier</key>
 	<false/>
 	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
 	<key>Enable5GAutoByDefault</key>
 	<true/>
-	<key>SupportsNRNSAInboundRoaming</key>
-	<true/>
 	<key>Show5GSwitch</key>
 	<true/>
+	<key>Enable5GStandaloneByDefault</key>
+	<false/>
 </dict>
 </plist>

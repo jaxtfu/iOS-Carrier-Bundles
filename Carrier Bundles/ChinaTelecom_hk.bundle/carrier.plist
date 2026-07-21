@@ -201,7 +201,7 @@
 	<key>VoicemailPilotNumber</key>
 	<string>+85257499808</string>
 	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
+	<string>false</string>
 	<key>SupportsSupplementaryServices</key>
 	<false/>
 	<key>ShowDialAssist</key>
@@ -219,32 +219,36 @@
 		<string>+447937985238</string>
 		<string>+447937985239</string>
 	</array>
-	<key>ShowTTY</key>
-	<false/>
+	<key>SupportsSupplementaryServicesOverIMS</key>
+	<true/>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.HongKong</string>
 	<key>MaxBluetoothModemConnections</key>
 	<integer>5</integer>
 	<key>DataIndicatorOverrideForLTE</key>
 	<string>4G</string>
+	<key>ShowVolteSwitch</key>
+	<true/>
+	<key>SupportsSupplementaryServicesOver3GPP</key>
+	<true/>
+	<key>ShowCallForwardingSwitch</key>
+	<true/>
 	<key>apns</key>
 	<array>
 		<dict>
 			<key>configuration</key>
 			<array>
 				<dict>
-					<key>type-mask</key>
-					<integer>1048625</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
 					<key>apn</key>
 					<string>CTExcel</string>
+					<key>type-mask</key>
+					<integer>1048625</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
@@ -255,8 +259,6 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>131072</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>SupportSwitchOver</key>
@@ -271,13 +273,11 @@
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>AllowedProtocolMask</key>
-					<integer>3</integer>
+					<key>type-mask</key>
+					<integer>262144</integer>
 					<key>password</key>
 					<string></string>
 					<key>tech-type-mask</key>
-					<integer>262144</integer>
-					<key>type-mask</key>
 					<integer>262144</integer>
 					<key>AllowNoDNS</key>
 					<integer>1</integer>
@@ -287,7 +287,7 @@
 					<string></string>
 					<key>apn</key>
 					<string>sos</string>
-					<key>DefaultProtocolMask</key>
+					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 			</array>
@@ -302,16 +302,14 @@
 					<integer>561</integer>
 					<key>password</key>
 					<string></string>
-					<key>apn</key>
-					<string>CTNET</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
+					<key>UseNetworkMTU</key>
+					<true/>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>username</key>
 					<string></string>
-					<key>UseNetworkMTU</key>
-					<true/>
+					<key>apn</key>
+					<string>CTNET</string>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
@@ -320,10 +318,8 @@
 			<integer>6</integer>
 		</dict>
 	</array>
-	<key>SupportsSupplementaryServicesOver3GPP</key>
-	<true/>
-	<key>ShowCallForwardingSwitch</key>
-	<true/>
+	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
+	<integer>131072</integer>
 	<key>IMSConfig</key>
 	<dict>
 		<key>Signaling</key>
@@ -557,6 +553,8 @@
 	<true/>
 	<key>CarrierName</key>
 	<string>CTExcel</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>SupportedPLMNs</key>
 	<array>
 		<string>45507</string>

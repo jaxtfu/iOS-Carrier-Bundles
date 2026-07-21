@@ -24,10 +24,12 @@
 		<key>TransportFallback</key>
 		<false/>
 	</dict>
-	<key>RegistrationOptInRequired</key>
-	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+35058123000</string>
+	<key>RegistrationOptInRequired</key>
+	<true/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -73,6 +75,28 @@
 			<key>RequirePreconditionsWhenMandatory</key>
 			<false/>
 		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<false/>
+			</dict>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>ShowDialAssist</key>
 	<false/>
@@ -91,10 +115,29 @@
 	</array>
 	<key>CarrierName</key>
 	<string>Gibtel</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string></string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<true/>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsTTY</key>
+		<true/>
+	</dict>
 	<key>VoicemailPilotNumber</key>
 	<string>123</string>
 	<key>HomeBundleIdentifier</key>

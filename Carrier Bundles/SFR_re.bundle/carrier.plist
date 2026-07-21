@@ -30,7 +30,7 @@
 	<key>SupportsNITZ</key>
 	<false/>
 	<key>MyAccountURL</key>
-	<string>http://m.sfr.fr</string>
+	<string>https://m.sfr.fr</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>TetheringURL</key>
@@ -154,8 +154,6 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>IMAP</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>123</string>
 	<key>HomeBundleIdentifier</key>

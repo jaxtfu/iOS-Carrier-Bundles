@@ -30,13 +30,21 @@
 	<string>GigSky</string>
 	<key>AllowEDGEEditing</key>
 	<true/>
-	<key>OverrideOperatorName</key>
-	<string>GigSky</string>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>OTASoftwareUpdate</key>
 	<dict>
 		<key>SoftwareUpdateOptInRequired</key>
 		<true/>
 	</dict>
+	<key>OverrideOperatorName</key>
+	<string>GigSky</string>
 	<key>IntlDataRoamingAllowed</key>
 	<array>
 		<string>315010</string>

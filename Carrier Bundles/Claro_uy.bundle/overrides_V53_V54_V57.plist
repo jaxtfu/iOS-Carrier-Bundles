@@ -4,8 +4,6 @@
 <dict>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>Show3GSwitchWithVolte</key>
-	<false/>
 	<key>Show4GSwitchWith5G</key>
 	<true/>
 	<key>DerPriFileVersion</key>
@@ -14,7 +12,5 @@
 	<array>
 		<string>EnableLTEAfterUpgrade</string>
 	</array>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 </dict>
 </plist>

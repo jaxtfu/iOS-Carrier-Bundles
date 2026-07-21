@@ -79,7 +79,7 @@
 	<key>SuppressSimToolkitSendShortMessageNotifications</key>
 	<true/>
 	<key>VVMIgnoresIntlDataRoaming</key>
-	<true/>
+	<false/>
 	<key>PhoneSettings</key>
 	<dict>
 		<key>ShowExplicitCallTransferButton</key>
@@ -89,6 +89,8 @@
 	<dict>
 		<key>SMSCarrierReportJunkAddress</key>
 		<string>8080</string>
+		<key>AllowVVMSMSWhileIntlRoaming</key>
+		<false/>
 	</dict>
 	<key>MyAccountURLTitle</key>
 	<string>Plus</string>
@@ -96,6 +98,88 @@
 	<integer>12319</integer>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>StatusBarImages</key>
+	<array>
+		<dict>
+			<key>CarrierName</key>
+			<string>Plus</string>
+			<key>StatusBarCarrierName</key>
+			<string>Plus</string>
+		</dict>
+	</array>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>26001</string>
+	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Media</key>
+		<dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>AllowIPv6UnicastAddress</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>0</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>-403,3XX,4XX,5XX,6XX</string>
+			<key>UseIPSec</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Required</string>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*[primary]</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>ValidateSipMessageRecipient</key>
+			<false/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
 		<key>MaxGreetingDuration</key>
@@ -122,81 +206,6 @@
 		<key>MaxPINLength</key>
 		<integer>4</integer>
 	</dict>
-	<key>StatusBarImages</key>
-	<array>
-		<dict>
-			<key>CarrierName</key>
-			<string>Plus</string>
-			<key>StatusBarCarrierName</key>
-			<string>Plus</string>
-		</dict>
-	</array>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>26001</string>
-	</array>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Media</key>
-		<dict>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>109</key>
-				<dict>
-					<key>max-red</key>
-					<string>0</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>hf-only</key>
-					<string>0</string>
-					<key>ch-aw-recv</key>
-					<string>0</string>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>br</key>
-					<string>5.9-24.4</string>
-					<key>bw</key>
-					<string>nb-wb</string>
-				</dict>
-			</dict>
-			<key>AllowIPv6UnicastAddress</key>
-			<true/>
-			<key>IncludeSDPMaxRed</key>
-			<true/>
-		</dict>
-		<key>Signaling</key>
-		<dict>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string>-403,3XX,4XX,5XX,6XX</string>
-			<key>UseIPSec</key>
-			<true/>
-			<key>Preconditions</key>
-			<string>Required</string>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>AdditionalContactParams</key>
-			<dict>
-				<key>REGISTER,INVITE,INVITE:*[primary]</key>
-				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
-			</dict>
-			<key>ValidateSipMessageRecipient</key>
-			<false/>
-		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>AlwaysSubscribeToConferenceEvents</key>
-			<true/>
-			<key>SendConferenceSubscribeInNewDialog</key>
-			<true/>
-		</dict>
-		<key>Voice</key>
-		<dict>
-			<key>EnableVolteByDefault</key>
-			<true/>
-		</dict>
-	</dict>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
 	<key>CarrierName</key>
@@ -205,19 +214,17 @@
 	<dict>
 		<key>3GPP</key>
 		<dict>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>1</integer>
 			<key>password</key>
 			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
-			<key>AllowedProtocolMaskInRoamingUMTS</key>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
 			<integer>1</integer>
 			<key>apn</key>
 			<string>plus</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMaskInRoamingUMTS</key>
+			<integer>1</integer>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</dict>
@@ -249,8 +256,6 @@
 			<integer>51</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>NoCellularReconnectCauseCodes</key>
 			<array>
 				<dict>
@@ -305,12 +310,8 @@
 			<integer>4</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>NoCellularReconnectCauseCodes</key>
 			<array>
 				<dict>
@@ -346,6 +347,8 @@
 			<string></string>
 			<key>apn</key>
 			<string>ims</string>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>

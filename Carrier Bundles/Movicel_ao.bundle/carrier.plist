@@ -59,12 +59,12 @@
 		<string>+447537410287</string>
 		<string>+447537410297</string>
 	</array>
+	<key>Show4GSwitchWith5G</key>
+	<true/>
 	<key>CarrierName</key>
 	<string>Movicel</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>19199</string>
 	<key>EmergencyCalling</key>

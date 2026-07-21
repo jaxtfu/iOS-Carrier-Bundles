@@ -98,6 +98,8 @@
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>+358423330333</string>
 	<key>StaticNATType</key>
@@ -142,6 +144,8 @@
 		<key>GreetingNotification</key>
 		<true/>
 	</dict>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Telia FI Wi-Fi</string>
 	<key>MMS</key>
 	<dict>
 		<key>MaxImageDimension</key>
@@ -368,8 +372,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>2</integer>
 			<key>username</key>
@@ -482,11 +484,13 @@
 		<dict>
 			<key>enableInNonVoLTEMode</key>
 			<false/>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>Media</key>
 		<dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
 			<key>AudioCodecs</key>
 			<dict>
 				<key>109</key>
@@ -498,16 +502,16 @@
 					<key>EncodingName</key>
 					<string>EVS</string>
 					<key>bw</key>
-					<string>nb-wb</string>
+					<string>nb-swb</string>
 				</dict>
 			</dict>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
 			<key>MaxRedundancy</key>
 			<integer>220</integer>
+			<key>EnableIncomingDTMF</key>
+			<true/>
 			<key>UseSDPTemplateForAllInvites</key>
 			<false/>
-			<key>EnableBandwidthSpecifiers</key>
+			<key>IncludeSDPModeChangeCapability</key>
 			<true/>
 		</dict>
 		<key>XCAP</key>
@@ -541,8 +545,8 @@
 	</dict>
 	<key>SMSSettings</key>
 	<dict>
-		<key>TransportFallback</key>
-		<true/>
+		<key>SMSCarrierReportJunkAddress</key>
+		<string>7726</string>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
@@ -551,7 +555,7 @@
 	<key>APNEditabilityTypemask</key>
 	<integer>53</integer>
 	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32769</integer>
+	<integer>32768</integer>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+358423330333</string>
 	<key>PushSettings</key>
@@ -605,8 +609,10 @@
 	</array>
 	<key>CarrierName</key>
 	<string>Telia FI</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.telia.fi</string>
+	<string>https://www.telia.fi</string>
 	<key>MyAccountURLTitle</key>
 	<string>Telia</string>
 	<key>MandatoryVerify</key>

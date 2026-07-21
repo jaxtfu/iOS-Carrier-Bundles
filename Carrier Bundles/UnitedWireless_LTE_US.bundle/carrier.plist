@@ -2,8 +2,28 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>OTASoftwareUpdate</key>
-	<dict/>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>SupportedEntitlements</key>
+		<integer>144</integer>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>ProvisioningRecheckPeriod</key>
+		<integer>24</integer>
+		<key>ServerAddress</key>
+		<string>https://deg.app.unitedwireless.com:8181/ium-OEMInterface/servlet/IUMServlet</string>
+		<key>UserAgent</key>
+		<string>Entitlement/$version ($device) iOS/$iOSVersion</string>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+	</dict>
 	<key>NumberToDialForOTAProvisioning</key>
 	<string>*228</string>
 	<key>AttachAPN</key>
@@ -28,11 +48,13 @@
 			<key>password</key>
 			<string></string>
 			<key>PcscfAddressRequired</key>
-			<false/>
+			<true/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>unitedwireless</string>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>3</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -106,6 +128,8 @@
 	<false/>
 	<key>SupportsNITZ</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>DisallowedDialingPrefixes</key>
 	<array>
 		<string>*228</string>
@@ -119,8 +143,8 @@
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>2775</string>
-	<key>ShowTTY</key>
-	<true/>
+	<key>OverrideOperatorName</key>
+	<string>United</string>
 	<key>TTYRelayNumber</key>
 	<string>711</string>
 	<key>com.apple.voicemail.imap</key>
@@ -153,25 +177,10 @@
 			</array>
 		</dict>
 	</dict>
-	<key>OTAActivation</key>
-	<dict>
-		<key>BlacklistedSIMs</key>
-		<array>
-			<string>44053</string>
-			<string>44054</string>
-			<string>44070</string>
-			<string>44071</string>
-			<string>44072</string>
-			<string>44073</string>
-			<string>44074</string>
-			<string>44075</string>
-			<string>44076</string>
-			<string>44078</string>
-			<string>46003</string>
-		</array>
-	</dict>
 	<key>NotRegisteredResetWaitPeriod</key>
-	<integer>60</integer>
+	<integer>20</integer>
+	<key>OverrideOperatorWiFiName</key>
+	<string>United Wi-Fi</string>
 	<key>MMS</key>
 	<dict>
 		<key>MaxMessageSize</key>
@@ -201,10 +210,156 @@
 	</dict>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.UnitedStates</string>
+	<key>TechSettings</key>
+	<dict>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA2-256</string>
+						</array>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>AES-256</string>
+						</array>
+						<key>DHGroup</key>
+						<integer>14</integer>
+						<key>Lifetime</key>
+						<integer>86400</integer>
+					</dict>
+				</array>
+				<key>InstallPolicies</key>
+				<true/>
+				<key>ReplayWindowSize</key>
+				<integer>12</integer>
+			</dict>
+		</dict>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>ims</string>
+			<key>PreferredTechnologyRoaming</key>
+			<string>wifi</string>
+		</dict>
+		<key>ExtraConfigurationAttributeRequestv6</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16386</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv6</string>
+				<key>Type</key>
+				<string>IPv6Address</string>
+			</dict>
+		</array>
+		<key>WifiCallingAllowedInRoaming</key>
+		<true/>
+		<key>SupportContextSwitchOver</key>
+		<true/>
+		<key>5wiServiceMask</key>
+		<integer>3</integer>
+		<key>IKE</key>
+		<dict>
+			<key>LocalIdentifier</key>
+			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
+			<key>NATTKeepAliveOffload</key>
+			<true/>
+			<key>DeadPeerDetectionRetryInterval</key>
+			<integer>10</integer>
+			<key>DeadPeerDetectionEnabled</key>
+			<false/>
+			<key>RemoteAddress</key>
+			<string>epdg.epc.mnc650.mcc311.pub.3gppnetwork.org</string>
+			<key>LocalIdentifierType</key>
+			<string>IDUserFQDN</string>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-256</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-256</string>
+					<key>DHGroup</key>
+					<integer>14</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>80000</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-256</string>
+				</dict>
+			</array>
+			<key>RemoteIdentifierType</key>
+			<string>IDFQDN</string>
+			<key>DeadPeerDetectionMaxRetries</key>
+			<integer>4</integer>
+			<key>NonceSize</key>
+			<integer>16</integer>
+			<key>DeadPeerDetectionInterval</key>
+			<integer>600</integer>
+			<key>ValidateRemoteCertificate</key>
+			<false/>
+		</dict>
+		<key>AllowRoamingHandover</key>
+		<false/>
+		<key>ExtraConfigurationAttributeRequestv4</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16384</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv4</string>
+				<key>Type</key>
+				<string>IPv4Address</string>
+			</dict>
+		</array>
+		<key>SetHandOverIPv6Prefix</key>
+		<true/>
+		<key>TechPolicies</key>
+		<array>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>4</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>131074</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>262144</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>1048576</integer>
+			</dict>
+		</array>
+		<key>IPSecMTU</key>
+		<integer>1280</integer>
+		<key>SupportCallHandover</key>
+		<true/>
+	</dict>
 	<key>MaxBluetoothModemConnections</key>
 	<integer>5</integer>
 	<key>Location</key>
 	<dict>
+		<key>EnableCPIDuringEmergencyMode</key>
+		<true/>
 		<key>EmergencyLocation</key>
 		<dict>
 			<key>AugmentedEmergencyAction</key>
@@ -219,6 +374,8 @@
 				</dict>
 			</dict>
 		</dict>
+		<key>EnableEarlyReturnDuringEmergencyMode</key>
+		<true/>
 	</dict>
 	<key>apns</key>
 	<array>
@@ -232,8 +389,6 @@
 					<string></string>
 					<key>apn</key>
 					<string>unitedwireless</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>type-mask</key>
 					<integer>7</integer>
 					<key>AllowedProtocolMask</key>
@@ -246,8 +401,6 @@
 					<string></string>
 					<key>apn</key>
 					<string>dun.unitedwireless</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>type-mask</key>
 					<integer>48</integer>
 					<key>AllowedProtocolMask</key>
@@ -260,8 +413,6 @@
 					<string></string>
 					<key>apn</key>
 					<string>ota.unitedwireless</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>type-mask</key>
 					<integer>512</integer>
 					<key>AllowedProtocolMask</key>
@@ -272,17 +423,172 @@
 			<integer>10</integer>
 		</dict>
 	</array>
+	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
+	<integer>131072</integer>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Media</key>
-		<dict>
-			<key>TTYRelayNumber</key>
-			<string>711</string>
-		</dict>
 		<key>Signaling</key>
 		<dict>
+			<key>EarlyMediaNeedsHeader</key>
+			<false/>
+			<key>RingbackTimerSeconds</key>
+			<integer>120</integer>
+			<key>RegistrationExpirationSeconds</key>
+			<integer>7200</integer>
+			<key>AllowPhoneContextInEmergencyUri</key>
+			<false/>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>ImpuRank</key>
+			<string>IMSI@domain</string>
+			<key>RingingTimerSeconds</key>
+			<integer>60</integer>
+			<key>SessionExpiresSeconds</key>
+			<integer>3600</integer>
+			<key>TcpIdleTimeoutSeconds</key>
+			<integer>0</integer>
+			<key>MaxUdpMessageSize</key>
+			<integer>1200</integer>
+			<key>SipTimers</key>
+			<dict>
+				<key>InviteResponseTimeout</key>
+				<integer>6000</integer>
+			</dict>
+			<key>UseCIDUrlInPIDF</key>
+			<true/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>PIDFGeoPrivShape</key>
+			<string>ellipsoid</string>
+			<key>AddGeolocationSupportedHeader</key>
+			<true/>
+			<key>EmergencyRegistrationTimeoutSeconds</key>
+			<integer>2</integer>
+			<key>LocationForShortCodeCalls</key>
+			<string>BOTH</string>
 			<key>EnableRingbackAudioForTextCalls</key>
 			<true/>
+			<key>PIDFConfidence</key>
+			<integer>90</integer>
+			<key>RegSubscriptionExpirationSeconds</key>
+			<integer>7200</integer>
+			<key>OutgoingCallPrefix</key>
+			<dict>
+				<key>Local</key>
+				<string>+1</string>
+				<key>International</key>
+				<string>011</string>
+			</dict>
+			<key>AddPEmergencyInfoHeaderToEmergencyInviteOnWifi</key>
+			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>UseIPSec</key>
+			<true/>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>AlwaysPrack18x</key>
+			<true/>
+			<key>EmergencyCallBackModeExpirationSeconds</key>
+			<integer>300</integer>
+			<key>AllowGeolocationForEmergencyCallsWhileInboundRoaming</key>
+			<true/>
+			<key>EmergencyURNs</key>
+			<dict>
+				<key>default</key>
+				<string>urn:service:sos</string>
+			</dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,6XX</string>
+			<key>SendEmergencyLocationUpdates</key>
+			<true/>
+			<key>OutgoingDomain</key>
+			<string>1</string>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>AdditionalHeaders</key>
+			<dict>
+				<key>INVITE[wifi,911]</key>
+				<array>
+					<string>Supported: geolocation</string>
+				</array>
+			</dict>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>AllowRemoteHoldForUnconfirmedCalls</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>ContactUser</key>
+			<string>MDN</string>
+			<key>AlwaysAddGeolocationForEmergencyCalls</key>
+			<true/>
+			<key>NetworkTerminationRetryIntervalSeconds</key>
+			<integer>1</integer>
+			<key>SendLocalTimeZoneInformation</key>
+			<true/>
+			<key>UseTupleInPIDF</key>
+			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>EmergencyImpuRank</key>
+			<string>IMSI@domain</string>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<integer>25</integer>
+			<key>Preconditions</key>
+			<string>None</string>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>25</integer>
+		</dict>
+		<key>LocalShortCodeNumbers</key>
+		<array>
+			<string>411</string>
+			<string>*411</string>
+		</array>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<true/>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>ttyIMSSupported</key>
+			<true/>
+			<key>EnableHoldForRTT</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc650.mcc311.3gppnetwork.org</string>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>InactivityTimerRTCPSeconds</key>
+			<integer>20</integer>
+			<key>MaxRedundancy</key>
+			<integer>220</integer>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>EnableIncomingDTMF</key>
+			<true/>
+			<key>EnableRTCPExtendedReports</key>
+			<true/>
+			<key>TTYRelayNumber</key>
+			<string>711</string>
+			<key>UseRestrictiveDirectionWhenCreatingAnswer</key>
+			<false/>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>SIM</key>
+		<dict>
+			<key>CarrierDomain</key>
+			<string>ims.mnc650.mcc311.3gppnetwork.org</string>
+			<key>impiFormat</key>
+			<string>imsi@carrierDomain</string>
+			<key>impuFormat</key>
+			<array>
+				<string>imsi@carrierDomain</string>
+			</array>
 		</dict>
 		<key>XCAP</key>
 		<dict>
@@ -311,40 +617,42 @@
 			<key>SupportsCW</key>
 			<true/>
 		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>ttyIMSSupported</key>
-			<true/>
-			<key>EnableHoldForRTT</key>
-			<true/>
-			<key>conferenceServer</key>
-			<string>sip:mmtel@conf-factory.ims.mnc650.mcc311.3gppnetwork.org</string>
-		</dict>
 		<key>Voice</key>
 		<dict>
-			<key>ttyIMSSupported</key>
+			<key>E911OverITechSupported</key>
+			<false/>
+			<key>tLte911Timer</key>
+			<integer>55</integer>
+			<key>EnableVolteByDefault</key>
+			<true/>
+			<key>TestEmergencyPSAPSupported</key>
 			<true/>
 		</dict>
 	</dict>
 	<key>SMSSizeInBytesSentAsMMSInstead</key>
 	<integer>640</integer>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
 	<key>SMSSettings</key>
 	<dict>
+		<key>OutgoingSMSPrefix</key>
+		<dict>
+			<key>Local</key>
+			<string>+1</string>
+			<key>International</key>
+			<string>+011</string>
+		</dict>
 		<key>SupportsEMS</key>
 		<false/>
 		<key>UnsupportedEncodings</key>
 		<array>
 			<string>7bitGSM</string>
 		</array>
-		<key>TransportFallback</key>
-		<false/>
 	</dict>
-	<key>TetheringPhoneNumber</key>
-	<string>611</string>
 	<key>SuspendFastDormancyAllowed</key>
 	<true/>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32770</integer>
+	<key>TetheringPhoneNumber</key>
+	<string>611</string>
 	<key>MTU</key>
 	<array>
 		<dict>
@@ -360,6 +668,11 @@
 			<integer>1472</integer>
 		</dict>
 	</array>
+	<key>PushSettings</key>
+	<dict>
+		<key>VoWiFiTopic</key>
+		<string>com.unitedwireless.apncertificate</string>
+	</dict>
 	<key>Services</key>
 	<array>
 		<dict>
@@ -375,10 +688,14 @@
 			<string>Pay My Bill</string>
 		</dict>
 	</array>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>IMAP</string>
 	<key>CarrierName</key>
 	<string>United</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>CDMAInternationalRoaming</key>
 	<dict>
 		<key>EnabledByDefault</key>
@@ -386,6 +703,8 @@
 	</dict>
 	<key>SMSUseLocalTZ</key>
 	<true/>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>ExitEmergencyModeWhenPlacingFirstRegularCall</key>
 	<true/>
 	<key>SupportedSIMs</key>

@@ -218,6 +218,8 @@
 		<key>UsesAutoAssignment</key>
 		<false/>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>*988</string>
 	<key>ShowDialAssist</key>
@@ -235,8 +237,6 @@
 		<string>+447937985238</string>
 		<string>+447937985239</string>
 	</array>
-	<key>ShowTTY</key>
-	<false/>
 	<key>OverrideOperatorWiFiName</key>
 	<string>SUNMobile WiFi Call</string>
 	<key>MMS</key>
@@ -403,8 +403,6 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>131072</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>2</integer>
 					<key>SupportSwitchOver</key>
 					<true/>
 					<key>username</key>
@@ -421,6 +419,127 @@
 	</array>
 	<key>APNEditabilityTypemaskNew</key>
 	<integer>53</integer>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string></string>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>AlwaysPrack18x</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>120</integer>
+			<key>RegSubscriptionEnabled</key>
+			<false/>
+			<key>MaxUdpMessageSize</key>
+			<integer>2000</integer>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>ussdEnabled</key>
+			<true/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>NotFound</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>408</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+				<key>TemporarilyUnavailable</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>480</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+			</dict>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>Preconditions</key>
+			<string>None</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting</string>
+			</dict>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>conferenceServer</key>
+			<string>sip:conference-factory1@ims.mnc000.mcc454.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>ModeSetAMRWB</key>
+			<string>0,1,2</string>
+			<key>ModeSetAMRNB</key>
+			<string>3,4,5,6,7</string>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc000.mcc454.pub.3gppnetwork.org</string>
+			<key>SupportsCB</key>
+			<true/>
+			<key>BsfPort</key>
+			<integer>80</integer>
+			<key>imsFeatureDependency</key>
+			<true/>
+			<key>NafPort</key>
+			<integer>80</integer>
+			<key>SupportCFMediaTag</key>
+			<string>true</string>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>supported</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/vnd.etsi.simservs+xml</string>
+			<key>SupportsCFErasure</key>
+			<true/>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>404,501,502,503,504</string>
+			<key>ServeMultipleCDIVRulesPerRequest</key>
+			<false/>
+			<key>SupportCBMediaTag</key>
+			<string>true</string>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>BsfHost</key>
+			<string>bsf.ims.mnc000.mcc454.pub.3gppnetwork.org</string>
+			<key>SupportsCW</key>
+			<true/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>SMSSettings</key>
 	<dict>
 		<key>TransportFallback</key>
@@ -471,6 +590,8 @@
 	</array>
 	<key>CarrierName</key>
 	<string>SUNMobile</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
 	<string>https://www.sunmobile.com.hk</string>
 	<key>SupportedPLMNs</key>

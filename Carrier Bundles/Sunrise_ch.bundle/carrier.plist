@@ -103,11 +103,13 @@
 		<key>UsesAutoAssignment</key>
 		<false/>
 	</dict>
-	<key>ShowDialAssist</key>
-	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
+	<key>ShowDialAssist</key>
+	<true/>
+	<key>Show3GSwitchWith4G</key>
 	<false/>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
@@ -137,6 +139,8 @@
 		<key>BeaconAddress</key>
 		<string>3030</string>
 	</dict>
+	<key>OverrideOperatorWiFiName</key>
+	<string>WiFi-Calling</string>
 	<key>TechSettings</key>
 	<dict>
 		<key>WiFiCallingIdentityProtectionMethod</key>
@@ -303,8 +307,6 @@ MIoO1Ms65zdhK94M74mlFH9nXHsvQ8FGuJOLnodg2LnwIW0OUwngwvrDCVM=</string>
 			<string></string>
 			<key>apn</key>
 			<string>internet</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>type-mask</key>
 			<integer>32819</integer>
 			<key>AllowedProtocolMask</key>
@@ -317,8 +319,6 @@ MIoO1Ms65zdhK94M74mlFH9nXHsvQ8FGuJOLnodg2LnwIW0OUwngwvrDCVM=</string>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
@@ -329,18 +329,16 @@ MIoO1Ms65zdhK94M74mlFH9nXHsvQ8FGuJOLnodg2LnwIW0OUwngwvrDCVM=</string>
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>1048576</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>xcap</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
@@ -349,8 +347,6 @@ MIoO1Ms65zdhK94M74mlFH9nXHsvQ8FGuJOLnodg2LnwIW0OUwngwvrDCVM=</string>
 	<string>http://www.sunrise.ch</string>
 	<key>APNEditabilityTypemaskNew</key>
 	<integer>49</integer>
-	<key>SuppressSimToolkitSendShortMessageNotifications</key>
-	<true/>
 	<key>IMSConfig</key>
 	<dict>
 		<key>Signaling</key>
@@ -437,13 +433,13 @@ MIoO1Ms65zdhK94M74mlFH9nXHsvQ8FGuJOLnodg2LnwIW0OUwngwvrDCVM=</string>
 				<key>LTE</key>
 				<true/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>Media</key>
 		<dict>
 			<key>RTCPIntervalSeconds</key>
 			<integer>5</integer>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
 			<key>EnableBandwidthSpecifiers</key>
 			<true/>
 			<key>AudioCodecs</key>
@@ -459,7 +455,7 @@ MIoO1Ms65zdhK94M74mlFH9nXHsvQ8FGuJOLnodg2LnwIW0OUwngwvrDCVM=</string>
 					<key>EncodingName</key>
 					<string>EVS</string>
 					<key>bw</key>
-					<string>nb-wb</string>
+					<string>nb-swb</string>
 					<key>max-red</key>
 					<string>240</string>
 				</dict>
@@ -472,8 +468,8 @@ MIoO1Ms65zdhK94M74mlFH9nXHsvQ8FGuJOLnodg2LnwIW0OUwngwvrDCVM=</string>
 			<integer>20</integer>
 			<key>UseSDPTemplateForAllInvites</key>
 			<true/>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 		</dict>
 		<key>XCAP</key>
 		<dict>
@@ -518,11 +514,8 @@ MIoO1Ms65zdhK94M74mlFH9nXHsvQ8FGuJOLnodg2LnwIW0OUwngwvrDCVM=</string>
 			<true/>
 		</dict>
 	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
+	<key>SuppressSimToolkitSendShortMessageNotifications</key>
+	<true/>
 	<key>TetheringPhoneNumber</key>
 	<string>0800707707</string>
 	<key>PreferCarrierNameFromMetadata</key>
@@ -557,8 +550,10 @@ MIoO1Ms65zdhK94M74mlFH9nXHsvQ8FGuJOLnodg2LnwIW0OUwngwvrDCVM=</string>
 	</array>
 	<key>CarrierName</key>
 	<string>Sunrise</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.sunrise.ch</string>
+	<string>https://www.sunrise.ch</string>
 	<key>SupportedPLMNs</key>
 	<array>
 		<string>22860</string>
@@ -577,6 +572,8 @@ MIoO1Ms65zdhK94M74mlFH9nXHsvQ8FGuJOLnodg2LnwIW0OUwngwvrDCVM=</string>
 		<key>A5/3</key>
 		<false/>
 	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VMSMFilterNumber</key>
 	<string>+41763333333</string>
 	<key>SupportedSIMs</key>

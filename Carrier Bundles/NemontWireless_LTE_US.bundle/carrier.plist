@@ -66,16 +66,14 @@
 	<false/>
 	<key>AllowAttachAPNEditing</key>
 	<false/>
+	<key>StaticNATType</key>
+	<integer>8400</integer>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>2775</string>
-	<key>ShowTTY</key>
-	<true/>
 	<key>OverrideOperatorName</key>
 	<string>Nemont</string>
-	<key>StaticNATType</key>
-	<integer>8400</integer>
 	<key>SendTextMMSToShortCodeAsSMS</key>
 	<true/>
 	<key>OverrideOperatorWiFiName</key>
@@ -316,8 +314,6 @@
 					<integer>6</integer>
 					<key>AllowedProtocolMaskInDomesticRoaming</key>
 					<integer>3</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>username</key>
@@ -332,11 +328,9 @@
 					<integer>131072</integer>
 					<key>password</key>
 					<string></string>
-					<key>AllowedProtocolMaskInDomesticRoaming</key>
-					<integer>3</integer>
 					<key>tech-type-mask</key>
 					<integer>131072</integer>
-					<key>DefaultProtocolMask</key>
+					<key>AllowedProtocolMaskInDomesticRoaming</key>
 					<integer>3</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
@@ -350,13 +344,11 @@
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>AllowedProtocolMask</key>
-					<integer>3</integer>
+					<key>type-mask</key>
+					<integer>262144</integer>
 					<key>password</key>
 					<string></string>
 					<key>tech-type-mask</key>
-					<integer>262144</integer>
-					<key>type-mask</key>
 					<integer>262144</integer>
 					<key>AllowNoDNS</key>
 					<integer>1</integer>
@@ -366,7 +358,7 @@
 					<string></string>
 					<key>apn</key>
 					<string>sos</string>
-					<key>DefaultProtocolMask</key>
+					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 				<dict>
@@ -377,8 +369,6 @@
 					<key>tech-type-mask</key>
 					<integer>1048576</integer>
 					<key>AllowedProtocolMaskInDomesticRoaming</key>
-					<integer>3</integer>
-					<key>DefaultProtocolMask</key>
 					<integer>3</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
@@ -590,8 +580,6 @@
 	<integer>53</integer>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32768</integer>
-	<key>DefaultWhenImsSwitchOff</key>
-	<integer>0</integer>
 	<key>MTU</key>
 	<array>
 		<dict>
@@ -601,6 +589,11 @@
 			<integer>1410</integer>
 		</dict>
 	</array>
+	<key>PushSettings</key>
+	<dict>
+		<key>VoWiFiTopic</key>
+		<string>com.interoptechnologies.entitlements.nemont</string>
+	</dict>
 	<key>Services</key>
 	<array>
 		<dict>
@@ -616,11 +609,6 @@
 			<string>Emergency Service</string>
 		</dict>
 	</array>
-	<key>PushSettings</key>
-	<dict>
-		<key>VoWiFiTopic</key>
-		<string>com.interoptechnologies.entitlements.nemont</string>
-	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<true/>
 	<key>VisualVoicemailServiceName</key>
@@ -630,7 +618,7 @@
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.nemont.net/wireless.php</string>
+	<string>https://www.nemont.net/wireless.php</string>
 	<key>MyAccountURLTitle</key>
 	<string>Nemont</string>
 	<key>MandatoryVerify</key>

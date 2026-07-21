@@ -40,12 +40,10 @@
 	<dict>
 		<key>3GPP</key>
 		<dict>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 			<key>password</key>
 			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 			<key>PcscfAddressRequired</key>
 			<false/>
 			<key>username</key>
@@ -54,7 +52,7 @@
 			<integer>3</integer>
 			<key>apn</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
 			<integer>3</integer>
 		</dict>
 	</dict>
@@ -116,10 +114,8 @@
 	<string>+447786205094</string>
 	<key>ShowDialAssist</key>
 	<false/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>Show3GSwitchWith4G</key>
-	<true/>
+	<false/>
 	<key>OverrideOperatorWiFiName</key>
 	<string>Pelephone WiFi</string>
 	<key>MMS</key>
@@ -253,34 +249,30 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>32817</integer>
 			<key>password</key>
 			<string>pcl</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string>pcl@3g</string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>sphone.pelephone.net.il</string>
+			<key>type-mask</key>
+			<integer>32817</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>4</integer>
 			<key>password</key>
 			<string>pcl</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string>pcl@3g</string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>mms.pelephone.net.il</string>
+			<key>type-mask</key>
+			<integer>4</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -291,8 +283,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
@@ -350,17 +340,15 @@
 		</dict>
 		<key>SMS</key>
 		<dict>
-			<key>SMSBundleToVoice</key>
-			<true/>
 			<key>enableInNonVoLTEMode</key>
 			<false/>
+			<key>SMSBundleToVoice</key>
+			<true/>
 			<key>SupportedDomains</key>
 			<dict>
 				<key>LTE</key>
 				<true/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>Media</key>
 		<dict>
@@ -394,19 +382,14 @@
 			<true/>
 		</dict>
 	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
 	<key>ForceWPSCallsOverCS</key>
+	<false/>
+	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>PreferCarrierNameFromMetadata</key>
 	<true/>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32768</integer>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
 	<key>PushSettings</key>
 	<dict>
 		<key>MultiSIMTopic</key>
@@ -440,7 +423,7 @@
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.pelephone.co.il</string>
+	<string>https://www.pelephone.co.il</string>
 	<key>MyAccountURLTitle</key>
 	<string>Pelephone Portal</string>
 	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>

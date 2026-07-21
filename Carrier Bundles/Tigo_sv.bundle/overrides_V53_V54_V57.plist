@@ -6,8 +6,6 @@
 	<array>
 		<string>EnableLTEAfterUpgrade</string>
 	</array>
-	<key>Show3GSwitchWithVolte</key>
-	<true/>
 	<key>Show3GSwitchWith5G</key>
 	<true/>
 </dict>

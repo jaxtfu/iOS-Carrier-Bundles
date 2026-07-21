@@ -49,6 +49,22 @@
 	</dict>
 	<key>ShouldHideAllVoicemailUI</key>
 	<true/>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>jionet</string>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
 	<key>SupportsUserBusyCauseCode</key>
 	<true/>
 	<key>PhoneAccountTransfer</key>
@@ -91,6 +107,11 @@
 		<key>CheckRegistrationStatusForSIMAbandon</key>
 		<true/>
 	</dict>
+	<key>ToolsConfiguration</key>
+	<dict>
+		<key>EnableFeedbackCollection</key>
+		<true/>
+	</dict>
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>RemoteCardProvisioningSettings</key>
@@ -128,17 +149,134 @@
 		<key>GServerURL</key>
 		<string>https://sm-v4-031-a-gtm.pr.go-esim.com</string>
 	</dict>
-	<key>InitialSetupOverrides</key>
-	<dict/>
-	<key>ShowDialAssist</key>
-	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>ShowDialAssist</key>
+	<true/>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Jio WiFi</string>
 	<key>TechSettings</key>
 	<dict>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>Lifetime</key>
+						<integer>86400</integer>
+						<key>ChildProtocol</key>
+						<string>ESP</string>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>AES-128</string>
+						</array>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA1-96</string>
+						</array>
+						<key>SecureRekey</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>InstallPolicies</key>
+				<true/>
+			</dict>
+		</dict>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>wifi</string>
+		</dict>
+		<key>ExtraConfigurationAttributeRequestv6</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16390</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv6</string>
+				<key>Type</key>
+				<string>IPv6Address</string>
+			</dict>
+		</array>
+		<key>WifiCallingAllowedInRoaming</key>
+		<true/>
 		<key>UseVirtualPlmnForLocalBreakout</key>
+		<true/>
+		<key>5wiServiceMask</key>
+		<integer>3</integer>
+		<key>IKE</key>
+		<dict>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-256</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA1-96</string>
+					<key>DHGroup</key>
+					<integer>2</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>80000</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-256</string>
+				</dict>
+			</array>
+			<key>DeadPeerDetectionEnabled</key>
+			<true/>
+			<key>DeadPeerDetectionMaxRetries</key>
+			<integer>4</integer>
+			<key>DeadPeerDetectionInterval</key>
+			<integer>300</integer>
+			<key>DisableSwitchToNATTPort</key>
+			<true/>
+			<key>NATTKeepAliveOffload</key>
+			<true/>
+			<key>LocalIdentifier</key>
+			<string>0$impi_user@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
+			<key>RemoteAddress</key>
+			<string>epdg.epc.mnc$mnc.mcc$mcc.pub.3gppnetwork.org</string>
+			<key>DeadPeerDetectionRetryInterval</key>
+			<integer>10</integer>
+		</dict>
+		<key>ExtraConfigurationAttributeRequestv4</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16384</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv4</string>
+				<key>Type</key>
+				<string>IPv4Address</string>
+			</dict>
+		</array>
+		<key>SetHandOverIPv6Prefix</key>
+		<true/>
+		<key>TechPolicies</key>
+		<array>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>131072</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>1048576</integer>
+			</dict>
+		</array>
+		<key>EPDGResolutionFallbackEnabled</key>
+		<true/>
+		<key>SupportCallHandover</key>
 		<true/>
 	</dict>
 	<key>HomeBundleIdentifier</key>
@@ -147,6 +285,8 @@
 	<integer>5</integer>
 	<key>DataIndicatorOverrideForLTE</key>
 	<string>LTE</string>
+	<key>ShowVolteSwitch</key>
+	<true/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -156,8 +296,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>enableXLAT464</key>
 			<true/>
 			<key>username</key>
@@ -174,8 +312,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>DontSuspend</key>
 			<true/>
 			<key>AllowedProtocolMaskInRoaming</key>
@@ -190,18 +326,16 @@
 			<integer>2</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>262144</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>sos</string>
+			<key>type-mask</key>
+			<integer>262144</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
 		</dict>
@@ -215,36 +349,232 @@
 		<key>TransportFallback</key>
 		<false/>
 	</dict>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Voice</key>
+		<key>Signaling</key>
 		<dict>
-			<key>E911OverITechSupported</key>
+			<key>IgnoreRegNotificationContactExpires</key>
+			<true/>
+			<key>ussdEnabled</key>
+			<true/>
+			<key>BrandedCallingImageFetchingTimeoutMilliseconds</key>
+			<integer>5000</integer>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>IgnoreWifiHotspot</key>
+			<string>false</string>
+			<key>ServiceClass</key>
+			<dict>
+				<key>Hotspot</key>
+				<dict>
+					<key>Video</key>
+					<string>AF43</string>
+					<key>Voice</key>
+					<string>EF</string>
+					<key>Signaling</key>
+					<string>CS5</string>
+				</dict>
+			</dict>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>ReRegisterOnErrorCodes</key>
+			<string>403</string>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>SubscriptionTerminatedMeansRegistrationTerminated</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string></string>
+			<key>EmergencyCallBackModeExpirationSeconds</key>
+			<integer>1</integer>
+			<key>EnableVideoCallWaiting</key>
+			<true/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>SendResumeInviteAsSendRecv</key>
+			<false/>
+			<key>SessionExpiresSeconds</key>
+			<integer>1800</integer>
+			<key>DropRegistrationOnAirplaneModeToggle</key>
+			<true/>
+			<key>EmergencyPreferredIdentity</key>
+			<string>IMEI</string>
+			<key>RingbackTimerSeconds</key>
+			<integer>130</integer>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>NoAnswerFromUser</key>
+				<dict>
+					<key>Protocol</key>
+					<string>Q.850</string>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderCause</key>
+					<integer>47</integer>
+					<key>StatusCode</key>
+					<integer>480</integer>
+				</dict>
+				<key>NotFound</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>404</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+				<key>RequestTermiante</key>
+				<dict>
+					<key>Protocol</key>
+					<string>Q.850</string>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderCause</key>
+					<integer>31</integer>
+					<key>StatusCode</key>
+					<integer>412</integer>
+				</dict>
+				<key>TemporarilyUnavailable</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>480</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+				<key>ServerInternalError</key>
+				<dict>
+					<key>TerminationEvent</key>
+					<string>NoEmergencyCallLocation</string>
+					<key>ReasonHeaderText</key>
+					<string>Emergency calls over WiFi not allowed in this location</string>
+					<key>ReasonHeaderCause</key>
+					<integer>200</integer>
+					<key>StatusCode</key>
+					<integer>500</integer>
+				</dict>
+			</dict>
+			<key>Preconditions</key>
+			<string>None</string>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>RequiresCellularFootprintForVoWiFiRegistration</key>
+			<true/>
+			<key>EnableBrandedCalling</key>
+			<true/>
+			<key>KillCallOnHoldResumeError</key>
+			<false/>
+			<key>RingingTimerSeconds</key>
+			<integer>130</integer>
+			<key>UseIPSec</key>
+			<true/>
+			<key>RegistrationExpirationSeconds</key>
+			<integer>7200</integer>
+			<key>BrandedCallingAssetServersAllowList</key>
+			<array>
+				<dict>
+					<key>Server</key>
+					<string>https://bcdimages.jiocx.com</string>
+					<key>Certificate</key>
+					<string>8Rw90Ej3Ttt8RRkrg+WYDS9n7IS03bk5bjP/UXPtaY8=</string>
+				</dict>
+			</array>
+			<key>ValidateSipMessageRecipient</key>
 			<false/>
 		</dict>
+		<key>AllowWiFiCallingInAirplaneMode</key>
+		<false/>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>UseRpOriginatingAddressAsSender</key>
+			<true/>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc${MNC}.mcc${MCC}.3gppnetwork.org</string>
+		</dict>
+		<key>EnableBrandedCallingByDefault</key>
+		<true/>
 		<key>XCAP</key>
 		<dict>
+			<key>NafPort</key>
+			<integer>7077</integer>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+			<key>SupportsCLIR</key>
+			<false/>
 			<key>FetchAllCDIVRules</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>BsfPort</key>
+			<integer>7080</integer>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>supported</key>
 			<true/>
 			<key>DisableCLIRModification</key>
 			<true/>
+			<key>SupportsCFErasure</key>
+			<false/>
 		</dict>
-		<key>Signaling</key>
+		<key>ShowBrandedCallingSwitch</key>
+		<true/>
+		<key>Media</key>
 		<dict>
-			<key>RequiresCellularFootprintForVoWiFiRegistration</key>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>ModeSetAMRWB</key>
+			<string></string>
+			<key>RTCPIntervalSeconds</key>
+			<string>5</string>
+			<key>IncludeSDPModeChangeCapability</key>
 			<true/>
-			<key>DropRegistrationOnAirplaneModeToggle</key>
+			<key>UseRestrictiveDirectionWhenCreatingAnswer</key>
+			<false/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>BlockCallsOverCS</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+			<key>BlockSilentRedialOverCS</key>
+			<true/>
+			<key>endNonEmergencyCalls</key>
 			<true/>
 		</dict>
 	</dict>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32768</integer>
 	<key>RCS</key>
 	<dict>
 		<key>EnableBusinessMessagingByDefault</key>
 		<true/>
+		<key>EnableRCSByDefault</key>
+		<true/>
+		<key>ShowRCSSwitch</key>
+		<true/>
+		<key>VendorID</key>
+		<integer>2</integer>
+		<key>SupportsE2EE</key>
+		<false/>
 		<key>ProvisioningData</key>
 		<dict>
 			<key>SupportsPush</key>
@@ -253,12 +583,6 @@
 			<string>acs.nonhome.sarcs.jio.com</string>
 		</dict>
 		<key>ShowBusinessMessagingSwitch</key>
-		<true/>
-		<key>SupportsE2EE</key>
-		<false/>
-		<key>ShowRCSSwitch</key>
-		<true/>
-		<key>EnableRCSByDefault</key>
 		<true/>
 	</dict>
 	<key>MTU</key>
@@ -353,6 +677,8 @@
 	</dict>
 	<key>CarrierName</key>
 	<string>Jio</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>EnablePreviewTranscodingQuality</key>
 	<true/>
 	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>

@@ -27,8 +27,6 @@
 	<array>
 		<string>62003</string>
 	</array>
-	<key>VoicemailPilotNumber</key>
-	<string>233277212</string>
 	<key>MMS</key>
 	<dict>
 		<key>MMSC</key>
@@ -55,6 +53,34 @@
 	<true/>
 	<key>APNEditabilityTypemask</key>
 	<integer>49</integer>
+	<key>SupportsNITZ</key>
+	<false/>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
+	<key>MandatoryVerify</key>
+	<dict>
+		<key>SIMs</key>
+		<array/>
+	</dict>
+	<key>VoicemailPilotNumber</key>
+	<string>233277212</string>
+	<key>RegistrationOptInRequired</key>
+	<true/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<array>
+		<string>+447537410207</string>
+		<string>+447537410217</string>
+		<string>+447537410227</string>
+		<string>+447537410237</string>
+		<string>+447537410247</string>
+		<string>+447537410257</string>
+		<string>+447537410267</string>
+		<string>+447537410277</string>
+		<string>+447537410287</string>
+		<string>+447537410297</string>
+	</array>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -87,34 +113,6 @@
 			<key>type-mask</key>
 			<integer>48</integer>
 		</dict>
-	</array>
-	<key>SupportsNITZ</key>
-	<false/>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
-	<key>ShowTTY</key>
-	<false/>
-	<key>MandatoryVerify</key>
-	<dict>
-		<key>SIMs</key>
-		<array/>
-	</dict>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
-	<key>RegistrationOptInRequired</key>
-	<true/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<array>
-		<string>+447537410207</string>
-		<string>+447537410217</string>
-		<string>+447537410227</string>
-		<string>+447537410237</string>
-		<string>+447537410247</string>
-		<string>+447537410257</string>
-		<string>+447537410267</string>
-		<string>+447537410277</string>
-		<string>+447537410287</string>
-		<string>+447537410297</string>
 	</array>
 </dict>
 </plist>

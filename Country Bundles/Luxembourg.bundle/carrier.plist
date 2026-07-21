@@ -2,6 +2,38 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>EmergencyCalling</key>
+	<dict>
+		<key>EmergencyNumbers</key>
+		<array>
+			<dict>
+				<key>PreferredEmergencyNumber</key>
+				<true/>
+				<key>SupportsText</key>
+				<true/>
+				<key>Number</key>
+				<string>112</string>
+			</dict>
+			<dict>
+				<key>Number</key>
+				<string>12112</string>
+				<key>SupportsEmergencySetup</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Number</key>
+				<string>113</string>
+				<key>SupportsEmergencySetup</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Number</key>
+				<string>12113</string>
+				<key>SupportsEmergencySetup</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
 	<key>CellBroadcast</key>
 	<dict>
 		<key>AlertConfigurations</key>
@@ -349,39 +381,17 @@
 		<string>270</string>
 		<string>com.apple.Luxembourg</string>
 	</array>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsRTT</key>
+		<true/>
+	</dict>
 	<key>ShowTARandomizationSwitch</key>
 	<true/>
-	<key>EmergencyCalling</key>
+	<key>IMSConfig</key>
 	<dict>
-		<key>EmergencyNumbers</key>
-		<array>
-			<dict>
-				<key>PreferredEmergencyNumber</key>
-				<true/>
-				<key>SupportsText</key>
-				<true/>
-				<key>Number</key>
-				<string>112</string>
-			</dict>
-			<dict>
-				<key>Number</key>
-				<string>12112</string>
-				<key>SupportsEmergencySetup</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>Number</key>
-				<string>113</string>
-				<key>SupportsEmergencySetup</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>Number</key>
-				<string>12113</string>
-				<key>SupportsEmergencySetup</key>
-				<false/>
-			</dict>
-		</array>
+		<key>Voice</key>
+		<dict/>
 	</dict>
 </dict>
 </plist>

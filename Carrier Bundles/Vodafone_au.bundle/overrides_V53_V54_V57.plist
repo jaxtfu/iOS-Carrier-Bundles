@@ -3,371 +3,53 @@
 <plist version="1.0">
 <dict>
 	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Show5GStandaloneSwitch</key>
+	<string>6.0.162</string>
+	<key>ShowVoNRSwitch</key>
 	<true/>
-	<key>Enable5GStandaloneByDefault</key>
-	<true/>
-	<key>Show5GSwitch</key>
+	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
-	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32768</integer>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Signaling</key>
+		<key>Emergency</key>
 		<dict>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string></string>
-			<key>EnableCellularNetworkInfo</key>
+			<key>AlwaysEnableVoNRForEmergency</key>
 			<true/>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>IncompleteRegistrationThrottlingIntervalSeconds</key>
-			<integer>65</integer>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>DropRegistrationOnCSFB</key>
-			<false/>
-			<key>CountryOfOriginationFormat</key>
-			<string>PANI</string>
-			<key>EmergencyPreferredIdentity</key>
-			<string>IMEI</string>
-			<key>AlwaysAddSipInstance</key>
-			<true/>
-			<key>AdditionalContactParams</key>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>AudioCodecs</key>
 			<dict>
-				<key>REGISTER,INVITE,INVITE:*</key>
-				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+				<key>126</key>
+				<dict>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
 			</dict>
-			<key>Preconditions</key>
-			<string>SupportedButMandatory</string>
-			<key>UseCIDUrlInPIDF</key>
-			<true/>
-			<key>UseIPSec</key>
-			<true/>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 		</dict>
-		<key>ConferenceCalling</key>
+		<key>Voice</key>
 		<dict>
-			<key>AlwaysSubscribeToConferenceEvents</key>
+			<key>EnableVoNRByDefault</key>
 			<true/>
-			<key>SendConferenceSubscribeAfterRefers</key>
-			<false/>
-			<key>conferenceServer</key>
-			<string>sip:conference@factory.ims.vodafone.com.au</string>
 		</dict>
-		<key>EnableWiFiCallingByDefault</key>
-		<true/>
 		<key>SMS</key>
 		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>DCN</key>
-			<dict>
-				<key>destinationNumber</key>
-				<string></string>
-				<key>hysteresisTimeout</key>
-				<integer>0</integer>
-			</dict>
 			<key>SupportedDomains</key>
 			<dict>
 				<key>NR</key>
 				<true/>
 			</dict>
-			<key>UseRpOriginatingAddressAsSender</key>
-			<false/>
-		</dict>
-		<key>Media</key>
-		<dict>
-			<key>RTCPIntervalSeconds</key>
-			<string>5</string>
-			<key>PreferredAMRWBMode</key>
-			<integer>8</integer>
-			<key>UseRTPDetectionAutoStart</key>
-			<true/>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>126</key>
-				<dict>
-					<key>ch-aw-recv</key>
-					<string>0</string>
-					<key>br</key>
-					<string>9.6-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-				</dict>
-			</dict>
-			<key>InactivityTimerRTPSeconds</key>
-			<string>15</string>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>SupportsCW</key>
-			<false/>
-			<key>ServeMultipleCDIVRulesPerRequest</key>
-			<false/>
-			<key>DisableOnNetworkError</key>
-			<true/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string>400,403,404,408,409,500,502,503,504</string>
-			<key>ContentType</key>
-			<string>application/xcap-el+xml</string>
-			<key>useSecureTransport</key>
-			<true/>
-			<key>supported</key>
-			<true/>
-			<key>NafUseSecureTransport</key>
-			<true/>
-			<key>BsfUseSecureTransport</key>
-			<true/>
-			<key>NafHost</key>
-			<string>xcap.ims.mnc003.mcc505.pub.3gppnetwork.org</string>
-		</dict>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<true/>
-		<key>Voice</key>
-		<dict>
-			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
-			<true/>
-			<key>E911OverITechSupported</key>
-			<true/>
-			<key>EnableVolteByDefault</key>
-			<true/>
-			<key>EnableVoNRByDefault</key>
-			<true/>
 		</dict>
 	</dict>
-	<key>CarrierEntitlements</key>
-	<dict>
-		<key>SupportsOnDevicePhysicalSIMConvert</key>
-		<true/>
-		<key>SupportedEntitlements</key>
-		<integer>9217</integer>
-		<key>ProtocolVersion</key>
-		<string>2</string>
-		<key>Authentication</key>
-		<dict>
-			<key>Type</key>
-			<integer>1</integer>
-			<key>Username</key>
-			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
-		</dict>
-		<key>ServerAddress</key>
-		<string>https://ents.mnc003.mcc505.pub.3gppnetwork.org:8443</string>
-		<key>SupportPhysicalSIMtoESIMTransfer</key>
-		<true/>
-		<key>UpdatePeriod</key>
-		<integer>24</integer>
-		<key>SupportSIMTransferViaWebsheetInBuddy</key>
-		<true/>
-	</dict>
+	<key>SupportsVoNR</key>
+	<true/>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
-	<key>AttachAPN</key>
-	<dict>
-		<key>3GPP</key>
-		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
-			<key>password</key>
-			<string></string>
-			<key>PcscfAddressRequired</key>
-			<false/>
-			<key>username</key>
-			<string></string>
-			<key>AllowedProtocolMaskInRoamingUMTS</key>
-			<integer>1</integer>
-			<key>apn</key>
-			<string>live.vodafone.com</string>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>1</integer>
-		</dict>
-	</dict>
-	<key>PhoneAccountTransfer</key>
-	<dict>
-		<key>TransferPageURL</key>
-		<string>https://wss.mnc003.mcc505.pub.3gppnetwork.org:10082/websheet/esim/oem/primary/carrierBundleDefault</string>
-	</dict>
-	<key>ShowVolteSwitch</key>
-	<false/>
-	<key>Enable5GAutoByDefault</key>
-	<true/>
-	<key>SupportsImsCapability</key>
-	<true/>
-	<key>ShowVoNRSwitch</key>
-	<true/>
-	<key>RemoteCardProvisioningSettings</key>
-	<dict>
-		<key>MatchingICCIDPrefixes</key>
-		<array>
-			<string>89610300002</string>
-		</array>
-		<key>ServerURL</key>
-		<string>https://vau-gto.prod.ondemandconnectivity.com</string>
-		<key>SupportedSKUs</key>
-		<array>
-			<string>SKU_EU</string>
-		</array>
-		<key>SupportsFauxCard</key>
-		<false/>
-		<key>ProvisioningMethod</key>
-		<string>CarrierFlow</string>
-	</dict>
-	<key>SupportsNRNSAInboundRoaming</key>
-	<true/>
-	<key>TechSettings</key>
-	<dict>
-		<key>WiFiCallingIdentityProtectionMethod</key>
-		<string>PseudoIdentity</string>
-		<key>ChildSAs</key>
-		<dict>
-			<key>FirstChild</key>
-			<dict>
-				<key>ChildProposals</key>
-				<array>
-					<dict>
-						<key>IntegrityAlgorithm</key>
-						<array>
-							<string>SHA2-512</string>
-						</array>
-						<key>EncryptionAlgorithm</key>
-						<array>
-							<string>AES-256</string>
-						</array>
-						<key>DHGroup</key>
-						<integer>14</integer>
-						<key>Lifetime</key>
-						<integer>80000</integer>
-					</dict>
-				</array>
-				<key>InstallPolicies</key>
-				<true/>
-				<key>ReplayWindowSize</key>
-				<integer>12</integer>
-			</dict>
-		</dict>
-		<key>iRatPolicies</key>
-		<dict>
-			<key>PreferredTechnology</key>
-			<string>cellular</string>
-		</dict>
-		<key>ExtraConfigurationAttributeRequestv6</key>
-		<array>
-			<dict>
-				<key>Identifier</key>
-				<integer>16386</integer>
-				<key>Name</key>
-				<string>AssignedPCSCFIPv6</string>
-				<key>Type</key>
-				<string>IPv6Address</string>
-			</dict>
-		</array>
-		<key>FatalActivationErrors</key>
-		<array>
-			<integer>9000</integer>
-		</array>
-		<key>WiFiCallingControlsAlliWLanServices</key>
-		<true/>
-		<key>5wiServiceMask</key>
-		<integer>3</integer>
-		<key>IKE</key>
-		<dict>
-			<key>RemoteCertificateHostname</key>
-			<string>epdg.epc.mnc003.mcc505.pub.3gppnetwork.org</string>
-			<key>RemoteCertificateAuthorityName</key>
-			<string>DigiCert Global Root G2</string>
-			<key>Proposals</key>
-			<array>
-				<dict>
-					<key>EncryptionAlgorithm</key>
-					<string>AES-256</string>
-					<key>IntegrityAlgorithm</key>
-					<string>SHA2-512</string>
-					<key>DHGroup</key>
-					<integer>14</integer>
-					<key>AuthenticationMethod</key>
-					<string>Certificate</string>
-					<key>Lifetime</key>
-					<integer>80000</integer>
-					<key>EAPMethod</key>
-					<string>EAP-AKA</string>
-					<key>PRFAlgorithm</key>
-					<string>SHA2-256</string>
-				</dict>
-			</array>
-			<key>LocalIdentifier</key>
-			<string>vha@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
-			<key>ValidateRemoteCertificate</key>
-			<true/>
-			<key>NATTKeepAliveOffload</key>
-			<true/>
-			<key>RemoteAddress</key>
-			<string>epdg.epc.mnc003.mcc505.pub.3gppnetwork.org</string>
-		</dict>
-		<key>ExtraConfigurationAttributeRequestv4</key>
-		<array>
-			<dict>
-				<key>Identifier</key>
-				<integer>16384</integer>
-				<key>Name</key>
-				<string>AssignedPCSCFIPv4</string>
-				<key>Type</key>
-				<string>IPv4Address</string>
-			</dict>
-		</array>
-		<key>SetHandOverIPv6Prefix</key>
-		<false/>
-		<key>TechPolicies</key>
-		<array>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>131072</integer>
-			</dict>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>1048582</integer>
-			</dict>
-		</array>
-		<key>EPDGResolutionFallbackEnabled</key>
-		<true/>
-		<key>SupportCallHandover</key>
-		<true/>
-	</dict>
-	<key>PushSettings</key>
-	<dict>
-		<key>MultiSIMTopic</key>
-		<string>com.vha-services.spp</string>
-		<key>UseDevelopmentEnvironment</key>
-		<false/>
-	</dict>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -378,8 +60,6 @@
 					<integer>32817</integer>
 					<key>password</key>
 					<string>live</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>enableXLAT464</key>
 					<true/>
 					<key>AllowedProtocolMaskInRoaming</key>
@@ -394,14 +74,12 @@
 				<dict>
 					<key>type-mask</key>
 					<integer>131072</integer>
-					<key>Support5GSaHandOver</key>
-					<true/>
 					<key>password</key>
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>131072</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
+					<key>Support5GSaHandOver</key>
+					<true/>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>SupportSwitchOver</key>
@@ -420,8 +98,8 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>1048582</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
+					<key>Support5GSaHandOver</key>
+					<true/>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>1</integer>
 					<key>username</key>
@@ -436,7 +114,15 @@
 			<integer>9</integer>
 		</dict>
 	</array>
-	<key>SupportsVoNR</key>
+	<key>Show5GStandaloneSwitch</key>
+	<true/>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
+	<key>Show5GSwitch</key>
+	<true/>
+	<key>Enable5GStandaloneByDefault</key>
 	<true/>
 </dict>
 </plist>

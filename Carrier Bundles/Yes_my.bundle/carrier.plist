@@ -23,11 +23,11 @@
 	<dict>
 		<key>ShowClass0SMSInLockScreen</key>
 		<true/>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -171,8 +171,6 @@
 	</dict>
 	<key>ShowVolteSwitch</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>ShowClass0SMSFromField</key>
 	<true/>
 	<key>SupportsImsCapability</key>
@@ -193,42 +191,36 @@
 				<dict>
 					<key>apn</key>
 					<string>yesnet</string>
-					<key>DefaultProtocolMask</key>
+					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 					<key>type-mask</key>
 					<integer>49</integer>
-					<key>AllowedProtocolMask</key>
-					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>131072</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>2</integer>
-					<key>SupportSwitchOver</key>
-					<true/>
 					<key>username</key>
 					<string></string>
 					<key>apn</key>
 					<string>ims</string>
+					<key>SupportSwitchOver</key>
+					<true/>
+					<key>type-mask</key>
+					<integer>131072</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>2</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>262144</integer>
 					<key>password</key>
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>262144</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>2</integer>
 					<key>username</key>
 					<string></string>
 					<key>apn</key>
 					<string>sos</string>
+					<key>type-mask</key>
+					<integer>262144</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>2</integer>
 				</dict>

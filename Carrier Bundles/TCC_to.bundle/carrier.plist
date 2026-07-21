@@ -42,32 +42,30 @@
 	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>950</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>apns</key>
+	<array>
+		<dict>
+			<key>password</key>
+			<string>123456</string>
+			<key>username</key>
+			<string>tccwap</string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
+			<key>apn</key>
+			<string>tccwap</string>
+			<key>type-mask</key>
+			<integer>49</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+	</array>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>
 		<array/>
 	</dict>
-	<key>apns</key>
-	<array>
-		<dict>
-			<key>type-mask</key>
-			<integer>49</integer>
-			<key>password</key>
-			<string>123456</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
-			<key>username</key>
-			<string>tccwap</string>
-			<key>apn</key>
-			<string>tccwap</string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
-		</dict>
-	</array>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>

@@ -3,10 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>DerPriFileVersion</key>
-	<string>0.1.161</string>
+	<string>6.0.161</string>
 	<key>ShowVoNRSwitch</key>
 	<true/>
-	<key>Enable5GStandaloneByDefault</key>
+	<key>TechSettings</key>
+	<dict>
+		<key>SuppressSAInOverCellHandover</key>
+		<true/>
+	</dict>
+	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 	<key>_Exclude</key>
 	<array>
@@ -34,8 +39,6 @@
 	<true/>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>ShowVolteSwitch</key>
-	<false/>
 	<key>Show5GStandaloneSwitch</key>
 	<true/>
 	<key>Show5GWarningUnsupportedCarrier</key>
@@ -44,7 +47,7 @@
 	<true/>
 	<key>Show5GSwitch</key>
 	<true/>
-	<key>SupportsNRNSAInboundRoaming</key>
+	<key>Enable5GStandaloneByDefault</key>
 	<true/>
 </dict>
 </plist>

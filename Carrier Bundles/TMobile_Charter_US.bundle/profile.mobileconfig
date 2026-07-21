@@ -70,7 +70,7 @@
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>E09E6822-A537-48AE-8D22-08CCF6808E42</string>
+			<string>8B362BE3-C310-451B-9BA4-41C45B9DC492</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProxyType</key>
@@ -128,7 +128,7 @@
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>9134E6E2-0789-483E-9CDD-892CF6E2B0B4</string>
+			<string>0DAD8778-FBE0-46FD-A94F-648B6E42D0B0</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProxyType</key>
@@ -186,7 +186,7 @@
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>C9586F68-AB41-464D-B66C-AD832522A8FA</string>
+			<string>C0F8DA8E-2B18-4548-8160-BFF0254F3524</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProxyType</key>
@@ -244,9 +244,9 @@
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>335F740E-36CB-4439-8EF8-4D3CF71AC919</string>
+			<string>1247E251-5DCE-4CC3-A359-ABBBAECD6F81</string>
 			<key>PayloadVersion</key>
-			<real>1</real>
+			<real>1.0</real>
 			<key>ProxyType</key>
 			<string>None</string>
 			<key>SSID_STR</key>
@@ -304,71 +304,13 @@
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>86FCF6CC-535B-42FB-BD15-4389EE8CB83E</string>
+			<string>3DF66D94-BDC5-4574-AE44-FB7BBC50FC9A</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProxyType</key>
 			<string>None</string>
 			<key>SSID_STR</key>
 			<string>Cox Mobile</string>
-		</dict>
-		<dict>
-			<key>AutoJoin</key>
-			<true/>
-			<key>DisableAssociationMACRandomization</key>
-			<false/>
-			<key>EAPClientConfiguration</key>
-			<dict>
-				<key>AcceptEAPTypes</key>
-				<array>
-					<integer>21</integer>
-					<integer>23</integer>
-				</array>
-				<key>EAPSIMAKAEncryptedIdentityEnabled</key>
-				<true/>
-				<key>EAPSIMAKARealm</key>
-				<string>spectrum.net</string>
-				<key>OuterIdentity</key>
-				<string>anonymous@spectrum.net</string>
-				<key>PayloadCertificateAnchorUUID</key>
-				<array>
-					<string>C9E5FF1C-243B-4D71-97C3-366BEA64EF1A</string>
-				</array>
-				<key>TLSTrustedServerNames</key>
-				<array>
-					<string>aaa.spectrum.net</string>
-					<string>aaa.twcwifi.com</string>
-					<string>aaa.brighthouse.com</string>
-				</array>
-				<key>TTLSInnerAuthentication</key>
-				<string>MSCHAPv2</string>
-				<key>UserName</key>
-				<string>anonymous@spectrum.net</string>
-				<key>UserPassword</key>
-				<string>pXGakTWN6%wVuN7SRHA6WK5^^%Pw7V+en25M=*DNdA-*q7-xa6^^_RvN9h%njCe79S</string>
-			</dict>
-			<key>EncryptionType</key>
-			<string>WPA2</string>
-			<key>HIDDEN_NETWORK</key>
-			<false/>
-			<key>IsHotspot</key>
-			<true/>
-			<key>PayloadDescription</key>
-			<string>Configures Wi-Fi settings</string>
-			<key>PayloadDisplayName</key>
-			<string>Wi-Fi</string>
-			<key>PayloadIdentifier</key>
-			<string>com.apple.wifi.managed.2A517AD3-1A5D-459E-AF0E-F2279FE4C740</string>
-			<key>PayloadType</key>
-			<string>com.apple.wifi.managed</string>
-			<key>PayloadUUID</key>
-			<string>5E609B1E-CF57-446A-8228-D1914457026C</string>
-			<key>PayloadVersion</key>
-			<integer>1</integer>
-			<key>ProxyType</key>
-			<string>None</string>
-			<key>SSID_STR</key>
-			<string>optimum</string>
 		</dict>
 		<dict>
 			<key>PayloadCertificateFileName</key>
@@ -424,7 +366,7 @@
 			<key>PayloadType</key>
 			<string>com.apple.security.root</string>
 			<key>PayloadUUID</key>
-			<string>0D7543CB-D3CD-49DB-99B9-9F7270C405C7</string>
+			<string>A3160AF9-C57D-4BF3-A716-492797EBC9EA</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 		</dict>

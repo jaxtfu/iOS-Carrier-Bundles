@@ -35,6 +35,26 @@
 		<key>SoftwareUpdateOptInRequired</key>
 		<true/>
 	</dict>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+			<key>password</key>
+			<string></string>
+			<key>enableXLAT464</key>
+			<true/>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>internet</string>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>CellBroadcast</key>
 	<dict>
 		<key>AlertTypes</key>
@@ -178,14 +198,16 @@
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>123</string>
-	<key>ShowDialAssist</key>
-	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>ShowDialAssist</key>
+	<true/>
+	<key>OverrideOperatorWiFiName</key>
+	<string>COSMOTE WiFi</string>
 	<key>MMS</key>
 	<dict>
 		<key>MMSC</key>
@@ -201,6 +223,126 @@
 		<key>MaxMessageSize</key>
 		<integer>614400</integer>
 	</dict>
+	<key>TechSettings</key>
+	<dict>
+		<key>WifiCallingAllowedInRoaming</key>
+		<true/>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>AES-256</string>
+						</array>
+						<key>Lifetime</key>
+						<integer>64800</integer>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA2-256</string>
+						</array>
+					</dict>
+				</array>
+				<key>InstallPolicies</key>
+				<true/>
+				<key>ReplayWindowSize</key>
+				<integer>12</integer>
+			</dict>
+		</dict>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>ims</string>
+			<key>PreferredTechnologyRoaming</key>
+			<string>wifi</string>
+		</dict>
+		<key>5wiServiceMask</key>
+		<integer>3</integer>
+		<key>ExtraConfigurationAttributeRequestv4</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>20</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv4</string>
+				<key>Type</key>
+				<string>IPv4Address</string>
+			</dict>
+		</array>
+		<key>ExtraConfigurationAttributeRequestv6</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>21</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv6</string>
+				<key>Type</key>
+				<string>IPv6Address</string>
+			</dict>
+		</array>
+		<key>SupportCallHandover</key>
+		<true/>
+		<key>TechPolicies</key>
+		<array>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>131072</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>1048580</integer>
+			</dict>
+		</array>
+		<key>IKE</key>
+		<dict>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-256</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-256</string>
+					<key>DHGroup</key>
+					<integer>2</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>64800</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-256</string>
+				</dict>
+			</array>
+			<key>DeadPeerDetectionEnabled</key>
+			<false/>
+			<key>DeadPeerDetectionMaxRetries</key>
+			<integer>4</integer>
+			<key>DeadPeerDetectionInterval</key>
+			<integer>600</integer>
+			<key>LocalIdentifier</key>
+			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
+			<key>NATTKeepAliveOffload</key>
+			<true/>
+			<key>ValidateRemoteCertificate</key>
+			<false/>
+			<key>RemoteAddress</key>
+			<string>epdg.epc.mnc001.mcc202.pub.3gppnetwork.org</string>
+			<key>DeadPeerDetectionRetryInterval</key>
+			<integer>10</integer>
+		</dict>
+		<key>WiFiCallingControlsAlliWLanServices</key>
+		<true/>
+		<key>SetHandOverIPv6Prefix</key>
+		<true/>
+	</dict>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Greece</string>
 	<key>MaxBluetoothModemConnections</key>
@@ -211,13 +353,286 @@
 	<true/>
 	<key>APNEditabilityTypemaskNew</key>
 	<integer>53</integer>
+	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
+	<integer>131072</integer>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<integer>25</integer>
+			<key>RingbackTimerSeconds</key>
+			<integer>130</integer>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>RingingTimerSeconds</key>
+			<integer>130</integer>
+			<key>ValidateSipMessageRecipient</key>
+			<false/>
+			<key>MaxTransportErrors</key>
+			<integer>5</integer>
+			<key>UseOutgoingSipUri</key>
+			<true/>
+			<key>SipTimers</key>
+			<dict>
+				<key>InviteResponseTimeout</key>
+				<integer>4000</integer>
+			</dict>
+			<key>AlwaysAddPrivacyHeader</key>
+			<true/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>CallToVoicemail</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>CFNR not applied when NoReply Timer expires.</string>
+					<key>StatusCode</key>
+					<integer>408</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteRequestCanceled</string>
+				</dict>
+				<key>CallToVoicemail3</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>CC_TERM_NOREPLY_TMR_EXPIRED</string>
+					<key>StatusCode</key>
+					<integer>408</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteRequestCanceled</string>
+				</dict>
+				<key>TemporaryUnavailable</key>
+				<dict>
+					<key>Protocol</key>
+					<string>Q.850</string>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderCause</key>
+					<integer>31</integer>
+					<key>DisableCSFB</key>
+					<true/>
+					<key>StatusCode</key>
+					<integer>480</integer>
+				</dict>
+				<key>SubscriberAbsent</key>
+				<dict>
+					<key>Protocol</key>
+					<string>Q.850</string>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderCause</key>
+					<integer>20</integer>
+					<key>DisableCSFB</key>
+					<true/>
+					<key>StatusCode</key>
+					<integer>480</integer>
+				</dict>
+				<key>603Decline</key>
+				<dict>
+					<key>Protocol</key>
+					<string>Q.850</string>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderCause</key>
+					<integer>17</integer>
+					<key>DisableCSFB</key>
+					<true/>
+					<key>StatusCode</key>
+					<integer>603</integer>
+				</dict>
+				<key>NormalUnspecified</key>
+				<dict>
+					<key>Protocol</key>
+					<string>Q.850</string>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderText</key>
+					<string>CC_Q850_031_NORMAL_UNSPECIFIED</string>
+					<key>ReasonHeaderCause</key>
+					<integer>31</integer>
+				</dict>
+				<key>NoAnswer</key>
+				<dict>
+					<key>Protocol</key>
+					<string>Q.850</string>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderCause</key>
+					<integer>19</integer>
+					<key>DisableCSFB</key>
+					<true/>
+					<key>StatusCode</key>
+					<integer>480</integer>
+				</dict>
+				<key>CallToVoicemail2</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>CC_TERM_MULTIUA_INST_NOREPLY_TMR_EXPIRED</string>
+					<key>StatusCode</key>
+					<integer>408</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteRequestCanceled</string>
+				</dict>
+			</dict>
+			<key>KillForkOnUpdateErrors</key>
+			<string>408</string>
+			<key>FatalTransportErrors</key>
+			<string>49,51,65</string>
+			<key>UseIPSec</key>
+			<true/>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>IncompleteRegistrationThrottlingIntervalSeconds</key>
+			<integer>0</integer>
+			<key>DeferMediaActivationOnSessionConfirmed</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>-380,3XX,4XX,5XX,6XX</string>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv2-MD5</string>
+			<key>SubscriptionTerminatedMeansRegistrationTerminated</key>
+			<true/>
+			<key>CallEndReasons</key>
+			<dict>
+				<key>RejectedByUser</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>User ends call</string>
+					<key>ReasonHeaderCause</key>
+					<integer>1</integer>
+					<key>ReasonHeaderProtocol</key>
+					<string>RELEASE_CAUSE</string>
+				</dict>
+			</dict>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*[primary]</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>AlwaysUnsubscribeFromRegEvents</key>
+			<false/>
+			<key>DropRegistrationOnSRVCC</key>
+			<true/>
+			<key>ussdEnabled</key>
+			<true/>
+			<key>PreconditionUpdateDelayTimerMilliseconds</key>
+			<integer>130000</integer>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>IgnoreRegNotificationContactExpires</key>
+			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>25</integer>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc001.mcc202.3gppnetwork.org</string>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>TreatAllNotificationsAsPartial</key>
+			<true/>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>IncludeEVSIOModes</key>
+			<true/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>max-red</key>
+					<string>0</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>cmr</key>
+					<string>1</string>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>SelectLatestForkWithActiveEarlyMedia</key>
+			<true/>
+			<key>DTMFDigitDurationMilliseconds</key>
+			<integer>255</integer>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>InactivityTimerRTCPSeconds</key>
+			<integer>180</integer>
+			<key>ModeSetAMRWB</key>
+			<string>0,1,2</string>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>UseSDPTemplateForAllInvites</key>
+			<true/>
+			<key>UseSDPTemplateForUpdates</key>
+			<true/>
+			<key>DTMFInterDigitIntervalMilliseconds</key>
+			<integer>255</integer>
+			<key>SelectForkWithActiveEarlyMedia</key>
+			<false/>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCW</key>
+			<false/>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>403</string>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>supported</key>
+			<true/>
+			<key>SupportsCFErasure</key>
+			<false/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>CheckIMSPrefForEmergency</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>SuppressSimToolkitSendShortMessageNotifications</key>
 	<true/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>PreferCarrierNameFromMetadata</key>
@@ -276,8 +691,10 @@
 	<integer>519</integer>
 	<key>CarrierName</key>
 	<string>COSMOTE</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.cosmote.gr</string>
+	<string>https://www.cosmote.gr</string>
 	<key>MyAccountURLTitle</key>
 	<string>COSMOTE</string>
 	<key>MandatoryVerify</key>
@@ -292,6 +709,8 @@
 		<key>A5/3</key>
 		<true/>
 	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>20201</string>

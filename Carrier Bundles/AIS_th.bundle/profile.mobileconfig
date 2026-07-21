@@ -15,7 +15,6 @@
 			<dict>
 				<key>AcceptEAPTypes</key>
 				<array>
-					<integer>18</integer>
 					<integer>23</integer>
 				</array>
 			</dict>
@@ -34,7 +33,7 @@
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>94B825ED-21D1-4F76-B647-A0A88EC1FE9D</string>
+			<string>92A36096-428A-464B-8723-F76F41318D33</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProxyType</key>
@@ -58,7 +57,6 @@
 				<key>AcceptEAPTypes</key>
 				<array>
 					<integer>23</integer>
-					<integer>18</integer>
 				</array>
 			</dict>
 			<key>EncryptionType</key>
@@ -86,7 +84,7 @@
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>698CBEDB-7070-4EB2-A3BA-8AE1C41E4D94</string>
+			<string>293BE59D-32DD-4615-902F-BAE2ED1D2186</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProxyType</key>
@@ -104,7 +102,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>5A6CC600-5B1C-415C-99AF-BB98F062E27D</string>
+	<string>2D5FBBDE-F448-4BA2-BF57-BAAEDCB37F20</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

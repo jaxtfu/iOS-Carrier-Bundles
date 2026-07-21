@@ -2,53 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AttachAPN</key>
-	<dict>
-		<key>3GPP</key>
-		<dict>
-			<key>apn</key>
-			<string>internet</string>
-		</dict>
-	</dict>
-	<key>Show3GSwitchWithVolte</key>
-	<true/>
-	<key>Show3GSwitchWith4G</key>
-	<true/>
-	<key>Show3GSwitchWith5G</key>
-	<true/>
 	<key>Show5GSwitch</key>
 	<false/>
-	<key>AllowAttachAPNEditing</key>
-	<false/>
-	<key>apns</key>
-	<array>
-		<dict>
-			<key>configuration</key>
-			<array>
-				<dict>
-					<key>password</key>
-					<string></string>
-					<key>username</key>
-					<string></string>
-					<key>apn</key>
-					<string>internet</string>
-					<key>type-mask</key>
-					<integer>1</integer>
-				</dict>
-				<dict>
-					<key>password</key>
-					<string></string>
-					<key>username</key>
-					<string></string>
-					<key>apn</key>
-					<string>internet</string>
-					<key>type-mask</key>
-					<integer>48</integer>
-				</dict>
-			</array>
-			<key>technology-mask</key>
-			<integer>9</integer>
-		</dict>
-	</array>
+	<key>Show3GSwitchWith5G</key>
+	<true/>
 </dict>
 </plist>

@@ -75,19 +75,17 @@
 		<key>3GPP</key>
 		<array>
 			<dict>
-				<key>AllowedProtocolMaskInRoamingLTE</key>
-				<integer>3</integer>
 				<key>password</key>
 				<string></string>
-				<key>AllowedProtocolMask</key>
-				<integer>2</integer>
 				<key>username</key>
 				<string></string>
-				<key>AllowedProtocolMaskInRoamingUMTS</key>
+				<key>AllowedProtocolMaskInRoamingLTE</key>
 				<integer>3</integer>
 				<key>apn</key>
 				<string>v6.rakuten.jp</string>
-				<key>DefaultProtocolMask</key>
+				<key>AllowedProtocolMaskInRoamingUMTS</key>
+				<integer>3</integer>
+				<key>AllowedProtocolMask</key>
 				<integer>2</integer>
 			</dict>
 		</array>
@@ -332,6 +330,11 @@
 	</array>
 	<key>ShowLTEWarningUnsupportedCarrier</key>
 	<false/>
+	<key>ToolsConfiguration</key>
+	<dict>
+		<key>EnableFeedbackCollection</key>
+		<true/>
+	</dict>
 	<key>VoicemailPilotNumber</key>
 	<string>1417</string>
 	<key>RegistrationOptInRequired</key>
@@ -380,8 +383,6 @@
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>WatchCustomerServicePhoneNumber</key>
 	<string>05054344653</string>
 	<key>com.apple.voicemail.imap</key>
@@ -491,8 +492,6 @@ lmlUYupJyA1+SaElFAc/IU5n9uY8Y1dXyiUDBcm60ztQAQO3nLYh</string>
 			<integer>1081395</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>enableXLAT464</key>
 			<true/>
 			<key>AllowedProtocolMaskInRoaming</key>
@@ -505,34 +504,30 @@ lmlUYupJyA1+SaElFAc/IU5n9uY8Y1dXyiUDBcm60ztQAQO3nLYh</string>
 			<integer>2</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>ims</string>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>262144</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string></string>
+			<key>type-mask</key>
+			<integer>262144</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
 		</dict>
@@ -611,46 +606,70 @@ lmlUYupJyA1+SaElFAc/IU5n9uY8Y1dXyiUDBcm60ztQAQO3nLYh</string>
 		</dict>
 		<key>SMS</key>
 		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
 			<key>UseRpOriginatingAddressAsSender</key>
-			<true/>
-			<key>allowCSFBInVolteMode</key>
 			<true/>
 		</dict>
 		<key>Media</key>
 		<dict>
-			<key>DTMFVolume</key>
-			<integer>10</integer>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>15</integer>
 			<key>RTCPIntervalSeconds</key>
 			<integer>5</integer>
 			<key>EnableBandwidthSpecifiers</key>
 			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>106</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>br</key>
+					<string>5.9-13.2</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>15</integer>
+			<key>DTMFVolume</key>
+			<integer>10</integer>
+			<key>SelectLatestForkWithActiveEarlyMedia</key>
+			<true/>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 		</dict>
 		<key>XCAP</key>
 		<dict>
-			<key>BsfHost</key>
-			<string>bsf.ims.mnc011.mcc440.pub.3gppnetwork.org</string>
-			<key>DisableOnNetworkError</key>
-			<false/>
-			<key>IgnoreCellularDataSwitch</key>
-			<false/>
-			<key>AllowedOnlyWhenIMSRegistered</key>
-			<true/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string></string>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc011.mcc440.pub.3gppnetwork.org</string>
 			<key>BsfPort</key>
 			<integer>8082</integer>
 			<key>NafPort</key>
 			<integer>8081</integer>
 			<key>supported</key>
 			<true/>
-			<key>NafHost</key>
-			<string>xcap.ims.mnc011.mcc440.pub.3gppnetwork.org</string>
-			<key>useSecureTransport</key>
+			<key>ContentType</key>
+			<string>application/vnd.etsi.simservs+xml</string>
+			<key>DisableOnNetworkError</key>
 			<false/>
+			<key>AllowedOnlyWhenIMSRegistered</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
 			<key>IgnoreInternationalDataRoamingSwitch</key>
 			<false/>
+			<key>IgnoreCellularDataSwitch</key>
+			<false/>
+			<key>useSecureTransport</key>
+			<false/>
+			<key>BsfHost</key>
+			<string>bsf.ims.mnc011.mcc440.pub.3gppnetwork.org</string>
 		</dict>
 		<key>Emergency</key>
 		<dict>
@@ -670,11 +689,6 @@ lmlUYupJyA1+SaElFAc/IU5n9uY8Y1dXyiUDBcm60ztQAQO3nLYh</string>
 			<key>endNonEmergencyCalls</key>
 			<true/>
 		</dict>
-	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
 	<key>Show3GSwitch</key>
 	<false/>

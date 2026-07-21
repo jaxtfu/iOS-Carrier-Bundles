@@ -31,6 +31,8 @@
 	<true/>
 	<key>MyAccountURLTitle</key>
 	<string>epic</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -54,10 +56,18 @@
 	<array>
 		<string>27801</string>
 	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>Show3GSwitchWith4G</key>
-	<true/>
+	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
 	<key>CarrierName</key>
@@ -80,7 +90,9 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
+	<key>ShowVolteSwitch</key>
+	<false/>
+	<key>Show3GSwitchWithVolte</key>
 	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>0035699909909</string>

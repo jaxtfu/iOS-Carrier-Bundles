@@ -20,6 +20,8 @@
 		<key>TransportFallback</key>
 		<false/>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>SupportedSIMs</key>
@@ -88,6 +90,49 @@
 			<key>conferenceServer</key>
 			<string>sip:mmtel@conf-factory.ims.mnc${MNC}.mcc${MCC}.3gppnetwork.org</string>
 		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<false/>
+			</dict>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
 		<key>XCAP</key>
 		<dict>
 			<key>SupportsCW</key>
@@ -109,36 +154,21 @@
 			<key>imsFeatureDependency</key>
 			<true/>
 		</dict>
-		<key>Media</key>
-		<dict>
-			<key>PreferredAMRWBMode</key>
-			<integer>8</integer>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>20</integer>
-			<key>IncludeSDPMaxRed</key>
-			<true/>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-		</dict>
 		<key>EnableWiFiCallingWithoutEntitlement</key>
 		<true/>
 		<key>Voice</key>
 		<dict>
 			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
 			<true/>
-			<key>EnableVolteByDefault</key>
-			<true/>
-			<key>RTTSupported</key>
-			<true/>
 			<key>E911OverITechSupported</key>
 			<false/>
 			<key>E911OverCSIfNoIMSReg</key>
 			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
 			<key>endNonEmergencyCalls</key>
 			<true/>
-			<key>EnableHoldForRTT</key>
+			<key>RTTSupported</key>
 			<true/>
 		</dict>
 	</dict>
@@ -170,6 +200,11 @@
 	</dict>
 	<key>SupportsImsCapability</key>
 	<true/>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>EnableHoldForRTT</key>
+		<true/>
+	</dict>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Italy</string>
 	<key>MMS</key>
@@ -296,18 +331,16 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>262144</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>262144</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>sos</string>
+			<key>type-mask</key>
+			<integer>262144</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -336,14 +369,14 @@
 			<integer>4</integer>
 		</dict>
 		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>type-mask</key>
-			<integer>131072</integer>
+			<key>UseNetworkMTU</key>
+			<true/>
 			<key>NoCellularReconnectCauseCodes</key>
 			<array>
 				<dict>
@@ -361,30 +394,26 @@
 					<integer>86400</integer>
 				</dict>
 			</array>
-			<key>apn</key>
-			<string>ims</string>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
-			<key>DefaultProtocolMask</key>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>1048576</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>xcap</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>

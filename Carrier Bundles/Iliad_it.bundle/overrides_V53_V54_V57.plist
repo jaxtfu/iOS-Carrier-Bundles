@@ -14,13 +14,9 @@
 	<false/>
 	<key>Show3GSwitchWith4G</key>
 	<false/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 	<key>Show5GSwitch</key>
-	<true/>
-	<key>EnableLTEAfterUpgrade</key>
 	<true/>
 </dict>
 </plist>

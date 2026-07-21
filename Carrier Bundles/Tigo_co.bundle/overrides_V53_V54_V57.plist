@@ -2,32 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>EmergencyNumberExceptions</key>
-	<array>
-		<string>#911</string>
-	</array>
-	<key>DerPriFileVersion</key>
-	<string>0.1.161</string>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>ShowVolteSwitch</key>
-	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
-	<key>SupportsImsCapability</key>
-	<true/>
 	<key>Show4GSwitchWith5G</key>
 	<true/>
-	<key>IMSConfig</key>
-	<dict>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
-		</dict>
-	</dict>
+	<key>DerPriFileVersion</key>
+	<string>0.1.161</string>
 	<key>_Exclude</key>
 	<array>
 		<string>EnableLTEAfterUpgrade</string>

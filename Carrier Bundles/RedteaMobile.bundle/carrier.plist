@@ -46,6 +46,14 @@
 	<string>4G</string>
 	<key>OverrideOperatorName</key>
 	<string>RedteaMobile</string>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>OTASoftwareUpdate</key>
 	<dict>
 		<key>SoftwareUpdateOptInRequired</key>
@@ -366,11 +374,11 @@
 		<string>732103</string>
 		<string>732123</string>
 	</array>
-	<key>ShowDialAssist</key>
-	<false/>
 	<key>ShowCallerIDSwitch</key>
 	<false/>
 	<key>ShowCallForwardingSwitch</key>
+	<false/>
+	<key>ShowDialAssist</key>
 	<false/>
 	<key>ShowVolteSwitch</key>
 	<false/>

@@ -2,142 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Signaling</key>
-		<dict>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string>380,5XX</string>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>RingbackTimerSeconds</key>
-			<integer>180</integer>
-			<key>RingingTimerSeconds</key>
-			<integer>180</integer>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>DefaultAuthAlgorithm</key>
-			<string>AKAv1-MD5</string>
-			<key>CountryOfOriginationFormat</key>
-			<string>BOTH</string>
-			<key>Preconditions</key>
-			<string>Supported</string>
-			<key>AdditionalContactParams</key>
-			<dict>
-				<key>REGISTER,INVITE,INVITE:*</key>
-				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
-			</dict>
-			<key>AlwaysAddSipInstance</key>
-			<true/>
-			<key>AlwaysSendSessionProgress</key>
-			<true/>
-			<key>WaitForRingingTimerMTSeconds</key>
-			<integer>25</integer>
-			<key>UseIPSec</key>
-			<true/>
-		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>AlwaysSubscribeToConferenceEvents</key>
-			<true/>
-			<key>conferenceServer</key>
-			<string>sip:mmtel@conf-factory.ims.mnc002.mcc276.3gppnetwork.org</string>
-		</dict>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>SupportedDomains</key>
-			<dict>
-				<key>LTE</key>
-				<false/>
-			</dict>
-		</dict>
-		<key>Media</key>
-		<dict>
-			<key>PreferredAMRWBMode</key>
-			<integer>8</integer>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>109</key>
-				<dict>
-					<key>ch-aw-recv</key>
-					<string>0</string>
-					<key>br</key>
-					<string>5.9-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-					<key>hf-only</key>
-					<string>0</string>
-				</dict>
-			</dict>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-			<key>ModeChangeCapability</key>
-			<integer>2</integer>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>10</integer>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>NafHost</key>
-			<string>xcap.ims.mnc002.mcc276.pub.3gppnetwork.org</string>
-			<key>BsfPort</key>
-			<integer>80</integer>
-			<key>imsFeatureDependency</key>
-			<true/>
-			<key>NafPort</key>
-			<integer>80</integer>
-			<key>SupportsCLIR</key>
-			<false/>
-			<key>supported</key>
-			<true/>
-			<key>ContentType</key>
-			<string>application/xcap-el+xml</string>
-			<key>DisableOnNetworkError</key>
-			<true/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string>403</string>
-			<key>SupportsCFErasure</key>
-			<false/>
-			<key>imsRegistrationDependency</key>
-			<true/>
-			<key>BsfHost</key>
-			<string>bsf.mnc002.mcc276.pub.3gppnetwork.org</string>
-			<key>SupportsCW</key>
-			<false/>
-		</dict>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<true/>
-		<key>Voice</key>
-		<dict>
-			<key>E911OverCSIfNoIMSReg</key>
-			<true/>
-			<key>E911OverITechSupported</key>
-			<true/>
-			<key>EnableVolteByDefault</key>
-			<true/>
-		</dict>
-	</dict>
-	<key>DerPriFileVersion</key>
-	<string>0.1.161</string>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>Show4GSwitchWith5G</key>
 	<true/>
+	<key>DerPriFileVersion</key>
+	<string>0.1.161</string>
 	<key>_Exclude</key>
 	<array>
 		<string>EnableLTEAfterUpgrade</string>
 	</array>
-	<key>OverrideOperatorWiFiName</key>
-	<string>VodafoneAL WiFiCall</string>
 </dict>
 </plist>

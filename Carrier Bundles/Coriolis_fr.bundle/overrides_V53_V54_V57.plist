@@ -2,131 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>DerPriFileVersion</key>
-	<string>0.1.161</string>
-	<key>Show3GSwitchWith4G</key>
-	<false/>
-	<key>SupportsImsCapability</key>
-	<true/>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Media</key>
-		<dict>
-			<key>PreferredAMRWBMode</key>
-			<integer>8</integer>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>20</integer>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-		</dict>
-		<key>Signaling</key>
-		<dict>
-			<key>strictCallFlows</key>
-			<true/>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string>403,500,503,488</string>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>RingbackTimerSeconds</key>
-			<integer>90</integer>
-			<key>RingingTimerSeconds</key>
-			<integer>45</integer>
-			<key>SendPreferredServiceInInvite</key>
-			<true/>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>DefaultAuthAlgorithm</key>
-			<string>AKAv1-MD5</string>
-			<key>CountryOfOriginationFormat</key>
-			<string>BOTH</string>
-			<key>Preconditions</key>
-			<string>Supported</string>
-			<key>UseCIDUrlInPIDF</key>
-			<true/>
-			<key>TriggerCSFBOnSDPError</key>
-			<true/>
-			<key>AlwaysSendSessionProgress</key>
-			<true/>
-			<key>UseOutgoingSipUri</key>
-			<true/>
-			<key>UseIPSec</key>
-			<true/>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>supported</key>
-			<false/>
-		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>AlwaysSubscribeToConferenceEvents</key>
-			<true/>
-			<key>SendConferenceSubscribeInNewDialog</key>
-			<true/>
-			<key>conferenceServer</key>
-			<string>sip:mmtel@conf-factory.ims.mnc027.mcc208.3gppnetwork.org</string>
-		</dict>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<true/>
-		<key>Voice</key>
-		<dict>
-			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
-			<true/>
-			<key>E911OverITechSupported</key>
-			<true/>
-		</dict>
-	</dict>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>apns</key>
-	<array>
-		<dict>
-			<key>apn</key>
-			<string>coriolis</string>
-			<key>password</key>
-			<string></string>
-			<key>type-mask</key>
-			<integer>51</integer>
-		</dict>
-		<dict>
-			<key>apn</key>
-			<string>mmscoriolis</string>
-			<key>password</key>
-			<string></string>
-			<key>type-mask</key>
-			<integer>4</integer>
-		</dict>
-		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
-			<key>password</key>
-			<string></string>
-			<key>tech-type-mask</key>
-			<integer>131072</integer>
-			<key>type-mask</key>
-			<integer>131072</integer>
-			<key>apn</key>
-			<string>ims</string>
-			<key>SupportSwitchOver</key>
-			<true/>
-			<key>UseNetworkMTU</key>
-			<true/>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-		</dict>
-	</array>
+	<key>DerPriFileVersion</key>
+	<string>0.1.161</string>
 	<key>Show3GSwitchWithVolte</key>
+	<false/>
+	<key>Show3GSwitchWith4G</key>
 	<false/>
 	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
-	<key>Enable5GAutoByDefault</key>
-	<true/>
 	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 	<key>Show5GSwitch</key>

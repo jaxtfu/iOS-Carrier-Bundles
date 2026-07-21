@@ -3,33 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>DerPriFileVersion</key>
-	<string>5.3.161</string>
-	<key>Show3GSwitchWith4G</key>
-	<false/>
-	<key>SupportsImsCapability</key>
-	<true/>
-	<key>ShowSatelliteSwitch</key>
+	<string>6.0.161</string>
+	<key>Show5GSwitch</key>
 	<true/>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
 	<key>IMSConfig</key>
 	<dict>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>allowCSFBInVolteMode</key>
-			<false/>
-		</dict>
 		<key>Satellite</key>
 		<dict>
 			<key>IMSServiceMask</key>
 			<integer>2</integer>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>supported</key>
-			<false/>
 		</dict>
 	</dict>
 	<key>SatelliteNoDataSuspendDelayTimeout</key>
@@ -42,26 +26,9 @@
 	<dict>
 		<key>SupportedEntitlements</key>
 		<integer>525329</integer>
-		<key>ProtocolVersion</key>
-		<string>2</string>
-		<key>ServerAddress</key>
-		<string>https://aes.mnc017.mcc716.pub.3gppnetwork.org:3443/entitlement/</string>
-		<key>Authentication</key>
-		<dict>
-			<key>Type</key>
-			<integer>1</integer>
-			<key>Username</key>
-			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
-		</dict>
-		<key>UpdatePeriod</key>
-		<integer>24</integer>
 	</dict>
 	<key>SatelliteSystemTransitionTimeToAllowed</key>
 	<integer>5</integer>
-	<key>ShowVolteSwitch</key>
-	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
 	<key>SupportsSatellite</key>
@@ -70,7 +37,7 @@
 	<true/>
 	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
-	<key>Show5GSwitch</key>
+	<key>ShowSatelliteSwitch</key>
 	<true/>
 </dict>
 </plist>

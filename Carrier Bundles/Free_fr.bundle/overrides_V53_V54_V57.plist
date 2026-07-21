@@ -3,158 +3,109 @@
 <plist version="1.0">
 <dict>
 	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
-	<key>Show5GWarningUnsupportedCarrier</key>
+	<string>6.0.161</string>
+	<key>Show3GSwitchWith4G</key>
 	<false/>
-	<key>Show5GStandaloneSwitch</key>
+	<key>AllowSAOnWiFiAssociation</key>
 	<true/>
-	<key>Enable5GStandaloneByDefault</key>
+	<key>ShowVoNRSwitch</key>
 	<true/>
 	<key>Show5GSwitch</key>
 	<true/>
-	<key>ShowHighDataModeSwitch</key>
+	<key>Enable5GStandaloneByDefault</key>
 	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Media</key>
+		<key>SMS</key>
 		<dict>
-			<key>AudioCodecs</key>
+			<key>SupportedDomains</key>
 			<dict>
-				<key>109</key>
-				<dict>
-					<key>br</key>
-					<string>5.9-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-					<key>hf-only</key>
-					<string>0</string>
-				</dict>
+				<key>NR</key>
+				<true/>
 			</dict>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
 		</dict>
 		<key>Voice</key>
 		<dict>
 			<key>EnableVoNRByDefault</key>
 			<true/>
-			<key>EnableVolteByDefault</key>
-			<true/>
-		</dict>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<true/>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>SupportedDomains</key>
-			<dict>
-				<key>LTE</key>
-				<true/>
-				<key>NR</key>
-				<true/>
-			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 	</dict>
+	<key>ShowHighDataModeSwitch</key>
+	<true/>
+	<key>SupportsVoNR</key>
+	<true/>
+	<key>DerPriFileName</key>
+	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportedEntitlements</key>
 		<integer>4240385</integer>
 	</dict>
-	<key>Show3GSwitchWith4G</key>
-	<false/>
-	<key>Show5GStandaloneSwitchOnlyWhenEntitled</key>
-	<true/>
-	<key>DerPriFileName</key>
-	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>AllowSAOnWiFiAssociation</key>
-	<true/>
 	<key>ShowVolteSwitch</key>
 	<false/>
-	<key>Enable5GAutoByDefault</key>
-	<true/>
-	<key>Show3GSwitchWithVolte</key>
-	<false/>
-	<key>ShowVoNRSwitch</key>
-	<true/>
-	<key>SupportsNRNSAInboundRoaming</key>
+	<key>Show5GStandaloneSwitch</key>
 	<true/>
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>32819</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>free</string>
+			<key>type-mask</key>
+			<integer>32819</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>4</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>free</string>
+			<key>type-mask</key>
+			<integer>4</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>type-mask</key>
 			<integer>131072</integer>
-			<key>password</key>
-			<string></string>
 			<key>Support5GSaHandOver</key>
 			<true/>
+			<key>password</key>
+			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
 			<key>UseNetworkMTU</key>
 			<true/>
-			<key>AllowedProtocolMask</key>
-			<integer>2</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>ims</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>262144</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>262144</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>sos</string>
+			<key>type-mask</key>
+			<integer>262144</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
 		</dict>
@@ -165,15 +116,21 @@
 			<string></string>
 			<key>apn</key>
 			<string>hos</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</array>
-	<key>SupportsVoNR</key>
+	<key>Show3GSwitchWithVolte</key>
+	<false/>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
+	<key>SupportsNRNSAInboundRoaming</key>
+	<true/>
+	<key>Show5GStandaloneSwitchOnlyWhenEntitled</key>
 	<true/>
 </dict>
 </plist>

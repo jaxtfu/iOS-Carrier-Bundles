@@ -368,35 +368,18 @@
 		<key>ServerURL</key>
 		<string>sm-v4-041-a-gtm.pr.go-esim.com</string>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>Show4GSwitch</key>
 	<true/>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.UnitedArabEmirates</string>
 	<key>MaxBluetoothModemConnections</key>
 	<integer>5</integer>
-	<key>Location</key>
-	<dict>
-		<key>EmergencyLocation</key>
-		<dict>
-			<key>AugmentedEmergencyAction</key>
-			<dict>
-				<key>AML</key>
-				<dict>
-					<key>SMS</key>
-					<dict>
-						<key>Destination</key>
-						<string>999</string>
-					</dict>
-				</dict>
-			</dict>
-		</dict>
-	</dict>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -424,19 +407,25 @@
 			<integer>1</integer>
 		</dict>
 	</array>
+	<key>Location</key>
+	<dict>
+		<key>EmergencyLocation</key>
+		<dict>
+			<key>AugmentedEmergencyAction</key>
+			<dict>
+				<key>AML</key>
+				<dict>
+					<key>SMS</key>
+					<dict>
+						<key>Destination</key>
+						<string>999</string>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Media</key>
-		<dict>
-			<key>RTCPIntervalSeconds</key>
-			<integer>5</integer>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-			<key>EnableRemoteRTCPDeactivation</key>
-			<true/>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>20</integer>
-		</dict>
 		<key>Signaling</key>
 		<dict>
 			<key>IgnoreRegNotificationContactExpires</key>
@@ -454,10 +443,12 @@
 			<string>AKAv1-MD5</string>
 			<key>SupportPEarlyMediaHeader</key>
 			<true/>
-			<key>RegistrationRetryIntervals</key>
-			<string>70</string>
 			<key>AlwaysAddSipInstance</key>
 			<true/>
+			<key>RegistrationRetryIntervals</key>
+			<string>70</string>
+			<key>EarlyMediaNeedsHeader</key>
+			<false/>
 			<key>SipTimers</key>
 			<dict>
 				<key>InviteResponseTimeout</key>
@@ -473,11 +464,11 @@
 			<true/>
 			<key>InviteErrorResponsesToTriggerCSFB</key>
 			<string>3XX,5XX,6XX</string>
-			<key>TriggerCSFBOnWaitForRingingTimeout</key>
+			<key>DropRegistrationOnSRVCC</key>
 			<true/>
 			<key>AlwaysSendSessionProgress</key>
 			<true/>
-			<key>DropRegistrationOnSRVCC</key>
+			<key>TriggerCSFBOnWaitForRingingTimeout</key>
 			<true/>
 			<key>RingbackTimerSeconds</key>
 			<integer>40</integer>
@@ -514,16 +505,32 @@
 			<key>conferenceServer</key>
 			<string>sip:1234@ims.du.ae</string>
 		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>EnableRemoteRTCPDeactivation</key>
+			<true/>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
 		<key>Voice</key>
 		<dict>
 			<key>EnableVolteByDefault</key>
 			<true/>
 		</dict>
-	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>

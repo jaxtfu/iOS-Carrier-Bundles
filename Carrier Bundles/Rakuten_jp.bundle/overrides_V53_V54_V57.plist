@@ -4,31 +4,14 @@
 <dict>
 	<key>CarrierEntitlements</key>
 	<dict>
-		<key>SupportSecureIntent</key>
-		<true/>
 		<key>SupportedEntitlements</key>
 		<integer>11265</integer>
-		<key>ProtocolVersion</key>
-		<string>2</string>
-		<key>Authentication</key>
-		<dict>
-			<key>Type</key>
-			<integer>1</integer>
-			<key>Username</key>
-			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
-		</dict>
-		<key>AllowedIMSIPrefixes</key>
-		<array>
-			<string>44011</string>
-		</array>
-		<key>ServerAddress</key>
-		<string>https://entitlement.devicem.rm-n.jp/entitlement/</string>
 		<key>SupportPhysicalSIMtoESIMTransfer</key>
 		<true/>
 		<key>SupportsOnDevicePhysicalSIMConvert</key>
 		<true/>
-		<key>UpdatePeriod</key>
-		<integer>24</integer>
+		<key>SupportSecureIntent</key>
+		<true/>
 	</dict>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
@@ -37,48 +20,13 @@
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
+	<string>6.0.161</string>
 	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
 	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 	<key>Show5GSwitch</key>
 	<true/>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Media</key>
-		<dict>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>106</key>
-				<dict>
-					<key>max-red</key>
-					<string>0</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>hf-only</key>
-					<string>0</string>
-					<key>ch-aw-recv</key>
-					<string>-1</string>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>br</key>
-					<string>5.9-13.2</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-				</dict>
-			</dict>
-			<key>SelectLatestForkWithActiveEarlyMedia</key>
-			<true/>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-		</dict>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-		</dict>
-	</dict>
 	<key>DataIndicatorOverrideForNRMmwave</key>
 	<string>NRPlus</string>
 </dict>

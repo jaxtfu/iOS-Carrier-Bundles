@@ -87,11 +87,9 @@
 			<key>apn</key>
 			<string>internet</string>
 			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 	</dict>
-	<key>ShowTTY</key>
-	<false/>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.SriLanka</string>
 	<key>APNEditabilityTypemaskNew</key>
@@ -107,6 +105,8 @@
 			<string>internet</string>
 			<key>type-mask</key>
 			<integer>53</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>OTASoftwareUpdate</key>

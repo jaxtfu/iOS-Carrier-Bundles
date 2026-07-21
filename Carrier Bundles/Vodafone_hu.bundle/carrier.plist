@@ -48,6 +48,8 @@
 	</dict>
 	<key>SupportsUserBusyCauseCode</key>
 	<true/>
+	<key>Show3GSwitchWithVolte</key>
+	<false/>
 	<key>AllowEDGEEditing</key>
 	<true/>
 	<key>RegistrationOptInRequired</key>
@@ -56,6 +58,8 @@
 	<true/>
 	<key>AllowAttachAPNEditing</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>MatchingICCIDPrefixes</key>
@@ -90,8 +94,6 @@
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>Show3GSwitchWith4G</key>
 	<false/>
 	<key>MMS</key>
@@ -99,7 +101,7 @@
 		<key>MaxImageDimension</key>
 		<integer>1024</integer>
 		<key>MMSC</key>
-		<string>http://message.mms.hu/servlets/mms</string>
+		<string>http://mms.one.hu/servlets/mms</string>
 		<key>GroupModeEnabled</key>
 		<false/>
 		<key>MaxVideoBitrate</key>
@@ -110,6 +112,165 @@
 		<string>80.244.97.2:8080</string>
 		<key>MaxMessageSize</key>
 		<integer>307200</integer>
+	</dict>
+	<key>TechSettings</key>
+	<dict>
+		<key>IKE</key>
+		<dict>
+			<key>NATTKeepAliveEnabled</key>
+			<true/>
+			<key>NATTKeepAliveOffload</key>
+			<true/>
+			<key>NATTKeepAliveInterval</key>
+			<integer>20</integer>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-256</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-256</string>
+					<key>DHGroup</key>
+					<integer>14</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>86400</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-256</string>
+				</dict>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-256</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-256</string>
+					<key>DHGroup</key>
+					<integer>15</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>86400</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-256</string>
+				</dict>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-256</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-512</string>
+					<key>DHGroup</key>
+					<integer>14</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>86400</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-512</string>
+				</dict>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-256</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-512</string>
+					<key>DHGroup</key>
+					<integer>15</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>86400</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-512</string>
+				</dict>
+			</array>
+		</dict>
+		<key>TechPolicies</key>
+		<array>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>131072</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>1048576</integer>
+			</dict>
+		</array>
+		<key>ExtraConfigurationAttributeRequestv6</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16386</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv6</string>
+				<key>Type</key>
+				<string>IPv6Address</string>
+			</dict>
+			<dict>
+				<key>Identifier</key>
+				<integer>21</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv6</string>
+				<key>Type</key>
+				<string>IPv6Address</string>
+			</dict>
+		</array>
+		<key>ExtraConfigurationAttributeRequestv4</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16384</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv4</string>
+				<key>Type</key>
+				<string>IPv4Address</string>
+			</dict>
+			<dict>
+				<key>Identifier</key>
+				<integer>20</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv4</string>
+				<key>Type</key>
+				<string>IPv4Address</string>
+			</dict>
+		</array>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>AES-128</string>
+							<string>AES-256</string>
+						</array>
+						<key>Lifetime</key>
+						<integer>86400</integer>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA2-256</string>
+						</array>
+					</dict>
+				</array>
+			</dict>
+		</dict>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>ims</string>
+		</dict>
 	</dict>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Hungary</string>
@@ -137,6 +298,34 @@
 	<key>apns</key>
 	<array>
 		<dict>
+			<key>NoCellularReconnectCauseCodes</key>
+			<array>
+				<dict>
+					<key>CauseCodes</key>
+					<array>
+						<integer>27</integer>
+						<integer>29</integer>
+						<integer>30</integer>
+						<integer>31</integer>
+						<integer>32</integer>
+						<integer>33</integer>
+						<integer>38</integer>
+						<integer>91</integer>
+					</array>
+					<key>RecoversOnAirplaneMode</key>
+					<true/>
+				</dict>
+			</array>
+			<key>tech-type-mask</key>
+			<integer>1048576</integer>
+			<key>apn</key>
+			<string>hos</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
 			<key>password</key>
 			<string></string>
 			<key>username</key>
@@ -144,16 +333,217 @@
 			<key>apn</key>
 			<string>internet</string>
 			<key>type-mask</key>
-			<integer>32817</integer>
+			<integer>49</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ims</string>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>mms</string>
+			<key>type-mask</key>
+			<integer>4</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>APNEditabilityTypemaskNew</key>
 	<integer>53</integer>
 	<key>IMSConfig</key>
 	<dict>
+		<key>Media</key>
+		<dict>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>max-red</key>
+					<string>0</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>ch-aw-recv</key>
+					<string>2</string>
+					<key>cmr</key>
+					<string>1</string>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>10</integer>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,6XX</string>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>180</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>180</integer>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>NoAnswerFromUser3</key>
+				<dict>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderText</key>
+					<string>Request Timeout</string>
+					<key>DisableCSFB</key>
+					<true/>
+					<key>StatusCode</key>
+					<integer>408</integer>
+				</dict>
+				<key>NoAnswer</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>No Answer</string>
+					<key>StatusCode</key>
+					<integer>486</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+				<key>NoAnswerFromUser2</key>
+				<dict>
+					<key>Protocol</key>
+					<string>Q.850</string>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderCause</key>
+					<integer>19</integer>
+					<key>DisableCSFB</key>
+					<true/>
+					<key>StatusCode</key>
+					<integer>480</integer>
+				</dict>
+				<key>NormalUnspecified</key>
+				<dict>
+					<key>Protocol</key>
+					<string>Q.850</string>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderText</key>
+					<string>CC_Q850_031_NORMAL_UNSPECIFIED</string>
+					<key>ReasonHeaderCause</key>
+					<integer>31</integer>
+				</dict>
+				<key>NoAnswerFromUser1</key>
+				<dict>
+					<key>Protocol</key>
+					<string>Q.850</string>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderCause</key>
+					<integer>31</integer>
+					<key>DisableCSFB</key>
+					<true/>
+					<key>StatusCode</key>
+					<integer>480</integer>
+				</dict>
+			</dict>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>Preconditions</key>
+			<string>None</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*[primary]</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting;3gpp-service.ims.icsi.mmtel</string>
+			</dict>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>TriggerCSFBOnSDPError</key>
+			<false/>
+			<key>UseIPSec</key>
+			<false/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc070.mcc216.pub.3gppnetwork.org</string>
+			<key>BsfPort</key>
+			<integer>80</integer>
+			<key>imsFeatureDependency</key>
+			<false/>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>supported</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/vnd.etsi.simservs+xml</string>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>403</string>
+			<key>SupportsCFErasure</key>
+			<false/>
+			<key>imsRegistrationDependency</key>
+			<false/>
+			<key>BsfHost</key>
+			<string>bsf.mnc070.mcc216.pub.3gppnetwork.org</string>
+			<key>SupportsCW</key>
+			<false/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<false/>
+			<key>SendReferToPeer</key>
+			<false/>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc070.mcc216.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<false/>
+			</dict>
+		</dict>
 		<key>Voice</key>
 		<dict>
-			<key>RTTSupported</key>
+			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
+			<false/>
+			<key>E911OverCSIfNoIMSReg</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
 			<true/>
 		</dict>
 	</dict>
@@ -221,17 +611,21 @@
 	</array>
 	<key>CarrierName</key>
 	<string>vodafone HU</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.vodafone.hu</string>
+	<string>https://www.one.hu</string>
 	<key>IntlDataRoamingSwitch</key>
 	<true/>
 	<key>MyAccountURLTitle</key>
-	<string>Vodafone Magyarország</string>
+	<string>One Magyarország</string>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>
 		<array/>
 	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>21670</string>

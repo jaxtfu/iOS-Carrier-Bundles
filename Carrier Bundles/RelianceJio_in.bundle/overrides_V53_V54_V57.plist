@@ -2,192 +2,32 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SupportsVoNR</key>
-	<true/>
 	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Show5GStandaloneSwitch</key>
-	<false/>
+	<string>6.0.164</string>
+	<key>AllowSAOnWiFiAssociation</key>
+	<true/>
+	<key>AllowedDataModesForServices</key>
+	<array>
+		<dict>
+			<key>ServiceName</key>
+			<array>
+				<string>UT</string>
+			</array>
+			<key>SupportedDataModes</key>
+			<array>
+				<string>LTE</string>
+				<string>NR</string>
+			</array>
+		</dict>
+	</array>
+	<key>ShowVoNRSwitch</key>
+	<true/>
 	<key>Enable5GStandaloneByDefault</key>
 	<true/>
-	<key>Show5GSwitch</key>
-	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
-	<key>SupportsNRNSA</key>
-	<false/>
-	<key>NRSlicing</key>
-	<dict>
-		<key>OsId</key>
-		<array>
-			<integer>67</integer>
-			<integer>1</integer>
-			<integer>210</integer>
-			<integer>17</integer>
-			<integer>151</integer>
-			<integer>217</integer>
-			<integer>66</integer>
-			<integer>201</integer>
-			<integer>177</integer>
-			<integer>194</integer>
-			<integer>246</integer>
-			<integer>117</integer>
-			<integer>131</integer>
-			<integer>192</integer>
-			<integer>249</integer>
-			<integer>32</integer>
-		</array>
-		<key>EntitlementsGenres</key>
-		<true/>
-	</dict>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Signaling</key>
-		<dict>
-			<key>IgnoreRegNotificationContactExpires</key>
-			<true/>
-			<key>ussdEnabled</key>
-			<true/>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>IgnoreWifiHotspot</key>
-			<string>false</string>
-			<key>ServiceClass</key>
-			<dict>
-				<key>Hotspot</key>
-				<dict>
-					<key>Video</key>
-					<string>AF43</string>
-					<key>Voice</key>
-					<string>EF</string>
-					<key>Signaling</key>
-					<string>CS5</string>
-				</dict>
-			</dict>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>ReRegisterOnErrorCodes</key>
-			<string>403</string>
-			<key>strictCallFlows</key>
-			<true/>
-			<key>SubscriptionTerminatedMeansRegistrationTerminated</key>
-			<true/>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string></string>
-			<key>EmergencyCallBackModeExpirationSeconds</key>
-			<integer>1</integer>
-			<key>EnableVideoCallWaiting</key>
-			<true/>
-			<key>AlwaysSendSessionProgress</key>
-			<true/>
-			<key>SendResumeInviteAsSendRecv</key>
-			<false/>
-			<key>SessionExpiresSeconds</key>
-			<integer>1800</integer>
-			<key>RingbackTimerSeconds</key>
-			<integer>130</integer>
-			<key>EmergencyPreferredIdentity</key>
-			<string>IMEI</string>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
-			<key>IncomingCallEndReasons</key>
-			<dict>
-				<key>NoAnswerFromUser</key>
-				<dict>
-					<key>Protocol</key>
-					<string>Q.850</string>
-					<key>TerminationEvent</key>
-					<string>RemoteHangup</string>
-					<key>ReasonHeaderCause</key>
-					<integer>47</integer>
-					<key>StatusCode</key>
-					<integer>480</integer>
-				</dict>
-				<key>NotFound</key>
-				<dict>
-					<key>StatusCode</key>
-					<integer>404</integer>
-					<key>TerminationEvent</key>
-					<string>RemoteHangup</string>
-				</dict>
-				<key>RequestTermiante</key>
-				<dict>
-					<key>Protocol</key>
-					<string>Q.850</string>
-					<key>TerminationEvent</key>
-					<string>RemoteHangup</string>
-					<key>ReasonHeaderCause</key>
-					<integer>31</integer>
-					<key>StatusCode</key>
-					<integer>412</integer>
-				</dict>
-				<key>TemporarilyUnavailable</key>
-				<dict>
-					<key>StatusCode</key>
-					<integer>480</integer>
-					<key>TerminationEvent</key>
-					<string>RemoteHangup</string>
-				</dict>
-				<key>ServerInternalError</key>
-				<dict>
-					<key>TerminationEvent</key>
-					<string>NoEmergencyCallLocation</string>
-					<key>ReasonHeaderText</key>
-					<string>Emergency calls over WiFi not allowed in this location</string>
-					<key>ReasonHeaderCause</key>
-					<integer>200</integer>
-					<key>StatusCode</key>
-					<integer>500</integer>
-				</dict>
-			</dict>
-			<key>EnableCellularNetworkInfo</key>
-			<true/>
-			<key>KillCallOnHoldResumeError</key>
-			<false/>
-			<key>Preconditions</key>
-			<string>None</string>
-			<key>ValidateSipMessageRecipient</key>
-			<false/>
-			<key>RingingTimerSeconds</key>
-			<integer>130</integer>
-			<key>UseIPSec</key>
-			<true/>
-			<key>RegistrationExpirationSeconds</key>
-			<integer>7200</integer>
-		</dict>
-		<key>AllowWiFiCallingInAirplaneMode</key>
-		<false/>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>AlwaysSubscribeToConferenceEvents</key>
-			<true/>
-			<key>SendConferenceSubscribeInNewDialog</key>
-			<true/>
-			<key>conferenceServer</key>
-			<string>sip:mmtel@conf-factory.ims.mnc${MNC}.mcc${MCC}.3gppnetwork.org</string>
-		</dict>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>UseRpOriginatingAddressAsSender</key>
-			<true/>
-			<key>SupportedDomains</key>
-			<dict>
-				<key>NR</key>
-				<true/>
-			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<false/>
-		</dict>
 		<key>Media</key>
 		<dict>
-			<key>RTCPIntervalSeconds</key>
-			<string>5</string>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
 			<key>AudioCodecs</key>
 			<dict>
 				<key>109</key>
@@ -204,228 +44,33 @@
 					<string>nb-swb</string>
 				</dict>
 			</dict>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>20</integer>
-			<key>ModeSetAMRWB</key>
-			<string></string>
-			<key>UseRestrictiveDirectionWhenCreatingAnswer</key>
-			<false/>
 			<key>EVSHardBwLimit</key>
 			<string>nb-swb</string>
 		</dict>
-		<key>XCAP</key>
+		<key>SMS</key>
 		<dict>
-			<key>NafPort</key>
-			<integer>7077</integer>
-			<key>SupportsCLIR</key>
-			<false/>
-			<key>DisableOnNetworkError</key>
-			<false/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string></string>
-			<key>imsRegistrationDependency</key>
-			<true/>
-			<key>ContentType</key>
-			<string>application/xcap-el+xml</string>
-			<key>BsfPort</key>
-			<integer>7080</integer>
-			<key>supported</key>
-			<true/>
-			<key>SupportsCFErasure</key>
-			<false/>
-		</dict>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<true/>
-		<key>Voice</key>
-		<dict>
-			<key>E911OverITechSupported</key>
-			<true/>
-			<key>BlockCallsOverCS</key>
-			<true/>
-			<key>EnableVolteByDefault</key>
-			<true/>
-			<key>BlockSilentRedialOverCS</key>
-			<true/>
-			<key>EnableVoNRByDefault</key>
-			<true/>
-			<key>endNonEmergencyCalls</key>
-			<true/>
-		</dict>
-	</dict>
-	<key>OverrideOperatorWiFiName</key>
-	<string>Jio WiFi</string>
-	<key>DerPriFileName</key>
-	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>AttachAPN</key>
-	<dict>
-		<key>3GPP</key>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>PcscfAddressRequired</key>
-			<false/>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>jionet</string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
-		</dict>
-	</dict>
-	<key>SupportsImsCapability</key>
-	<true/>
-	<key>PhoneAccountTransfer</key>
-	<dict>
-		<key>MinCompatibleOS</key>
-		<string>17.6</string>
-	</dict>
-	<key>ShowVolteSwitch</key>
-	<true/>
-	<key>Enable5GAutoByDefault</key>
-	<true/>
-	<key>ShowVoNRSwitch</key>
-	<true/>
-	<key>AllowedDataModesForServices</key>
-	<array>
-		<dict>
-			<key>ServiceName</key>
-			<array>
-				<string>UT</string>
-			</array>
-			<key>SupportedDataModes</key>
-			<array>
-				<string>LTE</string>
-				<string>NR</string>
-			</array>
-		</dict>
-	</array>
-	<key>TechSettings</key>
-	<dict>
-		<key>WifiCallingAllowedInRoaming</key>
-		<true/>
-		<key>ChildSAs</key>
-		<dict>
-			<key>FirstChild</key>
+			<key>SupportedDomains</key>
 			<dict>
-				<key>ChildProposals</key>
-				<array>
-					<dict>
-						<key>Lifetime</key>
-						<integer>86400</integer>
-						<key>ChildProtocol</key>
-						<string>ESP</string>
-						<key>EncryptionAlgorithm</key>
-						<array>
-							<string>AES-128</string>
-						</array>
-						<key>IntegrityAlgorithm</key>
-						<array>
-							<string>SHA1-96</string>
-						</array>
-						<key>SecureRekey</key>
-						<integer>0</integer>
-					</dict>
-				</array>
-				<key>InstallPolicies</key>
+				<key>NR</key>
 				<true/>
 			</dict>
 		</dict>
-		<key>iRatPolicies</key>
+		<key>Voice</key>
 		<dict>
-			<key>PreferredTechnology</key>
-			<string>wifi</string>
+			<key>EnableVoNRByDefault</key>
+			<true/>
 		</dict>
-		<key>5wiServiceMask</key>
-		<integer>3</integer>
-		<key>SetHandOverIPv6Prefix</key>
-		<true/>
-		<key>ExtraConfigurationAttributeRequestv6</key>
-		<array>
-			<dict>
-				<key>Identifier</key>
-				<integer>16390</integer>
-				<key>Name</key>
-				<string>AssignedPCSCFIPv6</string>
-				<key>Type</key>
-				<string>IPv6Address</string>
-			</dict>
-		</array>
-		<key>SupportCallHandover</key>
-		<true/>
-		<key>TechPolicies</key>
-		<array>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>131072</integer>
-			</dict>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>1048576</integer>
-			</dict>
-		</array>
-		<key>ExtraConfigurationAttributeRequestv4</key>
-		<array>
-			<dict>
-				<key>Identifier</key>
-				<integer>16384</integer>
-				<key>Name</key>
-				<string>AssignedPCSCFIPv4</string>
-				<key>Type</key>
-				<string>IPv4Address</string>
-			</dict>
-		</array>
-		<key>IKE</key>
-		<dict>
-			<key>Proposals</key>
-			<array>
-				<dict>
-					<key>EncryptionAlgorithm</key>
-					<string>AES-256</string>
-					<key>IntegrityAlgorithm</key>
-					<string>SHA1-96</string>
-					<key>DHGroup</key>
-					<integer>2</integer>
-					<key>AuthenticationMethod</key>
-					<string>None</string>
-					<key>Lifetime</key>
-					<integer>80000</integer>
-					<key>EAPMethod</key>
-					<string>EAP-AKA</string>
-					<key>PRFAlgorithm</key>
-					<string>SHA2-256</string>
-				</dict>
-			</array>
-			<key>DeadPeerDetectionEnabled</key>
-			<true/>
-			<key>DeadPeerDetectionMaxRetries</key>
-			<integer>4</integer>
-			<key>DeadPeerDetectionInterval</key>
-			<integer>300</integer>
-			<key>DisableSwitchToNATTPort</key>
-			<true/>
-			<key>NATTKeepAliveOffload</key>
-			<true/>
-			<key>LocalIdentifier</key>
-			<string>0$impi_user@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
-			<key>RemoteAddress</key>
-			<string>epdg.epc.mnc$mnc.mcc$mcc.pub.3gppnetwork.org</string>
-			<key>DeadPeerDetectionRetryInterval</key>
-			<integer>10</integer>
-		</dict>
-		<key>EPDGResolutionFallbackEnabled</key>
-		<true/>
 	</dict>
-	<key>PushSettings</key>
-	<dict>
-		<key>MultiSIMTopic</key>
-		<string>com.rjil.apns</string>
-		<key>SAWatchTopic</key>
-		<string>com.rjil-ES-SA.apns</string>
-	</dict>
+	<key>SupportsVoNR</key>
+	<true/>
+	<key>DerPriFileName</key>
+	<string>overrides_V53_V54_V57.der.pri</string>
+	<key>DataIndicatorOverrideForNRMmwave</key>
+	<string>NRPlus</string>
+	<key>Enable5GStandaloneAfterUpgrade</key>
+	<true/>
+	<key>Show5GStandaloneSwitch</key>
+	<false/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -435,8 +80,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>enableXLAT464</key>
 			<true/>
 			<key>username</key>
@@ -463,31 +106,57 @@
 			<true/>
 			<key>username</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>apn</key>
 			<string>ims</string>
 			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>262144</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>sos</string>
+			<key>type-mask</key>
+			<integer>262144</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
 		</dict>
 	</array>
-	<key>Enable5GStandaloneAfterUpgrade</key>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
+	<key>NRSlicing</key>
+	<dict>
+		<key>OsId</key>
+		<array>
+			<integer>67</integer>
+			<integer>1</integer>
+			<integer>210</integer>
+			<integer>17</integer>
+			<integer>151</integer>
+			<integer>217</integer>
+			<integer>66</integer>
+			<integer>201</integer>
+			<integer>177</integer>
+			<integer>194</integer>
+			<integer>246</integer>
+			<integer>117</integer>
+			<integer>131</integer>
+			<integer>192</integer>
+			<integer>249</integer>
+			<integer>32</integer>
+		</array>
+		<key>EntitlementsGenres</key>
+		<true/>
+	</dict>
+	<key>Enable5GAutoByDefault</key>
 	<true/>
+	<key>Show5GSwitch</key>
+	<true/>
+	<key>SupportsNRNSA</key>
+	<false/>
 </dict>
 </plist>

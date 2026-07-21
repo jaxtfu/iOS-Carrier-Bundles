@@ -18,7 +18,7 @@
 	<key>MaxBluetoothModemConnections</key>
 	<integer>5</integer>
 	<key>MyAccountURL</key>
-	<string>http://www.orange.bf</string>
+	<string>https://www.orange.bf</string>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>61302</string>
@@ -79,27 +79,10 @@
 	<true/>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
 	<key>VoicemailPilotNumber</key>
 	<string>120</string>
-	<key>RegistrationOptInRequired</key>
-	<true/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<array>
-		<string>+447537410207</string>
-		<string>+447537410217</string>
-		<string>+447537410227</string>
-		<string>+447537410237</string>
-		<string>+447537410247</string>
-		<string>+447537410257</string>
-		<string>+447537410267</string>
-		<string>+447537410277</string>
-		<string>+447537410287</string>
-		<string>+447537410297</string>
-	</array>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -122,6 +105,21 @@
 			<key>type-mask</key>
 			<integer>48</integer>
 		</dict>
+	</array>
+	<key>RegistrationOptInRequired</key>
+	<true/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<array>
+		<string>+447537410207</string>
+		<string>+447537410217</string>
+		<string>+447537410227</string>
+		<string>+447537410237</string>
+		<string>+447537410247</string>
+		<string>+447537410257</string>
+		<string>+447537410267</string>
+		<string>+447537410277</string>
+		<string>+447537410287</string>
+		<string>+447537410297</string>
 	</array>
 </dict>
 </plist>

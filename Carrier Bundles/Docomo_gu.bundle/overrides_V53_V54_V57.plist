@@ -16,41 +16,6 @@
 	<true/>
 	<key>Show5GSwitch</key>
 	<true/>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Media</key>
-		<dict>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>127</key>
-				<dict>
-					<key>cmr</key>
-					<string>-1</string>
-					<key>br</key>
-					<string>9.6-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>max-red</key>
-					<string>0</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-				</dict>
-			</dict>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-		</dict>
-		<key>Signaling</key>
-		<dict>
-			<key>EarlyMediaNeedsHeader</key>
-			<false/>
-			<key>SupportPEarlyMediaHeader</key>
-			<false/>
-		</dict>
-	</dict>
 	<key>_Exclude</key>
 	<array>
 		<string>EnableLTEAfterUpgrade</string>

@@ -35,6 +35,22 @@
 		<key>SoftwareUpdateOptInRequired</key>
 		<true/>
 	</dict>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>smartone</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>CellBroadcast</key>
 	<dict>
 		<key>SoundIsMutableInRelayMode</key>
@@ -200,16 +216,71 @@
 	<string>138</string>
 	<key>SupportsNITZ</key>
 	<true/>
-	<key>WatchCustomerServicePhoneNumber</key>
-	<string>+852 2880 2688</string>
+	<key>RemoteCardProvisioningSettings</key>
+	<dict>
+		<key>MatchingICCIDPrefixes</key>
+		<array>
+			<string>8985206</string>
+		</array>
+		<key>UsesAutoAssignment</key>
+		<false/>
+		<key>ServerURL</key>
+		<string>sma.prod.ondemandconnectivity.com</string>
+		<key>ActivatingStateSubscriptionCheckTimerIntervals</key>
+		<array>
+			<integer>180</integer>
+			<integer>600</integer>
+			<integer>3600</integer>
+		</array>
+		<key>SupportedSKUs</key>
+		<array>
+			<string>SKU_EU</string>
+		</array>
+		<key>MinCompatibleWatchOS</key>
+		<string>4.3</string>
+		<key>MinCompatibleWatchOSForStandaloneMode</key>
+		<string>7.4</string>
+		<key>ProvisioningMethod</key>
+		<string>CarrierFlow</string>
+		<key>SupportsFauxCard</key>
+		<false/>
+	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<array>
 		<string>+447786205094</string>
 	</array>
-	<key>ShowTTY</key>
-	<false/>
+	<key>LocationSecondaryOverlay</key>
+	<dict>
+		<key>EnableCPIDuringEmergencyMode</key>
+		<true/>
+	</dict>
+	<key>IMSConfigSecondaryOverlay</key>
+	<dict>
+		<key>Voice</key>
+		<dict>
+			<key>BlockSilentRedialOverCS</key>
+			<true/>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>80</integer>
+			<key>MaxUdpMessageSize</key>
+			<integer>1200</integer>
+			<key>UseIPSec</key>
+			<false/>
+			<key>DefaultAuthAlgorithm</key>
+			<string></string>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<integer>60</integer>
+		</dict>
+	</dict>
+	<key>WatchCustomerServicePhoneNumber</key>
+	<string>+852 2880 2688</string>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
 		<key>BeaconAddress</key>
@@ -243,6 +314,8 @@
 		<key>GreetingNotification</key>
 		<true/>
 	</dict>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Wi-Fi Calls</string>
 	<key>MMS</key>
 	<dict>
 		<key>MMSCarrierReportJunkAddress</key>
@@ -384,7 +457,7 @@
 			<key>Title</key>
 			<string>SmarTone Services &amp; Apps</string>
 			<key>URL</key>
-			<string>http://wap.smartone.com/services_and_apps/</string>
+			<string>https://wap.smartone.com/services_and_apps/</string>
 		</dict>
 	</array>
 	<key>MaxBluetoothModemConnections</key>
@@ -454,17 +527,157 @@
 	<true/>
 	<key>IMSConfig</key>
 	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>AddAccessNetworkInfoToInsecureMessages</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>4XX,-408,-480,5XX,6XX</string>
+			<key>ReRegisterOnErrorCodes</key>
+			<string>403,408,494</string>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>MaxUdpMessageSize</key>
+			<integer>1200</integer>
+			<key>SendEmergencyLocationUpdates</key>
+			<true/>
+			<key>IncompleteRegistrationThrottlingIntervalSeconds</key>
+			<integer>65</integer>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>NotFound</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>408</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+				<key>TemporarilyUnavailable</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>480</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+			</dict>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>Preconditions</key>
+			<string>None</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>RegistrationRetryIntervals</key>
+			<string>65</string>
+			<key>UseCIDUrlInPIDF</key>
+			<true/>
+			<key>ValidateSipMessageRecipient</key>
+			<false/>
+			<key>UseIPSec</key>
+			<true/>
+			<key>AlwaysAddGeolocationForEmergencyCalls</key>
+			<true/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SendConferenceSubscribeAfterRefers</key>
+			<false/>
+			<key>conferenceServer</key>
+			<string>sip:conference@ims.mnc006.mcc454.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<true/>
+			</dict>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>240</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc006.mcc454.pub.3gppnetwork.org</string>
+			<key>SupportsCB</key>
+			<true/>
+			<key>imsFeatureDependency</key>
+			<true/>
+			<key>NafPort</key>
+			<integer>8090</integer>
+			<key>supported</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>403,409</string>
+			<key>SupportsCFErasure</key>
+			<false/>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>ServeMultipleCDIVRulesPerRequest</key>
+			<false/>
+			<key>CallBarringNASFallbackSupported</key>
+			<true/>
+		</dict>
 		<key>EnableWiFiCallingWithoutEntitlement</key>
 		<false/>
+		<key>CallTransfer</key>
+		<dict>
+			<key>CallTransferDialNumber</key>
+			<string>+85290100496</string>
+		</dict>
 	</dict>
 	<key>SMSSettings</key>
 	<dict>
-		<key>SMSCarrierReportJunkAddress</key>
-		<string>+85296657000</string>
 		<key>EnableReplyToAlphanumericOriginator</key>
 		<true/>
-		<key>TransportFallback</key>
-		<true/>
+		<key>SMSCarrierReportJunkAddress</key>
+		<string>+85296657000</string>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
@@ -472,6 +685,8 @@
 	<string>+85290100138</string>
 	<key>APNEditabilityTypemask</key>
 	<integer>55</integer>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
 	<key>PushSettings</key>
 	<dict>
 		<key>SAWatchTopic</key>
@@ -481,8 +696,10 @@
 		<key>VoWiFiTopic</key>
 		<string>com.smartone.entitlement</string>
 	</dict>
-	<key>VisualVoicemailServiceName</key>
-	<string>IMAP</string>
+	<key>SMTPServers</key>
+	<array>
+		<string>smtp.smartone.com</string>
+	</array>
 	<key>EnableLTEAfterUpgrade</key>
 	<true/>
 	<key>StatusBarImages</key>
@@ -504,17 +721,19 @@
 			<string>SMC HK</string>
 		</dict>
 	</array>
-	<key>SMTPServers</key>
-	<array>
-		<string>smtp.smartone.com</string>
-	</array>
+	<key>VisualVoicemailServiceName</key>
+	<string>IMAP</string>
 	<key>CarrierName</key>
 	<string>SMC HK</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>
 		<array/>
 	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VMSMFilterNumber</key>
 	<string>138</string>
 	<key>SupportedSIMs</key>

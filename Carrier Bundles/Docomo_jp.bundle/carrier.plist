@@ -92,6 +92,18 @@
 		<key>UpdatePeriod</key>
 		<integer>24</integer>
 	</dict>
+	<key>RCS</key>
+	<dict>
+		<key>RefetchRCSStateIfDisabled</key>
+		<true/>
+		<key>EnableRCSByDefault</key>
+		<true/>
+		<key>ProvisioningData</key>
+		<dict>
+			<key>ServerURL</key>
+			<string>config.rcs.mnc$mnc.mcc$mcc.jibecloud.net</string>
+		</dict>
+	</dict>
 	<key>SMSSettings</key>
 	<dict>
 		<key>TransportFallback</key>
@@ -166,6 +178,11 @@
 	<dict>
 		<key>AutoCallPickupTimer</key>
 		<integer>12</integer>
+	</dict>
+	<key>ToolsConfiguration</key>
+	<dict>
+		<key>EnableFeedbackCollection</key>
+		<true/>
 	</dict>
 	<key>DataIndicatorOverrideForLTE</key>
 	<string>4G</string>
@@ -374,26 +391,52 @@
 		<dict>
 			<key>UseRpOriginatingAddressAsSender</key>
 			<true/>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
 			<key>TR1MTimer</key>
 			<dict>
 				<key>IsFatalOnIMSSendSuccess</key>
 				<false/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<false/>
 		</dict>
 		<key>Media</key>
 		<dict>
-			<key>DTMFVolume</key>
-			<integer>10</integer>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>14</integer>
-			<key>UseRTPDetectionAutoStart</key>
-			<true/>
-			<key>UseSDPTemplateForAllInvites</key>
-			<false/>
 			<key>EnableBandwidthSpecifiers</key>
 			<true/>
+			<key>UseRTPDetectionAutoStart</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>max-red</key>
+					<string>0</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>cmr</key>
+					<string>-1</string>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>br</key>
+					<string>13.2</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>14</integer>
+			<key>DTMFVolume</key>
+			<integer>10</integer>
+			<key>SelectLatestForkWithActiveEarlyMedia</key>
+			<true/>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>UseSDPTemplateForAllInvites</key>
+			<false/>
 		</dict>
 		<key>XCAP</key>
 		<dict>
@@ -453,9 +496,9 @@
 	<array>
 		<dict>
 			<key>Title</key>
-			<string>dポイントマーケット</string>
+			<string>dポイントクラブ</string>
 			<key>URL</key>
-			<string>https://dmarket.docomo.ne.jp/?utm_source=bookmark&amp;utm_medium=device&amp;utm_campaign=dpm_202505_top_0000973</string>
+			<string>https://dpoint.docomo.ne.jp/index.html?utm_source=dpointclub&amp;utm_medium=bookmark&amp;utm_campaign=dpc_202606_bookmark-ios-browser</string>
 		</dict>
 		<dict>
 			<key>Title</key>
@@ -493,8 +536,6 @@
 				<string></string>
 				<key>apn</key>
 				<string></string>
-				<key>DefaultProtocolMask</key>
-				<integer>2</integer>
 				<key>AllowedProtocolMask</key>
 				<integer>2</integer>
 			</dict>
@@ -538,8 +579,6 @@
 		<key>SoftwareUpdateOptInRequired</key>
 		<true/>
 	</dict>
-	<key>ShowTTY</key>
-	<false/>
 	<key>RegistrationOptInRequired</key>
 	<false/>
 	<key>VoicemailPilotNumber</key>
@@ -844,18 +883,16 @@
 			<string></string>
 			<key>AllowedProtocolMaskInDomesticRoaming</key>
 			<integer>1</integer>
-			<key>apn</key>
-			<string>spmode.ne.jp</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
+			<key>UseNetworkMTU</key>
+			<true/>
 			<key>enableXLAT464</key>
 			<true/>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>1</integer>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
+			<key>apn</key>
+			<string>spmode.ne.jp</string>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -866,16 +903,14 @@
 			<string></string>
 			<key>AllowedProtocolMaskInDomesticRoaming</key>
 			<integer>2</integer>
-			<key>apn</key>
-			<string>ims</string>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
+			<key>UseNetworkMTU</key>
+			<true/>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>2</integer>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
+			<key>apn</key>
+			<string>ims</string>
 			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
 		</dict>
@@ -885,8 +920,6 @@
 			<key>password</key>
 			<string></string>
 			<key>AllowedProtocolMaskInDomesticRoaming</key>
-			<integer>2</integer>
-			<key>DefaultProtocolMask</key>
 			<integer>2</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>2</integer>
@@ -903,8 +936,6 @@
 			<key>password</key>
 			<string></string>
 			<key>AllowedProtocolMaskInDomesticRoaming</key>
-			<integer>2</integer>
-			<key>DefaultProtocolMask</key>
 			<integer>2</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>2</integer>

@@ -133,8 +133,6 @@
 				<key>NR</key>
 				<false/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 	</dict>
 	<key>OTASoftwareUpdate</key>
@@ -150,14 +148,9 @@
 	<string>com.apple.Brazil</string>
 	<key>ShowDialAssist</key>
 	<true/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
-	<key>ShowVolteSwitch</key>
-	<true/>
 	<key>SupportsNITZ</key>
+	<true/>
+	<key>ShowVolteSwitch</key>
 	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>*100</string>
@@ -176,32 +169,28 @@
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 			<key>apn</key>
 			<string>ims</string>
 			<key>SupportSwitchOver</key>
 			<false/>
-			<key>UseNetworkMTU</key>
-			<true/>
 			<key>type-mask</key>
 			<integer>131072</integer>
+			<key>UseNetworkMTU</key>
+			<true/>
 		</dict>
 		<dict>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 			<key>apn</key>
 			<string>XCAP</string>
 			<key>SupportSwitchOver</key>
 			<false/>
-			<key>UseNetworkMTU</key>
-			<true/>
 			<key>type-mask</key>
 			<integer>1048576</integer>
+			<key>UseNetworkMTU</key>
+			<true/>
 		</dict>
 	</array>
 	<key>RegistrationOptInRequired</key>

@@ -24,6 +24,8 @@
 		<key>TransportFallback</key>
 		<false/>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>*131*138#</string>
 	<key>AllowedServicesTypeMaskOnInternet</key>
@@ -54,18 +56,6 @@
 	</array>
 	<key>IMSConfig</key>
 	<dict>
-		<key>SMS</key>
-		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<false/>
-		</dict>
-		<key>Media</key>
-		<dict>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-			<key>RTCPIntervalSeconds</key>
-			<integer>5</integer>
-		</dict>
 		<key>Signaling</key>
 		<dict>
 			<key>InviteErrorResponsesToTriggerCSFB</key>
@@ -100,13 +90,6 @@
 			<key>AddAccessNetworkInfoToInsecureMessages</key>
 			<true/>
 		</dict>
-		<key>Voice</key>
-		<dict>
-			<key>E911OverITechSupported</key>
-			<true/>
-			<key>EnableVolteByDefault</key>
-			<true/>
-		</dict>
 		<key>ConferenceCalling</key>
 		<dict>
 			<key>SendConferenceSubscribeAfterRefers</key>
@@ -114,8 +97,57 @@
 			<key>conferenceServer</key>
 			<string>sip:conference@ims.mnc006.mcc454.3gppnetwork.org</string>
 		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<false/>
+			</dict>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>240</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
 		<key>EnableWiFiCallingWithoutEntitlement</key>
 		<false/>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>CarrierEntitlements</key>
 	<dict>
@@ -165,8 +197,6 @@
 	<false/>
 	<key>ShowVolteSwitch</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>CellBroadcast</key>

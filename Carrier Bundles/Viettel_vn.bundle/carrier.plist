@@ -104,8 +104,6 @@
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>WatchCustomerServicePhoneNumber</key>
 	<string>18008098</string>
 	<key>OverrideOperatorWiFiName</key>
@@ -260,34 +258,30 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>AlwaysOnPDU</key>
-			<true/>
 			<key>password</key>
 			<string></string>
-			<key>type-mask</key>
-			<integer>32817</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
-			<key>apn</key>
-			<string>v-internet</string>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
+			<key>apn</key>
+			<string>v-internet</string>
+			<key>type-mask</key>
+			<integer>32817</integer>
+			<key>AlwaysOnPDU</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>AlwaysOnPDU</key>
-			<true/>
-			<key>Support5GSaHandOver</key>
 			<true/>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
+			<key>Support5GSaHandOver</key>
+			<true/>
 			<key>type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
@@ -298,18 +292,16 @@
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>4</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>4</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>v-mms</string>
+			<key>type-mask</key>
+			<integer>4</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -400,6 +392,15 @@
 		</dict>
 		<key>SMS</key>
 		<dict>
+			<key>SMSBundleToVoice</key>
+			<true/>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<true/>
+			</dict>
 			<key>allowCSFBInVolteMode</key>
 			<false/>
 		</dict>
@@ -456,8 +457,6 @@
 	<integer>49</integer>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32769</integer>
-	<key>DefaultWhenImsSwitchOff</key>
-	<integer>0</integer>
 	<key>PushSettings</key>
 	<dict>
 		<key>MultiSIMTopic</key>
@@ -522,7 +521,7 @@
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://wap.viettelmobile.com.vn/</string>
+	<string>https://wap.viettelmobile.com.vn/</string>
 	<key>MyAccountURLTitle</key>
 	<string>Viettel Portal</string>
 	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>

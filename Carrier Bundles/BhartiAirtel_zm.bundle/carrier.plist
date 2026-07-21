@@ -63,10 +63,6 @@
 	<string>Airtel</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
-	<key>VoicemailPilotNumber</key>
-	<string>952</string>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -99,6 +95,8 @@
 			</dict>
 		</array>
 	</dict>
+	<key>VoicemailPilotNumber</key>
+	<string>952</string>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Zambia</string>
 	<key>MMS</key>

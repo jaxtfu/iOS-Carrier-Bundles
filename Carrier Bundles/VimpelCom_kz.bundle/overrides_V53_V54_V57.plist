@@ -2,27 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>ShowHighDataModeSwitch</key>
+	<key>DerPriFileName</key>
+	<string>overrides_V53_V54_V57.der.pri</string>
+	<key>Show5GSwitch</key>
 	<true/>
 	<key>ShowVolteSwitch</key>
 	<false/>
-	<key>DerPriFileName</key>
-	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>DerPriFileVersion</key>
 	<string>0.1.161</string>
 	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Show5GSwitch</key>
+	<key>ShowHighDataModeSwitch</key>
 	<true/>
-	<key>IMSConfig</key>
-	<dict>
-		<key>XCAP</key>
-		<dict>
-			<key>supported</key>
-			<false/>
-		</dict>
-	</dict>
 </dict>
 </plist>

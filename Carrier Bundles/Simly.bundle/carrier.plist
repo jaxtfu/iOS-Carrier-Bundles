@@ -607,8 +607,6 @@
 			<string></string>
 			<key>apn</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>65585</integer>
 			<key>AllowedProtocolMask</key>

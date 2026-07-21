@@ -9,30 +9,24 @@
 	</dict>
 	<key>CarrierEntitlements</key>
 	<dict>
-		<key>SupportsOnDevicePhysicalSIMConvert</key>
-		<true/>
-		<key>SupportSecureIntent</key>
-		<true/>
 		<key>SupportedEntitlements</key>
 		<integer>8411</integer>
-		<key>ProtocolVersion</key>
-		<string>2</string>
 		<key>SupportPhysicalSIMtoESIMTransfer</key>
 		<true/>
-		<key>UpdatePeriod</key>
-		<integer>24</integer>
 		<key>SupportedActions</key>
 		<array>
 			<string>getPreferredRoamingNetworks</string>
 			<string>AuthenticateTrustFlag</string>
 		</array>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
+		<true/>
+		<key>SupportSecureIntent</key>
+		<true/>
 	</dict>
 	<key>DerPriFileVersion</key>
 	<string>0.1.161</string>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>Show4GSwitchWith5G</key>
 	<true/>
 	<key>MVNOOverrides</key>
@@ -78,36 +72,10 @@
 	</dict>
 	<key>PhoneAccountTransfer</key>
 	<dict>
-		<key>LocalInstallSMDPURL</key>
-		<string>https://rsp-ams.smdp.io</string>
 		<key>MaintenanceErrors</key>
 		<array>
 			<string>21</string>
 		</array>
-	</dict>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Media</key>
-		<dict>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>109</key>
-				<dict>
-					<key>ch-aw-recv</key>
-					<string>0</string>
-					<key>br</key>
-					<string>5.9-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-wb</string>
-					<key>max-red</key>
-					<string>220</string>
-				</dict>
-			</dict>
-		</dict>
 	</dict>
 </dict>
 </plist>

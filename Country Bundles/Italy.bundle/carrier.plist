@@ -2,6 +2,58 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>EmergencyCalling</key>
+	<dict>
+		<key>EmergencyNumbers</key>
+		<array>
+			<dict>
+				<key>Number</key>
+				<string>112</string>
+				<key>PreferredEmergencyNumber</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>PreferredEmergencyNumber</key>
+				<false/>
+				<key>SupportsEmergencySetup</key>
+				<false/>
+				<key>Title</key>
+				<string>EMERGENCY_DISAMBIGUATION_FIRE</string>
+				<key>Number</key>
+				<string>115</string>
+			</dict>
+			<dict>
+				<key>PreferredEmergencyNumber</key>
+				<false/>
+				<key>SupportsEmergencySetup</key>
+				<false/>
+				<key>Title</key>
+				<string>EMERGENCY_DISAMBIGUATION_POLICE</string>
+				<key>Number</key>
+				<string>113</string>
+			</dict>
+			<dict>
+				<key>PreferredEmergencyNumber</key>
+				<false/>
+				<key>SupportsEmergencySetup</key>
+				<false/>
+				<key>Title</key>
+				<string>EMERGENCY_DISAMBIGUATION_AMBULANCE</string>
+				<key>Number</key>
+				<string>118</string>
+			</dict>
+			<dict>
+				<key>PreferredEmergencyNumber</key>
+				<false/>
+				<key>SupportsEmergencySetup</key>
+				<false/>
+				<key>Title</key>
+				<string>EMERGENCY_DISAMBIGUATION_COASTGUARD</string>
+				<key>Number</key>
+				<string>1530</string>
+			</dict>
+		</array>
+	</dict>
 	<key>CellBroadcast</key>
 	<dict>
 		<key>AlertTypes</key>
@@ -190,69 +242,17 @@
 		<string>222</string>
 		<string>com.apple.Italy</string>
 	</array>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsRTT</key>
+		<true/>
+	</dict>
 	<key>ShowTARandomizationSwitch</key>
 	<true/>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Voice</key>
-		<dict>
-			<key>RTTSupported</key>
-			<true/>
-		</dict>
 		<key>EnableWiFiCallingWithoutEntitlement</key>
 		<false/>
-	</dict>
-	<key>EmergencyCalling</key>
-	<dict>
-		<key>EmergencyNumbers</key>
-		<array>
-			<dict>
-				<key>Number</key>
-				<string>112</string>
-				<key>PreferredEmergencyNumber</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>PreferredEmergencyNumber</key>
-				<false/>
-				<key>SupportsEmergencySetup</key>
-				<false/>
-				<key>Title</key>
-				<string>EMERGENCY_DISAMBIGUATION_FIRE</string>
-				<key>Number</key>
-				<string>115</string>
-			</dict>
-			<dict>
-				<key>PreferredEmergencyNumber</key>
-				<false/>
-				<key>SupportsEmergencySetup</key>
-				<false/>
-				<key>Title</key>
-				<string>EMERGENCY_DISAMBIGUATION_POLICE</string>
-				<key>Number</key>
-				<string>113</string>
-			</dict>
-			<dict>
-				<key>PreferredEmergencyNumber</key>
-				<false/>
-				<key>SupportsEmergencySetup</key>
-				<false/>
-				<key>Title</key>
-				<string>EMERGENCY_DISAMBIGUATION_AMBULANCE</string>
-				<key>Number</key>
-				<string>118</string>
-			</dict>
-			<dict>
-				<key>PreferredEmergencyNumber</key>
-				<false/>
-				<key>SupportsEmergencySetup</key>
-				<false/>
-				<key>Title</key>
-				<string>EMERGENCY_DISAMBIGUATION_COASTGUARD</string>
-				<key>Number</key>
-				<string>1530</string>
-			</dict>
-		</array>
 	</dict>
 </dict>
 </plist>

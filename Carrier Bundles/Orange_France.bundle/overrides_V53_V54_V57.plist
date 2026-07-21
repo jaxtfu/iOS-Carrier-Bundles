@@ -4,193 +4,18 @@
 <dict>
 	<key>DerPriFileVersion</key>
 	<string>5.0.161</string>
-	<key>SuppressSimToolkitSendShortMessageNotifications</key>
+	<key>AllowSAOnWiFiAssociation</key>
 	<true/>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Show5GStandaloneSwitch</key>
+	<key>ShowVoNRSwitch</key>
 	<true/>
-	<key>VoWiFiCustomerCareWebsite</key>
-	<string>https://assistance.orange.fr/mobile-tablette/tous-les-mobiles-et-tablettes/installer-et-utiliser/communiquer/gerer-les-appels/emettre-un-appel/appels-wi-fi-appeler-grace-au-reseau-wifi_183036-729530#onglet1</string>
 	<key>Enable5GStandaloneByDefault</key>
 	<true/>
-	<key>Show5GSwitch</key>
-	<true/>
-	<key>ShowHighDataModeSwitch</key>
-	<true/>
-	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32768</integer>
-	<key>IPv6SupportedDataModeMask</key>
-	<integer>106527</integer>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
-	<key>SupportsVolteCapability</key>
+	<key>Show5GStandaloneSwitchOnlyWhenEntitled</key>
 	<true/>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Signaling</key>
-		<dict>
-			<key>RingbackTimerSeconds</key>
-			<integer>180</integer>
-			<key>RingingTimerSeconds</key>
-			<integer>180</integer>
-			<key>UseCIDUrlInPIDF</key>
-			<true/>
-			<key>ValidateSipMessageRecipient</key>
-			<false/>
-			<key>SendPreconditionsInConfirmedSessions</key>
-			<true/>
-			<key>SipTimers</key>
-			<dict>
-				<key>InviteResponseTimeout</key>
-				<integer>3000</integer>
-			</dict>
-			<key>AlwaysSendSessionProgress</key>
-			<true/>
-			<key>FatalSmsErrors</key>
-			<string>403,408,500,503,504</string>
-			<key>LocationForShortCodeCalls</key>
-			<string>LATLONG</string>
-			<key>IncomingCallEndReasons</key>
-			<dict>
-				<key>CallToVoicemail</key>
-				<dict>
-					<key>ReasonHeaderText</key>
-					<string>CC_TERM_NOREPLY_TMR_EXPIRED</string>
-					<key>StatusCode</key>
-					<integer>408</integer>
-					<key>TerminationEvent</key>
-					<string>RemoteRequestCanceled</string>
-				</dict>
-				<key>NoReplyTimerExpired</key>
-				<dict>
-					<key>ReasonHeaderText</key>
-					<string>CC_TERM_MULTIUA_INST_NOREPLY_TMR_EXPIRED</string>
-					<key>StatusCode</key>
-					<integer>408</integer>
-					<key>TerminationEvent</key>
-					<string>RemoteRequestCanceled</string>
-				</dict>
-				<key>TemporarilyUnavailable</key>
-				<dict>
-					<key>ReasonHeaderText</key>
-					<string>CC_Q850_001_UNALLOCATED_NUMBER</string>
-					<key>StatusCode</key>
-					<integer>404</integer>
-					<key>TerminationEvent</key>
-					<string>RemoteHangup</string>
-				</dict>
-			</dict>
-			<key>CountryOfOriginationFormat</key>
-			<string>BOTH</string>
-			<key>UseIPSec</key>
-			<true/>
-			<key>IncompleteRegistrationThrottlingIntervalSeconds</key>
-			<integer>1</integer>
-			<key>IPSecSegmentOffset</key>
-			<integer>210</integer>
-			<key>strictCallFlows</key>
-			<true/>
-			<key>EmergencyCallBackModeExpirationSeconds</key>
-			<integer>1</integer>
-			<key>UseFakeSAsForDeregistration</key>
-			<true/>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string>403,408,5XX</string>
-			<key>OutgoingDomain</key>
-			<string>1</string>
-			<key>DefaultAuthAlgorithm</key>
-			<string>AKAv1-MD5</string>
-			<key>AdditionalHeaders</key>
-			<dict>
-				<key>INVITE</key>
-				<string>Accept: application/sdp,application/3gpp-ims+xml</string>
-			</dict>
-			<key>AlwaysAddSipInstance</key>
-			<true/>
-			<key>CallEndReasons</key>
-			<dict>
-				<key>RejectedByUser</key>
-				<dict>
-					<key>ReasonHeaderText</key>
-					<string>User ends call</string>
-					<key>ReasonHeaderCause</key>
-					<integer>1</integer>
-					<key>ReasonHeaderProtocol</key>
-					<string>RELEASE_CAUSE</string>
-				</dict>
-			</dict>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>SendPreferredServiceInInvite</key>
-			<true/>
-			<key>RegistrationPolicy</key>
-			<string>RFC5626</string>
-			<key>TriggerCSFBOnSDPError</key>
-			<true/>
-			<key>AdditionalContactParams</key>
-			<dict>
-				<key>REGISTER,INVITE,INVITE:*</key>
-				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
-			</dict>
-			<key>NetworkTerminationRetryIntervalSeconds</key>
-			<integer>10</integer>
-			<key>AlwaysUnsubscribeFromRegEvents</key>
-			<false/>
-			<key>IPSecBringupUseNetworkPath</key>
-			<true/>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
-			<key>Preconditions</key>
-			<string>Supported</string>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>SendInitialInviteAsInactive</key>
-			<false/>
-			<key>WaitForRingingTimerMTSeconds</key>
-			<integer>7</integer>
-		</dict>
-		<key>EmergencyNumbersOverWifiOnly</key>
-		<array>
-			<string>15</string>
-			<string>17</string>
-			<string>18</string>
-			<string>115</string>
-			<string>191</string>
-			<string>196</string>
-			<string>197</string>
-			<string>119</string>
-			<string>116000</string>
-			<string>116117</string>
-		</array>
-		<key>LocalShortCodeNumbers</key>
-		<array>
-			<string>15</string>
-			<string>17</string>
-			<string>18</string>
-			<string>115</string>
-			<string>191</string>
-			<string>196</string>
-			<string>197</string>
-			<string>119</string>
-			<string>116000</string>
-			<string>116117</string>
-		</array>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>AlwaysSubscribeToConferenceEvents</key>
-			<true/>
-			<key>TreatAllNotificationsAsPartial</key>
-			<true/>
-			<key>SendConferenceSubscribeInNewDialog</key>
-			<true/>
-			<key>conferenceServer</key>
-			<string>sip:mmtel@conf-factory.ims.mnc001.mcc208.3gppnetwork.org</string>
-		</dict>
 		<key>SMS</key>
 		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
 			<key>SupportedDomains</key>
 			<dict>
 				<key>LTE</key>
@@ -202,350 +27,30 @@
 				<key>NR</key>
 				<true/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
-		</dict>
-		<key>Media</key>
-		<dict>
-			<key>RTCPIntervalSeconds</key>
-			<integer>5</integer>
-			<key>PreferredAMRWBMode</key>
-			<integer>8</integer>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>20</integer>
-			<key>EnforceEarlyMediaDirection</key>
-			<true/>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-			<key>HoldHeartbeatIntervalSeconds</key>
-			<integer>5</integer>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>97</key>
-				<dict>
-					<key>br</key>
-					<string>5.9-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-					<key>max-red</key>
-					<string>0</string>
-				</dict>
-				<key>96</key>
-				<dict>
-					<key>br</key>
-					<string>9.6-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>swb</string>
-					<key>max-red</key>
-					<string>0</string>
-				</dict>
-			</dict>
-			<key>HideSessionLevelDirection</key>
-			<true/>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-			<key>UseSDPTemplateForAllInvites</key>
-			<true/>
-			<key>IncludeSDPMaxRed</key>
-			<true/>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>SupportsCW</key>
-			<false/>
-			<key>DisableOnNetworkError</key>
-			<false/>
-			<key>SupportsCLIR</key>
-			<false/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string></string>
-			<key>provisioningDependency</key>
-			<true/>
-			<key>ContentType</key>
-			<string>application/xcap-el+xml</string>
-			<key>supported</key>
-			<true/>
-			<key>NafHost</key>
-			<string>xcap.ims.mnc001.mcc208.pub.3gppnetwork.org</string>
-			<key>SupportsCFErasure</key>
-			<false/>
 		</dict>
 		<key>Voice</key>
 		<dict>
-			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
-			<true/>
-			<key>EnableVolteByDefault</key>
-			<true/>
-			<key>E911OverITechSupported</key>
-			<false/>
-			<key>E911OverCSIfNoIMSReg</key>
-			<true/>
-			<key>endNonEmergencyCalls</key>
-			<true/>
-			<key>PreAlertingDTMFSupported</key>
-			<true/>
 			<key>EnableVoNRByDefault</key>
 			<true/>
 		</dict>
 	</dict>
-	<key>OverrideOperatorWiFiName</key>
-	<string>Orange F Appels Wifi</string>
+	<key>ShowHighDataModeSwitch</key>
+	<true/>
+	<key>SupportsVoNR</key>
+	<true/>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>Show5GStandaloneSwitchOnlyWhenEntitled</key>
-	<true/>
+	<key>IPv6SupportedDataModeMask</key>
+	<integer>106527</integer>
 	<key>CarrierEntitlements</key>
 	<dict>
-		<key>UpdatePeriod</key>
-		<integer>167</integer>
-		<key>SupportSecureIntent</key>
-		<true/>
-		<key>ServerAddress</key>
-		<string>https://aes.orange.fr/aes</string>
-		<key>Authentication</key>
-		<dict>
-			<key>Type</key>
-			<integer>1</integer>
-			<key>Username</key>
-			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
-		</dict>
-		<key>SupportPreflightOnSource</key>
-		<true/>
 		<key>SupportedEntitlements</key>
 		<integer>4236497</integer>
-		<key>SupportedAuthorizationTokens</key>
-		<integer>2</integer>
-		<key>UserAgent</key>
-		<string>Entitlement/$version ($device) iOS/$iOSVersion  Carrier Settings/$carrierBundleVersion HW ($hardwareModel)</string>
-		<key>SupportCrossPlatformSIMTransfer</key>
-		<true/>
-		<key>SupportPhysicalSIMtoESIMTransfer</key>
-		<true/>
-		<key>ProtocolVersion</key>
-		<string>2</string>
-		<key>SupportedActions</key>
-		<array>
-			<string>TransferSIMService</string>
-		</array>
-		<key>SupportsOnDevicePhysicalSIMConvert</key>
-		<true/>
 	</dict>
-	<key>AllowSAOnWiFiAssociation</key>
-	<true/>
-	<key>AttachAPN</key>
-	<dict>
-		<key>3GPP</key>
-		<dict>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>3</integer>
-			<key>password</key>
-			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>2</integer>
-			<key>enableXLAT464</key>
-			<true/>
-			<key>PcscfAddressRequired</key>
-			<false/>
-			<key>username</key>
-			<string></string>
-			<key>AllowedProtocolMaskInRoamingUMTS</key>
-			<integer>3</integer>
-			<key>apn</key>
-			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
-		</dict>
-	</dict>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
 	<key>ShowVolteSwitch</key>
 	<false/>
-	<key>Enable5GAutoByDefault</key>
+	<key>Show5GStandaloneSwitch</key>
 	<true/>
-	<key>SupportsImsCapability</key>
-	<true/>
-	<key>ShowVoNRSwitch</key>
-	<true/>
-	<key>VoLTECustomerCareWebsite</key>
-	<string>https://assistance.orange.fr/mobile-tablette/tous-les-mobiles-et-tablettes/installer-et-utiliser/communiquer/gerer-les-appels/emettre-un-appel/voix-4g-volte-connaitre-les-conditions-d-eligibilite-et-gerer-vos-services-incompatibles_154006-302982</string>
-	<key>RemoteCardProvisioningSettings</key>
-	<dict>
-		<key>MatchingICCIDPrefixes</key>
-		<array>
-			<string>893301</string>
-		</array>
-		<key>ActivatingStateSubscriptionCheckTimerIntervals</key>
-		<array>
-			<integer>1800</integer>
-			<integer>3600</integer>
-			<integer>5400</integer>
-		</array>
-		<key>ProvisioningMethod</key>
-		<string>CarrierFlow</string>
-		<key>SupportedSKUs</key>
-		<array>
-			<string>SKU_EU</string>
-		</array>
-		<key>SupportsFauxCard</key>
-		<false/>
-		<key>ServerURL</key>
-		<string>rsp-0004.oberthur.net</string>
-	</dict>
-	<key>SupportsNRNSAInboundRoaming</key>
-	<true/>
-	<key>TechSettings</key>
-	<dict>
-		<key>WifiCallingAllowedInRoaming</key>
-		<false/>
-		<key>ChildSAs</key>
-		<dict>
-			<key>FirstChild</key>
-			<dict>
-				<key>ChildProposals</key>
-				<array>
-					<dict>
-						<key>IntegrityAlgorithm</key>
-						<array>
-							<string>SHA2-256</string>
-						</array>
-						<key>EncryptionAlgorithm</key>
-						<array>
-							<string>AES-256</string>
-						</array>
-						<key>DHGroup</key>
-						<integer>14</integer>
-						<key>Lifetime</key>
-						<integer>80000</integer>
-					</dict>
-				</array>
-				<key>InstallPolicies</key>
-				<true/>
-				<key>ReplayWindowSize</key>
-				<integer>12</integer>
-			</dict>
-		</dict>
-		<key>iRatPolicies</key>
-		<dict>
-			<key>PreferredTechnology</key>
-			<string>wifi</string>
-			<key>PreferredTechnologyRoaming</key>
-			<string>wifi</string>
-		</dict>
-		<key>5wiServiceMask</key>
-		<integer>3</integer>
-		<key>ExtraConfigurationAttributeRequestv4</key>
-		<array>
-			<dict>
-				<key>Identifier</key>
-				<integer>20</integer>
-				<key>Name</key>
-				<string>AssignedPCSCFIPv4</string>
-				<key>Type</key>
-				<string>IPv4Address</string>
-			</dict>
-		</array>
-		<key>ExtraConfigurationAttributeRequestv6</key>
-		<array>
-			<dict>
-				<key>Identifier</key>
-				<integer>21</integer>
-				<key>Name</key>
-				<string>AssignedPCSCFIPv6</string>
-				<key>Type</key>
-				<string>IPv6Address</string>
-			</dict>
-		</array>
-		<key>SupportCallHandover</key>
-		<true/>
-		<key>TechPolicies</key>
-		<array>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>131072</integer>
-			</dict>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>1081350</integer>
-			</dict>
-			<dict>
-				<key>policy</key>
-				<string>true</string>
-				<key>serviceMask</key>
-				<integer>262144</integer>
-			</dict>
-		</array>
-		<key>IKE</key>
-		<dict>
-			<key>LocalIdentifier</key>
-			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
-			<key>NATTKeepAliveOffload</key>
-			<true/>
-			<key>DeadPeerDetectionRetryInterval</key>
-			<integer>10</integer>
-			<key>DeadPeerDetectionEnabled</key>
-			<false/>
-			<key>RemoteAddress</key>
-			<string>epdg.epc.mnc001.mcc208.pub.3gppnetwork.org</string>
-			<key>Proposals</key>
-			<array>
-				<dict>
-					<key>EncryptionAlgorithm</key>
-					<string>AES-256</string>
-					<key>IntegrityAlgorithm</key>
-					<string>SHA2-256</string>
-					<key>DHGroup</key>
-					<integer>14</integer>
-					<key>AuthenticationMethod</key>
-					<string>None</string>
-					<key>Lifetime</key>
-					<integer>80000</integer>
-					<key>EAPMethod</key>
-					<string>EAP-AKA</string>
-					<key>PRFAlgorithm</key>
-					<string>SHA2-256</string>
-				</dict>
-			</array>
-			<key>RemoteIdentifierType</key>
-			<string>KeyID</string>
-			<key>DeadPeerDetectionMaxRetries</key>
-			<integer>4</integer>
-			<key>DeadPeerDetectionInterval</key>
-			<integer>600</integer>
-			<key>NATTKeepAliveEnabled</key>
-			<true/>
-			<key>ValidateRemoteCertificate</key>
-			<false/>
-			<key>NATTKeepAliveInterval</key>
-			<integer>20</integer>
-		</dict>
-		<key>WiFiCallingControlsAlliWLanServices</key>
-		<true/>
-		<key>SetHandOverIPv6Prefix</key>
-		<true/>
-	</dict>
-	<key>PushSettings</key>
-	<dict>
-		<key>Topic</key>
-		<string>com.orange.fr.aes.volteandtethering</string>
-		<key>MultiSIMTopic</key>
-		<string>com.orange.fr.aes.multisim</string>
-		<key>VoWiFiTopic</key>
-		<string>com.orange.fr.aes.vowifi</string>
-	</dict>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -553,8 +58,6 @@
 			<integer>1081399</integer>
 			<key>password</key>
 			<string>orange</string>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>enableXLAT464</key>
 			<true/>
 			<key>AllowedProtocolMaskInRoaming</key>
@@ -581,33 +84,29 @@
 		<dict>
 			<key>type-mask</key>
 			<integer>131072</integer>
-			<key>password</key>
-			<string>orange</string>
 			<key>Support5GSaHandOver</key>
 			<true/>
+			<key>password</key>
+			<string>orange</string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
 			<key>UseNetworkMTU</key>
 			<true/>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string>orange</string>
 			<key>apn</key>
 			<string>ims</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
+			<key>type-mask</key>
+			<integer>262144</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
-			<integer>262144</integer>
-			<key>type-mask</key>
 			<integer>262144</integer>
 			<key>apn</key>
 			<string>sos</string>
@@ -617,11 +116,17 @@
 			<string></string>
 			<key>UseNetworkMTU</key>
 			<true/>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</array>
-	<key>SupportsVoNR</key>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
+	<key>Show5GSwitch</key>
+	<true/>
+	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 </dict>
 </plist>

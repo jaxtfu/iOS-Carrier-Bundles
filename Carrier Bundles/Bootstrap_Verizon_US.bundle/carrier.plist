@@ -13,6 +13,8 @@
 	<true/>
 	<key>DisallowCarrierMenuAtHome</key>
 	<true/>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>SuppressSimToolkitSendShortMessageNotifications</key>
@@ -30,6 +32,8 @@
 	<integer>0</integer>
 	<key>StaticNATType</key>
 	<integer>8400</integer>
+	<key>Show5GSwitch</key>
+	<false/>
 	<key>Show4GSwitch</key>
 	<false/>
 	<key>SupportedSIMs</key>
@@ -39,6 +43,14 @@
 	</array>
 	<key>OverrideCarrierMenuTo</key>
 	<false/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>ShowRATIndicator</key>
 	<false/>
 	<key>CarrierName</key>
@@ -55,14 +67,14 @@
 			<string></string>
 			<key>apn</key>
 			<string>aplboot.vzwentp</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>ShowDataIndicator</key>
 	<false/>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
 	<key>OTAActivationProxyHost</key>
 	<string>sq-device-proxy.apple.com</string>
 	<key>SMSUseLocalTZ</key>
@@ -101,6 +113,8 @@
 	</dict>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.UnitedStates</string>
+	<key>SupportsNRNSAInboundRoaming</key>
+	<true/>
 	<key>OTAActivationProxyPort</key>
 	<integer>443</integer>
 	<key>SupportedPLMNs</key>
@@ -117,8 +131,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>aplboot.vzwentp</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>type-mask</key>
 			<integer>532480</integer>
 			<key>AllowedProtocolMask</key>

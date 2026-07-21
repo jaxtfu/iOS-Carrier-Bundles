@@ -2,158 +2,21 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>DerPriFileVersion</key>
-	<string>0.1.161</string>
-	<key>Show3GSwitchWith4G</key>
-	<false/>
-	<key>SupportsImsCapability</key>
-	<true/>
-	<key>OverrideOperatorWiFiName</key>
-	<string>Telia VoWiFi</string>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
-	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32768</integer>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Signaling</key>
-		<dict>
-			<key>strictCallFlows</key>
-			<true/>
-			<key>UseOutgoingSipUri</key>
-			<true/>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string>3XX,5XX</string>
-			<key>EnableCellularNetworkInfo</key>
-			<true/>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>RingbackTimerSeconds</key>
-			<integer>180</integer>
-			<key>RingingTimerSeconds</key>
-			<integer>180</integer>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
-			<key>ValidateSipMessageRecipient</key>
-			<false/>
-			<key>SendResumeInviteAsSendRecv</key>
-			<false/>
-			<key>DefaultAuthAlgorithm</key>
-			<string>AKAv1-MD5</string>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>Preconditions</key>
-			<string>Supported</string>
-			<key>AdditionalContactParams</key>
-			<dict>
-				<key>REGISTER,INVITE,INVITE:*</key>
-				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
-			</dict>
-			<key>CountryOfOriginationFormat</key>
-			<string>PANI</string>
-			<key>TriggerCSFBOnSDPError</key>
-			<true/>
-			<key>UseCIDUrlInPIDF</key>
-			<true/>
-			<key>UseIPSec</key>
-			<true/>
-		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>AlwaysSubscribeToConferenceEvents</key>
-			<true/>
-			<key>conferenceServer</key>
-			<string>sip:mmtel@conf-factory.ims.mnc001.mcc248.3gppnetwork.org</string>
-		</dict>
-		<key>AllowHandoverWithoutIMSVoiceService</key>
-		<true/>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>SupportedDomains</key>
-			<dict>
-				<key>LTE</key>
-				<true/>
-			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
-		</dict>
-		<key>Media</key>
-		<dict>
-			<key>RTCPIntervalSeconds</key>
-			<integer>5</integer>
-			<key>IncludeSDPMaxRed</key>
-			<true/>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>109</key>
-				<dict>
-					<key>ch-aw-recv</key>
-					<string>3</string>
-					<key>br</key>
-					<string>5.9-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-					<key>cmr</key>
-					<string>1</string>
-				</dict>
-			</dict>
-			<key>EnableIncomingDTMF</key>
-			<true/>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>SupportsCW</key>
-			<true/>
-			<key>SupportsCLIR</key>
-			<false/>
-			<key>DisableOnNetworkError</key>
-			<true/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string>403,404</string>
-			<key>ContentType</key>
-			<string>application/xcap-el+xml</string>
-			<key>supported</key>
-			<true/>
-			<key>SupportsCFErasure</key>
-			<false/>
-		</dict>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<true/>
-		<key>Voice</key>
-		<dict>
-			<key>E911OverITechSupported</key>
-			<true/>
-			<key>EnableVolteByDefault</key>
-			<true/>
-		</dict>
-	</dict>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<key>DerPriFileVersion</key>
+	<string>0.1.161</string>
+	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
 	<key>ShowVolteSwitch</key>
 	<false/>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Enable5GAutoByDefault</key>
+	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 	<key>Show5GSwitch</key>
-	<true/>
-	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 </dict>
 </plist>

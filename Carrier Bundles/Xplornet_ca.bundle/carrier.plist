@@ -13,12 +13,16 @@
 			<string>Xplore Mobile Customer Care</string>
 		</dict>
 	</array>
+	<key>SuppressSimToolkitSendShortMessageNotifications</key>
+	<true/>
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
 	<string>https://www.xploremobile.ca</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
+	<key>EnableLTEAfterUpgrade</key>
+	<true/>
 	<key>SMSSettings</key>
 	<dict>
 		<key>TransportFallback</key>
@@ -26,6 +30,8 @@
 	</dict>
 	<key>MyAccountURLTitle</key>
 	<string>Xplore Mobile iPhone page</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
 		<key>BeaconAddress</key>
@@ -58,6 +64,168 @@
 		<key>GreetingNotification</key>
 		<true/>
 	</dict>
+	<key>Show4GSwitch</key>
+	<true/>
+	<key>Location</key>
+	<dict>
+		<key>EnableCPIDuringEmergencyMode</key>
+		<true/>
+		<key>EnableEarlyReturnDuringEmergencyMode</key>
+		<true/>
+	</dict>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;</string>
+			</dict>
+			<key>LocalQoSTimeoutMOSeconds</key>
+			<integer>5000</integer>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>UseFakeSAsForDeregistration</key>
+			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>ReRegisterOnErrorCodes</key>
+			<string>SUBSCRIBE:480</string>
+			<key>SipTimers</key>
+			<dict>
+				<key>InviteResponseTimeout</key>
+				<integer>5000</integer>
+			</dict>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<integer>25</integer>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>SubscriptionTerminatedMeansRegistrationTerminated</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>403,408,480,488,500,504,600,606,503</string>
+			<key>EmergencyCallBackModeExpirationSeconds</key>
+			<integer>1</integer>
+			<key>MaxUdpMessageSize</key>
+			<integer>1300</integer>
+			<key>StartLocalQosTimerOnSessionProgress</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>45</integer>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>15</integer>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>DeclineInUse</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>Secondary device already in use</string>
+					<key>StatusCode</key>
+					<integer>603</integer>
+					<key>TerminationEvent</key>
+					<string>SecondaryDeviceInUse</string>
+				</dict>
+			</dict>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>ClearRegistrationCallIdOnDeinitialization</key>
+			<true/>
+			<key>ValidateSipMessageRecipient</key>
+			<false/>
+			<key>VerstatFeatureCapability</key>
+			<string>Enabled</string>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc130.mcc302.3gppnetwork.org</string>
+		</dict>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc130.mcc302.pub.3gppnetwork.org</string>
+			<key>provisioningDependency</key>
+			<false/>
+			<key>BsfPort</key>
+			<integer>8001</integer>
+			<key>Auid</key>
+			<string>rem/sentinel/xcap/simservs.ngn.etsi.org</string>
+			<key>NafPort</key>
+			<integer>8080</integer>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>supported</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+			<key>BsfHost</key>
+			<string>bsf.ims.mnc130.mcc302.pub.3gppnetwork.org</string>
+			<key>SupportsCW</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>MaxRedundancy</key>
+			<integer>220</integer>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>30</integer>
+			<key>ModeSetAMRWB</key>
+			<string>0,1,2</string>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>DisableVolteSwitchOnIncompatibleState</key>
+			<true/>
+			<key>E911OverCSIfNoIMSReg</key>
+			<true/>
+			<key>E911SearchTimer</key>
+			<integer>1</integer>
+			<key>EnableVolteByDefault</key>
+			<true/>
+			<key>tLte911Timer</key>
+			<integer>600</integer>
+		</dict>
+	</dict>
+	<key>ShowDialAssist</key>
+	<true/>
+	<key>Show3GSwitchWith4G</key>
+	<true/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -69,24 +237,13 @@
 			<string>Xplore</string>
 		</dict>
 	</array>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>+447786205094</string>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>302130</string>
 		<string>20404_ID-89302130</string>
 	</array>
-	<key>Location</key>
-	<dict>
-		<key>EnableCPIDuringEmergencyMode</key>
-		<true/>
-		<key>EnableEarlyReturnDuringEmergencyMode</key>
-		<true/>
-	</dict>
-	<key>ShowDialAssist</key>
-	<true/>
-	<key>Show3GSwitchWith4G</key>
-	<true/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>+447786205094</string>
 	<key>CarrierName</key>
 	<string>Xplore</string>
 	<key>AttachAPN</key>
@@ -97,21 +254,25 @@
 			<string></string>
 			<key>PcscfAddressRequired</key>
 			<false/>
-			<key>username</key>
-			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>internet.xploremobile.com</string>
+			<key>username</key>
+			<string></string>
 			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SupportsUserBusyCauseCode</key>
 	<true/>
-	<key>VisualVoicemailServiceName</key>
-	<string>IMAP</string>
-	<key>ShowTTY</key>
+	<key>ShowVolteSwitch</key>
+	<false/>
+	<key>SupportsImsCapability</key>
 	<true/>
 	<key>SMSUseLocalTZ</key>
+	<true/>
+	<key>SupportsVolteCapability</key>
 	<true/>
 	<key>CellBroadcast</key>
 	<dict>
@@ -172,6 +333,8 @@
 			</dict>
 		</array>
 	</dict>
+	<key>VisualVoicemailServiceName</key>
+	<string>IMAP</string>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Canada</string>
 	<key>MMS</key>
@@ -196,10 +359,58 @@
 			<string></string>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>internet.xploremobile.com</string>
 			<key>type-mask</key>
 			<integer>55</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
+			<key>apn</key>
+			<string>xcap.xploremobile.com</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>password</key>
+			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>2</integer>
+			<key>SupportSwitchOver</key>
+			<true/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
+			<key>apn</key>
+			<string>sos</string>
+			<key>type-mask</key>
+			<integer>262144</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>OTASoftwareUpdate</key>

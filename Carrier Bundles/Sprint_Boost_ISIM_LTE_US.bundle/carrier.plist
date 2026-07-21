@@ -2,8 +2,32 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>OTASoftwareUpdate</key>
-	<dict/>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>UpdatePeriod</key>
+		<integer>23</integer>
+		<key>SupportedEntitlements</key>
+		<integer>257</integer>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>DisableSecondaryCredentials</key>
+		<true/>
+		<key>InvalidateSimForUnknownSubscriber</key>
+		<true/>
+		<key>UserAgent</key>
+		<string>Entitlement/$version ($device) iOS/$iOSVersion</string>
+		<key>ServerAddress</key>
+		<string>https://deg.spcsdns.net/ium-OEMInterface/servlet/IUMServlet</string>
+	</dict>
+	<key>SupportsSIMAPN</key>
+	<true/>
 	<key>AttachAPN</key>
 	<dict>
 		<key>3GPP</key>
@@ -93,16 +117,14 @@
 	<true/>
 	<key>SupportsSupplementaryServices</key>
 	<false/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>9759</string>
 	<key>Show4GSwitch</key>
 	<true/>
 	<key>ShowDialAssist</key>
 	<true/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>9759</string>
 	<key>OverrideOperatorName</key>
 	<string>Boost</string>
-	<key>ShowTTY</key>
-	<true/>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
 		<key>MaxGreetingDuration</key>
@@ -131,25 +153,10 @@
 			</array>
 		</dict>
 	</dict>
-	<key>OTAActivation</key>
-	<dict>
-		<key>BlacklistedSIMs</key>
-		<array>
-			<string>44053</string>
-			<string>44054</string>
-			<string>44070</string>
-			<string>44071</string>
-			<string>44072</string>
-			<string>44073</string>
-			<string>44074</string>
-			<string>44075</string>
-			<string>44076</string>
-			<string>44078</string>
-			<string>46003</string>
-		</array>
-	</dict>
 	<key>DisallowCarrierMenuAtHome</key>
 	<true/>
+	<key>NotRegisteredResetWaitPeriod</key>
+	<integer>60</integer>
 	<key>EncryptedIdentity</key>
 	<dict>
 		<key>AnonymousUsername</key>
@@ -161,20 +168,10 @@
 		<key>KeyIdentifier</key>
 		<string>CertificateSerialNumber=8c7b27a6f39c53af0000000050de36e2</string>
 	</dict>
-	<key>NotRegisteredResetWaitPeriod</key>
-	<integer>60</integer>
 	<key>OTAActivationProxyHost</key>
 	<string>oma.acme.com</string>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.UnitedStates</string>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
-	<key>FallbackMethod</key>
-	<integer>2</integer>
-	<key>RequiresServiceProvisioning</key>
-	<true/>
-	<key>OTANumber</key>
-	<string>##873283#</string>
 	<key>MMS</key>
 	<dict>
 		<key>MaxMessageSize</key>
@@ -210,8 +207,32 @@
 		<key>CarrierRequiredPhoneNumberHeaderName</key>
 		<string>x-pcs-mdn</string>
 	</dict>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
+	<key>FallbackMethod</key>
+	<integer>2</integer>
+	<key>RequiresServiceProvisioning</key>
+	<true/>
+	<key>Location</key>
+	<dict>
+		<key>EmergencyLocation</key>
+		<dict>
+			<key>ControlPlane</key>
+			<dict>
+				<key>CDMA</key>
+				<dict>
+					<key>ProvideHELOUnsolicited</key>
+					<true/>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>OTANumber</key>
+	<string>##873283#</string>
 	<key>RemoteDiagnosticsWWANAllowed</key>
 	<true/>
+	<key>ShowVolteSwitch</key>
+	<false/>
 	<key>TetheringURL</key>
 	<string>http://m.boostmobile.com/myaccount</string>
 	<key>apns</key>
@@ -227,9 +248,21 @@
 					<key>apn</key>
 					<string>cinet.spcs</string>
 					<key>type-mask</key>
-					<integer>36919</integer>
+					<integer>33335</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>password</key>
+					<string></string>
+					<key>username</key>
+					<string></string>
+					<key>apn</key>
+					<string>ims</string>
+					<key>type-mask</key>
+					<integer>131072</integer>
+					<key>AllowedProtocolMask</key>
+					<integer>2</integer>
 				</dict>
 			</array>
 			<key>technology-mask</key>
@@ -241,12 +274,12 @@
 				<dict>
 					<key>password</key>
 					<string></string>
+					<key>enableXLAT464</key>
+					<true/>
 					<key>username</key>
 					<string></string>
 					<key>apn</key>
-					<string>n.boost.ispsn</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
+					<string>x.boost.ispsn</string>
 					<key>type-mask</key>
 					<integer>7</integer>
 					<key>AllowedProtocolMask</key>
@@ -258,9 +291,21 @@
 					<key>username</key>
 					<string></string>
 					<key>apn</key>
+					<string>ims</string>
+					<key>type-mask</key>
+					<integer>131072</integer>
+					<key>AllowedProtocolMask</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>password</key>
+					<string></string>
+					<key>username</key>
+					<string></string>
+					<key>apn</key>
 					<string>otasn</string>
 					<key>type-mask</key>
-					<integer>37376</integer>
+					<integer>33280</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>1</integer>
 				</dict>
@@ -281,16 +326,55 @@
 			<integer>14</integer>
 		</dict>
 	</array>
-	<key>SuspendFastDormancyAllowed</key>
-	<true/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<true/>
+			<key>SMSBundleToVoice</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>EHRPD</key>
+				<false/>
+				<key>GSM</key>
+				<false/>
+				<key>UMTS</key>
+				<false/>
+				<key>LTE</key>
+				<true/>
+			</dict>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SMSSettings</key>
+	<dict>
+		<key>MessageFormat</key>
+		<dict>
+			<key>SignalingFormat</key>
+			<integer>2</integer>
+			<key>CSFBFormat</key>
+			<integer>2</integer>
+		</dict>
+		<key>OutgoingSMSPrefix</key>
+		<dict>
+			<key>International</key>
+			<string>+011</string>
+		</dict>
+	</dict>
 	<key>Show3GSwitch</key>
 	<false/>
-	<key>TetheringPhoneNumber</key>
-	<string>611</string>
+	<key>SuspendFastDormancyAllowed</key>
+	<true/>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32770</integer>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
+	<key>TetheringPhoneNumber</key>
+	<string>611</string>
 	<key>MTU</key>
 	<array>
 		<dict>
@@ -306,6 +390,8 @@
 			<integer>1472</integer>
 		</dict>
 	</array>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
 	<key>Services</key>
 	<array>
 		<dict>
@@ -356,12 +442,12 @@
 			<string>Boost</string>
 		</dict>
 	</array>
+	<key>ResetSIMProvisoning</key>
+	<string>##25327#</string>
 	<key>CarrierName</key>
 	<string>Boost</string>
-	<key>SupportsImsCapability</key>
-	<false/>
 	<key>MyAccountURL</key>
-	<string>http://m.boostmobile.com/myaccount</string>
+	<string>https://m.boostmobile.com/myaccount</string>
 	<key>OTAActivationProxyPort</key>
 	<integer>443</integer>
 	<key>SupportedPLMNs</key>
@@ -388,6 +474,8 @@
 		<string>33066</string>
 		<string>44020</string>
 	</array>
+	<key>SupportsImsCapability</key>
+	<false/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>310120_GID2-13</string>

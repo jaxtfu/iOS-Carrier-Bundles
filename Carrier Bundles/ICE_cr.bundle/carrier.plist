@@ -63,14 +63,28 @@
 	</array>
 	<key>ShowDialAssist</key>
 	<false/>
+	<key>Show3GSwitchWith4G</key>
+	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>4002</string>
 	<key>CarrierName</key>
 	<string>Kolbi ICE</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>apn</key>
+			<string>kolbi3g</string>
+			<key>username</key>
+			<string></string>
+			<key>password</key>
+			<string></string>
+		</dict>
+	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>1190</string>
 	<key>HomeBundleIdentifier</key>

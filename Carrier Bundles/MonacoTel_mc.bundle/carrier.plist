@@ -50,8 +50,6 @@
 		<string>+447537410287</string>
 		<string>+447537410297</string>
 	</array>
-	<key>ShowTTY</key>
-	<false/>
 	<key>Show3GSwitchWith4G</key>
 	<false/>
 	<key>com.apple.voicemail.imap</key>
@@ -196,8 +194,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
@@ -260,8 +256,13 @@
 		</dict>
 		<key>SMS</key>
 		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<true/>
+			</dict>
 		</dict>
 		<key>Media</key>
 		<dict>
@@ -269,20 +270,18 @@
 			<dict>
 				<key>109</key>
 				<dict>
-					<key>hf-only</key>
-					<string>0</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
 					<key>ch-aw-recv</key>
 					<string>-1</string>
-					<key>cmr</key>
-					<string>-1</string>
-					<key>EncodingName</key>
-					<string>EVS</string>
 					<key>br</key>
 					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
 					<key>bw</key>
 					<string>nb-wb</string>
+					<key>cmr</key>
+					<string>-1</string>
 				</dict>
 			</dict>
 			<key>IncludeSDPModeChangeCapability</key>
@@ -322,11 +321,6 @@
 			<key>EnableVolteByDefault</key>
 			<true/>
 		</dict>
-	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
@@ -375,9 +369,11 @@
 	<key>CarrierName</key>
 	<string>Monaco Telecom</string>
 	<key>MyAccountURL</key>
-	<string>http://www.monaco-telecom.mc</string>
+	<string>https://www.monaco-telecom.mc</string>
 	<key>MyAccountURLTitle</key>
 	<string>MonacoTelecom</string>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>IntlDataRoamingAllowed</key>
 	<array>
 		<string>20801</string>

@@ -8,6 +8,51 @@
 	<true/>
 	<key>DataIndicatorOverrideForLTE</key>
 	<string>4G</string>
+	<key>EncryptedIdentity</key>
+	<dict>
+		<key>AnonymousUsername</key>
+		<string>anonymous</string>
+		<key>Certificate</key>
+		<string>MIIGJjCCBQ6gAwIBAgIQDZtxgdudVhPykZ0aE1xMCDANBgkqhkiG9w0BAQsFADBg
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3
+d3cuZGlnaWNlcnQuY29tMR8wHQYDVQQDExZHZW9UcnVzdCBUTFMgUlNBIENBIEcx
+MB4XDTI1MTExMzAwMDAwMFoXDTI2MTIxNDIzNTk1OVowGjEYMBYGA1UEAxMPZXBk
+Zy5mYXN0d2ViLml0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA31yW
++yR/42hxb5LB4PL1LqWAvuTkkrkXVSG3BVGQDSCrWn2WM+mIK0vRppufnw+mXbbN
++S+rYzy1YzitVvhJVR7mP+7Sm/XyDhJeytlrjH6eyyAg3cePR/3F6Zf4hIgzKPsZ
+qN3bic0hpJ9BB/ZGd/qL4uYsLIg8aCFVO6zwvhiGZFH/DwLCNW0U2FqDAfyTGhGo
+F3ye3q7R5Q1qXi+VBAIp6KaDM+6B+s2fGQ3rqi8aG/5bwpmAxw+8dvFvN7kA8DOj
+1iv2VeOdA+/7wxSNqj4KdMQCh430l+9vxQV8I6IS2Nulnx/Vh67ETykOG+qb+pwy
+nd/RK2CD+N20WbTi5wIDAQABo4IDIDCCAxwwHwYDVR0jBBgwFoAUlE/UXYvkpOKm
+gP792PkA76O+AlcwHQYDVR0OBBYEFGJHALKIwL1zXaMJvn01HLx81eO4MC8GA1Ud
+EQQoMCaCD2VwZGcuZmFzdHdlYi5pdIITd3d3LmVwZGcuZmFzdHdlYi5pdDA+BgNV
+HSAENzA1MDMGBmeBDAECATApMCcGCCsGAQUFBwIBFhtodHRwOi8vd3d3LmRpZ2lj
+ZXJ0LmNvbS9DUFMwDgYDVR0PAQH/BAQDAgWgMBMGA1UdJQQMMAoGCCsGAQUFBwMB
+MD8GA1UdHwQ4MDYwNKAyoDCGLmh0dHA6Ly9jZHAuZ2VvdHJ1c3QuY29tL0dlb1Ry
+dXN0VExTUlNBQ0FHMS5jcmwwdgYIKwYBBQUHAQEEajBoMCYGCCsGAQUFBzABhhpo
+dHRwOi8vc3RhdHVzLmdlb3RydXN0LmNvbTA+BggrBgEFBQcwAoYyaHR0cDovL2Nh
+Y2VydHMuZ2VvdHJ1c3QuY29tL0dlb1RydXN0VExTUlNBQ0FHMS5jcnQwDAYDVR0T
+AQH/BAIwADCCAXsGCisGAQQB1nkCBAIEggFrBIIBZwFlAHUA2AlVO5RPev/IFhlv
+lE+Fq7D4/F6HVSYPFdEucrtFSxQAAAGafbhPGQAABAMARjBEAiAJrFE/dv3phNMq
+jkZAgO6W/3sdtF3Iv2wSUxmGGgVVSAIgc2GCmkD9Zo+TszKyGJitbK2g00MwwjhO
+e1tEm4FfV14AdQDCMX5XRRmjRe5/ON6ykEHrx8IhWiK/f9W1rXaa2Q5SzQAAAZp9
+uE8UAAAEAwBGMEQCIGEzL9NwX0dwPHQ5UEruSEKSpPoR3BeirG7cJwrsDLJdAiBB
+eI3Vt16/fPY1P3LnEshOOUAVuQCX9VprYhAfLlcT2wB1AJROQ4f67MHvgfMZJCao
+GGUBx9NfOAIBP3JnfVU3LhnYAAABmn24TyEAAAQDAEYwRAIgJw/gnLBhRqL/7F+I
+Sz01O7k1+mNQ2EnVGQpWWU0cp6MCIBCnN4XoQvc08KgHipgEFiRqD3/hjfnwenp5
+0Sp85IEnMA0GCSqGSIb3DQEBCwUAA4IBAQCRjRLDrCQqdlLaWj9Rt5ZLg2OyIVgD
+wBlm1RqE5g+7GO789qGp2aekOGVmEA6Nf4XtPVa0grmYD1sFRmKUEQXtImCvlRNn
+DgrQptO2NC9AdnxZ00qA3Uv3oW+l4eWPrpgzRd/LYbPJnjebCPzIOg0HDOW3hjfp
+C2ZwM6irhxHWlVIq3ioJmS7cpqVH13aIxwEoL/vxLglMYfcI3+/XIk5oOfMJAv0t
+lvnRGSeDZanWdm+FCiPF87evhBuj5YcE6cReyouHHAQMn7q8GIDX7+Rasea4mFKp
+riOVI+5j+L+FCGZORgv66DY2iaXxShcoU8dvfBY32nt9odYCFDc5wYHp</string>
+		<key>UpdateURL</key>
+		<string>https://gofw.it/applewificalling2025</string>
+		<key>KeyIdentifier</key>
+		<string>CertificateSerialNumber=0d9b7181db9d5613f2919d1a135c4c08</string>
+		<key>UpdatePeriod</key>
+		<string>48</string>
+	</dict>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>
@@ -47,25 +92,22 @@
 			</array>
 		</dict>
 	</dict>
-	<key>SupportsNITZ</key>
-	<true/>
 	<key>MyAccountURL</key>
 	<string>https://www.fastweb.it/appledevice/</string>
+	<key>SupportsNITZ</key>
+	<true/>
 	<key>SuppressSimToolkitSendShortMessageNotifications</key>
 	<true/>
 	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>MyAccountURLTitle</key>
 	<string>Fastweb</string>
-	<key>RoamingVoicemailPilotNumber</key>
-	<string>+393756004141</string>
 	<key>IPv6SupportedDataModeMask</key>
 	<integer>12319</integer>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
+	<key>RoamingVoicemailPilotNumber</key>
+	<string>+393756004141</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -113,7 +155,7 @@
 			<key>AdditionalContactParams</key>
 			<dict>
 				<key>REGISTER,INVITE,INVITE:*[primary]</key>
-				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting;text</string>
 			</dict>
 			<key>UseIPSec</key>
 			<true/>
@@ -127,6 +169,8 @@
 			<key>EnableVolteByDefault</key>
 			<true/>
 		</dict>
+		<key>EnableWiFiCallingByDefault</key>
+		<true/>
 		<key>SMS</key>
 		<dict>
 			<key>enableInNonVoLTEMode</key>
@@ -142,8 +186,6 @@
 				<key>NR</key>
 				<false/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>XCAP</key>
 		<dict>
@@ -186,12 +228,30 @@
 		</dict>
 		<key>Media</key>
 		<dict>
-			<key>RingbackTone</key>
-			<string>CEPT</string>
 			<key>InactivityTimerRTPSeconds</key>
 			<integer>20</integer>
+			<key>RingbackTone</key>
+			<string>CEPT</string>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 			<key>IncludeSDPModeChangeCapability</key>
 			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>112</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>br</key>
+					<string>9.6-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
 			<key>EnableBandwidthSpecifiers</key>
 			<true/>
 		</dict>
@@ -210,7 +270,7 @@
 		<true/>
 	</dict>
 	<key>OverrideOperatorWiFiName</key>
-	<string>Fastweb WiFiCall</string>
+	<string>Fastweb Wi-Fi</string>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
 	<key>CarrierName</key>
@@ -219,19 +279,17 @@
 	<dict>
 		<key>3GPP</key>
 		<dict>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>1</integer>
 			<key>password</key>
 			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
-			<key>AllowedProtocolMaskInRoamingUMTS</key>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
 			<integer>1</integer>
 			<key>apn</key>
 			<string>apn.fastweb.it</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMaskInRoamingUMTS</key>
+			<integer>1</integer>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</dict>
@@ -258,8 +316,8 @@
 	<integer>49</integer>
 	<key>TechSettings</key>
 	<dict>
-		<key>WifiCallingAllowedInRoaming</key>
-		<false/>
+		<key>WiFiCallingIdentityProtectionMethod</key>
+		<string>EncryptedIdentity</string>
 		<key>ChildSAs</key>
 		<dict>
 			<key>FirstChild</key>
@@ -281,6 +339,8 @@
 				</array>
 			</dict>
 		</dict>
+		<key>WifiCallingAllowedInRoaming</key>
+		<false/>
 		<key>iRatPolicies</key>
 		<dict>
 			<key>PreferredTechnology</key>
@@ -335,18 +395,16 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>49</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>apn.fastweb.it</string>
+			<key>type-mask</key>
+			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>

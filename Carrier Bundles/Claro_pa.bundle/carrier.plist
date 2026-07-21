@@ -34,13 +34,15 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.claro.com.pa/iphone</string>
+	<string>https://www.claro.com.pa/iphone</string>
 	<key>EnableLTEAfterUpgrade</key>
 	<true/>
 	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>MyAccountURLTitle</key>
 	<string>CLARO</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StockSymboli</key>
 	<array>
 		<dict>
@@ -198,8 +200,6 @@
 			<integer>1</integer>
 		</dict>
 	</dict>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>*111</string>
 	<key>HomeBundleIdentifier</key>
@@ -313,23 +313,21 @@
 			<integer>49</integer>
 		</dict>
 		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>type-mask</key>
-			<integer>131072</integer>
-			<key>apn</key>
-			<string>ims</string>
+			<key>UseNetworkMTU</key>
+			<true/>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
-			<key>DefaultProtocolMask</key>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
 	</array>

@@ -123,8 +123,6 @@
 	<false/>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
 	<key>apns</key>

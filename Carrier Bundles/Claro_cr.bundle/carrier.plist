@@ -9,7 +9,7 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.claro.cr</string>
+	<string>https://www.claro.cr</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>EnableLTEAfterUpgrade</key>
@@ -20,6 +20,8 @@
 	<true/>
 	<key>MyAccountURLTitle</key>
 	<string>Claro</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -161,6 +163,8 @@
 	</dict>
 	<key>OverrideOperatorWiFiName</key>
 	<string>Claro VoWiFi</string>
+	<key>Show3GSwitchWith4G</key>
+	<true/>
 	<key>ShowDialAssist</key>
 	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
@@ -191,8 +195,8 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>*80</string>
 	<key>EmergencyNumberExceptions</key>
@@ -318,34 +322,30 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>49</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>internet.ideasclaro</string>
+			<key>type-mask</key>
+			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>48</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>internet.ideasclaro</string>
+			<key>type-mask</key>
+			<integer>48</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -356,8 +356,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>

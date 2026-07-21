@@ -33,6 +33,8 @@
 				<string>000</string>
 			</dict>
 		</array>
+		<key>WaitForWiFiRegistration</key>
+		<true/>
 	</dict>
 	<key>OTASoftwareUpdate</key>
 	<dict>
@@ -73,8 +75,6 @@
 	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
 		<key>BeaconAddress</key>
@@ -265,8 +265,6 @@
 			<integer>32817</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>enableXLAT464</key>
 			<true/>
 			<key>AllowedProtocolMaskInRoaming</key>
@@ -285,8 +283,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>3</integer>
 			<key>SupportSwitchOver</key>
@@ -305,8 +301,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048582</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>1</integer>
 			<key>username</key>
@@ -364,22 +358,11 @@
 		<true/>
 		<key>SMS</key>
 		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
-			<key>useRpOriginatingAddressAsSender</key>
-			<false/>
-			<key>DCN</key>
-			<dict>
-				<key>destinationNumber</key>
-				<string></string>
-				<key>hysteresisTimeout</key>
-				<integer>0</integer>
-			</dict>
-			<key>UseRpOriginatingAddressAsSender</key>
-			<false/>
 			<key>SMSBundleToVoice</key>
 			<true/>
 			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>useRpOriginatingAddressAsSender</key>
 			<false/>
 			<key>SupportedDomains</key>
 			<dict>
@@ -392,6 +375,15 @@
 				<key>NR</key>
 				<true/>
 			</dict>
+			<key>DCN</key>
+			<dict>
+				<key>destinationNumber</key>
+				<string></string>
+				<key>hysteresisTimeout</key>
+				<integer>0</integer>
+			</dict>
+			<key>UseRpOriginatingAddressAsSender</key>
+			<false/>
 		</dict>
 		<key>Media</key>
 		<dict>
@@ -459,11 +451,8 @@
 			<true/>
 		</dict>
 	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
+	<key>SuspendFastDormancyAllowed</key>
+	<true/>
 	<key>Show3GSwitch</key>
 	<false/>
 	<key>PreferCarrierNameFromMetadata</key>
@@ -472,8 +461,6 @@
 	<string>+61414121121</string>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32768</integer>
-	<key>SuspendFastDormancyAllowed</key>
-	<true/>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>PhoneSettings</key>

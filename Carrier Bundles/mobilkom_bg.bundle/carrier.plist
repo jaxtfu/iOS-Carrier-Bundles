@@ -73,6 +73,8 @@
 	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>131</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>MatchingICCIDPrefixes</key>
@@ -111,8 +113,6 @@
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>Show3GSwitchWith4G</key>
 	<true/>
 	<key>MMS</key>
@@ -173,14 +173,34 @@
 	<dict>
 		<key>Media</key>
 		<dict>
-			<key>EnableBandwidthSpecifiers</key>
+			<key>RingbackTone</key>
+			<string>UK</string>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPMaxRed</key>
 			<true/>
 			<key>IncludeSDPModeChangeCapability</key>
 			<true/>
-			<key>IncludeSDPMaxRed</key>
+			<key>EnableBandwidthSpecifiers</key>
 			<true/>
-			<key>RingbackTone</key>
-			<string>UK</string>
 		</dict>
 		<key>Signaling</key>
 		<dict>
@@ -261,8 +281,6 @@
 				<key>LTE</key>
 				<false/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>Voice</key>
 		<dict>

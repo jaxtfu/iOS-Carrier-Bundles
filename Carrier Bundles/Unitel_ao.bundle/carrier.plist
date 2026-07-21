@@ -73,7 +73,7 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
+	<key>Show3GSwitchWithVolte</key>
 	<true/>
 	<key>EmergencyCalling</key>
 	<dict>
@@ -105,8 +105,11 @@
 			</dict>
 		</array>
 	</dict>
-	<key>VoicemailPilotNumber</key>
-	<string>19123</string>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsTTY</key>
+		<true/>
+	</dict>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Angola</string>
 	<key>MMS</key>
@@ -120,6 +123,8 @@
 		<key>MaxMessageSize</key>
 		<integer>307200</integer>
 	</dict>
+	<key>VoicemailPilotNumber</key>
+	<string>19123</string>
 	<key>apns</key>
 	<array>
 		<dict>

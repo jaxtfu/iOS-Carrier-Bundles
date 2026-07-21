@@ -14,14 +14,8 @@
 	<dict>
 		<key>SMS</key>
 		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>SMSBundleToVoice</key>
-			<true/>
 			<key>SupportedDomains</key>
 			<dict>
-				<key>LTE</key>
-				<true/>
 				<key>NR</key>
 				<true/>
 			</dict>

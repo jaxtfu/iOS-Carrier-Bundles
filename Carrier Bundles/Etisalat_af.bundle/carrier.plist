@@ -72,6 +72,8 @@
 	<integer>1</integer>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<true/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -96,21 +98,14 @@
 			<key>EnableBandwidthSpecifiers</key>
 			<true/>
 		</dict>
-		<key>Voice</key>
-		<dict>
-			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
-			<true/>
-			<key>E911OverITechSupported</key>
-			<true/>
-			<key>E911OverCSIfNoIMSReg</key>
-			<true/>
-			<key>EnableVolteByDefault</key>
-			<false/>
-		</dict>
 		<key>Signaling</key>
 		<dict>
+			<key>SendLocalTimeZoneInformation</key>
+			<true/>
 			<key>InviteErrorResponsesToTriggerCSFB</key>
 			<string>4XX,5XX</string>
+			<key>SupportPEarlyMediaHeader</key>
+			<false/>
 			<key>RingbackTimerSeconds</key>
 			<integer>120</integer>
 			<key>RingingTimerSeconds</key>
@@ -142,8 +137,8 @@
 			</dict>
 			<key>DefaultAuthAlgorithm</key>
 			<string>AKAv1-MD5</string>
-			<key>CountryOfOriginationFormat</key>
-			<string>PANI</string>
+			<key>EarlyMediaNeedsHeader</key>
+			<false/>
 			<key>Preconditions</key>
 			<string>Supported</string>
 			<key>RegistrationExpirationSeconds</key>
@@ -155,12 +150,28 @@
 				<key>REGISTER,INVITE,INVITE:*</key>
 				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
 			</dict>
-			<key>AlwaysSendSessionProgress</key>
-			<true/>
-			<key>SendLocalTimeZoneInformation</key>
-			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
 			<key>UseIPSec</key>
 			<true/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>E911OverCSIfNoIMSReg</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<false/>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>ShowDialAssist</key>
@@ -181,8 +192,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>etisalat.af.web</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
@@ -191,8 +200,6 @@
 	<true/>
 	<key>ShowVolteSwitch</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>CellBroadcast</key>
@@ -530,23 +537,13 @@
 			</dict>
 			<dict>
 				<key>FromServiceID</key>
-				<integer>4355</integer>
+				<integer>4382</integer>
 				<key>AlertType</key>
-				<string>MonthlyTest</string>
+				<string>Emergency</string>
 				<key>AlertConfiguration</key>
 				<string>Configuration_1</string>
 				<key>ToServiceID</key>
-				<integer>4355</integer>
-			</dict>
-			<dict>
-				<key>FromServiceID</key>
-				<integer>4380</integer>
-				<key>AlertType</key>
-				<string>MonthlyTest</string>
-				<key>AlertConfiguration</key>
-				<string>Configuration_1</string>
-				<key>ToServiceID</key>
-				<integer>4380</integer>
+				<integer>4382</integer>
 			</dict>
 			<dict>
 				<key>FromServiceID</key>
@@ -639,8 +636,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>etisalat.af.web</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>type-mask</key>
 			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
@@ -653,30 +648,26 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>apn</key>
-			<string>ims</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
-			<key>username</key>
-			<string></string>
 			<key>UseNetworkMTU</key>
 			<true/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ims</string>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>262144</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>262144</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>SOS</string>
+			<key>type-mask</key>
+			<integer>262144</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>

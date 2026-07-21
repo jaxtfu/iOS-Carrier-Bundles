@@ -16,7 +16,7 @@
 	<key>SupportsNITZ</key>
 	<false/>
 	<key>MyAccountURL</key>
-	<string>http://iphone.swisscom.ch</string>
+	<string>https://iphone.swisscom.ch</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>APNEditabilityTypemask</key>
@@ -84,10 +84,28 @@
 	</array>
 	<key>ShowDialAssist</key>
 	<false/>
+	<key>Show3GSwitchWith4G</key>
+	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
 	<key>CarrierName</key>
 	<string>Wingo</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>gprs.swisscom.ch</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>CaptiveSettingsBySSID</key>
 	<dict>
 		<key>MOBILE</key>
@@ -98,10 +116,10 @@
 	</dict>
 	<key>SupportsUserBusyCauseCode</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>IMAP</string>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>IntlDataRoamingAllowed</key>
 	<array>
 		<string>29501</string>

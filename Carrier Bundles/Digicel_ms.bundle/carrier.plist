@@ -21,7 +21,7 @@
 		</dict>
 	</array>
 	<key>MyAccountURL</key>
-	<string>http://digicelgroup.com/</string>
+	<string>https://digicelgroup.com/</string>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>33805_ID-890105000843</string>
@@ -72,8 +72,6 @@
 	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string></string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>apns</key>
 	<array>
 		<dict>

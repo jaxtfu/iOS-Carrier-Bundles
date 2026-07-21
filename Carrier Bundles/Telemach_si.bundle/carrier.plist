@@ -2,33 +2,27 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Show3GSwitchWith4G</key>
-	<true/>
 	<key>MaxBluetoothModemConnections</key>
 	<integer>5</integer>
+	<key>AllowEDGEEditing</key>
+	<true/>
+	<key>DataIndicatorOverrideForLTE</key>
+	<string>4G</string>
+	<key>MandatoryVerify</key>
+	<dict>
+		<key>SIMs</key>
+		<array/>
+	</dict>
+	<key>SupportsNITZ</key>
+	<true/>
+	<key>EnableLTEAfterUpgrade</key>
+	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>29370</string>
 	</array>
-	<key>MMS</key>
-	<dict>
-		<key>MaxImageDimension</key>
-		<integer>2048</integer>
-		<key>MMSC</key>
-		<string>http://mms.telemach.net</string>
-		<key>GroupModeEnabled</key>
-		<false/>
-		<key>MaxRecipients</key>
-		<integer>10</integer>
-		<key>MaxMessageSize</key>
-		<integer>3145728</integer>
-	</dict>
-	<key>CarrierName</key>
-	<string>TELEMACH</string>
-	<key>DataIndicatorOverrideForLTE</key>
-	<string>4G</string>
-	<key>AllowEDGEEditing</key>
-	<true/>
 	<key>IMSConfig</key>
 	<dict>
 		<key>Voice</key>
@@ -42,48 +36,14 @@
 			<false/>
 		</dict>
 	</dict>
-	<key>OTASoftwareUpdate</key>
-	<dict>
-		<key>SoftwareUpdateOptInRequired</key>
-		<true/>
-	</dict>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.Slovenia</string>
 	<key>ShowDialAssist</key>
 	<true/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
-	<key>ShowVolteSwitch</key>
-	<false/>
-	<key>SupportsNITZ</key>
+	<key>Show3GSwitchWith4G</key>
 	<true/>
-	<key>apns</key>
-	<array>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>internet</string>
-			<key>type-mask</key>
-			<integer>53</integer>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
-		</dict>
-	</array>
-	<key>MandatoryVerify</key>
-	<dict>
-		<key>SIMs</key>
-		<array/>
-	</dict>
-	<key>APNEditabilityTypemaskNew</key>
-	<integer>53</integer>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
+	<key>CarrierName</key>
+	<string>TELEMACH</string>
 	<key>AttachAPN</key>
 	<dict>
 		<key>3GPP</key>
@@ -99,6 +59,47 @@
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
+	</dict>
+	<key>ShowVolteSwitch</key>
+	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<false/>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.Slovenia</string>
+	<key>MMS</key>
+	<dict>
+		<key>MaxImageDimension</key>
+		<integer>2048</integer>
+		<key>MMSC</key>
+		<string>http://mms.telemach.net</string>
+		<key>GroupModeEnabled</key>
+		<false/>
+		<key>MaxRecipients</key>
+		<integer>10</integer>
+		<key>MaxMessageSize</key>
+		<integer>3145728</integer>
+	</dict>
+	<key>APNEditabilityTypemaskNew</key>
+	<integer>53</integer>
+	<key>apns</key>
+	<array>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>internet</string>
+			<key>type-mask</key>
+			<integer>53</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>OTASoftwareUpdate</key>
+	<dict>
+		<key>SoftwareUpdateOptInRequired</key>
+		<true/>
 	</dict>
 </dict>
 </plist>

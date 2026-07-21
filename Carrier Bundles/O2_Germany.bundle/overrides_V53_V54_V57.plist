@@ -2,21 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SupportsVoNR</key>
-	<true/>
 	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Show5GStandaloneSwitch</key>
-	<true/>
-	<key>Enable5GStandaloneByDefault</key>
+	<string>6.0.162</string>
+	<key>ShowVoNRSwitch</key>
 	<true/>
 	<key>Show5GSwitch</key>
 	<true/>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<key>ShowVoNRWarningUnsupportedCarrier</key>
 	<false/>
 	<key>IMSConfig</key>
 	<dict>
@@ -41,39 +35,27 @@
 			<false/>
 		</dict>
 	</dict>
-	<key>OverrideOperatorWiFiName</key>
-	<string>WLAN</string>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
-	<key>ShowVoNRWarningUnsupportedCarrier</key>
-	<false/>
-	<key>SupportsImsCapability</key>
+	<key>SupportsVoNR</key>
 	<true/>
 	<key>ShowVolteSwitch</key>
 	<false/>
-	<key>Enable5GAutoByDefault</key>
-	<true/>
-	<key>ShowVoNRSwitch</key>
-	<true/>
-	<key>SupportsNRNSAInboundRoaming</key>
+	<key>Show5GStandaloneSwitch</key>
 	<true/>
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>1081399</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>internet</string>
+			<key>type-mask</key>
+			<integer>1081395</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -96,7 +78,13 @@
 			<integer>2</integer>
 		</dict>
 	</array>
-	<key>ShowEsimWarningUnsupportedCarrier</key>
+	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
+	<key>SupportsNRNSAInboundRoaming</key>
+	<true/>
+	<key>Enable5GStandaloneByDefault</key>
+	<true/>
 </dict>
 </plist>

@@ -55,8 +55,11 @@
 	<string>Airtel</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<true/>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsTTY</key>
+		<true/>
+	</dict>
 	<key>VoicemailPilotNumber</key>
 	<string>132</string>
 	<key>HomeBundleIdentifier</key>

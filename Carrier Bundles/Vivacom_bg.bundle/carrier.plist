@@ -8,6 +8,11 @@
 	<true/>
 	<key>DataIndicatorOverrideForLTE</key>
 	<string>LTE</string>
+	<key>MandatoryVerify</key>
+	<dict>
+		<key>SIMs</key>
+		<array/>
+	</dict>
 	<key>Services</key>
 	<array>
 		<dict>
@@ -17,15 +22,10 @@
 			<string>Customer Care</string>
 		</dict>
 	</array>
-	<key>MandatoryVerify</key>
-	<dict>
-		<key>SIMs</key>
-		<array/>
-	</dict>
 	<key>SupportsNITZ</key>
 	<false/>
 	<key>MyAccountURL</key>
-	<string>http://my.vivacom.bg</string>
+	<string>https://my.vivacom.bg</string>
 	<key>SMSSettings</key>
 	<dict>
 		<key>TransportFallback</key>
@@ -35,8 +35,12 @@
 	<string>Self Care portal</string>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+35987110</string>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
 	<key>IPv6SupportedDataModeMask</key>
 	<integer>12319</integer>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -56,17 +60,55 @@
 			<string>VIVACOM</string>
 		</dict>
 	</array>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>28403</string>
-	</array>
 	<key>IMSConfig</key>
 	<dict>
 		<key>Media</key>
 		<dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 			<key>IncludeSDPModeChangeCapability</key>
 			<true/>
 			<key>SelectLatestForkWithActiveEarlyMedia</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>127</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>0</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string></string>
+			<key>SendResumeInviteAsSendRecv</key>
+			<false/>
+			<key>RingingTimerSeconds</key>
+			<integer>180</integer>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting</string>
+			</dict>
+			<key>RingbackTimerSeconds</key>
+			<integer>180</integer>
+			<key>SupportPEarlyMediaHeader</key>
 			<true/>
 		</dict>
 		<key>XCAP</key>
@@ -98,65 +140,137 @@
 			<key>SupportsCW</key>
 			<false/>
 		</dict>
-		<key>Signaling</key>
+		<key>Voice</key>
 		<dict>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string></string>
-			<key>SendResumeInviteAsSendRecv</key>
-			<false/>
-			<key>RingingTimerSeconds</key>
-			<integer>180</integer>
-			<key>Preconditions</key>
-			<string>Supported</string>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>AdditionalContactParams</key>
-			<dict>
-				<key>REGISTER,INVITE,INVITE:*</key>
-				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting</string>
-			</dict>
-			<key>RingbackTimerSeconds</key>
-			<integer>180</integer>
-			<key>SupportPEarlyMediaHeader</key>
+			<key>EnableVolteByDefault</key>
 			<true/>
 		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<false/>
+			</dict>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
 	</dict>
-	<key>ShowDialAssist</key>
-	<true/>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
+		<true/>
+		<key>SupportSecureIntent</key>
+		<true/>
+		<key>SupportedEntitlements</key>
+		<integer>8193</integer>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>ServerAddress</key>
+		<string>https://es.vivacom.bg</string>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<true/>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+		<key>SupportedActions</key>
+		<array>
+			<string>TransferSIMService</string>
+		</array>
+	</dict>
 	<key>Show3GSwitchWith4G</key>
+	<true/>
+	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>19991</string>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>28403</string>
+	</array>
 	<key>CarrierName</key>
 	<string>VIVACOM</string>
 	<key>AttachAPN</key>
 	<dict>
 		<key>3GPP</key>
 		<dict>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>3</integer>
 			<key>password</key>
 			<string>VIVACOM</string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string>VIVACOM</string>
-			<key>AllowedProtocolMaskInRoamingUMTS</key>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
 			<integer>3</integer>
 			<key>apn</key>
 			<string>internet.vivacom.bg</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMaskInRoamingUMTS</key>
+			<integer>3</integer>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SupportsUserBusyCauseCode</key>
 	<true/>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>LocalInstallSMDPURL</key>
+		<string>https://sm-v4-079-a-gtm.pr.go-esim.com</string>
+		<key>TransferErrorCodes</key>
+		<dict>
+			<key>CarrierDefaultErrors</key>
+			<array>
+				<string>9999</string>
+			</array>
+			<key>BillingErrors</key>
+			<array>
+				<string>1202</string>
+				<string>1203</string>
+			</array>
+			<key>IneligibleAccountErrors</key>
+			<array>
+				<string>1201</string>
+			</array>
+			<key>MaintenanceErrors</key>
+			<array>
+				<string>1211</string>
+				<string>1212</string>
+				<string>1210</string>
+				<string>1209</string>
+				<string>1208</string>
+				<string>1207</string>
+				<string>1206</string>
+				<string>1205</string>
+				<string>1204</string>
+				<string>1009</string>
+				<string>1008</string>
+				<string>1007</string>
+				<string>1006</string>
+				<string>1005</string>
+				<string>1004</string>
+				<string>1003</string>
+				<string>1002</string>
+				<string>1001</string>
+			</array>
+			<key>BlockedAccountErrors</key>
+			<array>
+				<string>1203</string>
+				<string>1202</string>
+			</array>
+		</dict>
+		<key>MinCompatibleOS</key>
+		<string>27.0</string>
+		<key>SupportsFallbackToLegacyFlow</key>
+		<false/>
+	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -207,50 +321,44 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>49</integer>
 			<key>password</key>
 			<string>VIVACOM</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string>VIVACOM</string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>internet.vivacom.bg</string>
+			<key>type-mask</key>
+			<integer>32817</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>4</integer>
 			<key>password</key>
 			<string>mms</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string>mms</string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>mms.vivacom.bg</string>
+			<key>type-mask</key>
+			<integer>4</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>1048576</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>hos</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>

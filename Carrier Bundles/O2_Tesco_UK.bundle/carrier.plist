@@ -33,8 +33,6 @@
 			<integer>3</integer>
 		</dict>
 	</dict>
-	<key>SupportsUserBusyCauseCode</key>
-	<true/>
 	<key>CaptiveSettingsBySSID</key>
 	<dict>
 		<key>BTOpenzone</key>
@@ -237,6 +235,8 @@
 			</dict>
 		</array>
 	</dict>
+	<key>SupportsUserBusyCauseCode</key>
+	<true/>
 	<key>ShowClass0SMSFromField</key>
 	<true/>
 	<key>AllowEDGEEditing</key>
@@ -245,12 +245,12 @@
 	<string>905</string>
 	<key>SupportsNITZ</key>
 	<false/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447860015001</string>
 	<key>ShowDialAssist</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>IPv6SupportedDataModeMask</key>
 	<integer>110623</integer>
 	<key>Show3GSwitchWith4G</key>
@@ -411,8 +411,6 @@
 			<string>tescowap</string>
 			<key>apn</key>
 			<string>prepay.tesco-mobile.com</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>1048629</integer>
 			<key>AllowedProtocolMask</key>
@@ -425,8 +423,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
@@ -546,23 +542,43 @@
 		<true/>
 		<key>SMS</key>
 		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
 		</dict>
 		<key>Media</key>
 		<dict>
 			<key>RTCPIntervalSeconds</key>
 			<integer>5</integer>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
 			<key>PreferredAMRWBMode</key>
 			<integer>8</integer>
 			<key>EnableBandwidthSpecifiers</key>
 			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>127</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>3</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>cmr</key>
+					<string>1</string>
+				</dict>
+			</dict>
 			<key>MaxRedundancy</key>
 			<integer>220</integer>
 			<key>InactivityTimerRTPSeconds</key>
 			<integer>20</integer>
-			<key>IncludeSDPMaxRed</key>
-			<true/>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 			<key>IncludeSDPModeChangeCapability</key>
 			<true/>
 		</dict>
@@ -614,8 +630,6 @@
 	<dict>
 		<key>SMSCarrierReportJunkAddress</key>
 		<string>7726</string>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>

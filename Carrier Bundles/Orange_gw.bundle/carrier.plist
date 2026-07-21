@@ -13,14 +13,14 @@
 			<string>Orange</string>
 		</dict>
 	</array>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>63203</string>
 	</array>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
 	<key>MyAccountURL</key>
-	<string>http://www.orange-bissau.com</string>
+	<string>https://www.orange-bissau.com</string>
 	<key>CarrierName</key>
 	<string>Orange</string>
 	<key>MyAccountURLTitle</key>
@@ -53,10 +53,13 @@
 	<false/>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
-	<key>ShowTTY</key>
-	<true/>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsTTY</key>
+		<true/>
+	</dict>
 	<key>VoicemailPilotNumber</key>
 	<string>002455000502</string>
 	<key>RegistrationOptInRequired</key>

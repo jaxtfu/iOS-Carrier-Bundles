@@ -36,7 +36,7 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.movistar.com.co</string>
+	<string>https://www.movistar.com.co</string>
 	<key>EnableLTEAfterUpgrade</key>
 	<true/>
 	<key>SMSSettings</key>
@@ -48,6 +48,8 @@
 	<string>movistar</string>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32768</integer>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -88,14 +90,130 @@
 		<string>732123</string>
 		<string>21407_ID-8957123</string>
 	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string></string>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>UseIPSec</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>MinSessionExpiresSeconds</key>
+			<integer>900</integer>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>SupportPEarlyMediaHeader</key>
+			<false/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc123.mcc732.pub.3gppnetwork.org</string>
+			<key>BsfPort</key>
+			<integer>8080</integer>
+			<key>NafPort</key>
+			<integer>8090</integer>
+			<key>supported</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+			<key>NafUseSecureTransport</key>
+			<false/>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>PreferredGbaMode</key>
+			<string>GBA_ME</string>
+			<key>BsfHost</key>
+			<string>xcap.ims.mnc123.mcc732.pub.3gppnetwork.org</string>
+			<key>BsfUseSecureTransport</key>
+			<false/>
+		</dict>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<true/>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:conference@ims.mnc123.mcc732.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<false/>
+			</dict>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>ServerAddress</key>
+		<string>https://entitlement.movistar.co/tf-colombia/apple</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+	</dict>
 	<key>ShowDialAssist</key>
 	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447860015000</string>
 	<key>CarrierName</key>
 	<string>movistar</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>internet.movistar.com.co</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>ShowVolteSwitch</key>
+	<true/>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -136,24 +254,51 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>password</key>
-			<string>movistar</string>
-			<key>username</key>
-			<string>movistar</string>
-			<key>apn</key>
-			<string>internet.movistar.com.co</string>
-			<key>type-mask</key>
-			<integer>49</integer>
-		</dict>
-		<dict>
-			<key>password</key>
-			<string>movistar</string>
-			<key>username</key>
-			<string>movistar</string>
-			<key>apn</key>
-			<string>mms.movistar.com.co</string>
-			<key>type-mask</key>
-			<integer>4</integer>
+			<key>configuration</key>
+			<array>
+				<dict>
+					<key>password</key>
+					<string>movistar</string>
+					<key>username</key>
+					<string>movistar</string>
+					<key>apn</key>
+					<string>internet.movistar.com.co</string>
+					<key>type-mask</key>
+					<integer>32817</integer>
+				</dict>
+				<dict>
+					<key>password</key>
+					<string>movistar</string>
+					<key>username</key>
+					<string>movistar</string>
+					<key>apn</key>
+					<string>mms.movistar.com.co</string>
+					<key>type-mask</key>
+					<integer>4</integer>
+				</dict>
+				<dict>
+					<key>password</key>
+					<string></string>
+					<key>username</key>
+					<string></string>
+					<key>apn</key>
+					<string>ims</string>
+					<key>type-mask</key>
+					<integer>131072</integer>
+				</dict>
+				<dict>
+					<key>password</key>
+					<string></string>
+					<key>username</key>
+					<string></string>
+					<key>apn</key>
+					<string>hos</string>
+					<key>type-mask</key>
+					<integer>1048576</integer>
+				</dict>
+			</array>
+			<key>technology-mask</key>
+			<integer>9</integer>
 		</dict>
 	</array>
 	<key>OTASoftwareUpdate</key>

@@ -55,10 +55,6 @@
 	<string>MTN ZM</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
-	<key>VoicemailPilotNumber</key>
-	<string>100</string>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -73,6 +69,8 @@
 			</dict>
 		</array>
 	</dict>
+	<key>VoicemailPilotNumber</key>
+	<string>100</string>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Zambia</string>
 	<key>MMS</key>

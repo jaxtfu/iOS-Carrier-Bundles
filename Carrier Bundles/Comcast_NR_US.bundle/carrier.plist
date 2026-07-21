@@ -95,14 +95,12 @@
 			<key>configuration</key>
 			<array>
 				<dict>
-					<key>type-mask</key>
-					<integer>65585</integer>
-					<key>password</key>
-					<string></string>
 					<key>SuppressPdnTearDown</key>
 					<true/>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
+					<key>password</key>
+					<string></string>
+					<key>type-mask</key>
+					<integer>65585</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>1</integer>
 					<key>username</key>
@@ -113,18 +111,16 @@
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>41472</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>1</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>1</integer>
 					<key>apn</key>
 					<string>admin.comcast</string>
+					<key>type-mask</key>
+					<integer>41472</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
@@ -135,6 +131,21 @@
 	</array>
 	<key>TetheringURL</key>
 	<string>http://xfinitymobile.com/support</string>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<false/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>UnsolicitedRequestDelay</key>
+			<integer>0</integer>
+			<key>supported</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32768</integer>
 	<key>TosSupported</key>

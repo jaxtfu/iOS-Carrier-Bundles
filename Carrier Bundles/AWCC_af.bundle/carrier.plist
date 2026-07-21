@@ -82,13 +82,13 @@
 			<integer>4</integer>
 		</dict>
 	</array>
-	<key>ShowTTY</key>
-	<false/>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>
 		<array/>
 	</dict>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<array>
 		<string>+447537410207</string>

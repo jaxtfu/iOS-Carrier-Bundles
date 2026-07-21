@@ -14,8 +14,6 @@
 	<false/>
 	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
-	<key>ShowVolteSwitch</key>
-	<true/>
 	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 	<key>Show5GSwitch</key>

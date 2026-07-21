@@ -2,6 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>SupportedEntitlements</key>
+		<integer>1041</integer>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>ServerAddress</key>
+		<string>https://aes.mnc101.mcc732.pub.3gppnetwork.org/entitlement/</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+	</dict>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -32,6 +50,22 @@
 	<dict>
 		<key>SoftwareUpdateOptInRequired</key>
 		<true/>
+	</dict>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string>COMCELWEB</string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string>COMCELWEB</string>
+			<key>apn</key>
+			<string>internet.comcel.com.co</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SupportsUserBusyCauseCode</key>
 	<true/>
@@ -89,13 +123,15 @@
 		<key>UsesAutoAssignment</key>
 		<false/>
 	</dict>
-	<key>WatchCustomerServicePhoneNumber</key>
-	<string>*611</string>
-	<key>ShowDialAssist</key>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
 	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447860015000</string>
-	<key>ShowTTY</key>
+	<key>ShowDialAssist</key>
+	<false/>
+	<key>WatchCustomerServicePhoneNumber</key>
+	<string>*611</string>
+	<key>Show3GSwitchWith4G</key>
 	<false/>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
@@ -127,6 +163,8 @@
 		<key>BeaconAddress</key>
 		<string>1123</string>
 	</dict>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Claro VoWiFi</string>
 	<key>MMS</key>
 	<dict>
 		<key>MMSC</key>
@@ -140,6 +178,114 @@
 		<key>MaxMessageSize</key>
 		<integer>307200</integer>
 	</dict>
+	<key>TechSettings</key>
+	<dict>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>cellular</string>
+			<key>PreferredTechnologyRoaming</key>
+			<string>wifi</string>
+		</dict>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA2-256</string>
+						</array>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>AES-256</string>
+						</array>
+						<key>DHGroup</key>
+						<integer>14</integer>
+						<key>Lifetime</key>
+						<integer>86400</integer>
+					</dict>
+				</array>
+				<key>InstallPolicies</key>
+				<true/>
+				<key>ReplayWindowSize</key>
+				<integer>12</integer>
+			</dict>
+		</dict>
+		<key>ExtraConfigurationAttributeRequestv6</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16390</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv6</string>
+				<key>Type</key>
+				<string>IPv6Address</string>
+			</dict>
+		</array>
+		<key>SupportCallHandover</key>
+		<true/>
+		<key>TechPolicies</key>
+		<array>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>131072</integer>
+			</dict>
+		</array>
+		<key>ExtraConfigurationAttributeRequestv4</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16389</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv4</string>
+				<key>Type</key>
+				<string>IPv4Address</string>
+			</dict>
+		</array>
+		<key>5wiServiceMask</key>
+		<integer>3</integer>
+		<key>IKE</key>
+		<dict>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-256</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-256</string>
+					<key>DHGroup</key>
+					<integer>14</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>86400</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-256</string>
+				</dict>
+			</array>
+			<key>DeadPeerDetectionEnabled</key>
+			<true/>
+			<key>DeadPeerDetectionMaxRetries</key>
+			<integer>5</integer>
+			<key>DeadPeerDetectionInterval</key>
+			<integer>600</integer>
+			<key>LocalIdentifier</key>
+			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
+			<key>NATTKeepAliveOffload</key>
+			<true/>
+			<key>RemoteAddress</key>
+			<string>epdg.ims.mnc101.mcc732.pub.3gppnetwork.org</string>
+			<key>DeadPeerDetectionRetryInterval</key>
+			<integer>10</integer>
+		</dict>
+	</dict>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Colombia</string>
 	<key>CarrierBookmarks</key>
@@ -148,6 +294,8 @@
 	<integer>5</integer>
 	<key>DataIndicatorOverrideForLTE</key>
 	<string>4G</string>
+	<key>ShowVolteSwitch</key>
+	<true/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -158,7 +306,17 @@
 			<key>apn</key>
 			<string>internet.comcel.com.co</string>
 			<key>type-mask</key>
-			<integer>49</integer>
+			<integer>32817</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>vvm.comcel.com.co</string>
+			<key>type-mask</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>password</key>
@@ -171,18 +329,155 @@
 			<integer>4</integer>
 		</dict>
 		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>131072</integer>
+			<key>SupportSwitchOver</key>
+			<true/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
 			<key>password</key>
 			<string></string>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
-			<string>vvm.comcel.com.co</string>
+			<string>sos</string>
 			<key>type-mask</key>
-			<integer>2</integer>
+			<integer>262144</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>ShowCallForwardingSwitch</key>
 	<false/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,6XX</string>
+			<key>UseCampedAccessNetworkInPANI</key>
+			<true/>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>90</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>90</integer>
+			<key>EmergencyURNs</key>
+			<dict>
+				<key>112</key>
+				<string>urn:service:sos.police</string>
+				<key>123</key>
+				<string>urn:service:sos</string>
+				<key>911</key>
+				<string>urn:service:sos</string>
+			</dict>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>Preconditions</key>
+			<string>supportedButMandatory</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>TriggerCSFBOnWaitForRingingTimeout</key>
+			<true/>
+			<key>UseOutgoingSipUri</key>
+			<false/>
+			<key>SendLocalTimeZoneInformation</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc101.mcc732.3gppnetwork.org</string>
+		</dict>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>PreferredAMRNBMode</key>
+			<integer>7</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>ModeChangeCapability</key>
+			<integer>2</integer>
+			<key>InactivityTimerRTCPSeconds</key>
+			<integer>25</integer>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>30</integer>
+			<key>UseSDPTemplateWhenAnswering</key>
+			<true/>
+			<key>UseSDPTemplateForAllInvites</key>
+			<false/>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCB</key>
+			<false/>
+			<key>SupportsCFErasure</key>
+			<false/>
+			<key>FetchAllCDIVRules</key>
+			<false/>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>DisableCLIRModification</key>
+			<true/>
+			<key>supported</key>
+			<false/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVoLTEWithVoWiFi</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<false/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>SMSSettings</key>
 	<dict>
 		<key>TransportFallback</key>
@@ -190,6 +485,13 @@
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<true/>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>PushSettings</key>
+	<dict>
+		<key>MultiSIMTopic</key>
+		<string>com.clarocol.ent.multi-sim</string>
+	</dict>
 	<key>Services</key>
 	<array>
 		<dict>
@@ -223,8 +525,10 @@
 			<string>Recarga en línea</string>
 		</dict>
 	</array>
-	<key>VisualVoicemailServiceName</key>
-	<string>IMAP</string>
+	<key>EmergencyNumberExceptions</key>
+	<array>
+		<string>#911</string>
+	</array>
 	<key>EnableLTEAfterUpgrade</key>
 	<true/>
 	<key>StatusBarImages</key>
@@ -246,17 +550,19 @@
 			<string>Claro</string>
 		</dict>
 	</array>
-	<key>EmergencyNumberExceptions</key>
-	<array>
-		<string>#911</string>
-	</array>
+	<key>VisualVoicemailServiceName</key>
+	<string>IMAP</string>
 	<key>CarrierName</key>
 	<string>Claro</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
 	<string>https://tienda.claro.com.co/claro/productos-apple</string>
 	<key>MyAccountURLTitle</key>
 	<string>Claro</string>
 	<key>ShowCallerIDSwitch</key>
+	<false/>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
 	<false/>
 	<key>ShowCallBarring</key>
 	<false/>

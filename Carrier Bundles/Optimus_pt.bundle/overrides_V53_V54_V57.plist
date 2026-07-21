@@ -8,8 +8,6 @@
 	<true/>
 	<key>AllowSAOnWiFiAssociation</key>
 	<false/>
-	<key>SupportsImsCapability</key>
-	<true/>
 	<key>Show5GSwitch</key>
 	<true/>
 	<key>ShowHighDataModeSwitch</key>
@@ -18,17 +16,11 @@
 	<dict>
 		<key>SMS</key>
 		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
 			<key>SupportedDomains</key>
 			<dict>
-				<key>LTE</key>
-				<true/>
 				<key>NR</key>
 				<true/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>Voice</key>
 		<dict>
@@ -36,20 +28,14 @@
 			<true/>
 		</dict>
 	</dict>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
-	<key>DerPriFileName</key>
-	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>SupportsVoNR</key>
 	<true/>
+	<key>DerPriFileName</key>
+	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>ShowVolteSwitch</key>
 	<false/>
 	<key>Show5GStandaloneSwitch</key>
 	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -89,8 +75,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
@@ -101,13 +85,11 @@
 			<integer>2</integer>
 		</dict>
 		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
+			<key>type-mask</key>
+			<integer>262144</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
-			<integer>262144</integer>
-			<key>type-mask</key>
 			<integer>262144</integer>
 			<key>apn</key>
 			<string>sos</string>
@@ -117,10 +99,12 @@
 			<string></string>
 			<key>UseNetworkMTU</key>
 			<true/>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</array>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
 	<key>Enable5GAutoByDefault</key>
 	<true/>
 	<key>SupportsNRNSAInboundRoaming</key>

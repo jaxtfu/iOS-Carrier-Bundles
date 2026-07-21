@@ -118,14 +118,14 @@
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>334</string>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>OverrideOperatorWiFiName</key>
 	<string>Vodafone WiFi Calling</string>
 	<key>TechSettings</key>
@@ -363,17 +363,39 @@
 		</dict>
 		<key>SMS</key>
 		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
 		</dict>
 		<key>Media</key>
 		<dict>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>max-red</key>
+					<string>0</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>cmr</key>
+					<string>1</string>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 			<key>IncludeSDPModeChangeCapability</key>
 			<true/>
-			<key>PreferredAMRWBMode</key>
-			<integer>8</integer>
 			<key>MaxRedundancy</key>
 			<integer>220</integer>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
 		</dict>
 		<key>XCAP</key>
 		<dict>
@@ -399,11 +421,6 @@
 			<key>EnableVolteByDefault</key>
 			<true/>
 		</dict>
-	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
@@ -472,7 +489,7 @@
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://live.vodafone.com</string>
+	<string>https://live.vodafone.com</string>
 	<key>IntlDataRoamingSwitch</key>
 	<true/>
 	<key>MyAccountURLTitle</key>

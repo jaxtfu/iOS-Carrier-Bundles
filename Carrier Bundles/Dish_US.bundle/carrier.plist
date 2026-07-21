@@ -18,16 +18,12 @@
 			</dict>
 		</array>
 	</dict>
-	<key>OverrideOperatorName</key>
-	<string>Boost</string>
 	<key>SupportsIMSSignalingIndication</key>
 	<true/>
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>ShowDialAssist</key>
 	<true/>
-	<key>OverrideOperatorWiFiName</key>
-	<string>Boost Wi-Fi</string>
 	<key>TechSettings</key>
 	<dict>
 		<key>ChildSAs</key>
@@ -82,6 +78,8 @@
 			</dict>
 		</array>
 		<key>SupportContextSwitchOver</key>
+		<true/>
+		<key>WiFiCallingControlsAlliWLanServices</key>
 		<true/>
 		<key>5wiServiceMask</key>
 		<integer>3</integer>
@@ -154,7 +152,7 @@
 			</dict>
 			<dict>
 				<key>policy</key>
-				<string>true</string>
+				<string>cellData=false</string>
 				<key>serviceMask</key>
 				<integer>1048582</integer>
 			</dict>
@@ -174,6 +172,10 @@
 			<key>StatusBarCarrierName</key>
 			<string>Boost</string>
 		</dict>
+	</array>
+	<key>pdpTimeout</key>
+	<array>
+		<integer>2</integer>
 	</array>
 	<key>MMS</key>
 	<dict>
@@ -204,10 +206,6 @@
 	<string>IMAP</string>
 	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
 	<false/>
-	<key>pdpTimeout</key>
-	<array>
-		<integer>2</integer>
-	</array>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>UpdatePeriod</key>
@@ -257,8 +255,6 @@
 		</dict>
 		<key>ShowBusinessMessagingSwitch</key>
 		<true/>
-		<key>ShowRCSSwitch</key>
-		<true/>
 		<key>EnableRCSByDefault</key>
 		<true/>
 	</dict>
@@ -271,6 +267,8 @@
 		<key>TransportFallback</key>
 		<false/>
 	</dict>
+	<key>PreferCarrierNameFromMetadata</key>
+	<true/>
 	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
 	<integer>131072</integer>
 	<key>Services</key>
@@ -288,8 +286,6 @@
 			<string>Boost Help</string>
 		</dict>
 	</array>
-	<key>DefaultWhenImsSwitchOff</key>
-	<integer>0</integer>
 	<key>ShowVolteWarningUnsupportedCarrier</key>
 	<false/>
 	<key>SupportedSIMs</key>
@@ -334,7 +330,7 @@
 		<integer>7</integer>
 	</dict>
 	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32770</integer>
+	<integer>32768</integer>
 	<key>VoicemailPasswordResetPhoneNumber</key>
 	<string>611</string>
 	<key>HangUpCallsWhenPlacingEmergencyCall</key>
@@ -387,9 +383,9 @@
 			<true/>
 			<key>UseBase64ForMultipartSMS</key>
 			<false/>
+			<key>VerstatFeatureCapability</key>
+			<string>Enabled</string>
 			<key>StartLocalQosTimerOnSessionProgress</key>
-			<true/>
-			<key>AddLocationToEmergencySMS</key>
 			<true/>
 			<key>SipTimers</key>
 			<dict>
@@ -410,6 +406,8 @@
 				<key>H</key>
 				<integer>32000</integer>
 			</dict>
+			<key>AddLocationToEmergencySMS</key>
+			<true/>
 			<key>LocalQoSTimeoutMOSeconds</key>
 			<integer>10</integer>
 			<key>RegisterOnServiceUpdate</key>
@@ -524,54 +522,25 @@
 			<key>SendPreferredServiceInInvite</key>
 			<true/>
 		</dict>
+		<key>LocalShortCodeNumbers</key>
+		<array>
+			<string>211</string>
+			<string>311</string>
+			<string>411</string>
+			<string>511</string>
+			<string>611</string>
+			<string>711</string>
+			<string>811</string>
+			<string>988</string>
+		</array>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<true/>
 		<key>ConferenceCalling</key>
 		<dict>
 			<key>TreatAllNotificationsAsPartial</key>
 			<true/>
 			<key>conferenceServer</key>
 			<string>sip:n-way_voice@ims.mnc340.mcc313.3gppnetwork.org</string>
-		</dict>
-		<key>AllowHandoverWithoutIMSVoiceService</key>
-		<true/>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>SMSBundleToVoice</key>
-			<true/>
-			<key>allowCSFBInVolteMode</key>
-			<false/>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>NafHost</key>
-			<string>xcap.ims.mnc340.mcc313.pub.3gppnetwork.org</string>
-			<key>BsfPort</key>
-			<integer>80</integer>
-			<key>imsFeatureDependency</key>
-			<true/>
-			<key>NafPort</key>
-			<integer>80</integer>
-			<key>SupportsCLIR</key>
-			<true/>
-			<key>ImpuRank</key>
-			<string>first</string>
-			<key>ContentType</key>
-			<string>application/xcap-el+xml</string>
-			<key>DisableOnNetworkError</key>
-			<false/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string></string>
-			<key>supported</key>
-			<true/>
-			<key>imsRegistrationDependency</key>
-			<true/>
-			<key>UnsolicitedRequestDelay</key>
-			<integer>0</integer>
-			<key>BsfHost</key>
-			<string>bsf.ims.mnc340.mcc313.pub.3gppnetwork.org</string>
-			<key>SupportsCW</key>
-			<false/>
 		</dict>
 		<key>Media</key>
 		<dict>
@@ -622,24 +591,60 @@
 			<key>IncludeSDPMaxRed</key>
 			<true/>
 		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SMSBundleToVoice</key>
+			<true/>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc340.mcc313.pub.3gppnetwork.org</string>
+			<key>BsfPort</key>
+			<integer>80</integer>
+			<key>imsFeatureDependency</key>
+			<true/>
+			<key>NafPort</key>
+			<integer>80</integer>
+			<key>SupportsCLIR</key>
+			<true/>
+			<key>ImpuRank</key>
+			<string>first</string>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+			<key>supported</key>
+			<true/>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>UnsolicitedRequestDelay</key>
+			<integer>0</integer>
+			<key>BsfHost</key>
+			<string>bsf.ims.mnc340.mcc313.pub.3gppnetwork.org</string>
+			<key>SupportsCW</key>
+			<false/>
+		</dict>
 		<key>Voice</key>
 		<dict>
-			<key>ttyIMSSupported</key>
-			<true/>
-			<key>EnableVolteByDefault</key>
-			<true/>
 			<key>E911OverITechSupported</key>
 			<false/>
 			<key>E911OverCSIfNoIMSReg</key>
 			<true/>
 			<key>CellularE911SearchTimeout</key>
 			<integer>5</integer>
+			<key>EnableVolteByDefault</key>
+			<true/>
 			<key>endNonEmergencyCalls</key>
 			<true/>
 			<key>tLte911Timer</key>
 			<integer>0</integer>
-			<key>EnableHoldForRTT</key>
-			<true/>
 		</dict>
 	</dict>
 	<key>Show4GSwitch</key>
@@ -699,6 +704,8 @@
 	</array>
 	<key>Location</key>
 	<dict>
+		<key>EnableCPIDuringEmergencyMode</key>
+		<true/>
 		<key>EmergencyLocation</key>
 		<dict>
 			<key>AugmentedEmergencyAction</key>
@@ -719,8 +726,6 @@
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>PhoneNumberIsVoiceMailNumber</key>
-	<true/>
-	<key>ShowTTY</key>
 	<true/>
 	<key>SupportedPLMNs</key>
 	<array>
@@ -748,55 +753,49 @@
 			<key>configuration</key>
 			<array>
 				<dict>
-					<key>type-mask</key>
-					<integer>32771</integer>
 					<key>password</key>
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>2</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
 					<key>apn</key>
 					<string>internet</string>
+					<key>type-mask</key>
+					<integer>32771</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>1048580</integer>
 					<key>password</key>
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>1048580</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
 					<key>apn</key>
 					<string>xcap</string>
+					<key>type-mask</key>
+					<integer>1048580</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 				<dict>
 					<key>type-mask</key>
 					<integer>131072</integer>
+					<key>Support5GSaHandOver</key>
+					<true/>
 					<key>password</key>
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>131072</integer>
-					<key>Support5GSaHandOver</key>
-					<true/>
-					<key>AllowedProtocolMask</key>
-					<integer>3</integer>
 					<key>SupportSwitchOver</key>
 					<true/>
 					<key>username</key>
 					<string></string>
 					<key>apn</key>
 					<string>ims</string>
-					<key>DefaultProtocolMask</key>
+					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 				<dict>
@@ -806,8 +805,6 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>262144</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>username</key>
@@ -818,18 +815,16 @@
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>512</integer>
 					<key>password</key>
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>512</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
 					<key>apn</key>
 					<string>ota</string>
+					<key>type-mask</key>
+					<integer>512</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
@@ -840,8 +835,6 @@
 					<string></string>
 					<key>apn</key>
 					<string>hotspot</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>type-mask</key>
 					<integer>48</integer>
 					<key>AllowedProtocolMask</key>
@@ -852,6 +845,11 @@
 			<integer>24</integer>
 		</dict>
 	</array>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>EnableHoldForRTT</key>
+		<true/>
+	</dict>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>MatchingICCIDPrefixes</key>
@@ -881,5 +879,7 @@
 		<key>SupportsFauxCard</key>
 		<false/>
 	</dict>
+	<key>WiFiOperatorNameSuffix</key>
+	<string>Wi-Fi</string>
 </dict>
 </plist>

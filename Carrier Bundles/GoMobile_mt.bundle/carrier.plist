@@ -6,6 +6,8 @@
 	<integer>5</integer>
 	<key>AllowEDGEEditing</key>
 	<true/>
+	<key>PreferCarrierNameFromMetadata</key>
+	<true/>
 	<key>DataIndicatorOverrideForLTE</key>
 	<string>4G</string>
 	<key>MandatoryVerify</key>
@@ -23,17 +25,14 @@
 	<true/>
 	<key>APNEditabilityTypemask</key>
 	<integer>0</integer>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
-	<key>MyAccountURLTitle</key>
-	<string>GO</string>
-	<key>RoamingVoicemailPilotNumber</key>
-	<string>+35679222121</string>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>MyAccountURLTitle</key>
+	<string>GO</string>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>RoamingVoicemailPilotNumber</key>
+	<string>+35679222121</string>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>27821</string>
@@ -54,9 +53,37 @@
 			<true/>
 		</dict>
 	</dict>
-	<key>ShowDialAssist</key>
-	<true/>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
+		<true/>
+		<key>SupportSecureIntent</key>
+		<true/>
+		<key>SupportedEntitlements</key>
+		<integer>8193</integer>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>ServerAddress</key>
+		<string>https://ios.es.go.com.mt</string>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<true/>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+		<key>SupportedActions</key>
+		<array>
+			<string>TransferSIMService</string>
+		</array>
+	</dict>
 	<key>Show3GSwitchWith4G</key>
+	<true/>
+	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
@@ -84,8 +111,43 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>LocalInstallSMDPURL</key>
+		<string>sm-v4-072-m-gtm.pr.go-esim.com</string>
+		<key>TransferErrorCodes</key>
+		<dict>
+			<key>CarrierDefaultErrors</key>
+			<array>
+				<string>5003</string>
+			</array>
+			<key>BillingErrors</key>
+			<array>
+				<string>5011</string>
+			</array>
+			<key>IneligibleAccountErrors</key>
+			<array>
+				<string>5021</string>
+			</array>
+			<key>SuccessfulTransferWithDelayedActivationErrors</key>
+			<dict>
+				<key>Item 1</key>
+				<string>5039</string>
+			</dict>
+			<key>MaintenanceErrors</key>
+			<array>
+				<string>5023</string>
+			</array>
+			<key>BlockedAccountErrors</key>
+			<array>
+				<string>5009</string>
+			</array>
+		</dict>
+		<key>MinCompatibleOS</key>
+		<string>27.0</string>
+		<key>SupportsFallbackToLegacyFlow</key>
+		<false/>
+	</dict>
 	<key>VoicemailPilotNumber</key>
 	<string>121</string>
 	<key>HomeBundleIdentifier</key>
@@ -97,21 +159,24 @@
 		<key>5wiServiceMask</key>
 		<integer>1</integer>
 	</dict>
+	<key>PushSettings</key>
+	<dict>
+		<key>CellularPlanTransferTopic</key>
+		<string>mt.com.go.es.transfer</string>
+	</dict>
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>49</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>gointernet</string>
+			<key>type-mask</key>
+			<integer>32817</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>

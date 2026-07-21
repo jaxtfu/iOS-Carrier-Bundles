@@ -221,8 +221,6 @@
 	<dict>
 		<key>SMSCarrierReportJunkAddress</key>
 		<string>7726</string>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
 	<key>PreferCarrierNameFromMetadata</key>
 	<true/>
@@ -235,6 +233,8 @@
 	<array>
 		<string>EntitlementTraffic</string>
 	</array>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>AllowEDGEEditing</key>
 	<true/>
 	<key>VVMRetryIntervals</key>
@@ -456,23 +456,43 @@
 		<true/>
 		<key>SMS</key>
 		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
 		</dict>
 		<key>Media</key>
 		<dict>
 			<key>RTCPIntervalSeconds</key>
 			<integer>5</integer>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
 			<key>PreferredAMRWBMode</key>
 			<integer>8</integer>
 			<key>EnableBandwidthSpecifiers</key>
 			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>127</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>3</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>cmr</key>
+					<string>1</string>
+				</dict>
+			</dict>
 			<key>MaxRedundancy</key>
 			<integer>220</integer>
 			<key>InactivityTimerRTPSeconds</key>
 			<integer>20</integer>
-			<key>IncludeSDPMaxRed</key>
-			<true/>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 			<key>IncludeSDPModeChangeCapability</key>
 			<true/>
 		</dict>
@@ -554,7 +574,7 @@
 		</dict>
 	</array>
 	<key>MyAccountURL</key>
-	<string>http://www.o2.co.uk/</string>
+	<string>https://www.o2.co.uk/</string>
 	<key>ShowVolteSwitch</key>
 	<true/>
 	<key>SupportsImsCapability</key>
@@ -568,8 +588,6 @@
 	</dict>
 	<key>ShowClass0SMSFromField</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>TetheringURL</key>
 	<string>http://www.o2.co.uk/iphonehelp/modem</string>
 	<key>VoicemailPilotNumber</key>
@@ -775,12 +793,12 @@
 		<dict>
 			<key>password</key>
 			<string>password</string>
+			<key>enableXLAT464</key>
+			<true/>
 			<key>username</key>
 			<string>vertigo</string>
 			<key>apn</key>
 			<string>idata.o2.co.uk</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>1081399</integer>
 			<key>AllowedProtocolMask</key>
@@ -793,8 +811,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
@@ -851,8 +867,6 @@
 						<string></string>
 						<key>tech-type-mask</key>
 						<integer>131072</integer>
-						<key>DefaultProtocolMask</key>
-						<integer>2</integer>
 						<key>SupportSwitchOver</key>
 						<true/>
 						<key>username</key>
@@ -869,8 +883,6 @@
 						<string>o2</string>
 						<key>apn</key>
 						<string>mobile.o2.co.uk</string>
-						<key>DefaultProtocolMask</key>
-						<integer>1</integer>
 						<key>type-mask</key>
 						<integer>1081399</integer>
 						<key>AllowedProtocolMask</key>

@@ -56,8 +56,8 @@
 			<integer>1</integer>
 		</dict>
 	</dict>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>0700</string>
 	<key>HomeBundleIdentifier</key>

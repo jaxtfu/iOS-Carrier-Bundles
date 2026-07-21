@@ -81,8 +81,6 @@
 	<dict>
 		<key>3GPP</key>
 		<dict>
-			<key>3GPP_Item</key>
-			<dict/>
 			<key>password</key>
 			<string></string>
 			<key>username</key>

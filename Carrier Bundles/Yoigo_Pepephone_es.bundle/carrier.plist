@@ -90,12 +90,12 @@
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>22177</string>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>OverrideOperatorWiFiName</key>
 	<string>Llamadas Wi-Fi</string>
 	<key>HomeBundleIdentifier</key>
@@ -125,8 +125,39 @@
 		<dict>
 			<key>InactivityTimerRTCPSeconds</key>
 			<integer>30</integer>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 			<key>AllowIPv6UnicastAddress</key>
 			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>97</key>
+				<dict>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+				<key>96</key>
+				<dict>
+					<key>br</key>
+					<string>9.6-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>swb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+			</dict>
 		</dict>
 		<key>Signaling</key>
 		<dict>
@@ -189,14 +220,7 @@
 				<key>NR</key>
 				<false/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
-	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
@@ -219,8 +243,6 @@
 		</dict>
 		<key>ShowBusinessMessagingSwitch</key>
 		<true/>
-		<key>SupportsE2EE</key>
-		<false/>
 		<key>ShowRCSSwitch</key>
 		<true/>
 		<key>EnableRCSByDefault</key>

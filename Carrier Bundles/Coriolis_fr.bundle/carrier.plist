@@ -81,22 +81,94 @@
 		<string>20801_ID-893327</string>
 		<string>20809_ID-893327</string>
 	</array>
-	<key>ShowDialAssist</key>
-	<false/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Media</key>
+		<dict>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>403,500,503,488</string>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>90</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>45</integer>
+			<key>SendPreferredServiceInInvite</key>
+			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>CountryOfOriginationFormat</key>
+			<string>BOTH</string>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>UseCIDUrlInPIDF</key>
+			<true/>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>UseOutgoingSipUri</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc027.mcc208.3gppnetwork.org</string>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>OverrideOperatorWiFiName</key>
 	<string>Coriolis WiFi</string>
 	<key>Show3GSwitchWith4G</key>
 	<true/>
+	<key>ShowDialAssist</key>
+	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<array>
 		<string>+447786205094</string>
 	</array>
 	<key>CarrierName</key>
 	<string>Coriolis</string>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>IMAP</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>222</string>
 	<key>HomeBundleIdentifier</key>
@@ -231,6 +303,22 @@
 			<string></string>
 			<key>type-mask</key>
 			<integer>4</integer>
+		</dict>
+		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>131072</integer>
+			<key>UseNetworkMTU</key>
+			<true/>
+			<key>SupportSwitchOver</key>
+			<true/>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>OTASoftwareUpdate</key>

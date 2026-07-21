@@ -33,6 +33,26 @@
 		<key>SoftwareUpdateOptInRequired</key>
 		<true/>
 	</dict>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>AllowedProtocolMaskInRoamingUMTS</key>
+			<integer>1</integer>
+			<key>apn</key>
+			<string></string>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>StockSymboli</key>
 	<array>
 		<dict>
@@ -57,8 +77,6 @@
 	<true/>
 	<key>SupportsNITZ</key>
 	<true/>
-	<key>VoicemailPilotNumber</key>
-	<string>955</string>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>MatchingICCIDPrefixes</key>
@@ -93,8 +111,12 @@
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
 	</dict>
-	<key>WatchCustomerServicePhoneNumber</key>
-	<string>900</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>VoicemailPilotNumber</key>
+	<string>955</string>
+	<key>Show4GSwitch</key>
+	<true/>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
@@ -110,8 +132,10 @@
 		<string>+447860015073</string>
 		<string>+447860015074</string>
 	</array>
-	<key>ShowTTY</key>
-	<false/>
+	<key>WatchCustomerServicePhoneNumber</key>
+	<string>900</string>
+	<key>OverrideOperatorWiFiName</key>
+	<string>stc VoWiFi</string>
 	<key>MMS</key>
 	<dict>
 		<key>MMSC</key>
@@ -127,6 +151,109 @@
 		<key>MaxMessageSize</key>
 		<integer>614400</integer>
 	</dict>
+	<key>TechSettings</key>
+	<dict>
+		<key>WifiCallingAllowedInRoaming</key>
+		<false/>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA2-256</string>
+						</array>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>AES-128</string>
+						</array>
+						<key>DHGroup</key>
+						<integer>14</integer>
+						<key>Lifetime</key>
+						<integer>80000</integer>
+					</dict>
+				</array>
+				<key>InstallPolicies</key>
+				<true/>
+				<key>ReplayWindowSize</key>
+				<integer>12</integer>
+			</dict>
+		</dict>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>ims</string>
+		</dict>
+		<key>5wiServiceMask</key>
+		<integer>3</integer>
+		<key>EPDGResolutionFallbackEnabled</key>
+		<false/>
+		<key>SupportCallHandover</key>
+		<true/>
+		<key>TechPolicies</key>
+		<array>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>131072</integer>
+			</dict>
+		</array>
+		<key>ExtraConfigurationAttributeRequestv4</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16384</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv4</string>
+				<key>Type</key>
+				<string>IPv4Address</string>
+			</dict>
+		</array>
+		<key>WiFiCallingControlsAlliWLanServices</key>
+		<false/>
+		<key>IKE</key>
+		<dict>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-128</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-256</string>
+					<key>DHGroup</key>
+					<integer>14</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>80000</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-256</string>
+				</dict>
+			</array>
+			<key>DeadPeerDetectionEnabled</key>
+			<false/>
+			<key>DeadPeerDetectionMaxRetries</key>
+			<integer>4</integer>
+			<key>DeadPeerDetectionInterval</key>
+			<integer>600</integer>
+			<key>LocalIdentifier</key>
+			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
+			<key>NATTKeepAliveOffload</key>
+			<true/>
+			<key>ValidateRemoteCertificate</key>
+			<false/>
+			<key>RemoteAddress</key>
+			<string>epdg.epc.mnc001.mcc420.pub.3gppnetwork.org</string>
+			<key>DeadPeerDetectionRetryInterval</key>
+			<integer>10</integer>
+		</dict>
+	</dict>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.SaudiArabia</string>
 	<key>MaxBluetoothModemConnections</key>
@@ -136,20 +263,36 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>32817</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
+			<key>username</key>
+			<string></string>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>1</integer>
+			<key>apn</key>
+			<string>JAWALNET.COM.SA</string>
+			<key>type-mask</key>
+			<integer>32817</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>131072</integer>
+			<key>AllowNoDNS</key>
+			<integer>1</integer>
+			<key>SupportSwitchOver</key>
+			<true/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
-			<string>JAWALNET.COM.SA</string>
+			<string>IMS</string>
 			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>password</key>
@@ -164,10 +307,165 @@
 	</array>
 	<key>APNEditabilityTypemaskNew</key>
 	<integer>53</integer>
-	<key>SMSSettings</key>
+	<key>IMSConfig</key>
 	<dict>
-		<key>TransportFallback</key>
+		<key>Signaling</key>
+		<dict>
+			<key>IgnoreRegNotificationContactExpires</key>
+			<true/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>UseOutgoingSipUri</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>ussdEnabled</key>
+			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>LocationForShortCodeCalls</key>
+			<string>BOTH</string>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<integer>30</integer>
+			<key>AdditionalHeaders</key>
+			<dict>
+				<key>INVITE,INVITE:*</key>
+				<string>Feature-Caps: *;+g.3gpp.srvcc-alerting</string>
+			</dict>
+			<key>AlwaysUnsubscribeFromRegEvents</key>
+			<false/>
+			<key>SendLocalTimeZoneInformation</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,5XX,6XX</string>
+			<key>IgnoreFromHeaderForSenderName</key>
+			<false/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>DropRegistrationOnSRVCC</key>
+			<true/>
+			<key>SubscriptionTerminatedMeansRegistrationTerminated</key>
+			<true/>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>130</integer>
+			<key>AlwaysAddPrivacyHeader</key>
+			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>BOTH</string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>NoAnswerFromUser</key>
+				<dict>
+					<key>Protocol</key>
+					<string>Q.850</string>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderCause</key>
+					<integer>19</integer>
+					<key>StatusCode</key>
+					<integer>480</integer>
+				</dict>
+			</dict>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>DropRegistrationOnAirplaneModeToggle</key>
+			<true/>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>30</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>130</integer>
+			<key>UseIPSec</key>
+			<true/>
+			<key>AllowPCNIInAirplaneMode</key>
+			<false/>
+		</dict>
+		<key>AllowWiFiCallingInAirplaneMode</key>
+		<false/>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>TreatAllNotificationsAsPartial</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:confuri@fmc.stc.com.sa</string>
+		</dict>
+		<key>LocalShortCodeNumbers</key>
+		<array>
+			<string>899</string>
+			<string>906</string>
+			<string>908</string>
+			<string>981</string>
+			<string>987</string>
+			<string>990</string>
+			<string>991</string>
+			<string>992</string>
+			<string>993</string>
+			<string>994</string>
+			<string>995</string>
+			<string>996</string>
+			<string>997</string>
+			<string>998</string>
+			<string>999</string>
+			<string>1700</string>
+			<string>1704</string>
+			<string>3708</string>
+			<string>9111</string>
+		</array>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<true/>
+			</dict>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>25</integer>
+			<key>RTCPIntervalSeconds</key>
+			<string>5</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>EnableRemoteRTCPDeactivation</key>
+			<true/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
 		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
@@ -175,6 +473,8 @@
 	<string>+966504000000</string>
 	<key>APNEditabilityTypemask</key>
 	<integer>1</integer>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32769</integer>
 	<key>PushSettings</key>
 	<dict>
 		<key>MultiSIMTopic</key>
@@ -222,8 +522,10 @@
 	<true/>
 	<key>CarrierName</key>
 	<string>stc</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.stc.com.sa/</string>
+	<string>https://www.stc.com.sa/</string>
 	<key>MyAccountURLTitle</key>
 	<string>stc web-site</string>
 	<key>MandatoryVerify</key>
@@ -231,6 +533,8 @@
 		<key>SIMs</key>
 		<array/>
 	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>42001</string>

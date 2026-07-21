@@ -45,6 +45,8 @@
 		<key>TransportFallback</key>
 		<false/>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>SupportsSupplementaryServicesOverIMS</key>
@@ -150,16 +152,12 @@
 			<key>RegistrationExpirationSeconds</key>
 			<integer>7200</integer>
 		</dict>
-		<key>Voice</key>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>SMS</key>
 		<dict>
-			<key>E911OverITechSupported</key>
+			<key>enableInNonVoLTEMode</key>
 			<false/>
-			<key>E911OverCSIfNoIMSReg</key>
-			<true/>
-			<key>EnableVolteByDefault</key>
-			<false/>
-			<key>endNonEmergencyCalls</key>
-			<true/>
 		</dict>
 		<key>ConferenceCalling</key>
 		<dict>
@@ -243,17 +241,26 @@
 			<key>IgnoreISIM</key>
 			<true/>
 		</dict>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverITechSupported</key>
+			<false/>
+			<key>E911OverCSIfNoIMSReg</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<false/>
+			<key>endNonEmergencyCalls</key>
+			<true/>
+		</dict>
 	</dict>
+	<key>OverrideOperatorWiFiName</key>
+	<string>MobiFone Wi-Fi</string>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>90001</string>
 	<key>CarrierName</key>
 	<string>Mobifone</string>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
 	<key>AttachAPN</key>
 	<dict>
 		<key>3GPP</key>
@@ -270,10 +277,10 @@
 			<integer>3</integer>
 		</dict>
 	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>ShowVolteSwitch</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>HomeBundleIdentifier</key>
@@ -431,46 +438,40 @@
 			<string>mms</string>
 			<key>apn</key>
 			<string>m-wap</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>53</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>type-mask</key>
-			<integer>131072</integer>
-			<key>apn</key>
-			<string>ims</string>
+			<key>UseNetworkMTU</key>
+			<true/>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
-			<key>DefaultProtocolMask</key>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>1048576</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>xcap</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>

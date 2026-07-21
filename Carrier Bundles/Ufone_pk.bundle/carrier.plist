@@ -89,8 +89,6 @@
 		</dict>
 		<key>SMS</key>
 		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 			<key>SMSBundleToVoice</key>
 			<true/>
 			<key>SupportedDomains</key>
@@ -126,8 +124,6 @@
 				<string></string>
 				<key>apn</key>
 				<string></string>
-				<key>DefaultProtocolMask</key>
-				<integer>3</integer>
 				<key>AllowedProtocolMask</key>
 				<integer>3</integer>
 			</dict>
@@ -139,8 +135,6 @@
 	<true/>
 	<key>ShowVolteSwitch</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>191</string>
 	<key>HomeBundleIdentifier</key>
@@ -156,6 +150,13 @@
 		<key>MaxMessageSize</key>
 		<integer>307200</integer>
 	</dict>
+	<key>SupportedPLMNs</key>
+	<array>
+		<string>41003</string>
+		<string>41013</string>
+		<string>41012</string>
+		<string>41011</string>
+	</array>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -165,8 +166,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>ufone.internet</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
@@ -183,18 +182,16 @@
 			<integer>4</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>ims</string>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>

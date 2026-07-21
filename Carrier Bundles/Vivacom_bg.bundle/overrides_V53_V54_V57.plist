@@ -2,70 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>DerPriFileVersion</key>
-	<string>0.1.161</string>
-	<key>Show3GSwitchWith4G</key>
-	<false/>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Media</key>
-		<dict>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>127</key>
-				<dict>
-					<key>ch-aw-recv</key>
-					<string>0</string>
-					<key>br</key>
-					<string>5.9-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-					<key>hf-only</key>
-					<string>0</string>
-				</dict>
-			</dict>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-		</dict>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>SupportedDomains</key>
-			<dict>
-				<key>LTE</key>
-				<false/>
-			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<false/>
-		</dict>
-		<key>Voice</key>
-		<dict>
-			<key>EnableVolteByDefault</key>
-			<true/>
-		</dict>
-	</dict>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
+	<key>DerPriFileVersion</key>
+	<string>0.1.161</string>
 	<key>IPv6SupportedDataModeMask</key>
 	<integer>45087</integer>
-	<key>ShowVolteSwitch</key>
-	<false/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<key>Show3GSwitchWith4G</key>
 	<false/>
 	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
-	<key>Enable5GAutoByDefault</key>
+	<key>ShowVolteSwitch</key>
+	<false/>
+	<key>Show5GSwitch</key>
 	<true/>
 	<key>SupportsNRNSAInboundRoaming</key>
-	<true/>
-	<key>Show5GSwitch</key>
 	<true/>
 </dict>
 </plist>

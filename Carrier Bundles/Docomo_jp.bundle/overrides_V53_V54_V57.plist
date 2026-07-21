@@ -4,31 +4,6 @@
 <dict>
 	<key>MVNOOverrides</key>
 	<dict>
-		<key>Configuration_1</key>
-		<dict>
-			<key>OverrideConfiguration</key>
-			<dict>
-				<key>CarrierBookmarks</key>
-				<array>
-					<dict>
-						<key>Title</key>
-						<string>dポイントクラブ</string>
-						<key>URL</key>
-						<string>https://dpoint.jp/index.html</string>
-					</dict>
-				</array>
-				<key>MyAccountURLTitle</key>
-				<string>ahamoのホームページ</string>
-				<key>MyAccountURL</key>
-				<string>https://ahamo.com/</string>
-				<key>Services</key>
-				<array/>
-			</dict>
-			<key>SupportedSIMs</key>
-			<array>
-				<string>44010_GID1-01FFFF</string>
-			</array>
-		</dict>
 		<key>Configuration_2</key>
 		<dict>
 			<key>OverrideConfiguration</key>
@@ -71,7 +46,7 @@
 		</dict>
 	</dict>
 	<key>DerPriFileVersion</key>
-	<string>5.4.162</string>
+	<string>6.0.163</string>
 	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
 	<key>Show5GStandaloneSwitch</key>
@@ -106,84 +81,57 @@
 			<key>RestrictedDomainMode</key>
 			<true/>
 		</dict>
-		<key>Media</key>
-		<dict>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>109</key>
-				<dict>
-					<key>max-red</key>
-					<string>0</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>ch-aw-recv</key>
-					<string>-1</string>
-					<key>cmr</key>
-					<string>-1</string>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>br</key>
-					<string>13.2</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-				</dict>
-			</dict>
-			<key>SelectLatestForkWithActiveEarlyMedia</key>
-			<true/>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-		</dict>
-		<key>Satellite</key>
-		<dict>
-			<key>IMSServiceMask</key>
-			<integer>2</integer>
-		</dict>
-		<key>Signaling</key>
-		<dict>
-			<key>EmergencyURNs</key>
-			<dict>
-				<key>110</key>
-				<string>urn:service:sos.police</string>
-				<key>118</key>
-				<string>urn:service:sos.marine</string>
-				<key>119</key>
-				<string>urn:service:sos.fire</string>
-			</dict>
-		</dict>
 		<key>SMS</key>
 		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
 			<key>SupportedDomains</key>
 			<dict>
 				<key>NR</key>
 				<true/>
 			</dict>
 		</dict>
+		<key>Satellite</key>
+		<dict>
+			<key>IMSServiceMask</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>CarrierEntitlements</key>
 	<dict>
-		<key>SupportSecureIntent</key>
-		<true/>
 		<key>SupportedEntitlements</key>
 		<integer>41985</integer>
-		<key>ProtocolVersion</key>
-		<string>2</string>
-		<key>Authentication</key>
-		<dict>
-			<key>Type</key>
-			<integer>1</integer>
-			<key>Username</key>
-			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
-		</dict>
-		<key>ServerAddress</key>
-		<string>https://adm.docomo.ne.jp</string>
 		<key>SupportPhysicalSIMtoESIMTransfer</key>
 		<true/>
+		<key>ExtraEndPoints</key>
+		<array>
+			<dict>
+				<key>SupportedEntitlements</key>
+				<integer>4194320</integer>
+				<key>ServerAddress</key>
+				<string>https://rcs.adm.docomo.ne.jp</string>
+				<key>SupportedAuthorizationTokens</key>
+				<integer>2</integer>
+				<key>PushSettingsOverlay</key>
+				<dict>
+					<key>Topic</key>
+					<string>com.docomo.entcrcs</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>SupportedEntitlements</key>
+				<integer>524304</integer>
+				<key>PushSettingsOverlay</key>
+				<dict>
+					<key>Topic</key>
+					<string>com.docomo.entc</string>
+				</dict>
+				<key>ServerAddress</key>
+				<string>https://ses.docomo.ne.jp::443/entitlement</string>
+			</dict>
+		</array>
 		<key>SupportsOnDevicePhysicalSIMConvert</key>
 		<true/>
-		<key>UpdatePeriod</key>
-		<integer>24</integer>
+		<key>SupportSecureIntent</key>
+		<true/>
 	</dict>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
@@ -196,7 +144,9 @@
 			<string>8001</string>
 			<string>8002</string>
 			<string>8003</string>
+			<string>8004</string>
 			<string>8005</string>
+			<string>8006</string>
 			<string>8007</string>
 			<string>8008</string>
 			<string>8009</string>
@@ -205,6 +155,7 @@
 			<string>8012</string>
 			<string>8013</string>
 			<string>8014</string>
+			<string>8015</string>
 		</array>
 		<key>Tier</key>
 		<integer>4</integer>
@@ -215,46 +166,10 @@
 	<true/>
 	<key>DataIndicatorOverrideForNRMmwave</key>
 	<string>NRPlus</string>
-	<key>Enable5GAutoByDefault</key>
-	<true/>
 	<key>ShowVolteSwitch</key>
 	<false/>
-	<key>EmergencyCalling</key>
-	<dict>
-		<key>EmergencyNumbers</key>
-		<array>
-			<dict>
-				<key>PreferredEmergencyNumber</key>
-				<true/>
-				<key>Category</key>
-				<integer>1</integer>
-				<key>Title</key>
-				<string>EMERGENCY_DISAMBIGUATION_POLICE</string>
-				<key>Number</key>
-				<string>110</string>
-			</dict>
-			<dict>
-				<key>PreferredEmergencyNumber</key>
-				<true/>
-				<key>Category</key>
-				<integer>8</integer>
-				<key>Title</key>
-				<string>EMERGENCY_DISAMBIGUATION_COAST_GUARD</string>
-				<key>Number</key>
-				<string>118</string>
-			</dict>
-			<dict>
-				<key>PreferredEmergencyNumber</key>
-				<true/>
-				<key>Category</key>
-				<integer>6</integer>
-				<key>Title</key>
-				<string>EMERGENCY_DISAMBIGUATION_FIRE_AMBULANCE_RESCUE</string>
-				<key>Number</key>
-				<string>119</string>
-			</dict>
-		</array>
-	</dict>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
 	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 </dict>

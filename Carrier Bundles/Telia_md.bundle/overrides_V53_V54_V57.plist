@@ -4,9 +4,5 @@
 <dict>
 	<key>Show3GSwitchWith5G</key>
 	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Show3GSwitchWithVolte</key>
-	<true/>
 </dict>
 </plist>

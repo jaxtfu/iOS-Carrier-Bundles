@@ -4,12 +4,12 @@
 <dict>
 	<key>CarrierEntitlements</key>
 	<dict>
+		<key>SupportSecureIntent</key>
+		<true/>
 		<key>SupportedEntitlements</key>
-		<integer>1233</integer>
+		<integer>9425</integer>
 		<key>ProtocolVersion</key>
 		<string>2</string>
-		<key>ServerAddress</key>
-		<string>https://es.turktelekom.com.tr/entitlement/</string>
 		<key>Authentication</key>
 		<dict>
 			<key>Type</key>
@@ -17,6 +17,10 @@
 			<key>Username</key>
 			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
 		</dict>
+		<key>ServerAddress</key>
+		<string>https://es.turktelekom.com.tr/entitlement/</string>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<true/>
 		<key>UpdatePeriod</key>
 		<integer>48</integer>
 	</dict>
@@ -29,12 +33,10 @@
 	<dict>
 		<key>3GPP</key>
 		<dict>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 			<key>password</key>
 			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 			<key>PcscfAddressRequired</key>
 			<false/>
 			<key>username</key>
@@ -43,7 +45,7 @@
 			<integer>3</integer>
 			<key>apn</key>
 			<string>internet</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
 			<integer>3</integer>
 		</dict>
 	</dict>
@@ -204,6 +206,30 @@
 			</dict>
 		</array>
 	</dict>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>LocalInstallSMDPURL</key>
+		<string>https://turktelekom.smdpp.protahub.com</string>
+		<key>TransferErrorCodes</key>
+		<dict>
+			<key>CarrierDefaultErrors</key>
+			<array>
+				<string>5003</string>
+			</array>
+			<key>IneligibleAccountErrors</key>
+			<array>
+				<string>5011</string>
+			</array>
+			<key>BillingErrors</key>
+			<array>
+				<string>5009</string>
+			</array>
+		</dict>
+		<key>MinCompatibleOS</key>
+		<string>27.0</string>
+		<key>SupportsFallbackToLegacyFlow</key>
+		<false/>
+	</dict>
 	<key>AllowEDGEEditing</key>
 	<true/>
 	<key>RegistrationOptInRequired</key>
@@ -244,14 +270,14 @@
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>999</string>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447860015000</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>IPv6SupportedDataModeMask</key>
 	<integer>12319</integer>
 	<key>OverrideOperatorWiFiName</key>
@@ -373,21 +399,21 @@
 	<string>com.apple.Turkey</string>
 	<key>MaxBluetoothModemConnections</key>
 	<integer>5</integer>
+	<key>ShowVolteSwitch</key>
+	<true/>
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>32817</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>internet</string>
+			<key>type-mask</key>
+			<integer>32817</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -402,46 +428,168 @@
 			<integer>4</integer>
 		</dict>
 		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>type-mask</key>
-			<integer>131072</integer>
-			<key>apn</key>
-			<string>ims</string>
+			<key>UseNetworkMTU</key>
+			<true/>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
-			<key>DefaultProtocolMask</key>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</array>
-	<key>SuppressSimToolkitSendShortMessageNotifications</key>
-	<true/>
 	<key>IMSConfig</key>
 	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>UseCIDUrlInPIDF</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>UseFakeSAsForDeregistration</key>
+			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<integer>26</integer>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>AllowResponsesOverDifferentTransport</key>
+			<false/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX</string>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>120</integer>
+			<key>SendPreferredServiceInInvite</key>
+			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>CallToVoicemail</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>normal</string>
+					<key>StatusCode</key>
+					<integer>480</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteRequestCanceled</string>
+				</dict>
+				<key>NoAnswerFromUser</key>
+				<dict>
+					<key>Protocol</key>
+					<string>Q.850</string>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderCause</key>
+					<integer>19</integer>
+					<key>StatusCode</key>
+					<integer>480</integer>
+				</dict>
+			</dict>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>UseIPSec</key>
+			<true/>
+			<key>RingingTimerSeconds</key>
+			<integer>120</integer>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc003.mcc286.3gppnetwork.org</string>
+		</dict>
+		<key>EnableWiFiCallingByDefault</key>
+		<false/>
+		<key>SMS</key>
+		<dict>
+			<key>SMSBundleToVoice</key>
+			<true/>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<true/>
+			</dict>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
 		<key>Media</key>
 		<dict>
 			<key>RTCPIntervalSeconds</key>
 			<integer>5</integer>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>2</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>UseSDPTemplateWhenAnswering</key>
+			<false/>
+			<key>UseSDPTemplateForAllInvites</key>
+			<integer>0</integer>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 		</dict>
-		<key>Voice</key>
+		<key>XCAP</key>
 		<dict>
-			<key>E911OverITechSupported</key>
+			<key>supported</key>
 			<false/>
 		</dict>
-		<key>Signaling</key>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<false/>
+		<key>Voice</key>
 		<dict>
-			<key>WaitForRingingTimerMOSeconds</key>
-			<integer>26</integer>
+			<key>EnableVolteByDefault</key>
+			<true/>
+			<key>endNonEmergencyCalls</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<true/>
 		</dict>
 	</dict>
+	<key>SuppressSimToolkitSendShortMessageNotifications</key>
+	<true/>
 	<key>SMSSettings</key>
 	<dict>
 		<key>TransportFallback</key>
@@ -457,15 +605,19 @@
 	<integer>32768</integer>
 	<key>PushSettings</key>
 	<dict>
-		<key>Topic</key>
+		<key>CellularPlanTransferTopic</key>
 		<string>com.turktelekom.es</string>
 		<key>MultiSIMTopic</key>
+		<string>com.turktelekom.es</string>
+		<key>Topic</key>
 		<string>com.turktelekom.es</string>
 		<key>VoWiFiTopic</key>
 		<string>com.turktelekom.es</string>
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
+	<key>EnableLTEAfterUpgrade</key>
+	<true/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -481,8 +633,10 @@
 	<integer>521</integer>
 	<key>CarrierName</key>
 	<string>Turk Telekom</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.turktelekom.com.tr</string>
+	<string>https://www.turktelekom.com.tr</string>
 	<key>MyAccountURLTitle</key>
 	<string>Türk Telekom</string>
 	<key>MandatoryVerify</key>

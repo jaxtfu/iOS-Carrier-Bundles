@@ -36,6 +36,8 @@
 	<true/>
 	<key>MyAccountURLTitle</key>
 	<string>Aktivoi OmaSaunalahti IPhonelle</string>
+	<key>IPv6SupportedDataModeMask</key>
+	<integer>8223</integer>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -94,13 +96,13 @@
 			<key>apn</key>
 			<string>internet.saunalahti</string>
 			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>+35850950777</string>
 	<key>HomeBundleIdentifier</key>
@@ -131,6 +133,8 @@
 			<string>internet.saunalahti</string>
 			<key>type-mask</key>
 			<integer>49</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>password</key>
@@ -141,6 +145,8 @@
 			<string>mms.saunalahti.fi</string>
 			<key>type-mask</key>
 			<integer>4</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>password</key>
@@ -151,6 +157,8 @@
 			<string>internet.saunalahti</string>
 			<key>type-mask</key>
 			<integer>48</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>OTASoftwareUpdate</key>

@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AllowEDGEEditing</key>
+	<true/>
+	<key>MandatoryVerify</key>
+	<dict>
+		<key>SIMs</key>
+		<array/>
+	</dict>
 	<key>MVNOOverrides</key>
 	<dict>
 		<key>Configuration_Carrier2</key>
@@ -10,7 +17,7 @@
 			<dict>
 				<key>OverrideOperatorName</key>
 				<string>eSimFLAG</string>
-				<key>DataOnlySubscriptionActions</key>
+				<key>DataOnlySubscription</key>
 				<true/>
 				<key>IntlDataRoamingAllowed</key>
 				<array>
@@ -70,7 +77,7 @@
 			<dict>
 				<key>OverrideOperatorName</key>
 				<string>eSimFLAG</string>
-				<key>DataOnlySubscriptionActions</key>
+				<key>DataOnlySubscription</key>
 				<true/>
 				<key>IntlDataRoamingAllowed</key>
 				<array>
@@ -95,16 +102,7 @@
 			</array>
 		</dict>
 	</dict>
-	<key>AllowEDGEEditing</key>
-	<true/>
-	<key>MandatoryVerify</key>
-	<dict>
-		<key>SIMs</key>
-		<array/>
-	</dict>
 	<key>Enable4GByDefault</key>
-	<true/>
-	<key>DataOnlySubscriptionActions</key>
 	<true/>
 	<key>SupportsNITZ</key>
 	<true/>
@@ -116,6 +114,8 @@
 	<integer>0</integer>
 	<key>MyAccountURLTitle</key>
 	<string>eSim FLAG</string>
+	<key>DataOnlySubscription</key>
+	<true/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>21405_GID1-80</string>

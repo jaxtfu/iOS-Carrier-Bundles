@@ -4,17 +4,20 @@
 <dict>
 	<key>MaxBluetoothModemConnections</key>
 	<integer>5</integer>
-	<key>OTASoftwareUpdate</key>
-	<dict/>
+	<key>VisualVoicemailServiceName</key>
+	<string>IMAP</string>
+	<key>SuppressSimToolkitSendShortMessageNotifications</key>
+	<true/>
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<false/>
-	</dict>
+	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
+	<integer>131072</integer>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
 		<key>MaxGreetingDuration</key>
@@ -45,10 +48,6 @@
 		<key>BeaconAddress</key>
 		<string>4016</string>
 	</dict>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>302720_GID1-BA</string>
-	</array>
 	<key>Location</key>
 	<dict>
 		<key>EnableCPIDuringEmergencyMode</key>
@@ -56,12 +55,162 @@
 		<key>EnableEarlyReturnDuringEmergencyMode</key>
 		<true/>
 	</dict>
-	<key>ShowDialAssist</key>
-	<true/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>IgnoreRegNotificationContactExpires</key>
+			<true/>
+			<key>AddEmergencyContactParamInInvite</key>
+			<true/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>INVITE[911]</key>
+				<array>
+					<string>sos</string>
+				</array>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>LocalQoSTimeoutMOSeconds</key>
+			<integer>5000</integer>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>UseCIDUrlInPIDF</key>
+			<true/>
+			<key>AccessNetworkRefreshMethod</key>
+			<string>INVITE</string>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>EmergencyLocationLookupRequired</key>
+			<false/>
+			<key>UseFakeSAsForDeregistration</key>
+			<true/>
+			<key>AccessNetworkRefreshDelayMilliseconds</key>
+			<integer>30000</integer>
+			<key>SipTimers</key>
+			<dict>
+				<key>InviteResponseTimeout</key>
+				<integer>5000</integer>
+			</dict>
+			<key>AdditionalHeaders</key>
+			<dict>
+				<key>INVITE[wifi,911]</key>
+				<array>
+					<string>Priority: emergency</string>
+				</array>
+			</dict>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<integer>25</integer>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>AlwaysEmergencyRegister</key>
+			<false/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>380,414,499,606</string>
+			<key>MaxUdpMessageSize</key>
+			<integer>1200</integer>
+			<key>StartLocalQosTimerOnSessionProgress</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>0</integer>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>15</integer>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>RequireQoSBeforeRinging</key>
+			<true/>
+			<key>ClearRegistrationCallIdOnDeinitialization</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc720.mcc302.3gppnetwork.org</string>
+		</dict>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>UseRTPDetectionAutoStart</key>
+			<true/>
+			<key>MaxRedundancy</key>
+			<integer>220</integer>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>30</integer>
+			<key>EnableIncomingDTMF</key>
+			<true/>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>SupportsCW</key>
+			<false/>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>supported</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<false/>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<false/>
+			<key>E911OverCSIfNoIMSReg</key>
+			<false/>
+			<key>CheckIMSPrefForEmergency</key>
+			<false/>
+			<key>CellularE911SearchTimeout</key>
+			<integer>10</integer>
+			<key>E911SearchTimer</key>
+			<integer>1</integer>
+			<key>tLte911Timer</key>
+			<integer>180</integer>
+		</dict>
+	</dict>
+	<key>OverrideOperatorWiFiName</key>
+	<string>WiFi Tbaytel</string>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportedEntitlements</key>
-		<integer>4194480</integer>
+		<integer>4194481</integer>
 		<key>ProtocolVersion</key>
 		<string>2</string>
 		<key>ServerAddress</key>
@@ -78,31 +227,47 @@
 		<key>UpdatePeriod</key>
 		<integer>24</integer>
 	</dict>
+	<key>ShowDialAssist</key>
+	<true/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>49988</string>
 	<key>RCS</key>
 	<dict>
-		<key>EnableRCSByDefault</key>
-		<true/>
-		<key>SupportsE2EE</key>
-		<false/>
-		<key>ShowRCSSwitch</key>
-		<true/>
 		<key>ProvisioningData</key>
 		<dict>
 			<key>ServerURL</key>
 			<string>config.rcs.mnc720.mcc302.jibecloud.net</string>
 		</dict>
+		<key>EnableRCSByDefault</key>
+		<true/>
+		<key>ShowRCSSwitch</key>
+		<true/>
 	</dict>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>49988</string>
 	<key>CarrierName</key>
 	<string>tbaytel</string>
-	<key>SupportsUserBusyCauseCode</key>
-	<true/>
-	<key>VisualVoicemailServiceName</key>
-	<string>IMAP</string>
-	<key>ShowTTY</key>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
 	<false/>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+			<key>apn</key>
+			<string>ltemobile.apn</string>
+		</dict>
+	</dict>
+	<key>ShowVolteSwitch</key>
+	<false/>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>302720_GID1-BA</string>
+	</array>
 	<key>SMSUseLocalTZ</key>
+	<true/>
+	<key>SupportsImsCapability</key>
 	<true/>
 	<key>CellBroadcast</key>
 	<dict>
@@ -165,6 +330,8 @@
 			</dict>
 		</array>
 	</dict>
+	<key>SupportsUserBusyCauseCode</key>
+	<true/>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Canada</string>
 	<key>MMS</key>
@@ -184,6 +351,140 @@
 	</dict>
 	<key>SuppressVMResetOnTechSwitch</key>
 	<true/>
+	<key>TechSettings</key>
+	<dict>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA2-256</string>
+						</array>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>AES-256</string>
+						</array>
+						<key>DHGroup</key>
+						<integer>5</integer>
+						<key>Lifetime</key>
+						<integer>86400</integer>
+					</dict>
+				</array>
+				<key>InstallPolicies</key>
+				<true/>
+				<key>ReplayWindowSize</key>
+				<integer>12</integer>
+			</dict>
+		</dict>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>wifi</string>
+			<key>PreferredTechnologyRoaming</key>
+			<string>wifi</string>
+		</dict>
+		<key>ExtraConfigurationAttributeRequestv6</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>21</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv6</string>
+				<key>Type</key>
+				<string>IPv6Address</string>
+			</dict>
+		</array>
+		<key>SupportContextSwitchOver</key>
+		<true/>
+		<key>WiFiCallingControlsAlliWLanServices</key>
+		<true/>
+		<key>AllowHandOverFromDataModeList</key>
+		<array>
+			<string>LTE</string>
+		</array>
+		<key>5wiServiceMask</key>
+		<integer>3</integer>
+		<key>IKE</key>
+		<dict>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-256</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-256</string>
+					<key>DHGroup</key>
+					<integer>5</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>80000</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-256</string>
+				</dict>
+			</array>
+			<key>DeadPeerDetectionEnabled</key>
+			<false/>
+			<key>DeadPeerDetectionMaxRetries</key>
+			<integer>4</integer>
+			<key>DeadPeerDetectionInterval</key>
+			<integer>600</integer>
+			<key>LocalIdentifier</key>
+			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
+			<key>NATTKeepAliveOffload</key>
+			<true/>
+			<key>ValidateRemoteCertificate</key>
+			<false/>
+			<key>RemoteAddress</key>
+			<string>epdg.epc.mnc720.mcc302.pub.3gppnetwork.org</string>
+			<key>DeadPeerDetectionRetryInterval</key>
+			<integer>10</integer>
+		</dict>
+		<key>AllowRoamingHandover</key>
+		<false/>
+		<key>ExtraConfigurationAttributeRequestv4</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>20</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv4</string>
+				<key>Type</key>
+				<string>IPv4Address</string>
+			</dict>
+		</array>
+		<key>SetHandOverIPv6Prefix</key>
+		<true/>
+		<key>TechPolicies</key>
+		<array>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>1048582</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>131072</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>262144</integer>
+			</dict>
+		</array>
+		<key>SupportCallHandover</key>
+		<true/>
+	</dict>
 	<key>PushSettings</key>
 	<dict>
 		<key>VoWiFiTopic</key>
@@ -192,34 +493,83 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>password</key>
-			<string></string>
-			<key>username</key>
-			<string></string>
+			<key>enableXLAT464</key>
+			<true/>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
-			<string>rogers-core-appl1.apn</string>
+			<string>ltemobile.apn</string>
 			<key>type-mask</key>
 			<integer>32775</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
+			<key>tech-type-mask</key>
+			<integer>1048582</integer>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
+			<key>apn</key>
+			<string>netsvcs</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
+			<key>tech-type-mask</key>
+			<integer>131072</integer>
+			<key>NoCellularReconnectCauseCodes</key>
+			<array>
+				<dict>
+					<key>CauseCodes</key>
+					<array>
+						<integer>29</integer>
+					</array>
+					<key>RecoversOnAirplaneMode</key>
+					<true/>
+					<key>NumTriesAllowed</key>
+					<integer>1</integer>
+					<key>Type</key>
+					<string>3GPP</string>
+				</dict>
+			</array>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>2</integer>
+			<key>SupportSwitchOver</key>
+			<true/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
-			<string>isp.apn</string>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>tech-type-mask</key>
+			<integer>262144</integer>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>2</integer>
+			<key>apn</key>
+			<string>sos</string>
+			<key>type-mask</key>
+			<integer>262144</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
+			<key>apn</key>
+			<string>ltedata.apn</string>
 			<key>type-mask</key>
 			<integer>48</integer>
-		</dict>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>rogers-core-appl1.apn</string>
-			<key>type-mask</key>
-			<integer>32774</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>SupportedPLMNs</key>

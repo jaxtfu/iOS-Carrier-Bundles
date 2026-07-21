@@ -2,76 +2,38 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
-	<key>Services</key>
-	<array>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>Authentication</key>
 		<dict>
-			<key>ServiceCode</key>
-			<string>1052</string>
-			<key>ServiceName</key>
-			<string>Atendimento Claro</string>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
 		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string>*468</string>
-			<key>ServiceName</key>
-			<string>Roaming Internacional</string>
-		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string>*555</string>
-			<key>ServiceName</key>
-			<string>Portal de Recarga</string>
-		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string>*544</string>
-			<key>ServiceName</key>
-			<string>Claro Cartão – Saldo</string>
-		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string>*085</string>
-			<key>ServiceName</key>
-			<string>Chat Amizade</string>
-		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string>*1052#</string>
-			<key>ServiceName</key>
-			<string>Canal Interativo</string>
-		</dict>
-	</array>
-	<key>PreferCarrierNameFromMetadata</key>
-	<true/>
-	<key>DataIndicatorOverrideForLTE</key>
-	<string>4G</string>
+		<key>ServerAddress</key>
+		<string>https://aes.mnc005.mcc724.pub.3gppnetwork.org/entitlement/</string>
+	</dict>
 	<key>Enable4GByDefault</key>
 	<true/>
-	<key>SupportsNITZ</key>
-	<false/>
-	<key>MyAccountURL</key>
-	<string>https://www.claro.com.br/atendimento</string>
-	<key>SuppressSimToolkitSendShortMessageNotifications</key>
-	<true/>
-	<key>EnableLTEAfterUpgrade</key>
-	<true/>
-	<key>WatchCustomerServicePhoneNumber</key>
-	<string>1052</string>
-	<key>SMSSettings</key>
+	<key>AttachAPN</key>
 	<dict>
-		<key>TransportFallback</key>
-		<true/>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string>claro</string>
+			<key>username</key>
+			<string>claro</string>
+			<key>apn</key>
+			<string>java.claro.com.br</string>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
-	<key>MyAccountURLTitle</key>
-	<string>Claro</string>
-	<key>RegistrationOptInRequired</key>
+	<key>SupportsUserBusyCauseCode</key>
 	<true/>
-	<key>SMSNoRetryCauseCode</key>
-	<array>
-		<integer>21</integer>
-	</array>
 	<key>StockSymboli</key>
 	<array>
 		<dict>
@@ -81,57 +43,14 @@
 			<string>AMX</string>
 		</dict>
 	</array>
-	<key>StatusBarImages</key>
-	<array>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>CLARO BR</string>
-			<key>StatusBarCarrierName</key>
-			<string>Claro BR</string>
-		</dict>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>Claro Brasil</string>
-			<key>StatusBarCarrierName</key>
-			<string>Claro BR</string>
-		</dict>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>Claro</string>
-			<key>StatusBarCarrierName</key>
-			<string>Claro BR</string>
-		</dict>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>CLARO BR 21</string>
-			<key>StatusBarCarrierName</key>
-			<string>Claro BR</string>
-		</dict>
-	</array>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>72405</string>
-	</array>
-	<key>ShowDialAssist</key>
+	<key>SupportsVolteCapability</key>
 	<true/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>48308</string>
-	<key>CarrierName</key>
-	<string>Claro Brasil</string>
-	<key>SupportsUserBusyCauseCode</key>
-	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>*100</string>
+	<key>RegistrationOptInRequired</key>
+	<true/>
+	<key>AllowAKEYEditing</key>
+	<true/>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>MatchingICCIDPrefixes</key>
@@ -171,6 +90,31 @@
 		<key>UsesAutoAssignment</key>
 		<false/>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>SupportsNITZ</key>
+	<false/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>48308</string>
+	<key>NumbersExcludedFromCallHistory</key>
+	<dict>
+		<key>724</key>
+		<array>
+			<string>180</string>
+		</array>
+	</dict>
+	<key>ShowDialAssist</key>
+	<true/>
+	<key>WatchCustomerServicePhoneNumber</key>
+	<string>1052</string>
+	<key>Show3GSwitchWith4G</key>
+	<false/>
+	<key>SMSNoRetryCauseCode</key>
+	<array>
+		<integer>21</integer>
+	</array>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Claro WiFi</string>
 	<key>MMS</key>
 	<dict>
 		<key>MMSC</key>
@@ -192,6 +136,134 @@
 	</dict>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Brazil</string>
+	<key>TechSettings</key>
+	<dict>
+		<key>WifiCallingAllowedInRoaming</key>
+		<true/>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA2-256</string>
+						</array>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>AES-256</string>
+						</array>
+						<key>DHGroup</key>
+						<integer>14</integer>
+						<key>Lifetime</key>
+						<integer>86400</integer>
+					</dict>
+				</array>
+				<key>InstallPolicies</key>
+				<true/>
+				<key>ReplayWindowSize</key>
+				<integer>12</integer>
+			</dict>
+		</dict>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>cellular</string>
+			<key>PreferredTechnologyRoaming</key>
+			<string>wifi</string>
+		</dict>
+		<key>5wiServiceMask</key>
+		<integer>3</integer>
+		<key>EPDGResolutionFallbackEnabled</key>
+		<true/>
+		<key>ExtraConfigurationAttributeRequestv6</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16390</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv6</string>
+				<key>Type</key>
+				<string>IPv6Address</string>
+			</dict>
+		</array>
+		<key>SupportCallHandover</key>
+		<true/>
+		<key>TechPolicies</key>
+		<array>
+			<dict>
+				<key>policy</key>
+				<string>TRUE</string>
+				<key>serviceMask</key>
+				<integer>131072</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>TRUE</string>
+				<key>serviceMask</key>
+				<integer>1048576</integer>
+			</dict>
+		</array>
+		<key>ExtraConfigurationAttributeRequestv4</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16384</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv4</string>
+				<key>Type</key>
+				<string>IPv4Address</string>
+			</dict>
+		</array>
+		<key>WiFiCallingControlsAlliWLanServices</key>
+		<true/>
+		<key>IKE</key>
+		<dict>
+			<key>NATTKeepAliveEnabled</key>
+			<true/>
+			<key>DeadPeerDetectionEnabled</key>
+			<false/>
+			<key>DeadPeerDetectionMaxRetries</key>
+			<integer>4</integer>
+			<key>DeadPeerDetectionInterval</key>
+			<integer>600</integer>
+			<key>LocalIdentifier</key>
+			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
+			<key>NATTKeepAliveOffload</key>
+			<true/>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-256</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-256</string>
+					<key>DHGroup</key>
+					<integer>14</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>86400</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-256</string>
+				</dict>
+			</array>
+			<key>RemoteAddress</key>
+			<string>epdg.ims.mnc005.mcc724.pub.3gppnetwork.org</string>
+			<key>DeadPeerDetectionRetryInterval</key>
+			<integer>10</integer>
+		</dict>
+	</dict>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
+	<key>DataIndicatorOverrideForLTE</key>
+	<string>4G</string>
+	<key>ShowVolteSwitch</key>
+	<true/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -214,6 +286,284 @@
 			<key>type-mask</key>
 			<integer>4</integer>
 		</dict>
+	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*[primary]</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>BrandedCallingImageFetchingTimeoutMilliseconds</key>
+			<integer>2000</integer>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>RegistrationRetryIntervals</key>
+			<string>30,60+15,120,480,900,1800</string>
+			<key>ShowBrandedCallingSwitch</key>
+			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>UseCIDUrlInPIDF</key>
+			<true/>
+			<key>UseFakeSAsForDeregistration</key>
+			<true/>
+			<key>ussdEnabled</key>
+			<false/>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<integer>10</integer>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,6XX</string>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>MaxUdpMessageSize</key>
+			<integer>1300</integer>
+			<key>TriggerCSFBOnWaitForRingingTimeout</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>90</integer>
+			<key>SendPreferredServiceInInvite</key>
+			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>VerstatFeatureCapability</key>
+			<string>Enabled</string>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>EnableBrandedCalling</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>10</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>90</integer>
+			<key>UseIPSec</key>
+			<true/>
+			<key>BrandedCallingAssetServersAllowList</key>
+			<array>
+				<dict>
+					<key>Server</key>
+					<string>cdn-br.ccid.neustar.biz</string>
+					<key>Certificate</key>
+					<string>lPraBjD+VHks5/sVEDOczhg00z9TGoGMAjndDyYGUNU=</string>
+				</dict>
+			</array>
+		</dict>
+		<key>EnableBrandedCallingByDefault</key>
+		<true/>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>SendReferToPeer</key>
+			<false/>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc005.mcc724.3gppnetwork.org</string>
+		</dict>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<false/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc005.mcc724.pub.3gppnetwork.org</string>
+			<key>BsfPort</key>
+			<integer>8080</integer>
+			<key>imsFeatureDependency</key>
+			<false/>
+			<key>NafPort</key>
+			<integer>8090</integer>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>supported</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+			<key>SupportsCFErasure</key>
+			<false/>
+			<key>imsRegistrationDependency</key>
+			<false/>
+			<key>BsfHost</key>
+			<string>bsf.mnc005.mcc724.pub.3gppnetwork.org</string>
+			<key>SupportsCW</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>25</integer>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>PayloadTypeItem</key>
+				<dict>
+					<key>EncodingName</key>
+					<string>AMR</string>
+				</dict>
+			</dict>
+			<key>PreferredAMRNBMode</key>
+			<integer>7</integer>
+			<key>ModeChangeCapability</key>
+			<integer>2</integer>
+			<key>InactivityTimerRTCPSeconds</key>
+			<integer>25</integer>
+			<key>ModeSetAMRWB</key>
+			<string>8</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>ModeSetAMRNB</key>
+			<string>7</string>
+			<key>IncludeSDPMaxRed</key>
+			<false/>
+		</dict>
+		<key>ShowBrandedCallingSwitch</key>
+		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<false/>
+			<key>E911OverCSIfNoIMSReg</key>
+			<true/>
+			<key>EnableVoLTEWithVoWiFi</key>
+			<true/>
+			<key>endNonEmergencyCalls</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressSimToolkitSendShortMessageNotifications</key>
+	<true/>
+	<key>PreferCarrierNameFromMetadata</key>
+	<true/>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>PushSettings</key>
+	<dict>
+		<key>MultiSIMTopic</key>
+		<string>br.com.claro.applewatch</string>
+	</dict>
+	<key>Services</key>
+	<array>
+		<dict>
+			<key>ServiceCode</key>
+			<string>1052</string>
+			<key>ServiceName</key>
+			<string>Atendimento Claro</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>*468</string>
+			<key>ServiceName</key>
+			<string>Roaming Internacional</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>*555</string>
+			<key>ServiceName</key>
+			<string>Portal de Recarga</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>*544</string>
+			<key>ServiceName</key>
+			<string>Claro Cartão – Saldo</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>*085</string>
+			<key>ServiceName</key>
+			<string>Chat Amizade</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>*1052#</string>
+			<key>ServiceName</key>
+			<string>Canal Interativo</string>
+		</dict>
+	</array>
+	<key>EnableLTEAfterUpgrade</key>
+	<true/>
+	<key>StatusBarImages</key>
+	<array>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>CLARO BR</string>
+			<key>StatusBarCarrierName</key>
+			<string>Claro BR</string>
+		</dict>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>Claro Brasil</string>
+			<key>StatusBarCarrierName</key>
+			<string>Claro BR</string>
+		</dict>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>Claro</string>
+			<key>StatusBarCarrierName</key>
+			<string>Claro BR</string>
+		</dict>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>CLARO BR 21</string>
+			<key>StatusBarCarrierName</key>
+			<string>Claro BR</string>
+		</dict>
+	</array>
+	<key>CarrierName</key>
+	<string>Claro Brasil</string>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>MyAccountURL</key>
+	<string>https://www.claro.com.br/atendimento</string>
+	<key>MyAccountURLTitle</key>
+	<string>Claro</string>
+	<key>ShowCallerIDSwitch</key>
+	<false/>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>72405</string>
 	</array>
 </dict>
 </plist>

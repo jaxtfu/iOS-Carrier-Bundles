@@ -2,81 +2,162 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CellularDataUsage</key>
+	<key>ShouldHideAllVoicemailUI</key>
+	<true/>
+	<key>ASCIIFileNameRequired</key>
+	<true/>
+	<key>EmergencyCalling</key>
 	<dict>
-		<key>ShowMonthlyDataUsage</key>
-		<true/>
+		<key>EmergencyNumbers</key>
+		<array>
+			<dict>
+				<key>PreferredEmergencyNumber</key>
+				<true/>
+				<key>SupportsEmergencySetup</key>
+				<false/>
+				<key>Title</key>
+				<string>EMERGENCY_DISAMBIGUATION_POLICE</string>
+				<key>Number</key>
+				<string>110</string>
+			</dict>
+			<dict>
+				<key>PreferredEmergencyNumber</key>
+				<true/>
+				<key>SupportsEmergencySetup</key>
+				<false/>
+				<key>Title</key>
+				<string>EMERGENCY_DISAMBIGUATION_FIRE</string>
+				<key>Number</key>
+				<string>119</string>
+			</dict>
+			<dict>
+				<key>PreferredEmergencyNumber</key>
+				<true/>
+				<key>SupportsEmergencySetup</key>
+				<false/>
+				<key>Title</key>
+				<string>EMERGENCY_DISAMBIGUATION_AMBULANCE</string>
+				<key>Number</key>
+				<string>120</string>
+			</dict>
+			<dict>
+				<key>Number</key>
+				<string>122</string>
+				<key>SupportsEmergencySetup</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
-	<key>CheckSMSonSIM</key>
-	<true/>
-	<key>DataIndicatorOverrideForLTE</key>
-	<string>4G</string>
-	<key>AllowEDGEEditing</key>
-	<true/>
-	<key>CustomerServicePhoneNumber</key>
-	<string>10099</string>
-	<key>Services</key>
-	<array>
-		<dict>
-			<key>ServiceCode</key>
-			<string>10099</string>
-			<key>ServiceName</key>
-			<string>客户服务热线</string>
-		</dict>
-	</array>
-	<key>SupportsNITZ</key>
-	<true/>
-	<key>URLifyUnquotedShorts</key>
-	<true/>
 	<key>OTASoftwareUpdate</key>
 	<dict>
 		<key>SoftwareUpdateOptInRequired</key>
 		<true/>
 	</dict>
-	<key>SMSSettings</key>
+	<key>AttachAPN</key>
 	<dict>
-		<key>ShowClass0SMSOverInCallAlerts</key>
-		<true/>
-		<key>ShowClass0SMSInLockScreen</key>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>cbnet</string>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>3</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>HideNonTransferablePlans</key>
 		<true/>
 	</dict>
+	<key>AllowEDGEEditing</key>
+	<false/>
 	<key>RegistrationOptInRequired</key>
 	<true/>
-	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>1</integer>
-	<key>AllowFaceTimeOverCellular</key>
-	<false/>
-	<key>ASCIIFileNameRequired</key>
+	<key>SupportsNITZ</key>
 	<true/>
-	<key>StatusBarImages</key>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>ShowDialAssist</key>
+	<true/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>00447786205094</string>
+	<key>ShowMessagesConversationListFilteringPrompt</key>
+	<true/>
+	<key>AllowFaceTimeOverCellular</key>
+	<true/>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.China</string>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
+	<key>DataIndicatorOverrideForLTE</key>
+	<string>4G</string>
+	<key>ShowVolteSwitch</key>
+	<false/>
+	<key>apns</key>
 	<array>
 		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>CBN</string>
-			<key>StatusBarCarrierName</key>
-			<string>中国广电</string>
-		</dict>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>460-15</string>
-			<key>StatusBarCarrierName</key>
-			<string>中国广电</string>
-		</dict>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>CHINA BROADNET</string>
-			<key>StatusBarCarrierName</key>
-			<string>中国广电</string>
+			<key>configuration</key>
+			<array>
+				<dict>
+					<key>password</key>
+					<string></string>
+					<key>username</key>
+					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
+					<key>apn</key>
+					<string>cbnet</string>
+					<key>type-mask</key>
+					<integer>1048625</integer>
+					<key>AllowedProtocolMask</key>
+					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>type-mask</key>
+					<integer>131072</integer>
+					<key>password</key>
+					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
+					<key>username</key>
+					<string></string>
+					<key>WaitForBringUpComplete</key>
+					<true/>
+					<key>apn</key>
+					<string>IMS</string>
+					<key>AllowedProtocolMask</key>
+					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>password</key>
+					<string></string>
+					<key>username</key>
+					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
+					<key>apn</key>
+					<string>cbnet</string>
+					<key>type-mask</key>
+					<integer>1048624</integer>
+					<key>AllowedProtocolMask</key>
+					<integer>3</integer>
+				</dict>
+			</array>
+			<key>technology-mask</key>
+			<integer>8</integer>
 		</dict>
 	</array>
+	<key>ShowCallForwardingSwitch</key>
+	<true/>
+	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
+	<integer>131072</integer>
 	<key>IMSConfig</key>
 	<dict>
 		<key>Media</key>
@@ -244,90 +325,19 @@
 			<true/>
 		</dict>
 	</dict>
-	<key>ShowDialAssist</key>
-	<true/>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>46015</string>
-	</array>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>00447786205094</string>
-	<key>CarrierName</key>
-	<string>中国广电</string>
-	<key>AttachAPN</key>
+	<key>SMSSettings</key>
 	<dict>
-		<key>3GPP</key>
-		<dict>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>3</integer>
-			<key>password</key>
-			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
-			<key>PcscfAddressRequired</key>
-			<false/>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>cbnet</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-		</dict>
+		<key>ShowClass0SMSOverInCallAlerts</key>
+		<true/>
+		<key>ShowClass0SMSInLockScreen</key>
+		<true/>
 	</dict>
-	<key>ShouldHideAllVoicemailUI</key>
-	<true/>
-	<key>ShowTTY</key>
+	<key>Show3GSwitch</key>
 	<false/>
-	<key>ShowMessagesConversationListFilteringPrompt</key>
+	<key>URLifyUnquotedShorts</key>
 	<true/>
-	<key>SyncSIMPhonebook</key>
-	<true/>
-	<key>EmergencyCalling</key>
-	<dict>
-		<key>EmergencyNumbers</key>
-		<array>
-			<dict>
-				<key>PreferredEmergencyNumber</key>
-				<true/>
-				<key>SupportsEmergencySetup</key>
-				<false/>
-				<key>Title</key>
-				<string>EMERGENCY_DISAMBIGUATION_POLICE</string>
-				<key>Number</key>
-				<string>110</string>
-			</dict>
-			<dict>
-				<key>PreferredEmergencyNumber</key>
-				<true/>
-				<key>SupportsEmergencySetup</key>
-				<false/>
-				<key>Title</key>
-				<string>EMERGENCY_DISAMBIGUATION_FIRE</string>
-				<key>Number</key>
-				<string>119</string>
-			</dict>
-			<dict>
-				<key>PreferredEmergencyNumber</key>
-				<true/>
-				<key>SupportsEmergencySetup</key>
-				<false/>
-				<key>Title</key>
-				<string>EMERGENCY_DISAMBIGUATION_AMBULANCE</string>
-				<key>Number</key>
-				<string>120</string>
-			</dict>
-			<dict>
-				<key>Number</key>
-				<string>122</string>
-				<key>SupportsEmergencySetup</key>
-				<false/>
-			</dict>
-		</array>
-	</dict>
-	<key>ShowCallForwardingSwitch</key>
-	<true/>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.China</string>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>1</integer>
 	<key>PushSettings</key>
 	<dict>
 		<key>PCAllowMinimumIntervalFallback</key>
@@ -335,67 +345,60 @@
 		<key>PCForcedMinimumHBI</key>
 		<integer>585</integer>
 	</dict>
-	<key>apns</key>
+	<key>Services</key>
 	<array>
 		<dict>
-			<key>configuration</key>
-			<array>
-				<dict>
-					<key>type-mask</key>
-					<integer>1048625</integer>
-					<key>password</key>
-					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
-					<key>username</key>
-					<string></string>
-					<key>apn</key>
-					<string>cbnet</string>
-					<key>AllowedProtocolMask</key>
-					<integer>3</integer>
-				</dict>
-				<dict>
-					<key>type-mask</key>
-					<integer>131072</integer>
-					<key>password</key>
-					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
-					<key>username</key>
-					<string></string>
-					<key>WaitForBringUpComplete</key>
-					<true/>
-					<key>apn</key>
-					<string>IMS</string>
-					<key>AllowedProtocolMask</key>
-					<integer>3</integer>
-				</dict>
-				<dict>
-					<key>type-mask</key>
-					<integer>1048624</integer>
-					<key>password</key>
-					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
-					<key>username</key>
-					<string></string>
-					<key>apn</key>
-					<string>cbnet</string>
-					<key>AllowedProtocolMask</key>
-					<integer>3</integer>
-				</dict>
-			</array>
-			<key>technology-mask</key>
-			<integer>8</integer>
+			<key>ServiceCode</key>
+			<string>10099</string>
+			<key>ServiceName</key>
+			<string>客户服务热线</string>
 		</dict>
 	</array>
-	<key>Show3GSwitch</key>
-	<false/>
+	<key>StatusBarImages</key>
+	<array>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>CBN</string>
+			<key>StatusBarCarrierName</key>
+			<string>中国广电</string>
+		</dict>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>460-15</string>
+			<key>StatusBarCarrierName</key>
+			<string>中国广电</string>
+		</dict>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>CHINA BROADNET</string>
+			<key>StatusBarCarrierName</key>
+			<string>中国广电</string>
+		</dict>
+	</array>
+	<key>CheckSMSonSIM</key>
+	<true/>
+	<key>CellularDataUsage</key>
+	<dict>
+		<key>ShowMonthlyDataUsage</key>
+		<true/>
+	</dict>
+	<key>CarrierName</key>
+	<string>中国广电</string>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>SyncSIMPhonebook</key>
+	<true/>
+	<key>CustomerServicePhoneNumber</key>
+	<string>10099</string>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>46015</string>
+	</array>
 </dict>
 </plist>

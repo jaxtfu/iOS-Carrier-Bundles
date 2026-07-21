@@ -54,7 +54,7 @@
 	<key>SupportsNITZ</key>
 	<false/>
 	<key>MyAccountURL</key>
-	<string>http://mobile.free.re</string>
+	<string>https://mobile.free.re</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<true/>
 	<key>APNEditabilityTypemask</key>
@@ -156,8 +156,8 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>IMAP</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>+262693460111</string>
 	<key>HomeBundleIdentifier</key>

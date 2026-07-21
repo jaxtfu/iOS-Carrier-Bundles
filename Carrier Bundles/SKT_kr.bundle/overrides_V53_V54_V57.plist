@@ -2,313 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>DerPriFileVersion</key>
-	<string>0.1.161</string>
-	<key>AttachAPN</key>
-	<dict>
-		<key>3GPP</key>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>PcscfAddressRequired</key>
-			<true/>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
-		</dict>
-	</dict>
-	<key>SupportsImsCapability</key>
-	<true/>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
-	<key>Location</key>
-	<dict>
-		<key>EnableCPIDuringEmergencyMode</key>
-		<true/>
-		<key>EnableEarlyReturnDuringEmergencyMode</key>
-		<true/>
-	</dict>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Media</key>
-		<dict>
-			<key>PacketAlignmentAMRWB</key>
-			<string>octetAlignedOnly</string>
-			<key>PacketAlignmentAMRNB</key>
-			<string>octetAlignedOnly</string>
-			<key>RTCPIntervalSeconds</key>
-			<integer>3</integer>
-			<key>PayloadTypeOctetAlignAMRNB</key>
-			<integer>98</integer>
-			<key>EnableSDPCandidateAttribute</key>
-			<true/>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-			<key>MaxPacketizationTime</key>
-			<integer>120</integer>
-			<key>PayloadTypeBWEfficientAMRNB</key>
-			<integer>105</integer>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>110</key>
-				<dict>
-					<key>br</key>
-					<string>9.6-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-				</dict>
-			</dict>
-			<key>PayloadTypeDTMF16K</key>
-			<integer>103</integer>
-			<key>dtmfDigitDuration16K</key>
-			<integer>2240</integer>
-			<key>pdtmfInterDigitInterval16K</key>
-			<integer>320</integer>
-			<key>InactivityTimerRTCPSeconds</key>
-			<integer>36000</integer>
-			<key>dtmfDigitDuration8K</key>
-			<integer>1120</integer>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-			<key>UseSDPTemplateForAllInvites</key>
-			<true/>
-			<key>PayloadTypeOctetAlignAMRWB</key>
-			<integer>100</integer>
-			<key>PayloadTypeDTMF8K</key>
-			<integer>101</integer>
-			<key>PayloadTypeBWEfficientAMRWB</key>
-			<integer>106</integer>
-		</dict>
-		<key>Signaling</key>
-		<dict>
-			<key>SecurityAgreementEalgs</key>
-			<string>aes-cbc,null</string>
-			<key>RingbackTimerSeconds</key>
-			<integer>180</integer>
-			<key>SessionExpiresSeconds</key>
-			<integer>180</integer>
-			<key>RingingTimerSeconds</key>
-			<integer>180</integer>
-			<key>RegSubscriptionEnabled</key>
-			<false/>
-			<key>UsePublicDomainForPhoneContext</key>
-			<true/>
-			<key>SecurityAgreementAlgs</key>
-			<string>hmac-md5-96,hmac-sha-1-96</string>
-			<key>UserAgentHeaderValue</key>
-			<string>TTA-VoLTE/2.0 ${OS}/${OS_VERSION} ${DEVICE}/1.0/SKT</string>
-			<key>MaxUdpMessageSize</key>
-			<integer>3000</integer>
-			<key>SetSessionTimerRefresherInInitialRequest</key>
-			<true/>
-			<key>SipTimers</key>
-			<dict>
-				<key>H</key>
-				<integer>36000</integer>
-				<key>F</key>
-				<integer>44000</integer>
-				<key>D</key>
-				<integer>32000</integer>
-				<key>B</key>
-				<integer>8000</integer>
-				<key>InviteResponseTimeout</key>
-				<integer>5000</integer>
-				<key>J</key>
-				<integer>32000</integer>
-			</dict>
-			<key>RegistrationRefreshCushionPercent</key>
-			<integer>0</integer>
-			<key>AcceptContactParams</key>
-			<string>require;explicit</string>
-			<key>RegistrationThrottlingCushionPercent</key>
-			<integer>0</integer>
-			<key>PreferredSenderIdentity</key>
-			<string>first</string>
-			<key>UseIPSec</key>
-			<true/>
-			<key>AllowEarlyMediaToOverrideLocalRingback</key>
-			<true/>
-			<key>UseFakeSAsForDeregistration</key>
-			<true/>
-			<key>UseNormalIdentityForEmergencyCalls</key>
-			<true/>
-			<key>EmergencyURNs</key>
-			<dict>
-				<key>122</key>
-				<string>urn:service:sos.marine</string>
-				<key>112</key>
-				<string>urn:service:sos.police</string>
-				<key>125</key>
-				<string>urn:service:sos.country-specific.kr.125</string>
-				<key>118</key>
-				<string>urn:service:sos.country-specific.kr.118</string>
-				<key>911</key>
-				<string>urn:service:sos.fire</string>
-				<key>111</key>
-				<string>urn:service:sos.country-specific.kr.111</string>
-				<key>117</key>
-				<string>urn:service:sos.country-specific.kr.117</string>
-				<key>113</key>
-				<string>urn:service:sos.country-specific.kr.113</string>
-				<key>119</key>
-				<string>urn:service:sos.fire</string>
-			</dict>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string>380,404,414,499,606</string>
-			<key>RegistrationMaxTime</key>
-			<integer>1800</integer>
-			<key>DefaultAuthAlgorithm</key>
-			<string>AKAv1-MD5</string>
-			<key>VirtualInterfaceMtu</key>
-			<integer>4096</integer>
-			<key>CallEndReasons</key>
-			<dict>
-				<key>Blocked</key>
-				<dict>
-					<key>ReasonHeaderText</key>
-					<string>Decline</string>
-					<key>StatusCode</key>
-					<integer>603</integer>
-				</dict>
-				<key>InternalError</key>
-				<dict>
-					<key>ExtraHeaders</key>
-					<dict>
-						<key>P-SKT-BYE-CAUSE</key>
-						<string>normal</string>
-					</dict>
-					<key>ReasonHeaderCause</key>
-					<integer>104</integer>
-					<key>ReasonHeaderText</key>
-					<string>Unknown</string>
-					<key>ReasonHeaderProtocol</key>
-					<string>ETC</string>
-				</dict>
-				<key>RejectedByUser</key>
-				<dict>
-					<key>ReasonHeaderText</key>
-					<string>Decline</string>
-					<key>StatusCode</key>
-					<integer>603</integer>
-				</dict>
-				<key>UserTriggered</key>
-				<dict>
-					<key>ExtraHeaders</key>
-					<dict>
-						<key>P-SKT-BYE-CAUSE</key>
-						<string>normal</string>
-					</dict>
-					<key>ReasonHeaderCause</key>
-					<integer>101</integer>
-					<key>ReasonHeaderText</key>
-					<string>User triggered</string>
-					<key>ReasonHeaderProtocol</key>
-					<string>USER</string>
-				</dict>
-				<key>MediaTimeout</key>
-				<dict>
-					<key>ExtraHeaders</key>
-					<dict>
-						<key>P-SKT-BYE-CAUSE</key>
-						<string>no_rtp</string>
-					</dict>
-					<key>ReasonHeaderCause</key>
-					<integer>102</integer>
-					<key>ReasonHeaderText</key>
-					<string>RTP timeout</string>
-					<key>ReasonHeaderProtocol</key>
-					<string>RTP</string>
-				</dict>
-				<key>DoNotDisturb</key>
-				<dict>
-					<key>ReasonHeaderText</key>
-					<string>Decline</string>
-					<key>StatusCode</key>
-					<integer>603</integer>
-				</dict>
-				<key>SessionExpired</key>
-				<dict>
-					<key>ExtraHeaders</key>
-					<dict>
-						<key>P-SKT-BYE-CAUSE</key>
-						<string>no_upd</string>
-					</dict>
-					<key>ReasonHeaderCause</key>
-					<integer>103</integer>
-					<key>ReasonHeaderText</key>
-					<string>Session-Expire</string>
-					<key>ReasonHeaderProtocol</key>
-					<string>SIP</string>
-				</dict>
-			</dict>
-			<key>SupportPEarlyMediaHeader</key>
-			<false/>
-			<key>SendPreferredServiceInInvite</key>
-			<true/>
-			<key>RegistrationPolicy</key>
-			<string>TTAK</string>
-			<key>RegistrationBaseTime</key>
-			<integer>30</integer>
-			<key>AlwaysUnsubscribeFromRegEvents</key>
-			<false/>
-			<key>EnableEmergencyRegistration</key>
-			<false/>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
-			<key>EarlyMediaNeedsHeader</key>
-			<false/>
-			<key>ReRegisterOnErrorCodes</key>
-			<string>INVITE:60,408</string>
-			<key>Preconditions</key>
-			<string>None</string>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>supported</key>
-			<false/>
-		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>ConferenceSupport</key>
-			<false/>
-		</dict>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>SupportedDomains</key>
-			<dict>
-				<key>LTE</key>
-				<false/>
-			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<false/>
-		</dict>
-		<key>Voice</key>
-		<dict>
-			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
-			<true/>
-			<key>CheckIMSPrefForEmergency</key>
-			<false/>
-			<key>EnableVolteByDefault</key>
-			<true/>
-			<key>PreAlertingDTMFSupported</key>
-			<true/>
-		</dict>
-	</dict>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
+	<key>DerPriFileVersion</key>
+	<string>0.1.161</string>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
 	<key>ShowVolteSwitch</key>
 	<false/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
+	<key>SupportsNRNSAInboundRoaming</key>
+	<true/>
+	<key>Show5GSwitch</key>
+	<true/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -319,8 +28,6 @@
 					<integer>4227077</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>enableXLAT464</key>
 					<true/>
 					<key>AllowedProtocolMaskInRoaming</key>
@@ -339,8 +46,6 @@
 					<string></string>
 					<key>apn</key>
 					<string>ims</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>type-mask</key>
 					<integer>131072</integer>
 					<key>AllowedProtocolMask</key>
@@ -351,8 +56,6 @@
 					<integer>48</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>enableXLAT464</key>
 					<true/>
 					<key>AllowedProtocolMaskInRoaming</key>
@@ -376,8 +79,6 @@
 					<integer>4227125</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>enableXLAT464</key>
 					<true/>
 					<key>AllowedProtocolMaskInRoaming</key>
@@ -394,13 +95,5 @@
 			<integer>1</integer>
 		</dict>
 	</array>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Enable5GAutoByDefault</key>
-	<true/>
-	<key>SupportsNRNSAInboundRoaming</key>
-	<true/>
-	<key>Show5GSwitch</key>
-	<true/>
 </dict>
 </plist>

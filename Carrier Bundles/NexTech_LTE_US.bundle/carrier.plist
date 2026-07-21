@@ -271,8 +271,20 @@
 		<array>
 			<string>7bitGSM</string>
 		</array>
-		<key>TransportFallback</key>
-		<false/>
+		<key>OutgoingSMSPrefix</key>
+		<dict>
+			<key>Local</key>
+			<string>+1</string>
+			<key>International</key>
+			<string>+011</string>
+		</dict>
+		<key>MessageFormat</key>
+		<dict>
+			<key>SignalingFormat</key>
+			<integer>1</integer>
+			<key>PacketFormat</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
 	<integer>131072</integer>
@@ -327,23 +339,6 @@
 	<dict>
 		<key>EnabledByDefault</key>
 		<true/>
-	</dict>
-	<key>OTAActivation</key>
-	<dict>
-		<key>BlacklistedSIMs</key>
-		<array>
-			<string>44053</string>
-			<string>44054</string>
-			<string>44070</string>
-			<string>44071</string>
-			<string>44072</string>
-			<string>44073</string>
-			<string>44074</string>
-			<string>44075</string>
-			<string>44076</string>
-			<string>44078</string>
-			<string>46003</string>
-		</array>
 	</dict>
 	<key>SupportedSIMs</key>
 	<array>
@@ -522,39 +517,26 @@
 		</dict>
 		<key>ConferenceCalling</key>
 		<dict>
-			<key>AlwaysSubscribeToConferenceEvents</key>
-			<true/>
-			<key>EnableHoldForRTT</key>
-			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc420.mcc312.3gppnetwork.org</string>
 			<key>ttyIMSSupported</key>
 			<true/>
 			<key>TreatAllNotificationsAsPartial</key>
 			<true/>
-			<key>conferenceServer</key>
-			<string>sip:mmtel@conf-factory.ims.mnc420.mcc312.3gppnetwork.org</string>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
 		</dict>
 		<key>AllowHandoverWithoutIMSVoiceService</key>
 		<true/>
-		<key>XCAP</key>
+		<key>SMS</key>
 		<dict>
-			<key>SupportsCW</key>
-			<false/>
-			<key>NafPort</key>
-			<integer>80</integer>
-			<key>DisableOnNetworkError</key>
-			<false/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string></string>
-			<key>ImpuRank</key>
-			<string>MDN@domain</string>
-			<key>ContentType</key>
-			<string>application/xcap-el+xml</string>
-			<key>BsfPort</key>
-			<integer>81</integer>
-			<key>supported</key>
-			<true/>
-			<key>NafHost</key>
-			<string>xcap.ims.mnc420.mcc312.pub.3gppnetwork.org</string>
+			<key>DCN</key>
+			<dict>
+				<key>destinationNumber</key>
+				<string>7853110500</string>
+				<key>hysteresisTimeout</key>
+				<integer>10</integer>
+			</dict>
 		</dict>
 		<key>Media</key>
 		<dict>
@@ -592,6 +574,27 @@
 			<key>IgnoreISIM</key>
 			<true/>
 		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCW</key>
+			<false/>
+			<key>NafPort</key>
+			<integer>80</integer>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+			<key>ImpuRank</key>
+			<string>MDN@domain</string>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>BsfPort</key>
+			<integer>81</integer>
+			<key>supported</key>
+			<true/>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc420.mcc312.pub.3gppnetwork.org</string>
+		</dict>
 		<key>Voice</key>
 		<dict>
 			<key>E911OverITechSupported</key>
@@ -601,8 +604,6 @@
 			<key>EnableVolteByDefault</key>
 			<true/>
 			<key>TestEmergencyPSAPSupported</key>
-			<true/>
-			<key>ttyIMSSupported</key>
 			<true/>
 		</dict>
 	</dict>
@@ -642,7 +643,7 @@
 	<key>TTYRelayNumber</key>
 	<string>711</string>
 	<key>MyAccountURL</key>
-	<string>http://www.nex-techwireless.com/</string>
+	<string>https://www.nex-techwireless.com/</string>
 	<key>ShowVolteSwitch</key>
 	<false/>
 	<key>MTU</key>
@@ -683,11 +684,7 @@
 	</dict>
 	<key>SupportsImsCapability</key>
 	<true/>
-	<key>OTASoftwareUpdate</key>
-	<dict/>
 	<key>PhoneNumberIsVoiceMailNumber</key>
-	<true/>
-	<key>ShowTTY</key>
 	<true/>
 	<key>ShowVoiceRoamingSwitch</key>
 	<false/>
@@ -754,21 +751,21 @@
 			<integer>10080</integer>
 		</dict>
 	</dict>
+	<key>ForceWPSCallsOverCS</key>
+	<false/>
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>7</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>internet.lte.ntwls.com</string>
+			<key>type-mask</key>
+			<integer>7</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -779,8 +776,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>admin.lte.ntwls.com</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>33280</integer>
 			<key>AllowedProtocolMask</key>
@@ -793,8 +788,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>modem.lte.ntwls.com</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>48</integer>
 			<key>AllowedProtocolMask</key>
@@ -807,8 +800,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>3</integer>
 			<key>username</key>
@@ -825,8 +816,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131078</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>3</integer>
 			<key>SupportSwitchOver</key>
@@ -839,13 +828,11 @@
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
+			<key>type-mask</key>
+			<integer>262144</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
-			<integer>262144</integer>
-			<key>type-mask</key>
 			<integer>262144</integer>
 			<key>AllowNoDNS</key>
 			<integer>1</integer>
@@ -855,10 +842,15 @@
 			<string></string>
 			<key>apn</key>
 			<string>sos</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</array>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>EnableHoldForRTT</key>
+		<true/>
+	</dict>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>IncludeUnusableIccidForPlanSignupRequest</key>
@@ -906,6 +898,6 @@
 		<false/>
 	</dict>
 	<key>NotRegisteredResetWaitPeriod</key>
-	<integer>60</integer>
+	<integer>20</integer>
 </dict>
 </plist>

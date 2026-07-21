@@ -12,21 +12,9 @@
 	<string>0.1.161</string>
 	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 	<key>Show5GSwitch</key>
 	<true/>
-	<key>IMSConfig</key>
-	<dict>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-		</dict>
-	</dict>
-	<key>OverrideOperatorWiFiName</key>
-	<string>MobiFone Wi-Fi</string>
 </dict>
 </plist>

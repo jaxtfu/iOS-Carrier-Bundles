@@ -2,6 +2,26 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>SupportedEntitlements</key>
+		<integer>3481</integer>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>ServerAddress</key>
+		<string>https://ses.mnc790.mcc313.pub.3gppnetwork.org</string>
+		<key>EnableDeviceAccountIdentifier</key>
+		<false/>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+	</dict>
 	<key>Enable4GByDefault</key>
 	<true/>
 	<key>OTASoftwareUpdate</key>
@@ -88,8 +108,8 @@
 	</dict>
 	<key>Show3GSwitchWith4G</key>
 	<false/>
-	<key>ShowTTY</key>
-	<true/>
+	<key>WatchCustomerServicePhoneNumber</key>
+	<string>611</string>
 	<key>OverrideOperatorWiFiName</key>
 	<string>Liberty Wi-Fi</string>
 	<key>MMS</key>
@@ -255,8 +275,6 @@
 	</dict>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.PuertoRico</string>
-	<key>WatchCustomerServicePhoneNumber</key>
-	<string>611</string>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
 		<key>MaxGreetingDuration</key>
@@ -315,18 +333,16 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>32771</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
-			<integer>3</integer>
-			<key>DefaultProtocolMask</key>
 			<integer>3</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>internet</string>
+			<key>type-mask</key>
+			<integer>32771</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -343,23 +359,21 @@
 			<integer>4</integer>
 		</dict>
 		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>type-mask</key>
-			<integer>131072</integer>
-			<key>apn</key>
-			<string>ims</string>
+			<key>UseNetworkMTU</key>
+			<true/>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
-			<key>DefaultProtocolMask</key>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
@@ -369,8 +383,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>SupportSwitchOver</key>
 			<false/>
 			<key>username</key>
@@ -387,15 +399,13 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>262144</integer>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowNoDNS</key>
 			<integer>1</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>sos</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
@@ -405,8 +415,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>hotspot</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>16</integer>
 			<key>AllowedProtocolMask</key>
@@ -434,10 +442,10 @@
 			<true/>
 			<key>EarlyMediaNeedsHeader</key>
 			<false/>
+			<key>AllowEmergencyRetryForIPSec</key>
+			<true/>
 			<key>EmergencyRingbackTimerSeconds</key>
 			<integer>90</integer>
-			<key>strictCallFlows</key>
-			<true/>
 			<key>AdditionalHeaders</key>
 			<dict>
 				<key>INVITE[wifi,911]</key>
@@ -446,6 +454,8 @@
 					<string>Supported: geolocation</string>
 				</array>
 			</dict>
+			<key>strictCallFlows</key>
+			<true/>
 			<key>InviteErrorResponsesToTriggerCSFB</key>
 			<string>3XX,4XX,5XX,-504,6XX</string>
 			<key>AlwaysSendSessionProgress</key>
@@ -473,18 +483,16 @@
 		</dict>
 		<key>Voice</key>
 		<dict>
-			<key>ttyIMSSupported</key>
-			<true/>
 			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
 			<true/>
-			<key>EnableVolteByDefault</key>
-			<true/>
-			<key>E911OverITechSupported</key>
-			<false/>
 			<key>E911OverCSIfNoIMSReg</key>
 			<true/>
 			<key>CheckIMSPrefForEmergency</key>
 			<false/>
+			<key>E911OverITechSupported</key>
+			<false/>
+			<key>EnableVolteByDefault</key>
+			<true/>
 			<key>endNonEmergencyCalls</key>
 			<true/>
 		</dict>
@@ -501,8 +509,13 @@
 		</dict>
 		<key>SMS</key>
 		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<true/>
+			</dict>
 		</dict>
 		<key>Media</key>
 		<dict>
@@ -528,8 +541,6 @@
 					<string>EVS</string>
 					<key>bw</key>
 					<string>nb-wb</string>
-					<key>hf-only</key>
-					<string>1</string>
 				</dict>
 			</dict>
 			<key>EnableBandwidthSpecifiers</key>
@@ -574,17 +585,21 @@
 			<true/>
 		</dict>
 	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+17874011202</string>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32771</integer>
+	<key>PushSettings</key>
+	<dict>
+		<key>SAWatchTopic</key>
+		<string>com.libertypr.ent.sa-watch</string>
+		<key>MultiSIMTopic</key>
+		<string>com.libertypr.ent.multi-sim</string>
+		<key>VoWiFiTopic</key>
+		<string>com.libertypr.ent.arctic</string>
+	</dict>
 	<key>Services</key>
 	<array>
 		<dict>
@@ -611,7 +626,7 @@
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.libertypr.com/es/mi-cuenta</string>
+	<string>https://www.libertypr.com/es/mi-cuenta</string>
 	<key>MyAccountURLTitle</key>
 	<string>My Liberty</string>
 	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>

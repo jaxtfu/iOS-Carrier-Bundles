@@ -42,8 +42,6 @@
 	<integer>0</integer>
 	<key>SupportsNITZ</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -57,6 +55,8 @@
 			<integer>49</integer>
 		</dict>
 	</array>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>APNEditabilityTypemaskNew</key>
 	<integer>1</integer>
 	<key>PhoneNumberRegistrationGatewayAddress</key>

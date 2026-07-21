@@ -4,110 +4,16 @@
 <dict>
 	<key>DerPriFileVersion</key>
 	<string>5.0.161</string>
-	<key>Show4GSwitch</key>
-	<true/>
 	<key>ShowVoNRSwitch</key>
 	<true/>
-	<key>SupportsImsCapability</key>
+	<key>Enable5GStandaloneByDefault</key>
 	<true/>
-	<key>Show5GSwitch</key>
-	<true/>
-	<key>AttachAPN</key>
-	<dict>
-		<key>3GPP</key>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>PcscfAddressRequired</key>
-			<false/>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>viva</string>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
-		</dict>
-	</dict>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
-	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32768</integer>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Signaling</key>
-		<dict>
-			<key>IgnoreRegNotificationContactExpires</key>
-			<true/>
-			<key>AdditionalContactParams</key>
-			<dict>
-				<key>REGISTER,INVITE,INVITE:*</key>
-				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
-			</dict>
-			<key>DefaultAuthAlgorithm</key>
-			<string>AKAv1-MD5</string>
-			<key>TriggerCSFBOnSDPError</key>
-			<true/>
-			<key>ussdEnabled</key>
-			<true/>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>WaitForRingingTimerMOSeconds</key>
-			<integer>21</integer>
-			<key>AdditionalHeaders</key>
-			<dict>
-				<key>INVITE,INVITE:*</key>
-				<string>Feature-Caps: *;+g.3gpp.srvcc-alerting</string>
-			</dict>
-			<key>AlwaysUnsubscribeFromRegEvents</key>
-			<false/>
-			<key>SubscriptionTerminatedMeansRegistrationTerminated</key>
-			<true/>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string>3XX,5XX,6XX</string>
-			<key>DropRegistrationOnSRVCC</key>
-			<true/>
-			<key>MaxUdpMessageSize</key>
-			<integer>5000</integer>
-			<key>strictCallFlows</key>
-			<true/>
-			<key>RingbackTimerSeconds</key>
-			<integer>130</integer>
-			<key>AlwaysAddPrivacyHeader</key>
-			<true/>
-			<key>CountryOfOriginationFormat</key>
-			<string>PANI</string>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
-			<key>WaitForRingingTimerMTSeconds</key>
-			<integer>21</integer>
-			<key>EnableCellularNetworkInfo</key>
-			<true/>
-			<key>Preconditions</key>
-			<string>None</string>
-			<key>RingingTimerSeconds</key>
-			<integer>130</integer>
-			<key>UseIPSec</key>
-			<true/>
-			<key>RegistrationExpirationSeconds</key>
-			<integer>7200</integer>
-		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>AlwaysSubscribeToConferenceEvents</key>
-			<true/>
-			<key>TreatAllNotificationsAsPartial</key>
-			<true/>
-			<key>SendConferenceSubscribeInNewDialog</key>
-			<true/>
-			<key>conferenceServer</key>
-			<string>conference@ims.mnc004.mcc419.3gppnetwork.org</string>
-		</dict>
 		<key>SMS</key>
 		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
 			<key>SupportedDomains</key>
 			<dict>
 				<key>LTE</key>
@@ -115,96 +21,26 @@
 				<key>NR</key>
 				<true/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
-		<key>Media</key>
-		<dict>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>25</integer>
-			<key>PreferredAMRWBMode</key>
-			<integer>8</integer>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>109</key>
-				<dict>
-					<key>br</key>
-					<string>5.9-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-				</dict>
-			</dict>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>NafHost</key>
-			<string>xcap.ims.mnc004.mcc419.pub.3gppnetwork.org</string>
-			<key>BsfPort</key>
-			<integer>80</integer>
-			<key>imsFeatureDependency</key>
-			<true/>
-			<key>DisableCLIRModification</key>
-			<true/>
-			<key>NafPort</key>
-			<integer>80</integer>
-			<key>SupportsCLIR</key>
-			<false/>
-			<key>SupportCFMediaTag</key>
-			<true/>
-			<key>supported</key>
-			<true/>
-			<key>ContentType</key>
-			<string>application/vnd.etsi.simservs+xml</string>
-			<key>DisableOnNetworkError</key>
-			<true/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string>403</string>
-			<key>SupportsCFErasure</key>
-			<false/>
-			<key>imsRegistrationDependency</key>
-			<true/>
-			<key>BsfHost</key>
-			<string>bsf.mnc004.mcc419.pub.3gppnetwork.org</string>
-			<key>SupportsCW</key>
-			<true/>
-		</dict>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<true/>
 		<key>Voice</key>
 		<dict>
 			<key>EnableVoNRByDefault</key>
 			<true/>
-			<key>E911OverITechSupported</key>
-			<true/>
-			<key>EnableVolteByDefault</key>
-			<true/>
 		</dict>
 	</dict>
-	<key>DerPriFileName</key>
-	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>SupportsVoNR</key>
 	<true/>
+	<key>DerPriFileName</key>
+	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>ShowVolteSwitch</key>
 	<false/>
 	<key>Show5GStandaloneSwitch</key>
 	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
 	<key>Enable5GAutoByDefault</key>
 	<true/>
-	<key>Enable5GStandaloneByDefault</key>
+	<key>Show5GSwitch</key>
 	<true/>
 	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>

@@ -36,7 +36,7 @@
 	<key>SupportsNITZ</key>
 	<false/>
 	<key>MyAccountURL</key>
-	<string>http://www.orangemali.com</string>
+	<string>https://www.orangemali.com</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>RegistrationOptInRequired</key>
@@ -72,8 +72,6 @@
 	<string>Orange Mali</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>7402</string>
 	<key>HomeBundleIdentifier</key>
@@ -93,11 +91,11 @@
 	<array>
 		<dict>
 			<key>password</key>
-			<string>iphone</string>
+			<string>internet</string>
 			<key>username</key>
-			<string>iphone</string>
+			<string>internet</string>
 			<key>apn</key>
-			<string>iphone</string>
+			<string>internet</string>
 			<key>type-mask</key>
 			<integer>49</integer>
 		</dict>
@@ -113,11 +111,11 @@
 		</dict>
 		<dict>
 			<key>password</key>
-			<string>iphone</string>
+			<string>internet</string>
 			<key>username</key>
-			<string>iphone</string>
+			<string>internet</string>
 			<key>apn</key>
-			<string>iphone</string>
+			<string>internet</string>
 			<key>type-mask</key>
 			<integer>48</integer>
 		</dict>

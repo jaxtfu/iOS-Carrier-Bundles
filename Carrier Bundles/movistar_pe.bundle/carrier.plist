@@ -33,7 +33,7 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.movistar.com.pe</string>
+	<string>https://www.movistar.com.pe</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>EnableLTEAfterUpgrade</key>
@@ -110,6 +110,13 @@
 		</dict>
 		<key>SMS</key>
 		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<false/>
+			</dict>
 			<key>allowCSFBInVolteMode</key>
 			<false/>
 		</dict>
@@ -182,8 +189,6 @@
 	<false/>
 	<key>ShowVolteSwitch</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>VisualVoicemailServiceName</key>
@@ -315,8 +320,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>

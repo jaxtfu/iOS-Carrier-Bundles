@@ -9,49 +9,14 @@
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
+	<string>6.0.161</string>
 	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
 	<key>ShowVolteSwitch</key>
-	<false/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
 	<false/>
 	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 	<key>Show5GSwitch</key>
 	<true/>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Media</key>
-		<dict>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>127</key>
-				<dict>
-					<key>hf-only</key>
-					<string>0</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>ch-aw-recv</key>
-					<string>3</string>
-					<key>cmr</key>
-					<string>1</string>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>br</key>
-					<string>5.9-24.4</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-				</dict>
-			</dict>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-		</dict>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-		</dict>
-	</dict>
 </dict>
 </plist>

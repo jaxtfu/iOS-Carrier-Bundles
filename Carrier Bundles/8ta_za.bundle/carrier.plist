@@ -17,6 +17,8 @@
 	<string>https://www.telkom.co.za</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
+	<key>EnableLTEAfterUpgrade</key>
+	<true/>
 	<key>PhoneSettings</key>
 	<dict>
 		<key>AutoCallPickupTimer</key>
@@ -30,6 +32,8 @@
 	<string>Telkom</string>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+2781181</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -78,8 +82,6 @@
 	<string>TelkomSA</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>181</string>
 	<key>HomeBundleIdentifier</key>

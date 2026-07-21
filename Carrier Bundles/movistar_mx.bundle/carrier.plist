@@ -2,75 +2,29 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
-	<key>Services</key>
-	<array>
-		<dict>
-			<key>ServiceCode</key>
-			<string>*767</string>
-			<key>ServiceName</key>
-			<string>Pásame saldo</string>
-		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string>#100#</string>
-			<key>ServiceName</key>
-			<string>SOS!</string>
-		</dict>
-	</array>
-	<key>AllowEDGEEditing</key>
-	<true/>
-	<key>CarrierBookmarks</key>
-	<array/>
-	<key>ShowCallerIDSwitch</key>
-	<false/>
-	<key>MandatoryVerify</key>
+	<key>CarrierEntitlements</key>
 	<dict>
-		<key>SIMs</key>
-		<array/>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>ServerAddress</key>
+		<string>https://entitlements-prod.movistar.com.mx/tf-mexico/apple</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
 	</dict>
-	<key>SupportsNITZ</key>
+	<key>Enable4GByDefault</key>
 	<true/>
 	<key>OTASoftwareUpdate</key>
 	<dict>
 		<key>SoftwareUpdateOptInRequired</key>
 		<true/>
 	</dict>
-	<key>EnableLTEAfterUpgrade</key>
-	<true/>
-	<key>APNEditabilityTypemask</key>
-	<integer>0</integer>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<false/>
-	</dict>
-	<key>RegistrationOptInRequired</key>
-	<true/>
-	<key>RoamingVoicemailPilotNumber</key>
-	<string>+525512550000</string>
-	<key>StatusBarImages</key>
-	<array>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<true/>
-			<key>CarrierName</key>
-			<string>movistar</string>
-			<key>StatusBarCarrierName</key>
-			<string>Movistar</string>
-		</dict>
-	</array>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>33403</string>
-	</array>
-	<key>ShowDialAssist</key>
-	<false/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>+447860015000</string>
-	<key>CarrierName</key>
-	<string>movistar</string>
 	<key>AttachAPN</key>
 	<dict>
 		<key>3GPP</key>
@@ -87,16 +41,30 @@
 			<integer>1</integer>
 		</dict>
 	</dict>
-	<key>ShowTTY</key>
-	<false/>
+	<key>AllowEDGEEditing</key>
+	<true/>
+	<key>RegistrationOptInRequired</key>
+	<true/>
+	<key>SupportsNITZ</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>*86</string>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.Mexico</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<string>False</string>
 	<key>AllowAttachAPNEditing</key>
 	<true/>
-	<key>APNEditabilityTypemaskNew</key>
-	<integer>49</integer>
+	<key>ShowDialAssist</key>
+	<false/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>+447860015000</string>
+	<key>Show3GSwitchWith4G</key>
+	<false/>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.Mexico</string>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
+	<key>ShowVolteSwitch</key>
+	<true/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -107,10 +75,222 @@
 			<key>apn</key>
 			<string>internet.movistar.mx</string>
 			<key>type-mask</key>
-			<integer>32817</integer>
+			<integer>1081393</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ims</string>
+			<key>SupportSwitchOver</key>
+			<true/>
+			<key>type-mask</key>
+			<integer>131072</integer>
+		</dict>
+	</array>
+	<key>APNEditabilityTypemaskNew</key>
+	<integer>49</integer>
+	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
+	<integer>131072</integer>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,6XX</string>
+			<key>CallEndReasons</key>
+			<dict>
+				<key>CallWaitingDisabled</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>Busy Here</string>
+					<key>StatusCode</key>
+					<integer>486</integer>
+				</dict>
+				<key>RejectedByUser</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>Busy Here</string>
+					<key>StatusCode</key>
+					<integer>486</integer>
+				</dict>
+			</dict>
+			<key>SecurityAgreementAlgs</key>
+			<string></string>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>35</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>90</integer>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>SipTimers</key>
+			<dict>
+				<key>InviteResponseTimeout</key>
+				<integer>16000</integer>
+			</dict>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call</string>
+			</dict>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>UseOutgoingSipUri</key>
+			<true/>
+			<key>UseFakeSAsForDeregistration</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<false/>
+			<key>conferenceServer</key>
+			<string>sip:conference@factory.ims.movistar.mx</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<false/>
+			</dict>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCW</key>
+			<false/>
+			<key>NafPort</key>
+			<integer>8090</integer>
+			<key>BsfHost</key>
+			<string>bsf.ims.mnc030.mcc334.pub.3gppnetwork.org</string>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>BsfPort</key>
+			<integer>8080</integer>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc030.mcc334.pub.3gppnetwork.org</string>
+			<key>supported</key>
+			<true/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>InactivityTimerRTCPSeconds</key>
+			<integer>30</integer>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>30</integer>
+			<key>RingbackTone</key>
+			<string>ANSI</string>
+			<key>UseSDPTemplateWhenAnswering</key>
+			<true/>
+			<key>UseSDPTemplateForAllInvites</key>
+			<false/>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>SIM</key>
+		<dict>
+			<key>impuFormat</key>
+			<array>
+				<string>msisdn@carrierDomain</string>
+			</array>
+			<key>impiFormat</key>
+			<string>imsi@carrierDomain</string>
+			<key>CarrierDomain</key>
+			<string>ims.mnc030.mcc334.3gppnetwork.org</string>
+			<key>IgnoreISIM</key>
+			<true/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>SMSSettings</key>
+	<dict>
+		<key>TransportFallback</key>
+		<false/>
+	</dict>
+	<key>PreferCarrierNameFromMetadata</key>
+	<true/>
+	<key>APNEditabilityTypemask</key>
+	<integer>0</integer>
+	<key>RoamingVoicemailPilotNumber</key>
+	<string>+525512550000</string>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>Services</key>
+	<array>
+		<dict>
+			<key>ServiceCode</key>
+			<string>*767</string>
+			<key>ServiceName</key>
+			<string>Pásame saldo</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>#100#</string>
+			<key>ServiceName</key>
+			<string>SOS!</string>
+		</dict>
+	</array>
+	<key>EnableLTEAfterUpgrade</key>
+	<true/>
+	<key>StatusBarImages</key>
+	<array>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<true/>
+			<key>CarrierName</key>
+			<string>movistar</string>
+			<key>StatusBarCarrierName</key>
+			<string>Movistar</string>
 		</dict>
 	</array>
 	<key>SMSEncoding</key>
 	<integer>513</integer>
+	<key>CarrierName</key>
+	<string>movistar</string>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>MandatoryVerify</key>
+	<dict>
+		<key>SIMs</key>
+		<array/>
+	</dict>
+	<key>ShowCallerIDSwitch</key>
+	<false/>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>33403</string>
+	</array>
 </dict>
 </plist>

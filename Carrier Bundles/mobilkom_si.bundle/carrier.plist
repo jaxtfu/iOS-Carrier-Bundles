@@ -9,7 +9,7 @@
 		<key>SupportSecureIntent</key>
 		<true/>
 		<key>SupportedEntitlements</key>
-		<integer>8193</integer>
+		<integer>13313</integer>
 		<key>ProtocolVersion</key>
 		<string>2</string>
 		<key>Authentication</key>
@@ -28,6 +28,7 @@
 		<key>SupportedActions</key>
 		<array>
 			<string>TransferSIMService</string>
+			<string>AuthenticateTrustFlag</string>
 		</array>
 	</dict>
 	<key>AttachAPN</key>
@@ -70,12 +71,40 @@
 	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>444</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>RemoteCardProvisioningSettings</key>
+	<dict>
+		<key>MatchingICCIDPrefixes</key>
+		<array>
+			<string>893810</string>
+		</array>
+		<key>CellularTrialPlan</key>
+		<dict>
+			<key>SupportsTrialPlan</key>
+			<false/>
+		</dict>
+		<key>ServerURL</key>
+		<string>https://mka.prod.ondemandconnectivity.com</string>
+		<key>ActivatingStateSubscriptionCheckTimerIntervals</key>
+		<array>
+			<integer>1800</integer>
+			<string>3600</string>
+			<string>5400</string>
+		</array>
+		<key>MinCompatibleWatchOS</key>
+		<string>26.5</string>
+		<key>SupportedSKUs</key>
+		<array>
+			<string>SKU_EU</string>
+		</array>
+		<key>ProvisioningMethod</key>
+		<string>CarrierFlow</string>
+	</dict>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>Show3GSwitchWith4G</key>
 	<true/>
 	<key>MMS</key>
@@ -157,6 +186,26 @@
 	<dict>
 		<key>Media</key>
 		<dict>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 			<key>IncludeSDPModeChangeCapability</key>
 			<true/>
 			<key>RingbackTone</key>
@@ -166,6 +215,8 @@
 		<dict>
 			<key>InviteErrorResponsesToTriggerCSFB</key>
 			<string>3XX,4XX,5XX,6XX</string>
+			<key>SupportPEarlyMediaHeader</key>
+			<false/>
 			<key>RingbackTimerSeconds</key>
 			<integer>120</integer>
 			<key>RingingTimerSeconds</key>
@@ -237,19 +288,12 @@
 				<key>LTE</key>
 				<true/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>Voice</key>
 		<dict>
 			<key>EnableVolteByDefault</key>
 			<true/>
 		</dict>
-	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
@@ -263,6 +307,8 @@
 	<string>080404040</string>
 	<key>PushSettings</key>
 	<dict>
+		<key>MultiSIMTopic</key>
+		<string>a1.si.ios.esrv</string>
 		<key>CellularPlanTransferTopic</key>
 		<string>a1.si.ios.st.esrv</string>
 	</dict>

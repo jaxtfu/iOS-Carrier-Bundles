@@ -55,12 +55,13 @@
 	<string>KOREK</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<true/>
 	<key>AllowsVoIP</key>
 	<true/>
-	<key>VoicemailPilotNumber</key>
-	<string>*222</string>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsTTY</key>
+		<true/>
+	</dict>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Iraq</string>
 	<key>MMS</key>
@@ -78,6 +79,8 @@
 	</dict>
 	<key>APNEditabilityTypemaskNew</key>
 	<integer>49</integer>
+	<key>VoicemailPilotNumber</key>
+	<string>*222</string>
 	<key>apns</key>
 	<array>
 		<dict>

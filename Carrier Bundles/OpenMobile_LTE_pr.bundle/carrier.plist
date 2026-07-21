@@ -2,18 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>OTASoftwareUpdate</key>
-	<dict/>
 	<key>NumberToDialForOTAProvisioning</key>
 	<string>*228</string>
 	<key>AttachAPN</key>
 	<dict>
 		<key>3GPP</key>
 		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<true/>
+			<key>username</key>
+			<string></string>
 			<key>apn</key>
 			<string>apple.openmobilepr.com</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>auth_type</key>
 			<string>PAP</string>
 			<key>AllowedProtocolMask</key>
@@ -164,8 +166,6 @@
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>2263</string>
-	<key>ShowTTY</key>
-	<true/>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
 		<key>MaxGreetingDuration</key>
@@ -191,23 +191,6 @@
 	</dict>
 	<key>DisallowCarrierMenuAtHome</key>
 	<true/>
-	<key>OTAActivation</key>
-	<dict>
-		<key>BlacklistedSIMs</key>
-		<array>
-			<string>44053</string>
-			<string>44054</string>
-			<string>44070</string>
-			<string>44071</string>
-			<string>44072</string>
-			<string>44073</string>
-			<string>44074</string>
-			<string>44075</string>
-			<string>44076</string>
-			<string>44078</string>
-			<string>46003</string>
-		</array>
-	</dict>
 	<key>MMS</key>
 	<dict>
 		<key>UAString</key>
@@ -260,18 +243,16 @@
 			<key>configuration</key>
 			<array>
 				<dict>
-					<key>type-mask</key>
-					<integer>7</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
 					<key>apn</key>
 					<string>apple.openmobilepr.com</string>
+					<key>type-mask</key>
+					<integer>7</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
@@ -282,26 +263,22 @@
 					<integer>3</integer>
 					<key>apn</key>
 					<string>iota.openmobilepr.com</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>type-mask</key>
 					<integer>512</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>48</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
 					<key>apn</key>
 					<string>tethering.openmobilepr.com</string>
+					<key>type-mask</key>
+					<integer>48</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
@@ -382,7 +359,7 @@
 	<key>CarrierName</key>
 	<string>Open Mobile</string>
 	<key>MyAccountURL</key>
-	<string>http://www.openmobilepr.com/</string>
+	<string>https://www.openmobilepr.com/</string>
 	<key>MyAccountURLTitle</key>
 	<string>Open Mobile</string>
 	<key>CDMAInternationalRoaming</key>

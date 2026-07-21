@@ -7,7 +7,7 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.cityfone.net</string>
+	<string>https://www.cityfone.net</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>MyAccountURLTitle</key>
@@ -47,15 +47,33 @@
 	</array>
 	<key>ShowDialAssist</key>
 	<true/>
+	<key>Show3GSwitchWith4G</key>
+	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>49988</string>
 	<key>CarrierName</key>
 	<string>Cityfone</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ltemobile.apn</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>SupportsUserBusyCauseCode</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>SMSUseLocalTZ</key>
+	<true/>
+	<key>Show3GSwitchWithVolte</key>
 	<true/>
 	<key>CellBroadcast</key>
 	<dict>
@@ -174,7 +192,5 @@
 			<integer>4</integer>
 		</dict>
 	</array>
-	<key>OTASoftwareUpdate</key>
-	<dict/>
 </dict>
 </plist>

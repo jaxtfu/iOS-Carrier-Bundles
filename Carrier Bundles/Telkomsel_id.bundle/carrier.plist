@@ -49,9 +49,11 @@
 	<key>SupportsNITZ</key>
 	<false/>
 	<key>MyAccountURL</key>
-	<string>http://www.telkomsel.com</string>
+	<string>https://www.telkomsel.com</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
+	<key>EnableLTEAfterUpgrade</key>
+	<true/>
 	<key>APNEditabilityTypemask</key>
 	<integer>53</integer>
 	<key>RegistrationOptInRequired</key>
@@ -96,6 +98,11 @@
 	</array>
 	<key>IMSConfig</key>
 	<dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
 		<key>Signaling</key>
 		<dict>
 			<key>ussdEnabled</key>
@@ -132,8 +139,6 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>222</string>
 	<key>HomeBundleIdentifier</key>

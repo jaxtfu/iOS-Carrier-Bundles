@@ -94,8 +94,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>telenetwap.be</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -131,14 +129,14 @@
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
 	</dict>
-	<key>ShowDialAssist</key>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
 	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
+	<key>ShowDialAssist</key>
 	<false/>
 	<key>Show3GSwitchWith4G</key>
-	<true/>
+	<false/>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
 		<key>BeaconServiceCenter</key>
@@ -169,6 +167,8 @@
 		<key>MaxPINLength</key>
 		<integer>4</integer>
 	</dict>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Telenet WiFi</string>
 	<key>MMS</key>
 	<dict>
 		<key>MMSC</key>
@@ -323,42 +323,36 @@
 			<string></string>
 			<key>apn</key>
 			<string>telenetwap.be</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>32819</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>4</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>4</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>mms.be</string>
+			<key>type-mask</key>
+			<integer>4</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>1048576</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>xcap</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
@@ -369,8 +363,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>2</integer>
 			<key>SupportSwitchOver</key>
@@ -385,10 +377,164 @@
 	</array>
 	<key>APNEditabilityTypemaskNew</key>
 	<integer>5</integer>
-	<key>SMSSettings</key>
+	<key>SuppressSimToolkitSendShortMessageNotifications</key>
+	<true/>
+	<key>IMSConfig</key>
 	<dict>
-		<key>TransportFallback</key>
+		<key>Signaling</key>
+		<dict>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>UseFakeSAsForDeregistration</key>
+			<true/>
+			<key>ForbiddenRegistrationErrorCodes</key>
+			<string>-4XX</string>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>IPSecSegmentOffset</key>
+			<integer>210</integer>
+			<key>SipTimers</key>
+			<dict>
+				<key>InviteResponseTimeout</key>
+				<integer>4000</integer>
+			</dict>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<integer>60</integer>
+			<key>AlwaysUnsubscribeFromRegEvents</key>
+			<false/>
+			<key>SendLocalTimeZoneInformation</key>
+			<true/>
+			<key>NetworkTerminationRetryIntervalSeconds</key>
+			<integer>10</integer>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,6XX</string>
+			<key>DropRegistrationOnSRVCC</key>
+			<true/>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>60</integer>
+			<key>CountryOfOriginationFormat</key>
+			<string>BOTH</string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>CallToVoicemail</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>CC_TERM_NOREPLY_TMR_EXPIRED</string>
+					<key>StatusCode</key>
+					<integer>408</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteRequestCanceled</string>
+				</dict>
+				<key>TemporarilyUnavailable</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>CC_Q850_001_UNALLOCATED_NUMBER</string>
+					<key>StatusCode</key>
+					<integer>404</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+			</dict>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>IncompleteRegistrationThrottlingIntervalSeconds</key>
+			<integer>1</integer>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>MaxForbiddenErrors</key>
+			<integer>100</integer>
+			<key>SendPreconditionsInConfirmedSessions</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>TreatAllNotificationsAsPartial</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc005.mcc206.3gppnetwork.org</string>
+		</dict>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
 		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SMSBundleToVoice</key>
+			<true/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>GSM</key>
+				<false/>
+				<key>LTE</key>
+				<true/>
+				<key>UMTS</key>
+				<false/>
+			</dict>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>ModeChangeCapability</key>
+			<integer>2</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>EnableIncomingDTMF</key>
+			<true/>
+			<key>RingbackTone</key>
+			<string>CEPT</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCW</key>
+			<false/>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>supported</key>
+			<true/>
+			<key>SupportsCFErasure</key>
+			<false/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverCSIfNoIMSReg</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
@@ -398,13 +544,17 @@
 	<integer>32768</integer>
 	<key>RCS</key>
 	<dict>
-		<key>EnableRCSByDefault</key>
+		<key>EnableBusinessMessagingByDefault</key>
 		<true/>
 		<key>ProvisioningData</key>
 		<dict>
 			<key>ServerURL</key>
 			<string>config.rcs.mnc005.mcc206.jibecloud.net</string>
 		</dict>
+		<key>ShowBusinessMessagingSwitch</key>
+		<true/>
+		<key>EnableRCSByDefault</key>
+		<true/>
 	</dict>
 	<key>PushSettings</key>
 	<dict>
@@ -483,10 +633,14 @@
 	</array>
 	<key>CarrierName</key>
 	<string>Telenet</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.telenet.be</string>
+	<string>https://www.telenet.be</string>
 	<key>MyAccountURLTitle</key>
 	<string>Telenet</string>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>20605</string>

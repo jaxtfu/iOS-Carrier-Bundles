@@ -41,13 +41,10 @@
 	<false/>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -71,10 +68,189 @@
 	<array>
 		<string>60202</string>
 	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,6XX</string>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>AllowPCNIInAirplaneMode</key>
+			<false/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>NoAnswerFromUser3</key>
+				<dict>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderText</key>
+					<string>Request Timeout</string>
+					<key>DisableCSFB</key>
+					<true/>
+					<key>StatusCode</key>
+					<integer>408</integer>
+				</dict>
+				<key>NoAnswer</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>No Answer</string>
+					<key>StatusCode</key>
+					<integer>486</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+				<key>NoAnswerFromUser2</key>
+				<dict>
+					<key>Protocol</key>
+					<string>Q.850</string>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderCause</key>
+					<integer>19</integer>
+					<key>DisableCSFB</key>
+					<true/>
+					<key>StatusCode</key>
+					<integer>480</integer>
+				</dict>
+				<key>NormalUnspecified</key>
+				<dict>
+					<key>Protocol</key>
+					<string>Q.850</string>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderText</key>
+					<string>CC_Q850_031_NORMAL_UNSPECIFIED</string>
+					<key>ReasonHeaderCause</key>
+					<integer>31</integer>
+				</dict>
+				<key>NoAnswerFromUser1</key>
+				<dict>
+					<key>Protocol</key>
+					<string>Q.850</string>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderCause</key>
+					<integer>31</integer>
+					<key>DisableCSFB</key>
+					<true/>
+					<key>StatusCode</key>
+					<integer>480</integer>
+				</dict>
+			</dict>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv2-MD5</string>
+			<key>EarlyMediaNeedsHeader</key>
+			<false/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*[primary]</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+			<key>DropRegistrationOnAirplaneModeToggle</key>
+			<true/>
+		</dict>
+		<key>AllowWiFiCallingInAirplaneMode</key>
+		<false/>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<false/>
+			<key>SendReferToPeer</key>
+			<false/>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc002.mcc602.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<false/>
+			</dict>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCW</key>
+			<true/>
+			<key>BsfHost</key>
+			<string>bsf.ims.mnc002.mcc602.pub.3gppnetwork.org</string>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>403</string>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>BsfPort</key>
+			<integer>80</integer>
+			<key>supported</key>
+			<true/>
+			<key>imsFeatureDependency</key>
+			<true/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>2</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
+			<true/>
+			<key>E911OverCSIfNoIMSReg</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>Show3GSwitchWith4G</key>
-	<true/>
+	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
 	<key>CarrierName</key>
@@ -97,8 +273,8 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>AllowsVoIP</key>
 	<true/>
 	<key>VoicemailPilotNumber</key>
@@ -114,8 +290,6 @@
 			<string>internet</string>
 			<key>apn</key>
 			<string>internet.vodafone.net</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
@@ -123,17 +297,27 @@
 		</dict>
 		<dict>
 			<key>password</key>
-			<string>internet</string>
+			<string></string>
 			<key>username</key>
-			<string>internet</string>
+			<string></string>
 			<key>apn</key>
-			<string>internet.vodafone.net</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
+			<string>ims</string>
 			<key>type-mask</key>
-			<integer>48</integer>
+			<integer>131072</integer>
 			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>hos</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>OTASoftwareUpdate</key>

@@ -2,6 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>ServerAddress</key>
+		<string>https://esim-es-open-prod-skyuk.esimcloud.net/skyuk/prod/executeAppleActions/</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+	</dict>
 	<key>OTASoftwareUpdate</key>
 	<dict>
 		<key>SoftwareUpdateOptInRequired</key>
@@ -226,11 +242,13 @@
 	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>SupportsNITZ</key>
-	<false/>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>+447488222000</string>
-	<key>ShowDialAssist</key>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
 	<false/>
+	<key>ShowDialAssist</key>
+	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<array>
 		<string>+447860015000</string>
@@ -244,8 +262,6 @@
 		<string>+447860015008</string>
 		<string>+447860015009</string>
 	</array>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VVMRetryIntervals</key>
 	<array>
 		<integer>60</integer>
@@ -438,18 +454,16 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>32819</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>2</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>mobile.sky</string>
+			<key>type-mask</key>
+			<integer>32819</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
@@ -460,50 +474,44 @@
 			<string></string>
 			<key>apn</key>
 			<string>mms.mobile.sky</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>type-mask</key>
 			<integer>4</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>type-mask</key>
-			<integer>131072</integer>
-			<key>UseNetworkMTU</key>
-			<true/>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowNoDNS</key>
+			<integer>1</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>3</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
-			<key>AllowNoDNS</key>
-			<integer>1</integer>
-			<key>apn</key>
-			<string>ims</string>
-			<key>DefaultProtocolMask</key>
+			<key>UseNetworkMTU</key>
+			<true/>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>1048576</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>ut.mobile.sky</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
@@ -516,8 +524,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>wifi.mms.mobile.sky</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
@@ -593,28 +599,43 @@
 		<true/>
 		<key>SMS</key>
 		<dict>
-			<key>allowCSFBInVolteMode</key>
+			<key>enableInNonVoLTEMode</key>
 			<false/>
 		</dict>
 		<key>Media</key>
 		<dict>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>20</integer>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>ModeChangeCapability</key>
+			<integer>2</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
 			<key>AudioCodecs</key>
 			<dict>
+				<key>127</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
 				<key>PayloadTypeItem</key>
 				<dict>
 					<key>EncodingName</key>
 					<string>AMR</string>
 				</dict>
 			</dict>
-			<key>IncludeSDPMaxRed</key>
-			<true/>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-			<key>ModeChangeCapability</key>
-			<integer>2</integer>
-			<key>EnableBandwidthSpecifiers</key>
 			<true/>
 		</dict>
 		<key>XCAP</key>

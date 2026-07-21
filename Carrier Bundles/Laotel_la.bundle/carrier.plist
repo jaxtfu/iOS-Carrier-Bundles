@@ -14,7 +14,7 @@
 	<key>SupportsNITZ</key>
 	<false/>
 	<key>MyAccountURL</key>
-	<string>http://www.laotel.com</string>
+	<string>https://www.laotel.com</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>APNEditabilityTypemask</key>
@@ -26,6 +26,8 @@
 	</dict>
 	<key>MyAccountURLTitle</key>
 	<string>LaoTel</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>StatusBarImages</key>
@@ -43,6 +45,94 @@
 	<array>
 		<string>45701</string>
 	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>500,503,380</string>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>120</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>120</integer>
+			<key>SendPreferredServiceInInvite</key>
+			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>TemporarilyUnavailable</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>480</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+			</dict>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>AllowedPdpTypeMask</key>
+			<integer>1</integer>
+			<key>EarlyMediaNeedsHeader</key>
+			<false/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>INVITE,INVITE:*</key>
+				<string>+g.3gpp.srvcc-alerting</string>
+			</dict>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>BOTH</string>
+			<key>DropRegistrationOnSRVCC</key>
+			<true/>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc001.mcc457.3gppnetwork.org</string>
+		</dict>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>UseRpOriginatingAddressAsSender</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>30</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverCSIfNoIMSReg</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
@@ -60,23 +150,75 @@
 	</array>
 	<key>CarrierName</key>
 	<string>LaoTel</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ltcnet</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>ShowVolteSwitch</key>
+	<true/>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Laos</string>
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>password</key>
-			<string></string>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>ltcnet</string>
-			<key>type-mask</key>
-			<integer>49</integer>
+			<key>configuration</key>
+			<array>
+				<dict>
+					<key>password</key>
+					<string></string>
+					<key>username</key>
+					<string></string>
+					<key>apn</key>
+					<string>ltcnet</string>
+					<key>type-mask</key>
+					<integer>49</integer>
+				</dict>
+				<dict>
+					<key>password</key>
+					<string></string>
+					<key>username</key>
+					<string></string>
+					<key>apn</key>
+					<string>ims</string>
+					<key>type-mask</key>
+					<integer>131072</integer>
+				</dict>
+			</array>
+			<key>technology-mask</key>
+			<integer>8</integer>
+		</dict>
+		<dict>
+			<key>configuration</key>
+			<array>
+				<dict>
+					<key>password</key>
+					<string></string>
+					<key>username</key>
+					<string></string>
+					<key>apn</key>
+					<string>ltcnet</string>
+					<key>type-mask</key>
+					<integer>49</integer>
+				</dict>
+			</array>
+			<key>technology-mask</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>OTASoftwareUpdate</key>

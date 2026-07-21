@@ -12,10 +12,10 @@
 			</array>
 			<key>signature</key>
 			<data>
-			sb9jOed/s92ipdb9j0/Y/0LMzKjwqn4Np9BRl3HiVMdbM/veOWWE
-			1SWH93nNkRkgY6oTOd476UoPJnT3f74MfGgiaCDVw2htgPVFa2+3
-			kplr5kXgzPawCT05q3jBinFrkkSRfbTlERTHHaQ3zfukUBnTRkWl
-			WXVY+fQTUNbMZXQ=
+			yapIpnRIdMu6ow1PVBEXIyXHiQI7cZH4y+YncKTJuY3N4RLj/H20
+			KA6HN1GB5YKA3AlqvoNGU+YstP6uOP5dnu7ObiIThlG0RUnbMz5j
+			Dewjojn4dgW5ZhYLEeMMOYMEgUI4CY92ECgzsi2qghqNS+DykI7W
+			Ltapvpo15fjFTU8=
 			</data>
 			<key>OverrideConfiguration</key>
 			<dict>
@@ -27,33 +27,46 @@
 				<array/>
 				<key>signature</key>
 				<data>
-				yW33HoefcVpKz9YMuie8W9h52umAlvUSNx0lvtlY7kqg
-				KSBvhJXRtIBC8ss18LZWJZxnQUeCizMhW3L1bfrNhHxw
-				4V95+BL7adeeXGcGETwP4pGrxsd6QFnd41q9oV1fVxrB
-				MwneLwc9iTYOw/G9RMT/82UiY0ASZuxYOctMTjo=
+				y/jGnUeiRgp69W+cAhcldIRKIyyQY+D56RR3VIXtQHNe
+				QDsb6X8woCiWrCk0oaHXZtMYiaLUQpFirj0Hc3hJGpk9
+				+NTN42M0nGcxS5Oi5zUbDP+PxESAW6D2bATZOQMbZRga
+				T8KBsmc4dd1zb/T+XaYvZ4AD2LptEieZKjLYw3o=
 				</data>
 			</dict>
 		</dict>
 	</dict>
 	<key>SMSUseLocalTZ</key>
 	<true/>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsTTY</key>
+		<true/>
+	</dict>
 	<key>HomeERI</key>
 	<array>
 		<integer>1</integer>
 	</array>
-	<key>ShowTTY</key>
-	<true/>
 	<key>DMUFileName</key>
 	<string>carrier.dmu</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>CMW</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>CarrierName</key>
 	<string>Factory - Multimode</string>
 	<key>SupportedSIMs</key>
-	<array>
-		<string>101FAC</string>
-	</array>
-	<key>SuspendFastDormancyAllowed</key>
-	<true/>
-	<key>SupportedCarrierIds</key>
 	<array>
 		<string>101FAC</string>
 	</array>
@@ -69,6 +82,12 @@
 			<key>type-mask</key>
 			<integer>1</integer>
 		</dict>
+	</array>
+	<key>SuspendFastDormancyAllowed</key>
+	<true/>
+	<key>SupportedCarrierIds</key>
+	<array>
+		<string>101FAC</string>
 	</array>
 </dict>
 </plist>

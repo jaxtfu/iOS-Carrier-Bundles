@@ -8,15 +8,6 @@
 		<dict>
 			<key>SMSBundleToVoice</key>
 			<false/>
-			<key>SupportedDomains</key>
-			<dict>
-				<key>GSM</key>
-				<false/>
-				<key>LTE</key>
-				<true/>
-				<key>UMTS</key>
-				<false/>
-			</dict>
 		</dict>
 	</dict>
 </dict>

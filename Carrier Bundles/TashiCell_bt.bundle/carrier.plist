@@ -49,8 +49,6 @@
 	<true/>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
 	<key>apns</key>
@@ -62,8 +60,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>ticlnet</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
@@ -82,8 +78,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>ticlnet</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>

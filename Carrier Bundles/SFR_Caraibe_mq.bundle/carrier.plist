@@ -175,8 +175,6 @@
 	<string>IMAP</string>
 	<key>ShowVolteSwitch</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>888</string>
 	<key>HomeBundleIdentifier</key>

@@ -41,8 +41,6 @@
 						<string></string>
 						<key>apn</key>
 						<string>ims</string>
-						<key>DefaultProtocolMask</key>
-						<integer>1</integer>
 						<key>type-mask</key>
 						<integer>131072</integer>
 						<key>AllowedProtocolMask</key>
@@ -55,8 +53,6 @@
 						<string></string>
 						<key>apn</key>
 						<string>xcap</string>
-						<key>DefaultProtocolMask</key>
-						<integer>1</integer>
 						<key>type-mask</key>
 						<integer>1048576</integer>
 						<key>AllowedProtocolMask</key>
@@ -91,7 +87,7 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.docomopacific.com</string>
+	<string>https://www.docomopacific.com</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>EnableLTEAfterUpgrade</key>
@@ -142,10 +138,30 @@
 	<dict>
 		<key>Media</key>
 		<dict>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
 			<key>EnableIncomingDTMF</key>
 			<true/>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>127</key>
+				<dict>
+					<key>cmr</key>
+					<string>-1</string>
+					<key>br</key>
+					<string>9.6-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>max-red</key>
+					<string>0</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
 		</dict>
 		<key>Signaling</key>
 		<dict>
@@ -157,6 +173,8 @@
 			<string>403,500,503</string>
 			<key>Allow3DPIDFInMessages</key>
 			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<false/>
 			<key>RingbackTimerSeconds</key>
 			<integer>90</integer>
 			<key>SendEmergencyLocationUpdates</key>
@@ -164,6 +182,8 @@
 			<key>RingingTimerSeconds</key>
 			<integer>90</integer>
 			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>EarlyMediaNeedsHeader</key>
 			<false/>
 			<key>DefaultAuthAlgorithm</key>
 			<string>AKAv1-MD5</string>
@@ -304,8 +324,6 @@
 	<string>IMAP</string>
 	<key>ShowVolteSwitch</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>IntlDataRoamingExceptions</key>
@@ -348,50 +366,44 @@
 			<integer>51</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>ims</string>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
+			<key>apn</key>
+			<string></string>
 			<key>type-mask</key>
 			<integer>262144</integer>
-			<key>password</key>
-			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string></string>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>1048576</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>xcap</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>

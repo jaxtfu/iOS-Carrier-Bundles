@@ -19,6 +19,8 @@
 	<integer>0</integer>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+37129500606</string>
 	<key>StatusBarImages</key>
@@ -48,8 +50,6 @@
 					<string>220</string>
 					<key>SampleRate</key>
 					<integer>16000</integer>
-					<key>hf-only</key>
-					<string>0</string>
 					<key>octet-align</key>
 					<string>1</string>
 					<key>ch-aw-recv</key>
@@ -59,13 +59,15 @@
 					<key>br</key>
 					<string>5.9-24.4</string>
 					<key>bw</key>
-					<string>nb-wb</string>
+					<string>nb-swb</string>
 				</dict>
 			</dict>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>20</integer>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 			<key>IncludeSDPModeChangeCapability</key>
 			<true/>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
 		</dict>
 		<key>Signaling</key>
 		<dict>
@@ -138,8 +140,6 @@
 		<dict>
 			<key>EnableVolteByDefault</key>
 			<true/>
-			<key>RTTSupported</key>
-			<true/>
 		</dict>
 	</dict>
 	<key>OverrideOperatorWiFiName</key>
@@ -168,8 +168,6 @@
 			<integer>3</integer>
 		</dict>
 	</dict>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>1606</string>
 	<key>HomeBundleIdentifier</key>
@@ -226,16 +224,18 @@
 			<integer>2</integer>
 		</dict>
 		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
+			<key>SupportSwitchOver</key>
+			<true/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>ims</string>
-			<key>type-mask</key>
-			<integer>131072</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
 		</dict>

@@ -27,7 +27,7 @@
 	<key>ShowCallForwarding</key>
 	<false/>
 	<key>MyAccountURL</key>
-	<string>http://home.1und1.de</string>
+	<string>https://home.1und1.de</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>ShowCallForwarded</key>
@@ -134,8 +134,8 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>IMAP</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Germany</string>
 	<key>MMS</key>

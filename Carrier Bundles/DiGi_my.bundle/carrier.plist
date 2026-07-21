@@ -2,79 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
-	<key>Services</key>
-	<array>
-		<dict>
-			<key>ServiceCode</key>
-			<string>+ 60163331111</string>
-			<key>ServiceName</key>
-			<string>CelcomDigi Helpline</string>
-		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string>*118#</string>
-			<key>ServiceName</key>
-			<string>CelcomDigi Services</string>
-		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string>*122#</string>
-			<key>ServiceName</key>
-			<string>CelcomDigi Prepaid Reload</string>
-		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string> *126#</string>
-			<key>ServiceName</key>
-			<string>CelcomDigi Prepaid Balance</string>
-		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string>*800#</string>
-			<key>ServiceName</key>
-			<string>CelcomDigi Roaming Services</string>
-		</dict>
-	</array>
-	<key>DataIndicatorOverrideForLTE</key>
-	<string>4G</string>
-	<key>ShowCallerIDSwitch</key>
-	<false/>
-	<key>SupportsNITZ</key>
-	<false/>
-	<key>MyAccountURL</key>
-	<string>https://www.celcomdigi.com/</string>
-	<key>SMSSettings</key>
-	<dict>
-		<key>ShowClass0SMSInLockScreen</key>
-		<true/>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
-	<key>MyAccountURLTitle</key>
-	<string>CelcomDigi</string>
-	<key>RoamingVoicemailPilotNumber</key>
-	<string>+60162991111</string>
-	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32769</integer>
-	<key>RegistrationOptInRequired</key>
-	<true/>
-	<key>StatusBarImages</key>
-	<array>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>Digi</string>
-			<key>StatusBarCarrierName</key>
-			<string>Digi</string>
-		</dict>
-	</array>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>50216</string>
-	</array>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportSecureIntent</key>
@@ -99,14 +26,13 @@
 		<key>UpdatePeriod</key>
 		<integer>24</integer>
 	</dict>
-	<key>ShowDialAssist</key>
+	<key>SupportContextSwitchOver</key>
 	<true/>
-	<key>Show3GSwitchWith4G</key>
-	<true/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>+447786205094</string>
-	<key>CarrierName</key>
-	<string>CelcomDigi</string>
+	<key>OTASoftwareUpdate</key>
+	<dict>
+		<key>SoftwareUpdateOptInRequired</key>
+		<true/>
+	</dict>
 	<key>AttachAPN</key>
 	<dict>
 		<key>3GPP</key>
@@ -155,12 +81,60 @@
 	</dict>
 	<key>ShowClass0SMSFromField</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>121</string>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.Malaysia</string>
+	<key>RegistrationOptInRequired</key>
+	<true/>
+	<key>SupportsNITZ</key>
+	<false/>
+	<key>RemoteCardProvisioningSettings</key>
+	<dict>
+		<key>MatchingICCIDPrefixes</key>
+		<array>
+			<string>896016</string>
+		</array>
+		<key>CellularTrialPlan</key>
+		<dict>
+			<key>SupportsTrialPlan</key>
+			<true/>
+			<key>TrialStartPeriod</key>
+			<string>2019-07-15T00:00:00Z</string>
+			<key>TrialEndPeriod</key>
+			<string>2020-04-30T14:59:59Z</string>
+		</dict>
+		<key>ServerURL</key>
+		<string>rsp-0024.oberthur.net</string>
+		<key>ActivatingStateSubscriptionCheckTimerIntervals</key>
+		<array>
+			<integer>180</integer>
+			<integer>600</integer>
+			<integer>3600</integer>
+		</array>
+		<key>MinCompatibleWatchOS</key>
+		<string>6.1</string>
+		<key>SupportedSKUs</key>
+		<array>
+			<string>SKU_EU</string>
+		</array>
+		<key>ProvisioningMethod</key>
+		<string>CarrierFlow</string>
+		<key>SupportsFauxCard</key>
+		<false/>
+		<key>UsesAutoAssignment</key>
+		<false/>
+	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>+447786205094</string>
+	<key>ShowDialAssist</key>
+	<true/>
+	<key>Show3GSwitchWith4G</key>
+	<false/>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Digi WiFi Calling</string>
+	<key>SupportsSupplementaryServicesOverIMS</key>
+	<true/>
 	<key>MMS</key>
 	<dict>
 		<key>MMSC</key>
@@ -172,33 +146,348 @@
 		<key>MaxMessageSize</key>
 		<integer>307200</integer>
 	</dict>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.Malaysia</string>
+	<key>TechSettings</key>
+	<dict>
+		<key>WifiCallingAllowedInRoaming</key>
+		<true/>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA2-256</string>
+						</array>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>AES-256</string>
+						</array>
+						<key>DHGroup</key>
+						<integer>14</integer>
+						<key>Lifetime</key>
+						<integer>80000</integer>
+					</dict>
+				</array>
+				<key>InstallPolicies</key>
+				<true/>
+				<key>ReplayWindowSize</key>
+				<integer>12</integer>
+			</dict>
+		</dict>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>wifi</string>
+			<key>PreferredTechnologyRoaming</key>
+			<string>wifi</string>
+		</dict>
+		<key>ExtraConfigurationAttributeRequestv6</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16386</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv6</string>
+				<key>Type</key>
+				<string>IPv6Address</string>
+			</dict>
+		</array>
+		<key>SupportCallHandover</key>
+		<true/>
+		<key>TechPolicies</key>
+		<array>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>131072</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>1048576</integer>
+			</dict>
+		</array>
+		<key>ExtraConfigurationAttributeRequestv4</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16384</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv4</string>
+				<key>Type</key>
+				<string>IPv4Address</string>
+			</dict>
+		</array>
+		<key>5wiServiceMask</key>
+		<integer>3</integer>
+		<key>IKE</key>
+		<dict>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-256</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-256</string>
+					<key>DHGroup</key>
+					<integer>14</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>80000</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-256</string>
+				</dict>
+			</array>
+			<key>DeadPeerDetectionEnabled</key>
+			<false/>
+			<key>DeadPeerDetectionMaxRetries</key>
+			<integer>5</integer>
+			<key>DeadPeerDetectionInterval</key>
+			<integer>600</integer>
+			<key>LocalIdentifier</key>
+			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
+			<key>NATTKeepAliveOffload</key>
+			<true/>
+			<key>RemoteAddress</key>
+			<string>epdg.epc.mnc016.mcc502.pub.3gppnetwork.org</string>
+			<key>DeadPeerDetectionRetryInterval</key>
+			<integer>10</integer>
+		</dict>
+	</dict>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
+	<key>DataIndicatorOverrideForLTE</key>
+	<string>4G</string>
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>password</key>
-			<string></string>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>diginet</string>
-			<key>type-mask</key>
-			<integer>49</integer>
-		</dict>
-		<dict>
-			<key>password</key>
-			<string>mms</string>
-			<key>username</key>
-			<string>mms</string>
-			<key>apn</key>
-			<string>digimms</string>
-			<key>type-mask</key>
-			<integer>4</integer>
+			<key>configuration</key>
+			<array>
+				<dict>
+					<key>password</key>
+					<string></string>
+					<key>username</key>
+					<string></string>
+					<key>apn</key>
+					<string>diginet</string>
+					<key>type-mask</key>
+					<integer>32817</integer>
+					<key>AllowedProtocolMask</key>
+					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>type-mask</key>
+					<integer>131072</integer>
+					<key>password</key>
+					<string></string>
+					<key>tech-type-mask</key>
+					<integer>131072</integer>
+					<key>SupportSwitchOver</key>
+					<true/>
+					<key>username</key>
+					<string></string>
+					<key>apn</key>
+					<string>ims</string>
+					<key>AllowedProtocolMask</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>password</key>
+					<string>mms</string>
+					<key>username</key>
+					<string>mms</string>
+					<key>apn</key>
+					<string>digimms</string>
+					<key>type-mask</key>
+					<integer>4</integer>
+				</dict>
+				<dict>
+					<key>password</key>
+					<string></string>
+					<key>tech-type-mask</key>
+					<integer>1048576</integer>
+					<key>username</key>
+					<string></string>
+					<key>apn</key>
+					<string>hos</string>
+					<key>type-mask</key>
+					<integer>1048576</integer>
+					<key>AllowedProtocolMask</key>
+					<integer>2</integer>
+				</dict>
+			</array>
+			<key>technology-mask</key>
+			<integer>9</integer>
 		</dict>
 	</array>
-	<key>OTASoftwareUpdate</key>
+	<key>IMSConfig</key>
 	<dict>
-		<key>SoftwareUpdateOptInRequired</key>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>500,503</string>
+			<key>AllowEarlyMediaToOverrideLocalRingback</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>75</integer>
+			<key>MaxUdpMessageSize</key>
+			<integer>1200</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>45</integer>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>AdditionalHeaders</key>
+			<dict>
+				<key>INVITE,INVITE:*</key>
+				<string>Feature-Caps: *;+g.3gpp.srvcc-alerting</string>
+			</dict>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>None</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting</string>
+			</dict>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>DropRegistrationOnSRVCC</key>
+			<true/>
+			<key>SendLocalTimeZoneInformation</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>TreatAllNotificationsAsPartial</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc016.mcc502.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RingbackTone</key>
+			<string>HK</string>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>BsfHost</key>
+			<string>bsf.mnc016.mcc502.pub.3gppnetwork.org</string>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>supported</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>SMSSettings</key>
+	<dict>
+		<key>ShowClass0SMSInLockScreen</key>
 		<true/>
 	</dict>
+	<key>RoamingVoicemailPilotNumber</key>
+	<string>+60162991111</string>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32769</integer>
+	<key>PushSettings</key>
+	<dict>
+		<key>MultiSIMTopic</key>
+		<string>MultiSIM</string>
+	</dict>
+	<key>Services</key>
+	<array>
+		<dict>
+			<key>ServiceCode</key>
+			<string>+ 60163331111</string>
+			<key>ServiceName</key>
+			<string>CelcomDigi Helpline</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>*118#</string>
+			<key>ServiceName</key>
+			<string>CelcomDigi Services</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>*122#</string>
+			<key>ServiceName</key>
+			<string>CelcomDigi Prepaid Reload</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string> *126#</string>
+			<key>ServiceName</key>
+			<string>CelcomDigi Prepaid Balance</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>*800#</string>
+			<key>ServiceName</key>
+			<string>CelcomDigi Roaming Services</string>
+		</dict>
+	</array>
+	<key>StatusBarImages</key>
+	<array>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>Digi</string>
+			<key>StatusBarCarrierName</key>
+			<string>Digi</string>
+		</dict>
+	</array>
+	<key>CarrierName</key>
+	<string>CelcomDigi</string>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>MyAccountURL</key>
+	<string>https://www.celcomdigi.com/</string>
+	<key>MyAccountURLTitle</key>
+	<string>CelcomDigi</string>
+	<key>ShowCallerIDSwitch</key>
+	<false/>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>50216</string>
+	</array>
 </dict>
 </plist>

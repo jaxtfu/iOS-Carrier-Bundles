@@ -36,22 +36,19 @@
 	<key>SupportsNITZ</key>
 	<false/>
 	<key>MyAccountURL</key>
-	<string>http://wap.orange.re</string>
+	<string>https://wap.orange.re</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>EnableLTEAfterUpgrade</key>
 	<true/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
+	<key>RegistrationOptInRequired</key>
+	<true/>
 	<key>MyAccountURLTitle</key>
 	<string>Orange World</string>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+262692000800</string>
-	<key>RegistrationOptInRequired</key>
-	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StockSymboli</key>
 	<array>
 		<dict>
@@ -93,34 +90,6 @@
 	</dict>
 	<key>IMSConfig</key>
 	<dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>AlwaysSubscribeToConferenceEvents</key>
-			<true/>
-			<key>SendConferenceSubscribeInNewDialog</key>
-			<true/>
-			<key>conferenceServer</key>
-			<string>sip:mmtel@conf-factory.ims.mnc000.mcc647.3gppnetwork.org</string>
-		</dict>
-		<key>Media</key>
-		<dict>
-			<key>RTCPIntervalSeconds</key>
-			<integer>5</integer>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-			<key>PreferredAMRWBMode</key>
-			<integer>8</integer>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>20</integer>
-			<key>RingbackTone</key>
-			<string>CEPT</string>
-			<key>UseSDPTemplateForAllInvites</key>
-			<true/>
-			<key>IncludeSDPMaxRed</key>
-			<true/>
-		</dict>
 		<key>Signaling</key>
 		<dict>
 			<key>IPSecBringupUseNetworkPath</key>
@@ -196,19 +165,6 @@
 			<key>UseIPSec</key>
 			<true/>
 		</dict>
-		<key>Voice</key>
-		<dict>
-			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
-			<true/>
-			<key>E911OverITechSupported</key>
-			<false/>
-			<key>E911OverCSIfNoIMSReg</key>
-			<true/>
-			<key>EnableVolteByDefault</key>
-			<true/>
-			<key>endNonEmergencyCalls</key>
-			<true/>
-		</dict>
 		<key>LocalShortCodeNumbers</key>
 		<array>
 			<string>15</string>
@@ -224,8 +180,85 @@
 			<string>116111</string>
 			<string>116117</string>
 		</array>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc000.mcc647.3gppnetwork.org</string>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>97</key>
+				<dict>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+				<key>96</key>
+				<dict>
+					<key>br</key>
+					<string>9.6-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>swb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>RingbackTone</key>
+			<string>CEPT</string>
+			<key>UseSDPTemplateForAllInvites</key>
+			<true/>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
 		<key>EnableWiFiCallingWithoutEntitlement</key>
 		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>DialAsEmergencyOverIMSForUndetectedEmergency</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<false/>
+			<key>E911OverCSIfNoIMSReg</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+			<key>endNonEmergencyCalls</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>OverrideOperatorWiFiName</key>
 	<string>Orange Re Appels Wifi</string>
@@ -273,12 +306,10 @@
 	<dict>
 		<key>3GPP</key>
 		<dict>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>1</integer>
-			<key>password</key>
-			<string></string>
 			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
+			<key>password</key>
+			<string></string>
 			<key>enableXLAT464</key>
 			<true/>
 			<key>PcscfAddressRequired</key>
@@ -289,16 +320,16 @@
 			<integer>1</integer>
 			<key>apn</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
 	<false/>
+	<key>ShowVolteSwitch</key>
+	<false/>
 	<key>SupportsImsCapability</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>IMAP</string>
 	<key>VoicemailPilotNumber</key>
@@ -451,8 +482,6 @@
 			<integer>51</integer>
 			<key>password</key>
 			<string>orange</string>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>enableXLAT464</key>
 			<true/>
 			<key>AllowedProtocolMaskInRoaming</key>
@@ -477,23 +506,21 @@
 			<integer>4</integer>
 		</dict>
 		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>type-mask</key>
-			<integer>131072</integer>
-			<key>apn</key>
-			<string>ims</string>
+			<key>UseNetworkMTU</key>
+			<true/>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
-			<key>DefaultProtocolMask</key>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
@@ -503,15 +530,13 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>262144</integer>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
 			<key>AllowNoDNS</key>
 			<integer>1</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>sos</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
 	</array>

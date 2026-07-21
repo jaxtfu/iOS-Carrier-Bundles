@@ -2,48 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
-	<key>SupportsNITZ</key>
-	<true/>
-	<key>MyAccountURL</key>
-	<string>https://lum.ca/</string>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<false/>
-	</dict>
-	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32768</integer>
-	<key>StockSymboli</key>
-	<array>
-		<dict>
-			<key>name</key>
-			<string></string>
-			<key>symbol</key>
-			<string>^GSPTSE</string>
-		</dict>
-	</array>
-	<key>StatusBarImages</key>
-	<array>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>LUM Mobile</string>
-			<key>StatusBarCarrierName</key>
-			<string>SaskTel</string>
-		</dict>
-	</array>
-	<key>Location</key>
-	<dict>
-		<key>EnableCPIDuringEmergencyMode</key>
-		<true/>
-		<key>EnableEarlyReturnDuringEmergencyMode</key>
-		<true/>
-	</dict>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportedEntitlements</key>
@@ -64,34 +22,11 @@
 		<key>UpdatePeriod</key>
 		<integer>24</integer>
 	</dict>
-	<key>ShowDialAssist</key>
-	<false/>
-	<key>Show3GSwitchWith4G</key>
-	<true/>
-	<key>RCS</key>
+	<key>OTASoftwareUpdate</key>
 	<dict>
-		<key>EnableBusinessMessagingByDefault</key>
-		<true/>
-		<key>ProvisioningData</key>
-		<dict>
-			<key>ServerURL</key>
-			<string>config.rcs.mnc780.mcc302.jibecloud.net</string>
-		</dict>
-		<key>ShowBusinessMessagingSwitch</key>
-		<true/>
-		<key>ShowRCSSwitch</key>
-		<true/>
-		<key>EnableRCSByDefault</key>
+		<key>SoftwareUpdateOptInRequired</key>
 		<true/>
 	</dict>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>49988</string>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>302780_GID1-5b</string>
-	</array>
-	<key>CarrierName</key>
-	<string>LUM Mobile</string>
 	<key>AttachAPN</key>
 	<dict>
 		<key>3GPP</key>
@@ -108,12 +43,6 @@
 			<integer>1</integer>
 		</dict>
 	</dict>
-	<key>SupportsUserBusyCauseCode</key>
-	<true/>
-	<key>VisualVoicemailServiceName</key>
-	<string>IMAP</string>
-	<key>ShowTTY</key>
-	<true/>
 	<key>CellBroadcast</key>
 	<dict>
 		<key>AlertTypes</key>
@@ -183,8 +112,34 @@
 			</dict>
 		</array>
 	</dict>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.Canada</string>
+	<key>StockSymboli</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>symbol</key>
+			<string>^GSPTSE</string>
+		</dict>
+	</array>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>LocalInstallSMDPURL</key>
+		<string>sm-v4-062-a-gtm.pr.go-esim.com</string>
+	</dict>
+	<key>SupportsUserBusyCauseCode</key>
+	<true/>
+	<key>SupportsNITZ</key>
+	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>ShowDialAssist</key>
+	<false/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>49988</string>
+	<key>Show3GSwitchWith4G</key>
+	<false/>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Lum Wi-Fi</string>
 	<key>MMS</key>
 	<dict>
 		<key>MMSC</key>
@@ -206,10 +161,144 @@
 		<key>OnWhileRoaming</key>
 		<true/>
 	</dict>
-	<key>SupportedPLMNs</key>
-	<array>
-		<string>302880</string>
-	</array>
+	<key>TechSettings</key>
+	<dict>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA2-512</string>
+						</array>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>AES-256</string>
+						</array>
+						<key>DHGroup</key>
+						<integer>14</integer>
+						<key>Lifetime</key>
+						<integer>86400</integer>
+					</dict>
+				</array>
+				<key>InstallPolicies</key>
+				<true/>
+				<key>ReplayWindowSize</key>
+				<integer>12</integer>
+			</dict>
+		</dict>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>cellular</string>
+			<key>PreferredTechnologyRoaming</key>
+			<string>cellular</string>
+		</dict>
+		<key>ExtraConfigurationAttributeRequestv6</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16390</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv6</string>
+				<key>Type</key>
+				<string>IPv6Address</string>
+			</dict>
+		</array>
+		<key>SupportContextSwitchOver</key>
+		<true/>
+		<key>WiFiCallingControlsAlliWLanServices</key>
+		<true/>
+		<key>WifiCallingAllowedInRoaming</key>
+		<false/>
+		<key>5wiServiceMask</key>
+		<integer>3</integer>
+		<key>IKE</key>
+		<dict>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-256</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-512</string>
+					<key>DHGroup</key>
+					<integer>14</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>86400</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-512</string>
+				</dict>
+			</array>
+			<key>DeadPeerDetectionEnabled</key>
+			<false/>
+			<key>DeadPeerDetectionMaxRetries</key>
+			<integer>4</integer>
+			<key>DeadPeerDetectionInterval</key>
+			<integer>600</integer>
+			<key>LocalIdentifier</key>
+			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
+			<key>NATTKeepAliveOffload</key>
+			<true/>
+			<key>ValidateRemoteCertificate</key>
+			<false/>
+			<key>RemoteAddress</key>
+			<string>epdg.epc.mnc780.mcc302.pub.3gppnetwork.org</string>
+			<key>DeadPeerDetectionRetryInterval</key>
+			<integer>10</integer>
+		</dict>
+		<key>AllowRoamingHandover</key>
+		<false/>
+		<key>ExtraConfigurationAttributeRequestv4</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16384</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv4</string>
+				<key>Type</key>
+				<string>IPv4Address</string>
+			</dict>
+		</array>
+		<key>SetHandOverIPv6Prefix</key>
+		<true/>
+		<key>TechPolicies</key>
+		<array>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>131072</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>262144</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>1048582</integer>
+			</dict>
+		</array>
+		<key>EPDGResolutionFallbackEnabled</key>
+		<true/>
+		<key>SupportCallHandover</key>
+		<true/>
+	</dict>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.Canada</string>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -223,10 +312,206 @@
 			<integer>32821</integer>
 		</dict>
 	</array>
-	<key>OTASoftwareUpdate</key>
+	<key>Location</key>
 	<dict>
-		<key>SoftwareUpdateOptInRequired</key>
+		<key>EnableCPIDuringEmergencyMode</key>
+		<true/>
+		<key>EnableEarlyReturnDuringEmergencyMode</key>
 		<true/>
 	</dict>
+	<key>ShowVolteSwitch</key>
+	<false/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>ForceTcp</key>
+			<true/>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>380,414,499,606</string>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>enableForking</key>
+			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>VerstatFeatureCapability</key>
+			<string>Enabled</string>
+			<key>IgnoreRegNotificationContactExpires</key>
+			<true/>
+			<key>AllowedPdpTypeMask</key>
+			<integer>2</integer>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>UseOutgoingSipUri</key>
+			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>ussdEnabled</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>SendConferenceSubscribeAfterRefers</key>
+			<false/>
+			<key>conferenceServer</key>
+			<string>sip:conference@ibc.sasktel.com</string>
+		</dict>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>GSM</key>
+				<false/>
+				<key>LTE</key>
+				<true/>
+				<key>UMTS</key>
+				<false/>
+			</dict>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>NafHost</key>
+			<string>naf.ims.sasktel.com</string>
+			<key>SupportsCB</key>
+			<true/>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>supported</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/vnd.etsi.simservs+xml</string>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+			<key>SupportsCFErasure</key>
+			<true/>
+			<key>PreferredGbaMode</key>
+			<string>GBA_ME</string>
+			<key>useSecureTransport</key>
+			<true/>
+			<key>BsfHost</key>
+			<string>bsf.ims.sasktel.com</string>
+			<key>SupportsCW</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>maxRed</key>
+			<integer>220</integer>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>ModeChangeCapability</key>
+			<integer>2</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>2</string>
+					<key>br</key>
+					<string>5.9-13.2</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>EnableIncomingDTMF</key>
+			<true/>
+			<key>inactivityTimerRTPRTCP</key>
+			<integer>30</integer>
+			<key>ModeSetAMRWB</key>
+			<string>2</string>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverCSIfNoIMSReg</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<false/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>RCS</key>
+	<dict>
+		<key>EnableBusinessMessagingByDefault</key>
+		<true/>
+		<key>ProvisioningData</key>
+		<dict>
+			<key>ServerURL</key>
+			<string>config.rcs.mnc780.mcc302.jibecloud.net</string>
+		</dict>
+		<key>ShowBusinessMessagingSwitch</key>
+		<true/>
+		<key>ShowRCSSwitch</key>
+		<true/>
+		<key>EnableRCSByDefault</key>
+		<true/>
+	</dict>
+	<key>PushSettings</key>
+	<dict>
+		<key>Topic</key>
+		<string>com.sasktel.aes.general</string>
+		<key>VoWiFiTopic</key>
+		<string>com.sasktel.aes.vowifi</string>
+	</dict>
+	<key>VisualVoicemailServiceName</key>
+	<string>IMAP</string>
+	<key>StatusBarImages</key>
+	<array>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>LUM Mobile</string>
+			<key>StatusBarCarrierName</key>
+			<string>SaskTel</string>
+		</dict>
+	</array>
+	<key>CarrierName</key>
+	<string>LUM Mobile</string>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>MyAccountURL</key>
+	<string>https://lum.ca/</string>
+	<key>SupportedPLMNs</key>
+	<array>
+		<string>302880</string>
+	</array>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>302780_GID1-5b</string>
+	</array>
 </dict>
 </plist>

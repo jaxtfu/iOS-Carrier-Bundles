@@ -68,8 +68,6 @@
 	<array>
 		<string>+447786205094</string>
 	</array>
-	<key>ShowTTY</key>
-	<false/>
 	<key>OverrideOperatorWiFiName</key>
 	<string>giga Wi-Fi</string>
 	<key>TechSettings</key>
@@ -195,7 +193,7 @@
 	<key>DataIndicatorOverrideForLTE</key>
 	<string>4G</string>
 	<key>ShowVolteSwitch</key>
-	<true/>
+	<false/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -229,8 +227,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
@@ -241,19 +237,17 @@
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>262144</integer>
-			<key>password</key>
-			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowNoDNS</key>
 			<integer>1</integer>
+			<key>password</key>
+			<string></string>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>sos</string>
-			<key>DefaultProtocolMask</key>
+			<key>type-mask</key>
+			<integer>262144</integer>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</array>
@@ -275,6 +269,13 @@
 			<true/>
 			<key>SupportPEarlyMediaHeader</key>
 			<true/>
+			<key>EmergencyURNs</key>
+			<dict>
+				<key>995</key>
+				<string>urn:service:sos.ambulance</string>
+				<key>999</key>
+				<string>urn:service:sos.police</string>
+			</dict>
 			<key>RequirePreconditionsWhenMandatory</key>
 			<false/>
 			<key>IncomingCallEndReasons</key>
@@ -330,8 +331,6 @@
 				<key>LTE</key>
 				<true/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>Media</key>
 		<dict>
@@ -373,14 +372,13 @@
 		<dict>
 			<key>E911OverITechSupported</key>
 			<true/>
+			<key>BlockCallsOverCS</key>
+			<true/>
 			<key>EnableVolteByDefault</key>
 			<true/>
+			<key>BlockSilentRedialOverCS</key>
+			<true/>
 		</dict>
-	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>

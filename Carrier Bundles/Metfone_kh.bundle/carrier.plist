@@ -23,6 +23,8 @@
 	<true/>
 	<key>MyAccountURLTitle</key>
 	<string>Metfone Home</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -153,6 +155,8 @@
 	<true/>
 	<key>SupportsImsCapability</key>
 	<true/>
+	<key>Show3GSwitchWithVolte</key>
+	<false/>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Cambodia</string>
 	<key>APNEditabilityTypemaskNew</key>

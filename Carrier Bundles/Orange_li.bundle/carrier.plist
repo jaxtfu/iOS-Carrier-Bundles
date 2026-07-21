@@ -18,7 +18,7 @@
 	<key>SupportsNITZ</key>
 	<false/>
 	<key>MyAccountURL</key>
-	<string>http://www.salt.li</string>
+	<string>https://www.salt.li</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>RegistrationOptInRequired</key>
@@ -34,7 +34,7 @@
 		<key>MaxPINLength</key>
 		<integer>4</integer>
 		<key>UsesSSL</key>
-		<false/>
+		<true/>
 		<key>BeaconServiceCenter</key>
 		<string>+4237807672</string>
 		<key>DeliverLegacyNotificationsBeforeSetup</key>
@@ -166,8 +166,6 @@
 		<dict>
 			<key>enableInNonVoLTEMode</key>
 			<false/>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>Media</key>
 		<dict>
@@ -183,12 +181,10 @@
 			<dict>
 				<key>109</key>
 				<dict>
-					<key>hf-only</key>
-					<string>0</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
 					<key>max-red</key>
 					<string>220</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
 					<key>ch-aw-recv</key>
 					<string>0</string>
 					<key>cmr</key>
@@ -277,8 +273,8 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>IMAP</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>IntlDataRoamingAllowed</key>
 	<array>
 		<string>22803</string>

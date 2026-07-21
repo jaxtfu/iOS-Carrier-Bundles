@@ -7,23 +7,10 @@
 	<key>Show4GSwitchWith5G</key>
 	<false/>
 	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
+	<string>6.0.161</string>
 	<key>_Exclude</key>
 	<array>
 		<string>EnableLTEAfterUpgrade</string>
 	</array>
-	<key>IMSConfig</key>
-	<dict>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>SupportedDomains</key>
-			<dict>
-				<key>LTE</key>
-				<false/>
-			</dict>
-		</dict>
-	</dict>
 </dict>
 </plist>

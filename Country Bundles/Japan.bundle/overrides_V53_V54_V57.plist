@@ -4,6 +4,11 @@
 <dict>
 	<key>IMSConfig</key>
 	<dict>
+		<key>Emergency</key>
+		<dict>
+			<key>RestrictedDomainMode</key>
+			<true/>
+		</dict>
 		<key>Signaling</key>
 		<dict>
 			<key>RequiresIMSIInContactHeaderOfAnonymousEmergencyInvite</key>

@@ -2,25 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
-	<key>AllowEDGEEditing</key>
-	<true/>
-	<key>MandatoryVerify</key>
-	<dict>
-		<key>SIMs</key>
-		<array/>
-	</dict>
-	<key>SupportsNITZ</key>
-	<false/>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
-	<key>APNEditabilityTypemask</key>
-	<integer>49</integer>
-	<key>RegistrationOptInRequired</key>
-	<true/>
-	<key>RoamingVoicemailPilotNumber</key>
-	<string>+265999900158</string>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -32,11 +13,54 @@
 			<string>Airtel</string>
 		</dict>
 	</array>
+	<key>RoamingVoicemailPilotNumber</key>
+	<string>+265999900158</string>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>65010</string>
 	</array>
+	<key>MMS</key>
+	<dict>
+		<key>MMSC</key>
+		<string>http://mms.mw.airtel.com:8002</string>
+		<key>GroupModeEnabled</key>
+		<false/>
+		<key>Proxy</key>
+		<string>10.150.0.142:9401</string>
+		<key>MaxMessageSize</key>
+		<integer>102400</integer>
+	</dict>
+	<key>CarrierName</key>
+	<string>Airtel</string>
+	<key>AllowEDGEEditing</key>
+	<true/>
+	<key>OTASoftwareUpdate</key>
+	<dict>
+		<key>SoftwareUpdateOptInRequired</key>
+		<true/>
+	</dict>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.Malawi</string>
 	<key>ShowDialAssist</key>
+	<true/>
+	<key>APNEditabilityTypemask</key>
+	<integer>49</integer>
+	<key>SupportsNITZ</key>
+	<false/>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
+	<key>MandatoryVerify</key>
+	<dict>
+		<key>SIMs</key>
+		<array/>
+	</dict>
+	<key>VoicemailPilotNumber</key>
+	<string>1710</string>
+	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<array>
@@ -51,27 +75,6 @@
 		<string>+447537410287</string>
 		<string>+447537410297</string>
 	</array>
-	<key>CarrierName</key>
-	<string>Airtel</string>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
-	<key>VoicemailPilotNumber</key>
-	<string>1710</string>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.Malawi</string>
-	<key>MMS</key>
-	<dict>
-		<key>MMSC</key>
-		<string>http://mms.mw.airtel.com:8002</string>
-		<key>GroupModeEnabled</key>
-		<false/>
-		<key>Proxy</key>
-		<string>10.150.0.142:9401</string>
-		<key>MaxMessageSize</key>
-		<integer>102400</integer>
-	</dict>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -105,10 +108,5 @@
 			<integer>48</integer>
 		</dict>
 	</array>
-	<key>OTASoftwareUpdate</key>
-	<dict>
-		<key>SoftwareUpdateOptInRequired</key>
-		<true/>
-	</dict>
 </dict>
 </plist>

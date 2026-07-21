@@ -7,7 +7,7 @@
 	<key>Show4GSwitchWith5G</key>
 	<false/>
 	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
+	<string>6.0.161</string>
 	<key>_Exclude</key>
 	<array>
 		<string>EnableLTEAfterUpgrade</string>

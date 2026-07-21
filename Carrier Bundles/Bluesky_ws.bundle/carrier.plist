@@ -13,12 +13,12 @@
 			<string>BlueSky</string>
 		</dict>
 	</array>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>54927</string>
 	</array>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
 	<key>CarrierName</key>
 	<string>BlueSky</string>
 	<key>AllowEDGEEditing</key>
@@ -38,15 +38,26 @@
 	<false/>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
-	<key>ShowTTY</key>
-	<false/>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>
 		<array/>
 	</dict>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
+	<key>apns</key>
+	<array>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>4g.bluesky</string>
+			<key>type-mask</key>
+			<integer>49</integer>
+		</dict>
+	</array>
 	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
@@ -61,19 +72,6 @@
 		<string>+447537410277</string>
 		<string>+447537410287</string>
 		<string>+447537410297</string>
-	</array>
-	<key>apns</key>
-	<array>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>4g.bluesky</string>
-			<key>type-mask</key>
-			<integer>49</integer>
-		</dict>
 	</array>
 </dict>
 </plist>

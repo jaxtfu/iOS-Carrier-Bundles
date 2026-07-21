@@ -95,16 +95,16 @@
 	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>+32486191933</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>8208</string>
 	<key>ShowDialAssist</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>IPv6SupportedDataModeMask</key>
 	<integer>110623</integer>
 	<key>Show3GSwitchWith4G</key>
-	<true/>
+	<false/>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
 		<key>MaxGreetingDuration</key>
@@ -282,8 +282,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>gprs.base.be</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>32819</integer>
 			<key>AllowedProtocolMask</key>
@@ -302,18 +300,16 @@
 			<integer>4</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>1048576</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>xcap</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
@@ -324,8 +320,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>2</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>2</integer>
 			<key>SupportSwitchOver</key>
@@ -338,6 +332,8 @@
 			<integer>2</integer>
 		</dict>
 	</array>
+	<key>SuppressSimToolkitSendShortMessageNotifications</key>
+	<true/>
 	<key>IMSConfig</key>
 	<dict>
 		<key>Signaling</key>
@@ -384,8 +380,8 @@
 			<integer>60</integer>
 			<key>CountryOfOriginationFormat</key>
 			<string>BOTH</string>
-			<key>MaxForbiddenErrors</key>
-			<integer>100</integer>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
 			<key>IncomingCallEndReasons</key>
 			<dict>
 				<key>CallToVoicemail</key>
@@ -413,6 +409,8 @@
 			<integer>1</integer>
 			<key>Preconditions</key>
 			<string>Supported</string>
+			<key>MaxForbiddenErrors</key>
+			<integer>100</integer>
 			<key>ValidateSipMessageRecipient</key>
 			<false/>
 			<key>SendPreconditionsInConfirmedSessions</key>
@@ -433,6 +431,26 @@
 		</dict>
 		<key>AllowHandoverWithoutIMSVoiceService</key>
 		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>EnableIncomingDTMF</key>
+			<true/>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>ModeChangeCapability</key>
+			<integer>2</integer>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+		</dict>
 		<key>XCAP</key>
 		<dict>
 			<key>SupportsCW</key>
@@ -454,21 +472,6 @@
 			<key>SupportsCFErasure</key>
 			<false/>
 		</dict>
-		<key>Media</key>
-		<dict>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-			<key>EnableIncomingDTMF</key>
-			<true/>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-			<key>ModeChangeCapability</key>
-			<integer>2</integer>
-			<key>RTCPIntervalSeconds</key>
-			<integer>5</integer>
-			<key>PreferredAMRWBMode</key>
-			<integer>8</integer>
-		</dict>
 		<key>EnableWiFiCallingWithoutEntitlement</key>
 		<true/>
 		<key>Voice</key>
@@ -481,11 +484,6 @@
 			<true/>
 		</dict>
 	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>PreferCarrierNameFromMetadata</key>
@@ -496,15 +494,19 @@
 	<integer>32768</integer>
 	<key>RCS</key>
 	<dict>
-		<key>SupportsE2EE</key>
-		<false/>
-		<key>EnableRCSByDefault</key>
+		<key>EnableBusinessMessagingByDefault</key>
 		<true/>
 		<key>ProvisioningData</key>
 		<dict>
 			<key>ServerURL</key>
 			<string>config.rcs.mnc020.mcc206.jibecloud.net</string>
 		</dict>
+		<key>ShowBusinessMessagingSwitch</key>
+		<true/>
+		<key>SupportsE2EE</key>
+		<false/>
+		<key>EnableRCSByDefault</key>
+		<true/>
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>IMAP</string>
@@ -521,6 +523,8 @@
 	</array>
 	<key>CarrierName</key>
 	<string>BASE</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>

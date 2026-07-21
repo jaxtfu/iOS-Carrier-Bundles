@@ -35,20 +35,15 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.antel.com.uy/</string>
+	<string>https://www.antel.com.uy/</string>
 	<key>EnableLTEAfterUpgrade</key>
 	<true/>
 	<key>APNEditabilityTypemask</key>
 	<integer>53</integer>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
-	<key>MyAccountURLTitle</key>
-	<string>Antel</string>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>MyAccountURLTitle</key>
+	<string>Antel</string>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -127,8 +122,6 @@
 		</dict>
 		<key>SMS</key>
 		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 			<key>SMSBundleToVoice</key>
 			<true/>
 			<key>SupportedDomains</key>
@@ -246,8 +239,6 @@
 			<integer>3</integer>
 		</dict>
 	</dict>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>*66</string>
 	<key>HomeBundleIdentifier</key>
@@ -272,8 +263,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>antel.lte</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>49</integer>
 			<key>AllowedProtocolMask</key>

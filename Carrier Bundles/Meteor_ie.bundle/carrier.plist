@@ -59,12 +59,10 @@
 	<dict>
 		<key>3GPP</key>
 		<dict>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>1</integer>
-			<key>password</key>
-			<string></string>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
+			<key>password</key>
+			<string></string>
 			<key>PcscfAddressRequired</key>
 			<false/>
 			<key>username</key>
@@ -73,8 +71,8 @@
 			<integer>1</integer>
 			<key>apn</key>
 			<string>data.myeirmobile.ie</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>PhoneAccountTransfer</key>
@@ -117,8 +115,6 @@
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>MMS</key>
 	<dict>
 		<key>MMSC</key>
@@ -263,8 +259,6 @@
 			<integer>32817</integer>
 			<key>password</key>
 			<string></string>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>1</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 			<key>username</key>
@@ -273,8 +267,8 @@
 			<integer>1</integer>
 			<key>apn</key>
 			<string>data.myeirmobile.ie</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>password</key>
@@ -283,8 +277,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>mms.myeirmobile.ie</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>type-mask</key>
 			<integer>4</integer>
 			<key>AllowedProtocolMask</key>
@@ -295,8 +287,6 @@
 			<integer>32816</integer>
 			<key>password</key>
 			<string></string>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>1</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 			<key>username</key>
@@ -305,17 +295,15 @@
 			<integer>1</integer>
 			<key>apn</key>
 			<string>data.myeirmobile.ie</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>2</integer>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
-			<integer>131072</integer>
-			<key>type-mask</key>
 			<integer>131072</integer>
 			<key>AllowNoDNS</key>
 			<integer>1</integer>
@@ -325,7 +313,7 @@
 			<string></string>
 			<key>apn</key>
 			<string>ims</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
 		</dict>
 	</array>
@@ -335,30 +323,39 @@
 	<dict>
 		<key>Media</key>
 		<dict>
-			<key>RingbackTone</key>
-			<string>UK</string>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>20</integer>
 			<key>RTCPIntervalSeconds</key>
 			<integer>5</integer>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
 			<key>EnableBandwidthSpecifiers</key>
 			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>112</key>
+				<dict>
+					<key>max-red</key>
+					<string>220</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>ch-aw-recv</key>
+					<string>0</string>
+					<key>maxptime</key>
+					<string>240</string>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>RingbackTone</key>
+			<string>UK</string>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
 		</dict>
-		<key>CallTransfer</key>
-		<dict/>
-		<key>Voice</key>
-		<dict>
-			<key>EnableVolteByDefault</key>
-			<true/>
-			<key>E911OverITechSupported</key>
-			<true/>
-			<key>RTTSupported</key>
-			<true/>
-		</dict>
-		<key>SIM</key>
-		<dict/>
 		<key>Signaling</key>
 		<dict>
 			<key>EmergencyLocationLookupRequired</key>
@@ -377,16 +374,14 @@
 			<false/>
 			<key>EarlyMediaNeedsHeader</key>
 			<true/>
-			<key>SipTimers</key>
-			<dict/>
-			<key>CountryOfOriginationFormat</key>
-			<string>PANI</string>
-			<key>Preconditions</key>
-			<string>Supported</string>
-			<key>TriggerCSFBOnSDPError</key>
-			<true/>
 			<key>ValidateSipMessageRecipient</key>
 			<false/>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
 			<key>UseFakeSAsForDeregistration</key>
 			<true/>
 			<key>UseIPSec</key>
@@ -394,33 +389,27 @@
 			<key>SendLocalTimeZoneInformation</key>
 			<true/>
 		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
 		<key>ConferenceCalling</key>
 		<dict>
 			<key>conferenceServer</key>
 			<string>sip:mmtel@conf-factory.ims.mnc003.mcc272.3gppnetwork.org</string>
 		</dict>
-		<key>IPTelephony</key>
-		<dict/>
-		<key>LegacySIM</key>
-		<dict/>
-		<key>SMS</key>
-		<dict>
-			<key>DCN</key>
-			<dict/>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
-		</dict>
-		<key>Internal</key>
-		<dict/>
-		<key>XCAP</key>
-		<dict/>
 		<key>EnableWiFiCallingWithoutEntitlement</key>
 		<false/>
-	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>RTTSupported</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>

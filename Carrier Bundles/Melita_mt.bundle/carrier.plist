@@ -74,7 +74,7 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
+	<key>Show3GSwitchWithVolte</key>
 	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>+35677121121</string>
@@ -115,8 +115,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>

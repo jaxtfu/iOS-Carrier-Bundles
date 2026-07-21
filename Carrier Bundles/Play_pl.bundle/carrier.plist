@@ -2,127 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
-	<key>AllowEDGEEditing</key>
-	<true/>
-	<key>MandatoryVerify</key>
-	<dict>
-		<key>SIMs</key>
-		<array/>
-	</dict>
-	<key>SupportsNITZ</key>
-	<false/>
-	<key>MyAccountURL</key>
-	<string>http://www.play.pl</string>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
-	<key>APNEditabilityTypemask</key>
-	<integer>55</integer>
-	<key>SMSSettings</key>
-	<dict>
-		<key>SMSCarrierReportJunkAddress</key>
-		<string>8080</string>
-		<key>TransportFallback</key>
-		<false/>
-	</dict>
-	<key>MyAccountURLTitle</key>
-	<string>Play</string>
-	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32768</integer>
-	<key>com.apple.voicemail.imap</key>
-	<dict>
-		<key>MaxGreetingDuration</key>
-		<integer>15</integer>
-		<key>UsesSSL</key>
-		<true/>
-		<key>GreetingNotification</key>
-		<true/>
-		<key>MinPINLength</key>
-		<integer>4</integer>
-		<key>UsesMWI</key>
-		<false/>
-		<key>ClientManagesTrash</key>
-		<true/>
-		<key>AllowedIMAPServers</key>
-		<dict>
-			<key>FQDN</key>
-			<array>
-				<string>vvm.play.pl</string>
-			</array>
-		</dict>
-		<key>MaxPINLength</key>
-		<integer>4</integer>
-		<key>BeaconAddress</key>
-		<string>80473</string>
-	</dict>
-	<key>StatusBarImages</key>
-	<array>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>Play</string>
-			<key>StatusBarCarrierName</key>
-			<string>Play</string>
-		</dict>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>Play</string>
-			<key>StatusBarCarrierName</key>
-			<string>Play</string>
-		</dict>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>POL</string>
-			<key>StatusBarCarrierName</key>
-			<string>Play</string>
-		</dict>
-	</array>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>26006</string>
-	</array>
-	<key>IMSConfig</key>
-	<dict>
-		<key>XCAP</key>
-		<dict>
-			<key>NafHost</key>
-			<string>xcap.ims.mnc006.mcc260.pub.3gppnetwork.org</string>
-			<key>imsFeatureDependency</key>
-			<true/>
-			<key>SupportCFMediaTag</key>
-			<true/>
-			<key>SupportsCLIR</key>
-			<false/>
-			<key>supported</key>
-			<true/>
-			<key>ContentType</key>
-			<string>application/vnd.etsi.simservs+xml</string>
-			<key>DisableOnNetworkError</key>
-			<true/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string>404,501,502,503,504</string>
-			<key>SupportsCFErasure</key>
-			<false/>
-			<key>NafUseSecureTransport</key>
-			<true/>
-			<key>SupportCBMediaTag</key>
-			<true/>
-			<key>imsRegistrationDependency</key>
-			<false/>
-			<key>BsfHost</key>
-			<string>bsf.mnc006.mcc260.pub.3gppnetwork.org</string>
-			<key>BsfUseSecureTransport</key>
-			<true/>
-			<key>SupportsCW</key>
-			<true/>
-		</dict>
-	</dict>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportedEntitlements</key>
@@ -146,16 +25,6 @@
 		<key>UpdatePeriod</key>
 		<integer>24</integer>
 	</dict>
-	<key>Show3GSwitchWith4G</key>
-	<true/>
-	<key>ShowDialAssist</key>
-	<false/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<array>
-		<string>+447786205094</string>
-	</array>
-	<key>CarrierName</key>
-	<string>Play</string>
 	<key>AttachAPN</key>
 	<dict>
 		<key>3GPP</key>
@@ -172,23 +41,12 @@
 			<integer>1</integer>
 		</dict>
 	</dict>
-	<key>VisualVoicemailServiceName</key>
-	<string>IMAP</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>AllowEDGEEditing</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>+48790200200</string>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.Poland</string>
-	<key>MMS</key>
-	<dict>
-		<key>GroupModeEnabled</key>
-		<false/>
-		<key>MaxMessageSize</key>
-		<integer>307200</integer>
-		<key>MMSC</key>
-		<string>http://mmsc.play.pl/mms/wapenc</string>
-	</dict>
+	<key>SupportsNITZ</key>
+	<false/>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>MatchingICCIDPrefixes</key>
@@ -223,6 +81,53 @@
 		</array>
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
+	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>ShowDialAssist</key>
+	<false/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<array>
+		<string>+447786205094</string>
+	</array>
+	<key>Show3GSwitchWith4G</key>
+	<false/>
+	<key>com.apple.voicemail.imap</key>
+	<dict>
+		<key>MaxGreetingDuration</key>
+		<integer>15</integer>
+		<key>UsesSSL</key>
+		<true/>
+		<key>GreetingNotification</key>
+		<true/>
+		<key>MinPINLength</key>
+		<integer>4</integer>
+		<key>UsesMWI</key>
+		<false/>
+		<key>ClientManagesTrash</key>
+		<true/>
+		<key>AllowedIMAPServers</key>
+		<dict>
+			<key>FQDN</key>
+			<array>
+				<string>vvm.play.pl</string>
+			</array>
+		</dict>
+		<key>MaxPINLength</key>
+		<integer>4</integer>
+		<key>BeaconAddress</key>
+		<string>80473</string>
+	</dict>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Play WiFi Calling</string>
+	<key>MMS</key>
+	<dict>
+		<key>GroupModeEnabled</key>
+		<false/>
+		<key>MaxMessageSize</key>
+		<integer>307200</integer>
+		<key>MMSC</key>
+		<string>http://mmsc.play.pl/mms/wapenc</string>
 	</dict>
 	<key>TechSettings</key>
 	<dict>
@@ -354,21 +259,15 @@
 		<key>SetHandOverIPv6Prefix</key>
 		<true/>
 	</dict>
-	<key>PushSettings</key>
-	<dict>
-		<key>MultiSIMTopic</key>
-		<string>pl.play.es</string>
-		<key>VoWiFiTopic</key>
-		<string>com.huawei.cdm</string>
-	</dict>
-	<key>SupportedPLMNs</key>
-	<array>
-		<string>26003</string>
-		<string>26001</string>
-	</array>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.Poland</string>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
 	<key>apns</key>
 	<array>
 		<dict>
+			<key>AllowNoDNS</key>
+			<integer>0</integer>
 			<key>password</key>
 			<string></string>
 			<key>username</key>
@@ -376,18 +275,294 @@
 			<key>apn</key>
 			<string>internet</string>
 			<key>type-mask</key>
-			<integer>51</integer>
+			<integer>32819</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
+			<key>type-mask</key>
+			<integer>4</integer>
 			<key>password</key>
 			<string></string>
+			<key>tech-type-mask</key>
+			<integer>4</integer>
+			<key>AllowNoDNS</key>
+			<integer>0</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>mms</string>
-			<key>type-mask</key>
-			<integer>4</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>131072</integer>
+			<key>AllowNoDNS</key>
+			<integer>1</integer>
+			<key>SupportSwitchOver</key>
+			<true/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>IMS</string>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>type-mask</key>
+			<integer>1048576</integer>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>1048576</integer>
+			<key>SupportSwitchOver</key>
+			<true/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>xcap</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>IgnoreRegNotificationContactExpires</key>
+			<true/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>ussdEnabled</key>
+			<true/>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>OutgoingDomain</key>
+			<string>1</string>
+			<key>SipTimers</key>
+			<dict>
+				<key>InviteResponseTimeout</key>
+				<integer>4000</integer>
+			</dict>
+			<key>AlwaysUnsubscribeFromRegEvents</key>
+			<false/>
+			<key>SendLocalTimeZoneInformation</key>
+			<true/>
+			<key>SubscriptionTerminatedMeansRegistrationTerminated</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,6XX</string>
+			<key>IgnoreFromHeaderForSenderName</key>
+			<false/>
+			<key>MaxUdpMessageSize</key>
+			<integer>1400</integer>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<integer>30</integer>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>130</integer>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>10</integer>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>Preconditions</key>
+			<string>None</string>
+			<key>IncompleteRegistrationThrottlingIntervalSeconds</key>
+			<integer>0</integer>
+			<key>DeferMediaActivationOnSessionConfirmed</key>
+			<true/>
+			<key>RingingTimerSeconds</key>
+			<integer>130</integer>
+			<key>UseIPSec</key>
+			<true/>
+			<key>RegistrationExpirationSeconds</key>
+			<integer>7200</integer>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc006.mcc260.3gppnetwork.org</string>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>TreatAllNotificationsAsPartial</key>
+			<true/>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>max-red</key>
+					<string>220</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>ch-aw-recv</key>
+					<string>3</string>
+					<key>cmr</key>
+					<string>1</string>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>InactivityTimerRTCPSeconds</key>
+			<integer>180</integer>
+			<key>UseSDPTemplateForUpdates</key>
+			<true/>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc006.mcc260.pub.3gppnetwork.org</string>
+			<key>imsFeatureDependency</key>
+			<true/>
+			<key>SupportCFMediaTag</key>
+			<true/>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>supported</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/vnd.etsi.simservs+xml</string>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>404,501,502,503,504</string>
+			<key>SupportsCFErasure</key>
+			<false/>
+			<key>NafUseSecureTransport</key>
+			<true/>
+			<key>SupportCBMediaTag</key>
+			<true/>
+			<key>imsRegistrationDependency</key>
+			<false/>
+			<key>BsfHost</key>
+			<string>bsf.mnc006.mcc260.pub.3gppnetwork.org</string>
+			<key>BsfUseSecureTransport</key>
+			<true/>
+			<key>SupportsCW</key>
+			<true/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<false/>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVoLTEWithVoWiFi</key>
+			<false/>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>SMSSettings</key>
+	<dict>
+		<key>SMSCarrierReportJunkAddress</key>
+		<string>8080</string>
+		<key>TransportFallback</key>
+		<false/>
+	</dict>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
+	<key>APNEditabilityTypemask</key>
+	<integer>55</integer>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>PushSettings</key>
+	<dict>
+		<key>MultiSIMTopic</key>
+		<string>pl.play.es</string>
+		<key>VoWiFiTopic</key>
+		<string>com.huawei.cdm</string>
+	</dict>
+	<key>VisualVoicemailServiceName</key>
+	<string>IMAP</string>
+	<key>StatusBarImages</key>
+	<array>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>Play</string>
+			<key>StatusBarCarrierName</key>
+			<string>Play</string>
+		</dict>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>Play</string>
+			<key>StatusBarCarrierName</key>
+			<string>Play</string>
+		</dict>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>POL</string>
+			<key>StatusBarCarrierName</key>
+			<string>Play</string>
+		</dict>
+	</array>
+	<key>CarrierName</key>
+	<string>Play</string>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>MyAccountURL</key>
+	<string>https://www.play.pl</string>
+	<key>SupportedPLMNs</key>
+	<array>
+		<string>26003</string>
+		<string>26001</string>
+	</array>
+	<key>MyAccountURLTitle</key>
+	<string>Play</string>
+	<key>MandatoryVerify</key>
+	<dict>
+		<key>SIMs</key>
+		<array/>
+	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>26006</string>
 	</array>
 </dict>
 </plist>

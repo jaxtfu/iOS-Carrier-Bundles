@@ -48,6 +48,8 @@
 	</array>
 	<key>ShowDialAssist</key>
 	<false/>
+	<key>Show3GSwitchWith4G</key>
+	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<array>
 		<string>+447537410207</string>
@@ -63,10 +65,31 @@
 	</array>
 	<key>CarrierName</key>
 	<string>Kcell</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>internet</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
+	<key>Show3GSwitchWithVolte</key>
 	<true/>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsTTY</key>
+		<true/>
+	</dict>
 	<key>VoicemailPilotNumber</key>
 	<string>2000</string>
 	<key>HomeBundleIdentifier</key>

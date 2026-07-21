@@ -2,259 +2,32 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>DefaultWhenImsSwitchOff</key>
-	<integer>0</integer>
 	<key>DerPriFileVersion</key>
 	<string>5.0.161</string>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Show5GStandaloneSwitch</key>
+	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 	<key>_Exclude</key>
 	<array>
 		<string>EnableLTEAfterUpgrade</string>
 	</array>
-	<key>Enable5GStandaloneByDefault</key>
-	<false/>
-	<key>IMSConfigSecondaryOverlay</key>
-	<dict>
-		<key>Voice</key>
-		<dict>
-			<key>BlockSilentRedialOverCS</key>
-			<true/>
-		</dict>
-		<key>Signaling</key>
-		<dict>
-			<key>WaitForRingingTimerMTSeconds</key>
-			<integer>80</integer>
-			<key>MaxUdpMessageSize</key>
-			<integer>1200</integer>
-			<key>UseIPSec</key>
-			<false/>
-			<key>DefaultAuthAlgorithm</key>
-			<string></string>
-			<key>WaitForRingingTimerMOSeconds</key>
-			<integer>60</integer>
-		</dict>
-	</dict>
-	<key>Show5GSwitch</key>
-	<true/>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
-	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32768</integer>
-	<key>LocationSecondaryOverlay</key>
-	<dict>
-		<key>EnableCPIDuringEmergencyMode</key>
-		<true/>
-	</dict>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Signaling</key>
-		<dict>
-			<key>AddAccessNetworkInfoToInsecureMessages</key>
-			<true/>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string>3XX,4XX,-408,-480,5XX,6XX</string>
-			<key>ReRegisterOnErrorCodes</key>
-			<string>403,408,494</string>
-			<key>EnableCellularNetworkInfo</key>
-			<true/>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>MaxUdpMessageSize</key>
-			<integer>1200</integer>
-			<key>SendEmergencyLocationUpdates</key>
-			<true/>
-			<key>IncompleteRegistrationThrottlingIntervalSeconds</key>
-			<integer>65</integer>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
-			<key>IncomingCallEndReasons</key>
-			<dict>
-				<key>NotFound</key>
-				<dict>
-					<key>StatusCode</key>
-					<integer>408</integer>
-					<key>TerminationEvent</key>
-					<string>RemoteHangup</string>
-				</dict>
-				<key>TemporarilyUnavailable</key>
-				<dict>
-					<key>StatusCode</key>
-					<integer>480</integer>
-					<key>TerminationEvent</key>
-					<string>RemoteHangup</string>
-				</dict>
-			</dict>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>CountryOfOriginationFormat</key>
-			<string>PANI</string>
-			<key>Preconditions</key>
-			<string>None</string>
-			<key>AdditionalContactParams</key>
-			<dict>
-				<key>REGISTER,INVITE,INVITE:*</key>
-				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
-			</dict>
-			<key>RegistrationRetryIntervals</key>
-			<string>65</string>
-			<key>UseCIDUrlInPIDF</key>
-			<true/>
-			<key>ValidateSipMessageRecipient</key>
-			<false/>
-			<key>UseIPSec</key>
-			<true/>
-			<key>AlwaysAddGeolocationForEmergencyCalls</key>
-			<true/>
-		</dict>
-		<key>CallTransfer</key>
-		<dict>
-			<key>CallTransferDialNumber</key>
-			<string>+85290100496</string>
-		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>SendConferenceSubscribeAfterRefers</key>
-			<false/>
-			<key>conferenceServer</key>
-			<string>sip:conference@ims.mnc006.mcc454.3gppnetwork.org</string>
-		</dict>
 		<key>SMS</key>
 		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
 			<key>SupportedDomains</key>
 			<dict>
-				<key>LTE</key>
-				<true/>
 				<key>NR</key>
 				<true/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>NafHost</key>
-			<string>xcap.ims.mnc006.mcc454.pub.3gppnetwork.org</string>
-			<key>SupportsCB</key>
-			<true/>
-			<key>imsFeatureDependency</key>
-			<true/>
-			<key>NafPort</key>
-			<integer>8090</integer>
-			<key>supported</key>
-			<true/>
-			<key>ContentType</key>
-			<string>application/xcap-el+xml</string>
-			<key>DisableOnNetworkError</key>
-			<true/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string>403,409</string>
-			<key>SupportsCFErasure</key>
-			<false/>
-			<key>imsRegistrationDependency</key>
-			<true/>
-			<key>ServeMultipleCDIVRulesPerRequest</key>
-			<false/>
-			<key>CallBarringNASFallbackSupported</key>
-			<true/>
-		</dict>
-		<key>Media</key>
-		<dict>
-			<key>EVSHardBwLimit</key>
-			<string>nb-swb</string>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-			<key>RTCPIntervalSeconds</key>
-			<integer>5</integer>
-			<key>AudioCodecs</key>
-			<dict>
-				<key>109</key>
-				<dict>
-					<key>br</key>
-					<string>5.9-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-swb</string>
-					<key>max-red</key>
-					<string>240</string>
-				</dict>
-			</dict>
-		</dict>
-		<key>Voice</key>
-		<dict>
-			<key>E911OverITechSupported</key>
-			<true/>
-			<key>EnableVolteByDefault</key>
-			<true/>
 		</dict>
 	</dict>
-	<key>OverrideOperatorWiFiName</key>
-	<string>Wi-Fi Calls</string>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
-	<key>AttachAPN</key>
-	<dict>
-		<key>3GPP</key>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>PcscfAddressRequired</key>
-			<false/>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>smartone</string>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
-		</dict>
-	</dict>
-	<key>SupportsImsCapability</key>
-	<true/>
 	<key>ShowVolteSwitch</key>
 	<false/>
-	<key>Enable5GAutoByDefault</key>
-	<true/>
-	<key>RemoteCardProvisioningSettings</key>
-	<dict>
-		<key>MatchingICCIDPrefixes</key>
-		<array>
-			<string>8985206</string>
-		</array>
-		<key>UsesAutoAssignment</key>
-		<false/>
-		<key>ServerURL</key>
-		<string>sma.prod.ondemandconnectivity.com</string>
-		<key>ActivatingStateSubscriptionCheckTimerIntervals</key>
-		<array>
-			<integer>180</integer>
-			<integer>600</integer>
-			<integer>3600</integer>
-		</array>
-		<key>SupportedSKUs</key>
-		<array>
-			<string>SKU_EU</string>
-		</array>
-		<key>MinCompatibleWatchOS</key>
-		<string>4.3</string>
-		<key>MinCompatibleWatchOSForStandaloneMode</key>
-		<string>7.4</string>
-		<key>ProvisioningMethod</key>
-		<string>CarrierFlow</string>
-		<key>SupportsFauxCard</key>
-		<false/>
-	</dict>
-	<key>SupportsNRNSAInboundRoaming</key>
+	<key>Show5GStandaloneSwitch</key>
 	<true/>
 	<key>apns</key>
 	<array>
@@ -332,5 +105,13 @@
 			<integer>25</integer>
 		</dict>
 	</array>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
+	<key>Show5GSwitch</key>
+	<true/>
+	<key>Enable5GStandaloneByDefault</key>
+	<false/>
 </dict>
 </plist>

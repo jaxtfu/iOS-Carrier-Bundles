@@ -11,7 +11,7 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://digicelgroup.com/</string>
+	<string>https://digicelgroup.com/</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>APNEditabilityTypemask</key>
@@ -84,8 +84,6 @@
 	<string>Digicel</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>123</string>
 	<key>HomeBundleIdentifier</key>

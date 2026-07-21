@@ -45,17 +45,14 @@
 	<false/>
 	<key>EnableLTEAfterUpgrade</key>
 	<true/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
+	<key>RegistrationOptInRequired</key>
+	<true/>
 	<key>MyAccountURLTitle</key>
 	<string>Altice</string>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+18098596777</string>
-	<key>RegistrationOptInRequired</key>
-	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>37001</string>
@@ -146,8 +143,21 @@
 		<false/>
 		<key>SMS</key>
 		<dict>
-			<key>allowCSFBInVolteMode</key>
+			<key>SMSBundleToVoice</key>
 			<true/>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>GSM</key>
+				<false/>
+				<key>LTE</key>
+				<true/>
+				<key>UMTS</key>
+				<false/>
+			</dict>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
 		</dict>
 		<key>Media</key>
 		<dict>
@@ -182,6 +192,11 @@
 		<dict>
 			<key>IgnoreISIM</key>
 			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
 		</dict>
 		<key>Voice</key>
 		<dict>
@@ -221,8 +236,10 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>ShowVolteSwitch</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>*777</string>
 	<key>HomeBundleIdentifier</key>
@@ -230,34 +247,30 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>49</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
-			<key>SupportSwitchOver</key>
-			<true/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>altice</string>
+			<key>SupportSwitchOver</key>
+			<true/>
+			<key>type-mask</key>
+			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
-			<key>SupportSwitchOver</key>
-			<true/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>ims</string>
+			<key>SupportSwitchOver</key>
+			<true/>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>

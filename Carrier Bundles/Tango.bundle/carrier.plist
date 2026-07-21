@@ -11,6 +11,23 @@
 		<key>SIMs</key>
 		<array/>
 	</dict>
+	<key>MVNOOverrides</key>
+	<dict>
+		<key>Configuration_UK</key>
+		<dict>
+			<key>OverrideConfiguration</key>
+			<dict>
+				<key>DataIndicatorOverrideForLTE</key>
+				<string>4G</string>
+			</dict>
+			<key>SupportedSIMs</key>
+			<array>
+				<string>23453</string>
+			</array>
+		</dict>
+	</dict>
+	<key>SuppressSimToolkitSendShortMessageNotifications</key>
+	<true/>
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>GlobalMVNO</key>
@@ -19,11 +36,6 @@
 	<integer>0</integer>
 	<key>RegistrationOptInRequired</key>
 	<true/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -45,10 +57,10 @@
 	<dict>
 		<key>SMS</key>
 		<dict>
-			<key>SMSBundleToVoice</key>
-			<false/>
 			<key>enableInNonVoLTEMode</key>
 			<true/>
+			<key>SMSBundleToVoice</key>
+			<false/>
 			<key>SupportedDomains</key>
 			<dict>
 				<key>LTE</key>

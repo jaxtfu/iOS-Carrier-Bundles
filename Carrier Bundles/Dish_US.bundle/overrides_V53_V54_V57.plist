@@ -14,8 +14,6 @@
 	<true/>
 	<key>Location</key>
 	<dict>
-		<key>EnableCPIDuringEmergencyMode</key>
-		<true/>
 		<key>EnableEarlyReturnDuringEmergencyMode</key>
 		<true/>
 	</dict>
@@ -54,57 +52,51 @@
 			<key>configuration</key>
 			<array>
 				<dict>
-					<key>type-mask</key>
-					<integer>32771</integer>
 					<key>password</key>
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>2</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
 					<key>apn</key>
 					<string>internet</string>
+					<key>type-mask</key>
+					<integer>32771</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 				<dict>
 					<key>type-mask</key>
 					<integer>1048580</integer>
+					<key>Support5GSaHandOver</key>
+					<true/>
 					<key>password</key>
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>1048580</integer>
-					<key>Support5GSaHandOver</key>
-					<true/>
-					<key>AllowedProtocolMask</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
 					<key>apn</key>
 					<string>xcap</string>
-					<key>DefaultProtocolMask</key>
+					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 				<dict>
 					<key>type-mask</key>
 					<integer>131072</integer>
+					<key>Support5GSaHandOver</key>
+					<true/>
 					<key>password</key>
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>131072</integer>
-					<key>Support5GSaHandOver</key>
-					<true/>
-					<key>AllowedProtocolMask</key>
-					<integer>3</integer>
 					<key>SupportSwitchOver</key>
 					<true/>
 					<key>username</key>
 					<string></string>
 					<key>apn</key>
 					<string>ims</string>
-					<key>DefaultProtocolMask</key>
+					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 				<dict>
@@ -114,8 +106,6 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>262144</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>username</key>
@@ -126,18 +116,16 @@
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>512</integer>
 					<key>password</key>
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>512</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
 					<key>apn</key>
 					<string>ota</string>
+					<key>type-mask</key>
+					<integer>512</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
@@ -148,8 +136,6 @@
 					<string></string>
 					<key>apn</key>
 					<string>hotspot</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>type-mask</key>
 					<integer>48</integer>
 					<key>AllowedProtocolMask</key>

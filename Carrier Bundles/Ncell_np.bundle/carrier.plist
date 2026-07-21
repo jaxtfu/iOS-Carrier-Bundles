@@ -30,7 +30,7 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.ncell.com.np</string>
+	<string>https://www.ncell.com.np</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>RegistrationOptInRequired</key>
@@ -60,10 +60,28 @@
 	<dict>
 		<key>Media</key>
 		<dict>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>20</integer>
 			<key>RingbackTone</key>
 			<string>CEPT</string>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
 		</dict>
 		<key>Signaling</key>
 		<dict>
@@ -119,6 +137,11 @@
 			<key>RingingTimerSeconds</key>
 			<integer>120</integer>
 		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
 		<key>ConferenceCalling</key>
 		<dict>
 			<key>conferenceServer</key>
@@ -126,8 +149,6 @@
 		</dict>
 		<key>SMS</key>
 		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 			<key>SMSBundleToVoice</key>
 			<true/>
 			<key>SupportedDomains</key>
@@ -176,11 +197,9 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowVolteSwitch</key>
-	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>SupportsImsCapability</key>
+	<true/>
+	<key>ShowVolteSwitch</key>
 	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>9991</string>
@@ -204,18 +223,16 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>49</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>enableXLAT464</key>
 			<true/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>web</string>
+			<key>type-mask</key>
+			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -236,8 +253,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>ims</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>131072</integer>
 			<key>AllowedProtocolMask</key>
@@ -250,8 +265,6 @@
 			<string></string>
 			<key>apn</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>262144</integer>
 			<key>AllowedProtocolMask</key>

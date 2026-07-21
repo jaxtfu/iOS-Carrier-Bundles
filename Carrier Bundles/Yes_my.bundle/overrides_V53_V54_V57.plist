@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
+	<string>6.0.161</string>
 	<key>ShowVoNRSwitch</key>
 	<true/>
 	<key>AllowSAOnWiFiAssociation</key>
@@ -18,8 +18,6 @@
 		<dict>
 			<key>SupportedDomains</key>
 			<dict>
-				<key>LTE</key>
-				<true/>
 				<key>NR</key>
 				<true/>
 			</dict>
@@ -38,8 +36,6 @@
 	<false/>
 	<key>Show5GStandaloneSwitch</key>
 	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
 	<key>Enable5GAutoByDefault</key>

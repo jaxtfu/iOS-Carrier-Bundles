@@ -45,6 +45,14 @@
 		<string>20837_GID1-434F423236303036</string>
 		<string>20839_GID1-434F423236303036</string>
 	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>ShowDialAssist</key>
 	<false/>
 	<key>CarrierName</key>
@@ -81,18 +89,16 @@
 			<key>configuration</key>
 			<array>
 				<dict>
-					<key>type-mask</key>
-					<integer>49</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
 					<key>apn</key>
 					<string>esim.apn</string>
+					<key>type-mask</key>
+					<integer>49</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>

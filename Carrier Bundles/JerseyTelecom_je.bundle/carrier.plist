@@ -23,6 +23,8 @@
 	<integer>49</integer>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+441534555555</string>
 	<key>StatusBarImages</key>
@@ -78,10 +80,24 @@
 	</array>
 	<key>CarrierName</key>
 	<string>Jersey Telecom</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string></string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>IntlDataRoamingExceptions</key>
 	<array>
 		<string>23430</string>
@@ -95,6 +111,8 @@
 	<string>01534555555</string>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Jersey</string>
+	<key>AllowAttachAPNEditing</key>
+	<true/>
 	<key>apns</key>
 	<array>
 		<dict>

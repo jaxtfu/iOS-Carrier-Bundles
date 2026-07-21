@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>310840_GID1-616C6F73696D31</string>
@@ -39,12 +41,18 @@
 		<string>20802_GID1-616C6F73696D31</string>
 		<string>90131_GID1-616C6F73696D31</string>
 	</array>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
 	<key>CarrierName</key>
 	<string>aloSIM</string>
 	<key>AllowEDGEEditing</key>
 	<true/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>OTASoftwareUpdate</key>
 	<dict>
 		<key>SoftwareUpdateOptInRequired</key>

@@ -8,10 +8,10 @@
 		<true/>
 		<key>SupportSecureIntent</key>
 		<true/>
-		<key>SupportedEntitlements</key>
-		<integer>8193</integer>
 		<key>ProtocolVersion</key>
 		<string>2</string>
+		<key>SupportedEntitlements</key>
+		<integer>4202513</integer>
 		<key>Authentication</key>
 		<dict>
 			<key>Type</key>
@@ -19,6 +19,8 @@
 			<key>Username</key>
 			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
 		</dict>
+		<key>SupportedAuthorizationTokens</key>
+		<integer>2</integer>
 		<key>ServerAddress</key>
 		<string>https://prod.ses.proximus.be:443</string>
 		<key>SupportPhysicalSIMtoESIMTransfer</key>
@@ -118,8 +120,8 @@
 	<true/>
 	<key>SupportsNITZ</key>
 	<false/>
-	<key>ShowDialAssist</key>
-	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<array>
 		<string>+447537410207</string>
@@ -133,6 +135,8 @@
 		<string>+447537410287</string>
 		<string>+447537410297</string>
 	</array>
+	<key>ShowDialAssist</key>
+	<true/>
 	<key>VVMRetryIntervals</key>
 	<array>
 		<integer>60</integer>
@@ -147,8 +151,6 @@
 		<integer>3600</integer>
 		<integer>7200</integer>
 	</array>
-	<key>ShowTTY</key>
-	<false/>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
 		<key>MaxGreetingDuration</key>
@@ -176,6 +178,8 @@
 		<key>BeaconAddress</key>
 		<string>32475161969</string>
 	</dict>
+	<key>OverrideOperatorWiFiName</key>
+	<string>WiFi Calling</string>
 	<key>MMS</key>
 	<dict>
 		<key>MMSC</key>
@@ -371,8 +375,6 @@ cktiMAXvwUD9eGjlnNHiKesi1LtDrOas0Me1ked78g==</string>
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>2</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>username</key>
@@ -389,8 +391,6 @@ cktiMAXvwUD9eGjlnNHiKesi1LtDrOas0Me1ked78g==</string>
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>1048576</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>username</key>
@@ -407,8 +407,6 @@ cktiMAXvwUD9eGjlnNHiKesi1LtDrOas0Me1ked78g==</string>
 					<string>mms</string>
 					<key>apn</key>
 					<string>event.proximus.be</string>
-					<key>DefaultProtocolMask</key>
-					<integer>1</integer>
 					<key>type-mask</key>
 					<integer>4</integer>
 					<key>AllowedProtocolMask</key>
@@ -422,8 +420,6 @@ cktiMAXvwUD9eGjlnNHiKesi1LtDrOas0Me1ked78g==</string>
 					<key>tech-type-mask</key>
 					<integer>131072</integer>
 					<key>AllowedProtocolMaskInDomesticRoaming</key>
-					<integer>3</integer>
-					<key>DefaultProtocolMask</key>
 					<integer>3</integer>
 					<key>SupportSwitchOver</key>
 					<true/>
@@ -443,35 +439,166 @@ cktiMAXvwUD9eGjlnNHiKesi1LtDrOas0Me1ked78g==</string>
 	<true/>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Voice</key>
-		<dict>
-			<key>RTTSupported</key>
-			<true/>
-		</dict>
 		<key>Signaling</key>
 		<dict>
-			<key>SendEmergencyLocationUpdates</key>
-			<true/>
 			<key>AlwaysAddGeolocationToInviteForNormalSetupEmergencyCall</key>
 			<true/>
+			<key>IgnoreRegNotificationContactExpires</key>
+			<true/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*[primary]</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
 			<key>AllowGeolocationForEmergencyCallsWhileInboundRoaming</key>
 			<true/>
-			<key>AlwaysAddGeolocationToUpdateForNormalSetupEmergencyCall</key>
+			<key>SendEmergencyLocationUpdates</key>
 			<true/>
-			<key>PIDFGeoPrivShape</key>
-			<string>circle</string>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
 			<key>UseCIDUrlInPIDF</key>
 			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>OutgoingDomain</key>
+			<string>1</string>
+			<key>PIDFGeoPrivShape</key>
+			<string>circle</string>
 			<key>AlwaysAddGeolocationForEmergencyCalls</key>
+			<true/>
+			<key>SipTimers</key>
+			<dict>
+				<key>InviteResponseTimeout</key>
+				<integer>4000</integer>
+			</dict>
+			<key>SubscriptionTerminatedMeansRegistrationTerminated</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>380,400,405,406,408,413,414,415,416,417,420,480,485,488,500,502,503,504,505,513,580</string>
+			<key>AlwaysAddGeolocationToUpdateForNormalSetupEmergencyCall</key>
+			<true/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>180</integer>
+			<key>AlwaysAddPrivacyHeader</key>
 			<true/>
 			<key>Allow3DPIDFInMessages</key>
 			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>RingingTimerSeconds</key>
+			<integer>180</integer>
+			<key>UseIPSec</key>
+			<true/>
 		</dict>
-	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<false/>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc001.mcc206.3gppnetwork.org</string>
+		</dict>
+		<key>EnableWiFiCallingByDefault</key>
+		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<string>5</string>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>maxptime</key>
+					<string>240</string>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>220</string>
+				</dict>
+			</dict>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>EnableIncomingDTMF</key>
+			<true/>
+			<key>UseSDPTemplateForAllInvites</key>
+			<true/>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCW</key>
+			<false/>
+			<key>NafPort</key>
+			<integer>8081</integer>
+			<key>BsfHost</key>
+			<string>bsf.ims.mnc001.mcc206.pub.3gppnetwork.org</string>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>403,404,5xx</string>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>BsfPort</key>
+			<integer>8081</integer>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc001.mcc206.pub.3gppnetwork.org</string>
+			<key>supported</key>
+			<true/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>IgnoreCallerIDBlockingForEmergency</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>E911OverCSIfNoIMSReg</key>
+			<true/>
+			<key>EnableVoLTEWithVoWiFi</key>
+			<false/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
@@ -483,15 +610,22 @@ cktiMAXvwUD9eGjlnNHiKesi1LtDrOas0Me1ked78g==</string>
 	<integer>32768</integer>
 	<key>RCS</key>
 	<dict>
+		<key>EnableBusinessMessagingByDefault</key>
+		<true/>
 		<key>ProvisioningData</key>
 		<dict>
 			<key>ServerURL</key>
 			<string>config.rcs.mnc001.mcc206.jibecloud.net</string>
 		</dict>
+		<key>ShowBusinessMessagingSwitch</key>
+		<true/>
 		<key>EnableRCSByDefault</key>
 		<true/>
-		<key>ShowRCSSwitch</key>
-		<true/>
+	</dict>
+	<key>PushSettings</key>
+	<dict>
+		<key>Topic</key>
+		<string>be.com.proximus.es.rcs</string>
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>IMAP</string>
@@ -516,6 +650,8 @@ cktiMAXvwUD9eGjlnNHiKesi1LtDrOas0Me1ked78g==</string>
 	</array>
 	<key>CarrierName</key>
 	<string>Proximus</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>

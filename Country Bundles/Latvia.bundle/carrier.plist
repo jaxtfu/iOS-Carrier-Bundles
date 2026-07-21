@@ -243,13 +243,10 @@
 	</array>
 	<key>ShowTARandomizationSwitch</key>
 	<true/>
-	<key>IMSConfig</key>
+	<key>VoiceTextMedia</key>
 	<dict>
-		<key>Voice</key>
-		<dict>
-			<key>RTTSupported</key>
-			<true/>
-		</dict>
+		<key>SupportsRTT</key>
+		<true/>
 	</dict>
 	<key>EmergencyCalling</key>
 	<dict>

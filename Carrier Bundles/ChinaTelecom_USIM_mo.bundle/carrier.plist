@@ -2,6 +2,32 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>SupportSecureIntent</key>
+		<false/>
+		<key>SupportedEntitlements</key>
+		<integer>8192</integer>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>ProvisioningRecheckPeriod</key>
+		<integer>3</integer>
+		<key>ServerAddress</key>
+		<string>https://ios-es.1888.com.mo</string>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<true/>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
+		<true/>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+	</dict>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -46,8 +72,6 @@
 			</dict>
 		</array>
 	</dict>
-	<key>OTASoftwareUpdate</key>
-	<dict/>
 	<key>AttachAPN</key>
 	<dict>
 		<key>3GPP2</key>
@@ -94,18 +118,40 @@
 			<string>0728.HK</string>
 		</dict>
 	</array>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>OneTimeCodeForTransfer</key>
+		<true/>
+		<key>LocalInstallSMDPURL</key>
+		<string>https://ecprsp.eastcompeace.com</string>
+		<key>TransferErrorCodes</key>
+		<dict>
+			<key>CarrierDefaultErrors</key>
+			<array>
+				<string>5003</string>
+			</array>
+		</dict>
+		<key>MinCompatibleOS</key>
+		<string>26.5</string>
+		<key>SupportsSimultaneousSIMTransfer</key>
+		<false/>
+	</dict>
 	<key>ShowVoiceRoamingSwitch</key>
 	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>00853-66050000</string>
+	<key>SupportsEHRPD</key>
+	<true/>
 	<key>SupportsNITZ</key>
+	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>Show4GSwitch</key>
 	<true/>
 	<key>ShowDialAssist</key>
 	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>00447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>CallForwardingCustomLabels</key>
 	<dict>
 		<key>Unreachable</key>
@@ -140,9 +186,11 @@
 			<key>Title</key>
 			<string>互联星空</string>
 			<key>URL</key>
-			<string>http://wap.vnet.mobi/</string>
+			<string>https://wap.vnet.mobi/</string>
 		</dict>
 	</array>
+	<key>SupportsSupplementaryServicesOverIMS</key>
+	<true/>
 	<key>MaxBluetoothModemConnections</key>
 	<integer>5</integer>
 	<key>DataIndicatorOverrideForLTE</key>
@@ -157,50 +205,44 @@
 			<key>configuration</key>
 			<array>
 				<dict>
-					<key>type-mask</key>
-					<integer>1049137</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
 					<key>apn</key>
 					<string>CTNET</string>
+					<key>type-mask</key>
+					<integer>1081905</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>4</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
 					<key>apn</key>
 					<string>CTWAP</string>
+					<key>type-mask</key>
+					<integer>4</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>1049136</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
 					<key>apn</key>
 					<string>CTNET</string>
+					<key>type-mask</key>
+					<integer>1049136</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
@@ -211,8 +253,6 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>131072</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>2</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>2</integer>
 					<key>SupportSwitchOver</key>
@@ -227,13 +267,11 @@
 					<integer>2</integer>
 				</dict>
 				<dict>
-					<key>AllowedProtocolMask</key>
-					<integer>2</integer>
+					<key>type-mask</key>
+					<integer>262144</integer>
 					<key>password</key>
 					<string></string>
 					<key>tech-type-mask</key>
-					<integer>262144</integer>
-					<key>type-mask</key>
 					<integer>262144</integer>
 					<key>AllowNoDNS</key>
 					<integer>1</integer>
@@ -243,7 +281,7 @@
 					<string></string>
 					<key>apn</key>
 					<string>sos</string>
-					<key>DefaultProtocolMask</key>
+					<key>AllowedProtocolMask</key>
 					<integer>2</integer>
 				</dict>
 			</array>
@@ -278,6 +316,8 @@
 			<integer>3</integer>
 		</dict>
 	</array>
+	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
+	<integer>131072</integer>
 	<key>IMSConfig</key>
 	<dict>
 		<key>Signaling</key>
@@ -333,7 +373,7 @@
 			<true/>
 			<key>LocalQoSTimeoutMTSeconds</key>
 			<integer>6</integer>
-			<key>ValidateSipMessageRecipient</key>
+			<key>RequirePreconditionsWhenMandatory</key>
 			<false/>
 			<key>IncomingCallEndReasons</key>
 			<dict>
@@ -349,6 +389,8 @@
 			<string>supported</string>
 			<key>IncompleteRegistrationThrottlingIntervalSeconds</key>
 			<integer>0</integer>
+			<key>RequireQoSBeforeRinging</key>
+			<true/>
 			<key>CallEndReasons</key>
 			<dict>
 				<key>NoAnswer</key>
@@ -357,8 +399,6 @@
 					<integer>408</integer>
 				</dict>
 			</dict>
-			<key>RequireQoSBeforeRinging</key>
-			<true/>
 			<key>DontSendPreconditionsIfCallWaitingDisabled</key>
 			<true/>
 			<key>MinSessionExpiresSeconds</key>
@@ -367,6 +407,8 @@
 			<integer>90</integer>
 			<key>UseIPSec</key>
 			<true/>
+			<key>ValidateSipMessageRecipient</key>
+			<false/>
 		</dict>
 		<key>ConferenceCalling</key>
 		<dict>
@@ -380,6 +422,8 @@
 				<key>TimerValue</key>
 				<integer>133</integer>
 			</dict>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
 		</dict>
 		<key>XCAP</key>
 		<dict>
@@ -462,10 +506,16 @@
 		<key>TransportFallback</key>
 		<false/>
 	</dict>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
 	<key>SuspendFastDormancyAllowed</key>
 	<true/>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32769</integer>
+	<key>_Exclude</key>
+	<array>
+		<string>CDMAInternationalRoaming</string>
+	</array>
 	<key>CallWaitingDialingCodes</key>
 	<dict>
 		<key>EnableCallWaiting</key>
@@ -487,7 +537,7 @@
 			<key>CarrierName</key>
 			<string>455-07</string>
 			<key>StatusBarCarrierName</key>
-			<string>中国电信</string>
+			<string>中国电信(澳门)</string>
 		</dict>
 		<dict>
 			<key>AllowPrefixMatching</key>
@@ -495,7 +545,7 @@
 			<key>CarrierName</key>
 			<string>China Telecom</string>
 			<key>StatusBarCarrierName</key>
-			<string>中国电信</string>
+			<string>中国电信(澳门)</string>
 		</dict>
 		<dict>
 			<key>AllowPrefixMatching</key>
@@ -503,7 +553,7 @@
 			<key>CarrierName</key>
 			<string>CT Macau</string>
 			<key>StatusBarCarrierName</key>
-			<string>中国电信</string>
+			<string>中国电信(澳门)</string>
 		</dict>
 	</array>
 	<key>nais</key>
@@ -518,7 +568,9 @@
 		</dict>
 	</array>
 	<key>CarrierName</key>
-	<string>中国电信</string>
+	<string>中国电信(澳门)</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>CallForwardingDialingCodes</key>
 	<dict>
 		<key>EnableDefaultCallForwarding</key>
@@ -547,13 +599,13 @@
 	</dict>
 	<key>SMSUseLocalTZ</key>
 	<true/>
+	<key>AllowNAISelection</key>
+	<true/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>45507</string>
 		<string>20404_ID-8985307</string>
 		<string>20404_ID-8985231</string>
 	</array>
-	<key>AllowNAISelection</key>
-	<true/>
 </dict>
 </plist>

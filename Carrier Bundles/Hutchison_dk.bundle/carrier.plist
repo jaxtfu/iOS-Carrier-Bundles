@@ -2,37 +2,88 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>ServerAddress</key>
+		<string>https://entitlement.3.dk/</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>SupportedActions</key>
+		<array>
+			<string>transferSIMService</string>
+		</array>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+	</dict>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>data.tre.dk</string>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
 	<key>AllowEDGEEditing</key>
 	<true/>
-	<key>PreferCarrierNameFromMetadata</key>
-	<true/>
-	<key>DataIndicatorOverrideForLTE</key>
-	<string>4G</string>
-	<key>SuppressSimToolkitSendShortMessageNotifications</key>
-	<true/>
+	<key>VoicemailPilotNumber</key>
+	<string>+4531133333</string>
 	<key>SupportsNITZ</key>
 	<false/>
-	<key>MyAccountURL</key>
-	<string>http://m.3.dk</string>
-	<key>VVMIgnoresIntlDataRoaming</key>
+	<key>RemoteCardProvisioningSettings</key>
+	<dict>
+		<key>MatchingICCIDPrefixes</key>
+		<array>
+			<string>894506</string>
+		</array>
+		<key>CellularTrialPlan</key>
+		<dict>
+			<key>SupportsTrialPlan</key>
+			<true/>
+			<key>TrialStartPeriod</key>
+			<string>2018-05-04T00:00:00Z</string>
+			<key>TrialEndPeriod</key>
+			<string>2018-11-04T23:59:59Z</string>
+		</dict>
+		<key>ServerURL</key>
+		<string>hdk.prod.ondemandconnectivity.com</string>
+		<key>ActivatingStateSubscriptionCheckTimerIntervals</key>
+		<array>
+			<integer>1800</integer>
+			<integer>3600</integer>
+			<integer>5400</integer>
+		</array>
+		<key>MinCompatibleWatchOS</key>
+		<string>4.3</string>
+		<key>SupportedSKUs</key>
+		<array>
+			<string>SKU_EU</string>
+		</array>
+		<key>ProvisioningMethod</key>
+		<string>CarrierFlow</string>
+	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
 	<false/>
+	<key>ShowDialAssist</key>
+	<true/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>+447786205094</string>
 	<key>WatchCustomerServicePhoneNumber</key>
 	<string>70 313 313</string>
-	<key>APNEditabilityTypemask</key>
-	<integer>5</integer>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<false/>
-	</dict>
-	<key>MyAccountURLTitle</key>
-	<string>3’s mobilsite</string>
-	<key>VMSMFilterNumber</key>
-	<string>3944</string>
-	<key>VMSMFilterProtocolID</key>
-	<integer>65</integer>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
 		<key>MaxGreetingDuration</key>
@@ -61,64 +112,8 @@
 		<key>BeaconAddress</key>
 		<string>3944</string>
 	</dict>
-	<key>StatusBarImages</key>
-	<array>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>3 DK</string>
-			<key>StatusBarCarrierName</key>
-			<string>3 DK</string>
-		</dict>
-	</array>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>23806</string>
-	</array>
-	<key>Location</key>
-	<dict>
-		<key>EmergencyLocation</key>
-		<dict>
-			<key>AugmentedEmergencyAction</key>
-			<dict>
-				<key>AML</key>
-				<dict>
-					<key>SMS</key>
-					<dict>
-						<key>Destination</key>
-						<string>+4591155555</string>
-					</dict>
-				</dict>
-			</dict>
-		</dict>
-	</dict>
-	<key>IMSConfig</key>
-	<dict>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<true/>
-		<key>Signaling</key>
-		<dict>
-			<key>ResetDisabledModeOnEvents</key>
-			<string>SimInserted,AirplaneModeToggled,AccessNetworkChanged</string>
-			<key>EmergencyCallBackModeExpirationSeconds</key>
-			<integer>300</integer>
-		</dict>
-	</dict>
-	<key>ShowDialAssist</key>
-	<true/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>+447786205094</string>
-	<key>CarrierName</key>
-	<string>3 DK</string>
-	<key>VisualVoicemailServiceName</key>
-	<string>IMAP</string>
-	<key>ShowTTY</key>
-	<false/>
-	<key>VoicemailPilotNumber</key>
-	<string>+4531133333</string>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.Denmark</string>
+	<key>OverrideOperatorWiFiName</key>
+	<string>3 Wi-fi opkald</string>
 	<key>MMS</key>
 	<dict>
 		<key>MMSC</key>
@@ -237,12 +232,31 @@
 			<integer>10</integer>
 		</dict>
 	</dict>
-	<key>Show3GSwitch</key>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.Denmark</string>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
+	<key>DataIndicatorOverrideForLTE</key>
+	<string>4G</string>
+	<key>Location</key>
+	<dict>
+		<key>EmergencyLocation</key>
+		<dict>
+			<key>AugmentedEmergencyAction</key>
+			<dict>
+				<key>AML</key>
+				<dict>
+					<key>SMS</key>
+					<dict>
+						<key>Destination</key>
+						<string>+4591155555</string>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>ShowVolteSwitch</key>
 	<false/>
-	<key>SupportedPLMNs</key>
-	<array>
-		<string>23801</string>
-	</array>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -253,8 +267,241 @@
 			<key>apn</key>
 			<string>data.tre.dk</string>
 			<key>type-mask</key>
-			<integer>55</integer>
+			<integer>32823</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>131072</integer>
+			<key>SupportSwitchOver</key>
+			<true/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>1048582</integer>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>services</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>sos</string>
+			<key>type-mask</key>
+			<integer>262144</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>2</integer>
 		</dict>
 	</array>
+	<key>SuppressSimToolkitSendShortMessageNotifications</key>
+	<true/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,6XX</string>
+			<key>CallEndReasons</key>
+			<dict>
+				<key>RejectedByUser</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>Call Rejected By User</string>
+					<key>ReasonHeaderCause</key>
+					<integer>16</integer>
+					<key>Protocol</key>
+					<string>Q.850</string>
+				</dict>
+			</dict>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>120</integer>
+			<key>EmergencyCallBackModeExpirationSeconds</key>
+			<integer>300</integer>
+			<key>ResetDisabledModeOnEvents</key>
+			<string>SimInserted,AirplaneModeToggled,AccessNetworkChanged</string>
+			<key>RingingTimerSeconds</key>
+			<integer>125</integer>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>BOTH</string>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>AlwaysAddPrivacyHeader</key>
+			<true/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>UseFakeSAsForDeregistration</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:conf-factory.ics.mnc006.mcc238.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>0</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>220</string>
+				</dict>
+			</dict>
+			<key>MaxRedundancy</key>
+			<integer>220</integer>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>UseSDPTemplateForAllInvites</key>
+			<false/>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>ContentType</key>
+			<string>application/vnd.etsi.simservs+xml</string>
+			<key>useSecureTransport</key>
+			<true/>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>supported</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVoLTEWithVoWiFi</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>SMSSettings</key>
+	<dict>
+		<key>SMSCarrierReportJunkAddress</key>
+		<string>7726</string>
+		<key>TransportFallback</key>
+		<false/>
+	</dict>
+	<key>Show3GSwitch</key>
+	<false/>
+	<key>PreferCarrierNameFromMetadata</key>
+	<true/>
+	<key>APNEditabilityTypemask</key>
+	<integer>5</integer>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
+	<key>PushSettings</key>
+	<dict>
+		<key>MultiSIMTopic</key>
+		<string>dk.3.entitlement.multisim</string>
+	</dict>
+	<key>VisualVoicemailServiceName</key>
+	<string>IMAP</string>
+	<key>StatusBarImages</key>
+	<array>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>3 DK</string>
+			<key>StatusBarCarrierName</key>
+			<string>3 DK</string>
+		</dict>
+	</array>
+	<key>CarrierName</key>
+	<string>3 DK</string>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>MyAccountURL</key>
+	<string>https://m.3.dk</string>
+	<key>SupportedPLMNs</key>
+	<array>
+		<string>23801</string>
+	</array>
+	<key>MyAccountURLTitle</key>
+	<string>3’s mobilsite</string>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
+	<key>VMSMFilterNumber</key>
+	<string>3944</string>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>23806</string>
+	</array>
+	<key>VMSMFilterProtocolID</key>
+	<integer>65</integer>
 </dict>
 </plist>

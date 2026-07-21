@@ -92,13 +92,13 @@
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>#99</string>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
 	<key>ShowDialAssist</key>
-	<false/>
-	<key>ShowTTY</key>
 	<false/>
 	<key>Show3GSwitchWith4G</key>
 	<true/>
@@ -306,8 +306,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
@@ -371,6 +369,13 @@
 		</dict>
 		<key>SMS</key>
 		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<false/>
+			</dict>
 			<key>allowCSFBInVolteMode</key>
 			<false/>
 		</dict>
@@ -513,7 +518,7 @@
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.claro.com.ec/iphone</string>
+	<string>https://www.claro.com.ec/iphone</string>
 	<key>MyAccountURLTitle</key>
 	<string>CLARO</string>
 	<key>MandatoryVerify</key>

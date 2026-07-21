@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>DerPriFileVersion</key>
-	<string>5.4.161</string>
+	<string>6.0.161</string>
 	<key>ShowVoNRSwitch</key>
 	<true/>
 	<key>Enable5GStandaloneByDefault</key>
@@ -12,23 +12,13 @@
 	<dict>
 		<key>CellularPlanTransferTopic</key>
 		<string>com.libertypr.ent.plan-transfer-to-eSIM</string>
-		<key>MultiSIMTopic</key>
-		<string>com.libertypr.ent.multi-sim</string>
-		<key>SAWatchTopic</key>
-		<string>com.libertypr.ent.sa-watch</string>
-		<key>VoWiFiTopic</key>
-		<string>com.libertypr.ent.arctic</string>
 	</dict>
 	<key>IMSConfig</key>
 	<dict>
 		<key>SMS</key>
 		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
 			<key>SupportedDomains</key>
 			<dict>
-				<key>LTE</key>
-				<true/>
 				<key>NR</key>
 				<true/>
 			</dict>
@@ -38,11 +28,6 @@
 			<key>EnableVoNRByDefault</key>
 			<true/>
 		</dict>
-		<key>Signaling</key>
-		<dict>
-			<key>AllowEmergencyRetryForIPSec</key>
-			<true/>
-		</dict>
 	</dict>
 	<key>PhoneAccountTransfer</key>
 	<dict>
@@ -50,6 +35,21 @@
 		<string>https://sm-v4-099-a-gtm.pr.go-esim.com</string>
 		<key>MinCompatibleOS</key>
 		<string>26.2</string>
+		<key>TransferErrorCodes</key>
+		<dict>
+			<key>MaintenanceErrors</key>
+			<array>
+				<string>5003</string>
+			</array>
+			<key>IneligibleAccountErrors</key>
+			<array>
+				<string>5011</string>
+			</array>
+			<key>BlockedAccountErrors</key>
+			<array>
+				<string>5009</string>
+			</array>
+		</dict>
 	</dict>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
@@ -59,49 +59,32 @@
 	<true/>
 	<key>CarrierEntitlements</key>
 	<dict>
-		<key>SupportsOnDevicePhysicalSIMConvert</key>
-		<true/>
-		<key>SupportSecureIntent</key>
-		<true/>
-		<key>ProtocolVersion</key>
-		<string>2</string>
-		<key>EnableDeviceAccountIdentifier</key>
-		<false/>
-		<key>Authentication</key>
-		<dict>
-			<key>Type</key>
-			<integer>1</integer>
-			<key>Username</key>
-			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
-		</dict>
 		<key>SupportedEntitlements</key>
 		<integer>11673</integer>
-		<key>ServerAddress</key>
-		<string>https://ses.mnc790.mcc313.pub.3gppnetwork.org</string>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<true/>
 		<key>SupportedActions</key>
 		<array>
 			<string>TransferSIMService</string>
 		</array>
-		<key>UpdatePeriod</key>
-		<integer>24</integer>
-		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
+		<true/>
+		<key>SupportSecureIntent</key>
 		<true/>
 	</dict>
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>32771</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
-			<integer>3</integer>
-			<key>DefaultProtocolMask</key>
 			<integer>3</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>internet</string>
+			<key>type-mask</key>
+			<integer>32771</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -120,23 +103,21 @@
 		<dict>
 			<key>type-mask</key>
 			<integer>131072</integer>
-			<key>password</key>
-			<string></string>
 			<key>Support5GSaHandOver</key>
 			<true/>
+			<key>password</key>
+			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
 			<key>UseNetworkMTU</key>
 			<true/>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>ims</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
@@ -146,8 +127,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>SupportSwitchOver</key>
 			<false/>
 			<key>username</key>
@@ -164,15 +143,13 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>262144</integer>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowNoDNS</key>
 			<integer>1</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>sos</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
@@ -182,8 +159,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>hotspot</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>16</integer>
 			<key>AllowedProtocolMask</key>

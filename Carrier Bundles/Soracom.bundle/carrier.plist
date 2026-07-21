@@ -30,8 +30,6 @@
 		<key>EnableAttachMonitorMode</key>
 		<false/>
 	</dict>
-	<key>OTASoftwareUpdate</key>
-	<dict/>
 	<key>ShowCallWaitingSwitch</key>
 	<false/>
 	<key>IntlDataRoamingAllowed</key>
@@ -336,13 +334,13 @@
 	<false/>
 	<key>ShowCallForwardingSwitch</key>
 	<false/>
+	<key>ShowVolteSwitch</key>
+	<false/>
 	<key>CellularDataPlanSettings</key>
 	<dict>
 		<key>DataOnlySubscription</key>
 		<true/>
 	</dict>
-	<key>ShowVolteSwitch</key>
-	<false/>
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>UseLTEAlternateBarMapping</key>

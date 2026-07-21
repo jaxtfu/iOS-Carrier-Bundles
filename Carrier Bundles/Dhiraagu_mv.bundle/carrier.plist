@@ -34,11 +34,6 @@
 	<false/>
 	<key>APNEditabilityTypemask</key>
 	<integer>53</integer>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
 	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>AllowedServicesTypeMaskOnInternet</key>
@@ -58,6 +53,8 @@
 	<array>
 		<string>47201</string>
 	</array>
+	<key>ShowDialAssist</key>
+	<true/>
 	<key>IMSConfig</key>
 	<dict>
 		<key>Media</key>
@@ -74,8 +71,6 @@
 					<string>EVS</string>
 					<key>bw</key>
 					<string>nb-wb</string>
-					<key>hf-only</key>
-					<string>1</string>
 				</dict>
 			</dict>
 			<key>EnableBandwidthSpecifiers</key>
@@ -123,27 +118,29 @@
 		</dict>
 		<key>XCAP</key>
 		<dict>
-			<key>SupportsCW</key>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc001.mcc472.pub.3gppnetwork.org</string>
+			<key>BsfPort</key>
+			<integer>80</integer>
+			<key>imsFeatureDependency</key>
+			<false/>
+			<key>NafPort</key>
+			<integer>80</integer>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>supported</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/vnd.etsi.simservs+xml</string>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>400,403,500</string>
+			<key>SupportsCFErasure</key>
+			<false/>
+			<key>imsRegistrationDependency</key>
 			<false/>
 			<key>BsfHost</key>
 			<string>bsf.ims.mnc001.mcc472.pub.3gppnetwork.org</string>
-			<key>SupportsCLIR</key>
-			<false/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string>400,403,500</string>
-			<key>NafPort</key>
-			<integer>80</integer>
-			<key>imsRegistrationDependency</key>
-			<false/>
-			<key>BsfPort</key>
-			<integer>80</integer>
-			<key>supported</key>
-			<true/>
-			<key>NafHost</key>
-			<string>xcap.ims.mnc001.mcc472.pub.3gppnetwork.org</string>
-			<key>SupportsCFErasure</key>
-			<false/>
-			<key>imsFeatureDependency</key>
+			<key>SupportsCW</key>
 			<false/>
 		</dict>
 		<key>ConferenceCalling</key>
@@ -168,8 +165,6 @@
 				<key>UMTS</key>
 				<false/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>Voice</key>
 		<dict>
@@ -177,8 +172,26 @@
 			<true/>
 		</dict>
 	</dict>
-	<key>ShowDialAssist</key>
-	<true/>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>ProvisioningRecheckPeriod</key>
+		<integer>1</integer>
+		<key>ServerAddress</key>
+		<string>https://des.dhiraagu.com.mv/entitlement</string>
+		<key>UserAgent</key>
+		<string>Entitlement/$version ($device) iOS/$iOSVersion Carrier Settings/$carrierBundleVersion</string>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+	</dict>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<array>
 		<string>+447537410207</string>
@@ -194,6 +207,20 @@
 	</array>
 	<key>CarrierName</key>
 	<string>DHIRAAGU</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string></string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
 	<key>PhoneAccountTransfer</key>
@@ -201,8 +228,6 @@
 		<key>LocalInstallSMDPURL</key>
 		<string>https://rsp.invigo.com</string>
 	</dict>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>700</string>
 	<key>HomeBundleIdentifier</key>

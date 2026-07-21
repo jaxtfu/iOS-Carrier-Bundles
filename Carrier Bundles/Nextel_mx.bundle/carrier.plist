@@ -46,7 +46,7 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://fun.att.mx</string>
+	<string>https://fun.att.mx</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>EnableLTEAfterUpgrade</key>
@@ -106,15 +106,35 @@
 	</array>
 	<key>ShowDialAssist</key>
 	<false/>
+	<key>Show3GSwitchWith4G</key>
+	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<array>
 		<string>639835</string>
 	</array>
 	<key>CarrierName</key>
 	<string>AT&amp;T</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>wap.attmex.mx</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
+	<key>SupportsImsCapability</key>
+	<false/>
+	<key>ShowVolteSwitch</key>
 	<false/>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Mexico</string>

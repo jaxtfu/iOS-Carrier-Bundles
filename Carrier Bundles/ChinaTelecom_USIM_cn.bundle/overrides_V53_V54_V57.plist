@@ -5,7 +5,7 @@
 	<key>SupportsVoNR</key>
 	<true/>
 	<key>DerPriFileVersion</key>
-	<string>5.4.163</string>
+	<string>6.0.165</string>
 	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
 	<key>Show5GStandaloneSwitch</key>
@@ -17,123 +17,18 @@
 	</array>
 	<key>Enable5GStandaloneByDefault</key>
 	<true/>
-	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
-	<integer>131072</integer>
 	<key>Show5GSwitch</key>
 	<true/>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
-	<key>MultiSimVoLteOnly</key>
-	<true/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>Show4GSwitch</key>
-	<true/>
-	<key>SupportsEHRPD</key>
 	<true/>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Signaling</key>
+		<key>Media</key>
 		<dict>
-			<key>DefaultAuthAlgorithm</key>
-			<string>AKAv1-MD5</string>
-			<key>LocalQoSTimeoutMOSeconds</key>
-			<integer>6</integer>
-			<key>RegistrationRetryIntervals</key>
-			<string>30+30,60+60,120+120,240+240,480,900</string>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>UseFakeSAsForDeregistration</key>
-			<true/>
-			<key>ussdEnabled</key>
-			<true/>
-			<key>FatalSmsErrors</key>
-			<string>400,404,500,502</string>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>DefaultRemoteSipPort</key>
-			<integer>5060</integer>
-			<key>EnableEmergencyRegistration</key>
-			<true/>
-			<key>AlwaysUnsubscribeFromRegEvents</key>
-			<false/>
-			<key>EmergencyCallBackModeExpirationSeconds</key>
-			<integer>1</integer>
-			<key>StartLocalQosTimerOnSessionProgress</key>
-			<true/>
-			<key>TriggerCSFBOnLocalQoSTimeoutMO</key>
-			<false/>
-			<key>TriggerCSFBOnLocalQoSTimeoutMT</key>
-			<false/>
-			<key>TriggerCSFBOnWaitForRingingTimeout</key>
-			<false/>
-			<key>EmergencyURNs</key>
-			<dict>
-				<key>999</key>
-				<string>urn:service:sos.mountain</string>
-				<key>110</key>
-				<string>urn:service:sos.police</string>
-				<key>120</key>
-				<string>urn:service:sos.ambulance</string>
-				<key>119</key>
-				<string>urn:service:sos.fire</string>
-				<key>122</key>
-				<string>urn:service:sos.marine</string>
-			</dict>
-			<key>RingbackTimerSeconds</key>
-			<integer>60</integer>
-			<key>SendPreferredServiceInInvite</key>
-			<true/>
-			<key>LocalQoSTimeoutMTSeconds</key>
-			<integer>6</integer>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
-			<key>IncomingCallEndReasons</key>
-			<dict>
-				<key>Request Timeout</key>
-				<dict>
-					<key>StatusCode</key>
-					<integer>408</integer>
-					<key>TerminationEvent</key>
-					<string>RemoteHangup</string>
-				</dict>
-				<key>TemporarilyUnavailable</key>
-				<dict>
-					<key>StatusCode</key>
-					<integer>480</integer>
-					<key>TerminationEvent</key>
-					<string>RemoteCallRejected</string>
-				</dict>
-			</dict>
-			<key>Preconditions</key>
-			<string>supported</string>
-			<key>IncompleteRegistrationThrottlingIntervalSeconds</key>
-			<integer>0</integer>
-			<key>RequireQoSBeforeRinging</key>
-			<true/>
-			<key>CallEndReasons</key>
-			<dict>
-				<key>NoAnswer</key>
-				<dict>
-					<key>StatusCode</key>
-					<integer>408</integer>
-				</dict>
-			</dict>
-			<key>DontSendPreconditionsIfCallWaitingDisabled</key>
-			<true/>
-			<key>MinSessionExpiresSeconds</key>
-			<integer>600</integer>
-			<key>RingingTimerSeconds</key>
-			<integer>55</integer>
-			<key>UseIPSec</key>
-			<true/>
-			<key>ValidateSipMessageRecipient</key>
-			<false/>
-		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>conferenceServer</key>
-			<string>sip:mmtel@conf-factory.ims.mnc011.mcc460.3gppnetwork.org</string>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
 		</dict>
 		<key>SMS</key>
 		<dict>
@@ -142,100 +37,17 @@
 				<key>NR</key>
 				<true/>
 			</dict>
-			<key>TR1MTimer</key>
-			<dict>
-				<key>TimerValue</key>
-				<integer>133</integer>
-			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<false/>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>NafHost</key>
-			<string>xcap.ims.mnc011.mcc460.pub.3gppnetwork.org</string>
-			<key>BsfPort</key>
-			<integer>8080</integer>
-			<key>imsFeatureDependency</key>
-			<false/>
-			<key>DisableCLIRModification</key>
-			<true/>
-			<key>NafPort</key>
-			<integer>80</integer>
-			<key>SupportsCLIR</key>
-			<false/>
-			<key>supported</key>
-			<true/>
-			<key>ContentType</key>
-			<string>application/xcap-el+xml</string>
-			<key>DisableOnNetworkError</key>
-			<false/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string>403,500,404</string>
-			<key>UnsolicitedRequestDelay</key>
-			<integer>0</integer>
-			<key>BsfHost</key>
-			<string>bsf.mnc011.mcc460.pub.3gppnetwork.org</string>
-			<key>SupportsCW</key>
-			<false/>
-		</dict>
-		<key>Media</key>
-		<dict>
-			<key>RTCPIntervalSeconds</key>
-			<integer>5</integer>
-			<key>PreferredAMRWBMode</key>
-			<string>8</string>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-			<key>InactivityTimerRTCPSeconds</key>
-			<integer>20</integer>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>20</integer>
-			<key>UseRestrictiveDirectionWhenCreatingAnswer</key>
-			<false/>
-			<key>HideSessionLevelDirection</key>
-			<true/>
-		</dict>
-		<key>SIM</key>
-		<dict>
-			<key>CarrierDomain</key>
-			<string>ims.mnc011.mcc460.3gppnetwork.org</string>
-			<key>impiFormat</key>
-			<string>imsi@carrierDomain</string>
-			<key>impuFormat</key>
-			<array>
-				<string>imsi@carrierDomain</string>
-			</array>
 		</dict>
 		<key>Voice</key>
 		<dict>
-			<key>tLte911Timer</key>
-			<integer>34</integer>
-			<key>BlockCallsOverCS</key>
-			<true/>
-			<key>EnableVolteByDefault</key>
-			<true/>
 			<key>EnableVoNRByDefault</key>
 			<true/>
-			<key>endNonEmergencyCalls</key>
+			<key>BlockCallsOverCS</key>
 			<true/>
 		</dict>
 	</dict>
-	<key>CarrierEntitlements</key>
-	<dict>
-		<key>SupportedEntitlements</key>
-		<integer>3121</integer>
-		<key>DoNotLinkVoLteSwitchVisibilityToVoPS</key>
-		<true/>
-		<key>ProvisioningRecheckPeriod</key>
-		<integer>3</integer>
-		<key>UpdatePeriod</key>
-		<integer>72</integer>
-	</dict>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>SupportsSupplementaryServicesOverIMS</key>
-	<true/>
 	<key>AllowNAISelection</key>
 	<false/>
 	<key>AttachAPN</key>
@@ -244,25 +56,6 @@
 		<array>
 			<string>3GPP2</string>
 		</array>
-		<key>3GPP</key>
-		<dict>
-			<key>apn</key>
-			<string>CTNET</string>
-			<key>password</key>
-			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
-			<key>PcscfAddressRequired</key>
-			<false/>
-			<key>username</key>
-			<string></string>
-			<key>AllowedProtocolMaskInRoamingUMTS</key>
-			<integer>3</integer>
-			<key>UseNetworkMTU</key>
-			<true/>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>3</integer>
-		</dict>
 	</dict>
 	<key>ShowVoNRWarningUnsupportedCarrier</key>
 	<false/>
@@ -270,50 +63,10 @@
 	<string>NRCA</string>
 	<key>Enable5GAutoByDefault</key>
 	<true/>
-	<key>ShowVolteSwitch</key>
-	<false/>
-	<key>SupportsImsCapability</key>
-	<true/>
 	<key>ShowVoNRSwitch</key>
 	<false/>
 	<key>EnableBackupOnCellular</key>
 	<false/>
-	<key>RemoteCardProvisioningSettings</key>
-	<dict>
-		<key>RequireLiveIDCheck</key>
-		<true/>
-		<key>InconsistentICCIDLength</key>
-		<true/>
-		<key>OneNumberRequireLiveIDCheck</key>
-		<true/>
-		<key>SupportsFauxCard</key>
-		<false/>
-		<key>MatchingICCIDPrefixes</key>
-		<array>
-			<string>898603</string>
-			<string>898611</string>
-		</array>
-		<key>RequiresPairingSupportIndicator</key>
-		<true/>
-		<key>ServerURL</key>
-		<string>https://esimapple.crm.189.cn</string>
-		<key>UsesAutoAssignment</key>
-		<false/>
-		<key>ProvisioningMethod</key>
-		<string>CarrierFlow</string>
-		<key>MinCompatibleWatchOS</key>
-		<string>5.1</string>
-		<key>ActivatingStateSubscriptionCheckTimerIntervals</key>
-		<array>
-			<integer>300</integer>
-			<integer>480</integer>
-			<integer>600</integer>
-		</array>
-		<key>SupportedSKUs</key>
-		<array>
-			<string>SKU_CU</string>
-		</array>
-	</dict>
 	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 	<key>apns</key>
@@ -326,32 +79,28 @@
 					<integer>1081905</integer>
 					<key>password</key>
 					<string></string>
-					<key>apn</key>
-					<string>CTNET</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
+					<key>UseNetworkMTU</key>
+					<true/>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>username</key>
 					<string></string>
-					<key>UseNetworkMTU</key>
-					<true/>
+					<key>apn</key>
+					<string>CTNET</string>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>4</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
 					<key>apn</key>
 					<string>CTWAP</string>
+					<key>type-mask</key>
+					<integer>4</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
@@ -360,16 +109,14 @@
 					<integer>1081904</integer>
 					<key>password</key>
 					<string></string>
-					<key>apn</key>
-					<string>CTNET</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
+					<key>UseNetworkMTU</key>
+					<true/>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>username</key>
 					<string></string>
-					<key>UseNetworkMTU</key>
-					<true/>
+					<key>apn</key>
+					<string>CTNET</string>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
@@ -378,8 +125,6 @@
 					<integer>131072</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
 					<integer>3</integer>
 					<key>SupportSwitchOver</key>
@@ -398,8 +143,6 @@
 					<integer>262144</integer>
 					<key>password</key>
 					<string></string>
-					<key>AllowedProtocolMask</key>
-					<integer>3</integer>
 					<key>AllowNoDNS</key>
 					<integer>1</integer>
 					<key>AllowedProtocolMaskInRoaming</key>
@@ -408,7 +151,7 @@
 					<string></string>
 					<key>apn</key>
 					<string>sos</string>
-					<key>DefaultProtocolMask</key>
+					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 			</array>

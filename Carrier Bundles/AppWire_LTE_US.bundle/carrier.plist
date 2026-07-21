@@ -2,8 +2,32 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>OTASoftwareUpdate</key>
-	<dict/>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>SupportedEntitlements</key>
+		<integer>4195513</integer>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>ProvisioningRecheckPeriod</key>
+		<integer>24</integer>
+		<key>EnableVolteWhileEntitlementStatusIsUnknown</key>
+		<true/>
+		<key>SupportedAuthorizationTokens</key>
+		<integer>2</integer>
+		<key>ServerAddress</key>
+		<string>https://aes.ekn.com</string>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+		<key>UserAgent</key>
+		<string>Entitlement/$version ($device) iOS/$iOSVersion</string>
+	</dict>
 	<key>AttachAPN</key>
 	<dict>
 		<key>3GPP2</key>
@@ -31,6 +55,8 @@
 			<string></string>
 			<key>apn</key>
 			<string>4g.myawi.com</string>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
@@ -144,20 +170,24 @@
 		<key>UsesAutoAssignment</key>
 		<false/>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>DisallowedDialingPrefixes</key>
 	<array>
 		<string>*228</string>
 	</array>
 	<key>SupportsSupplementaryServices</key>
 	<false/>
+	<key>ShowWiFiCallingRoamingSwitch</key>
+	<true/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>2775</string>
 	<key>Show4GSwitch</key>
 	<true/>
 	<key>ShowDialAssist</key>
 	<true/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>2775</string>
-	<key>ShowTTY</key>
-	<true/>
+	<key>OverrideOperatorName</key>
+	<string>Appalachian</string>
 	<key>WatchCustomerServicePhoneNumber</key>
 	<string>1-800-438-2355</string>
 	<key>com.apple.voicemail.imap</key>
@@ -190,25 +220,21 @@
 	</dict>
 	<key>DisallowCarrierMenuAtHome</key>
 	<true/>
-	<key>OTAActivation</key>
-	<dict>
-		<key>BlacklistedSIMs</key>
-		<array>
-			<string>44053</string>
-			<string>44054</string>
-			<string>44070</string>
-			<string>44071</string>
-			<string>44072</string>
-			<string>44073</string>
-			<string>44074</string>
-			<string>44075</string>
-			<string>44076</string>
-			<string>44078</string>
-			<string>46003</string>
-		</array>
-	</dict>
 	<key>NotRegisteredResetWaitPeriod</key>
-	<integer>60</integer>
+	<integer>20</integer>
+	<key>OverrideOperatorWiFiName</key>
+	<string>AW WiFi</string>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.UnitedStates</string>
+	<key>CarrierBookmarks</key>
+	<array>
+		<dict>
+			<key>Title</key>
+			<string>Appalachian Wireless</string>
+			<key>URL</key>
+			<string>https://m.appalachianwireless.com</string>
+		</dict>
+	</array>
 	<key>MMS</key>
 	<dict>
 		<key>UAProf</key>
@@ -228,23 +254,12 @@
 		<key>CarrierRequiredPhoneNumberHeaderName</key>
 		<string>X-MDN</string>
 		<key>MaxRecipients</key>
-		<integer>10</integer>
+		<integer>20</integer>
 		<key>MaxMessageSize</key>
 		<integer>1048576</integer>
 		<key>AllowFetchFromMultipleMMSCs</key>
 		<false/>
 	</dict>
-	<key>CarrierBookmarks</key>
-	<array>
-		<dict>
-			<key>Title</key>
-			<string>Appalachian Wireless</string>
-			<key>URL</key>
-			<string>http://m.appalachianwireless.com</string>
-		</dict>
-	</array>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.UnitedStates</string>
 	<key>MaxBluetoothModemConnections</key>
 	<integer>5</integer>
 	<key>TechSettings</key>
@@ -372,6 +387,43 @@
 		<key>SetHandOverIPv6Prefix</key>
 		<true/>
 	</dict>
+	<key>Location</key>
+	<dict>
+		<key>EnableCPIDuringEmergencyMode</key>
+		<true/>
+		<key>EmergencyLocation</key>
+		<dict>
+			<key>ControlPlane</key>
+			<dict>
+				<key>EnableAdditionalAssistedConstellations</key>
+				<dict>
+					<key>Glonass</key>
+					<string>disabled</string>
+				</dict>
+			</dict>
+			<key>UserPlane</key>
+			<dict>
+				<key>EnableAdditionalAssistedConstellations</key>
+				<dict>
+					<key>Glonass</key>
+					<string>disabled</string>
+				</dict>
+			</dict>
+			<key>AugmentedEmergencyAction</key>
+			<dict>
+				<key>Supplemented911</key>
+				<dict>
+					<key>HTTPS</key>
+					<dict>
+						<key>URL</key>
+						<string>gateway.icloud.com/meridian/meridian/location</string>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+		<key>EnableEarlyReturnDuringEmergencyMode</key>
+		<true/>
+	</dict>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -384,8 +436,6 @@
 					<string></string>
 					<key>apn</key>
 					<string>4g.myawi.com</string>
-					<key>DefaultProtocolMask</key>
-					<integer>1</integer>
 					<key>type-mask</key>
 					<integer>567</integer>
 					<key>AllowedProtocolMask</key>
@@ -400,25 +450,202 @@
 	<false/>
 	<key>TetheringURL</key>
 	<string>www.appalachianwireless.com/tethering</string>
+	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
+	<integer>131072</integer>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>UseCIDUrlInPIDF</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>TcpIdleTimeoutSeconds</key>
+			<integer>0</integer>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>LocationForShortCodeCalls</key>
+			<string>BOTH</string>
+			<key>ContactUser</key>
+			<string>MDN</string>
+			<key>OutgoingDomain</key>
+			<string>1</string>
+			<key>AdditionalHeaders</key>
+			<dict>
+				<key>INVITE[wifi,911]</key>
+				<array>
+					<string>P-Emergency-Info: IEEE-802.11b;i-wlan-node-id=${DEVICE_REF_ID}</string>
+					<string>Supported: geolocation</string>
+				</array>
+			</dict>
+			<key>NetworkTerminationRetryIntervalSeconds</key>
+			<integer>1</integer>
+			<key>SendLocalTimeZoneInformation</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,400,401,402,405,406,407,408,412,413,414,415,416,417,420,421,423,424,428,429,481,482,483,485,487,488,489,491,493,5XX,6XX</string>
+			<key>OutgoingCallPrefix</key>
+			<dict>
+				<key>Local</key>
+				<string>+1</string>
+				<key>International</key>
+				<string>011</string>
+			</dict>
+			<key>MaxUdpMessageSize</key>
+			<integer>1200</integer>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>SipTimers</key>
+			<dict>
+				<key>InviteResponseTimeout</key>
+				<integer>6000</integer>
+			</dict>
+			<key>EmergencyURNs</key>
+			<dict>
+				<key>default</key>
+				<string>urn:service:sos</string>
+			</dict>
+			<key>RingbackTimerSeconds</key>
+			<integer>90</integer>
+			<key>UseTupleInPIDF</key>
+			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<integer>15</integer>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>15</integer>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+			<key>AllowRemoteHoldForUnconfirmedCalls</key>
+			<true/>
+			<key>AlwaysPrack18x</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>TreatAllNotificationsAsPartial</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc130.mcc312.3gppnetwork.org</string>
+		</dict>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>DCN</key>
+			<dict>
+				<key>destinationNumber</key>
+				<string>6066262100</string>
+				<key>hysteresisTimeout</key>
+				<integer>10</integer>
+			</dict>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>InactivityTimerRTCPSeconds</key>
+			<integer>20</integer>
+			<key>EnableRTCPExtendedReports</key>
+			<true/>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>EnableIncomingDTMF</key>
+			<true/>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>SIM</key>
+		<dict>
+			<key>CarrierDomain</key>
+			<string>ims.mnc130.mcc312.3gppnetwork.org</string>
+			<key>impiFormat</key>
+			<string>imsi@carrierDomain</string>
+			<key>impuFormat</key>
+			<array>
+				<string>imsi@carrierDomain</string>
+			</array>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCW</key>
+			<false/>
+			<key>NafPort</key>
+			<integer>80</integer>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>supported</key>
+			<true/>
+			<key>NafHost</key>
+			<string>xcap.ims.myawi.com</string>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverITechSupported</key>
+			<false/>
+			<key>tLte911Timer</key>
+			<integer>22</integer>
+			<key>EnableVolteByDefault</key>
+			<true/>
+			<key>TestEmergencyPSAPSupported</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>SMSSizeInBytesSentAsMMSInstead</key>
 	<integer>640</integer>
 	<key>SMSSettings</key>
 	<dict>
+		<key>OutgoingSMSPrefix</key>
+		<dict>
+			<key>Local</key>
+			<string>+1</string>
+			<key>International</key>
+			<string>+011</string>
+		</dict>
 		<key>SupportsEMS</key>
 		<false/>
 		<key>UnsupportedEncodings</key>
 		<array>
 			<string>7bitGSM</string>
 		</array>
-		<key>TransportFallback</key>
-		<false/>
 	</dict>
 	<key>SuspendFastDormancyAllowed</key>
 	<true/>
-	<key>TetheringPhoneNumber</key>
-	<string>611</string>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32774</integer>
+	<key>RCS</key>
+	<dict>
+		<key>ShowBusinessMessagingSwitch</key>
+		<true/>
+		<key>EnableRCSByDefault</key>
+		<true/>
+		<key>ProvisioningData</key>
+		<dict>
+			<key>ServerURL</key>
+			<string>config.rcs.mnc$mnc.mcc$mcc.jibecloud.net</string>
+		</dict>
+	</dict>
 	<key>MTU</key>
 	<array>
 		<dict>
@@ -434,6 +661,15 @@
 			<integer>1472</integer>
 		</dict>
 	</array>
+	<key>PushSettings</key>
+	<dict>
+		<key>Topic</key>
+		<string>com.ekn.entitlement</string>
+		<key>MultiSIMTopic</key>
+		<string>com.ekn.multisim</string>
+		<key>VoWiFiTopic</key>
+		<string>com.ekn.entitlement</string>
+	</dict>
 	<key>Services</key>
 	<array>
 		<dict>
@@ -461,10 +697,16 @@
 			<string>View My Minutes</string>
 		</dict>
 	</array>
+	<key>TetheringPhoneNumber</key>
+	<string>611</string>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>IMAP</string>
 	<key>CarrierName</key>
 	<string>Appalachian</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
 	<string>https://m.appalachianwireless.com/?page=login</string>
 	<key>MyAccountURLTitle</key>
@@ -474,14 +716,16 @@
 		<key>EnabledByDefault</key>
 		<true/>
 	</dict>
-	<key>ShowCallerIDSwitch</key>
-	<false/>
 	<key>SMSUseLocalTZ</key>
 	<true/>
 	<key>ShowCallWaitingSwitch</key>
 	<false/>
+	<key>ShowCallerIDSwitch</key>
+	<false/>
 	<key>ExitEmergencyModeWhenPlacingFirstRegularCall</key>
 	<true/>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>312130</string>

@@ -18,9 +18,9 @@
 	<dict>
 		<key>ShowClass0SMSInLockScreen</key>
 		<true/>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>StatusBarImages</key>
@@ -50,27 +50,6 @@
 	</array>
 	<key>IMSConfig</key>
 	<dict>
-		<key>SMS</key>
-		<dict>
-			<key>SupportedDomains</key>
-			<dict>
-				<key>GSM</key>
-				<false/>
-				<key>LTE</key>
-				<true/>
-				<key>UMTS</key>
-				<false/>
-			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
-		</dict>
-		<key>Media</key>
-		<dict>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>10</integer>
-			<key>RingbackTone</key>
-			<string>HK</string>
-		</dict>
 		<key>Signaling</key>
 		<dict>
 			<key>InviteErrorResponsesToTriggerCSFB</key>
@@ -126,13 +105,6 @@
 			<key>UseIPSec</key>
 			<true/>
 		</dict>
-		<key>Voice</key>
-		<dict>
-			<key>E911OverITechSupported</key>
-			<true/>
-			<key>EnableVolteByDefault</key>
-			<true/>
-		</dict>
 		<key>ConferenceCalling</key>
 		<dict>
 			<key>TreatAllNotificationsAsPartial</key>
@@ -140,8 +112,57 @@
 			<key>conferenceServer</key>
 			<string>sip:mmtel@conf-factory.ims.mnc019.mcc502.3gppnetwork.org</string>
 		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>GSM</key>
+				<false/>
+				<key>LTE</key>
+				<true/>
+				<key>UMTS</key>
+				<false/>
+			</dict>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RingbackTone</key>
+			<string>HK</string>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>112</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-wb</string>
+				</dict>
+			</dict>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>10</integer>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
 		<key>EnableWiFiCallingWithoutEntitlement</key>
 		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>OverrideOperatorWiFiName</key>
 	<string>yoodo Wifi Call</string>
@@ -167,8 +188,6 @@
 	<true/>
 	<key>ShowClass0SMSFromField</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>HomeBundleIdentifier</key>
@@ -307,8 +326,6 @@
 					<string></string>
 					<key>apn</key>
 					<string>yoodo</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>type-mask</key>
 					<integer>49</integer>
 					<key>AllowedProtocolMask</key>
@@ -321,8 +338,6 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>131072</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>SupportSwitchOver</key>
 					<true/>
 					<key>username</key>

@@ -99,14 +99,14 @@
 		<key>SupportsFauxCard</key>
 		<false/>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>WatchCustomerServicePhoneNumber</key>
+	<string>18001091</string>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>1529</string>
-	<key>ShowTTY</key>
-	<false/>
-	<key>WatchCustomerServicePhoneNumber</key>
-	<string>18001091</string>
 	<key>OverrideOperatorWiFiName</key>
 	<string>VinaPhone WiFi</string>
 	<key>SupportsSupplementaryServicesOverIMS</key>
@@ -274,31 +274,27 @@
 			<string></string>
 			<key>apn</key>
 			<string>m3-world</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>32817</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>type-mask</key>
-			<integer>131072</integer>
-			<key>apn</key>
-			<string>ims</string>
+			<key>UseNetworkMTU</key>
+			<true/>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
-			<key>DefaultProtocolMask</key>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
@@ -308,26 +304,22 @@
 			<string></string>
 			<key>apn</key>
 			<string>m3-mms</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>4</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>1048576</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>xcap</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -450,11 +442,6 @@
 		</dict>
 		<key>AllowHandoverWithoutIMSVoiceService</key>
 		<true/>
-		<key>SMS</key>
-		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
-		</dict>
 		<key>XCAP</key>
 		<dict>
 			<key>NafHost</key>
@@ -527,11 +514,6 @@
 		<key>EnableWiFiCallingWithoutEntitlement</key>
 		<true/>
 	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>TetheringPhoneNumber</key>
@@ -589,7 +571,7 @@
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://wap.vinaphone.com.vn</string>
+	<string>https://wap.vinaphone.com.vn</string>
 	<key>MyAccountURLTitle</key>
 	<string>VinaPhone Portal</string>
 	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>

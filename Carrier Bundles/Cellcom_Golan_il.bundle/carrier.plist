@@ -60,8 +60,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>internet.golantelecom.net.il</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -164,8 +162,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>internet.golantelecom.net.il</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>49</integer>
 			<key>AllowedProtocolMask</key>

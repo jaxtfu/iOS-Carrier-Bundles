@@ -10,6 +10,26 @@
 	<array>
 		<string>40101</string>
 	</array>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>AllowedProtocolMaskInRoamingUMTS</key>
+			<integer>1</integer>
+			<key>apn</key>
+			<string>internet.beeline.kz</string>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>CarrierName</key>
 	<string>Beeline</string>
 	<key>AllowEDGEEditing</key>
@@ -57,29 +77,29 @@
 	<true/>
 	<key>APNEditabilityTypemask</key>
 	<integer>0</integer>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
-	<key>VoicemailPilotNumber</key>
-	<string>+77052000601</string>
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>49</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>internet.beeline.kz</string>
+			<key>type-mask</key>
+			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</array>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
+	<key>VoicemailPilotNumber</key>
+	<string>+77052000601</string>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>
@@ -102,27 +122,5 @@
 	</array>
 	<key>RegistrationOptInRequired</key>
 	<true/>
-	<key>AttachAPN</key>
-	<dict>
-		<key>3GPP</key>
-		<dict>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>1</integer>
-			<key>password</key>
-			<string></string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
-			<key>PcscfAddressRequired</key>
-			<false/>
-			<key>username</key>
-			<string></string>
-			<key>AllowedProtocolMaskInRoamingUMTS</key>
-			<integer>1</integer>
-			<key>apn</key>
-			<string>internet.beeline.kz</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-		</dict>
-	</dict>
 </dict>
 </plist>

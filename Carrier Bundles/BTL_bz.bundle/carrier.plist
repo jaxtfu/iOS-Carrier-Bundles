@@ -18,7 +18,7 @@
 		</dict>
 	</array>
 	<key>MyAccountURL</key>
-	<string>http://www.digicell.bz</string>
+	<string>https://www.digicell.bz</string>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>70267</string>
@@ -73,6 +73,8 @@
 	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>134</string>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>apns</key>
 	<array>
 		<dict>

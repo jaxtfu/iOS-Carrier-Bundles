@@ -53,11 +53,8 @@
 	<integer>32769</integer>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+35989120</string>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<false/>
-	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -77,10 +74,28 @@
 	<dict>
 		<key>Media</key>
 		<dict>
-			<key>IncludeSDPMaxRed</key>
-			<true/>
 			<key>PreferredAMRWBMode</key>
 			<integer>8</integer>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>106</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
 			<key>EnableBandwidthSpecifiers</key>
 			<true/>
 		</dict>
@@ -98,8 +113,10 @@
 			<integer>60</integer>
 			<key>SendPreferredServiceInInvite</key>
 			<true/>
-			<key>WaitForRingingTimerMTSeconds</key>
-			<integer>25</integer>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>EarlyMediaNeedsHeader</key>
+			<false/>
 			<key>DefaultAuthAlgorithm</key>
 			<string>AKAv1-MD5</string>
 			<key>TriggerCSFBOnSDPError</key>
@@ -113,10 +130,17 @@
 			</dict>
 			<key>AlwaysSendSessionProgress</key>
 			<true/>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>25</integer>
 			<key>UseFakeSAsForDeregistration</key>
 			<true/>
 			<key>UseIPSec</key>
 			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
 		</dict>
 		<key>ConferenceCalling</key>
 		<dict>
@@ -126,6 +150,16 @@
 			<true/>
 			<key>conferenceServer</key>
 			<string>sip:mmtel@conf-factory.ims.mnc005.mcc284.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<true/>
+			</dict>
 		</dict>
 		<key>Voice</key>
 		<dict>
@@ -192,8 +226,8 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>120</string>
 	<key>HomeBundleIdentifier</key>
@@ -271,20 +305,18 @@
 			<integer>4</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
-			<key>apn</key>
-			<string>ims</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
+			<key>apn</key>
+			<string>ims</string>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>UseNetworkMTU</key>
+			<true/>
 		</dict>
 	</array>
 	<key>OTASoftwareUpdate</key>

@@ -19,8 +19,6 @@
 	<array>
 		<string>61205</string>
 	</array>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
 	<key>MMS</key>
 	<dict>
 		<key>MMSC</key>
@@ -47,39 +45,6 @@
 	<true/>
 	<key>APNEditabilityTypemask</key>
 	<integer>49</integer>
-	<key>apns</key>
-	<array>
-		<dict>
-			<key>password</key>
-			<string>web.mtn.ci</string>
-			<key>username</key>
-			<string>web.mtn.ci</string>
-			<key>apn</key>
-			<string>web.mtn.ci</string>
-			<key>type-mask</key>
-			<integer>49</integer>
-		</dict>
-		<dict>
-			<key>password</key>
-			<string>mms.mtn.ci</string>
-			<key>username</key>
-			<string>mms.mtn.ci</string>
-			<key>apn</key>
-			<string>mms.mtn.ci</string>
-			<key>type-mask</key>
-			<integer>4</integer>
-		</dict>
-		<dict>
-			<key>password</key>
-			<string>web.mtn.ci</string>
-			<key>username</key>
-			<string>web.mtn.ci</string>
-			<key>apn</key>
-			<string>web.mtn.ci</string>
-			<key>type-mask</key>
-			<integer>48</integer>
-		</dict>
-	</array>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -124,15 +89,15 @@
 	</dict>
 	<key>SupportsNITZ</key>
 	<false/>
-	<key>ShowTTY</key>
+	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>
 		<array/>
 	</dict>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
 	<key>RegistrationOptInRequired</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
@@ -147,6 +112,39 @@
 		<string>+447537410277</string>
 		<string>+447537410287</string>
 		<string>+447537410297</string>
+	</array>
+	<key>apns</key>
+	<array>
+		<dict>
+			<key>password</key>
+			<string>web.mtn.ci</string>
+			<key>username</key>
+			<string>web.mtn.ci</string>
+			<key>apn</key>
+			<string>web.mtn.ci</string>
+			<key>type-mask</key>
+			<integer>49</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string>mms.mtn.ci</string>
+			<key>username</key>
+			<string>mms.mtn.ci</string>
+			<key>apn</key>
+			<string>mms.mtn.ci</string>
+			<key>type-mask</key>
+			<integer>4</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string>web.mtn.ci</string>
+			<key>username</key>
+			<string>web.mtn.ci</string>
+			<key>apn</key>
+			<string>web.mtn.ci</string>
+			<key>type-mask</key>
+			<integer>48</integer>
+		</dict>
 	</array>
 </dict>
 </plist>

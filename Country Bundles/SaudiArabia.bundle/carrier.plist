@@ -322,6 +322,24 @@
 				<key>PreferredEmergencyNumber</key>
 				<true/>
 			</dict>
+			<dict>
+				<key>Number</key>
+				<string>993</string>
+				<key>SupportsEmergencySetup</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Number</key>
+				<string>987</string>
+				<key>SupportsEmergencySetup</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Number</key>
+				<string>981</string>
+				<key>SupportsEmergencySetup</key>
+				<false/>
+			</dict>
 		</array>
 	</dict>
 </dict>

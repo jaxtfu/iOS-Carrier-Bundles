@@ -284,13 +284,16 @@
 		<string>242</string>
 		<string>com.apple.Norway</string>
 	</array>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsRTT</key>
+		<true/>
+	</dict>
 	<key>IMSConfig</key>
 	<dict>
 		<key>Voice</key>
 		<dict>
 			<key>EnableVolteByDefault</key>
-			<true/>
-			<key>RTTSupported</key>
 			<true/>
 		</dict>
 	</dict>

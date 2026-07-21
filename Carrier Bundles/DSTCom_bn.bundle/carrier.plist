@@ -2,12 +2,94 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>StatusBarImages</key>
+	<array>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>BRU-DSTCom</string>
+			<key>StatusBarCarrierName</key>
+			<string>DSTCom</string>
+		</dict>
+	</array>
 	<key>MaxBluetoothModemConnections</key>
 	<integer>5</integer>
-	<key>AllowEDGEEditing</key>
-	<true/>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>52811</string>
+		<string>52803</string>
+	</array>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>apn</key>
+			<string>dst.internet</string>
+		</dict>
+	</dict>
+	<key>CarrierName</key>
+	<string>DSTCom</string>
 	<key>DataIndicatorOverrideForLTE</key>
 	<string>4G</string>
+	<key>AllowEDGEEditing</key>
+	<true/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>XCAP</key>
+		<dict>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc011.mcc528.pub.3gppnetwork.org</string>
+			<key>BsfPort</key>
+			<integer>80</integer>
+			<key>imsFeatureDependency</key>
+			<true/>
+			<key>Auid</key>
+			<string>mtasxdms/simservs.ngn.etsi.org</string>
+			<key>NafPort</key>
+			<integer>80</integer>
+			<key>SupportsCLIR</key>
+			<true/>
+			<key>supported</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>400,403,500</string>
+			<key>SupportsCFErasure</key>
+			<true/>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>BsfHost</key>
+			<string>bsf.ims.mnc011.mcc528.pub.3gppnetwork.org</string>
+			<key>SupportsCW</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>conferenceServer</key>
+			<string>sip:conference@factory.ims.mnc011.mcc528.3gppnetwork.org</string>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>RingingTimerSeconds</key>
+			<integer>90</integer>
+			<key>RingbackTimerSeconds</key>
+			<integer>90</integer>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.Brunei</string>
+	<key>ShowDialAssist</key>
+	<false/>
+	<key>APNEditabilityTypemask</key>
+	<integer>49</integer>
 	<key>Services</key>
 	<array>
 		<dict>
@@ -17,13 +99,50 @@
 			<string>DSTCare</string>
 		</dict>
 	</array>
+	<key>SupportsNITZ</key>
+	<true/>
+	<key>apns</key>
+	<array>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>dst.internet</string>
+			<key>type-mask</key>
+			<integer>49</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ims</string>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>hos</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</array>
 	<key>MandatoryVerify</key>
 	<dict>
 		<key>SIMs</key>
 		<array/>
 	</dict>
-	<key>SupportsNITZ</key>
-	<true/>
 	<key>MVNOOverrides</key>
 	<dict>
 		<key>Configuration_1</key>
@@ -119,132 +238,9 @@
 			</array>
 		</dict>
 	</dict>
-	<key>APNEditabilityTypemask</key>
-	<integer>49</integer>
-	<key>RegistrationOptInRequired</key>
-	<true/>
-	<key>StatusBarImages</key>
-	<array>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>BRU-DSTCom</string>
-			<key>StatusBarCarrierName</key>
-			<string>DSTCom</string>
-		</dict>
-	</array>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>52811</string>
-		<string>52803</string>
-	</array>
-	<key>IMSConfig</key>
-	<dict>
-		<key>XCAP</key>
-		<dict>
-			<key>NafHost</key>
-			<string>xcap.ims.mnc011.mcc528.pub.3gppnetwork.org</string>
-			<key>BsfPort</key>
-			<integer>80</integer>
-			<key>imsFeatureDependency</key>
-			<true/>
-			<key>Auid</key>
-			<string>mtasxdms/simservs.ngn.etsi.org</string>
-			<key>NafPort</key>
-			<integer>80</integer>
-			<key>SupportsCLIR</key>
-			<true/>
-			<key>supported</key>
-			<true/>
-			<key>ContentType</key>
-			<string>application/xcap-el+xml</string>
-			<key>DisableOnNetworkError</key>
-			<true/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string>400,403,500</string>
-			<key>SupportsCFErasure</key>
-			<true/>
-			<key>imsRegistrationDependency</key>
-			<true/>
-			<key>BsfHost</key>
-			<string>bsf.ims.mnc011.mcc528.pub.3gppnetwork.org</string>
-			<key>SupportsCW</key>
-			<true/>
-		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>conferenceServer</key>
-			<string>sip:conference@factory.ims.mnc011.mcc528.3gppnetwork.org</string>
-		</dict>
-		<key>Signaling</key>
-		<dict>
-			<key>RingingTimerSeconds</key>
-			<integer>90</integer>
-			<key>RingbackTimerSeconds</key>
-			<integer>90</integer>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-		</dict>
-	</dict>
-	<key>ShowDialAssist</key>
-	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>CarrierName</key>
-	<string>DSTCom</string>
-	<key>AttachAPN</key>
-	<dict>
-		<key>3GPP</key>
-		<dict>
-			<key>apn</key>
-			<string>dst.internet</string>
-		</dict>
-	</dict>
-	<key>ShowTTY</key>
-	<false/>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.Brunei</string>
-	<key>apns</key>
-	<array>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>dst.internet</string>
-			<key>type-mask</key>
-			<integer>49</integer>
-		</dict>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>ims</string>
-			<key>type-mask</key>
-			<integer>131072</integer>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>password</key>
-			<string></string>
-			<key>username</key>
-			<string></string>
-			<key>apn</key>
-			<string>hos</string>
-			<key>type-mask</key>
-			<integer>1048576</integer>
-			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
-		</dict>
-	</array>
-	<key>OTASoftwareUpdate</key>
-	<dict/>
+	<key>RegistrationOptInRequired</key>
+	<true/>
 </dict>
 </plist>

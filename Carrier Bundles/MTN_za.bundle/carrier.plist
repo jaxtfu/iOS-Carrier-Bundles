@@ -47,8 +47,6 @@
 	<true/>
 	<key>SupportsNITZ</key>
 	<false/>
-	<key>VoicemailPilotNumber</key>
-	<string>132</string>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>MatchingICCIDPrefixes</key>
@@ -72,14 +70,18 @@
 		<key>ServerURL</key>
 		<string>https://sm-v4-068-zaa-gtm.pr.go-esim.com/</string>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>VoicemailPilotNumber</key>
+	<string>132</string>
+	<key>Show4GSwitch</key>
+	<true/>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<array>
 		<string>+447786205094</string>
 	</array>
-	<key>ShowTTY</key>
-	<false/>
 	<key>OverrideOperatorWiFiName</key>
 	<string>MTNSA - WiFi</string>
 	<key>MMS</key>
@@ -98,7 +100,7 @@
 	<key>TechSettings</key>
 	<dict>
 		<key>WifiCallingAllowedInRoaming</key>
-		<false/>
+		<true/>
 		<key>ChildSAs</key>
 		<dict>
 			<key>FirstChild</key>
@@ -208,19 +210,215 @@
 			<key>type-mask</key>
 			<integer>32821</integer>
 		</dict>
+		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>131072</integer>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowNoDNS</key>
+			<integer>1</integer>
+			<key>SupportSwitchOver</key>
+			<true/>
+			<key>username</key>
+			<string></string>
+			<key>UseNetworkMTU</key>
+			<true/>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>1048576</integer>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>hos</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>262144</integer>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>sos</string>
+			<key>type-mask</key>
+			<integer>262144</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>IMSConfig</key>
 	<dict>
 		<key>Signaling</key>
 		<dict>
+			<key>IgnoreRegNotificationContactExpires</key>
+			<true/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
 			<key>ussdEnabled</key>
 			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>OutgoingDomain</key>
+			<string>1</string>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<integer>25</integer>
+			<key>AdditionalHeaders</key>
+			<dict>
+				<key>INVITE,INVITE:*</key>
+				<string>Feature-Caps: *;+g.3gpp.srvcc-alerting</string>
+			</dict>
+			<key>AlwaysUnsubscribeFromRegEvents</key>
+			<false/>
+			<key>SubscriptionTerminatedMeansRegistrationTerminated</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>-603,3XX,5XX,6XX</string>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>DropRegistrationOnSRVCC</key>
+			<true/>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>40</integer>
+			<key>SendPreferredServiceInInvite</key>
+			<true/>
+			<key>AlwaysAddPrivacyHeader</key>
+			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>NoAnswerFromUser</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>408</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+			</dict>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>25</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>40</integer>
+			<key>UseIPSec</key>
+			<true/>
 		</dict>
-	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>TreatAllNotificationsAsPartial</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc010.mcc655.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<string>5</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-wb</string>
+				</dict>
+			</dict>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>SelectLatestForkWithActiveEarlyMedia</key>
+			<true/>
+			<key>EnableRemoteRTCPDeactivation</key>
+			<true/>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>NafHost</key>
+			<string>xcap.ims.mnc010.mcc655.pub.3gppnetwork.org</string>
+			<key>BsfPort</key>
+			<integer>8090</integer>
+			<key>imsFeatureDependency</key>
+			<true/>
+			<key>NafPort</key>
+			<integer>8080</integer>
+			<key>SupportsCLIR</key>
+			<true/>
+			<key>supported</key>
+			<true/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>403</string>
+			<key>SupportsCFErasure</key>
+			<true/>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>NetworkSupportsCLIRModification</key>
+			<true/>
+			<key>BsfHost</key>
+			<string>bsf.mnc010.mcc655.pub.3gppnetwork.org</string>
+			<key>SupportsCW</key>
+			<true/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
 		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverITechSupported</key>
+			<false/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
@@ -288,8 +486,10 @@
 	</array>
 	<key>CarrierName</key>
 	<string>MTN</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.mtn.co.za</string>
+	<string>https://www.mtn.co.za</string>
 	<key>MyAccountURLTitle</key>
 	<string>MTN</string>
 	<key>MandatoryVerify</key>
@@ -297,6 +497,8 @@
 		<key>SIMs</key>
 		<array/>
 	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>65510</string>

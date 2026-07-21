@@ -2,6 +2,28 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>EmergencyCalling</key>
+	<dict>
+		<key>EmergencyNumbers</key>
+		<array>
+			<dict>
+				<key>PreferredEmergencyNumber</key>
+				<true/>
+				<key>SupportsText</key>
+				<true/>
+				<key>Number</key>
+				<string>112</string>
+			</dict>
+			<dict>
+				<key>PreferredEmergencyNumber</key>
+				<false/>
+				<key>Number</key>
+				<string>999</string>
+				<key>SupportsEmergencySetup</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
 	<key>ISOAlpha2CountryCode</key>
 	<array>
 		<string>ie</string>
@@ -30,6 +52,11 @@
 		<string>272</string>
 		<string>com.apple.Ireland</string>
 	</array>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsRTT</key>
+		<true/>
+	</dict>
 	<key>ShowTARandomizationSwitch</key>
 	<true/>
 	<key>IMSConfig</key>
@@ -39,33 +66,6 @@
 			<key>RingbackTone</key>
 			<string>UK</string>
 		</dict>
-		<key>Voice</key>
-		<dict>
-			<key>RTTSupported</key>
-			<true/>
-		</dict>
-	</dict>
-	<key>EmergencyCalling</key>
-	<dict>
-		<key>EmergencyNumbers</key>
-		<array>
-			<dict>
-				<key>PreferredEmergencyNumber</key>
-				<true/>
-				<key>SupportsText</key>
-				<true/>
-				<key>Number</key>
-				<string>112</string>
-			</dict>
-			<dict>
-				<key>PreferredEmergencyNumber</key>
-				<false/>
-				<key>Number</key>
-				<string>999</string>
-				<key>SupportsEmergencySetup</key>
-				<false/>
-			</dict>
-		</array>
 	</dict>
 </dict>
 </plist>

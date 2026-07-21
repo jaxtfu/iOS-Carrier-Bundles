@@ -95,7 +95,7 @@ lbktFGXVcpRc6pW+QjEq4nerOd3InGMAJYBJyg==</string>
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.unefon.com.mx</string>
+	<string>https://www.unefon.com.mx</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>EnableLTEAfterUpgrade</key>
@@ -104,6 +104,8 @@ lbktFGXVcpRc6pW+QjEq4nerOd3InGMAJYBJyg==</string>
 	<true/>
 	<key>MyAccountURLTitle</key>
 	<string>UNEFON</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<string>False</string>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -184,22 +186,161 @@ lbktFGXVcpRc6pW+QjEq4nerOd3InGMAJYBJyg==</string>
 		<key>A5/3</key>
 		<true/>
 	</dict>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Media</key>
+		<dict>
+			<key>UseSDPTemplateWhenAnswering</key>
+			<true/>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>SuppressOctetAlignAttributeForBECodecs</key>
+			<true/>
+			<key>EnableRTCPExtendedReports</key>
+			<false/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>InactivityTimerRTCPSeconds</key>
+			<integer>36000</integer>
+			<key>ModeSetAMRWB</key>
+			<string>0,1,2</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>UseSDPTemplateForAllInvites</key>
+			<false/>
+			<key>OriginUsername</key>
+			<string></string>
+			<key>AllowHoldMusic</key>
+			<true/>
+			<key>ModeSetAMRNB</key>
+			<string>7</string>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>EnableLastAccessNetworkInfo</key>
+			<false/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>CSFBOnAccessBarred</key>
+			<false/>
+			<key>UseFakeSAsForDeregistration</key>
+			<true/>
+			<key>ForbiddenRegistrationErrorCodes</key>
+			<string></string>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>UseOutgoingSipUri</key>
+			<true/>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>AlwaysUnsubscribeFromRegEvents</key>
+			<true/>
+			<key>AllowResponsesOverDifferentTransport</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,6XX</string>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>40</integer>
+			<key>SendPreferredServiceInInvite</key>
+			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>Preconditions</key>
+			<string>None</string>
+			<key>UseIPSec</key>
+			<true/>
+			<key>RingingTimerSeconds</key>
+			<integer>45</integer>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>SendConferenceSubscribeAfterRefers</key>
+			<true/>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<false/>
+			<key>conferenceServer</key>
+			<string>sip:ALU_CONF@ims.attmex.mx</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SMSBundleToVoice</key>
+			<true/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>GSM</key>
+				<false/>
+				<key>LTE</key>
+				<true/>
+				<key>UMTS</key>
+				<false/>
+			</dict>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ShowDialAssist</key>
+	<false/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>33405_GID2-FFFFFF55</string>
 		<string>334050_GID2-FFFFFF55</string>
 		<string>22201_GID2-FFFFFF55_ID-8952050</string>
 	</array>
-	<key>ShowDialAssist</key>
-	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>00447786205094</string>
 	<key>CarrierName</key>
 	<string>UNEFON</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>web.attmex.mx</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>ShowVolteSwitch</key>
+	<true/>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>*86</string>
 	<key>HomeBundleIdentifier</key>
@@ -228,20 +369,18 @@ lbktFGXVcpRc6pW+QjEq4nerOd3InGMAJYBJyg==</string>
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>1</integer>
 			<key>password</key>
 			<string></string>
-			<key>apn</key>
-			<string>web.attmex.mx</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
+			<key>apn</key>
+			<string>web.attmex.mx</string>
+			<key>type-mask</key>
+			<integer>1</integer>
+			<key>UseNetworkMTU</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>password</key>
@@ -270,8 +409,6 @@ lbktFGXVcpRc6pW+QjEq4nerOd3InGMAJYBJyg==</string>
 			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>NoCellularReconnectCauseCodes</key>
 			<array>
 				<dict>

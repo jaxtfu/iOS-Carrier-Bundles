@@ -34,8 +34,6 @@
 		<key>SupportPhysicalSIMtoESIMTransfer</key>
 		<true/>
 	</dict>
-	<key>OTASoftwareUpdate</key>
-	<dict/>
 	<key>NumberToDialForOTAProvisioning</key>
 	<string>*228</string>
 	<key>AttachAPN</key>
@@ -50,8 +48,10 @@
 			<string></string>
 			<key>apn</key>
 			<string>internet.cs4gLTE.com</string>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>3</integer>
 			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>CellBroadcast</key>
@@ -176,16 +176,18 @@
 			<integer>1800</integer>
 		</array>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>Show4GSwitch</key>
 	<false/>
-	<key>ShowDialAssist</key>
-	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>9971</string>
-	<key>ShowTTY</key>
+	<key>ShowDialAssist</key>
 	<true/>
 	<key>WatchCustomerServicePhoneNumber</key>
 	<string>611</string>
+	<key>TTYRelayNumber</key>
+	<string>711</string>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
 		<key>MaxGreetingDuration</key>
@@ -214,23 +216,10 @@
 		<key>MaxPINLength</key>
 		<integer>6</integer>
 	</dict>
-	<key>OTAActivation</key>
-	<dict>
-		<key>BlacklistedSIMs</key>
-		<array>
-			<string>44053</string>
-			<string>44054</string>
-			<string>44070</string>
-			<string>44071</string>
-			<string>44072</string>
-			<string>44073</string>
-			<string>44074</string>
-			<string>44075</string>
-			<string>44076</string>
-			<string>44078</string>
-			<string>46003</string>
-		</array>
-	</dict>
+	<key>NotRegisteredResetWaitPeriod</key>
+	<integer>20</integer>
+	<key>OverrideOperatorWiFiName</key>
+	<string>C Spire Wi-Fi</string>
 	<key>MMS</key>
 	<dict>
 		<key>MaxMessageSize</key>
@@ -258,6 +247,17 @@
 		<key>CarrierRequiredPhoneNumberHeaderName</key>
 		<string>X-CS3G-MDN</string>
 	</dict>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.UnitedStates</string>
+	<key>CarrierBookmarks</key>
+	<array>
+		<dict>
+			<key>Title</key>
+			<string>C Spire</string>
+			<key>URL</key>
+			<string>https://www.cspire.com/</string>
+		</dict>
+	</array>
 	<key>TechSettings</key>
 	<dict>
 		<key>ChildSAs</key>
@@ -394,23 +394,18 @@
 		<key>SupportCallHandover</key>
 		<true/>
 	</dict>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.UnitedStates</string>
-	<key>CarrierBookmarks</key>
-	<array>
-		<dict>
-			<key>Title</key>
-			<string>C Spire</string>
-			<key>URL</key>
-			<string>http://www.cspire.com/</string>
-		</dict>
-	</array>
 	<key>MaxBluetoothModemConnections</key>
 	<integer>5</integer>
 	<key>OTANumber</key>
 	<string>*228</string>
 	<key>Location</key>
 	<dict>
+		<key>EnableCPIDuringEmergencyMode</key>
+		<true/>
+		<key>EnableEarlyReturnDuringEmergencyMode</key>
+		<true/>
+		<key>AllowOTDOADuringEmergencyMode</key>
+		<true/>
 		<key>EmergencyLocation</key>
 		<dict>
 			<key>AugmentedEmergencyAction</key>
@@ -426,6 +421,8 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>ShowVolteSwitch</key>
+	<false/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -505,26 +502,242 @@
 	</array>
 	<key>TetheringURL</key>
 	<string>https://help.cspire.com/wireless/</string>
+	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
+	<integer>131072</integer>
 	<key>IMSConfig</key>
 	<dict>
 		<key>Signaling</key>
 		<dict>
-			<key>AllowGeolocationForEmergencyCallsWhileInboundRoaming</key>
+			<key>OutgoingCallPrefix</key>
+			<dict>
+				<key>Local</key>
+				<string>+1</string>
+				<key>International</key>
+				<string>011</string>
+			</dict>
+			<key>RingbackTimerSeconds</key>
+			<integer>90</integer>
+			<key>EnableCellularNetworkInfo</key>
 			<true/>
+			<key>AllowPhoneContextInEmergencyUri</key>
+			<false/>
+			<key>UseCIDUrlInPIDF</key>
+			<true/>
+			<key>UseTupleInPIDF</key>
+			<true/>
+			<key>TcpIdleTimeoutSeconds</key>
+			<integer>0</integer>
+			<key>MaxUdpMessageSize</key>
+			<integer>1200</integer>
+			<key>SipTimers</key>
+			<dict>
+				<key>InviteResponseTimeout</key>
+				<integer>6000</integer>
+			</dict>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>PIDFGeoPrivShape</key>
+			<string>ellipsoid</string>
+			<key>UseBase64ForMultipartSMS</key>
+			<false/>
+			<key>EmergencyRegistrationTimeoutSeconds</key>
+			<integer>2</integer>
+			<key>LocationForShortCodeCalls</key>
+			<string>BOTH</string>
 			<key>PIDFConfidence</key>
 			<integer>90</integer>
+			<key>CountryOfOriginationFormat</key>
+			<string>BOTH</string>
+			<key>Allow3DPIDFInMessages</key>
+			<false/>
+			<key>UseIPSec</key>
+			<true/>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>AlwaysPrack18x</key>
+			<true/>
+			<key>EmergencyCallBackModeExpirationSeconds</key>
+			<integer>300</integer>
+			<key>AllowGeolocationForEmergencyCallsWhileInboundRoaming</key>
+			<true/>
+			<key>EmergencyURNs</key>
+			<dict>
+				<key>default</key>
+				<string>urn:service:sos</string>
+			</dict>
+			<key>SendEmergencyLocationUpdates</key>
+			<true/>
+			<key>OutgoingDomain</key>
+			<string>1</string>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
 			<key>AdditionalHeaders</key>
 			<dict>
+				<key>INVITE[wifi,911]</key>
+				<array>
+					<string>P-Emergency-Info: IEEE-802.11b;i-wlan-node-id=${DEVICE_REF_ID}</string>
+					<string>Supported: geolocation</string>
+				</array>
 				<key>INVITE[911,wifi]</key>
 				<array>
 					<string>Supported: geolocation</string>
 				</array>
 			</dict>
-			<key>UseCIDUrlInPIDF</key>
+			<key>AlwaysAddSipInstance</key>
 			<true/>
+			<key>AllowRemoteHoldForUnconfirmedCalls</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>ContactUser</key>
+			<string>MDN</string>
 			<key>AlwaysAddGeolocationForEmergencyCalls</key>
 			<true/>
-			<key>SendEmergencyLocationUpdates</key>
+			<key>NetworkTerminationRetryIntervalSeconds</key>
+			<integer>1</integer>
+			<key>SendLocalTimeZoneInformation</key>
+			<true/>
+			<key>AddLocationToEmergencySMS</key>
+			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>EarlyMediaNeedsHeader</key>
+			<false/>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<integer>15</integer>
+			<key>Preconditions</key>
+			<string>None</string>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>15</integer>
+		</dict>
+		<key>SIM</key>
+		<dict>
+			<key>CarrierDomain</key>
+			<string>ims.mnc230.mcc311.3gppnetwork.org</string>
+			<key>impiFormat</key>
+			<string>imsi@carrierDomain</string>
+			<key>impuFormat</key>
+			<array>
+				<string>imsi@carrierDomain</string>
+			</array>
+		</dict>
+		<key>LocalShortCodeNumbers</key>
+		<array>
+			<string>411</string>
+			<string>*411</string>
+		</array>
+		<key>SMS</key>
+		<dict>
+			<key>DCN</key>
+			<dict>
+				<key>destinationNumber</key>
+				<string>7692774735</string>
+				<key>hysteresisTimeout</key>
+				<integer>10</integer>
+			</dict>
+			<key>enableInNonVoLTEMode</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>conferenceServer</key>
+			<string>sip:conference@ims.cspire.com</string>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>TreatAllNotificationsAsPartial</key>
+			<true/>
+		</dict>
+		<key>EnableWiFiCallingByDefault</key>
+		<true/>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<true/>
+		<key>ShowWiFiCallingRoamingSwitch</key>
+		<true/>
+		<key>XCAP</key>
+		<dict>
+			<key>NafHost</key>
+			<string>utagw.ims.cspire.com</string>
+			<key>provisioningDependency</key>
+			<true/>
+			<key>BsfPort</key>
+			<integer>443</integer>
+			<key>NafPort</key>
+			<integer>443</integer>
+			<key>SupportsCLIR</key>
+			<true/>
+			<key>ImpuRank</key>
+			<string>first</string>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>400,403,500</string>
+			<key>SupportsCFErasure</key>
+			<true/>
+			<key>supported</key>
+			<true/>
+			<key>BsfHost</key>
+			<string>utbsfagw.ims.cspire.com</string>
+			<key>SupportsCW</key>
+			<true/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>MaxRedundancy</key>
+			<integer>220</integer>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>EnableRTCPExtendedReports</key>
+			<true/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>2</string>
+					<key>br</key>
+					<string>5.9-13.2</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-wb</string>
+				</dict>
+			</dict>
+			<key>InactivityTimerRTCPSeconds</key>
+			<integer>20</integer>
+			<key>ModeSetAMRWB</key>
+			<string>0,1,2</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>UseRestrictiveDirectionWhenCreatingAnswer</key>
+			<false/>
+			<key>AllowHoldMusic</key>
+			<false/>
+			<key>ModeSetAMRNB</key>
+			<string>0,2,4,7</string>
+			<key>EnableIncomingDTMF</key>
+			<true/>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverITechSupported</key>
+			<false/>
+			<key>tLte911Timer</key>
+			<integer>22</integer>
+			<key>EnableVolteByDefault</key>
+			<true/>
+			<key>BlockSilentRedialOverCS</key>
+			<true/>
+			<key>TestEmergencyPSAPSupported</key>
 			<true/>
 		</dict>
 	</dict>
@@ -532,17 +745,24 @@
 	<integer>640</integer>
 	<key>SMSSettings</key>
 	<dict>
+		<key>OutgoingSMSPrefix</key>
+		<dict>
+			<key>Local</key>
+			<string>+1</string>
+			<key>International</key>
+			<string>+011</string>
+		</dict>
 		<key>SupportsEMS</key>
 		<false/>
 		<key>UnsupportedEncodings</key>
 		<array>
 			<string>7bitGSM</string>
 		</array>
-		<key>TransportFallback</key>
-		<false/>
 	</dict>
-	<key>SuspendFastDormancyAllowed</key>
-	<true/>
+	<key>ForceWPSCallsOverCS</key>
+	<false/>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
 	<key>RCS</key>
 	<dict>
 		<key>ProvisioningData</key>
@@ -555,9 +775,7 @@
 		<key>ShowRCSSwitch</key>
 		<true/>
 	</dict>
-	<key>TetheringPhoneNumber</key>
-	<string>611</string>
-	<key>VVMIgnoresIntlDataRoaming</key>
+	<key>SuspendFastDormancyAllowed</key>
 	<true/>
 	<key>PushSettings</key>
 	<dict>
@@ -599,15 +817,32 @@
 			<string>View My Minutes</string>
 		</dict>
 	</array>
+	<key>TetheringPhoneNumber</key>
+	<string>611</string>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<true/>
 	<key>VisualVoicemailServiceName</key>
 	<string>IMAP</string>
 	<key>CarrierName</key>
 	<string>C Spire</string>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsRTT</key>
+		<true/>
+		<key>EnableHoldForRTT</key>
+		<true/>
+		<key>SupportsEmergencyRTT</key>
+		<true/>
+	</dict>
 	<key>CDMAInternationalRoaming</key>
 	<dict>
 		<key>EnabledByDefault</key>
 		<false/>
 	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>SMSUseLocalTZ</key>
 	<true/>
 	<key>SupportedSIMs</key>

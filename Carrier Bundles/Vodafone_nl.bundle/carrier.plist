@@ -2,75 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
-	<key>AllowEDGEEditing</key>
-	<true/>
-	<key>PreferCarrierNameFromMetadata</key>
-	<true/>
-	<key>DataIndicatorOverrideForLTE</key>
-	<string>4G</string>
-	<key>MandatoryVerify</key>
-	<dict>
-		<key>SIMs</key>
-		<array/>
-	</dict>
-	<key>Services</key>
-	<array>
-		<dict>
-			<key>ServiceCode</key>
-			<string>+31654500100</string>
-			<key>ServiceName</key>
-			<string>Klantenservice</string>
-		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string>+31654501231</string>
-			<key>ServiceName</key>
-			<string>Voicemail aan</string>
-		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string>+31654501230</string>
-			<key>ServiceName</key>
-			<string>Voicemail uit</string>
-		</dict>
-	</array>
-	<key>MyAccountURL</key>
-	<string>https://www.vodafone.nl</string>
-	<key>SupportsNITZ</key>
-	<false/>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
-	<key>APNEditabilityTypemask</key>
-	<integer>53</integer>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
-	<key>MyAccountURLTitle</key>
-	<string>My Vodafone</string>
-	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32768</integer>
-	<key>RegistrationOptInRequired</key>
-	<true/>
-	<key>StatusBarImages</key>
-	<array>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>vodafone NL</string>
-			<key>StatusBarCarrierName</key>
-			<string>vodafone NL</string>
-		</dict>
-	</array>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>20404</string>
-		<string>26202_ID-893144</string>
-	</array>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportsOnDevicePhysicalSIMConvert</key>
@@ -99,12 +30,27 @@
 			<string>TransferSIMService</string>
 		</array>
 	</dict>
-	<key>ShowDialAssist</key>
-	<true/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>+447786205094</string>
-	<key>CarrierName</key>
-	<string>vf nl</string>
+	<key>OTASoftwareUpdate</key>
+	<dict>
+		<key>SoftwareUpdateOptInRequired</key>
+		<true/>
+	</dict>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string>vodafone</string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string>vodafone</string>
+			<key>apn</key>
+			<string>live.vodafone.com</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>SupportsUserBusyCauseCode</key>
 	<true/>
 	<key>PhoneAccountTransfer</key>
@@ -132,16 +78,12 @@
 			</array>
 		</dict>
 	</dict>
-	<key>ShowTTY</key>
-	<false/>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
-	<key>VoicemailPilotNumber</key>
-	<string>+31654501233</string>
-	<key>IntlDataRoamingSwitch</key>
+	<key>AllowEDGEEditing</key>
 	<true/>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.Netherlands</string>
+	<key>RegistrationOptInRequired</key>
+	<true/>
+	<key>SupportsNITZ</key>
+	<false/>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>MatchingICCIDPrefixes</key>
@@ -176,11 +118,131 @@
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
 	</dict>
-	<key>PushSettings</key>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>VoicemailPilotNumber</key>
+	<string>+31654501233</string>
+	<key>ShowDialAssist</key>
+	<true/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>+447786205094</string>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Vodafone NL Wifi</string>
+	<key>TechSettings</key>
 	<dict>
-		<key>MultiSIMTopic</key>
-		<string>com.vodafone.nl.entitlement</string>
+		<key>WiFiCallingIdentityProtectionMethod</key>
+		<string>PseudoID</string>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA2-256</string>
+						</array>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>AES-256</string>
+						</array>
+						<key>DHGroup</key>
+						<integer>14</integer>
+						<key>Lifetime</key>
+						<integer>80000</integer>
+					</dict>
+				</array>
+				<key>InstallPolicies</key>
+				<true/>
+				<key>ReplayWindowSize</key>
+				<integer>12</integer>
+			</dict>
+		</dict>
+		<key>WifiCallingAllowedInRoaming</key>
+		<false/>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>cellular</string>
+		</dict>
+		<key>SupportContextSwitchOver</key>
+		<true/>
+		<key>SupportCallHandover</key>
+		<true/>
+		<key>TechPolicies</key>
+		<array>
+			<dict>
+				<key>policy</key>
+				<string>TRUE</string>
+				<key>serviceMask</key>
+				<integer>131072</integer>
+			</dict>
+		</array>
+		<key>IKE</key>
+		<dict>
+			<key>LocalIdentifier</key>
+			<string>anonymous@nai.epc.mnc004.mcc204.3gppnetwork.org</string>
+			<key>NATTKeepAliveOffload</key>
+			<true/>
+			<key>DeadPeerDetectionRetryInterval</key>
+			<integer>10</integer>
+			<key>DeadPeerDetectionEnabled</key>
+			<false/>
+			<key>RemoteAddress</key>
+			<string>epdg.epc.mnc$mnc.mcc$mcc.pub.3gppnetwork.org</string>
+			<key>Username</key>
+			<string>0$imsi@nai.epc.mnc004.mcc204.3gppnetwork.org</string>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-256</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-256</string>
+					<key>DHGroup</key>
+					<integer>14</integer>
+					<key>AuthenticationMethod</key>
+					<string>Certificate</string>
+					<key>Lifetime</key>
+					<integer>80000</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-512</string>
+				</dict>
+			</array>
+			<key>DeadPeerDetectionMaxRetries</key>
+			<integer>4</integer>
+			<key>DeadPeerDetectionInterval</key>
+			<integer>600</integer>
+			<key>RemoteCertificateAuthorityName</key>
+			<string>DigiCert Global Root G2</string>
+			<key>RemoteCertificateHostname</key>
+			<string>epdg.epc.mnc004.mcc204.pub.3gppnetwork.org</string>
+			<key>ValidateRemoteCertificate</key>
+			<true/>
+		</dict>
+		<key>5wiServiceMask</key>
+		<integer>3</integer>
+		<key>ExtraConfigurationAttributeRequestv4</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16384</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv4</string>
+				<key>Type</key>
+				<string>IPv4Address</string>
+			</dict>
+		</array>
 	</dict>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.Netherlands</string>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
+	<key>DataIndicatorOverrideForLTE</key>
+	<string>4G</string>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -191,13 +253,223 @@
 			<key>apn</key>
 			<string>live.vodafone.com</string>
 			<key>type-mask</key>
-			<integer>49</integer>
+			<integer>32817</integer>
+		</dict>
+		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>131072</integer>
+			<key>SupportSwitchOver</key>
+			<true/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowNoDNS</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>AllowNoDNS</key>
+			<integer>1</integer>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>262144</integer>
+			<key>apn</key>
+			<string>sos</string>
+			<key>username</key>
+			<string></string>
+			<key>type-mask</key>
+			<integer>262144</integer>
 		</dict>
 	</array>
-	<key>OTASoftwareUpdate</key>
+	<key>IMSConfig</key>
 	<dict>
-		<key>SoftwareUpdateOptInRequired</key>
+		<key>Signaling</key>
+		<dict>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>SendLocalTimeZoneInformation</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>5XX,-504</string>
+			<key>SendResumeInviteAsSendRecv</key>
+			<false/>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>180</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>180</integer>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>CallToVoicemail</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>CC_TERM_NOREPLY_TMR_EXPIRED</string>
+					<key>StatusCode</key>
+					<integer>408</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteRequestCanceled</string>
+				</dict>
+			</dict>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>UseCIDUrlInPIDF</key>
+			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>conferenceServer</key>
+			<string>sip:conference@conference.ims.mnc004.mcc204.3gppnetwork.org</string>
+		</dict>
+		<key>EnableWiFiCallingByDefault</key>
 		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>max-red</key>
+					<string>220</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>ch-aw-recv</key>
+					<string>3</string>
+					<key>cmr</key>
+					<string>1</string>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVoLTEWithVoWiFi</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<false/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
 	</dict>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
+	<key>PreferCarrierNameFromMetadata</key>
+	<true/>
+	<key>APNEditabilityTypemask</key>
+	<integer>53</integer>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>PushSettings</key>
+	<dict>
+		<key>MultiSIMTopic</key>
+		<string>com.vodafone.nl.entitlement</string>
+	</dict>
+	<key>Services</key>
+	<array>
+		<dict>
+			<key>ServiceCode</key>
+			<string>+31654500100</string>
+			<key>ServiceName</key>
+			<string>Klantenservice</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>+31654501231</string>
+			<key>ServiceName</key>
+			<string>Voicemail aan</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>+31654501230</string>
+			<key>ServiceName</key>
+			<string>Voicemail uit</string>
+		</dict>
+	</array>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
+	<key>StatusBarImages</key>
+	<array>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>vodafone NL</string>
+			<key>StatusBarCarrierName</key>
+			<string>vodafone NL</string>
+		</dict>
+	</array>
+	<key>CarrierName</key>
+	<string>vf nl</string>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>MyAccountURL</key>
+	<string>https://www.vodafone.nl</string>
+	<key>IntlDataRoamingSwitch</key>
+	<true/>
+	<key>MyAccountURLTitle</key>
+	<string>My Vodafone</string>
+	<key>MandatoryVerify</key>
+	<dict>
+		<key>SIMs</key>
+		<array/>
+	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>20404</string>
+		<string>26202_ID-893144</string>
+	</array>
 </dict>
 </plist>

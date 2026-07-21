@@ -44,16 +44,16 @@
 		</dict>
 		<key>XCAP</key>
 		<dict>
-			<key>UnsolicitedRequestDelay</key>
-			<integer>0</integer>
-			<key>supported</key>
-			<false/>
-			<key>imsRegistrationDependency</key>
-			<true/>
-			<key>DisableOnNetworkError</key>
-			<true/>
 			<key>imsFeatureDependency</key>
 			<true/>
+			<key>supported</key>
+			<false/>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>imsRegistrationDependency</key>
+			<true/>
+			<key>UnsolicitedRequestDelay</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>ShowRATIndicator</key>
@@ -66,18 +66,16 @@
 	<dict>
 		<key>3GPP</key>
 		<dict>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>password</key>
 			<string></string>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
 			<key>PcscfAddressRequired</key>
 			<false/>
-			<key>username</key>
-			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>DEVICESETUP</string>
+			<key>username</key>
+			<string></string>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>
@@ -125,18 +123,16 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>532480</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>DEVICESETUP</string>
+			<key>type-mask</key>
+			<integer>532480</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>

@@ -203,8 +203,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>internet</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -213,8 +211,6 @@
 	<string>none</string>
 	<key>ShowVolteSwitch</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>AllowsVoIP</key>
@@ -238,8 +234,6 @@
 					<string></string>
 					<key>apn</key>
 					<string>internet</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>type-mask</key>
 					<integer>32817</integer>
 					<key>AllowedProtocolMask</key>

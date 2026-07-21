@@ -21,14 +21,14 @@
 			<string>Orange RCA</string>
 		</dict>
 	</array>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>62303</string>
 	</array>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
 	<key>MyAccountURL</key>
-	<string>http://www.orangerca.com/</string>
+	<string>https://www.orangerca.com/</string>
 	<key>CarrierName</key>
 	<string>Orange Central Africa</string>
 	<key>MyAccountURLTitle</key>
@@ -79,16 +79,10 @@
 	<false/>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
 	<key>VoicemailPilotNumber</key>
 	<string>+23672080807</string>
-	<key>RegistrationOptInRequired</key>
-	<true/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>+447786205094</string>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -102,5 +96,9 @@
 			<integer>49</integer>
 		</dict>
 	</array>
+	<key>RegistrationOptInRequired</key>
+	<true/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>+447786205094</string>
 </dict>
 </plist>

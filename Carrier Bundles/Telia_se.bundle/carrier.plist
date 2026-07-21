@@ -112,15 +112,17 @@
 			<string>SKU_EU</string>
 		</array>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>133</string>
-	<key>ShowDialAssist</key>
-	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<array>
 		<string>+447786205094</string>
 	</array>
-	<key>ShowTTY</key>
+	<key>ShowDialAssist</key>
+	<true/>
+	<key>Show3GSwitchWith4G</key>
 	<false/>
 	<key>OverrideOperatorWiFiName</key>
 	<string>WiFi-samtal</string>
@@ -262,18 +264,16 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>32817</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>online.telia.se</string>
+			<key>type-mask</key>
+			<integer>32817</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -284,8 +284,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>4</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>3</integer>
 			<key>username</key>
@@ -302,8 +300,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
@@ -320,8 +316,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>3</integer>
 			<key>username</key>
@@ -332,12 +326,187 @@
 			<integer>3</integer>
 		</dict>
 	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>SendEmergencyLocationUpdates</key>
+			<true/>
+			<key>AllowGeolocationForEmergencyCallsWhileInboundRoaming</key>
+			<true/>
+			<key>AddLocationToEmergencySMS</key>
+			<false/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>UseCIDUrlInPIDF</key>
+			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>AlwaysAddGeolocationForEmergencyCalls</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,6XX,-603,-404,-408,-480</string>
+			<key>SendResumeInviteAsSendRecv</key>
+			<false/>
+			<key>RingbackTimerSeconds</key>
+			<integer>180</integer>
+			<key>Allow3DPIDFInMessages</key>
+			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>CallToVoicemail</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>CC_TERM_NOREPLY_TMR_EXPIRED</string>
+					<key>StatusCode</key>
+					<integer>408</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteRequestCanceled</string>
+				</dict>
+				<key>CallDecline</key>
+				<dict>
+					<key>Protocol</key>
+					<string>Q.850</string>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderCause</key>
+					<integer>21</integer>
+					<key>DisableCSFB</key>
+					<true/>
+					<key>StatusCode</key>
+					<integer>603</integer>
+				</dict>
+			</dict>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>CallEndReasons</key>
+			<dict>
+				<key>NoAnswer</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string></string>
+					<key>StatusCode</key>
+					<string>408</string>
+				</dict>
+				<key>RejectedByUser</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>Call Rejected By User</string>
+					<key>ReasonHeaderCause</key>
+					<integer>487</integer>
+				</dict>
+				<key>RemoteCancel</key>
+				<dict>
+					<key>ReasonHeaderText</key>
+					<string>Remote Cancel</string>
+					<key>ReasonHeaderCause</key>
+					<integer>487</integer>
+				</dict>
+			</dict>
+			<key>ValidateSipMessageRecipient</key>
+			<false/>
+			<key>UseIPSec</key>
+			<true/>
+			<key>RingingTimerSeconds</key>
+			<integer>180</integer>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>TreatAllNotificationsAsPartial</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>mmtel@conf-factory.ims.mnc001.mcc240.3gppnetwork.org</string>
+		</dict>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SMSBundleToVoice</key>
+			<true/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>DTMFDigitDurationMilliseconds</key>
+			<integer>255</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>3</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>cmr</key>
+					<string>1</string>
+				</dict>
+			</dict>
+			<key>MaxRedundancy</key>
+			<integer>220</integer>
+			<key>DTMFInterDigitIntervalMilliseconds</key>
+			<string>255</string>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>CallBarringNASFallbackSupported</key>
+			<string>True</string>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>SupportsCB</key>
+			<true/>
+			<key>DisableOnNetworkError</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>404,501,502,503,504</string>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>supported</key>
+			<true/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>SMSSettings</key>
 	<dict>
 		<key>SMSCarrierReportJunkAddress</key>
 		<string>7726</string>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
@@ -345,6 +514,8 @@
 	<true/>
 	<key>APNEditabilityTypemask</key>
 	<integer>53</integer>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+46706133133</string>
 	<key>PushSettings</key>
@@ -404,12 +575,19 @@
 	</array>
 	<key>CarrierName</key>
 	<string>TELIA</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>MyAccountURL</key>
-	<string>http://telia.se</string>
+	<string>https://telia.se</string>
 	<key>SupportedPLMNs</key>
 	<array>
 		<string>24005</string>
 	</array>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsEmergencyRTT</key>
+		<true/>
+	</dict>
 	<key>MyAccountURLTitle</key>
 	<string>Telia.se</string>
 	<key>MandatoryVerify</key>

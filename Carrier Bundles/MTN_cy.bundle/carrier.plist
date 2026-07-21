@@ -21,28 +21,39 @@
 	<dict>
 		<key>EnableReplyToAlphanumericOriginator</key>
 		<false/>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
-	<key>RegistrationOptInRequired</key>
-	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+35796121121</string>
+	<key>RegistrationOptInRequired</key>
+	<true/>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>28010</string>
 	</array>
 	<key>IMSConfig</key>
 	<dict>
-		<key>SMS</key>
+		<key>Media</key>
 		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
-		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>SerializeParticipants</key>
-			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>106</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>0</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 		</dict>
 		<key>Signaling</key>
 		<dict>
@@ -56,6 +67,16 @@
 			<key>UseIPSec</key>
 			<true/>
 			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SerializeParticipants</key>
+			<true/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
 			<true/>
 		</dict>
 	</dict>
@@ -87,8 +108,8 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>121</string>
 	<key>HomeBundleIdentifier</key>

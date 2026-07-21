@@ -106,17 +106,15 @@
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
-			<string>active.bhmobile.ba</string>
+			<string></string>
 			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
 	<key>SupportsImsCapability</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>+38761123123</string>
 	<key>HomeBundleIdentifier</key>
@@ -150,7 +148,7 @@
 			<key>type-mask</key>
 			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>password</key>

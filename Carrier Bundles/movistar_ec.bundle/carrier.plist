@@ -31,31 +31,10 @@
 			<string>Servicios de valor agregado</string>
 		</dict>
 	</array>
-	<key>MVNOOverrides</key>
-	<dict>
-		<key>Configuration_Carrier1</key>
-		<dict>
-			<key>OverrideConfiguration</key>
-			<dict>
-				<key>OverrideOperatorName</key>
-				<string>Tuenti</string>
-				<key>MyAccountURLTitle</key>
-				<string>Tuenti Website</string>
-				<key>MyAccountURL</key>
-				<string>www.tuenti.ec</string>
-				<key>CarrierName</key>
-				<string>Tuenti</string>
-			</dict>
-			<key>SupportedSIMs</key>
-			<array>
-				<string>740005</string>
-			</array>
-		</dict>
-	</dict>
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>https://www.movistar.com.ec</string>
+	<string>https://www.tigo.com.ec</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>EnableLTEAfterUpgrade</key>
@@ -66,43 +45,131 @@
 		<false/>
 	</dict>
 	<key>MyAccountURLTitle</key>
-	<string>Movistar Website</string>
+	<string>Tigo</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RegistrationOptInRequired</key>
 	<true/>
-	<key>StockSymboli</key>
-	<array>
-		<dict>
-			<key>name</key>
-			<string>Telefonica</string>
-			<key>symbol</key>
-			<string>TEF.MC</string>
-		</dict>
-	</array>
-	<key>StatusBarImages</key>
-	<array>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<true/>
-			<key>CarrierName</key>
-			<string>MOVISTAR</string>
-			<key>StatusBarCarrierName</key>
-			<string>Movistar</string>
-		</dict>
-	</array>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>74000</string>
-		<string>21407_ID-8959300</string>
-		<string>21402_ID-8959300</string>
+		<string>740005</string>
 	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Media</key>
+		<dict>
+			<key>InactivityTimerRTCPSeconds</key>
+			<integer>36000</integer>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>UseSDPTemplateWhenAnswering</key>
+			<true/>
+			<key>UseSDPTemplateForAllInvites</key>
+			<false/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>PreferredSenderIdentity</key>
+			<string>from</string>
+			<key>UseIPSec</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>380,500</string>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>35</integer>
+			<key>RingingTimerSeconds</key>
+			<integer>35</integer>
+			<key>ussdEnabled</key>
+			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>UseOutgoingSipUri</key>
+			<false/>
+			<key>RegistrationExpirationSeconds</key>
+			<integer>3600</integer>
+			<key>SessionExpiresSeconds</key>
+			<integer>1800</integer>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>TriggerCSFBOnWaitForRingingTimeout</key>
+			<true/>
+			<key>UseFakeSAsForDeregistration</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>SendConferenceSubscribeInNewDialog</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc00.mcc740.3gppnetwork.org</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<false/>
+			</dict>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>ShowDialAssist</key>
 	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
+	<key>CarrierName</key>
+	<string>Tigo</string>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string>tigo</string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string>tigo</string>
+			<key>apn</key>
+			<string>internet.tigo.ec</string>
+			<key>AllowedProtocolMask</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>ShowVolteSwitch</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>*82</string>
 	<key>EmergencyNumberExceptions</key>
@@ -111,27 +178,31 @@
 	</array>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Ecuador</string>
+	<key>ShowLTEWarningUnsupportedCarrier</key>
+	<false/>
 	<key>apns</key>
 	<array>
 		<dict>
 			<key>password</key>
-			<string>movistar</string>
+			<string>tigo</string>
 			<key>username</key>
-			<string>movistar</string>
+			<string>tigo</string>
 			<key>apn</key>
-			<string>internet.movistar.com.ec</string>
+			<string>internet.tigo.ec</string>
 			<key>type-mask</key>
 			<integer>49</integer>
 		</dict>
 		<dict>
 			<key>password</key>
-			<string>movistar</string>
+			<string></string>
 			<key>username</key>
-			<string>movistar</string>
+			<string></string>
 			<key>apn</key>
-			<string>internet.movistar.com.ec</string>
+			<string>ims</string>
+			<key>SupportSwitchOver</key>
+			<true/>
 			<key>type-mask</key>
-			<integer>48</integer>
+			<integer>131072</integer>
 		</dict>
 	</array>
 </dict>

@@ -14,22 +14,7 @@
 	<false/>
 	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
 	<key>Show5GSwitch</key>
 	<true/>
-	<key>IMSConfig</key>
-	<dict>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-			<key>SupportedDomains</key>
-			<dict>
-				<key>LTE</key>
-				<true/>
-			</dict>
-		</dict>
-	</dict>
 </dict>
 </plist>

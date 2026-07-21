@@ -21,6 +21,8 @@
 	<true/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+389771222</string>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -38,6 +40,34 @@
 	</array>
 	<key>ShowDialAssist</key>
 	<true/>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
+		<true/>
+		<key>SupportSecureIntent</key>
+		<true/>
+		<key>SupportedEntitlements</key>
+		<integer>8193</integer>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>ServerAddress</key>
+		<string>https://esim-es-open-prod-aonemk.esimcloud.net/aonemk/prod/executeAppleActions</string>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<true/>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+		<key>SupportedActions</key>
+		<array>
+			<string>TransferSIMService</string>
+		</array>
+	</dict>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<array>
 		<string>+447537410207</string>
@@ -55,10 +85,22 @@
 	<string>A1 MK</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
-	<key>VoicemailPilotNumber</key>
-	<string>+389771222</string>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>LocalInstallSMDPURL</key>
+		<string>https://mka.prod.ondemandconnectivity.com</string>
+		<key>TransferErrorCodes</key>
+		<dict>
+			<key>MaintenanceErrors</key>
+			<array>
+				<string>300</string>
+			</array>
+		</dict>
+		<key>MinCompatibleOS</key>
+		<string>26.5</string>
+		<key>SupportsFallbackToLegacyFlow</key>
+		<false/>
+	</dict>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -95,6 +137,8 @@
 			</dict>
 		</array>
 	</dict>
+	<key>VoicemailPilotNumber</key>
+	<string>+389771222</string>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Macedonia</string>
 	<key>MMS</key>
@@ -109,6 +153,11 @@
 		<integer>10</integer>
 		<key>MaxMessageSize</key>
 		<integer>307200</integer>
+	</dict>
+	<key>PushSettings</key>
+	<dict>
+		<key>CellularPlanTransferTopic</key>
+		<string>mk.esrv.ios.st</string>
 	</dict>
 	<key>apns</key>
 	<array>

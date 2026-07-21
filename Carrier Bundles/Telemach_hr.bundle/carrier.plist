@@ -40,6 +40,8 @@
 	<true/>
 	<key>MyAccountURLTitle</key>
 	<string>Telemach Hrvatska</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -57,10 +59,20 @@
 	</array>
 	<key>IMSConfig</key>
 	<dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
 		<key>XCAP</key>
 		<dict>
 			<key>supported</key>
 			<false/>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>UseIPSec</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>ShowDialAssist</key>
@@ -87,8 +99,6 @@
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -124,6 +134,8 @@
 				<false/>
 			</dict>
 		</array>
+		<key>PrioritizeNetworkNumbers</key>
+		<true/>
 	</dict>
 	<key>VoicemailPilotNumber</key>
 	<string>+385951000222</string>
@@ -159,8 +171,6 @@
 			<string>Telemach Internet</string>
 			<key>apn</key>
 			<string>telemach.hr</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
@@ -173,8 +183,6 @@
 			<string>Telemach MMS</string>
 			<key>apn</key>
 			<string>telemach.hr</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>4</integer>
 			<key>AllowedProtocolMask</key>

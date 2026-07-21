@@ -95,6 +95,14 @@
 		<string>20435_GID1-41</string>
 		<string>20628_ID-893135</string>
 	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
 	<key>CarrierName</key>
@@ -108,8 +116,6 @@
 		</dict>
 	</dict>
 	<key>SupportsImsCapability</key>
-	<false/>
-	<key>ShowTTY</key>
 	<false/>
 	<key>IntlDataRoamingAllowed</key>
 	<array>
@@ -910,6 +916,8 @@
 			</dict>
 		</array>
 	</dict>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.AirGSM</string>
 	<key>APNEditabilityTypemaskNew</key>
 	<integer>49</integer>
 	<key>ShowLTEWarningUnsupportedCarrier</key>

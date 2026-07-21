@@ -97,8 +97,6 @@
 		</dict>
 		<key>SMS</key>
 		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 			<key>SMSBundleToVoice</key>
 			<false/>
 			<key>SupportedDomains</key>
@@ -127,8 +125,6 @@
 					<string>AMR</string>
 					<key>bw</key>
 					<string>nb-swb</string>
-					<key>hf-only</key>
-					<string>1</string>
 				</dict>
 			</dict>
 			<key>IncludeSDPMaxRed</key>
@@ -832,7 +828,6 @@
 		<string>64801</string>
 		<string>310120</string>
 		<string>310320</string>
-		<string>310020</string>
 		<string>44051</string>
 	</array>
 	<key>APNEditabilityTypemaskNew</key>
@@ -867,8 +862,6 @@
 			<integer>3</integer>
 			<key>apn</key>
 			<string>xcap</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
@@ -879,8 +872,6 @@
 			<integer>3</integer>
 			<key>apn</key>
 			<string>sos</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>262144</integer>
 			<key>AllowedProtocolMask</key>
@@ -893,8 +884,6 @@
 			<integer>3</integer>
 			<key>apn</key>
 			<string>ims</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>131072</integer>
 			<key>UseNetworkMTU</key>
@@ -905,8 +894,6 @@
 			<integer>3</integer>
 			<key>apn</key>
 			<string>wbdata</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>32817</integer>
 			<key>AllowedProtocolMask</key>
@@ -917,8 +904,6 @@
 			<integer>3</integer>
 			<key>apn</key>
 			<string>mms.wbdata</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>4</integer>
 			<key>AllowedProtocolMask</key>

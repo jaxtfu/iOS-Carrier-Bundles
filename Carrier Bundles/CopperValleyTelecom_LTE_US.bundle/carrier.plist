@@ -139,16 +139,14 @@
 	</array>
 	<key>PhoneNumberIsVoiceMailNumber</key>
 	<true/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>2775</string>
 	<key>Show4GSwitch</key>
 	<true/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>2775</string>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>OverrideOperatorName</key>
 	<string>Copper Valley Telecom</string>
-	<key>ShowTTY</key>
-	<true/>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
 		<key>MaxGreetingDuration</key>
@@ -181,59 +179,21 @@
 	</dict>
 	<key>DisallowCarrierMenuAtHome</key>
 	<false/>
-	<key>OTAActivation</key>
-	<dict>
-		<key>BlacklistedSIMs</key>
-		<array>
-			<string>44053</string>
-			<string>44054</string>
-			<string>44070</string>
-			<string>44071</string>
-			<string>44072</string>
-			<string>44073</string>
-			<string>44074</string>
-			<string>44075</string>
-			<string>44076</string>
-			<string>44078</string>
-			<string>46003</string>
-		</array>
-	</dict>
 	<key>NotRegisteredResetWaitPeriod</key>
 	<integer>60</integer>
 	<key>OverrideOperatorWiFiName</key>
 	<string>CVT Wi-Fi</string>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.UnitedStates</string>
 	<key>CarrierBookmarks</key>
 	<array>
 		<dict>
 			<key>Title</key>
 			<string>Copper Valley Telecom</string>
 			<key>URL</key>
-			<string>http://www.cvinternet.net</string>
+			<string>https://www.cvinternet.net</string>
 		</dict>
 	</array>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.UnitedStates</string>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
-	<key>OTANumber</key>
-	<string>*228</string>
-	<key>Location</key>
-	<dict>
-		<key>EmergencyLocation</key>
-		<dict>
-			<key>AugmentedEmergencyAction</key>
-			<dict>
-				<key>Supplemented911</key>
-				<dict>
-					<key>HTTPS</key>
-					<dict>
-						<key>URL</key>
-						<string>gateway.icloud.com/meridian/meridian/location</string>
-					</dict>
-				</dict>
-			</dict>
-		</dict>
-	</dict>
 	<key>MMS</key>
 	<dict>
 		<key>UAProf</key>
@@ -259,8 +219,31 @@
 		<key>AllowFetchFromMultipleMMSCs</key>
 		<false/>
 	</dict>
-	<key>ShowCallForwardingSwitch</key>
-	<true/>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
+	<key>OTANumber</key>
+	<string>*228</string>
+	<key>Location</key>
+	<dict>
+		<key>EnableCPIDuringEmergencyMode</key>
+		<true/>
+		<key>EmergencyLocation</key>
+		<dict>
+			<key>AugmentedEmergencyAction</key>
+			<dict>
+				<key>Supplemented911</key>
+				<dict>
+					<key>HTTPS</key>
+					<dict>
+						<key>URL</key>
+						<string>gateway.icloud.com/meridian/meridian/location</string>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+		<key>EnableEarlyReturnDuringEmergencyMode</key>
+		<true/>
+	</dict>
 	<key>TechSettings</key>
 	<dict>
 		<key>ChildSAs</key>
@@ -393,24 +376,24 @@
 		<key>SupportCallHandover</key>
 		<true/>
 	</dict>
+	<key>ShowCallForwardingSwitch</key>
+	<true/>
 	<key>apns</key>
 	<array>
 		<dict>
 			<key>configuration</key>
 			<array>
 				<dict>
-					<key>type-mask</key>
-					<integer>4244023</integer>
 					<key>password</key>
 					<string></string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
-					<key>AllowedProtocolMaskInRoaming</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>3</integer>
 					<key>apn</key>
 					<string>cvt01</string>
+					<key>type-mask</key>
+					<integer>4244023</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
@@ -421,8 +404,6 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>131078</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>SupportSwitchOver</key>
 					<true/>
 					<key>username</key>
@@ -433,18 +414,16 @@
 					<integer>3</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>1048576</integer>
 					<key>password</key>
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>1048576</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>username</key>
 					<string></string>
 					<key>apn</key>
 					<string>hos</string>
+					<key>type-mask</key>
+					<integer>1048576</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
@@ -455,8 +434,6 @@
 					<string></string>
 					<key>apn</key>
 					<string>sos</string>
-					<key>DefaultProtocolMask</key>
-					<integer>3</integer>
 					<key>type-mask</key>
 					<integer>262144</integer>
 					<key>AllowedProtocolMask</key>
@@ -479,8 +456,6 @@
 			<integer>60</integer>
 			<key>RingingTimerSeconds</key>
 			<integer>55</integer>
-			<key>UseCIDUrlInPIDF</key>
-			<true/>
 			<key>AllowPhoneContextInEmergencyUri</key>
 			<false/>
 			<key>SessionExpiresSeconds</key>
@@ -491,6 +466,8 @@
 			<string>IMSI@domain</string>
 			<key>RegistrationExpirationSeconds</key>
 			<integer>7200</integer>
+			<key>UseCIDUrlInPIDF</key>
+			<true/>
 			<key>SipTimers</key>
 			<dict>
 				<key>InviteResponseTimeout</key>
@@ -519,6 +496,8 @@
 					<string></string>
 				</dict>
 			</dict>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<integer>25</integer>
 			<key>EmergencyRegistrationTimeoutSeconds</key>
 			<integer>2</integer>
 			<key>RegSubscriptionExpirationSeconds</key>
@@ -607,6 +586,8 @@
 			</dict>
 			<key>AllowRemoteHoldForUnconfirmedCalls</key>
 			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<false/>
 			<key>ContactUser</key>
 			<string>MDN</string>
 			<key>SendLocalTimeZoneInformation</key>
@@ -615,10 +596,10 @@
 			<false/>
 			<key>Preconditions</key>
 			<string>SupportedOptional</string>
+			<key>EarlyMediaNeedsHeader</key>
+			<false/>
 			<key>EmergencyImpuRank</key>
 			<string>IMSI@domain</string>
-			<key>WaitForRingingTimerMOSeconds</key>
-			<integer>25</integer>
 			<key>OutgoingCallPrefix</key>
 			<dict>
 				<key>Local</key>
@@ -665,6 +646,15 @@
 		<dict>
 			<key>enableInNonVoLTEMode</key>
 			<true/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>GSM</key>
+				<false/>
+				<key>LTE</key>
+				<true/>
+				<key>UMTS</key>
+				<false/>
+			</dict>
 			<key>allowCSFBInVolteMode</key>
 			<false/>
 		</dict>
@@ -734,19 +724,19 @@
 	<integer>640</integer>
 	<key>SMSSettings</key>
 	<dict>
+		<key>OutgoingSMSPrefix</key>
+		<dict>
+			<key>Local</key>
+			<string>+1</string>
+			<key>International</key>
+			<string>+011</string>
+		</dict>
 		<key>SupportsEMS</key>
 		<false/>
 		<key>UnsupportedEncodings</key>
 		<array>
 			<string>7bitGSM</string>
 		</array>
-		<key>OutgoingSMSPrefix</key>
-		<dict>
-			<key>International</key>
-			<string>+011</string>
-		</dict>
-		<key>TransportFallback</key>
-		<false/>
 	</dict>
 	<key>ForceWPSCallsOverCS</key>
 	<false/>
@@ -800,7 +790,7 @@
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://www.cvinternet.net</string>
+	<string>https://www.cvinternet.net</string>
 	<key>MyAccountURLTitle</key>
 	<string>My Account</string>
 	<key>CDMAInternationalRoaming</key>

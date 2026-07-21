@@ -9,9 +9,22 @@
 			<string>Test</string>
 		</array>
 	</dict>
-	<key>SupportsNITZ</key>
+	<key>PushSettings</key>
+	<dict>
+		<key>VVMTopic</key>
+		<string>com.att.ent.cns.vvm</string>
+		<key>MultiSIMTopic</key>
+		<string>com.att.ent.cns.multi-sim</string>
+		<key>VoWiFiTopic</key>
+		<string>com.att.ent.cns.vowifi</string>
+	</dict>
+	<key>SupportsIMSSignalingIndication</key>
 	<true/>
 	<key>ShowDialAssist</key>
+	<true/>
+	<key>OverrideOperatorWiFiName</key>
+	<string>AT&amp;T Wi-Fi</string>
+	<key>SupportsNITZ</key>
 	<true/>
 	<key>StatusBarImages</key>
 	<array>
@@ -22,14 +35,6 @@
 			<string>at&amp;t</string>
 			<key>StatusBarCarrierName</key>
 			<string>AT&amp;T</string>
-		</dict>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>cingular</string>
-			<key>StatusBarCarrierName</key>
-			<string>cingular</string>
 		</dict>
 		<dict>
 			<key>AllowPrefixMatching</key>
@@ -48,28 +53,8 @@
 			<string>AT&amp;T</string>
 		</dict>
 	</array>
-	<key>WISPrAccounts</key>
-	<dict>
-		<key>phone@attmobility.com</key>
-		<dict>
-			<key>AuthenticationRealm</key>
-			<string>attmobilityiphone.com</string>
-			<key>PasswordType</key>
-			<string>AT&amp;T</string>
-			<key>MatchingSSIDs</key>
-			<dict>
-				<key>attwifi</key>
-				<array>
-					<string>.att.com</string>
-					<string>.att.net</string>
-					<string>.sbc.com</string>
-					<string>.wayport.net</string>
-				</array>
-			</dict>
-			<key>SharedSecret</key>
-			<string>a446649326d41d87dbb8caec8caf736a</string>
-		</dict>
-	</dict>
+	<key>EnableIratRLHandoverPolicy</key>
+	<true/>
 	<key>CellularPlanProvisioningSettings</key>
 	<dict>
 		<key>WaitForPhoneNumberDuringActivation</key>
@@ -102,10 +87,10 @@
 		<key>AllowReturnReports</key>
 		<true/>
 	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>TearDownTetheringDataContextDuringAuthentication</key>
 	<false/>
-	<key>VisualVoicemailServiceName</key>
-	<string>IMAP</string>
 	<key>EnableLTEAfterUpgrade</key>
 	<true/>
 	<key>CarrierEntitlements</key>
@@ -152,12 +137,150 @@
 		<key>TempFailureBackoffDelay</key>
 		<integer>180</integer>
 	</dict>
-	<key>pdpTimeout</key>
-	<array>
-		<integer>2</integer>
-	</array>
-	<key>SupportsUserBusyCauseCode</key>
-	<false/>
+	<key>TechSettings</key>
+	<dict>
+		<key>FatalActivationErrors</key>
+		<array>
+			<integer>8192</integer>
+		</array>
+		<key>ChildSAs</key>
+		<dict>
+			<key>FirstChild</key>
+			<dict>
+				<key>ChildProposals</key>
+				<array>
+					<dict>
+						<key>EncryptionAlgorithm</key>
+						<array>
+							<string>AES-128</string>
+						</array>
+						<key>Lifetime</key>
+						<integer>80000</integer>
+						<key>IntegrityAlgorithm</key>
+						<array>
+							<string>SHA2-256</string>
+						</array>
+					</dict>
+				</array>
+				<key>InstallPolicies</key>
+				<true/>
+				<key>ReplayWindowSize</key>
+				<integer>12</integer>
+			</dict>
+		</dict>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>cellular</string>
+			<key>PreferredTechnologyRoaming</key>
+			<string>wifi</string>
+		</dict>
+		<key>ExtraConfigurationAttributeRequestv6</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16386</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv6</string>
+				<key>Type</key>
+				<string>IPv6Address</string>
+			</dict>
+		</array>
+		<key>SupportContextSwitchOver</key>
+		<true/>
+		<key>WiFiCallingControlsAlliWLanServices</key>
+		<true/>
+		<key>AllowHandOverFromDataModeList</key>
+		<array>
+			<string>LTE</string>
+		</array>
+		<key>WifiCallingAllowedInRoaming</key>
+		<true/>
+		<key>PdnErrorsToBlockHandover</key>
+		<string>54</string>
+		<key>5wiServiceMask</key>
+		<integer>3</integer>
+		<key>IKE</key>
+		<dict>
+			<key>Proposals</key>
+			<array>
+				<dict>
+					<key>EncryptionAlgorithm</key>
+					<string>AES-128</string>
+					<key>IntegrityAlgorithm</key>
+					<string>SHA2-256</string>
+					<key>DHGroup</key>
+					<integer>14</integer>
+					<key>AuthenticationMethod</key>
+					<string>None</string>
+					<key>Lifetime</key>
+					<integer>80000</integer>
+					<key>EAPMethod</key>
+					<string>EAP-AKA</string>
+					<key>PRFAlgorithm</key>
+					<string>SHA2-256</string>
+				</dict>
+			</array>
+			<key>DeadPeerDetectionEnabled</key>
+			<false/>
+			<key>DeadPeerDetectionMaxRetries</key>
+			<integer>4</integer>
+			<key>DeadPeerDetectionInterval</key>
+			<integer>600</integer>
+			<key>LocalIdentifier</key>
+			<string>0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org</string>
+			<key>NATTKeepAliveOffload</key>
+			<true/>
+			<key>ValidateRemoteCertificate</key>
+			<false/>
+			<key>RemoteAddress</key>
+			<string>epdg.epc.att.net</string>
+			<key>DeadPeerDetectionRetryInterval</key>
+			<integer>10</integer>
+		</dict>
+		<key>AllowRoamingHandover</key>
+		<false/>
+		<key>ExtraConfigurationAttributeRequestv4</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<integer>16384</integer>
+				<key>Name</key>
+				<string>AssignedPCSCFIPv4</string>
+				<key>Type</key>
+				<string>IPv4Address</string>
+			</dict>
+		</array>
+		<key>SetHandOverIPv6Prefix</key>
+		<true/>
+		<key>TechPolicies</key>
+		<array>
+			<dict>
+				<key>policy</key>
+				<string>cellData=false</string>
+				<key>serviceMask</key>
+				<integer>1081351</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>131072</integer>
+			</dict>
+			<dict>
+				<key>policy</key>
+				<string>true</string>
+				<key>serviceMask</key>
+				<integer>262144</integer>
+			</dict>
+		</array>
+		<key>IPSecMTU</key>
+		<integer>1280</integer>
+		<key>SupportCallHandover</key>
+		<true/>
+	</dict>
+	<key>VisualVoicemailServiceName</key>
+	<string>IMAP</string>
 	<key>RCS</key>
 	<dict>
 		<key>EnableBusinessMessagingByDefault</key>
@@ -172,6 +295,34 @@
 		<key>EnableRCSByDefault</key>
 		<true/>
 	</dict>
+	<key>SupportsUserBusyCauseCode</key>
+	<false/>
+	<key>WISPrAccounts</key>
+	<dict>
+		<key>phone@attmobility.com</key>
+		<dict>
+			<key>AuthenticationRealm</key>
+			<string>attmobilityiphone.com</string>
+			<key>PasswordType</key>
+			<string>AT&amp;T</string>
+			<key>MatchingSSIDs</key>
+			<dict>
+				<key>attwifi</key>
+				<array>
+					<string>.att.com</string>
+					<string>.att.net</string>
+					<string>.sbc.com</string>
+					<string>.wayport.net</string>
+				</array>
+			</dict>
+			<key>SharedSecret</key>
+			<string>a446649326d41d87dbb8caec8caf736a</string>
+		</dict>
+	</dict>
+	<key>pdpTimeout</key>
+	<array>
+		<integer>2</integer>
+	</array>
 	<key>SMSSettings</key>
 	<dict>
 		<key>ForwardJunkReports</key>
@@ -185,6 +336,8 @@
 		<key>UseIMSDuringCSCall</key>
 		<true/>
 	</dict>
+	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
+	<integer>131072</integer>
 	<key>Services</key>
 	<array>
 		<dict>
@@ -218,6 +371,8 @@
 			<string>Voice Connect</string>
 		</dict>
 	</array>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>TravelSettings</key>
 	<dict>
 		<key>EnableEnhancedTravelEducation</key>
@@ -227,10 +382,17 @@
 	<string>4G</string>
 	<key>PhoneSettings</key>
 	<dict>
-		<key>AutoCallPickupTimer</key>
-		<integer>16</integer>
 		<key>CarrierVoiceCallSpamReportAddress</key>
 		<string>7728</string>
+		<key>ShowBCIDSwitch</key>
+		<true/>
+		<key>AutoCallPickupTimer</key>
+		<integer>16</integer>
+	</dict>
+	<key>ToolsConfiguration</key>
+	<dict>
+		<key>EnableFeedbackCollection</key>
+		<true/>
 	</dict>
 	<key>SupportedSIMs</key>
 	<array>
@@ -309,10 +471,15 @@
 	<true/>
 	<key>SuspendFastDormancyAllowed</key>
 	<true/>
-	<key>WatchCustomerServicePhoneNumber</key>
-	<string>611</string>
+	<key>LocationSecondaryOverlay</key>
+	<dict>
+		<key>EnableCPIDuringEmergencyMode</key>
+		<true/>
+	</dict>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>28818773</string>
+	<key>WatchCustomerServicePhoneNumber</key>
+	<string>611</string>
 	<key>ManagedHours</key>
 	<dict>
 		<key>ExpirationDate</key>
@@ -443,11 +610,485 @@
 	</dict>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.UnitedStates</string>
-	<key>Show3GSwitch</key>
-	<false/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Media</key>
+		<dict>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+			<key>HoldHeartbeatIntervalSeconds</key>
+			<integer>5</integer>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>RTTBandwidthSpecifierRTCPPercentage</key>
+			<integer>10</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>127</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>2</string>
+					<key>br</key>
+					<string>5.9-13.2</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>AlwaysPrintSDPFormatInfo</key>
+			<true/>
+			<key>EnableRemoteRTCPDeactivation</key>
+			<true/>
+			<key>AllowIPv6UnicastAddress</key>
+			<true/>
+			<key>InactivityTimerRTCPSeconds</key>
+			<integer>20</integer>
+			<key>TTYRelayNumber</key>
+			<string>711</string>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>StopLocalRingbackToneOn181</key>
+			<false/>
+			<key>UseRestrictiveDirectionWhenCreatingAnswer</key>
+			<false/>
+			<key>DTMFInterDigitIntervalMilliseconds</key>
+			<integer>540</integer>
+			<key>RTTBandwidthSpecifierASValue</key>
+			<integer>4</integer>
+			<key>EnableIncomingDTMF</key>
+			<true/>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>IgnoreCallerIDBlockingForEmergency</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<false/>
+			<key>E911OverCSIfNoIMSReg</key>
+			<true/>
+			<key>CheckIMSPrefForEmergency</key>
+			<false/>
+			<key>CellularE911SearchTimeout</key>
+			<integer>5</integer>
+			<key>endNonEmergencyCalls</key>
+			<true/>
+			<key>tLte911Timer</key>
+			<integer>0</integer>
+		</dict>
+		<key>SIM</key>
+		<dict>
+			<key>USIMFallbackSupport</key>
+			<false/>
+		</dict>
+		<key>CallTransfer</key>
+		<dict>
+			<key>CallTransferOnlyIfIMSRegistered</key>
+			<true/>
+			<key>CallTransferRequestUri</key>
+			<string>pull-VoLTE-active@one.att.net</string>
+			<key>CallTransferDialNumber</key>
+			<string>######</string>
+			<key>CallTransferToUri</key>
+			<string>pull-SP-active@one.att.net</string>
+		</dict>
+		<key>LocalShortCodeNumbers</key>
+		<array>
+			<string>211</string>
+			<string>311</string>
+			<string>411</string>
+			<string>511</string>
+			<string>611</string>
+			<string>711</string>
+			<string>811</string>
+		</array>
+		<key>Signaling</key>
+		<dict>
+			<key>AllowResponsesOverDifferentTransport</key>
+			<false/>
+			<key>ForcedFeatureTags</key>
+			<string>voice,sms</string>
+			<key>MaxFatalRegistrationErrors</key>
+			<integer>1</integer>
+			<key>MaxReRegistrationAttempts</key>
+			<integer>0</integer>
+			<key>PrivacyHeaderValue</key>
+			<string>header</string>
+			<key>AdditionalHeaders</key>
+			<dict>
+				<key>INVITE[wifi,911]</key>
+				<array>
+					<string>P-Emergency-Info: IEEE-802.11b;i-wlan-node-id=${DEVICE_REF_ID}</string>
+					<string>Supported: geolocation</string>
+				</array>
+			</dict>
+			<key>ShowBrandedCallingSwitch</key>
+			<true/>
+			<key>AllowGeolocationForEmergencyCallsWhileInboundRoaming</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string></string>
+			<key>SendEmergencyLocationUpdates</key>
+			<true/>
+			<key>TriggerCSFBOnLocalQoSTimeoutMO</key>
+			<false/>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>UseBase64ForMultipartSMS</key>
+			<false/>
+			<key>VerstatFeatureCapability</key>
+			<string>Enabled</string>
+			<key>LocalQoSTimeoutMTSeconds</key>
+			<integer>6</integer>
+			<key>SipTimers</key>
+			<dict>
+				<key>D</key>
+				<integer>32000</integer>
+				<key>InviteResponseTimeout</key>
+				<integer>0</integer>
+				<key>AckRetransmitTimer</key>
+				<integer>32000</integer>
+				<key>AckReceiveTimeout</key>
+				<integer>32000</integer>
+				<key>J</key>
+				<integer>32000</integer>
+				<key>F</key>
+				<integer>32000</integer>
+				<key>B</key>
+				<integer>32000</integer>
+				<key>H</key>
+				<integer>32000</integer>
+			</dict>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>LocalQoSTimeoutMOSeconds</key>
+			<integer>10</integer>
+			<key>ReRegisterOnErrorCodes</key>
+			<string>REGISTER:403,480,500,503,504;INVITE:60,403,408,504</string>
+			<key>RegisterOnServiceUpdate</key>
+			<false/>
+			<key>SpamCallRiskLevels</key>
+			<dict>
+				<key>low</key>
+				<string>1:75</string>
+				<key>high</key>
+				<string>85:100</string>
+				<key>medium</key>
+				<string>76:84</string>
+			</dict>
+			<key>AddLocationToEmergencySMS</key>
+			<true/>
+			<key>SpamHeaderFeatureCapability</key>
+			<string>Enabled</string>
+			<key>RegistrationPolicy</key>
+			<string>ATT</string>
+			<key>RingingTimerSeconds</key>
+			<integer>45</integer>
+			<key>CSFBOnAccessBarred</key>
+			<true/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting</string>
+			</dict>
+			<key>BrandedCallingImageFetchingTimeoutMilliseconds</key>
+			<integer>2000</integer>
+			<key>NetworkTerminationRetryIntervalSeconds</key>
+			<integer>1</integer>
+			<key>SpamCallCategoryMapping</key>
+			<array>
+				<string>telemarketing:Telemarketer,telemarketer,telemarketing</string>
+				<string>survey:Survey,survey</string>
+				<string>debt-collection:Account Services</string>
+				<string>political:Political Call,Political,political</string>
+				<string>not-for-profit:not-for-profit,Non-Profit,non-profit,Nonprofit</string>
+				<string>spam:spammer,Spam Risk,Spam,spam</string>
+				<string>fraud:Fraud</string>
+			</array>
+			<key>AlwaysCheckRegistrationRefreshTimerAfterSystemClockChange</key>
+			<true/>
+			<key>KillRegistrationOnHandoverTimeout</key>
+			<false/>
+			<key>TriggerCSFBOnLocalQoSTimeoutMT</key>
+			<false/>
+			<key>OutgoingDomain</key>
+			<string>1</string>
+			<key>EmergencyCallBackModeExpirationSeconds</key>
+			<integer>20</integer>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>IgnoreNonCompliantSupportedHeaders</key>
+			<false/>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<integer>0</integer>
+			<key>ResetCallIdOnInitialRegistration</key>
+			<true/>
+			<key>PIDFConfidence</key>
+			<integer>90</integer>
+			<key>UseCIDUrlInPIDF</key>
+			<true/>
+			<key>AccessNetworkRefreshDelayMilliseconds</key>
+			<integer>30000</integer>
+			<key>AlwaysAddGeolocationForEmergencyCalls</key>
+			<true/>
+			<key>PIDFGeoPrivShape</key>
+			<string>ellipsoid</string>
+			<key>EnableBrandedCalling</key>
+			<true/>
+			<key>AccessNetworkRefreshMethod</key>
+			<string>INVITE</string>
+			<key>IgnoreOverridesForWPSCalls</key>
+			<true/>
+			<key>UseTupleInPIDF</key>
+			<true/>
+			<key>EnableRingbackAudioForTextCalls</key>
+			<true/>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>8</integer>
+			<key>Allow3DPIDFInMessages</key>
+			<true/>
+			<key>IgnoreFromHeaderForSenderName</key>
+			<false/>
+			<key>ClearRegistrationCallIdOnDeinitialization</key>
+			<true/>
+			<key>UseT3402ForPdpBackoff</key>
+			<false/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>PerCallQoSIndications</key>
+			<false/>
+			<key>AddLocationInInviteResponses</key>
+			<string>180,183</string>
+			<key>IPSecSegmentOffset</key>
+			<integer>210</integer>
+			<key>ReRegisterOnInternalRequestTimeout</key>
+			<true/>
+			<key>WifiAccessInfo</key>
+			<string>000000000000</string>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+			<key>RegistrationRetryIntervals</key>
+			<string>0</string>
+			<key>AccessBarringType</key>
+			<string>ACB</string>
+			<key>UseFakeSAsForDeregistration</key>
+			<true/>
+			<key>ussdEnabled</key>
+			<true/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>NotFound</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>404</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+				<key>TemporarilyUnavailable</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>480</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+			</dict>
+			<key>LocationForShortCodeCalls</key>
+			<string>CIVIC</string>
+			<key>SendPreferredServiceInInvite</key>
+			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>BOTH</string>
+			<key>BrandedCallingAssetServersAllowList</key>
+			<array>
+				<dict>
+					<key>Server</key>
+					<string>cdn.ccid.neustar.biz</string>
+					<key>Certificate</key>
+					<string>lPraBjD+VHks5/sVEDOczhg00z9TGoGMAjndDyYGUNU=</string>
+				</dict>
+			</array>
+			<key>RingbackTimerSeconds</key>
+			<integer>180</integer>
+			<key>EmergencyPreferredIdentity</key>
+			<string>IMEI</string>
+			<key>StartLocalQosTimerOnSessionProgress</key>
+			<true/>
+			<key>WaitForRingingTimerWPSSeconds</key>
+			<integer>8</integer>
+		</dict>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<true/>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>TreatAllNotificationsAsPartial</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:n-way_voice@one.att.net</string>
+		</dict>
+		<key>EnableBrandedCallingByDefault</key>
+		<true/>
+		<key>ShowBrandedCallingSwitch</key>
+		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SMSBundleToVoice</key>
+			<false/>
+			<key>allowCSFBInVolteMode</key>
+			<false/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>IgnoreSimFileCFIS</key>
+			<true/>
+			<key>SupportsCLIR</key>
+			<false/>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>UnsolicitedRequestDelay</key>
+			<integer>0</integer>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string></string>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>ImpuRank</key>
+			<string>tel:MDN,tel:other,MDN@domain,MDN@other,IMSI@domain,IMSI@3gpp,IMSI@other,sip:other@domain,sip:other</string>
+			<key>supported</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>Show4GSwitch</key>
 	<false/>
-	<key>EvoBlacklistedGIDs</key>
+	<key>Show3GSwitch</key>
+	<false/>
+	<key>NetworkEncryptionCiphers</key>
+	<dict>
+		<key>GEA3</key>
+		<true/>
+		<key>A5/3</key>
+		<true/>
+	</dict>
+	<key>CarrierName</key>
+	<string>AT&amp;T</string>
+	<key>SendTextMMSToShortCodeAsSMS</key>
+	<true/>
+	<key>AttachAPN</key>
+	<dict>
+		<key>3GPP</key>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>PcscfAddressRequired</key>
+			<false/>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>nxtgenphone</string>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>StockSymboli</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>AT&amp;T</string>
+			<key>symbol</key>
+			<string>T</string>
+		</dict>
+	</array>
+	<key>CarrierAuthHost</key>
+	<string>https://www.att.com/buy/byod/</string>
+	<key>IMSConfigSecondaryOverlay</key>
+	<dict>
+		<key>Media</key>
+		<dict>
+			<key>SRTPUnencryptedSRTCP</key>
+			<false/>
+			<key>SRTPEndToAccessEdgeProtection</key>
+			<true/>
+			<key>SRTPUnauthenticatedSRTP</key>
+			<false/>
+			<key>SRTPUnencryptedSRTP</key>
+			<false/>
+			<key>SRTPCryptoSuite</key>
+			<string>AES_CM_128_HMAC_SHA1_80</string>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>DefaultLocalSipPort</key>
+			<integer>0</integer>
+			<key>UseCampedAccessNetworkInPANI</key>
+			<true/>
+			<key>ForcedFeatureTags</key>
+			<string></string>
+			<key>DefaultRemoteSipPort</key>
+			<integer>5061</integer>
+			<key>IncompleteRegistrationThrottlingIntervalSeconds</key>
+			<integer>15</integer>
+			<key>EmergencyURNs</key>
+			<dict>
+				<key>911</key>
+				<string>911@one.att.net</string>
+				<key>default</key>
+				<string>urn:service:sos</string>
+			</dict>
+			<key>QosOptionsClass</key>
+			<string>voice</string>
+			<key>AddQosOptionsToSockets</key>
+			<true/>
+			<key>AdditionalHeaders</key>
+			<dict>
+				<key>REGISTER</key>
+				<array>
+					<string>Supported: gruu</string>
+				</array>
+				<key>REGISTER[wifi]</key>
+				<array>
+					<string>P-IMS-Softphone-Label: 6172637469637365636f6e6461727921;${SHORT_DEVICE_CLASS};"${DEVICE_NAME}"</string>
+				</array>
+			</dict>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>INVITE,INVITE:*</key>
+				<string></string>
+			</dict>
+			<key>ForceTls</key>
+			<true/>
+			<key>UseIPSec</key>
+			<false/>
+			<key>ConnectivityType</key>
+			<string>Wifi</string>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>conferenceServer</key>
+			<string>sip:n-way_voice@one.att.net</string>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>BlockSilentRedialOverCS</key>
+			<true/>
+			<key>E911OverITechSupported</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>EvoDisallowedGIDs</key>
 	<array>
 		<string>44FF</string>
 		<string>49FF</string>
@@ -460,28 +1101,6 @@
 		<string>69FF</string>
 		<string>01FF-41FF</string>
 	</array>
-	<key>NetworkEncryptionCiphers</key>
-	<dict>
-		<key>GEA3</key>
-		<true/>
-		<key>A5/3</key>
-		<true/>
-	</dict>
-	<key>CarrierName</key>
-	<string>AT&amp;T</string>
-	<key>SendTextMMSToShortCodeAsSMS</key>
-	<true/>
-	<key>StockSymboli</key>
-	<array>
-		<dict>
-			<key>name</key>
-			<string>AT&amp;T</string>
-			<key>symbol</key>
-			<string>T</string>
-		</dict>
-	</array>
-	<key>CarrierAuthHost</key>
-	<string>https://www.att.com/buy/byod/</string>
 	<key>MyAccountURL</key>
 	<string>https://www.att.com/acctmgmt/overview</string>
 	<key>TTYRelayNumber</key>
@@ -490,6 +1109,20 @@
 	<integer>8400</integer>
 	<key>RemoteDiagnosticsWWANAllowed</key>
 	<true/>
+	<key>TechSettingsSecondaryOverlay</key>
+	<dict>
+		<key>iRatPolicies</key>
+		<dict>
+			<key>PreferredTechnology</key>
+			<string>wifi</string>
+		</dict>
+		<key>5wiServiceMask</key>
+		<integer>1</integer>
+		<key>SupportOverCell</key>
+		<true/>
+	</dict>
+	<key>ShowVolteSwitch</key>
+	<false/>
 	<key>MTU</key>
 	<array>
 		<dict>
@@ -520,8 +1153,6 @@
 		<key>EnableEarlyReturnDuringEmergencyMode</key>
 		<true/>
 	</dict>
-	<key>SuppressSimToolkitSendShortMessageNotifications</key>
-	<true/>
 	<key>SupportedPLMNs</key>
 	<array>
 		<string>310170</string>
@@ -532,6 +1163,8 @@
 		<string>310030</string>
 		<string>310950</string>
 	</array>
+	<key>DataIndicatorOverrideForEvo</key>
+	<string>5GE</string>
 	<key>OTASoftwareUpdate</key>
 	<dict>
 		<key>SoftwareUpdateOptInRequired</key>
@@ -539,10 +1172,21 @@
 		<key>DaysToWaitForCellularDownload</key>
 		<integer>21</integer>
 	</dict>
-	<key>ShowTTY</key>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>SuppressSimToolkitSendShortMessageNotifications</key>
 	<true/>
 	<key>TetheringURL</key>
 	<string>http://www.att.com/personalhotspot</string>
+	<key>TypesOfEvo</key>
+	<dict>
+		<key>Type0</key>
+		<string></string>
+		<key>Type1</key>
+		<string>AT&amp;T...1</string>
+		<key>Type2</key>
+		<string>AT&amp;T...2</string>
+	</dict>
 	<key>WiFiHotspotIdentityProtectionMethod</key>
 	<string>PseudoID</string>
 	<key>CustomerServicePhoneNumber</key>
@@ -559,10 +1203,17 @@
 			<integer>1440</integer>
 		</dict>
 	</dict>
+	<key>ForceWPSCallsOverCS</key>
+	<false/>
 	<key>IntlDataRoamingAllowed</key>
 	<array>
 		<string>330110</string>
 	</array>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>EnableHoldForRTT</key>
+		<true/>
+	</dict>
 	<key>MVNOOverrides</key>
 	<dict>
 		<key>Configuration_1</key>

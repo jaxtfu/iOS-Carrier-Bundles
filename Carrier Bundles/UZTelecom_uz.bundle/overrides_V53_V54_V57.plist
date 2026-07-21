@@ -4,14 +4,12 @@
 <dict>
 	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
-	<key>Show5GSwitch</key>
-	<true/>
-	<key>Enable5GAutoByDefault</key>
-	<true/>
-	<key>Show3GSwitchWithVolte</key>
-	<true/>
 	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
+	<key>Show5GSwitch</key>
+	<true/>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
 </dict>

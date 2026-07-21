@@ -23,6 +23,8 @@
 	<integer>0</integer>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<true/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+4237969000</string>
 	<key>Show4GSwitch</key>
@@ -43,28 +45,28 @@
 	<dict>
 		<key>3GPP</key>
 		<dict>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>1</integer>
 			<key>password</key>
 			<string>fl1</string>
-			<key>AllowedProtocolMask</key>
-			<integer>3</integer>
 			<key>PcscfAddressRequired</key>
 			<false/>
 			<key>username</key>
 			<string>gprs@a1plus.at</string>
 			<key>apn</key>
 			<string>fl1</string>
-			<key>DefaultProtocolMask</key>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
+			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
+	<key>ShowVolteSwitch</key>
+	<true/>
 	<key>SupportsImsCapability</key>
-	<false/>
-	<key>ShowTTY</key>
-	<false/>
+	<true/>
+	<key>Show3GSwitchWithVolte</key>
+	<true/>
 	<key>VoicemailPilotNumber</key>
 	<string>+4237969000</string>
 	<key>HomeBundleIdentifier</key>
@@ -76,18 +78,16 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>49</integer>
 			<key>password</key>
 			<string>fl1</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string>gprs@a1plus.at</string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>fl1</string>
+			<key>type-mask</key>
+			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>

@@ -24,7 +24,7 @@
 	<key>SupportsNITZ</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://mobile.vodafone.com.qa</string>
+	<string>https://mobile.vodafone.com.qa</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
 	<key>SMSSettings</key>
@@ -38,6 +38,8 @@
 	<integer>32769</integer>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StockSymboli</key>
 	<array>
 		<dict>
@@ -56,16 +58,34 @@
 	<dict>
 		<key>Media</key>
 		<dict>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
 			<key>RTCPIntervalSeconds</key>
 			<integer>5</integer>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
 			<key>IncludeSDPMaxRed</key>
 			<true/>
 			<key>PreferredAMRWBMode</key>
 			<integer>8</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
 		</dict>
 		<key>Signaling</key>
 		<dict>
@@ -161,7 +181,7 @@
 		</dict>
 		<key>SMS</key>
 		<dict>
-			<key>allowCSFBInVolteMode</key>
+			<key>enableInNonVoLTEMode</key>
 			<false/>
 		</dict>
 		<key>Voice</key>
@@ -218,12 +238,10 @@
 	<dict>
 		<key>3GPP</key>
 		<dict>
-			<key>AllowedProtocolMaskInRoamingLTE</key>
-			<integer>1</integer>
-			<key>password</key>
-			<string></string>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
+			<key>password</key>
+			<string></string>
 			<key>PcscfAddressRequired</key>
 			<false/>
 			<key>username</key>
@@ -232,8 +250,8 @@
 			<integer>1</integer>
 			<key>apn</key>
 			<string>web.vodafone.com.qa</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
+			<key>AllowedProtocolMaskInRoamingLTE</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>VisualVoicemailServiceName</key>
@@ -264,8 +282,6 @@
 			</array>
 		</dict>
 	</dict>
-	<key>ShowTTY</key>
-	<false/>
 	<key>ShowVolteSwitch</key>
 	<true/>
 	<key>SupportsImsCapability</key>
@@ -307,36 +323,32 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>32817</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>web.vodafone.com.qa</string>
+			<key>type-mask</key>
+			<integer>32817</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
-			<key>apn</key>
-			<string>ims</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
+			<key>apn</key>
+			<string>ims</string>
+			<key>type-mask</key>
+			<integer>131072</integer>
+			<key>UseNetworkMTU</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>password</key>
@@ -345,8 +357,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>xcap</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>type-mask</key>
 			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>

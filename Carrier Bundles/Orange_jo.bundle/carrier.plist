@@ -36,18 +36,15 @@
 	<key>SupportsNITZ</key>
 	<false/>
 	<key>MyAccountURL</key>
-	<string>http://www.orange.jo</string>
+	<string>https://www.orange.jo</string>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
-	</dict>
-	<key>MyAccountURLTitle</key>
-	<string>Orange Jordan</string>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>MyAccountURLTitle</key>
+	<string>Orange Jordan</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -65,9 +62,108 @@
 	</array>
 	<key>OverrideCarrierMenuTo</key>
 	<true/>
-	<key>ShowDialAssist</key>
-	<true/>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Media</key>
+		<dict>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>97</key>
+				<dict>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+				<key>96</key>
+				<dict>
+					<key>br</key>
+					<string>9.6-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>swb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
+		</dict>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>403,408,5XX</string>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>RingingTimerSeconds</key>
+			<integer>180</integer>
+			<key>UseIPSec</key>
+			<true/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>TemporarilyUnavailable</key>
+				<dict>
+					<key>StatusCode</key>
+					<integer>480</integer>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+				</dict>
+			</dict>
+			<key>ussdEnabled</key>
+			<true/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<false/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>RingbackTimerSeconds</key>
+			<integer>180</integer>
+			<key>ValidateSipMessageRecipient</key>
+			<false/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>GSM</key>
+				<false/>
+				<key>LTE</key>
+				<true/>
+				<key>UMTS</key>
+				<false/>
+			</dict>
+		</dict>
+	</dict>
 	<key>Show3GSwitchWith4G</key>
+	<false/>
+	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
@@ -78,27 +174,25 @@
 		<key>3GPP</key>
 		<array>
 			<dict>
-				<key>AllowedProtocolMaskInRoamingLTE</key>
-				<integer>1</integer>
 				<key>password</key>
 				<string>net</string>
-				<key>AllowedProtocolMask</key>
-				<integer>3</integer>
 				<key>username</key>
 				<string>net</string>
-				<key>AllowedProtocolMaskInRoamingUMTS</key>
+				<key>AllowedProtocolMaskInRoamingLTE</key>
 				<integer>1</integer>
 				<key>apn</key>
 				<string>net.orange.jo</string>
-				<key>DefaultProtocolMask</key>
+				<key>AllowedProtocolMaskInRoamingUMTS</key>
+				<integer>1</integer>
+				<key>AllowedProtocolMask</key>
 				<integer>3</integer>
 			</dict>
 		</array>
 	</dict>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
+	<key>ShowVolteSwitch</key>
+	<true/>
 	<key>SMSUseLocalTZ</key>
 	<true/>
 	<key>AllowsVoIP</key>
@@ -123,18 +217,16 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>49</integer>
 			<key>password</key>
 			<string>net</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string>net</string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>net.orange.jo</string>
+			<key>type-mask</key>
+			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
@@ -149,18 +241,16 @@
 			<integer>4</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>48</integer>
 			<key>password</key>
 			<string>net</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string>net</string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>1</integer>
 			<key>apn</key>
 			<string>net.orange.jo</string>
+			<key>type-mask</key>
+			<integer>48</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>

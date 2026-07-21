@@ -76,6 +76,8 @@
 	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>123</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>MatchingICCIDPrefixes</key>
@@ -125,8 +127,6 @@
 	</array>
 	<key>ShowDialAssist</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>IPv6SupportedDataModeMask</key>
 	<integer>45087</integer>
 	<key>Show3GSwitchWith4G</key>
@@ -268,8 +268,6 @@
 			<key>AllowIPv6UnicastAddress</key>
 			<true/>
 		</dict>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<true/>
 		<key>Signaling</key>
 		<dict>
 			<key>EnableCellularNetworkInfo</key>
@@ -300,6 +298,18 @@
 			<key>EarlyMediaNeedsHeader</key>
 			<true/>
 		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>supported</key>
+			<false/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
 	</dict>
 	<key>SMSSettings</key>
 	<dict>

@@ -53,12 +53,13 @@
 	<string>Ooredoo</string>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<true/>
 	<key>AllowsVoIP</key>
 	<true/>
-	<key>VoicemailPilotNumber</key>
-	<string>+213550000555</string>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsTTY</key>
+		<true/>
+	</dict>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Algeria</string>
 	<key>MMS</key>
@@ -72,6 +73,8 @@
 		<key>MaxMessageSize</key>
 		<integer>204800</integer>
 	</dict>
+	<key>VoicemailPilotNumber</key>
+	<string>+213550000555</string>
 	<key>apns</key>
 	<array>
 		<dict>

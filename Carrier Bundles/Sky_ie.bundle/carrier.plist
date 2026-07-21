@@ -28,13 +28,44 @@
 	<true/>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
+	<key>EnableLTEAfterUpgrade</key>
+	<true/>
 	<key>APNEditabilityTypemask</key>
 	<integer>0</integer>
-	<key>SMSSettings</key>
+	<key>com.apple.voicemail.imap</key>
 	<dict>
-		<key>TransportFallback</key>
+		<key>BeaconAddress</key>
+		<string>886759</string>
+		<key>IdleConnectionTimeout</key>
+		<integer>2</integer>
+		<key>AuthenticationScheme</key>
+		<string>DIGEST-MD5</string>
+		<key>MaxPINLength</key>
+		<integer>6</integer>
+		<key>UsesSSL</key>
+		<true/>
+		<key>DeliverLegacyNotificationsBeforeSetup</key>
+		<true/>
+		<key>ClientManagesTrash</key>
+		<false/>
+		<key>MaxGreetingDuration</key>
+		<integer>60</integer>
+		<key>MinPINLength</key>
+		<integer>4</integer>
+		<key>AllowedIMAPServers</key>
+		<dict>
+			<key>FQDN</key>
+			<array>
+				<string>vvm.sky</string>
+			</array>
+		</dict>
+		<key>UsesMWI</key>
+		<true/>
+		<key>GreetingNotification</key>
 		<true/>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+353896555000</string>
 	<key>AllowedServicesTypeMaskOnInternet</key>
@@ -46,19 +77,26 @@
 	</array>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Voice</key>
+		<key>Media</key>
 		<dict>
-			<key>EmergencyRTTSupported</key>
-			<true/>
-			<key>EnableVolteByDefault</key>
-			<true/>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>supported</key>
-			<true/>
-			<key>SupportsCW</key>
-			<false/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>127</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 		</dict>
 		<key>Signaling</key>
 		<dict>
@@ -69,6 +107,20 @@
 			<key>CountryOfOriginationFormat</key>
 			<string>PANI</string>
 			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>ContentType</key>
+			<string>application/vnd.etsi.simservs+xml</string>
+			<key>supported</key>
+			<true/>
+			<key>SupportsCW</key>
+			<false/>
+		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVolteByDefault</key>
 			<true/>
 		</dict>
 	</dict>
@@ -140,8 +192,13 @@
 			</array>
 		</dict>
 	</dict>
-	<key>ShowTTY</key>
+	<key>ShowVolteSwitch</key>
 	<false/>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsEmergencyRTT</key>
+		<true/>
+	</dict>
 	<key>VoicemailPilotNumber</key>
 	<string>171</string>
 	<key>HomeBundleIdentifier</key>
@@ -156,34 +213,30 @@
 	<key>apns</key>
 	<array>
 		<dict>
-			<key>type-mask</key>
-			<integer>32817</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>mobile.sky</string>
+			<key>type-mask</key>
+			<integer>32819</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>1048576</integer>
 			<key>password</key>
 			<string></string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
-			<key>AllowedProtocolMaskInRoaming</key>
-			<integer>3</integer>
 			<key>username</key>
 			<string></string>
+			<key>AllowedProtocolMaskInRoaming</key>
+			<integer>3</integer>
 			<key>apn</key>
 			<string>ut.mobile.sky</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>3</integer>
 		</dict>

@@ -4,24 +4,28 @@
 <dict>
 	<key>MappingTable</key>
 	<dict>
-		<key>20839</key>
-		<string>Configuration_20839</string>
+		<key>64104</key>
+		<string>Configuration_64104</string>
 		<key>314720</key>
 		<string>Configuration_314720</string>
+		<key>23229</key>
+		<string>Configuration_23229</string>
 		<key>28622</key>
 		<string>Configuration_28622</string>
-		<key>52510</key>
-		<string>Configuration_52510</string>
 		<key>26220</key>
 		<string>Configuration_26220</string>
 		<key>27213</key>
 		<string>Configuration_27213</string>
-		<key>72429</key>
-		<string>Configuration_72429</string>
+		<key>52510</key>
+		<string>Configuration_52510</string>
 		<key>22872</key>
 		<string>Configuration_22872</string>
 		<key>311210</key>
 		<string>Configuration_311210</string>
+		<key>72429</key>
+		<string>Configuration_72429</string>
+		<key>20839</key>
+		<string>Configuration_20839</string>
 		<key>334170</key>
 		<string>Configuration_334170</string>
 		<key>20828</key>
@@ -34,8 +38,6 @@
 		<string>Configuration_313380</string>
 		<key>311530</key>
 		<string>Configuration_311530</string>
-		<key>310040</key>
-		<string>Configuration_310040</string>
 		<key>255702</key>
 		<string>Configuration_255702</string>
 		<key>312720</key>
@@ -62,42 +64,40 @@
 		<string>Configuration_20817</string>
 		<key>21402</key>
 		<string>Configuration_21402</string>
-		<key>346007</key>
-		<string>Configuration_346007</string>
+		<key>334230</key>
+		<string>Configuration_334230</string>
 		<key>22249</key>
 		<string>Configuration_22249</string>
 		<key>24215_GID1-0E</key>
 		<string>Configuration_24215_GID1-0E</string>
 		<key>22253</key>
 		<string>Configuration_22253</string>
+		<key>346007</key>
+		<string>Configuration_346007</string>
 		<key>20803_GID1-0001</key>
 		<string>Configuration_20803_GID1-0001</string>
 		<key>302620</key>
 		<string>Configuration_302620</string>
-		<key>42526</key>
-		<string>Configuration_42526</string>
 		<key>23427</key>
 		<string>Configuration_23427</string>
+		<key>42526</key>
+		<string>Configuration_42526</string>
 		<key>61908</key>
 		<string>Configuration_61908</string>
 		<key>65538</key>
 		<string>Configuration_65538</string>
 		<key>20417</key>
 		<string>Configuration_20417</string>
+		<key>425009</key>
+		<string>Configuration_425009</string>
 		<key>21414</key>
 		<string>Configuration_21414</string>
 		<key>24012</key>
 		<string>Configuration_24012</string>
-		<key>313460_GID1-7911</key>
-		<string>Configuration_313460_GID1-7911</string>
 		<key>302150</key>
 		<string>Configuration_302150</string>
 		<key>22858</key>
 		<string>Configuration_22858</string>
-		<key>425009</key>
-		<string>Configuration_425009</string>
-		<key>311500_GID1-6624</key>
-		<string>Configuration_311500_GID1-6624</string>
 		<key>311080</key>
 		<string>Configuration_311080</string>
 		<key>313930</key>
@@ -116,14 +116,14 @@
 		<string>Configuration_23208</string>
 		<key>22874</key>
 		<string>Configuration_22874</string>
+		<key>208091</key>
+		<string>Configuration_208091</string>
 		<key>52002_GID1-02</key>
 		<string>Configuration_52002_GID1-02</string>
 		<key>724040</key>
 		<string>Configuration_724040</string>
 		<key>22254</key>
 		<string>Configuration_22254</string>
-		<key>313460</key>
-		<string>Configuration_313460</string>
 		<key>23418_GID1-6764</key>
 		<string>Configuration_23418_GID1-6764</string>
 		<key>302340</key>
@@ -140,26 +140,24 @@
 		<string>Configuration_302480_GID1-01</string>
 		<key>20603</key>
 		<string>Configuration_20603</string>
-		<key>310040_GID1-6624</key>
-		<string>Configuration_310040_GID1-6624</string>
 		<key>74002</key>
 		<string>Configuration_74002</string>
-		<key>27201_GID1-0A</key>
-		<string>Configuration_27201_GID1-0A</string>
 		<key>45707</key>
 		<string>Configuration_45707</string>
 		<key>334140</key>
 		<string>Configuration_334140</string>
+		<key>314970</key>
+		<string>Configuration_314970</string>
 		<key>37005</key>
 		<string>Configuration_37005</string>
+		<key>27201_GID1-0A_GID2-FF</key>
+		<string>Configuration_27201_GID1-0A_GID2-FF</string>
 		<key>502153</key>
 		<string>Configuration_502153</string>
-		<key>72451_GID1-65</key>
-		<string>Configuration_72451_GID1-65</string>
 		<key>20407</key>
 		<string>Configuration_20407</string>
-		<key>311500</key>
-		<string>Configuration_311500</string>
+		<key>72451_GID1-65</key>
+		<string>Configuration_72451_GID1-65</string>
 		<key>55299</key>
 		<string>Configuration_55299</string>
 		<key>334160</key>
@@ -180,12 +178,8 @@
 		<string>Configuration_314730</string>
 		<key>21405</key>
 		<string>Configuration_21405</string>
-		<key>311588_GID1-7911</key>
-		<string>Configuration_311588_GID1-7911</string>
 		<key>22256</key>
 		<string>Configuration_22256</string>
-		<key>313460_GID1-6624</key>
-		<string>Configuration_313460_GID1-6624</string>
 		<key>22233</key>
 		<string>Configuration_22233</string>
 		<key>28022</key>
@@ -208,12 +202,18 @@
 		<string>Configuration_313260</string>
 		<key>26225</key>
 		<string>Configuration_26225</string>
+		<key>47004</key>
+		<string>Configuration_47004</string>
 		<key>20825</key>
 		<string>Configuration_20825</string>
+		<key>60703</key>
+		<string>Configuration_60703</string>
 		<key>311240</key>
 		<string>Configuration_311240</string>
 		<key>23812</key>
 		<string>Configuration_23812</string>
+		<key>20409</key>
+		<string>Configuration_20409</string>
 		<key>21410</key>
 		<string>Configuration_21410</string>
 		<key>72477</key>
@@ -244,10 +244,10 @@
 		<string>Configuration_302330</string>
 		<key>310990</key>
 		<string>Configuration_310990</string>
-		<key>26226_GID1-53414C412D44453031</key>
-		<string>Configuration_26226_GID1-53414C412D44453031</string>
 		<key>425019</key>
 		<string>Configuration_425019</string>
+		<key>26226_GID1-53414C412D44453031</key>
+		<string>Configuration_26226_GID1-53414C412D44453031</string>
 		<key>42833</key>
 		<string>Configuration_42833</string>
 		<key>314560_GID1-2273</key>
@@ -256,6 +256,8 @@
 		<string>Configuration_50588</string>
 		<key>21434</key>
 		<string>Configuration_21434</string>
+		<key>72451_GID1-42</key>
+		<string>Configuration_72451_GID1-42</string>
 		<key>310690</key>
 		<string>Configuration_310690</string>
 		<key>42005</key>
@@ -294,8 +296,6 @@
 		<string>Configuration_73402</string>
 		<key>23487</key>
 		<string>Configuration_23487</string>
-		<key>311588_GID1-6624</key>
-		<string>Configuration_311588_GID1-6624</string>
 		<key>42006</key>
 		<string>Configuration_42006</string>
 		<key>23217</key>
@@ -310,8 +310,8 @@
 		<string>Configuration_26243</string>
 		<key>41892</key>
 		<string>Configuration_41892</string>
-		<key>64104</key>
-		<string>Configuration_64104</string>
+		<key>27211_GID1-FFFFFF_GID2-FFFFFF</key>
+		<string>Configuration_27211_GID1-FFFFFF_GID2-FFFFFF</string>
 	</dict>
 	<key>GSMAFile</key>
 	<string>gsma_1.plist</string>

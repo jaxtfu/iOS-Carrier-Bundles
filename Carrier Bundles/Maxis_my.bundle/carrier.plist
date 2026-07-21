@@ -4,12 +4,12 @@
 <dict>
 	<key>CarrierEntitlements</key>
 	<dict>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
+		<true/>
 		<key>SupportedEntitlements</key>
 		<integer>13313</integer>
 		<key>ProtocolVersion</key>
 		<string>2</string>
-		<key>ServerAddress</key>
-		<string>https://apple-es.maxis.com.my:8088/ESMaxis</string>
 		<key>Authentication</key>
 		<dict>
 			<key>Type</key>
@@ -17,8 +17,16 @@
 			<key>Username</key>
 			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
 		</dict>
+		<key>ServerAddress</key>
+		<string>https://apple-es.maxis.com.my:8088/ESMaxis</string>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<true/>
 		<key>UpdatePeriod</key>
 		<integer>24</integer>
+		<key>SupportedActions</key>
+		<array>
+			<string>transferSIMService</string>
+		</array>
 	</dict>
 	<key>OTASoftwareUpdate</key>
 	<dict>
@@ -44,6 +52,11 @@
 			<string>6012.KL</string>
 		</dict>
 	</array>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>LocalInstallSMDPURL</key>
+		<string>https://bin.prod.ondemandconnectivity.com</string>
+	</dict>
 	<key>ShowClass0SMSFromField</key>
 	<true/>
 	<key>AllowEDGEEditing</key>
@@ -86,14 +99,14 @@
 		<key>SupportsFauxCard</key>
 		<false/>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>121</string>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>69400</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>OverrideOperatorWiFiName</key>
 	<string>MY MAXIS VoWiFi</string>
 	<key>MMS</key>
@@ -261,12 +274,10 @@
 				<dict>
 					<key>apn</key>
 					<string>unet</string>
-					<key>DefaultProtocolMask</key>
+					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 					<key>type-mask</key>
 					<integer>32821</integer>
-					<key>AllowedProtocolMask</key>
-					<integer>3</integer>
 				</dict>
 				<dict>
 					<key>type-mask</key>
@@ -275,8 +286,6 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>131072</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>2</integer>
 					<key>SupportSwitchOver</key>
 					<true/>
 					<key>username</key>
@@ -287,18 +296,16 @@
 					<integer>2</integer>
 				</dict>
 				<dict>
-					<key>type-mask</key>
-					<integer>1048576</integer>
 					<key>password</key>
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>1048576</integer>
-					<key>DefaultProtocolMask</key>
-					<integer>2</integer>
 					<key>username</key>
 					<string></string>
 					<key>apn</key>
 					<string>hos</string>
+					<key>type-mask</key>
+					<integer>1048576</integer>
 					<key>AllowedProtocolMask</key>
 					<integer>2</integer>
 				</dict>
@@ -309,15 +316,13 @@
 					<string></string>
 					<key>tech-type-mask</key>
 					<integer>262144</integer>
-					<key>AllowedProtocolMask</key>
-					<integer>3</integer>
 					<key>AllowNoDNS</key>
 					<integer>1</integer>
 					<key>username</key>
 					<string></string>
 					<key>apn</key>
 					<string>sos</string>
-					<key>DefaultProtocolMask</key>
+					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 				</dict>
 			</array>
@@ -343,6 +348,8 @@
 			<integer>90</integer>
 			<key>RingingTimerSeconds</key>
 			<integer>90</integer>
+			<key>ussdEnabled</key>
+			<true/>
 			<key>RequirePreconditionsWhenMandatory</key>
 			<false/>
 			<key>IncomingCallEndReasons</key>
@@ -395,8 +402,8 @@
 		<true/>
 		<key>SMS</key>
 		<dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
 			<key>SMSBundleToVoice</key>
 			<true/>
 			<key>SupportedDomains</key>
@@ -438,16 +445,32 @@
 		</dict>
 		<key>Media</key>
 		<dict>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>20</integer>
+			<key>RingbackTone</key>
+			<string>UK</string>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>112</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>2</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-wb</string>
+				</dict>
+			</dict>
 			<key>RTCPIntervalSeconds</key>
 			<integer>5</integer>
 			<key>IncludeSDPMaxRed</key>
 			<true/>
 			<key>EnableRTCPExtendedReports</key>
 			<true/>
-			<key>RingbackTone</key>
-			<string>UK</string>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>20</integer>
 		</dict>
 		<key>SIM</key>
 		<dict>
@@ -467,8 +490,6 @@
 	<dict>
 		<key>ShowClass0SMSInLockScreen</key>
 		<true/>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
 	<key>TetheringPhoneNumber</key>
 	<string>+60374922123</string>
@@ -476,6 +497,13 @@
 	<string>*121#</string>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32768</integer>
+	<key>PushSettings</key>
+	<dict>
+		<key>MultiSIMTopic</key>
+		<string>my.com.maxis.onenumber</string>
+		<key>CellularPlanTransferTopic</key>
+		<string>my.com.maxis.esimtransfer</string>
+	</dict>
 	<key>Services</key>
 	<array>
 		<dict>
@@ -527,7 +555,7 @@
 	<key>SupportsImsCapability</key>
 	<true/>
 	<key>MyAccountURL</key>
-	<string>http://iphone.maxis.com.my</string>
+	<string>https://iphone.maxis.com.my</string>
 	<key>MyAccountURLTitle</key>
 	<string>Maxis Portal</string>
 	<key>MandatoryVerify</key>

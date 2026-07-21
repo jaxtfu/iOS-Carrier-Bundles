@@ -36,8 +36,6 @@
 	<false/>
 	<key>ShowDialAssist</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
 	<key>HomeBundleIdentifier</key>

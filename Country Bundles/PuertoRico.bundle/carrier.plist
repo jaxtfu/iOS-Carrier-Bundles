@@ -4,32 +4,6 @@
 <dict>
 	<key>CellBroadcast</key>
 	<dict>
-		<key>AlertConfigurations</key>
-		<dict>
-			<key>Configuration_us</key>
-			<dict>
-				<key>Sound</key>
-				<string>cbs_alert_us.caf</string>
-				<key>Vibration</key>
-				<string>cbs_vibe_us.plist</string>
-			</dict>
-			<key>Configuration_WHAM</key>
-			<dict>
-				<key>Sound</key>
-				<string>Text</string>
-				<key>Vibration</key>
-				<string>Default</string>
-			</dict>
-		</dict>
-		<key>GeofencingConfiguration</key>
-		<dict>
-			<key>FeatureEnabled</key>
-			<true/>
-		</dict>
-		<key>SwitchGroupTitle</key>
-		<string>Government Alerts</string>
-		<key>DataThrottleOnMessageReceive</key>
-		<true/>
 		<key>AppleSafetyAlert</key>
 		<dict>
 			<key>MessageIDParameters3GPP</key>
@@ -54,8 +28,83 @@
 				</dict>
 			</array>
 		</dict>
-		<key>DataThrottleTimeout</key>
-		<integer>40</integer>
+		<key>SupportsWEAMaps</key>
+		<true/>
+		<key>DataThrottleOnMessageReceive</key>
+		<true/>
+		<key>AlertTypes</key>
+		<dict>
+			<key>Emergency</key>
+			<dict>
+				<key>EnabledByDefault</key>
+				<true/>
+				<key>SwitchName</key>
+				<string>Emergency Alerts</string>
+				<key>UserConfigurable</key>
+				<true/>
+				<key>NotificationTitle</key>
+				<string>Emergency Alert</string>
+			</dict>
+			<key>WHAM</key>
+			<dict>
+				<key>EnabledByDefault</key>
+				<true/>
+				<key>SwitchName</key>
+				<string></string>
+				<key>UserConfigurable</key>
+				<false/>
+				<key>NotificationTitle</key>
+				<string></string>
+			</dict>
+			<key>PublicSafety</key>
+			<dict>
+				<key>EnabledByDefault</key>
+				<true/>
+				<key>SoundIsMutableInDND</key>
+				<true/>
+				<key>SwitchName</key>
+				<string>Public Safety Alerts</string>
+				<key>UserConfigurable</key>
+				<true/>
+				<key>NotificationTitle</key>
+				<string>Public Safety Alert</string>
+			</dict>
+			<key>Presidential</key>
+			<dict>
+				<key>EnabledByDefault</key>
+				<true/>
+				<key>SwitchName</key>
+				<string>National Alert</string>
+				<key>UserConfigurable</key>
+				<false/>
+				<key>NotificationTitle</key>
+				<string>National Alert</string>
+			</dict>
+			<key>AMBER</key>
+			<dict>
+				<key>EnabledByDefault</key>
+				<true/>
+				<key>SwitchName</key>
+				<string>AMBER Alerts</string>
+				<key>UserConfigurable</key>
+				<true/>
+				<key>NotificationTitle</key>
+				<string>AMBER Alert</string>
+			</dict>
+			<key>Test</key>
+			<dict>
+				<key>EnabledByDefault</key>
+				<false/>
+				<key>SoundIsMutableInDND</key>
+				<true/>
+				<key>SwitchName</key>
+				<string>Test Alerts</string>
+				<key>UserConfigurable</key>
+				<true/>
+				<key>NotificationTitle</key>
+				<string>Test Alert</string>
+			</dict>
+		</dict>
 		<key>MessageIDParameters3GPP</key>
 		<array>
 			<dict>
@@ -149,95 +198,98 @@
 				<integer>4399</integer>
 			</dict>
 		</array>
-		<key>AlertTypes</key>
+		<key>GeofencingConfiguration</key>
 		<dict>
-			<key>Emergency</key>
-			<dict>
-				<key>EnabledByDefault</key>
-				<true/>
-				<key>SwitchName</key>
-				<string>Emergency Alerts</string>
-				<key>UserConfigurable</key>
-				<true/>
-				<key>NotificationTitle</key>
-				<string>Emergency Alert</string>
-			</dict>
-			<key>WHAM</key>
-			<dict>
-				<key>EnabledByDefault</key>
-				<true/>
-				<key>SwitchName</key>
-				<string></string>
-				<key>UserConfigurable</key>
-				<false/>
-				<key>NotificationTitle</key>
-				<string></string>
-			</dict>
-			<key>PublicSafety</key>
-			<dict>
-				<key>EnabledByDefault</key>
-				<true/>
-				<key>SoundIsMutableInDND</key>
-				<true/>
-				<key>SwitchName</key>
-				<string>Public Safety Alerts</string>
-				<key>UserConfigurable</key>
-				<true/>
-				<key>NotificationTitle</key>
-				<string>Public Safety Alert</string>
-			</dict>
-			<key>Presidential</key>
-			<dict>
-				<key>EnabledByDefault</key>
-				<true/>
-				<key>SwitchName</key>
-				<string>National Alert</string>
-				<key>UserConfigurable</key>
-				<false/>
-				<key>NotificationTitle</key>
-				<string>National Alert</string>
-			</dict>
-			<key>AMBER</key>
-			<dict>
-				<key>EnabledByDefault</key>
-				<true/>
-				<key>SwitchName</key>
-				<string>AMBER Alerts</string>
-				<key>UserConfigurable</key>
-				<true/>
-				<key>NotificationTitle</key>
-				<string>AMBER Alert</string>
-			</dict>
-			<key>Test</key>
-			<dict>
-				<key>EnabledByDefault</key>
-				<false/>
-				<key>SoundIsMutableInDND</key>
-				<true/>
-				<key>SwitchName</key>
-				<string>Test Alerts</string>
-				<key>UserConfigurable</key>
-				<true/>
-				<key>NotificationTitle</key>
-				<string>Test Alert</string>
-			</dict>
+			<key>FeatureEnabled</key>
+			<true/>
 		</dict>
+		<key>PrimaryBroadcastLanguages</key>
+		<array>
+			<string>en</string>
+		</array>
 		<key>MessageValidityPeriod</key>
 		<dict>
 			<key>AirplaneMode</key>
 			<false/>
 		</dict>
+		<key>AlertConfigurations</key>
+		<dict>
+			<key>Configuration_us</key>
+			<dict>
+				<key>Sound</key>
+				<string>cbs_alert_us.caf</string>
+				<key>Vibration</key>
+				<string>cbs_vibe_us.plist</string>
+			</dict>
+			<key>Configuration_WHAM</key>
+			<dict>
+				<key>Sound</key>
+				<string>Text</string>
+				<key>Vibration</key>
+				<string>Default</string>
+			</dict>
+		</dict>
+		<key>SwitchGroupTitle</key>
+		<string>Government Alerts</string>
+		<key>DataThrottleTimeout</key>
+		<integer>40</integer>
 		<key>MinimumDeviceCategorySupported</key>
 		<integer>10</integer>
-		<key>PrimaryBroadcastLanguages</key>
-		<array>
-			<string>en</string>
-		</array>
+		<key>WeaEnrichment</key>
+		<dict>
+			<key>MessageIDParameters3GPP</key>
+			<array>
+				<dict>
+					<key>FromServiceID</key>
+					<integer>4370</integer>
+					<key>ToServiceID</key>
+					<integer>4378</integer>
+				</dict>
+				<dict>
+					<key>FromServiceID</key>
+					<integer>4383</integer>
+					<key>ToServiceID</key>
+					<integer>4391</integer>
+				</dict>
+				<dict>
+					<key>FromServiceID</key>
+					<integer>4396</integer>
+					<key>ToServiceID</key>
+					<integer>4397</integer>
+				</dict>
+			</array>
+		</dict>
 	</dict>
 	<key>ISOAlpha2CountryCode</key>
 	<array>
 		<string>pr</string>
 	</array>
+	<key>CountryName</key>
+	<string>Puerto Rico</string>
+	<key>SupportedCountryIds</key>
+	<array>
+		<string>330</string>
+		<string>com.apple.PuertoRico</string>
+	</array>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsRTT</key>
+		<true/>
+		<key>SupportsEmergencyRTT</key>
+		<true/>
+		<key>SupportsTTY</key>
+		<true/>
+	</dict>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Media</key>
+		<dict>
+			<key>RingbackTone</key>
+			<string>ANSI</string>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<false/>
+	</dict>
 	<key>EmergencyCalling</key>
 	<dict>
 		<key>EmergencyNumbers</key>
@@ -251,23 +303,6 @@
 		</array>
 		<key>EnableSOSVoiceLoopControl</key>
 		<true/>
-	</dict>
-	<key>SupportedCountryIds</key>
-	<array>
-		<string>330</string>
-		<string>com.apple.PuertoRico</string>
-	</array>
-	<key>CountryName</key>
-	<string>Puerto Rico</string>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Media</key>
-		<dict>
-			<key>RingbackTone</key>
-			<string>ANSI</string>
-		</dict>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<false/>
 	</dict>
 </dict>
 </plist>

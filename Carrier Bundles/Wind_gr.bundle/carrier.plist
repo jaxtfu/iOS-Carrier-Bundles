@@ -15,13 +15,10 @@
 	<false/>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<false/>
-	</dict>
 	<key>RegistrationOptInRequired</key>
 	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>RoamingVoicemailPilotNumber</key>
 	<string>+306935601222</string>
 	<key>AllowedServicesTypeMaskOnInternet</key>
@@ -51,19 +48,6 @@
 	</array>
 	<key>IMSConfig</key>
 	<dict>
-		<key>Media</key>
-		<dict>
-			<key>PreferredAMRWBMode</key>
-			<integer>8</integer>
-			<key>InactivityTimerRTPSeconds</key>
-			<integer>30</integer>
-			<key>IncludeSDPMaxRed</key>
-			<true/>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-		</dict>
 		<key>Signaling</key>
 		<dict>
 			<key>strictCallFlows</key>
@@ -72,14 +56,18 @@
 			<string>5XX,403,380</string>
 			<key>EnableCellularNetworkInfo</key>
 			<true/>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
+			<key>ForcedFeatureTags</key>
+			<string>voice,sms</string>
 			<key>RingbackTimerSeconds</key>
 			<integer>90</integer>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
 			<key>RingingTimerSeconds</key>
 			<integer>90</integer>
 			<key>SendPreferredServiceInInvite</key>
 			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
 			<key>EarlyMediaNeedsHeader</key>
 			<true/>
 			<key>DefaultAuthAlgorithm</key>
@@ -100,6 +88,58 @@
 			<key>UseOutgoingSipUri</key>
 			<true/>
 			<key>UseIPSec</key>
+			<true/>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:conf@ims.wind.gr</string>
+		</dict>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<true/>
+			</dict>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>PreferredAMRWBMode</key>
+			<integer>8</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>max-red</key>
+					<string>0</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>cmr</key>
+					<string>1</string>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>InactivityTimerRTPSeconds</key>
+			<integer>30</integer>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
 			<true/>
 		</dict>
 		<key>XCAP</key>
@@ -132,13 +172,6 @@
 			<string>bsf.ims.mnc010.mcc202.pub.3gppnetwork.org</string>
 			<key>SupportsCW</key>
 			<false/>
-		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>AlwaysSubscribeToConferenceEvents</key>
-			<true/>
-			<key>conferenceServer</key>
-			<string>sip:conf@ims.wind.gr</string>
 		</dict>
 		<key>EnableWiFiCallingWithoutEntitlement</key>
 		<true/>
@@ -200,10 +233,10 @@
 			<integer>1</integer>
 		</dict>
 	</dict>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>VisualVoicemailServiceName</key>
 	<string>none</string>
-	<key>ShowTTY</key>
-	<false/>
 	<key>CellBroadcast</key>
 	<dict>
 		<key>AlertTypes</key>
@@ -413,7 +446,7 @@
 		<key>WiFiCallingControlsAlliWLanServices</key>
 		<true/>
 		<key>5wiServiceMask</key>
-		<integer>1</integer>
+		<integer>3</integer>
 	</dict>
 	<key>apns</key>
 	<array>
@@ -428,14 +461,14 @@
 			<integer>49</integer>
 		</dict>
 		<dict>
-			<key>AllowedProtocolMask</key>
-			<integer>2</integer>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>131072</integer>
-			<key>type-mask</key>
-			<integer>131072</integer>
+			<key>UseNetworkMTU</key>
+			<true/>
 			<key>NoCellularReconnectCauseCodes</key>
 			<array>
 				<dict>
@@ -453,30 +486,26 @@
 					<integer>86400</integer>
 				</dict>
 			</array>
-			<key>apn</key>
-			<string>ims</string>
 			<key>SupportSwitchOver</key>
 			<true/>
 			<key>username</key>
 			<string></string>
-			<key>UseNetworkMTU</key>
-			<true/>
-			<key>DefaultProtocolMask</key>
+			<key>apn</key>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
 			<integer>2</integer>
 		</dict>
 		<dict>
-			<key>type-mask</key>
-			<integer>1048576</integer>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
 			<string>hos</string>
+			<key>type-mask</key>
+			<integer>1048576</integer>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
 		</dict>

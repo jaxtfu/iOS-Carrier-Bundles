@@ -90,8 +90,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>zeopdata</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>type-mask</key>
 			<integer>49</integer>
 			<key>AllowedProtocolMask</key>
@@ -104,8 +102,6 @@
 			<string></string>
 			<key>apn</key>
 			<string>zeopmms</string>
-			<key>DefaultProtocolMask</key>
-			<integer>1</integer>
 			<key>type-mask</key>
 			<integer>4</integer>
 			<key>AllowedProtocolMask</key>

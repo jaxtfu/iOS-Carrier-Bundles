@@ -49,9 +49,9 @@
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
-			<string></string>
+			<string>internet</string>
 			<key>AllowedProtocolMask</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>PhoneAccountTransfer</key>
@@ -103,14 +103,14 @@
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
 	</dict>
-	<key>ShowDialAssist</key>
-	<true/>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
-	<key>ShowTTY</key>
-	<false/>
-	<key>Show3GSwitchWith4G</key>
+	<key>ShowDialAssist</key>
 	<true/>
+	<key>Show3GSwitchWith4G</key>
+	<false/>
 	<key>com.apple.voicemail.imap</key>
 	<dict>
 		<key>BeaconAddress</key>
@@ -143,6 +143,8 @@
 		<key>GreetingNotification</key>
 		<true/>
 	</dict>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Wifi Tale</string>
 	<key>MMS</key>
 	<dict>
 		<key>MMSC</key>
@@ -302,11 +304,13 @@
 			<key>apn</key>
 			<string>internet</string>
 			<key>type-mask</key>
-			<integer>51</integer>
+			<integer>32819</integer>
 		</dict>
 		<dict>
 			<key>password</key>
 			<string></string>
+			<key>tech-type-mask</key>
+			<integer>4</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
@@ -315,24 +319,164 @@
 			<integer>4</integer>
 		</dict>
 		<dict>
+			<key>type-mask</key>
+			<integer>131072</integer>
 			<key>password</key>
 			<string></string>
+			<key>tech-type-mask</key>
+			<integer>131072</integer>
+			<key>SupportSwitchOver</key>
+			<true/>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
-			<string>internet</string>
+			<string>ims</string>
+			<key>AllowedProtocolMask</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>password</key>
+			<string></string>
+			<key>tech-type-mask</key>
+			<integer>1048576</integer>
+			<key>username</key>
+			<string></string>
+			<key>apn</key>
+			<string>hos</string>
 			<key>type-mask</key>
-			<integer>50</integer>
+			<integer>1048576</integer>
+			<key>AllowedProtocolMask</key>
+			<integer>3</integer>
 		</dict>
 	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,6XX</string>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>180</integer>
+			<key>ForbiddenRegistrationErrorCodes</key>
+			<string>-4XX</string>
+			<key>RingingTimerSeconds</key>
+			<integer>180</integer>
+			<key>EmergencyURNs</key>
+			<dict>
+				<key>110</key>
+				<string>urn:service:sos.fire</string>
+				<key>112</key>
+				<string>urn:service:sos.police</string>
+				<key>113</key>
+				<string>urn:service:sos.ambulance</string>
+			</dict>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>ValidateSipMessageRecipient</key>
+			<false/>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>RegistrationRetryIntervals</key>
+			<string>30,60+15,120,480,900,1800</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+			<key>MaxForbiddenErrors</key>
+			<string>100</string>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>TreatAllNotificationsAsPartial</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc002.mcc242.3gppnetwork.org</string>
+		</dict>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+			<key>SMSBundleToVoice</key>
+			<true/>
+			<key>SupportedDomains</key>
+			<dict>
+				<key>LTE</key>
+				<true/>
+			</dict>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>0</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+				</dict>
+			</dict>
+			<key>MaxRedundancy</key>
+			<integer>220</integer>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>supported</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>404,501,502,503,504</string>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<true/>
+		<key>Voice</key>
+		<dict>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>SMSSettings</key>
 	<dict>
-		<key>SMSCarrierReportJunkAddress</key>
-		<string>7726</string>
 		<key>EnableReplyToAlphanumericOriginator</key>
 		<false/>
-		<key>TransportFallback</key>
-		<true/>
+		<key>SMSCarrierReportJunkAddress</key>
+		<string>7726</string>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
@@ -353,6 +497,8 @@
 	<true/>
 	<key>CarrierName</key>
 	<string>OneCall</string>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>SupportedPLMNs</key>
 	<array>
 		<string>24202</string>
@@ -362,6 +508,8 @@
 		<key>SIMs</key>
 		<array/>
 	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VMSMFilterNumber</key>
 	<string>47919191</string>
 	<key>SupportedSIMs</key>

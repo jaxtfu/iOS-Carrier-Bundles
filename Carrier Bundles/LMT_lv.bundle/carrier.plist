@@ -98,12 +98,12 @@
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
 	<string>+447786205094</string>
 	<key>ShowDialAssist</key>
 	<true/>
-	<key>ShowTTY</key>
-	<false/>
 	<key>Show3GSwitchWith4G</key>
 	<true/>
 	<key>OverrideOperatorWiFiName</key>
@@ -198,7 +198,7 @@
 			<key>RemoteCertificateHostname</key>
 			<string>epdg.epc.mnc001.mcc247.pub.3gppnetwork.org</string>
 			<key>RemoteCertificateAuthorityName</key>
-			<string>Sectigo RSA Domain Validation Secure Server CA</string>
+			<string>Sectigo Public Server Authentication CA DV E36</string>
 			<key>Proposals</key>
 			<array>
 				<dict>
@@ -209,7 +209,7 @@
 					<key>DHGroup</key>
 					<integer>14</integer>
 					<key>AuthenticationMethod</key>
-					<string>Certificate</string>
+					<string>ECDSA384</string>
 					<key>Lifetime</key>
 					<integer>86400</integer>
 					<key>EAPMethod</key>
@@ -225,7 +225,7 @@
 					<key>DHGroup</key>
 					<integer>15</integer>
 					<key>AuthenticationMethod</key>
-					<string>Certificate</string>
+					<string>ECDSA384</string>
 					<key>Lifetime</key>
 					<integer>86400</integer>
 					<key>EAPMethod</key>
@@ -241,7 +241,7 @@
 					<key>DHGroup</key>
 					<integer>14</integer>
 					<key>AuthenticationMethod</key>
-					<string>Certificate</string>
+					<string>ECDSA384</string>
 					<key>Lifetime</key>
 					<integer>86400</integer>
 					<key>EAPMethod</key>
@@ -257,7 +257,7 @@
 					<key>DHGroup</key>
 					<integer>15</integer>
 					<key>AuthenticationMethod</key>
-					<string>Certificate</string>
+					<string>ECDSA384</string>
 					<key>Lifetime</key>
 					<integer>86400</integer>
 					<key>EAPMethod</key>
@@ -310,8 +310,6 @@
 			<string>lmt</string>
 			<key>apn</key>
 			<string>internet.lmt.lv</string>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>type-mask</key>
 			<integer>53</integer>
 			<key>AllowedProtocolMask</key>
@@ -324,8 +322,6 @@
 			<string></string>
 			<key>tech-type-mask</key>
 			<integer>1048576</integer>
-			<key>DefaultProtocolMask</key>
-			<integer>3</integer>
 			<key>AllowedProtocolMaskInRoaming</key>
 			<integer>3</integer>
 			<key>username</key>
@@ -340,10 +336,30 @@
 	<dict>
 		<key>Media</key>
 		<dict>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
 			<key>PreferredAMRWBMode</key>
 			<integer>8</integer>
 			<key>EnableBandwidthSpecifiers</key>
 			<true/>
+			<key>AudioCodecs</key>
+			<dict>
+				<key>109</key>
+				<dict>
+					<key>ch-aw-recv</key>
+					<string>-1</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>bw</key>
+					<string>nb-swb</string>
+					<key>max-red</key>
+					<string>0</string>
+				</dict>
+			</dict>
 			<key>MaxRedundancy</key>
 			<integer>220</integer>
 			<key>InactivityTimerRTPSeconds</key>
@@ -352,8 +368,8 @@
 			<string>CEPT</string>
 			<key>ModeSetAMRWB</key>
 			<string>0,1,2,8</string>
-			<key>IncludeSDPMaxRed</key>
-			<true/>
+			<key>EVSHardBwLimit</key>
+			<string>nb-swb</string>
 			<key>IncludeSDPModeChangeCapability</key>
 			<true/>
 		</dict>
@@ -438,19 +454,12 @@
 				<key>LTE</key>
 				<true/>
 			</dict>
-			<key>allowCSFBInVolteMode</key>
-			<true/>
 		</dict>
 		<key>Voice</key>
 		<dict>
 			<key>EnableVolteByDefault</key>
 			<true/>
 		</dict>
-	</dict>
-	<key>SMSSettings</key>
-	<dict>
-		<key>TransportFallback</key>
-		<true/>
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
@@ -506,7 +515,7 @@
 	<key>CarrierName</key>
 	<string>LMT</string>
 	<key>MyAccountURL</key>
-	<string>http://www.lmt.lv</string>
+	<string>https://www.lmt.lv</string>
 	<key>MyAccountURLTitle</key>
 	<string>LMT</string>
 	<key>MandatoryVerify</key>
