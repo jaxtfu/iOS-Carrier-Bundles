@@ -98,6 +98,10 @@
 			<array>
 				<string>5011</string>
 			</array>
+			<key>SuccessfulTransferWithDelayedActivationErrors</key>
+			<array>
+				<string>5023</string>
+			</array>
 			<key>MaintenanceErrors</key>
 			<array>
 				<string>5021</string>

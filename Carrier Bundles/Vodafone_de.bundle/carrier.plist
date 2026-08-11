@@ -22,7 +22,7 @@
 			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
 		</dict>
 		<key>SupportedEntitlements</key>
-		<integer>76800</integer>
+		<integer>109568</integer>
 		<key>ServerAddress</key>
 		<string>https://es-de.vodafone.com:4445/ium-OEMInterface/servlet/IUMServlet</string>
 		<key>SupportedActions</key>

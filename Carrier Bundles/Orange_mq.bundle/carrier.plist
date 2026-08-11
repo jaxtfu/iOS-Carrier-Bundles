@@ -4,12 +4,16 @@
 <dict>
 	<key>CarrierEntitlements</key>
 	<dict>
-		<key>SupportedEntitlements</key>
-		<integer>17</integer>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<true/>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
+		<true/>
+		<key>SupportSecureIntent</key>
+		<true/>
 		<key>ProtocolVersion</key>
 		<string>2</string>
-		<key>ServerAddress</key>
-		<string>https://aes.mnc001.mcc340.pub.3gppnetwork.org:8181/ium-OEMInterface/servlet/IUMServlet</string>
+		<key>SupportPreflightOnSource</key>
+		<true/>
 		<key>Authentication</key>
 		<dict>
 			<key>Type</key>
@@ -17,10 +21,18 @@
 			<key>Username</key>
 			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
 		</dict>
-		<key>UserAgent</key>
-		<string>Entitlement/$version ($device) iOS/$iOSVersion  Carrier Settings/$carrierBundleVersion</string>
+		<key>SupportedEntitlements</key>
+		<integer>8209</integer>
+		<key>ServerAddress</key>
+		<string>https://aes.mnc001.mcc340.pub.3gppnetwork.org:8181/ium-OEMInterface/servlet/IUMServlet</string>
+		<key>SupportedActions</key>
+		<array>
+			<string>TransferSIMService</string>
+		</array>
 		<key>UpdatePeriod</key>
 		<integer>24</integer>
+		<key>UserAgent</key>
+		<string>Entitlement/$version ($device) iOS/$iOSVersion  Carrier Settings/$carrierBundleVersion</string>
 	</dict>
 	<key>OTASoftwareUpdate</key>
 	<dict>
@@ -40,6 +52,36 @@
 				<string>orange</string>
 			</dict>
 		</array>
+	</dict>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>LocalInstallSMDPURL</key>
+		<string>https://sm-v4-009-cappa-gtm.pr.go-esim.com</string>
+		<key>MinCompatibleOS</key>
+		<string>27.0</string>
+		<key>TransferErrorCodes</key>
+		<dict>
+			<key>BillingErrors</key>
+			<array>
+				<string>5009</string>
+			</array>
+			<key>IneligibleAccountErrors</key>
+			<array>
+				<string>5011</string>
+			</array>
+			<key>CarrierDefaultErrors</key>
+			<array>
+				<string>5003</string>
+			</array>
+			<key>SuccessfulTransferWithDelayedActivationErrors</key>
+			<array>
+				<string>5023</string>
+			</array>
+			<key>MaintenanceErrors</key>
+			<array>
+				<string>5021</string>
+			</array>
+		</dict>
 	</dict>
 	<key>Show3GSwitchWithVolte</key>
 	<true/>

@@ -6,6 +6,17 @@
 	<dict>
 		<key>ProtocolVersion</key>
 		<string>2</string>
+		<key>ExtraEndPoints</key>
+		<array>
+			<dict>
+				<key>ServerAddress</key>
+				<string>https://aes2.mnc005.mcc724.pub.3gppnetwork.org:44316/entitlement/</string>
+				<key>SupportedAuthorizationTokens</key>
+				<integer>2</integer>
+				<key>SupportedEntitlements</key>
+				<integer>4194304</integer>
+			</dict>
+		</array>
 		<key>Authentication</key>
 		<dict>
 			<key>Type</key>
@@ -468,6 +479,15 @@
 	<true/>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32768</integer>
+	<key>RCS</key>
+	<dict>
+		<key>ShowBusinessMessagingSwitch</key>
+		<true/>
+		<key>EnableBusinessMessagingByDefault</key>
+		<true/>
+		<key>EnableRCSByDefault</key>
+		<true/>
+	</dict>
 	<key>PushSettings</key>
 	<dict>
 		<key>MultiSIMTopic</key>

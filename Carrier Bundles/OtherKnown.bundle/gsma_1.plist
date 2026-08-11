@@ -2851,6 +2851,20 @@
 	<dict>
 		<key>OverrideConfiguration</key>
 		<dict>
+			<key>AttachAPN</key>
+			<dict>
+				<key>3GPP</key>
+				<dict>
+					<key>password</key>
+					<string></string>
+					<key>username</key>
+					<string></string>
+					<key>apn</key>
+					<string>uk.lebara.mobi</string>
+					<key>AllowedProtocolMask</key>
+					<integer>1</integer>
+				</dict>
+			</dict>
 			<key>apns</key>
 			<array>
 				<dict>
@@ -2864,18 +2878,12 @@
 					<integer>49</integer>
 				</dict>
 			</array>
-			<key>AttachAPN</key>
+			<key>IMSConfig</key>
 			<dict>
-				<key>3GPP</key>
+				<key>Voice</key>
 				<dict>
-					<key>password</key>
-					<string></string>
-					<key>username</key>
-					<string></string>
-					<key>apn</key>
-					<string>uk.lebara.mobi</string>
-					<key>AllowedProtocolMask</key>
-					<integer>1</integer>
+					<key>EnableVolteByDefault</key>
+					<true/>
 				</dict>
 			</dict>
 		</dict>
@@ -4215,6 +4223,20 @@
 	<dict>
 		<key>OverrideConfiguration</key>
 		<dict>
+			<key>AttachAPN</key>
+			<dict>
+				<key>3GPP</key>
+				<dict>
+					<key>password</key>
+					<string></string>
+					<key>username</key>
+					<string></string>
+					<key>apn</key>
+					<string>internet.lebara.de</string>
+					<key>AllowedProtocolMask</key>
+					<integer>1</integer>
+				</dict>
+			</dict>
 			<key>apns</key>
 			<array>
 				<dict>
@@ -4228,18 +4250,12 @@
 					<integer>49</integer>
 				</dict>
 			</array>
-			<key>AttachAPN</key>
+			<key>IMSConfig</key>
 			<dict>
-				<key>3GPP</key>
+				<key>Voice</key>
 				<dict>
-					<key>password</key>
-					<string></string>
-					<key>username</key>
-					<string></string>
-					<key>apn</key>
-					<string>internet.lebara.de</string>
-					<key>AllowedProtocolMask</key>
-					<integer>1</integer>
+					<key>EnableVolteByDefault</key>
+					<true/>
 				</dict>
 			</dict>
 		</dict>
@@ -5247,10 +5263,8 @@
 		<dict>
 			<key>MMS</key>
 			<dict>
-				<key>Proxy</key>
-				<string>proxy.us.mmsc.global</string>
 				<key>MMSC</key>
-				<string>http://us.mmsc.global</string>
+				<string>http://us.mmsc.global:10021</string>
 			</dict>
 			<key>apns</key>
 			<array>
@@ -5440,10 +5454,19 @@
 	<dict>
 		<key>OverrideConfiguration</key>
 		<dict>
-			<key>MMS</key>
+			<key>AttachAPN</key>
 			<dict>
-				<key>MMSC</key>
-				<string>http://mms.media</string>
+				<key>3GPP</key>
+				<dict>
+					<key>password</key>
+					<string></string>
+					<key>username</key>
+					<string></string>
+					<key>apn</key>
+					<string>internet</string>
+					<key>AllowedProtocolMask</key>
+					<integer>1</integer>
+				</dict>
 			</dict>
 			<key>apns</key>
 			<array>
@@ -5468,19 +5491,18 @@
 					<integer>4</integer>
 				</dict>
 			</array>
-			<key>AttachAPN</key>
+			<key>IMSConfig</key>
 			<dict>
-				<key>3GPP</key>
+				<key>Voice</key>
 				<dict>
-					<key>password</key>
-					<string></string>
-					<key>username</key>
-					<string></string>
-					<key>apn</key>
-					<string>internet</string>
-					<key>AllowedProtocolMask</key>
-					<integer>1</integer>
+					<key>EnableVolteByDefault</key>
+					<true/>
 				</dict>
+			</dict>
+			<key>MMS</key>
+			<dict>
+				<key>MMSC</key>
+				<string>http://mms.media</string>
 			</dict>
 		</dict>
 		<key>SupportedSIMs</key>

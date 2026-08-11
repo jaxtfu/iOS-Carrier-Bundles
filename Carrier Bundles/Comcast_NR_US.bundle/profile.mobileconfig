@@ -27,13 +27,13 @@
 			<key>PayloadDisplayName</key>
 			<string>WiFi</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.wifi.managed.F0345CCD-4BF5-4493-B3BC-66AB9E10CDBC</string>
+			<string>com.apple.wifi.managed.F0345CCD-4BF5-4493-B3BC-66AB9E10DECD</string>
 			<key>PayloadOrganization</key>
 			<string>Comcast Cable Corporation</string>
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>7B29CFF9-DCA2-41CF-8453-177214B89ABB</string>
+			<string>AD830E35-10CF-4852-8685-30C16A73FFDB</string>
 			<key>PayloadVersion</key>
 			<real>1</real>
 			<key>ProxyType</key>
@@ -64,13 +64,13 @@
 			<key>PayloadDisplayName</key>
 			<string>WiFi</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.wifi.managed.FB445CCD-4BF5-4493-B3BC-66AB9E10CDBC</string>
+			<string>com.apple.wifi.managed.FB445CCD-4BF5-4493-B3BC-66AB9E10DECD</string>
 			<key>PayloadOrganization</key>
 			<string>Comcast Cable Corporation</string>
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>BB21B1B8-66CB-4AD4-99AF-069F9BE1EA5F</string>
+			<string>17637B49-A094-46BB-A865-C8DF17BAA6DD</string>
 			<key>PayloadVersion</key>
 			<real>1</real>
 			<key>ProxyType</key>
@@ -101,13 +101,13 @@
 			<key>PayloadDisplayName</key>
 			<string>WiFi</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.wifi.managed.EC565CCD-4BF5-4493-B3BC-66AB9E10CDBC</string>
+			<string>com.apple.wifi.managed.EC565CCD-4BF5-4493-B3BC-66AB9E10DECD</string>
 			<key>PayloadOrganization</key>
 			<string>Comcast Cable Corporation</string>
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>1A45EC3F-3DBD-41FB-A91B-22533A0D8317</string>
+			<string>4F6787B9-34FB-4912-BBF4-42449BAEC555</string>
 			<key>PayloadVersion</key>
 			<real>1</real>
 			<key>ProxyType</key>
@@ -138,53 +138,19 @@
 			<key>PayloadDisplayName</key>
 			<string>WiFi</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.wifi.managed.F0345DDE-4BF5-4493-B3BC-66AB9E10CDBE</string>
+			<string>com.apple.wifi.managed.F0345DDE-4BF5-4493-B3BC-66AB9E10DECD</string>
 			<key>PayloadOrganization</key>
 			<string>Comcast Cable Corporation</string>
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>C4937482-3697-4F6A-B8C1-33B03BE41CC0</string>
+			<string>30D8AF04-E965-4628-A92A-39E92C873B35</string>
 			<key>PayloadVersion</key>
 			<real>1</real>
 			<key>ProxyType</key>
 			<string>None</string>
 			<key>SSID_STR</key>
 			<string>XFINITY-AKA</string>
-		</dict>
-		<dict>
-			<key>AutoJoin</key>
-			<false/>
-			<key>DisableAssociationMACRandomization</key>
-			<true/>
-			<key>EncryptionType</key>
-			<string>None</string>
-			<key>FirstAutoJoinRestricted</key>
-			<true/>
-			<key>HIDDEN_NETWORK</key>
-			<false/>
-			<key>IsHotspot</key>
-			<true/>
-			<key>Password</key>
-			<string>password</string>
-			<key>PayloadDescription</key>
-			<string>Configures Wi-Fi settings</string>
-			<key>PayloadDisplayName</key>
-			<string>WiFi</string>
-			<key>PayloadIdentifier</key>
-			<string>com.apple.wifi.managed.01455DDE-4BF5-4493-B3BC-66AB9E10CDBF</string>
-			<key>PayloadOrganization</key>
-			<string>Comcast Cable Corporation</string>
-			<key>PayloadType</key>
-			<string>com.apple.wifi.managed</string>
-			<key>PayloadUUID</key>
-			<string>C2348D5E-1764-43DD-B163-CC2CFAD29106</string>
-			<key>PayloadVersion</key>
-			<real>1</real>
-			<key>ProxyType</key>
-			<string>None</string>
-			<key>SSID_STR</key>
-			<string>xfinitywifi</string>
 		</dict>
 		<dict>
 			<key>AutoJoin</key>
@@ -217,11 +183,11 @@
 			<key>PayloadDisplayName</key>
 			<string>Wi-Fi</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.wifi.managed.F0345DDE-4BF5-4493-B3BC-66AB9E10CDCA</string>
+			<string>com.apple.wifi.managed.F0345DDE-4BF5-4493-B3BC-77AB9E10DECD</string>
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>E693BB23-5B45-43BC-8A1E-B9A4F0DB7FF7</string>
+			<string>77E9F72F-4C1E-4C83-BE4A-A0D6E1D64599</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProxyType</key>
@@ -237,13 +203,13 @@
 	<key>PayloadDisplayName</key>
 	<string>Xfinity Mobile</string>
 	<key>PayloadIdentifier</key>
-	<string>3F9E0DDE-8F17-4B01-990E-F36652D11CA7</string>
+	<string>3F9E0DDE-8F17-4B01-990E-F36652D11CA8</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>C37A68C3-E35E-43C0-8D5E-B2FCA6DE999F</string>
+	<string>BB4B2530-881F-4CD6-92F0-F3A8E896000C</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

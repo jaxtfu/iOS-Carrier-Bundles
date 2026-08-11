@@ -351,67 +351,85 @@ MIoO1Ms65zdhK94M74mlFH9nXHsvQ8FGuJOLnodg2LnwIW0OUwngwvrDCVM=</string>
 	<dict>
 		<key>Signaling</key>
 		<dict>
-			<key>IgnoreRegNotificationContactExpires</key>
-			<true/>
-			<key>PreconditionUpdateDelayTimerMilliseconds</key>
-			<integer>10000</integer>
-			<key>DefaultAuthAlgorithm</key>
-			<string>AKAv1-MD5</string>
-			<key>TriggerCSFBOnSDPError</key>
-			<true/>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>ussdEnabled</key>
-			<true/>
 			<key>EarlyMediaNeedsHeader</key>
 			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>130</integer>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
+			<key>RingingTimerSeconds</key>
+			<integer>130</integer>
+			<key>ReRegisterOnErrorCodes</key>
+			<string>REGISTER:504;INVITE:504</string>
+			<key>ResetDisabledModeOnEvents</key>
+			<string>SimInserted,AirplaneModeToggled,AccessNetworkChanged</string>
+			<key>RegistrationRetryIntervals</key>
+			<string>0</string>
 			<key>SipTimers</key>
 			<dict>
 				<key>InviteResponseTimeout</key>
 				<integer>4000</integer>
 			</dict>
-			<key>ResetDisabledModeOnEvents</key>
-			<string>SimInserted,AirplaneModeToggled,AccessNetworkChanged</string>
+			<key>AlwaysAddPrivacyHeader</key>
+			<true/>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>MaxReRegistrationAttempts</key>
+			<integer>0</integer>
+			<key>EmergencyRegistrationTimeoutSeconds</key>
+			<integer>5</integer>
+			<key>CountryOfOriginationFormat</key>
+			<string>BOTH</string>
+			<key>UseIPSec</key>
+			<true/>
+			<key>IncompleteRegistrationThrottlingIntervalSeconds</key>
+			<integer>0</integer>
+			<key>strictCallFlows</key>
+			<true/>
+			<key>DeferMediaActivationOnSessionConfirmed</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string></string>
 			<key>OutgoingDomain</key>
 			<string>1</string>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
+			<key>SubscriptionTerminatedMeansRegistrationTerminated</key>
+			<true/>
+			<key>MaxRegistrationAttemptsPerProxy</key>
+			<integer>1</integer>
+			<key>TriggerCSFBOnWaitForRingingTimeout</key>
+			<false/>
+			<key>ReRegisterOnInternalRequestTimeout</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RegistrationPolicy</key>
+			<string>Softbank</string>
+			<key>EmergencyRegistrationRetryResponses</key>
+			<string>504</string>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>NetworkTerminationRetryIntervalSeconds</key>
+			<integer>1</integer>
 			<key>AlwaysUnsubscribeFromRegEvents</key>
 			<false/>
 			<key>SendLocalTimeZoneInformation</key>
 			<true/>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string>3XX,4XX,5XX,6XX,-380</string>
-			<key>AlwaysSendSessionProgress</key>
+			<key>ussdEnabled</key>
 			<true/>
-			<key>SubscriptionTerminatedMeansRegistrationTerminated</key>
-			<true/>
-			<key>TriggerCSFBOnWaitForRingingTimeout</key>
+			<key>PreconditionUpdateDelayTimerMilliseconds</key>
+			<integer>10000</integer>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>RequirePreconditionsWhenMandatory</key>
 			<false/>
 			<key>WaitForRingingTimerMOSeconds</key>
 			<integer>35</integer>
-			<key>strictCallFlows</key>
+			<key>IgnoreRegNotificationContactExpires</key>
 			<true/>
-			<key>RingbackTimerSeconds</key>
-			<integer>130</integer>
-			<key>AlwaysAddPrivacyHeader</key>
-			<true/>
-			<key>CountryOfOriginationFormat</key>
-			<string>BOTH</string>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
 			<key>WaitForRingingTimerMTSeconds</key>
 			<integer>35</integer>
-			<key>EnableCellularNetworkInfo</key>
-			<true/>
-			<key>IncompleteRegistrationThrottlingIntervalSeconds</key>
-			<integer>0</integer>
-			<key>Preconditions</key>
-			<string>Supported</string>
-			<key>DeferMediaActivationOnSessionConfirmed</key>
-			<true/>
-			<key>RingingTimerSeconds</key>
-			<integer>130</integer>
-			<key>UseIPSec</key>
-			<true/>
 		</dict>
 		<key>ConferenceCalling</key>
 		<dict>

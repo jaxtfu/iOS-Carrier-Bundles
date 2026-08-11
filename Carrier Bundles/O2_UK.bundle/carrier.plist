@@ -827,8 +827,17 @@
 		<dict>
 			<key>OverrideConfiguration</key>
 			<dict>
-				<key>OverrideOperatorName</key>
-				<string>Sky</string>
+				<key>StatusBarImages</key>
+				<array>
+					<dict>
+						<key>AllowPrefixMatching</key>
+						<false/>
+						<key>CarrierName</key>
+						<string>O2-UK</string>
+						<key>StatusBarCarrierName</key>
+						<string>Sky</string>
+					</dict>
+				</array>
 				<key>AttachAPN</key>
 				<dict>
 					<key>3GPP</key>
@@ -847,17 +856,17 @@
 						<integer>1</integer>
 					</dict>
 				</dict>
-				<key>StatusBarImages</key>
-				<array>
-					<dict>
-						<key>AllowPrefixMatching</key>
-						<false/>
-						<key>CarrierName</key>
-						<string>O2-UK</string>
-						<key>StatusBarCarrierName</key>
-						<string>Sky</string>
-					</dict>
-				</array>
+				<key>CarrierName</key>
+				<string>Sky</string>
+				<key>OverrideOperatorName</key>
+				<string>Sky</string>
+				<key>CarrierAppDiscoverability</key>
+				<dict>
+					<key>880575127</key>
+					<array>
+						<string>O2</string>
+					</array>
+				</dict>
 				<key>apns</key>
 				<array>
 					<dict>
@@ -891,12 +900,29 @@
 				</array>
 				<key>OverrideOperatorWiFiName</key>
 				<string>Sky WiFiCall</string>
-				<key>CarrierName</key>
-				<string>Sky</string>
 			</dict>
 			<key>SupportedSIMs</key>
 			<array>
 				<string>23410_GID1-520F</string>
+			</array>
+		</dict>
+		<key>Configuration_2</key>
+		<dict>
+			<key>OverrideConfiguration</key>
+			<dict>
+				<key>CarrierName</key>
+				<string>O2</string>
+				<key>CarrierAppDiscoverability</key>
+				<dict>
+					<key>325533754</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+			</dict>
+			<key>SupportedSIMs</key>
+			<array>
+				<string>23410_GID1-90FF</string>
 			</array>
 		</dict>
 	</dict>

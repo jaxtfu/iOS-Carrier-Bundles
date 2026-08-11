@@ -172,12 +172,14 @@
 	</dict>
 	<key>CarrierEntitlements</key>
 	<dict>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
+		<true/>
+		<key>SupportSecureIntent</key>
+		<true/>
 		<key>SupportedEntitlements</key>
-		<integer>5121</integer>
+		<integer>13313</integer>
 		<key>ProtocolVersion</key>
 		<string>2</string>
-		<key>ServerAddress</key>
-		<string>https://ios.entitlement.telekom.si</string>
 		<key>Authentication</key>
 		<dict>
 			<key>Type</key>
@@ -185,13 +187,17 @@
 			<key>Username</key>
 			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
 		</dict>
+		<key>ServerAddress</key>
+		<string>https://ios.entitlement.telekom.si</string>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<true/>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
 		<key>SupportedActions</key>
 		<array>
 			<string>AuthenticateTrustFlag</string>
 			<string>TransferSIMService</string>
 		</array>
-		<key>UpdatePeriod</key>
-		<integer>24</integer>
 	</dict>
 	<key>OverrideOperatorWiFiName</key>
 	<string>MobitelWiFi</string>
@@ -203,8 +209,6 @@
 	<array/>
 	<key>CarrierName</key>
 	<string>mobitel</string>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
 	<key>AttachAPN</key>
 	<dict>
 		<key>3GPP</key>
@@ -219,6 +223,22 @@
 			<string></string>
 			<key>AllowedProtocolMask</key>
 			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>LocalInstallSMDPURL</key>
+		<string>rsp-3052.idemia.io</string>
+		<key>MinCompatibleOS</key>
+		<string>27.0</string>
+		<key>TransferErrorCodes</key>
+		<dict>
+			<key>IneligibleAccountErrors</key>
+			<array>
+				<string>5011</string>
+			</array>
 		</dict>
 	</dict>
 	<key>SupportedSIMs</key>

@@ -246,62 +246,83 @@
 	<dict>
 		<key>Signaling</key>
 		<dict>
-			<key>AdditionalContactParams</key>
-			<dict>
-				<key>REGISTER,INVITE,INVITE:*</key>
-				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
-			</dict>
-			<key>LocalQoSTimeoutMOSeconds</key>
-			<integer>5000</integer>
-			<key>TriggerCSFBOnSDPError</key>
+			<key>RingbackTimerSeconds</key>
+			<integer>0</integer>
+			<key>EnableCellularNetworkInfo</key>
 			<true/>
 			<key>UseCIDUrlInPIDF</key>
 			<true/>
-			<key>UseFakeSAsForDeregistration</key>
-			<true/>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>AlwaysAddSipInstance</key>
-			<true/>
-			<key>AccessNetworkRefreshMethod</key>
-			<string>INVITE</string>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>ussdEnabled</key>
-			<true/>
+			<key>RegistrationExpirationSeconds</key>
+			<integer>7200</integer>
 			<key>SipTimers</key>
 			<dict>
 				<key>InviteResponseTimeout</key>
 				<integer>5000</integer>
 			</dict>
-			<key>WaitForRingingTimerMOSeconds</key>
-			<integer>15</integer>
+			<key>MaxUdpMessageSize</key>
+			<integer>1200</integer>
+			<key>PIDFGeoPrivShape</key>
+			<string>ellipsoid</string>
+			<key>PIDFConfidence</key>
+			<integer>90</integer>
+			<key>ClearRegistrationCallIdOnDeinitialization</key>
+			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>PANI</string>
+			<key>UseIPSec</key>
+			<true/>
 			<key>strictCallFlows</key>
+			<true/>
+			<key>LocalQoSTimeoutMOSeconds</key>
+			<integer>5000</integer>
+			<key>AllowGeolocationForEmergencyCallsWhileInboundRoaming</key>
+			<true/>
+			<key>UseFakeSAsForDeregistration</key>
+			<true/>
+			<key>StartLocalQosTimerOnSessionProgress</key>
+			<true/>
+			<key>SendEmergencyLocationUpdates</key>
 			<true/>
 			<key>InviteErrorResponsesToTriggerCSFB</key>
 			<string>380,414,499,606</string>
-			<key>StartLocalQosTimerOnSessionProgress</key>
+			<key>AccessNetworkRefreshMethod</key>
+			<string>INVITE</string>
+			<key>AdditionalHeaders</key>
+			<dict>
+				<key>INVITE[wifi,911]</key>
+				<array>
+					<string>Supported: geolocation</string>
+				</array>
+			</dict>
+			<key>FastEmergencyLocationEnabled</key>
 			<true/>
-			<key>MaxUdpMessageSize</key>
-			<integer>1200</integer>
-			<key>RingbackTimerSeconds</key>
-			<integer>0</integer>
-			<key>WaitForRingingTimerMTSeconds</key>
-			<integer>15</integer>
-			<key>CountryOfOriginationFormat</key>
-			<string>PANI</string>
+			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>AlwaysAddGeolocationForEmergencyCalls</key>
+			<true/>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>ussdEnabled</key>
+			<true/>
 			<key>RequirePreconditionsWhenMandatory</key>
 			<false/>
-			<key>EnableCellularNetworkInfo</key>
-			<true/>
 			<key>Preconditions</key>
 			<string>Supported</string>
-			<key>ClearRegistrationCallIdOnDeinitialization</key>
+			<key>EarlyMediaNeedsHeader</key>
 			<true/>
-			<key>UseIPSec</key>
+			<key>WaitForRingingTimerMOSeconds</key>
+			<integer>15</integer>
+			<key>AddPEmergencyInfoHeaderToEmergencyInviteOnWifi</key>
 			<true/>
-			<key>RegistrationExpirationSeconds</key>
-			<integer>7200</integer>
+			<key>WaitForRingingTimerMTSeconds</key>
+			<integer>15</integer>
 		</dict>
 		<key>ConferenceCalling</key>
 		<dict>
@@ -427,6 +448,13 @@
 	<string>PTCI</string>
 	<key>SupportsImsCapability</key>
 	<true/>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsRTT</key>
+		<false/>
+		<key>SupportsEmergencyRTT</key>
+		<false/>
+	</dict>
 	<key>SupportedPLMNs</key>
 	<array>
 		<string>311450</string>

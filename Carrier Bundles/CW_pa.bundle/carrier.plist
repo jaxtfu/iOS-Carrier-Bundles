@@ -141,18 +141,20 @@
 			<true/>
 		</dict>
 		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<false/>
+		<true/>
 	</dict>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>CarrierEntitlements</key>
 	<dict>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
+		<true/>
+		<key>SupportSecureIntent</key>
+		<true/>
 		<key>SupportedEntitlements</key>
-		<integer>129</integer>
+		<integer>1</integer>
 		<key>ProtocolVersion</key>
 		<string>2</string>
-		<key>ServerAddress</key>
-		<string>https://SESCWP.cwpanama.com</string>
 		<key>Authentication</key>
 		<dict>
 			<key>Type</key>
@@ -160,8 +162,16 @@
 			<key>Username</key>
 			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
 		</dict>
-		<key>Timeout</key>
-		<integer>40</integer>
+		<key>ServerAddress</key>
+		<string>https://ses.mnc001.mcc714.pub.3gppnetwork.org</string>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<true/>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+		<key>SupportedActions</key>
+		<array>
+			<string>TransferSIMService</string>
+		</array>
 	</dict>
 	<key>CarrierName</key>
 	<string>+Movil</string>
@@ -171,6 +181,28 @@
 	<array>
 		<string>+447786205094</string>
 	</array>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>LocalInstallSMDPURL</key>
+		<string>https://sm-v4-099-a-gtm.pr.go-esim.com</string>
+		<key>MinCompatibleOS</key>
+		<string>27.0</string>
+		<key>TransferErrorCodes</key>
+		<dict>
+			<key>MaintenanceErrors</key>
+			<array>
+				<string>5003</string>
+			</array>
+			<key>IneligibleAccountErrors</key>
+			<array>
+				<string>5011</string>
+			</array>
+			<key>BlockedAccountErrors</key>
+			<array>
+				<string>5009</string>
+			</array>
+		</dict>
+	</dict>
 	<key>ShowVolteSwitch</key>
 	<true/>
 	<key>AttachAPN</key>
@@ -193,10 +225,10 @@
 	<string>none</string>
 	<key>VoLTECustomerCareWebsite</key>
 	<string>http://cw.pa/volte</string>
-	<key>VoicemailPilotNumber</key>
-	<string>*111</string>
 	<key>HomeBundleIdentifier</key>
 	<string>com.apple.Panama</string>
+	<key>VoicemailPilotNumber</key>
+	<string>*111</string>
 	<key>TechSettings</key>
 	<dict>
 		<key>WifiCallingAllowedInRoaming</key>
@@ -310,6 +342,11 @@
 			<key>DeadPeerDetectionRetryInterval</key>
 			<integer>10</integer>
 		</dict>
+	</dict>
+	<key>PushSettings</key>
+	<dict>
+		<key>CellularPlanTransferTopic</key>
+		<string>com.libertycwp.ent.plan-transfer-to-eSIM</string>
 	</dict>
 	<key>apns</key>
 	<array>

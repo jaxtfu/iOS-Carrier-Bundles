@@ -276,8 +276,6 @@
 			<string>Pay My Bill</string>
 		</dict>
 	</array>
-	<key>DefaultWhenImsSwitchOff</key>
-	<integer>0</integer>
 	<key>ShowVolteWarningUnsupportedCarrier</key>
 	<false/>
 	<key>AllowEDGEEditing</key>

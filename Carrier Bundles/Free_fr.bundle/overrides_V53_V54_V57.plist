@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>DerPriFileVersion</key>
-	<string>6.0.161</string>
-	<key>Show3GSwitchWith4G</key>
+	<string>6.0.162</string>
+	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
-	<key>AllowSAOnWiFiAssociation</key>
+	<key>Show5GStandaloneSwitch</key>
 	<true/>
-	<key>ShowVoNRSwitch</key>
+	<key>Enable5GStandaloneByDefault</key>
 	<true/>
 	<key>Show5GSwitch</key>
 	<true/>
-	<key>Enable5GStandaloneByDefault</key>
+	<key>ShowHighDataModeSwitch</key>
 	<true/>
 	<key>IMSConfig</key>
 	<dict>
@@ -30,20 +30,30 @@
 			<true/>
 		</dict>
 	</dict>
-	<key>ShowHighDataModeSwitch</key>
-	<true/>
-	<key>SupportsVoNR</key>
-	<true/>
-	<key>DerPriFileName</key>
-	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportedEntitlements</key>
 		<integer>4240385</integer>
 	</dict>
+	<key>Show3GSwitchWith4G</key>
+	<false/>
+	<key>DerPriFileName</key>
+	<string>overrides_V53_V54_V57.der.pri</string>
+	<key>Show5GStandaloneSwitchOnlyWhenEntitled</key>
+	<true/>
+	<key>AllowSAOnWiFiAssociation</key>
+	<true/>
+	<key>DataIndicatorOverrideForNRMmwave</key>
+	<string>NRPlus</string>
 	<key>ShowVolteSwitch</key>
 	<false/>
-	<key>Show5GStandaloneSwitch</key>
+	<key>Show3GSwitchWithVolte</key>
+	<false/>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
+	<key>ShowVoNRSwitch</key>
+	<true/>
+	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
 	<key>apns</key>
 	<array>
@@ -112,6 +122,8 @@
 		<dict>
 			<key>password</key>
 			<string></string>
+			<key>tech-type-mask</key>
+			<integer>1048576</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
@@ -122,15 +134,7 @@
 			<integer>3</integer>
 		</dict>
 	</array>
-	<key>Show3GSwitchWithVolte</key>
-	<false/>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Enable5GAutoByDefault</key>
-	<true/>
-	<key>SupportsNRNSAInboundRoaming</key>
-	<true/>
-	<key>Show5GStandaloneSwitchOnlyWhenEntitled</key>
+	<key>SupportsVoNR</key>
 	<true/>
 </dict>
 </plist>

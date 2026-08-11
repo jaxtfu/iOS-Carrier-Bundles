@@ -53,90 +53,6 @@
 			<string>AT&amp;T</string>
 		</dict>
 	</array>
-	<key>EnableIratRLHandoverPolicy</key>
-	<true/>
-	<key>CellularPlanProvisioningSettings</key>
-	<dict>
-		<key>WaitForPhoneNumberDuringActivation</key>
-		<true/>
-	</dict>
-	<key>MMS</key>
-	<dict>
-		<key>MaxMessageSize</key>
-		<integer>1048576</integer>
-		<key>ForwardJunkReports</key>
-		<true/>
-		<key>GroupModeAllowUserOverride</key>
-		<true/>
-		<key>MaxVideoBitrate</key>
-		<integer>131072</integer>
-		<key>MMSC</key>
-		<string>http://mmsc.mobile.att.net</string>
-		<key>OnWhileRoaming</key>
-		<true/>
-		<key>MMSCarrierReportJunkAddress</key>
-		<string>7727</string>
-		<key>OnWhileDataOff</key>
-		<true/>
-		<key>MaxRecipients</key>
-		<integer>20</integer>
-		<key>GroupModeEnabled</key>
-		<true/>
-		<key>Proxy</key>
-		<string>proxy.mobile.att.net</string>
-		<key>AllowReturnReports</key>
-		<true/>
-	</dict>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
-	<key>TearDownTetheringDataContextDuringAuthentication</key>
-	<false/>
-	<key>EnableLTEAfterUpgrade</key>
-	<true/>
-	<key>CarrierEntitlements</key>
-	<dict>
-		<key>UpdatePeriod</key>
-		<integer>48</integer>
-		<key>SupportSecureIntent</key>
-		<true/>
-		<key>ServerAddress</key>
-		<string>https://sentitlement2.mobile.att.net</string>
-		<key>ReportTransferSimServiceFlowType</key>
-		<false/>
-		<key>TransferWebservicesTimeout</key>
-		<integer>95</integer>
-		<key>Authentication</key>
-		<dict>
-			<key>Type</key>
-			<integer>1</integer>
-			<key>Username</key>
-			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
-		</dict>
-		<key>PseudonymUpdatePeriod</key>
-		<integer>168</integer>
-		<key>SupportedAuthorizationTokens</key>
-		<integer>3</integer>
-		<key>SupportedEntitlements</key>
-		<integer>4206477</integer>
-		<key>UserAgent</key>
-		<string>Entitlement/$version ($device) iOS/$iOSVersion</string>
-		<key>SupportCrossPlatformSIMTransfer</key>
-		<true/>
-		<key>SupportPhysicalSIMtoESIMTransfer</key>
-		<true/>
-		<key>ProtocolVersion</key>
-		<string>2</string>
-		<key>DisableSecondaryCredentials</key>
-		<false/>
-		<key>SupportsOnDevicePhysicalSIMConvert</key>
-		<true/>
-		<key>EntitlementRequestViaWebService</key>
-		<true/>
-		<key>FailureDelay</key>
-		<integer>180</integer>
-		<key>TempFailureBackoffDelay</key>
-		<integer>180</integer>
-	</dict>
 	<key>TechSettings</key>
 	<dict>
 		<key>FatalActivationErrors</key>
@@ -279,24 +195,90 @@
 		<key>SupportCallHandover</key>
 		<true/>
 	</dict>
-	<key>VisualVoicemailServiceName</key>
-	<string>IMAP</string>
-	<key>RCS</key>
+	<key>CellularPlanProvisioningSettings</key>
 	<dict>
-		<key>EnableBusinessMessagingByDefault</key>
-		<true/>
-		<key>ProvisioningData</key>
-		<dict>
-			<key>ServerURL</key>
-			<string>config.rcs.mnc$mnc.mcc$mcc.jibecloud.net</string>
-		</dict>
-		<key>ShowBusinessMessagingSwitch</key>
-		<true/>
-		<key>EnableRCSByDefault</key>
+		<key>WaitForPhoneNumberDuringActivation</key>
 		<true/>
 	</dict>
-	<key>SupportsUserBusyCauseCode</key>
+	<key>MMS</key>
+	<dict>
+		<key>MaxMessageSize</key>
+		<integer>1048576</integer>
+		<key>ForwardJunkReports</key>
+		<true/>
+		<key>GroupModeAllowUserOverride</key>
+		<true/>
+		<key>MaxVideoBitrate</key>
+		<integer>131072</integer>
+		<key>MMSC</key>
+		<string>http://mmsc.mobile.att.net</string>
+		<key>OnWhileRoaming</key>
+		<true/>
+		<key>MMSCarrierReportJunkAddress</key>
+		<string>7727</string>
+		<key>OnWhileDataOff</key>
+		<true/>
+		<key>MaxRecipients</key>
+		<integer>20</integer>
+		<key>GroupModeEnabled</key>
+		<true/>
+		<key>Proxy</key>
+		<string>proxy.mobile.att.net</string>
+		<key>AllowReturnReports</key>
+		<true/>
+	</dict>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
 	<false/>
+	<key>TearDownTetheringDataContextDuringAuthentication</key>
+	<false/>
+	<key>EnableLTEAfterUpgrade</key>
+	<true/>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>UpdatePeriod</key>
+		<integer>48</integer>
+		<key>SupportSecureIntent</key>
+		<true/>
+		<key>ServerAddress</key>
+		<string>https://sentitlement2.mobile.att.net</string>
+		<key>ReportTransferSimServiceFlowType</key>
+		<false/>
+		<key>TransferWebservicesTimeout</key>
+		<integer>95</integer>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>PseudonymUpdatePeriod</key>
+		<integer>168</integer>
+		<key>SupportedAuthorizationTokens</key>
+		<integer>3</integer>
+		<key>SupportedEntitlements</key>
+		<integer>4206477</integer>
+		<key>UserAgent</key>
+		<string>Entitlement/$version ($device) iOS/$iOSVersion</string>
+		<key>SupportCrossPlatformSIMTransfer</key>
+		<true/>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<true/>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>DisableSecondaryCredentials</key>
+		<false/>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
+		<true/>
+		<key>EntitlementRequestViaWebService</key>
+		<true/>
+		<key>FailureDelay</key>
+		<integer>180</integer>
+		<key>TempFailureBackoffDelay</key>
+		<integer>180</integer>
+	</dict>
+	<key>VisualVoicemailServiceName</key>
+	<string>IMAP</string>
 	<key>WISPrAccounts</key>
 	<dict>
 		<key>phone@attmobility.com</key>
@@ -319,6 +301,22 @@
 			<string>a446649326d41d87dbb8caec8caf736a</string>
 		</dict>
 	</dict>
+	<key>RCS</key>
+	<dict>
+		<key>EnableBusinessMessagingByDefault</key>
+		<true/>
+		<key>ProvisioningData</key>
+		<dict>
+			<key>ServerURL</key>
+			<string>config.rcs.mnc$mnc.mcc$mcc.jibecloud.net</string>
+		</dict>
+		<key>ShowBusinessMessagingSwitch</key>
+		<true/>
+		<key>EnableRCSByDefault</key>
+		<true/>
+	</dict>
+	<key>SupportsUserBusyCauseCode</key>
+	<false/>
 	<key>pdpTimeout</key>
 	<array>
 		<integer>2</integer>

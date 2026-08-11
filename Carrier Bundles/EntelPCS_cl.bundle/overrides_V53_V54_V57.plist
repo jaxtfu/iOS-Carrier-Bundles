@@ -31,7 +31,7 @@
 		<key>ProvisioningRecheckPeriod</key>
 		<integer>7</integer>
 		<key>SupportedEntitlements</key>
-		<integer>525329</integer>
+		<integer>533521</integer>
 	</dict>
 	<key>SatelliteSystemTransitionTimeToAllowed</key>
 	<integer>5</integer>

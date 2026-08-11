@@ -10,6 +10,8 @@
 		<true/>
 		<key>ServerAddress</key>
 		<string>https://entitlement.telekom.de</string>
+		<key>SupportsQuickSwitchSetActiveIccid</key>
+		<true/>
 		<key>ProvisioningRecheckPeriod</key>
 		<integer>24</integer>
 		<key>Authentication</key>
@@ -24,7 +26,7 @@
 		<key>SupportedAuthorizationTokens</key>
 		<integer>2</integer>
 		<key>SupportedEntitlements</key>
-		<integer>4275201</integer>
+		<integer>12663809</integer>
 		<key>UserAgent</key>
 		<string>Entitlement/$version ($device) iOS/$iOSVersion</string>
 		<key>SupportCrossPlatformSIMTransfer</key>
@@ -41,6 +43,7 @@
 		<array>
 			<string>authenticateTrustFlag</string>
 			<string>transferSIMService</string>
+			<string>QuickSwitch</string>
 		</array>
 		<key>SupportsOnDevicePhysicalSIMConvert</key>
 		<true/>
@@ -134,8 +137,6 @@
 	<true/>
 	<key>PrivateCapable</key>
 	<false/>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
 	<key>RemoteCardProvisioningSettings</key>
 	<dict>
 		<key>MatchingICCIDPrefixes</key>
@@ -161,6 +162,8 @@
 		<key>ProvisioningMethod</key>
 		<string>CarrierFlow</string>
 	</dict>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>+491712523311</string>
 	<key>PhoneNumberRegistrationGatewayAddress</key>
@@ -680,19 +683,39 @@
 	<true/>
 	<key>PreferCarrierNameFromMetadata</key>
 	<true/>
+	<key>QuickSwitch</key>
+	<dict>
+		<key>UseDSForPendingRelease</key>
+		<true/>
+		<key>GSSMonitorModeBackOffTimes</key>
+		<array>
+			<integer>60</integer>
+			<integer>90</integer>
+			<integer>120</integer>
+			<integer>180</integer>
+			<integer>300</integer>
+		</array>
+		<key>PendingReleaseMonitorModeBackOffTimes</key>
+		<array>
+			<integer>60</integer>
+			<integer>90</integer>
+			<integer>120</integer>
+			<integer>180</integer>
+			<integer>300</integer>
+		</array>
+		<key>SMSForkingMechanism</key>
+		<integer>3</integer>
+		<key>SecondaryAccountReturnsAllDevices</key>
+		<true/>
+		<key>WatchHandling</key>
+		<integer>3</integer>
+		<key>AllowSupplementaryServicesOnSecondaryDevice</key>
+		<true/>
+	</dict>
 	<key>APNEditabilityTypemask</key>
 	<integer>0</integer>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32768</integer>
-	<key>RCS</key>
-	<dict>
-		<key>ShowBusinessMessagingSwitch</key>
-		<true/>
-		<key>EnableBusinessMessagingByDefault</key>
-		<true/>
-		<key>EnableRCSByDefault</key>
-		<true/>
-	</dict>
 	<key>AllowScreenOnFastDormancy</key>
 	<true/>
 	<key>PhoneSettings</key>
@@ -701,6 +724,15 @@
 		<integer>14</integer>
 		<key>CarrierVoiceCallSpamReportAddress</key>
 		<string>7726</string>
+	</dict>
+	<key>RCS</key>
+	<dict>
+		<key>ShowBusinessMessagingSwitch</key>
+		<true/>
+		<key>EnableBusinessMessagingByDefault</key>
+		<true/>
+		<key>EnableRCSByDefault</key>
+		<true/>
 	</dict>
 	<key>PushSettings</key>
 	<dict>
@@ -711,8 +743,6 @@
 		<key>MultiSIMTopic</key>
 		<string>de.telekom.entitlements</string>
 	</dict>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -732,6 +762,8 @@
 			<string>Telekom.de</string>
 		</dict>
 	</array>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
 	<key>VisualVoicemailServiceName</key>
 	<string>IMAP</string>
 	<key>CarrierName</key>
@@ -761,5 +793,12 @@
 		<string>26206</string>
 		<string>26278</string>
 	</array>
+	<key>CarrierAppDiscoverability</key>
+	<dict>
+		<key>407932476</key>
+		<array>
+			<string>Telekom.de</string>
+		</array>
+	</dict>
 </dict>
 </plist>

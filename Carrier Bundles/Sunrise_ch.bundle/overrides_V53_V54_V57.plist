@@ -2,17 +2,21 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SupportsVoNR</key>
+	<true/>
 	<key>DerPriFileVersion</key>
-	<string>6.0.161</string>
-	<key>AllowSAOnWiFiAssociation</key>
+	<string>6.0.162</string>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
+	<key>Show5GStandaloneSwitch</key>
+	<true/>
+	<key>Enable5GStandaloneByDefault</key>
 	<true/>
 	<key>IgnoresDeactivateOnNetworkScanServiceMask</key>
 	<integer>131072</integer>
-	<key>ShowVoNRSwitch</key>
-	<true/>
 	<key>Show5GSwitch</key>
 	<true/>
-	<key>Enable5GStandaloneByDefault</key>
+	<key>ShowHighDataModeSwitch</key>
 	<true/>
 	<key>IMSConfig</key>
 	<dict>
@@ -35,20 +39,28 @@
 			<false/>
 		</dict>
 	</dict>
-	<key>ShowHighDataModeSwitch</key>
-	<true/>
-	<key>SupportsVoNR</key>
-	<true/>
-	<key>DerPriFileName</key>
-	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportedEntitlements</key>
 		<integer>64529</integer>
 	</dict>
+	<key>DerPriFileName</key>
+	<string>overrides_V53_V54_V57.der.pri</string>
+	<key>Show5GStandaloneSwitchOnlyWhenEntitled</key>
+	<true/>
+	<key>AllowSAOnWiFiAssociation</key>
+	<true/>
+	<key>DataIndicatorOverrideForNRMmwave</key>
+	<string>NRPlus</string>
 	<key>ShowVolteSwitch</key>
 	<false/>
-	<key>Show5GStandaloneSwitch</key>
+	<key>Enable5GAutoByDefault</key>
+	<true/>
+	<key>ShowVoNRSwitch</key>
+	<true/>
+	<key>SupportsNRNSAInboundRoaming</key>
+	<true/>
+	<key>Enable5GAutoAfterUpgrade</key>
 	<true/>
 	<key>apns</key>
 	<array>
@@ -97,15 +109,5 @@
 			<integer>1</integer>
 		</dict>
 	</array>
-	<key>Enable5GAutoAfterUpgrade</key>
-	<true/>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
-	<key>Enable5GAutoByDefault</key>
-	<true/>
-	<key>SupportsNRNSAInboundRoaming</key>
-	<true/>
-	<key>Show5GStandaloneSwitchOnlyWhenEntitled</key>
-	<true/>
 </dict>
 </plist>

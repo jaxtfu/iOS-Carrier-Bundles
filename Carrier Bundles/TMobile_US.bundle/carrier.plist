@@ -51,12 +51,12 @@
 		<key>Topic</key>
 		<string>com.t-mobile.msg.eas</string>
 	</dict>
-	<key>SupportsNITZ</key>
-	<true/>
 	<key>ShowDialAssist</key>
 	<true/>
 	<key>OverrideOperatorWiFiName</key>
 	<string>T-Mobile Wi-Fi</string>
+	<key>SupportsNITZ</key>
+	<true/>
 	<key>StatusBarImages</key>
 	<array>
 		<dict>
@@ -263,6 +263,8 @@
 		<true/>
 		<key>ServerAddress</key>
 		<string>https://eas3.msg.t-mobile.com</string>
+		<key>SupportsQuickSwitchSetActiveIccid</key>
+		<true/>
 		<key>Timeout</key>
 		<integer>40</integer>
 		<key>Authentication</key>
@@ -277,7 +279,7 @@
 		<key>AllowCurrentLocation</key>
 		<true/>
 		<key>SupportedEntitlements</key>
-		<integer>4226457</integer>
+		<integer>12615065</integer>
 		<key>SupportedAuthorizationTokens</key>
 		<integer>2</integer>
 		<key>UserAgent</key>
@@ -292,6 +294,7 @@
 		<array>
 			<string>getPreferredRoamingNetworks</string>
 			<string>authenticateTrustFlag</string>
+			<string>QuickSwitch</string>
 		</array>
 		<key>EnableDeviceAccountIdentifier</key>
 		<true/>
@@ -331,6 +334,11 @@
 	</array>
 	<key>ShowVolteWarningUnsupportedCarrier</key>
 	<false/>
+	<key>CarrierAppDiscoverability</key>
+	<dict>
+		<key>AllowCarrierSpaceApp</key>
+		<true/>
+	</dict>
 	<key>AllowEDGEEditing</key>
 	<false/>
 	<key>DataIndicatorOverride</key>
@@ -426,8 +434,17 @@
 	<integer>32768</integer>
 	<key>TetheringPhoneNumber</key>
 	<string>1-800-937-8997</string>
-	<key>ExitEmergencyModeWhenPlacingFirstRegularCall</key>
-	<true/>
+	<key>QuickSwitch</key>
+	<dict>
+		<key>SMSForkingMechanism</key>
+		<integer>3</integer>
+		<key>AllowiPhoneTransferOfSecondaryAccount</key>
+		<true/>
+		<key>WatchHandling</key>
+		<integer>3</integer>
+		<key>SecondaryAccountReturnsAllDevices</key>
+		<true/>
+	</dict>
 	<key>CarrierSpace</key>
 	<dict>
 		<key>AutoRefreshMinimumIntervalMins</key>
@@ -456,6 +473,8 @@
 			<true/>
 		</dict>
 	</dict>
+	<key>ExitEmergencyModeWhenPlacingFirstRegularCall</key>
+	<true/>
 	<key>LocationSecondaryOverlay</key>
 	<dict>
 		<key>EnableCPIDuringEmergencyMode</key>
@@ -1211,8 +1230,6 @@
 		<key>EnableEarlyReturnDuringEmergencyMode</key>
 		<true/>
 	</dict>
-	<key>SupportsImsCapability</key>
-	<true/>
 	<key>SupportedPLMNs</key>
 	<array>
 		<string>310026</string>
@@ -1222,6 +1239,8 @@
 		<string>310830</string>
 		<string>312190</string>
 	</array>
+	<key>SupportsImsCapability</key>
+	<true/>
 	<key>OTASoftwareUpdate</key>
 	<dict>
 		<key>SoftwareUpdateOptInRequired</key>

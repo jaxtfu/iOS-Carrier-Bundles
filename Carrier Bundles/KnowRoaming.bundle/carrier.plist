@@ -75,6 +75,8 @@
 			<false/>
 		</dict>
 	</dict>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
 	<key>OTASoftwareUpdate</key>
 	<dict>
 		<key>SoftwareUpdateOptInRequired</key>
@@ -1340,17 +1342,48 @@
 		<string>302270</string>
 		<string>26801</string>
 	</array>
+	<key>AllowAttachAPNEditing</key>
+	<true/>
+	<key>CarrierEntitlements</key>
+	<dict>
+		<key>SupportSecureIntent</key>
+		<true/>
+		<key>SupportedEntitlements</key>
+		<integer>8240</integer>
+		<key>ProtocolVersion</key>
+		<string>2</string>
+		<key>Authentication</key>
+		<dict>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>Username</key>
+			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
+		</dict>
+		<key>ServerAddress</key>
+		<string>https://es1.esr.globaldata.mobile/api/apple</string>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<true/>
+		<key>SupportsOnDevicePhysicalSIMConvert</key>
+		<true/>
+		<key>UpdatePeriod</key>
+		<integer>24</integer>
+	</dict>
+	<key>APNEditabilityTypemask</key>
+	<integer>0</integer>
 	<key>CellularDataPlanSettings</key>
 	<dict>
 		<key>DataOnlySubscription</key>
 		<true/>
 	</dict>
-	<key>APNEditabilityTypemask</key>
-	<integer>0</integer>
-	<key>AllowAttachAPNEditing</key>
-	<true/>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>LocalInstallSMDPURL</key>
+		<string>https://consumer.e-sim.global</string>
+	</dict>
 	<key>SupportsNITZ</key>
 	<false/>
+	<key>APNEditabilityTypemaskNew</key>
+	<integer>1</integer>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -1364,8 +1397,6 @@
 			<integer>49</integer>
 		</dict>
 	</array>
-	<key>APNEditabilityTypemaskNew</key>
-	<integer>1</integer>
 	<key>GlobalMVNO</key>
 	<true/>
 	<key>AttachAPN</key>

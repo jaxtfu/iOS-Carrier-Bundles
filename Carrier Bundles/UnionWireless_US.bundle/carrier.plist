@@ -110,9 +110,9 @@
 			<true/>
 			<key>LocalQoSTimeoutMOSeconds</key>
 			<integer>5000</integer>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
 			<key>AlwaysAddSipInstance</key>
+			<true/>
+			<key>SupportPEarlyMediaHeader</key>
 			<true/>
 			<key>UseCIDUrlInPIDF</key>
 			<true/>
@@ -132,10 +132,10 @@
 					<string>Supported: geolocation</string>
 				</array>
 			</dict>
+			<key>PIDFGeoPrivShape</key>
+			<string>ellipsoid</string>
 			<key>WaitForRingingTimerMOSeconds</key>
 			<integer>7</integer>
-			<key>strictCallFlows</key>
-			<true/>
 			<key>PIDFConfidence</key>
 			<integer>90</integer>
 			<key>StartLocalQosTimerOnSessionProgress</key>
@@ -144,16 +144,18 @@
 			<integer>1200</integer>
 			<key>AlwaysSendSessionProgress</key>
 			<true/>
+			<key>strictCallFlows</key>
+			<true/>
 			<key>RingbackTimerSeconds</key>
 			<integer>120</integer>
 			<key>WaitForRingingTimerMTSeconds</key>
 			<integer>15</integer>
 			<key>CountryOfOriginationFormat</key>
 			<string>BOTH</string>
-			<key>EnableCellularNetworkInfo</key>
-			<true/>
 			<key>Preconditions</key>
 			<string>Supported</string>
+			<key>EnableCellularNetworkInfo</key>
+			<true/>
 			<key>ClearRegistrationCallIdOnDeinitialization</key>
 			<true/>
 			<key>RingingTimerSeconds</key>

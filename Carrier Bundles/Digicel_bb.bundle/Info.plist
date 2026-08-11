@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleShortVersionString</key>
-	<string>71.5.9</string>
+	<string>72.0.0</string>
 	<key>CFBundleDeviceFamily</key>
 	<string>iPhone</string>
 	<key>CFBundleIdentifier</key>
@@ -21,6 +21,6 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>71.5.9</string>
+	<string>72.0</string>
 </dict>
 </plist>

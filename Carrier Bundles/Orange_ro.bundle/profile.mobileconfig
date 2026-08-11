@@ -15,7 +15,7 @@
 				</array>
 			</dict>
 			<key>EncryptionType</key>
-			<string>WPA</string>
+			<string>WPA2</string>
 			<key>HIDDEN_NETWORK</key>
 			<false/>
 			<key>IsHotspot</key>
@@ -29,52 +29,13 @@
 			<key>PayloadType</key>
 			<string>com.apple.wifi.managed</string>
 			<key>PayloadUUID</key>
-			<string>28b67048-da0a-11eb-a774-f45c89abb0d9</string>
+			<string>91497571-D589-4141-AC1C-AB37DCA8A67D</string>
 			<key>PayloadVersion</key>
 			<real>1.0</real>
 			<key>ProxyType</key>
 			<string>None</string>
 			<key>SSID_STR</key>
 			<string>Orange Mobile Wi-Fi</string>
-		</dict>
-		<dict>
-			<key>AutoJoin</key>
-			<true/>
-			<key>DisplayedOperatorName</key>
-			<string>Orange</string>
-			<key>DomainName</key>
-			<string>orange.ro</string>
-			<key>EAPClientConfiguration</key>
-			<dict>
-				<key>AcceptEAPTypes</key>
-				<array>
-					<integer>18</integer>
-				</array>
-			</dict>
-			<key>EncryptionType</key>
-			<string>WPA2</string>
-			<key>IsHotspot</key>
-			<true/>
-			<key>MCCAndMNCs</key>
-			<array>
-				<string>226010</string>
-			</array>
-			<key>PayloadDescription</key>
-			<string>Configures Wi-Fi settings</string>
-			<key>PayloadDisplayName</key>
-			<string>WiFi</string>
-			<key>PayloadIdentifier</key>
-			<string>com.apple.Orange_ro.4d5d7e5a-d474-11eb-97cc-f45c89abb0d9</string>
-			<key>PayloadType</key>
-			<string>com.apple.wifi.managed</string>
-			<key>PayloadUUID</key>
-			<string>28b671a6-da0a-11eb-a774-f45c89abb0d9</string>
-			<key>PayloadVersion</key>
-			<real>1.0</real>
-			<key>ProxyType</key>
-			<string>None</string>
-			<key>ServiceProviderRoamingEnabled</key>
-			<false/>
 		</dict>
 	</array>
 	<key>PayloadDisplayName</key>

@@ -13,21 +13,16 @@
 		<key>SupportSecureIntent</key>
 		<true/>
 	</dict>
+	<key>DataIndicatorOverrideForNRMmwave</key>
+	<string>NRPlus</string>
 	<key>Enable5GAutoByDefault</key>
 	<true/>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
 	<key>DerPriFileVersion</key>
-	<string>6.0.161</string>
+	<string>6.0.162</string>
 	<key>Show5GWarningUnsupportedCarrier</key>
 	<false/>
-	<key>Show5GSwitch</key>
-	<true/>
-	<key>PhoneAccountTransfer</key>
-	<dict>
-		<key>LocalInstallSMDPURL</key>
-		<string>https://sm-v4-118-a-gtm.pr.go-esim.com</string>
-	</dict>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -117,5 +112,12 @@
 			<integer>24</integer>
 		</dict>
 	</array>
+	<key>Show5GSwitch</key>
+	<true/>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>LocalInstallSMDPURL</key>
+		<string>https://sm-v4-118-a-gtm.pr.go-esim.com</string>
+	</dict>
 </dict>
 </plist>

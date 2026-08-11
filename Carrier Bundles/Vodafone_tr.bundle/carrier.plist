@@ -4,12 +4,12 @@
 <dict>
 	<key>CarrierEntitlements</key>
 	<dict>
+		<key>SupportSecureIntent</key>
+		<true/>
 		<key>SupportedEntitlements</key>
-		<integer>1025</integer>
+		<integer>9217</integer>
 		<key>ProtocolVersion</key>
 		<string>2</string>
-		<key>ServerAddress</key>
-		<string>https://es-tr.vodafone.com.tr/ium-OEMInterface/servlet/IUMServlet</string>
 		<key>Authentication</key>
 		<dict>
 			<key>Type</key>
@@ -17,6 +17,10 @@
 			<key>Username</key>
 			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
 		</dict>
+		<key>ServerAddress</key>
+		<string>https://es-tr.vodafone.com.tr/ium-OEMInterface/servlet/IUMServlet</string>
+		<key>SupportPhysicalSIMtoESIMTransfer</key>
+		<false/>
 		<key>UpdatePeriod</key>
 		<integer>168</integer>
 	</dict>
@@ -200,6 +204,44 @@
 	</dict>
 	<key>SupportsUserBusyCauseCode</key>
 	<true/>
+	<key>PhoneAccountTransfer</key>
+	<dict>
+		<key>LocalInstallSMDPURL</key>
+		<string>https://vodafone.smdpp.protahub.com</string>
+		<key>RequiresDeleteBeforeTransfer</key>
+		<true/>
+		<key>TransferErrorCodes</key>
+		<dict>
+			<key>CarrierDefaultErrors</key>
+			<array>
+				<string>204</string>
+			</array>
+			<key>BillingErrors</key>
+			<array>
+				<string>201</string>
+			</array>
+			<key>IneligibleAccountErrors</key>
+			<array>
+				<string>203</string>
+			</array>
+			<key>SuccessfulTransferWithDelayedActivationErrors</key>
+			<array>
+				<string>205</string>
+			</array>
+			<key>MaintenanceErrors</key>
+			<array>
+				<string>202</string>
+			</array>
+			<key>BlockedAccountErrors</key>
+			<array>
+				<string>206</string>
+			</array>
+		</dict>
+		<key>MinCompatibleOS</key>
+		<string>27.0</string>
+		<key>SupportsFallbackToLegacyFlow</key>
+		<false/>
+	</dict>
 	<key>AllowEDGEEditing</key>
 	<true/>
 	<key>RegistrationOptInRequired</key>
@@ -618,6 +660,8 @@
 	<key>PushSettings</key>
 	<dict>
 		<key>MultiSIMTopic</key>
+		<string>com.vf.selfservis</string>
+		<key>CellularPlanTransferTopic</key>
 		<string>com.vf.selfservis</string>
 	</dict>
 	<key>Services</key>

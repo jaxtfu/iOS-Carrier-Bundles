@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>DerPriFileVersion</key>
-	<string>5.0.161</string>
+	<string>6.0.161</string>
 	<key>AllowSAOnWiFiAssociation</key>
 	<true/>
 	<key>ShowVoNRSwitch</key>
 	<true/>
-	<key>Enable5GStandaloneByDefault</key>
+	<key>Show5GSwitch</key>
 	<true/>
-	<key>Show5GStandaloneSwitchOnlyWhenEntitled</key>
+	<key>Enable5GStandaloneByDefault</key>
 	<true/>
 	<key>IMSConfig</key>
 	<dict>
@@ -47,10 +47,14 @@
 		<key>SupportedEntitlements</key>
 		<integer>4236497</integer>
 	</dict>
-	<key>ShowVolteSwitch</key>
-	<false/>
+	<key>DataIndicatorOverrideForNRMmwave</key>
+	<string>NRPlus</string>
 	<key>Show5GStandaloneSwitch</key>
 	<true/>
+	<key>ShowVolteSwitch</key>
+	<false/>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -120,13 +124,11 @@
 			<integer>3</integer>
 		</dict>
 	</array>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
 	<key>Enable5GAutoByDefault</key>
 	<true/>
-	<key>Show5GSwitch</key>
-	<true/>
 	<key>SupportsNRNSAInboundRoaming</key>
+	<true/>
+	<key>Show5GStandaloneSwitchOnlyWhenEntitled</key>
 	<true/>
 </dict>
 </plist>

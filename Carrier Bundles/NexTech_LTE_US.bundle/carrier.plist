@@ -517,14 +517,12 @@
 		</dict>
 		<key>ConferenceCalling</key>
 		<dict>
-			<key>conferenceServer</key>
-			<string>sip:mmtel@conf-factory.ims.mnc420.mcc312.3gppnetwork.org</string>
-			<key>ttyIMSSupported</key>
+			<key>AlwaysSubscribeToConferenceEvents</key>
 			<true/>
 			<key>TreatAllNotificationsAsPartial</key>
 			<true/>
-			<key>AlwaysSubscribeToConferenceEvents</key>
-			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc420.mcc312.3gppnetwork.org</string>
 		</dict>
 		<key>AllowHandoverWithoutIMSVoiceService</key>
 		<true/>

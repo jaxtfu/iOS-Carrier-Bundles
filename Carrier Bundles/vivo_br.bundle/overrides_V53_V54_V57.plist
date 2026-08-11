@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>DerPriFileVersion</key>
-	<string>6.0.162</string>
+	<string>6.0.163</string>
 	<key>ShowVoNRSwitch</key>
 	<true/>
 	<key>Enable5GStandaloneByDefault</key>

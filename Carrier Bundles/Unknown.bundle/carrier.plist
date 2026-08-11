@@ -544,11 +544,6 @@
 		<key>SupportsTTY</key>
 		<true/>
 	</dict>
-	<key>MMS</key>
-	<dict>
-		<key>GroupModeEnabled</key>
-		<false/>
-	</dict>
 	<key>AllowAttachAPNEditing</key>
 	<true/>
 	<key>ShowLTEWarningUnsupportedCarrier</key>

@@ -822,6 +822,30 @@
 	<array>
 		<string>23430_GID1-B3</string>
 	</array>
+	<key>NRSlicing</key>
+	<dict>
+		<key>UseMdmDnnAsActualDnn</key>
+		<true/>
+		<key>AppCategories</key>
+		<array>
+			<dict>
+				<key>ID</key>
+				<integer>9500</integer>
+				<key>AlwaysOnApps</key>
+				<true/>
+				<key>Name</key>
+				<string>MCX</string>
+				<key>TechnologyMask</key>
+				<integer>24</integer>
+				<key>ForcedDNN</key>
+				<string>24:everywhere.ee.mcx</string>
+			</dict>
+		</array>
+		<key>ManagedSliceApps</key>
+		<true/>
+		<key>UseMdmDnnInLTE</key>
+		<true/>
+	</dict>
 	<key>OverrideOperatorCellTunnelName</key>
 	<string>BT using Cellular Data</string>
 </dict>

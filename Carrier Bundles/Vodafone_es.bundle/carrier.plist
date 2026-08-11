@@ -20,9 +20,11 @@
 			<string>0$IMSI@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org</string>
 		</dict>
 		<key>SupportedEntitlements</key>
-		<integer>74768</integer>
+		<integer>4269072</integer>
+		<key>SupportedAuthorizationTokens</key>
+		<integer>2</integer>
 		<key>ServerAddress</key>
-		<string>https://es-es.vodafone.com:4446/ium-OEMInterface/servlet/IUMServlet</string>
+		<string>https://es-prod.entitlement.vodafone.com:4446/ium-OEMInterface/servlet/IUMServlet</string>
 		<key>SupportedActions</key>
 		<array>
 			<array>

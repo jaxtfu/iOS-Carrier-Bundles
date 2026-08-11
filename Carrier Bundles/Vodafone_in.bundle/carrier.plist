@@ -14,7 +14,7 @@
 				<key>SupportSecureIntent</key>
 				<true/>
 				<key>SupportedEntitlements</key>
-				<integer>4202496</integer>
+				<integer>8192</integer>
 				<key>ProtocolVersion</key>
 				<string>2</string>
 				<key>Authentication</key>
@@ -26,8 +26,6 @@
 				</dict>
 				<key>TransferWebservicesTimeout</key>
 				<integer>95</integer>
-				<key>SupportedAuthorizationTokens</key>
-				<integer>2</integer>
 				<key>ServerAddress</key>
 				<string>https://deg.vodafoneidea.com:8181/ium-OEMInterface/servlet/IUMServlet</string>
 				<key>SupportPhysicalSIMtoESIMTransfer</key>
@@ -444,22 +442,6 @@
 	<false/>
 	<key>AllowedServicesTypeMaskOnInternet</key>
 	<integer>32768</integer>
-	<key>RCS</key>
-	<dict>
-		<key>EnableBusinessMessagingByDefault</key>
-		<true/>
-		<key>ProvisioningData</key>
-		<dict>
-			<key>SupportsPush</key>
-			<false/>
-		</dict>
-		<key>ShowBusinessMessagingSwitch</key>
-		<true/>
-		<key>ShowRCSSwitch</key>
-		<true/>
-		<key>EnableRCSByDefault</key>
-		<true/>
-	</dict>
 	<key>PushSettings</key>
 	<dict>
 		<key>MultiSIMTopic</key>

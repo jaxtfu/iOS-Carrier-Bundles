@@ -154,7 +154,7 @@
 	<key>TechSettings</key>
 	<dict>
 		<key>WifiCallingAllowedInRoaming</key>
-		<false/>
+		<true/>
 		<key>ChildSAs</key>
 		<dict>
 			<key>FirstChild</key>

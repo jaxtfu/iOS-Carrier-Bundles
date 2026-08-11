@@ -720,6 +720,13 @@
 	<true/>
 	<key>MyAccountURL</key>
 	<string>https://www.rinawireless.com</string>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsRTT</key>
+		<false/>
+		<key>SupportsEmergencyRTT</key>
+		<false/>
+	</dict>
 	<key>MyAccountURLTitle</key>
 	<string>My Account</string>
 	<key>CDMAInternationalRoaming</key>

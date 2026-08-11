@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>DerPriFileVersion</key>
+	<string>6.0.162</string>
+	<key>AllowSAOnWiFiAssociation</key>
+	<true/>
+	<key>ShowVoNRSwitch</key>
+	<true/>
 	<key>TechSettings</key>
 	<dict>
 		<key>EmergencyRemoteIdRequired</key>
@@ -22,9 +28,9 @@
 			</dict>
 		</array>
 	</dict>
-	<key>DerPriFileVersion</key>
-	<string>0.1.161</string>
-	<key>SupportsNRNSAInboundRoaming</key>
+	<key>Show5GSwitch</key>
+	<true/>
+	<key>Enable5GStandaloneByDefault</key>
 	<true/>
 	<key>ShowHighDataModeSwitch</key>
 	<true/>
@@ -38,13 +44,22 @@
 				<true/>
 			</dict>
 		</dict>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVoNRByDefault</key>
+			<true/>
+		</dict>
 	</dict>
+	<key>SupportsVoNR</key>
+	<true/>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
+	<key>DataIndicatorOverrideForNRMmwave</key>
+	<string>NRPlus</string>
 	<key>ShowVolteSwitch</key>
 	<false/>
 	<key>Show5GStandaloneSwitch</key>
-	<false/>
+	<true/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -62,6 +77,8 @@
 		<dict>
 			<key>type-mask</key>
 			<integer>131072</integer>
+			<key>Support5GSaHandOver</key>
+			<true/>
 			<key>password</key>
 			<string></string>
 			<key>tech-type-mask</key>
@@ -96,9 +113,9 @@
 	<false/>
 	<key>Enable5GAutoByDefault</key>
 	<true/>
-	<key>Show5GSwitch</key>
+	<key>SupportsNRNSAInboundRoaming</key>
 	<true/>
-	<key>Enable5GStandaloneByDefault</key>
+	<key>Show5GStandaloneSwitchOnlyWhenEntitled</key>
 	<true/>
 </dict>
 </plist>

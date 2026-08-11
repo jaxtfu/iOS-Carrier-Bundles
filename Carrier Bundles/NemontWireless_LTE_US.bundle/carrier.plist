@@ -392,38 +392,57 @@
 	<dict>
 		<key>Signaling</key>
 		<dict>
-			<key>EnableLastAccessNetworkInfo</key>
+			<key>RingbackTimerSeconds</key>
+			<integer>120</integer>
+			<key>EnableCellularNetworkInfo</key>
 			<true/>
-			<key>DefaultAuthAlgorithm</key>
-			<string>AKAv1-MD5</string>
-			<key>AdditionalContactParams</key>
-			<dict>
-				<key>REGISTER,INVITE,INVITE:*</key>
-				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
-			</dict>
-			<key>AlwaysAddSipInstance</key>
+			<key>ImpuRank</key>
+			<string>first</string>
+			<key>UseCIDUrlInPIDF</key>
 			<true/>
-			<key>LocalQoSTimeoutMOSeconds</key>
-			<integer>5</integer>
-			<key>StrictTS24930PreconditionHeaders</key>
-			<true/>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
+			<key>ValidateSipMessageRecipient</key>
+			<false/>
 			<key>TcpIdleTimeoutSeconds</key>
 			<integer>0</integer>
-			<key>EarlyMediaNeedsHeader</key>
+			<key>EnableLastAccessNetworkInfo</key>
 			<true/>
-			<key>TriggerCSFBOnSDPError</key>
-			<true/>
-			<key>LocationForShortCodeCalls</key>
-			<string>BOTH</string>
+			<key>MaxUdpMessageSize</key>
+			<integer>1200</integer>
 			<key>SipTimers</key>
 			<dict>
 				<key>InviteResponseTimeout</key>
 				<integer>5000</integer>
 			</dict>
+			<key>PIDFGeoPrivShape</key>
+			<string>ellipsoid</string>
+			<key>AlwaysSendSessionProgress</key>
+			<true/>
+			<key>LocationForShortCodeCalls</key>
+			<string>BOTH</string>
+			<key>EnableRingbackAudioForTextCalls</key>
+			<true/>
+			<key>PIDFConfidence</key>
+			<integer>90</integer>
+			<key>UseIPSec</key>
+			<true/>
+			<key>Allow3DPIDFInMessages</key>
+			<true/>
+			<key>StrictTS24930PreconditionHeaders</key>
+			<true/>
+			<key>LocalQoSTimeoutMOSeconds</key>
+			<integer>5</integer>
+			<key>EmergencyCallBackModeExpirationSeconds</key>
+			<integer>20</integer>
+			<key>StartLocalQosTimerOnSessionProgress</key>
+			<true/>
+			<key>SendEmergencyLocationUpdates</key>
+			<true/>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>3XX,4XX,5XX,600,604,606</string>
 			<key>OutgoingDomain</key>
 			<string>ims.mnc480.mcc312.3gppnetwork.org</string>
+			<key>DefaultAuthAlgorithm</key>
+			<string>AKAv1-MD5</string>
 			<key>AdditionalHeaders</key>
 			<dict>
 				<key>INVITE[911,wifi]</key>
@@ -432,40 +451,35 @@
 					<string>Supported: geolocation</string>
 				</array>
 			</dict>
-			<key>NetworkTerminationRetryIntervalSeconds</key>
-			<integer>1</integer>
 			<key>SubscriptionTerminatedMeansRegistrationTerminated</key>
 			<true/>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string>3XX,4XX,5XX,600,604,606</string>
-			<key>EmergencyCallBackModeExpirationSeconds</key>
-			<integer>20</integer>
-			<key>MaxUdpMessageSize</key>
-			<integer>1200</integer>
-			<key>AlwaysSendSessionProgress</key>
+			<key>AlwaysAddSipInstance</key>
 			<true/>
-			<key>StartLocalQosTimerOnSessionProgress</key>
+			<key>SupportPEarlyMediaHeader</key>
 			<true/>
-			<key>UseCIDUrlInPIDF</key>
+			<key>AlwaysAddGeolocationForEmergencyCalls</key>
 			<true/>
-			<key>RingbackTimerSeconds</key>
-			<integer>120</integer>
+			<key>NetworkTerminationRetryIntervalSeconds</key>
+			<integer>1</integer>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>TriggerCSFBOnSDPError</key>
+			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>Preconditions</key>
+			<string>None</string>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>AddGeolocationSupportedHeader</key>
+			<string>TRUE</string>
 			<key>WaitForRingingTimerMOSeconds</key>
 			<integer>120</integer>
 			<key>WaitForRingingTimerMTSeconds</key>
 			<integer>120</integer>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
-			<key>ValidateSipMessageRecipient</key>
-			<false/>
-			<key>Preconditions</key>
-			<string>None</string>
-			<key>EnableCellularNetworkInfo</key>
-			<true/>
-			<key>ImpuRank</key>
-			<string>first</string>
-			<key>UseIPSec</key>
-			<true/>
 		</dict>
 		<key>Voice</key>
 		<dict>
@@ -633,6 +647,7 @@
 	<key>SupportedSIMs</key>
 	<array>
 		<string>312480_GID2-CA000000000004C4A0FF</string>
+		<string>312480</string>
 	</array>
 </dict>
 </plist>

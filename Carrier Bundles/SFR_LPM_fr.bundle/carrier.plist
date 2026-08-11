@@ -217,6 +217,8 @@
 			<integer>2</integer>
 		</dict>
 	</array>
+	<key>SuppressSimToolkitSendShortMessageNotifications</key>
+	<true/>
 	<key>IMSConfig</key>
 	<dict>
 		<key>Media</key>

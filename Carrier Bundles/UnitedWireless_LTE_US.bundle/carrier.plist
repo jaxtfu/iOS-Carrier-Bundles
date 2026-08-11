@@ -549,8 +549,6 @@
 		<true/>
 		<key>ConferenceCalling</key>
 		<dict>
-			<key>ttyIMSSupported</key>
-			<true/>
 			<key>EnableHoldForRTT</key>
 			<true/>
 			<key>conferenceServer</key>

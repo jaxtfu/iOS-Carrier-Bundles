@@ -379,6 +379,13 @@
 	</dict>
 	<key>OverrideOperatorWiFiName</key>
 	<string>WiFiCall</string>
+	<key>DefaultInternetSNSSAI</key>
+	<dict>
+		<key>SliceServiceType</key>
+		<integer>1</integer>
+		<key>SliceDifferentiator</key>
+		<integer>1</integer>
+	</dict>
 	<key>MMS</key>
 	<dict>
 		<key>Version</key>
@@ -396,6 +403,8 @@
 		<key>MaxMessageSize</key>
 		<integer>307200</integer>
 	</dict>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.UnitedKingdom</string>
 	<key>TechSettings</key>
 	<dict>
 		<key>WifiCallingAllowedInRoaming</key>
@@ -510,8 +519,6 @@
 			<integer>10</integer>
 		</dict>
 	</dict>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.UnitedKingdom</string>
 	<key>MaxBluetoothModemConnections</key>
 	<integer>5</integer>
 	<key>DataIndicatorOverrideForLTE</key>

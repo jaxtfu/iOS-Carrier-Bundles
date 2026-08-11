@@ -2,181 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>MaxBluetoothModemConnections</key>
-	<integer>5</integer>
-	<key>AllowEDGEEditing</key>
-	<true/>
-	<key>DataIndicatorOverrideForLTE</key>
-	<string>4G</string>
-	<key>Services</key>
-	<array>
-		<dict>
-			<key>ServiceCode</key>
-			<string>5888</string>
-			<key>ServiceName</key>
-			<string>Customer Care</string>
-		</dict>
-		<dict>
-			<key>ServiceCode</key>
-			<string>*#100#</string>
-			<key>ServiceName</key>
-			<string>My Number</string>
-		</dict>
-	</array>
-	<key>SupportsNITZ</key>
-	<false/>
-	<key>VVMIgnoresIntlDataRoaming</key>
-	<false/>
-	<key>APNEditabilityTypemask</key>
-	<integer>55</integer>
-	<key>SMSSettings</key>
-	<dict>
-		<key>SMSCarrierReportJunkAddress</key>
-		<string>7726</string>
-		<key>enableSMSReportJunk</key>
-		<true/>
-	</dict>
-	<key>RegistrationOptInRequired</key>
-	<true/>
-	<key>AllowedServicesTypeMaskOnInternet</key>
-	<integer>32768</integer>
-	<key>ShowVolteWarningUnsupportedCarrier</key>
-	<false/>
-	<key>StatusBarImages</key>
-	<array>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>vodafone UK</string>
-			<key>StatusBarCarrierName</key>
-			<string>Talkmobile</string>
-		</dict>
-		<dict>
-			<key>AllowPrefixMatching</key>
-			<false/>
-			<key>CarrierName</key>
-			<string>voda UK</string>
-			<key>StatusBarCarrierName</key>
-			<string>Talkmobile</string>
-		</dict>
-	</array>
-	<key>SupportedSIMs</key>
-	<array>
-		<string>23415_GID1-C1</string>
-	</array>
-	<key>IMSConfig</key>
-	<dict>
-		<key>Signaling</key>
-		<dict>
-			<key>InviteErrorResponsesToTriggerCSFB</key>
-			<string>5XX</string>
-			<key>PreconditionUpdateDelayTimerMilliseconds</key>
-			<integer>128000</integer>
-			<key>SupportPEarlyMediaHeader</key>
-			<true/>
-			<key>RingbackTimerSeconds</key>
-			<integer>60</integer>
-			<key>ForbiddenRegistrationErrorCodes</key>
-			<string>-4XX</string>
-			<key>RingingTimerSeconds</key>
-			<integer>60</integer>
-			<key>ClearRegistrationCallIdOnDeinitialization</key>
-			<true/>
-			<key>RequirePreconditionsWhenMandatory</key>
-			<false/>
-			<key>IncomingCallEndReasons</key>
-			<dict>
-				<key>InvalidNumber</key>
-				<dict>
-					<key>Protocol</key>
-					<string>Q.850</string>
-					<key>TerminationEvent</key>
-					<string>RemoteHangup</string>
-					<key>ReasonHeaderCause</key>
-					<integer>1</integer>
-					<key>DisableCSFB</key>
-					<true/>
-					<key>StatusCode</key>
-					<integer>404</integer>
-				</dict>
-			</dict>
-			<key>EarlyMediaNeedsHeader</key>
-			<true/>
-			<key>CountryOfOriginationFormat</key>
-			<string>BOTH</string>
-			<key>RegistrationRetryIntervals</key>
-			<string>30,60+15,120,480,900,1800</string>
-			<key>Preconditions</key>
-			<string>Supported</string>
-			<key>AdditionalContactParams</key>
-			<dict>
-				<key>REGISTER,INVITE,INVITE:*</key>
-				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
-			</dict>
-			<key>AlwaysUnsubscribeFromRegEvents</key>
-			<false/>
-			<key>UseFakeSAsForDeregistration</key>
-			<true/>
-			<key>UseIPSec</key>
-			<true/>
-			<key>MaxForbiddenErrors</key>
-			<integer>100</integer>
-		</dict>
-		<key>ConferenceCalling</key>
-		<dict>
-			<key>AlwaysSubscribeToConferenceEvents</key>
-			<true/>
-			<key>conferenceServer</key>
-			<string>sip:mmtel@conf-factory.ims.mnc015.mcc234.3gppnetwork.org</string>
-		</dict>
-		<key>AllowHandoverWithoutIMSVoiceService</key>
-		<true/>
-		<key>SMS</key>
-		<dict>
-			<key>enableInNonVoLTEMode</key>
-			<false/>
-		</dict>
-		<key>Media</key>
-		<dict>
-			<key>RTCPIntervalSeconds</key>
-			<integer>5</integer>
-			<key>IncludeSDPModeChangeCapability</key>
-			<true/>
-			<key>IncludeSDPMaxRed</key>
-			<true/>
-			<key>MaxRedundancy</key>
-			<integer>220</integer>
-			<key>EnableBandwidthSpecifiers</key>
-			<true/>
-		</dict>
-		<key>XCAP</key>
-		<dict>
-			<key>SupportsCW</key>
-			<false/>
-			<key>ContentType</key>
-			<string>application/xcap-el+xml</string>
-			<key>provisioningDependency</key>
-			<true/>
-			<key>DisableOnNetworkError</key>
-			<false/>
-			<key>supported</key>
-			<true/>
-			<key>ForbiddenHttpErrorCodes</key>
-			<string>404,501,502,503,504</string>
-		</dict>
-		<key>EnableWiFiCallingWithoutEntitlement</key>
-		<false/>
-		<key>Voice</key>
-		<dict>
-			<key>EnableVoLTEWithVoWiFi</key>
-			<false/>
-			<key>E911OverITechSupported</key>
-			<true/>
-			<key>EnableVolteByDefault</key>
-			<true/>
-		</dict>
-	</dict>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportedEntitlements</key>
@@ -195,16 +20,19 @@
 		<key>UpdatePeriod</key>
 		<integer>24</integer>
 	</dict>
-	<key>Show3GSwitchWith4G</key>
-	<false/>
-	<key>OverrideOperatorWiFiName</key>
-	<string>Talkmobile WiFiCall</string>
-	<key>ShowDialAssist</key>
-	<true/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>+447786205094</string>
-	<key>CarrierName</key>
-	<string>Talkmobile</string>
+	<key>CaptiveSettingsBySSID</key>
+	<dict>
+		<key>Auto-BTWiFi</key>
+		<dict>
+			<key>Bypass</key>
+			<true/>
+		</dict>
+		<key>VodafoneWiFi</key>
+		<dict>
+			<key>Bypass</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>AttachAPN</key>
 	<dict>
 		<key>3GPP</key>
@@ -221,25 +49,6 @@
 			<integer>1</integer>
 		</dict>
 	</dict>
-	<key>CaptiveSettingsBySSID</key>
-	<dict>
-		<key>Auto-BTWiFi</key>
-		<dict>
-			<key>Bypass</key>
-			<true/>
-		</dict>
-		<key>VodafoneWiFi</key>
-		<dict>
-			<key>Bypass</key>
-			<true/>
-		</dict>
-	</dict>
-	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
-	<false/>
-	<key>SupportsImsCapability</key>
-	<true/>
-	<key>VisualVoicemailServiceName</key>
-	<string>none</string>
 	<key>CellBroadcast</key>
 	<dict>
 		<key>AlertTypes</key>
@@ -434,10 +243,24 @@
 			</dict>
 		</array>
 	</dict>
+	<key>AllowEDGEEditing</key>
+	<true/>
+	<key>RegistrationOptInRequired</key>
+	<true/>
+	<key>SupportsNITZ</key>
+	<false/>
 	<key>VoicemailPilotNumber</key>
 	<string>121</string>
-	<key>HomeBundleIdentifier</key>
-	<string>com.apple.UnitedKingdom</string>
+	<key>ShowVolteWarningUnsupportedCarrier</key>
+	<false/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>+447786205094</string>
+	<key>ShowDialAssist</key>
+	<true/>
+	<key>Show3GSwitchWith4G</key>
+	<false/>
+	<key>OverrideOperatorWiFiName</key>
+	<string>Talkmobile WiFiCall</string>
 	<key>MMS</key>
 	<dict>
 		<key>Version</key>
@@ -569,10 +392,12 @@
 			<integer>10</integer>
 		</dict>
 	</dict>
-	<key>SupportedPLMNs</key>
-	<array>
-		<string>23415</string>
-	</array>
+	<key>HomeBundleIdentifier</key>
+	<string>com.apple.UnitedKingdom</string>
+	<key>MaxBluetoothModemConnections</key>
+	<integer>5</integer>
+	<key>DataIndicatorOverrideForLTE</key>
+	<string>4G</string>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -630,5 +455,187 @@
 			<integer>1</integer>
 		</dict>
 	</array>
+	<key>IMSConfig</key>
+	<dict>
+		<key>Signaling</key>
+		<dict>
+			<key>InviteErrorResponsesToTriggerCSFB</key>
+			<string>5XX</string>
+			<key>PreconditionUpdateDelayTimerMilliseconds</key>
+			<integer>128000</integer>
+			<key>SupportPEarlyMediaHeader</key>
+			<true/>
+			<key>RingbackTimerSeconds</key>
+			<integer>60</integer>
+			<key>ForbiddenRegistrationErrorCodes</key>
+			<string>-4XX</string>
+			<key>RingingTimerSeconds</key>
+			<integer>60</integer>
+			<key>ClearRegistrationCallIdOnDeinitialization</key>
+			<true/>
+			<key>RequirePreconditionsWhenMandatory</key>
+			<false/>
+			<key>IncomingCallEndReasons</key>
+			<dict>
+				<key>InvalidNumber</key>
+				<dict>
+					<key>Protocol</key>
+					<string>Q.850</string>
+					<key>TerminationEvent</key>
+					<string>RemoteHangup</string>
+					<key>ReasonHeaderCause</key>
+					<integer>1</integer>
+					<key>DisableCSFB</key>
+					<true/>
+					<key>StatusCode</key>
+					<integer>404</integer>
+				</dict>
+			</dict>
+			<key>EarlyMediaNeedsHeader</key>
+			<true/>
+			<key>CountryOfOriginationFormat</key>
+			<string>BOTH</string>
+			<key>RegistrationRetryIntervals</key>
+			<string>30,60+15,120,480,900,1800</string>
+			<key>Preconditions</key>
+			<string>Supported</string>
+			<key>AdditionalContactParams</key>
+			<dict>
+				<key>REGISTER,INVITE,INVITE:*</key>
+				<string>+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+g.3gpp.ps2cs-srvcc-orig-pre-alerting</string>
+			</dict>
+			<key>AlwaysUnsubscribeFromRegEvents</key>
+			<false/>
+			<key>UseFakeSAsForDeregistration</key>
+			<true/>
+			<key>UseIPSec</key>
+			<true/>
+			<key>MaxForbiddenErrors</key>
+			<integer>100</integer>
+		</dict>
+		<key>ConferenceCalling</key>
+		<dict>
+			<key>AlwaysSubscribeToConferenceEvents</key>
+			<true/>
+			<key>conferenceServer</key>
+			<string>sip:mmtel@conf-factory.ims.mnc015.mcc234.3gppnetwork.org</string>
+		</dict>
+		<key>AllowHandoverWithoutIMSVoiceService</key>
+		<true/>
+		<key>SMS</key>
+		<dict>
+			<key>enableInNonVoLTEMode</key>
+			<false/>
+		</dict>
+		<key>Media</key>
+		<dict>
+			<key>RTCPIntervalSeconds</key>
+			<integer>5</integer>
+			<key>IncludeSDPModeChangeCapability</key>
+			<true/>
+			<key>IncludeSDPMaxRed</key>
+			<true/>
+			<key>MaxRedundancy</key>
+			<integer>220</integer>
+			<key>EnableBandwidthSpecifiers</key>
+			<true/>
+		</dict>
+		<key>XCAP</key>
+		<dict>
+			<key>SupportsCW</key>
+			<false/>
+			<key>ContentType</key>
+			<string>application/xcap-el+xml</string>
+			<key>provisioningDependency</key>
+			<true/>
+			<key>DisableOnNetworkError</key>
+			<false/>
+			<key>supported</key>
+			<true/>
+			<key>ForbiddenHttpErrorCodes</key>
+			<string>404,501,502,503,504</string>
+		</dict>
+		<key>EnableWiFiCallingWithoutEntitlement</key>
+		<false/>
+		<key>Voice</key>
+		<dict>
+			<key>EnableVoLTEWithVoWiFi</key>
+			<false/>
+			<key>E911OverITechSupported</key>
+			<true/>
+			<key>EnableVolteByDefault</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>SMSSettings</key>
+	<dict>
+		<key>SMSCarrierReportJunkAddress</key>
+		<string>7726</string>
+		<key>enableSMSReportJunk</key>
+		<true/>
+	</dict>
+	<key>VVMIgnoresIntlDataRoaming</key>
+	<false/>
+	<key>APNEditabilityTypemask</key>
+	<integer>55</integer>
+	<key>AllowedServicesTypeMaskOnInternet</key>
+	<integer>32768</integer>
+	<key>Services</key>
+	<array>
+		<dict>
+			<key>ServiceCode</key>
+			<string>5888</string>
+			<key>ServiceName</key>
+			<string>Customer Care</string>
+		</dict>
+		<dict>
+			<key>ServiceCode</key>
+			<string>*#100#</string>
+			<key>ServiceName</key>
+			<string>My Number</string>
+		</dict>
+	</array>
+	<key>VisualVoicemailServiceName</key>
+	<string>none</string>
+	<key>StatusBarImages</key>
+	<array>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>vodafone UK</string>
+			<key>StatusBarCarrierName</key>
+			<string>Talkmobile</string>
+		</dict>
+		<dict>
+			<key>AllowPrefixMatching</key>
+			<false/>
+			<key>CarrierName</key>
+			<string>voda UK</string>
+			<key>StatusBarCarrierName</key>
+			<string>Talkmobile</string>
+		</dict>
+	</array>
+	<key>CarrierName</key>
+	<string>Talkmobile</string>
+	<key>SupportsImsCapability</key>
+	<true/>
+	<key>SupportedPLMNs</key>
+	<array>
+		<string>23415</string>
+	</array>
+	<key>ShowWiFiCallingWarningUnsupportedCarrier</key>
+	<false/>
+	<key>SupportedSIMs</key>
+	<array>
+		<string>23415_GID1-C1</string>
+	</array>
+	<key>CarrierAppDiscoverability</key>
+	<dict>
+		<key>1135536372</key>
+		<array>
+			<string>Talkmobile</string>
+		</array>
+	</dict>
 </dict>
 </plist>

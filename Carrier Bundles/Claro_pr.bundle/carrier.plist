@@ -406,8 +406,6 @@
 			<true/>
 			<key>EnableVolteByDefault</key>
 			<true/>
-			<key>ttyIMSSupported</key>
-			<false/>
 		</dict>
 		<key>ConferenceCalling</key>
 		<dict>
@@ -517,6 +515,15 @@
 	</array>
 	<key>CarrierName</key>
 	<string>Claro Puerto Rico</string>
+	<key>VoiceTextMedia</key>
+	<dict>
+		<key>SupportsRTT</key>
+		<false/>
+		<key>SupportsEmergencyRTT</key>
+		<false/>
+		<key>SupportsTTY</key>
+		<false/>
+	</dict>
 	<key>SupportedSIMs</key>
 	<array>
 		<string>330110</string>

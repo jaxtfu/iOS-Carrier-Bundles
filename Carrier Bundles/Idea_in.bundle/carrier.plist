@@ -14,7 +14,7 @@
 				<key>SupportSecureIntent</key>
 				<true/>
 				<key>SupportedEntitlements</key>
-				<integer>4202496</integer>
+				<integer>8192</integer>
 				<key>ProtocolVersion</key>
 				<string>2</string>
 				<key>Authentication</key>
@@ -26,8 +26,6 @@
 				</dict>
 				<key>TransferWebservicesTimeout</key>
 				<integer>95</integer>
-				<key>SupportedAuthorizationTokens</key>
-				<integer>2</integer>
 				<key>ServerAddress</key>
 				<string>https://deg.vodafoneidea.com:8181/ium-OEMInterface/servlet/IUMServlet</string>
 				<key>SupportPhysicalSIMtoESIMTransfer</key>
@@ -150,10 +148,10 @@
 	</dict>
 	<key>ShowVolteWarningUnsupportedCarrier</key>
 	<false/>
-	<key>PhoneNumberRegistrationGatewayAddress</key>
-	<string>+447786205094</string>
 	<key>ShowDialAssist</key>
 	<true/>
+	<key>PhoneNumberRegistrationGatewayAddress</key>
+	<string>+447786205094</string>
 	<key>OverrideOperatorWiFiName</key>
 	<string>Vi VoWiFi</string>
 	<key>TechSettings</key>
@@ -440,22 +438,6 @@
 	</dict>
 	<key>VVMIgnoresIntlDataRoaming</key>
 	<false/>
-	<key>RCS</key>
-	<dict>
-		<key>EnableBusinessMessagingByDefault</key>
-		<true/>
-		<key>ProvisioningData</key>
-		<dict>
-			<key>SupportsPush</key>
-			<false/>
-		</dict>
-		<key>ShowBusinessMessagingSwitch</key>
-		<true/>
-		<key>ShowRCSSwitch</key>
-		<true/>
-		<key>EnableRCSByDefault</key>
-		<true/>
-	</dict>
 	<key>PushSettings</key>
 	<dict>
 		<key>MultiSIMTopic</key>

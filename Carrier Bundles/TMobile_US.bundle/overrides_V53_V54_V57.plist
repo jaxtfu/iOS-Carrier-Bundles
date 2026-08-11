@@ -267,6 +267,8 @@
 	<dict>
 		<key>SupportsLLPHS</key>
 		<true/>
+		<key>ForceEnableL4S</key>
+		<true/>
 		<key>EntitlementsGenres</key>
 		<true/>
 		<key>OsId</key>
@@ -346,7 +348,7 @@
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportedEntitlements</key>
-		<integer>4783513</integer>
+		<integer>13172121</integer>
 	</dict>
 	<key>SatelliteAccessInfo</key>
 	<dict>

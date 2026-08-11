@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>DerPriFileVersion</key>
-	<string>6.0.161</string>
+	<string>6.0.162</string>
 	<key>ShowVoNRSwitch</key>
 	<true/>
 	<key>Enable5GStandaloneByDefault</key>
@@ -43,8 +43,8 @@
 	</dict>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
-	<key>SupportsVoNR</key>
-	<true/>
+	<key>DataIndicatorOverrideForNRMmwave</key>
+	<string>NRPlus</string>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportedEntitlements</key>
@@ -67,6 +67,10 @@
 	<false/>
 	<key>Show5GStandaloneSwitch</key>
 	<true/>
+	<key>SupportsVoNR</key>
+	<true/>
+	<key>Show5GWarningUnsupportedCarrier</key>
+	<false/>
 	<key>apns</key>
 	<array>
 		<dict>
@@ -130,8 +134,6 @@
 			<integer>1</integer>
 		</dict>
 	</array>
-	<key>Show5GWarningUnsupportedCarrier</key>
-	<false/>
 	<key>Enable5GAutoByDefault</key>
 	<true/>
 	<key>SupportsNRNSAInboundRoaming</key>

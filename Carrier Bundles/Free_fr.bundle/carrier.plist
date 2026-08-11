@@ -235,6 +235,12 @@
 				<key>serviceMask</key>
 				<integer>262144</integer>
 			</dict>
+			<dict>
+				<key>policy</key>
+				<string>TRUE</string>
+				<key>serviceMask</key>
+				<integer>1048576</integer>
+			</dict>
 		</array>
 		<key>ExtraConfigurationAttributeRequestv4</key>
 		<array>
@@ -321,6 +327,8 @@
 		<dict>
 			<key>password</key>
 			<string></string>
+			<key>tech-type-mask</key>
+			<integer>1048576</integer>
 			<key>username</key>
 			<string></string>
 			<key>apn</key>
@@ -485,6 +493,19 @@
 			<string>Free</string>
 		</dict>
 	</array>
+	<key>CarrierSpace</key>
+	<dict>
+		<key>SupportsPlans</key>
+		<false/>
+		<key>TeamIDList</key>
+		<array>
+			<string>NU2FRWJZ6F</string>
+		</array>
+		<key>SupportsUsage</key>
+		<false/>
+		<key>SupportsApps</key>
+		<true/>
+	</dict>
 	<key>CarrierName</key>
 	<string>Free</string>
 	<key>MyAccountURL</key>
@@ -503,5 +524,10 @@
 	<array>
 		<string>20815</string>
 	</array>
+	<key>CarrierAppDiscoverability</key>
+	<dict>
+		<key>AllowCarrierSpaceApp</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

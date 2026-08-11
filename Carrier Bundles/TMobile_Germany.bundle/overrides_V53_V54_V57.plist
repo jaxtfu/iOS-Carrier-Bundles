@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>DerPriFileVersion</key>
-	<string>5.0.162</string>
+	<string>6.0.161</string>
 	<key>AllowSAOnWiFiAssociation</key>
 	<true/>
 	<key>ShowVoNRSwitch</key>
 	<true/>
-	<key>Enable5GStandaloneByDefault</key>
+	<key>Show5GSwitch</key>
 	<true/>
-	<key>Show5GStandaloneSwitchOnlyWhenEntitled</key>
+	<key>Enable5GStandaloneByDefault</key>
 	<true/>
 	<key>IMSConfig</key>
 	<dict>
@@ -35,14 +35,17 @@
 	<true/>
 	<key>DerPriFileName</key>
 	<string>overrides_V53_V54_V57.der.pri</string>
+	<key>DataIndicatorOverrideForNRMmwave</key>
+	<string>NRPlus</string>
 	<key>CarrierEntitlements</key>
 	<dict>
 		<key>SupportedActions</key>
 		<array>
 			<string>authenticateTrustFlag</string>
+			<string>QuickSwitch</string>
 		</array>
 		<key>SupportedEntitlements</key>
-		<integer>4307969</integer>
+		<integer>12696577</integer>
 	</dict>
 	<key>ShowVolteSwitch</key>
 	<false/>
@@ -150,20 +153,24 @@
 		<true/>
 		<key>EntitlementGenres</key>
 		<true/>
+		<key>SlicingActiveUIString</key>
+		<string>Ultra</string>
+		<key>SlicingIdleUIString</key>
+		<string>Ultra</string>
 		<key>SupportsLLPHS</key>
 		<true/>
 		<key>ForceEnableL4S</key>
 		<true/>
-		<key>TechnologyMask</key>
-		<integer>25</integer>
 		<key>CallKitSupported</key>
 		<false/>
+		<key>TechnologyMask</key>
+		<integer>25</integer>
 	</dict>
 	<key>Enable5GAutoByDefault</key>
 	<true/>
-	<key>Show5GSwitch</key>
-	<true/>
 	<key>SupportsNRNSAInboundRoaming</key>
+	<true/>
+	<key>Show5GStandaloneSwitchOnlyWhenEntitled</key>
 	<true/>
 </dict>
 </plist>
