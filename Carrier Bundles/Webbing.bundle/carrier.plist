@@ -125,6 +125,8 @@
 					<string>AMR</string>
 					<key>bw</key>
 					<string>nb-swb</string>
+					<key>hf-only</key>
+					<string>1</string>
 				</dict>
 			</dict>
 			<key>IncludeSDPMaxRed</key>

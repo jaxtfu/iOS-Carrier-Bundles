@@ -166,18 +166,20 @@
 			<dict>
 				<key>106</key>
 				<dict>
-					<key>ch-aw-recv</key>
-					<string>0</string>
-					<key>br</key>
-					<string>5.9-24.4</string>
-					<key>SampleRate</key>
-					<integer>16000</integer>
-					<key>EncodingName</key>
-					<string>EVS</string>
-					<key>bw</key>
-					<string>nb-swb</string>
 					<key>max-red</key>
 					<string>240</string>
+					<key>SampleRate</key>
+					<integer>16000</integer>
+					<key>hf-only</key>
+					<string>1</string>
+					<key>ch-aw-recv</key>
+					<string>0</string>
+					<key>EncodingName</key>
+					<string>EVS</string>
+					<key>br</key>
+					<string>5.9-24.4</string>
+					<key>bw</key>
+					<string>nb-swb</string>
 				</dict>
 			</dict>
 			<key>EVSHardBwLimit</key>

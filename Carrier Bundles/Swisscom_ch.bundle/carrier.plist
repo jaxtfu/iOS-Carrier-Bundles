@@ -630,10 +630,12 @@
 			<dict>
 				<key>109</key>
 				<dict>
-					<key>max-red</key>
-					<string>240</string>
+					<key>hf-only</key>
+					<string>1</string>
 					<key>SampleRate</key>
 					<integer>16000</integer>
+					<key>max-red</key>
+					<string>240</string>
 					<key>ch-aw-recv</key>
 					<string>-1</string>
 					<key>cmr</key>

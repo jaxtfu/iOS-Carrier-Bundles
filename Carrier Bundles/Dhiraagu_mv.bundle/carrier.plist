@@ -71,6 +71,8 @@
 					<string>EVS</string>
 					<key>bw</key>
 					<string>nb-wb</string>
+					<key>hf-only</key>
+					<string>1</string>
 				</dict>
 			</dict>
 			<key>EnableBandwidthSpecifiers</key>
