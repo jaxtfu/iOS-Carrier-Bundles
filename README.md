@@ -5,13 +5,13 @@ This repo contains the Carrier Bundles currently bundled with iOS version 27.0 f
 ## Last Extraction Metadata
 
 #### Last Extraction Time
-`2026-08-24 00:39:09 UTC`
+`2026-08-25 00:38:03 UTC`
 
 #### iOS Build Info
 
 | iOS Version | iOS Build | iOS Build Timestamp |
 | :-------- | :------- | :------------------ |
-| 27.0 | 24A5418b | 12 Aug 2026 05:06:34 UTC |
+| 27.0 | 24A5424a | 12 Aug 2026 05:06:34 UTC |
 
 #### iOS Device Info
 
